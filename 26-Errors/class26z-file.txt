@@ -1,0 +1,1 @@
+Try to delete this file manually to check the exception conditions.

@@ -1,0 +1,6 @@
+"""
+
+GUI (GRAPHICAL USER INTERFACE) WITH TKINTER MODULE AND USING CLASSES:
+Check the folder "28-GUI-and-Tkinter".
+
+"""

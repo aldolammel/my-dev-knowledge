@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+  {% block title %}Editing: {{ book.title }}{% endblock %}
+
+  {% block body %}
+    <div class="col-sm-12">
+      <h1>Edit the book</h1>
+      <form action="{{ url_for('go_edit') }}" method="POST">
+
+        <input name="id" hidden="hidden" value="{{ book.id }}">
+
+        <label>Title:</label>
+        <input name="title" type="text" value="{{ book.title }}">
+
+        <label>Author:</label>
+        <input name="author" type="text" value="{{ book.author }}">
+
+        <label>Rating:</label>
+        <p>Current: {{ book.rating }}</p>
+        <input name="rating" type="text" value="{{ book.rating }}">
+
+        <input type="submit" value="Update the book">
+        or <a href="{{ url_for('act_del', id=book.id) }}">delete it</a>.
+
+      </form>
+    </div>
+  {% endblock %}
+
+  {% block footer_menu %}
+  <div class="col-sm-12">
+    <a href="{{ url_for('go_home') }}">Back to home</a>
+  </div>
+  {% endblock %}

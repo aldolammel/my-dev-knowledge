@@ -1,0 +1,10 @@
+body {
+    background-color: #f1f1f1;
+}
+label {
+    font-weight: bold;
+    margin-top: 20px;
+}
+input, select {
+    display: block;
+}

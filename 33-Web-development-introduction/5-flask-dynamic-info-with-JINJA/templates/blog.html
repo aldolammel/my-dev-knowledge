@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog page | My first website by Python</title>
+</head>
+<body>
+    {% for post in all_posts: %}
+        {% if post["id"] == 1: %}
+            <h1 style="color: red"> HIGHLIGHT:<br/>{{ post["head"] }}</h1>
+        {% else: %}
+            <h2>{{ post["head"] }}</h2>
+        {% endif %}
+        <h4>{{ post["date"] }}</h4>
+        <p>{{ post["body"] }}</p>
+        <hr />
+    {% endfor %}
+</body>
+<footer>
+    <p><a href="{{ url_for('get_home') }}">Back to home</a></p>
+</footer>
+</html>

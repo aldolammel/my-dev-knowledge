@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <div class="flex-container">
+    <!-- TODO 2: Add the Bootstrap Prebuilt Card here / code: https://getbootstrap.com/docs/5.3/components/card/ -->
+    <!-- TODO 3: Change the image src to display the flower.jpg image. -->
+    <div class="card" style="width: 18rem;">
+      <img src="{{ url_for('static', filename='./images/flower.jpg') }}" class="card-img-top" alt="Flower">
+      <div class="card-body">
+        <h5 class="card-title">Title</h5>
+        <p class="card-text">Xx xxxx xxxxxx x xxxxx x xxxx xx xxxxxxxx xxx xxx.</p>
+        <a href="{{ url_for('go_another_page') }}" class="btn btn-primary">See the sliders</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

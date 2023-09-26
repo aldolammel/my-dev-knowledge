@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | My first website by Python</title>
+</head>
+<body>
+    <h1>Menu:</h1>
+    <ul>
+        <li><a href="{{ url_for('get_user', name='Aldo') }}">User page</a></li>
+        <li><a href="{{ url_for('get_blog') }}">Blog page</a></li>
+        <li><a href="{{ url_for('get_post', post_id=3) }}">Blog > Post page id 3</a></li>
+    </ul>
+</body>
+</html>
