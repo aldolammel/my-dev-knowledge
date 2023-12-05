@@ -18,12 +18,11 @@ is_adult = bool
 
 
 # Function with data type declaration:
-def police_check(age: int) -> bool:  # setting the "age" must get an integer and the fnc must return a bool.
+def police_check(age: int) -> bool:              # setting the "age" must get an integer and the fnc must return a bool.
+    can_drive = False
     if age > 18:
         can_drive = True
-    else:
-        can_drive = False
-    return can_drive  # change it to string and see how the declaration will help you to debug.
+    return can_drive                           # change it to string and see how the declaration will help you to debug.
 
 
 print(police_check(18))  # change int to string or bool for example to see how the previous declaration helps you.
