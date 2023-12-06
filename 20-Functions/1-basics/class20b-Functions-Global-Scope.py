@@ -9,12 +9,12 @@ FUNCTIONS: GLOBAL SCOPE
 enemiesA = 1
 
 
-def fnc_adding_enemies_a():
+def adding_enemies_a():
     enemiesA = 2
     print(f'EnemiesA INSIDE function: {enemiesA}')
 
 
-fnc_adding_enemies_a()
+adding_enemies_a()
 print(f'EnemiesA OUTSIDE function: {enemiesA}')
 
 
@@ -24,11 +24,11 @@ print('\n- - - -\n')
 enemiesB = 1
 
 
-def fnc_adding_enemies_b():
-    global enemiesB                       # creating the reference that the object is global (from out of the fnc).
+def adding_enemies_b():
+    global enemiesB                            # creating the reference that the object is global (from out of the fnc).
     enemiesB = 2
     print(f'EnemiesB INSIDE function: {enemiesB}')
 
 
-fnc_adding_enemies_b()
+adding_enemies_b()
 print(f'EnemiesB OUTSIDE function: {enemiesB}')
