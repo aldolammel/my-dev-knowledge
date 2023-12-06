@@ -1,1 +1,0 @@
-It will always be the first unique line in the file because the mode is W that means 'clear and write'. And it will support UTF-8 characters like çççççááááõõõ.
