@@ -1,5 +1,5 @@
 """
-USING SELENIUM MODULE: DOING THE LOGGING
+USING SELENIUM MODULE: DOING A SEARCH
 https://selenium-python.readthedocs.io/getting-started.html
 
 """
@@ -8,39 +8,37 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 # from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-import os
+from selenium.webdriver.common.keys import Keys
 
 # Constants:
 # DRIVER_PATH = "C:\webdriver\chromedriver.exe"
-TARGET_URL = "https://aldolammel.com/loja/wp-admin"
-PROTECTED_USER = os.environ["PROTECTED_USER"]
-PROTECTED_PASS = os.environ["PROTECTED_PASS"]
+TARGET_URL = "https://www.wikipedia.org/"
 
 # Custom browser options:
 browser_opts = Options()
-browser_opts.add_experimental_option("detach", True)  # Do not close the browser after actions.
+browser_opts.add_experimental_option("detach", True)  # Prevent the browser to get closed after actions.
 # browser_opts.add_argument('--headless')  # Let's hide the browser when the script runs.
 
 # Custom services:
 # service = Service(executable_path=DRIVER_PATH)  # Defining the local browser service.
 
 # Configuring which browser will be used:
-# driver = webdriver.Chrome(service=service, options=browser_opts)
-driver = webdriver.Chrome(options=browser_opts)
+# driver = webdriver.Chrome(service=service, options=browser_options)
+driver = webdriver.Chrome(options=browser_opts)  # Edge(), Firefox()
 # WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control
 # to your test or script. Be aware that if your page uses a lot of AJAX on load then WebDriver may not know when it has
 # completely loaded:
 driver.get(TARGET_URL)
 
-# filling the form:
-field_user = driver.find_element(By.NAME, "log")
-field_user.send_keys(PROTECTED_USER)
+# Step 1/2 > Executing a searching:
+elem = driver.find_element(By.NAME, "search")
+elem.send_keys("python")
+# Press Enter:
+elem.send_keys(Keys.ENTER)  # or, if it's a form, you can submit with input_search.submit()
 
-field_pwd = driver.find_element(By.NAME, "pwd")
-field_pwd.send_keys(PROTECTED_PASS)
-
-submit = driver.find_element(By.NAME, "wp-submit")
-submit.click()
+# Step 2/2 > Find out the specific matter, and click on it:
+link_to_click = driver.find_element(By.PARTIAL_LINK_TEXT, "language")
+link_to_click.click()
 
 # driver.close()  # close the browser tab
 # driver.quit()  # close the entire browser and close the webdriver.

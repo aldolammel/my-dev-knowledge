@@ -3,6 +3,7 @@ TUPLE COLLECTION:
 Kind of list but for datas that must not be modified. A tuple is immutable.
 After created a tuple, you cannot add elements in that as you easily do with Lists.
 
+Performance: tuple is 1,2x faster than list.
 
 Syntax: _citizens = ('Aldo', 'Billy', 'Anna')
 

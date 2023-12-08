@@ -8,4 +8,4 @@ while True:
     print('The looping (while) STILL running.')  # With the -break- above, you won't see this message at all.
 
 sleep(1)
-print('The looping (while) has been stopped cos "break" was called.')
+print('The looping (while) has been stopped immediately coz "break" was called.')

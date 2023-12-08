@@ -23,17 +23,17 @@ for _i in range(0, 11):
 print('\nEnd\n')
 
 # Counting from 10 to 0:
-for _i in range(10, 0, -1):       # this '-1' represents reverse counting.
-    print(_i, end=' ')             # this "end =''" makes the iteration put each object side-by-side.
+for _i in range(10, 0, -1):                                                     # this '-1' represents reverse counting.
+    print(_i, end=' ')                                # this "end =''" makes the iteration put each object side-by-side.
 print('\nEnd\n')
 
 # Counting with no odd numbers:
-for _i in range(0, 11, 2):        # this '2' represents the frequency of the missing numbers.
+for _i in range(0, 11, 2):                                   # this '2' represents the frequency of the missing numbers.
     print(_i, end=' ')
 print('\nEnd\n')
 
 # Counting with no even numbers:
-for _i in range(1, 11, 2):        # the same of above, '2' represents the frequency of the missing numbers.
+for _i in range(1, 11, 2):                     # the same of above, '2' represents the frequency of the missing numbers.
     print(_i, end=' ')
 print('\nEnd\n')
 
@@ -60,7 +60,7 @@ print('\n- - - -\n')
 
 BREAK and CONTINUE features:
 BREAK stops absolutely the -for- looping.
-CONTINUE skip the current repeatetion, starting the next one in the same -for-.
+CONTINUE skip the current repetition, starting the next one in the same -for-.
 
 """
 
@@ -76,7 +76,7 @@ print('You are out of the -FOR- looping.')
 print('\n- - - -\n')
 
 # CONTINUE example:
-# with this feature we can skip a repeatetion to the next one.
+# with this feature we can skip a repetition to the next one.
 for _i in range(10):
     if _i != 5:
         print(_i, end=' ')

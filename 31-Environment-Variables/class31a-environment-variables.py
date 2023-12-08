@@ -8,7 +8,7 @@ There is two ways to set environment variables:
 
 1) Through the IDE:
     Important: The process changes according the IDE you're using. This way isn't possible on some IDE's like Jupyter.
-    Go to "Edit configurations" of your py-file and in "Environment variables" edit them including what you need.
+    Right click over the file, go to "Modify Run Configuration", and in "Environment variables" edit it.
     After that, call the lines down below, for example, if you're including user and password as env-variables:
         import os
         user = os.environ["user"]
@@ -32,5 +32,5 @@ import os
 # Calling the secret token from environment variable list:
 PROTECTED_TOKEN = os.environ["TOKEN"]
 # checking:
-print(f"Token loaded on this environment: {PROTECTED_TOKEN}")
-print(f"All environment variables loaded here: {os.environ}")
+print(f"Token loaded on this environment: {PROTECTED_TOKEN}\n")
+# print(f"All environment variables loaded here: {os.environ}")

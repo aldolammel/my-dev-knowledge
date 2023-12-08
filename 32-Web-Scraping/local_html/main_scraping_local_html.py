@@ -25,6 +25,7 @@ print(html_extracted.prettify())
 
 # Extracting the whole texts:
 print(html_extracted.get_text())
+print(html_extracted.getText())  # <---- this is better right?
 
 # Extracting the title's content:
 print(html_extracted.title.string)
