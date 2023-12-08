@@ -7,9 +7,9 @@ corY = '\033[1;33m'  # color in, yellow
 corX = '\033[m'  # color out
 
 # DEBUGGER -------------------------------------------------------------------------------------------------------------
-debugging = False
-debug_tag = '[DEBUGGING]:'
-isWorking = True
+is_on_debug = False
+debug_header = '[DEBUGGING]:'
+is_working = True
 
 # DICTS AND LISTS ------------------------------------------------------------------------------------------------------
 products = {
@@ -52,7 +52,7 @@ storage_money = {
 
 
 # FUNCTIONS ------------------------------------------------------------------------------------------------------------
-def fnc_logo():
+def logo():
     """
     Just the app logotype;
     :return: None;
@@ -76,15 +76,15 @@ def fnc_logo():
     return None
 
 
-def fnc_should_work(is_report=False, turn_off=False):
+def should_work(is_report=False, is_turned_off=False):
     """
     This function starts the app. It will check if the machine has enough ingredients to run and if any admin command
     has been requested
     :param is_report: Bool. If admin requests this command, it will show up the machine sale numbers and storage status.
-    :param turn_off: Bool. If admin requests this command, the machine will be turned off.
-    :return: if returning isWorking (False), the machine will turn off. If everything's fine, returns fnc_what_u_want().
+    :param is_turned_off: Bool. If admin requests this command, the machine will be turned off.
+    :return: if returning isWorking (False), the machine will turn off. If everything's fine, returns what_u_want().
     """
-    global isWorking
+    global is_working
     sleep(1)
 
     # Checking all machine storage:
@@ -110,34 +110,34 @@ def fnc_should_work(is_report=False, turn_off=False):
         sleep(1)
 
     # Turning the machine off:
-    if turn_off:
+    if is_turned_off:
         print(f'\n{corR}This machine will turned off.{corX}')
         sleep(2)
-        isWorking = False
-        return isWorking
+        is_working = False
+        return is_working
 
     # Informing the customer that basic-ingred is missing:
     if storage_ingreds['Water'][0] == 0 or storage_ingreds['Coffee'][0] == 0:
         print(f'\n{corR}This machine\'s storage is dry. Temporally Not working.{corX}')
 
-        if debugging:
-            print(f'\n{corY}{debug_tag}\n')
+        if is_on_debug:
+            print(f'\n{corY}{debug_header}\n')
             for key, value in storage_ingreds.items():
                 print(f'{key} = {value[0]}{value[1]}')
             print(corX)
 
-        isWorking = False
-        return isWorking
+        is_working = False
+        return is_working
     else:
-        return fnc_what_u_want()
+        return what_u_want()
 
 
-def fnc_what_u_want(is_first=True):
+def what_u_want(is_first=True):
     """
     It's called right next the machine is turned on, and when the app will show the product options to the customer;
     :param is_first: Bool. If is the first time the current customer is facing the product menu. Important to check this
     if some product is not available anymore after the customer gives a go (sorry message, for example);
-    :return: fnc_should_work() if the admin tries an admin command, or fnc_check_ingreds() after the customer choices;
+    :return: should_work() if the admin tries an admin command, or check_ingreds() after the customer choices;
     """
     if is_first:
         print('\n\nAVAILABLE HOT DRINKS:')
@@ -152,38 +152,38 @@ def fnc_what_u_want(is_first=True):
 
             # checking if the admin is inputting some command:
             if ask_prod_index == 'report':
-                return fnc_should_work(is_report=True)
+                return should_work(is_report=True)
             if ask_prod_index == 'off':
-                return fnc_should_work(turn_off=True)
+                return should_work(is_turned_off=True)
 
             # checking if a customer is using the product index:
             if ask_prod_index.isnumeric():
                 ask_prod_index = int(ask_prod_index)
                 if 1 <= ask_prod_index <= len(products):
-                    return fnc_check_ingreds(ask_prod_index)
+                    return check_ingreds(ask_prod_index)
                 else:
                     print(f'{corR}"{ask_prod_index}" is NOT a product index. Try again!{corX}')
                     continue
 
-            if debugging:
-                print(f'{corY}\n{debug_tag}\n'
+            if is_on_debug:
+                print(f'{corY}\n{debug_header}\n'
                       f'The user typed "{ask_prod_index}" that\'s = {type(ask_prod_index)}{corX}')
 
         except (ValueError, TypeError):
             print(f'{corR}An unknown error happened. Sorry. Please, try again!{corX}')
 
 
-def fnc_check_ingreds(prod_index):
+def check_ingreds(prod_index):
     """
     After the customer gives a go in a product, this function will check if the product ingredients are enough to the
     next step;
     :param prod_index: Int. The index number (key) of the products dictionary;
-    :return: if everything is fine, it's called fnc_to_pay(), otherwise fnc_what_u_want(False);
+    :return: if everything is fine, it's called to_pay(), otherwise what_u_want(False);
     """
     prod_name = products[prod_index][0]
     prod_ingreds = products[prod_index][3]['ingred']  # e.g: {'Water': 100, 'Coffee': 76}
 
-    if debugging:
+    if is_on_debug:
         print(f'{corY}Ingredients needed to the {prod_name}: {prod_ingreds}{corX}\n')
 
     sleep(1)
@@ -196,30 +196,30 @@ def fnc_check_ingreds(prod_index):
         for key2, value in storage_ingreds.items():
             if key1 == key2:
                 if prod_ingreds[key1] <= storage_ingreds[key2][0]:
-                    if debugging:
-                        print(f'{corY}\n{debug_tag}\n'
+                    if is_on_debug:
+                        print(f'{corY}\n{debug_header}\n'
                               f'Available in storage before: {key2} {value[0]}{value[1]}.')
 
                     # calculating how many of this ingredient goes be available from here:
                     storage_ingreds[key2][0] = storage_ingreds[key2][0] - prod_ingreds[key1]
 
-                    if debugging:
+                    if is_on_debug:
                         print(f'Available in storage now: {key2} {storage_ingreds[key2][0]}{value[1]}.{corX}\n')
 
                 else:
                     print(f'{corR}Unforgettably, one or more ingredients are missing. So sorry!{corX}\n')
                     sleep(1)
-                    return fnc_what_u_want(False)
+                    return what_u_want(False)
 
-    return fnc_to_pay(prod_index)
+    return to_pay(prod_index)
 
 
-def fnc_to_pay(prod_index):
+def to_pay(prod_index):
     """
     Product payment management. The function will check the available coins in the money storage and the product
     prices. The machine will request coins until the customer pays the price and, just in case, return their change;
     :param prod_index: Int. The index number (key) of the products dictionary;
-    :return: next the payment (and change when needed), it calls fnc_preparing();
+    :return: next the payment (and change when needed), it calls preparing();
     """
     prod_name = products[prod_index][0]
     prod_price = products[prod_index][1]
@@ -249,8 +249,8 @@ def fnc_to_pay(prod_index):
                     if key == ask_money:
                         storage_money[key][0] = storage_money[key][0] + 1
 
-                if debugging:
-                    print(f'\n{corY}{debug_tag}\n'
+                if is_on_debug:
+                    print(f'\n{corY}{debug_header}\n'
                           f'Product price: ${prod_price}\n'
                           f'Customer already inserted a total of ${customer_money:.2f}{corX}.\n')
 
@@ -299,24 +299,24 @@ def fnc_to_pay(prod_index):
             customer_change = float(f'{customer_change:.2f}')
         print(corX)
         sleep(2)
-    return fnc_preparing(prod_index, prod_name)
+    return preparing(prod_index, prod_name)
 
 
-def fnc_preparing(prod_index, prod_name):
+def preparing(prod_index, prod_name):
     """
     Right next to payment, this function will prepare the requested drink;
     :param prod_index: Int. The index number (key) of the products dictionary;
     :param prod_name: Str. The commercial name of the product from products dictionary;
-    :return: calls fnc_delivery() if everything is okay with preparation stage;
+    :return: calls delivery() if everything is okay with preparation stage;
     """
     sleep(1)
     print(f'\nPreparing your hot drink...')
     sleep(4)
     is_ready = True
-    return fnc_delivery(prod_index, prod_name, is_ready)
+    return delivery(prod_index, prod_name, is_ready)
 
 
-def fnc_delivery(prod_index, prod_name, is_ready):
+def delivery(prod_index, prod_name, is_ready):
     """
     When the drink is ready, this function is called;
     :param prod_index: Int. The index number (key) of the products dictionary;
@@ -333,14 +333,14 @@ def fnc_delivery(prod_index, prod_name, is_ready):
 
 
 # APP RUNNING ----------------------------------------------------------------------------------------------------------
-while isWorking:
-    fnc_logo()
-    if debugging:
-        print(f'{corY}\n{debug_tag}\n'
+while is_working:
+    logo()
+    if is_on_debug:
+        print(f'{corY}\n{debug_header}\n'
               f'How many products: {len(products)}.\n'
               f'Secret words to the admin:\n'
               f'>> report = shows the ingredient\'s storage available.\n'
               f'>> off = turn this machine off to maintenance.{corX}\n\n')
-    fnc_should_work()
+    should_work()
 
 print(f'{corR}This machine is off!{corX}')
