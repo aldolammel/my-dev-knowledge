@@ -15,47 +15,47 @@ with open("website.html", encoding="utf8") as file:  # ENCODING super important!
     contents = file.read()
 
 # Saying to BS4 with type of content it will find out (html), and hold that:
-html_extracted = BeautifulSoup(contents, "html.parser")
+html = BeautifulSoup(contents, "html.parser")
 
 # Extracting all html:
-print(html_extracted)
+print(html)
 
 # Extracting all html (with indentation):
-print(html_extracted.prettify())
+print(html.prettify())
 
 # Extracting the whole texts:
-print(html_extracted.get_text())
-print(html_extracted.getText())  # <---- this is better right?
+print(html.get_text())
+print(html.getText())  # <---- this is better right?
 
 # Extracting the title's content:
-print(html_extracted.title.string)
+print(html.title.string)
 
 # Extracting all links:
-for tag in html_extracted.find_all("a"):  # <---- One of the most useful method of BS!
+for tag in html.find_all("a"):  # <---- One of the most useful method of BS!
     print(tag.get("href"))
 
 # Extracting a specific tag among a bunch of the same tag, using its id:
-h1_named = html_extracted.find(name="h1", id="named")
+h1_named = html.find(name="h1", id="named")
 print(h1_named.string)
 
 # Extracting a specific tag among a bunch of the same tag, using its id:
-h3_class = html_extracted.find(name="h3", class_="heading")
+h3_class = html.find(name="h3", class_="heading")
 print(h3_class.string)
 
 # Extracting all tags using specific css class:
-specific_css_class = html_extracted.select(".heading")
+specific_css_class = html.select(".heading")
 print(specific_css_class)  # it will be a list/array
 
 # Extracting multiples specific tag inside other tags:
-more_tags_inside = html_extracted.select(selector="p a")
+more_tags_inside = html.select(selector="p a")
 print(more_tags_inside)
 
 # Extracting one specific tag inside other tags:
-one_tag_inside = html_extracted.select_one(selector="p a")
+one_tag_inside = html.select_one(selector="p a")
 print(one_tag_inside)
 
 # Extracting a specific value from a tag:
-value_tag = html_extracted.find("input")
+value_tag = html.find("input")
 result = value_tag.get("maxlength")
 print(result)
 

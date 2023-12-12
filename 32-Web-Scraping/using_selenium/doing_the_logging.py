@@ -25,22 +25,22 @@ browser_opts.add_experimental_option("detach", True)  # Do not close the browser
 # service = Service(executable_path=DRIVER_PATH)  # Defining the local browser service.
 
 # Configuring which browser will be used:
-# driver = webdriver.Chrome(service=service, options=browser_opts)
-driver = webdriver.Chrome(options=browser_opts)
+# browser = webdriver.Chrome(service=service, options=browser_opts)
+browser = webdriver.Chrome(options=browser_opts)
 # WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control
 # to your test or script. Be aware that if your page uses a lot of AJAX on load then WebDriver may not know when it has
 # completely loaded:
-driver.get(TARGET_URL)
+browser.get(TARGET_URL)
 
 # filling the form:
-field_user = driver.find_element(By.NAME, "log")
+field_user = browser.find_element(By.NAME, "log")
 field_user.send_keys(PROTECTED_USER)
 
-field_pwd = driver.find_element(By.NAME, "pwd")
+field_pwd = browser.find_element(By.NAME, "pwd")
 field_pwd.send_keys(PROTECTED_PASS)
 
-submit = driver.find_element(By.NAME, "wp-submit")
+submit = browser.find_element(By.NAME, "wp-submit")
 submit.click()
 
-# driver.close()  # close the browser tab
-# driver.quit()  # close the entire browser and close the webdriver.
+# browser.close()  # close the browser tab
+# browser.quit()  # close the entire browser and close the webdriver.

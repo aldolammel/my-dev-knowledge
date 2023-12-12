@@ -31,16 +31,16 @@ browser_opts.add_argument('--headless')  # Let's hide the browser when the scrip
 # service = Service(executable_path=DRIVER_PATH)  # Defining the local browser service.
 
 # Configuring which browser will be used:
-# driver = webdriver.Chrome(service=service, options=browser_opts)
-driver = webdriver.Chrome(options=browser_opts)
+# browser = webdriver.Chrome(service=service, options=browser_opts)
+browser = webdriver.Chrome(options=browser_opts)
 # WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control
 # to your test or script. Be aware that if your page uses a lot of AJAX on load then WebDriver may not know when it has
 # completely loaded:
-driver.get(TARGET_URL)
+browser.get(TARGET_URL)
 
 # Searching the element and printing it out:
-xpath_example = driver.find_element(By.XPATH, "/html/body/div/div[2]/div[3]/div/div[2]/a")
+xpath_example = browser.find_element(By.XPATH, "/html/body/div/div[2]/div[3]/div/div[2]/a")
 print(xpath_example.text)  # it should result "Assistir 3ª temporada".
 
-# driver.close()  # close the browser tab
-# driver.quit()  # close the entire browser and close the webdriver.
+# browser.close()  # close the browser tab
+# browser.quit()  # close the entire browser and close the webdriver.

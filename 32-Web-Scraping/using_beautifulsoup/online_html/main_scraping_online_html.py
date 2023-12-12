@@ -22,12 +22,13 @@ try:
     web_page = site_response.text  # Extracting the website content and saving it in an object.
     html = BeautifulSoup(web_page, "html.parser")  # Analysing the object as HTML content.
 
-except Exception as _error:
-    print(f"Something wrong/No internet: {_error}")
+except Exception as error:
+    print(f"Something wrong/No internet: {error}")
 
 else:
     # Getting all article titles in first page:
-    titles = [i.find(name="a").getText() for i in html.find_all(class_="titleline")]
+    # titles = [i.find(name="a").getText() for i in html.find_all(class_="titleline")]  # BKP
+    titles = [i.getText() for i in html.find_all(class_="titleline")]
     # Getting all article links in first page:
     links = [i.find(name="a").get("href") for i in html.find_all(class_="titleline")]
     # Getting all article votes amounts in first page, converting string to integer:
