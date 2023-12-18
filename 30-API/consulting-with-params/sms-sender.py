@@ -1,3 +1,16 @@
+"""
+API (Application Programming Interface):
+An API is a set of commands, functions, protocols, and objects that programmers can use to create software or interact
+with an external system.
+
+What is "API endpoint"?
+It's the link used to request the data. ISS Postion API endpoint is http://api.open-notify.org/iss-now.json
+
+Important: the "requests" module is the most popular way in python to work with API's
+https://pypi.org/project/requests/
+
+"""
+
 import requests
 from twilio.rest import Client  # Site service PASSWORD = dLpHlprEDuQuq01r
 

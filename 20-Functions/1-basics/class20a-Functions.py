@@ -3,7 +3,7 @@
 FUNCTIONS:
 
 Function is a block of code that you can run at any point after it has been defined, and that produces an output
-or performs an action.
+or performs an consulting-with-params.
 
 """
 

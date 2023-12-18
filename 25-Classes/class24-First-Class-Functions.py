@@ -55,7 +55,7 @@ print("\n>> Which is the car2 brand and model and year:")
 print(car2.brand, car2.model, car2.year)  # calling the specific object attribute to figure out the car's brand.
 
 print(f"\n>> Make the {car3.brand} starts and goes somewhere else until its stop:")
-car3.start_engine()  # calling the specific class function to execute the action.
+car3.start_engine()  # calling the specific class function to execute the consulting-with-params.
 car3.speed_up()
 car3.turn_right()
 car3.speed_down()

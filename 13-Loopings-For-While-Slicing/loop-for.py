@@ -5,7 +5,7 @@ until it's met a defined number of times.
 
 Syntax:
 for _each in _myList:
-    <action or condition>
+    <consulting-with-params or condition>
 
 """
 

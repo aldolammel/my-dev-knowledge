@@ -15,11 +15,10 @@ import requests
 
 # Taking the ISS basic data:
 # Website: http://open-notify.org/Open-Notify-API/ISS-Location-Now/
+# Endpoint:
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
-
-# HTML errors handling:
+# HTML error handling:
 response.raise_for_status()
-
 # Extracting data:
 data = response.json()
 longitude = data["iss_position"]["longitude"]
