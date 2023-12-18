@@ -23,17 +23,17 @@ browser_opts.add_experimental_option("detach", True)  # Prevent the browser to g
 # service = Service(executable_path=DRIVER_PATH)  # Defining the local browser service.
 
 # Configuring which browser will be used:
-# driver = webdriver.Chrome(service=service, options=browser_opts)
-driver = webdriver.Chrome(options=browser_opts)  # Edge(), Firefox()
+# browser = webdriver.Chrome(service=service, options=browser_opts)
+browser = webdriver.Chrome(options=browser_opts)  # Edge(), Firefox()
 # WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control
 # to your test or script. Be aware that if your page uses a lot of AJAX on load then WebDriver may not know when it has
 # completely loaded:
-driver.get(TARGET_URL)
+browser.get(TARGET_URL)
 
 # It's an assertion to confirm that title has the word “Python” in it:
-assert "Python" in driver.title
+assert "Python" in browser.title
 # Step 1/2 > Executing a searching:
-elem = driver.find_element(By.NAME, 'q')
+elem = browser.find_element(By.NAME, 'q')
 # Making sure that, if some text is on the field, it will be removed:
 elem.clear()
 elem.send_keys("pycon")
@@ -41,7 +41,7 @@ elem.send_keys("pycon")
 elem.send_keys(Keys.RETURN)
 # After submission of the page, you should get the result if there is any. To ensure that some results are found,
 # make an assertion:
-assert "No results found." not in driver.page_source
+assert "No results found." not in browser.page_source
 
-# driver.close()  # close the browser tab
-# driver.quit()  # close the entire browser and close the webdriver.
+# browser.close()  # close the browser tab
+# browser.quit()  # close the entire browser and close the webdriver.

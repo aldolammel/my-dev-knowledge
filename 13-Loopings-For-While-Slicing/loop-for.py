@@ -13,28 +13,29 @@ from time import sleep
 from datetime import date
 
 # My colors:
-_corF = '\033[1;31m'
-_corT = '\033[1;32m'
-_corOut = '\033[m'
+corF = '\033[1;31m'
+corT = '\033[1;32m'
+corO = '\033[m'
+
 
 # Counting from 0 to 10:
-for _i in range(0, 11):
-    print(_i, end=' ')
+for i in range(0, 11):
+    print(i, end=' ')
 print('\nEnd\n')
 
 # Counting from 10 to 0:
-for _i in range(10, 0, -1):                                                     # this '-1' represents reverse counting.
-    print(_i, end=' ')                                # this "end =''" makes the iteration put each object side-by-side.
+for i in range(10, 0, -1):                                                     # this '-1' represents reverse counting.
+    print(i, end=' ')                                # this "end =''" makes the iteration put each object side-by-side.
 print('\nEnd\n')
 
 # Counting with no odd numbers:
-for _i in range(0, 11, 2):                                   # this '2' represents the frequency of the missing numbers.
-    print(_i, end=' ')
+for i in range(0, 11, 2):                                   # this '2' represents the frequency of the missing numbers.
+    print(i, end=' ')
 print('\nEnd\n')
 
 # Counting with no even numbers:
-for _i in range(1, 11, 2):                     # the same of above, '2' represents the frequency of the missing numbers.
-    print(_i, end=' ')
+for i in range(1, 11, 2):                     # the same of above, '2' represents the frequency of the missing numbers.
+    print(i, end=' ')
 print('\nEnd\n')
 
 # Reading by reverse (slicing method):
@@ -44,12 +45,12 @@ for i in listToReserve[::-1]:
 print('\nEnd.\n')
 
 # Counting dynamically:
-_start = int(input('Gimme a start integer: '))
-_end = int(input('Gimme a number bigger than the last one: '))
-_step = int(input('Gimme the number 1 or 2 or 3 for example: '))
+start = int(input('Gimme a start integer: '))
+end = int(input('Gimme a number bigger than the last one: '))
+step = int(input('Gimme the number 1 or 2 or 3 for example: '))
 
-for _i in range(_start, _end + 1, _step):
-    print(_i, end=' ')
+for i in range(start, end + 1, step):
+    print(i, end=' ')
 print('\nEnd.\n')
 
 print('\n- - - -\n')
@@ -66,20 +67,20 @@ CONTINUE skip the current repetition, starting the next one in the same -for-.
 
 # BREAK example:
 # lets break this -for- before the looping reach the 10th looping time.
-for _i in range(10):
-    if _i == 5:
+for i in range(10):
+    if i == 5:
         print('Breaking now!')
         break
-    print(_i, end=' ')
+    print(i, end=' ')
 print('You are out of the -FOR- looping.')
 
 print('\n- - - -\n')
 
 # CONTINUE example:
 # with this feature we can skip a repetition to the next one.
-for _i in range(10):
-    if _i != 5:
-        print(_i, end=' ')
+for i in range(10):
+    if i != 5:
+        print(i, end=' ')
     else:
         continue
 print('Done, where the number 5 is NOT present \'cause it was skipped with -continue- feature!')
@@ -126,8 +127,8 @@ print('\n- - - -\n')
 
 print('\n\nLesson 046 >> Here our fireworks countdown go:\n')
 
-for _i in range(10, 0, -1):
-    print(_i, end=' ')
+for i in range(10, 0, -1):
+    print(i, end=' ')
     sleep(1)
 print('\nUhu, fireworks!')
 
@@ -138,8 +139,8 @@ print('\n- - - -\n')
 
 print('\n\nLesson 047 >> Here\'s all EVEN numbers from 1 to 50:\n')
 
-for _i in range(2, 51, 2):
-    print(_i, end=' ')
+for i in range(2, 51, 2):
+    print(i, end=' ')
 print('\nEnd.\n')
 
 print('\n- - - -\n')
@@ -152,10 +153,10 @@ print('\nLesson 048 >> Show me the SUM among ALL ODD numbers MULTIPLES OF 3 from
 _sum = 0
 _count = 0
 
-for _i in range(1, 501, 2):       # bringing only odd numbers.
-    if _i % 3 == 0:               # if the number is divisible by 3 and its module is equal to zero, then...
+for i in range(1, 501, 2):       # bringing only odd numbers.
+    if i % 3 == 0:               # if the number is divisible by 3 and its module is equal to zero, then...
         _count = _count + 1       # counting how many numbers it is counting.
-        _sum = _sum + _i          # summing all the numbers found.
+        _sum = _sum + i          # summing all the numbers found.
 
 print(f'The sum of {_count} odd numbers multiples of 3 found from 0 to 500 is: {_sum}')
 
@@ -166,8 +167,8 @@ print('\n- - - -\n')
 
 _tableNumber = int(input('\n\nType an integer to find its multiplication table: '))
 
-for _i in range(1, 11):
-    print(f'{_tableNumber} x {_i} = {_tableNumber * _i}')
+for i in range(1, 11):
+    print(f'{_tableNumber} x {i} = {_tableNumber * i}')
 
 print('\n- - - -\n')
 
@@ -178,14 +179,14 @@ print('\n\nLesson 050 >> Ask seven times an integer and sum all of even numbers 
 
 _sum = 0
 
-for _i in range(1, 7):
+for i in range(1, 7):
 
     _userChoice = int(input('Type an integer: '))
 
     if _userChoice % 2 == 0:
         _sum = _sum + _userChoice
 
-print(f'\nThe sum of all entered even numbers is: {_corT}{_sum}{_corOut}.')
+print(f'\nThe sum of all entered even numbers is: {corT}{_sum}{corO}.')
 
 print('\n- - - -\n')
 
@@ -216,26 +217,26 @@ _myNumber = int(input('Type an integer: '))
 if _myNumber > 0:
 
     _divisibleTimes = 0
-    print(f'\n{_corT}Yellow numbers{_corOut} are those can divide {_myNumber}:')
+    print(f'\n{corT}Yellow numbers{corO} are those can divide {_myNumber}:')
 
-    for _i in range(1, _myNumber + 1):
-        if _myNumber % _i == 0:
-            print(f'{_corT}33m', end='')
+    for i in range(1, _myNumber + 1):
+        if _myNumber % i == 0:
+            print(f'{corT}33m', end='')
             _divisibleTimes += 1                                # same of "_obj = _obj + 1"
         else:
-            print(f'{_corOut}', end='')
-        print(_i, end=' ')
+            print(f'{corO}', end='')
+        print(i, end=' ')
 
-    print(f'\n\n{_corOut}Your choice was divisible {_divisibleTimes} times, then', end=' ')
+    print(f'\n\n{corO}Your choice was divisible {_divisibleTimes} times, then', end=' ')
 
     if _divisibleTimes == 2:
-        print(f'{_corT}{_myNumber} is a prime number!{_corOut}')
+        print(f'{corT}{_myNumber} is a prime number!{corO}')
     else:
-        print(f'{_corF}{_myNumber}',
-              f'is NOT a prime number! Prime number is divided twice (by itself and by 1).{_corOut}')
+        print(f'{corF}{_myNumber}',
+              f'is NOT a prime number! Prime number is divided twice (by itself and by 1).{corO}')
 
 else:
-    print(f'\n{_corF}Prime number never is a negative one!{_corOut}')
+    print(f'\n{corF}Prime number never is a negative one!{corO}')
 
 print('\n- - - -\n')
 
@@ -264,9 +265,9 @@ for _i in range(len(_noSpaces) - 1, -1, -1):
 
 print(f'\n{_noSpaces}  >>>  {_reverse}')
 if _reverse == _noSpaces:
-    print(f'{_corT}Your phrase is a palindrome!{_corOut}')
+    print(f'{corT}Your phrase is a palindrome!{corO}')
 else:
-    print(f'{_corF}Your phrase is NOT a palindrome!{_corOut}')
+    print(f'{corF}Your phrase is NOT a palindrome!{corO}')
 
 print('\n- - - -\n')
 
@@ -278,16 +279,16 @@ print('\n\nLesson 054 >> How much people are adults and how much are just kids:\
 _yearsAdults = 0
 _yearsKids = 0
 
-for _i in range(1, 8):
-    _yearB = int(input(f'In what year was the number {_i} person born? '))
+for i in range(1, 8):
+    _yearB = int(input(f'In what year was the number {i} person born? '))
 
     if _yearB <= (date.today().year - 18):
         _yearsAdults = _yearsAdults + 1
     else:
         _yearsKids = _yearsKids + 1
 
-print(f'\n{_corT}{_yearsAdults}{_corOut} already reached the majority. / ',
-      f'{_corF}{_yearsKids}{_corOut} are kids.\n')
+print(f'\n{corT}{_yearsAdults}{corO} already reached the majority. / ',
+      f'{corF}{_yearsKids}{corO} are kids.\n')
 
 print('\n- - - -\n')
 
@@ -299,11 +300,11 @@ print('\n\nLesson 055 (with IF solution) >> Which person of five is the heaviest
 _heaviestPerson = 0
 _lightestPerson = 0
 
-for _i in range(1, 6):
+for i in range(1, 6):
 
-    _weight = float(input(f'Type the weight of the person number {_i} in Kg: '))
+    _weight = float(input(f'Type the weight of the person number {i} in Kg: '))
 
-    if _i == 1:               # if the first entry in the counting, that weight is the top and bottom in the same time.
+    if i == 1:               # if the first entry in the counting, that weight is the top and bottom in the same time.
         _heaviestPerson = _weight
         _lightestPerson = _weight
     if _weight > _heaviestPerson:
@@ -311,8 +312,8 @@ for _i in range(1, 6):
     if _weight < _lightestPerson:
         _lightestPerson = _weight
 
-print(f' \nThe heaviest person ever weighs {_corT}{_heaviestPerson:.1f}Kg{_corOut}.',
-      f'The lightest person ever weighs {_corT}{_lightestPerson:.1f}Kg{_corOut}.')
+print(f' \nThe heaviest person ever weighs {corT}{_heaviestPerson:.1f}Kg{corO}.',
+      f'The lightest person ever weighs {corT}{_lightestPerson:.1f}Kg{corO}.')
 
 print('\n- - - -\n')
 
@@ -323,14 +324,14 @@ print('\n\nLesson 055 (with ARRAY solution) >> Which person of five is the heavi
 
 _weightsArray = []
 
-for _i in range(1, 6):
+for i in range(1, 6):
 
-    _weight = float(input(f'Type the weight of the person number {_i} in Kg: '))
+    _weight = float(input(f'Type the weight of the person number {i} in Kg: '))
 
     _weightsArray = _weightsArray + [_weight]
 
-print(f' \nThe heaviest person ever weighs {_corT}{max(_weightsArray):.1f}Kg{_corOut}.',
-      f'The lightest person ever weighs {_corT}{min(_weightsArray):.1f}Kg{_corOut}.')
+print(f' \nThe heaviest person ever weighs {corT}{max(_weightsArray):.1f}Kg{corO}.',
+      f'The lightest person ever weighs {corT}{min(_weightsArray):.1f}Kg{corO}.')
 
 print('\n- - - -\n')
 
@@ -346,9 +347,9 @@ _oldestMaleAge = 0
 _oldestMaleName = ''
 _femalesAmount = 0
 
-for _i in range(1, 5):
+for i in range(1, 5):
 
-    print(('-' * 10), 'Person', _i, ('-' * 10))
+    print(('-' * 10), 'Person', i, ('-' * 10))
 
     _name56 = str(input('Type a name: ')).strip().upper()
     _age56 = int(input('Type an age: '))
@@ -360,7 +361,7 @@ for _i in range(1, 5):
     # checking who is the oldest male:
     if _gender56 == 'M':
 
-        if _i == 1:
+        if i == 1:
             _oldestMaleName = _name56
             _oldestMaleAge = _age56
 
@@ -374,7 +375,7 @@ for _i in range(1, 5):
 
     print('')
 
-print(f'The average age of the group is {_corT}{_ageAverage / 4} years{_corOut}.'
-      f'\nThe oldest male has {_corT}{_oldestMaleAge} years{_corOut} and his name is '
-      f'{_corT}{_oldestMaleName}{_corOut}.'
-      f'\n{_corT}{_femalesAmount}{_corOut} women have less than 20 years old.')
+print(f'The average age of the group is {corT}{_ageAverage / 4} years{corO}.'
+      f'\nThe oldest male has {corT}{_oldestMaleAge} years{corO} and his name is '
+      f'{corT}{_oldestMaleName}{corO}.'
+      f'\n{corT}{_femalesAmount}{corO} women have less than 20 years old.')
