@@ -19,8 +19,8 @@ try:
     # Extracting from specific website its news:
     site_response = requests.get("https://news.ycombinator.com/")  # Checking the site response. If 200, ok.
     site_response.raise_for_status()  # HTML errors handling.
-    web_page = site_response.text  # Extracting the website content and saving it in an object.
-    html = BeautifulSoup(web_page, "html.parser")  # Analysing the object as HTML content.
+    html_raw = site_response.text  # Extracting the website content and saving it in an object.
+    html = BeautifulSoup(html_raw, "html.parser")  # Analysing the object as HTML content.
 
 except Exception as error:
     print(f"Something wrong/No internet: {error}")
