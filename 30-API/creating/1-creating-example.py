@@ -1,17 +1,23 @@
 """
-API (Application Programming Interface):
-An API is a set of commands, functions, protocols, and objects that programmers can use to create software or interact
-with an external system.
-
-CREATING:
+API CREATION:
 The logical behind to build up an API is the same logic of to build a website up with Flask.
+
+THIS API PLANNING:
+1: Goal > define the reason of this api exists.
+    >> Print out the total of sales amount.
+2: Where > what URL this API will be available.
+    >> localhost
+3: Endpoints > what locations with this API that accepts requests and send back responses.
+    >> total_sales()
+4: Resources > what resources you want to provide with this API.
+    >> check the total sales amount
 
 """
 
 import pandas as pd
 from flask import Flask, jsonify
 
-# Setting the Flash to an object:
+# Setting the Flask to an object:
 app = Flask(__name__)
 
 
@@ -34,4 +40,4 @@ def total_sales():
 
 
 # Start Flask:
-app.run()
+app.run(debug=True)
