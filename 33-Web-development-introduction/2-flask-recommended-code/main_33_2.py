@@ -12,10 +12,10 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 
 
 @app.route("/")
-def home():
+def go_home():
     return render_template("cv.html")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)  # This IP is a special that force Flask to run in all machines with app access.
 

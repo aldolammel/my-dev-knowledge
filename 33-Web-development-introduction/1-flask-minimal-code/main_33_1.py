@@ -23,4 +23,4 @@ def hello_world():
 
 
 if __name__ == "__main__":  # MAIN and NOT NAME. Be careful!
-    app.run()
+    app.run(host="0.0.0.0")  # This IP is a special that force Flask to run in all machines with app access.

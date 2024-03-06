@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_bootstrap import Bootstrap5  # to install: pip install bootstrap-flask
-from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap5   # Install = Bootstrap-Flask
+from flask_sqlalchemy import SQLAlchemy  # Install = Flask-SQLAlchemy
 
 # CREATING THE APP:
 app = Flask(__name__, template_folder="templates", static_folder="static")
@@ -8,7 +8,7 @@ app.config["SECRET_KEY"] = "Gt7362956KjuU9206LBnb194ds"
 bootstrap = Bootstrap5(app)
 
 # CREATING THE DATABASE:
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///books.db"  # configuring the SQLite database, relative to the app instance folder
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///books.db"  # setting SQLite db, relative to the app folder.
 db = SQLAlchemy()  # Creating the extension
 db.init_app(app)  # initializing the app with the extension
 
