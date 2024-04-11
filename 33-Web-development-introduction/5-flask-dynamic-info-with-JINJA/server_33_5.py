@@ -3,6 +3,7 @@ import requests
 
 
 app = Flask(__name__, template_folder="templates")
+# app.jinja_env.finalize = lambda x: x if x is not None else ''  # when DB, makes Jinja doesn't print out NONE values.
 
 
 @app.route("/")
