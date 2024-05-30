@@ -1,3 +1,9 @@
+"""
+To install TKinter through terminal, use:
+    >> pip install tk
+
+"""
+
 from tkinter import Tk, Label, Button, filedialog
 from PIL import Image
 from datetime import datetime

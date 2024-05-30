@@ -1,6 +1,12 @@
+"""
+To install TKinter through terminal, use:
+    >> pip install tk
+
+"""
+
 from question_model import Question
 from data import api_db
-from quiz_brain import QuizBrain
+from brain import QuizBrain
 from ui import QuizInterface
 
 # Initial values:
@@ -19,5 +25,5 @@ quiz_ui = QuizInterface(quiz)  # calling the user interface.
 # while quiz.still_has_questions():
 #    quiz.next_question()
 
-print("You've completed the quiz")
+print("The quiz has been finished.")
 print(f"Your final score was: {quiz.score}/{quiz.question_number}")

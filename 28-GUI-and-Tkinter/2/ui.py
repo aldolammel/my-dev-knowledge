@@ -1,5 +1,5 @@
 from tkinter import *
-from quiz_brain import QuizBrain
+from brain import QuizBrain
 
 # Constants:
 THEME_COLOR = "#375362"
@@ -10,8 +10,8 @@ BG_WRONG = "#FFD1CA"
 
 class QuizInterface:
 
-    def __init__(self, quiz_brain: QuizBrain):  # IMPORTANT: "quiz_brain: QuizBrazil" is setting data type "QuizBrain"
-        self.quiz = quiz_brain
+    def __init__(self, brain: QuizBrain):  # IMPORTANT: "brain: QuizBrazil" is setting data type "QuizBrain"
+        self.quiz = brain
         # window:
         self.window = Tk()
         self.window.title("Quizzler by @aldolammel")
