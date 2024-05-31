@@ -11,8 +11,8 @@ ENDPOINT = "https://api.npoint.io/db0d95975a4e724bcb1c"
 all_posts = requests.get(url=ENDPOINT).json()
 
 # SMTPLIB:
-FROM_SENDER = os.environ["FROM_SENDER"]
-SENDER_PASS = os.environ["SENDER_PASS"]  # https://myaccount.google.com/security >> "App passwords"
+FROM_SENDER = os.environ["FROM_SENDER"]  # email gmail
+SENDER_PASS = os.environ["SENDER_PASS"]  # myaccount.google.com/security >> 2-Step Verification >> App passwords
 SENDER_SMTP = "smtp.gmail.com"
 SMTP_PORT = 587
 TO_RECEIVER = "aldolammel@hotmail.com"
@@ -60,4 +60,4 @@ def get_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)  # This IP is a special that force Flask to run in all machines with app access.

@@ -3,6 +3,9 @@
 GUI (GRAPHICAL USER INTERFACE) WITH TKINTER MODULE:
 http://tcl.tk/man/tcl8.7/TkCmd/entry.html
 
+To install TKinter through terminal, use:
+    >> pip install tk
+
 """
 
 from tkinter import Tk, Label, Button, Entry

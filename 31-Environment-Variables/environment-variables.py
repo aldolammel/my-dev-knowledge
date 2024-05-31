@@ -11,8 +11,8 @@ There is two ways to set environment variables:
     Right click over the file, go to "Modify Run Configuration", and in "Environment variables" edit it.
     After that, call the lines down below, for example, if you're including user and password as env-variables:
         import os
-        user = os.environ["user"]
-        pass = os.environ["password"]
+        USER = os.environ["USER"]
+        PASSWORD = os.environ["PASSWORD"]
 
 
 2) Through a file:

@@ -7,7 +7,7 @@ import smtplib
 is_birthday_someone = False
 # Constants:
 FROM_SENDER = "aldolammel@gmail.com"
-SENDER_PASS = "bvcnmmqrxpkymvcl"  # https://myaccount.google.com/security >> "App passwords"
+SENDER_PASS = "wppunpwhomlwquyk"  # https://myaccount.google.com/security >> 2-Factor >> "App passwords"
 SENDER_SMTP = "smtp.gmail.com"
 SMTP_PORT = 587
 TO_RECEIVER = "aldolammel@hotmail.com"

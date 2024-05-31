@@ -10,6 +10,7 @@ for post in posts:
 
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
+# app.jinja_env.finalize = lambda x: x if x is not None else ''  # when DB, makes Jinja doesn't print out NONE values.
 
 
 @app.route("/")
@@ -26,4 +27,4 @@ def get_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
