@@ -29,6 +29,7 @@ user_1.id = '001'  # defining attributes to the object-class.
 user_1.username = 'aldolammel'  # attribute
 user_1.email = 'aldolammel@gmail.com'  # attribute
 
+print("\nCLASS UserClassExample1 outputs (Primitive building):")
 print(user_1.id)
 print(user_1.username)
 print(user_1.email)
@@ -45,8 +46,9 @@ class UserClassExample2:
         self.email = email
 
 
-user_2 = UserClassExample2('001', 'aldolammel', 'aldolammel@gmail.com')
+user_2 = UserClassExample2('002', 'aldolammel', 'aldolammel@gmail.com')
 
+print("\nCLASS UserClassExample2 outputs (Recommended building):")
 print(user_2.uid)
 print(user_2.username)
 print(user_2.email)
@@ -57,23 +59,34 @@ print()
 
 
 class UserClassExample3:
-    def __init__(self, uid, username, email):
+    def __init__(self, uid, user, email):
         self.uid = uid
-        self.username = username
+        self.user = user
         self.email = email
         self.followers = 0
         self.following = 0
 
     def follow(self, user):
-        user.followers += 1
-        self.following += 1
+        """
+        param: user: user that will be followed by someone (who is colling the function).
+        """
+        user.followers += 1  # increases the followers number of the user.
+        self.following += 1  # the user who called the function will get their following number increased.
 
 
 user_3 = UserClassExample3('003', 'aldolammel', 'aldolammel@gmail.com')
 user_4 = UserClassExample3('004', 'thyhere', 'thyhere@gmail.com')
 
-user_3.follow(user_4)
+print("\nCLASS UserClassExample3 outputs:")
+print(f"User {user_3.uid} has {user_3.followers} followers.")
+print(f"User {user_3.uid} is following {user_3.following}.")
+print(f"User {user_4.uid} has {user_4.followers} followers.")
+print(f"User {user_4.uid} is following {user_4.following}.")
 
-print(user_3.followers)
-print(user_3.following)
-print()
+user_3.follow(user_4)  # user_3 is saying they are following the user_4.
+
+print("After function follow() --------------------- ")
+print(f"User {user_3.uid} has {user_3.followers} followers.")
+print(f"User {user_3.uid} is following {user_3.following}.")
+print(f"User {user_4.uid} has {user_4.followers} followers.")
+print(f"User {user_4.uid} is following {user_4.following}.")

@@ -7,22 +7,22 @@ with access to its own data).
 """
 
 # Using a dictionary ---------------------------------------------------------------------------------------------------
-_aldoLammelDictionary = {
+dict_ = {
     'name': 'Aldo Lammel',
     'grades': [7, 8.8, 9, 9.9]
 }
 
 
-def fnc_averageGrade(_student):
+def average_grade(student):
     """
     It calcs the average grade of a student
-    :param _student: a student dictionary.
+    :param student: a student dictionary.
     :return: the average grade of a student.
     """
-    return sum(_student['grades']) / len(_student['grades'])
+    return sum(student['grades']) / len(student['grades'])
 
 
-print(f'{_aldoLammelDictionary["name"]} average is: {fnc_averageGrade(_aldoLammelDictionary)}')
+print(f'{dict_["name"]} average is: {average_grade(dict_)}')
 
 
 print('\n- - - -\n')  # the same, but with class -----------------------------------------------------------------------
@@ -33,10 +33,10 @@ class Student:
         self.name = new_name  # creating the object/information.
         self.grades = new_grades  # creating another one.
 
-    def fnc_average(self):
+    def average(self):
         return sum(self.grades) / len(self.grades)
 
 
-_studentOne = Student('Aldo Lammel', [7, 8.8, 9, 9.9])
+student_1 = Student('Aldo Lammel', [7, 8.8, 9, 9.9])
 
-print(f'{_studentOne.name} average is: {_studentOne.fnc_average()}')
+print(f'{student_1.name} average is: {student_1.average()}')
