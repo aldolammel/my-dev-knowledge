@@ -10,9 +10,17 @@ A class is built by:
     Things that never change: color, size, weight, for example.
 
 >> Its methods:
-    what exactly the class does. Generally, the methods starts with verbs: "to open the link", "to give reload",
+    what exactly the class does. Generally, the methods name starts with verbs: "to open the link", "to give reload",
     "to turn the app off", etc. A class can have one or more methods within.
     Methods (function into a class) must be written in snake_case().
+
+>> Differences between methods and functions:
+    All methods are functions, but for a function be a method, the function must call "self" in its parameters.
+    To call a function, just type the function name:
+        play()
+    To call a method, first you must call the object/class:
+        musician.play()
+
 """
 
 

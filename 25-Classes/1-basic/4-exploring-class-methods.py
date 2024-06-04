@@ -10,20 +10,21 @@ are first-class functions.
 # Creating the class and its methods -----------------------------------------------------------------------------------
 class Car:
 
-    # Initial (and mandatory) function of the class:
+    # Initial (and mandatory) method of the class, better known as Constructor:
     def __init__(self, brand: str, engine_power: float, tires_brand: str, model: str, year: int):
-        # these things down below inside the __init__ are the common class attributes that the...
-        # ...class methods/functions can call without set parameters, using only "self." to call them:
+        # these below inside the __init__ are the common class attributes that the class
+        # methods can call without set parameters, using only "self." to call them:
         self.brand = brand
         self.engine = engine_power
         self.tires_brand = tires_brand
         self.model = model
         self.year = year
 
-    # These things down below are METHODS/FUNCTIONS:
+    # This is a METHOD (a function inside a class):
     def start_engine(self):
         print(f"{self.brand}'s engine gets started!")
 
+    # This is a METHOD (a function inside a class):
     def turn_off_engine(self):
         print(f"{self.brand}'s engine gets turned off!")
 
