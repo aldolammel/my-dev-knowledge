@@ -5,26 +5,42 @@ When a class is the parent of other ones.
 """
 
 
-# Main class Animal:
+# Parent class:
 class Animal:
-    def __init__(self):
-        self.num_eyes = 2
-        self.can_move = True
+    def __init__(self, num_eyes=2, change_pos=True, underwater=False):
+        self.num_eyes = num_eyes
+        self.change_pos = change_pos
+        self.underwater = underwater
 
     def breathe(self):
-        print("Inhale, Exhale.")
+        print("I'm an animal, and I'm moving...")
 
 
-# Subclass Fish:
-class Fish(Animal):  # Here I'm calling the parent class "Animal".
+# child class:
+class WhiteShark(Animal):  # Calling the parent class "Animal".
     def __init__(self):
-        super().__init__()
-        self.can_swing = True
+        super().__init__(underwater=True)  # <-- overridden the parent attribute.
 
     def breathe(self):
         super().breathe()
-        print("Doing this underwater.")
+        print("... underwater.")
 
 
-nemo = Fish()  # Try with Animal() and Fish().
-nemo.breathe()
+# child class:
+class Sponge(Animal):  # Calling the parent class "Animal".
+    def __init__(self):
+        super().__init__(num_eyes=0, change_pos=False, underwater=True)  # <-- overridden the parent attributes.
+
+    def breathe(self):
+        print("I'm an animal, stuck in a place forever... and underwater.")
+
+
+# ------------------------ TESTING -------------------------------------------------------------------------------------
+
+check = Animal()     # <---- change only here (options: Animal, WhiteShark, Sponge)
+
+print(
+    f"Number of eyes: {check.num_eyes}\n"    
+    f"Can change its position: {check.change_pos}\n"
+    f"Can live underwater: {check.underwater}\n"
+)

@@ -42,12 +42,12 @@ class TableName(db.Model):
     author: Mapped[str] = mapped_column(String(50), nullable=False)
     rating: Mapped[float] = mapped_column(Float, nullable=False)
 
-    # Optional: this will allow each book object to be identified by its title when printed.
+    # Optional: this dunder-method will allow each book object to be identified by its title when printed.
     def __repr__(self):
         return f'<TableName {self.title}>'
-        # The reason for creating a __repr__ method in a class like this is to improve how you see and work with
-        # objects in your code. When you print a Book object or use repr() on it, you'll get a string that includes
-        # the book's title. This makes it much easier to debug the object. Without it, you'd see a less helpful
+        # The reason for creating a __repr__ (magic/dunder) method in a class like this is to improve how you see and
+        # work with objects in your code. When you print a Book object or use repr() on it, you'll get a string that
+        # includes the book's title. This makes it much easier to debug the object. Without it, you'd see a less helpful
         # default string like <Book object at 0x...>, which doesn't tell you much about the object.
 
 

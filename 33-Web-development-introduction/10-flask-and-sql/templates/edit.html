@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Editing: {{ item.name }}{% endblock %}
+
+{% block content %}
+    <h1>Edit item:</h1>
+    <form action="{{ url_for('go_edit') }}" method="POST">
+
+        <input name="id" hidden="hidden" value="{{ item.id }}">
+
+        <label>Name:</label>
+        <input name="name" type="text" value="{{ item.name }}">
+
+        <label>Description:</label>
+        <input name="description" type="text" value="{{ item.description }}">
+
+        <label>Country:</label>
+        <input name="country" type="text" value="{{ item.country }}">
+
+        <label>Photo path:</label>
+        <input name="photo" type="text" value="{{ item.photo }}">
+
+        <input type="submit" value="Update item">
+        or <a href="{{ url_for('act_del', id=item.id) }}">delete it</a>.
+
+    </form>
+
+    <a href="{{ url_for('go_home') }}">Back to home</a>
+{% endblock %}

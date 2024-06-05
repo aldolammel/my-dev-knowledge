@@ -6,7 +6,7 @@
     <div class="col-sm-12">
       <h1>My Library</h1>
       <ul>
-          {% if books == [] %}
+          {% if books|length == 0 %}
             <li>The library still empty.</li>
           {% else %}
             {% for book in books %}

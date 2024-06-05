@@ -28,7 +28,10 @@ with app.app_context():  # Creating table schema in the database. Requires appli
 @app.route("/")
 def go_home():
     # READING ALL RECORDS:
-    books = db.session.execute(db.select(Book).order_by(Book.title)).scalars()
+    books = db.session.execute(db.select(Book).order_by(Book.title)).scalars().all()  # this ".all()" make it
+                                                                                      # countable, crucial to
+                                                                                      # "items|length" validation
+                                                                                      # on index.html.
     return render_template("index.html", books=books)
 
 
