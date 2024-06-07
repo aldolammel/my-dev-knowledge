@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect
-from flask_bootstrap import Bootstrap5  # to install: pip install bootstrap-flask
-from cafe_form import CafeForm
+from flask_bootstrap import Bootstrap5  # to install: bootstrap-flask
+from forms import CafeForm
 import csv
 
 app = Flask(__name__, template_folder="templates", static_folder="static")

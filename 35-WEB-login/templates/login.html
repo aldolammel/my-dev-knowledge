@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.username.label }}<br />{{ form.username(size=32) }}
+      </div>
+      <div>
+        {{ form.password.label }}<br />{{ form.password(size=32) }}
+      </div>
+      <div>
+        {{ form.submit() }}
+      </div>
+    </form>
+  </body>
+</html>
