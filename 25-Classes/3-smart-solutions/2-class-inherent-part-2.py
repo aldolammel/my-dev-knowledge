@@ -11,9 +11,10 @@ class Animal:
         self.num_eyes = num_eyes
         self.change_pos = change_pos
         self.underwater = underwater
+        self.breathe()
 
     def breathe(self):
-        print("I'm an animal, and I'm moving...")
+        print("I'm an animal.")
 
 
 # child class:
@@ -21,23 +22,28 @@ class WhiteShark(Animal):  # Calling the parent class "Animal".
     def __init__(self):
         super().__init__(underwater=True)  # <-- overridden the parent attribute.
 
-    def breathe(self):
-        super().breathe()
-        print("... underwater.")
+    def breathe(self):                       # As the parent has a method w/ the same name, this one's overridden that
+        super().breathe()                    # and also calling the original method to show the first msg before the
+        print("And I'm moving underwater.")  # next message.
 
 
 # child class:
 class Sponge(Animal):  # Calling the parent class "Animal".
     def __init__(self):
-        super().__init__(num_eyes=0, change_pos=False, underwater=True)  # <-- overridden the parent attributes.
+        super().__init__(num_eyes=0, change_pos=False, underwater=True)  # these params overridden the parent attributes
+        # The same as the params, but declared in the subclass constructor:
+        # self.num_eyes = 0
+        # self.change_pos = False
+        # self.underwater = True
 
     def breathe(self):
-        print("I'm an animal, stuck in a place forever... and underwater.")
+        super().breathe()
+        print("And I'm stuck in the same underwater place forever.")
 
 
 # ------------------------ TESTING -------------------------------------------------------------------------------------
 
-check = Animal()     # <---- change only here (options: Animal, WhiteShark, Sponge)
+check = Sponge()     # <---- change only here (options: Animal, WhiteShark, Sponge)
 
 print(
     f"Number of eyes: {check.num_eyes}\n"    

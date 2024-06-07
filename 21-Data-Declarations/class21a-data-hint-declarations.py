@@ -1,12 +1,15 @@
 """
 TYPE HINT IN PYTHON: DATA TYPES
 
-Set the data types of an object will help you find potencially bugs easier.
+Set the data types of an object will help you find potentially bugs easier.
 
 integer = int
 float = float
 string = str
-boolian = bool
+boolean = bool
+containers = list, tuple, set, dict
+object = object
+anything = any
 
 """
 
@@ -14,7 +17,7 @@ boolian = bool
 my_age: int
 my_height: float
 my_name: str
-is_adult = bool
+is_adult: bool
 
 
 # Function with data type declaration:
