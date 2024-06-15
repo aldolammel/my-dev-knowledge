@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder="templates")
 # app.jinja_env.finalize = lambda x: x if x is not None else ''  # when DB, makes Jinja doesn't print out NONE values.
 
 
-@app.route("/")
+@app.route("/")  # by default, all routes are method GET when "methods" are not declared.
 def get_home():
     return render_template("index.html")
 

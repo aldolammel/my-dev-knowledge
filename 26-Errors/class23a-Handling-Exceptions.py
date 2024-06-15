@@ -6,6 +6,9 @@ Exceptions are used to prevent a generic error messages and the software to stop
 Traceback message = The part of the error message that tells us the lines of code where the error happened and
 the functions calls that took place.
 
+MORE IN DRA. ANGELA LEE's COURSE:
+https://www.udemy.com/course/100-days-of-code/learn/lecture/20963160#overview
+
 """
 
 import urllib

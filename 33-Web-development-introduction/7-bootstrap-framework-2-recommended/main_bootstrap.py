@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 bootstrap = Bootstrap5(app)
 
 
-@app.route("/")
+@app.route("/")  # by default, all routes are method GET when "methods" are not declared.
 def go_home():
     return render_template("index.html")
 

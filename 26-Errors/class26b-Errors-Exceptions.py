@@ -11,6 +11,9 @@ Syntax structure to dealing with exceptions:
 Very important: if you can use the IF/ELSE structure easilly to across some issue, do it. Use TRY-EXCEPTION structure
 when IF/ELSE is not so easy to deal, example, when you need to check if a file exists.
 
+MORE IN DRA. ANGELA LEE's COURSE:
+https://www.udemy.com/course/100-days-of-code/learn/lecture/20963160#overview
+
 """
 
 

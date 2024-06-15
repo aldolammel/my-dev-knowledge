@@ -11,6 +11,9 @@ By convention, it is called "*args".
 
 The type of args always is a tuple.
 
+MORE IN THIS SECTION OF DRA. ANGELA LEE'S COURSE:
+https://www.udemy.com/course/100-days-of-code/learn/lecture/20804136#overview
+
 """
 
 from time import sleep

@@ -24,7 +24,7 @@ def get_home():
     return render_template("index.html", all_posts=all_posts)
 
 
-@app.route("/about")
+@app.route("/about")  # by default, all routes are method GET when "methods" are not declared.
 def get_about():
     return render_template("about.html")
 

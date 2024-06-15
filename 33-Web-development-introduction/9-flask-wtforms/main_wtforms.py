@@ -9,7 +9,7 @@ bootstrap = Bootstrap5(app)
 
 
 # all Flask routes below
-@app.route("/")
+@app.route("/")  # by default, all routes are method GET when "methods" are not declared.
 def go_home():
     return render_template("index.html")
 

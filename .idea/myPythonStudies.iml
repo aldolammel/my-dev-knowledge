@@ -9,7 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/33-Web-development-introduction/9-flask-wtforms/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/25-Classes/oop-with-pygame/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (myPythonStudies) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.11 (myPythonStudies)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
