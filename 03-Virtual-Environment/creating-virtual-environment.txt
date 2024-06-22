@@ -1,4 +1,4 @@
-"""
+
 VIRTUAL ENVIRONMENT:
 
 A virtual environment is a way to have multiple, parallel instances of the Python interpreter, each with different sets
@@ -74,4 +74,3 @@ A+B) RECONFIGURE AS NEEDED:
     5) Find the new environment and unselect the "Associate this venv with the current project".
     6) Finally, rename the environment to make its selection easier.
 
-"""

@@ -1,20 +1,29 @@
-INSTALL DJANGO:
+INSTALLING DJANGO:
 
-1) Create the project folder, and then create the virtual environment and active it:
+
+1) Create the project folder, and get it:
+    $ mkdir <project_folder>
     $ cd <project_folder>
-    $ virtualenv <venv_name>
-    $ . \venv\Scripts\activate
 
-2) Update the pip:
-    $ python.exe -m pip install --upgrade pip
 
-3) Install Django:
+2) Create the virtual environment and active it:
+    <Check the folder '03-Virtual-Environment'>
+
+
+3) Update the pip:
+    <Check the folder '04-Basic-Modules'>
+
+
+4) Install Django:
     $ pip install django
 
-4) Create the d
-    $django-admin startproject <project_name>
 
-5) Get into the same folder where is the 'manager.py' file, and then start the django default application:
+5) Create the Django Project Structure:
+    # make sure you're in project root folder and:
+    $ django-admin startproject <project_name> .
+
+
+6) Get into the same folder where is the 'manager.py' file, and then start the django default application:
     $ cd <project_name>
     $ python .\manage.py runserver
 
