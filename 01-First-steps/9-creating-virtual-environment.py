@@ -34,20 +34,6 @@ A.2) DELETING:
         $ xxxx
 
 
-A.3) ACTIVATING:
-    Windows:
-        $ xxx
-        $ xxx
-    Debian/Ubuntu:
-        $ xxxx
-        $ xxxx
-    Mac:
-        $ xxxx
-        $ xxxx
-
-
-------------------------------------------------------------------------------------------------------------------------
-
 
 B.1) CREATING:
     B.1.1) GO to the terminal;
@@ -65,13 +51,16 @@ B.2) DELETING:
         $ xxxx
 
 
-B.3) ACTIVATING:
-    B.3.1) Go to the terminal;
-    ON WINDOWS:  B.3.2) $ <venv_name>/Scripts/activate
-    ON LINUX:    B.3.2) $ . <venv_name>/bin/activate
+A+B) ACTIVATING:
+    Windows:
+        $ <venv_name>/Scripts/activate
+    Debian/Ubuntu:
+        $ . <venv_name>/bin/activate
+    Mac:
+        $ source <venv_name>/bin/activate
 
-        Important: the feedback that you're using the right environment is the environment name is flagged in
-        parentheses before the prompt command line as "(venv_name) ..."
+    Important: the feedback that you're using the right environment is the environment name is flagged in
+                parentheses before the prompt command line as "(venv_name) ..."
 
 
 ------------------------------------------------------------------------------------------------------------------------
