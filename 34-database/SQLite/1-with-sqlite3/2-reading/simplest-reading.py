@@ -1,5 +1,5 @@
 """
-PERSISTENT DATA: SQLITE
+PERSISTENT DATA: DATABASE WITH SQLITE3: READING
 
     + How to read a specific entry;
     + How to read all entries from a specific table;

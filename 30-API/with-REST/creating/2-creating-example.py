@@ -17,6 +17,10 @@ PLANNING THIS API:
 - Resources:
     >> Books list.
 
+    Tools:
+        Postman > it helps developers design, build, test and manage APIs.
+        Insomnia > Postman alternative.
+
 """
 
 from flask import Flask, jsonify, request

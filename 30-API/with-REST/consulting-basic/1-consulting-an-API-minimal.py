@@ -10,6 +10,10 @@ API (Application Programming Interface) - MINIMAL:
     Python module:
     requests : https://pypi.org/project/requests/
 
+    Tools:
+        Postman > it helps developers design, build, test and manage APIs.
+        Insomnia > Postman alternative.
+
     --------------------------------------------------------------------------------------------------------------------
 
     This example is a file that's reading a simple API. This API is returning just a number.

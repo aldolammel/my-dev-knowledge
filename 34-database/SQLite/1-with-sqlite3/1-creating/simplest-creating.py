@@ -1,5 +1,5 @@
 """
-PERSISTENT DATA: SQLITE
+PERSISTENT DATA: DATABASE WITH SQLITE3: CREATING
 
     + How to create a database with tables:
 

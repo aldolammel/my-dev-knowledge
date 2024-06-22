@@ -12,6 +12,10 @@ THIS API PLANNING:
 4: Resources > what resources you want to provide with this API.
     >> check the total sales amount
 
+    Tools:
+        Postman > it helps developers design, build, test and manage APIs.
+        Insomnia > Postman alternative.
+
 """
 
 import pandas as pd

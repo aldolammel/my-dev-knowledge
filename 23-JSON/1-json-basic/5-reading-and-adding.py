@@ -8,6 +8,10 @@ JSON (JavaScript Object Notation):
     IMPORTANT:
     Json always returns a dictionary.
 
+    Tools:
+        Postman > it helps developers design, build, test and manage APIs.
+        Insomnia > Postman alternative.
+
     This example: if the json file is empty, you'll face an error.
     Change this dictionary content, run it and check manually the json file.
 

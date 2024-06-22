@@ -1,5 +1,5 @@
 """
-PERSISTENT DATA: SQLITE
+PERSISTENT DATA: DATABASE WITH SQLITE3: DELETING
 
     + How to delete a specific entry;
     + How to delete all entries from a specific table;

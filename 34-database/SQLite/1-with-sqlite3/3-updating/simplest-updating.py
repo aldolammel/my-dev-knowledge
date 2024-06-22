@@ -1,5 +1,5 @@
 """
-PERSISTENT DATA: SQLITE
+PERSISTENT DATA: DATABASE WITH SQLITE3: UPDATING
 
     + How to add a new entry (updating the db);
 

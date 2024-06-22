@@ -8,6 +8,10 @@ JSON (JavaScript Object Notation):
     IMPORTANT:
     Json always returns a dictionary.
 
+    Tools:
+        Postman > it helps developers design, build, test and manage APIs.
+        Insomnia > Postman alternative.
+
 """
 import json
 from datetime import datetime
