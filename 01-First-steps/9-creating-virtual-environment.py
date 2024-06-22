@@ -7,29 +7,82 @@ including copies of its support utilities. The packages installed in each virtua
 virtual environment and no other. Even large, complex packages with platform-dependent binaries can be corralled off
 from each other in virtual environments.
 
-
-1) CREATING:
-    1.1) GO to the terminal;
-    1.2) Go to the folder that you want to install the virtual environment;
-    1.3) In the folder, type through Terminal to create the virtual environment: virtualenv venv_unique_name
-        If the command wasn't recognized, install the virtualenv module: pip install virtualenv
+There is 2 methods to create a virtual environment by terminal:
+    A) by Python built-in command;
+    B) by installing a module called virtualenv;
 
 
-2) ACTIVATING
-    2.1) Go to the terminal;
-    ON WINDOWS:  2.2) Type: <venv_name>/Scripts/activate
-    ON LINUX:    2.2) Type: source <venv_name>/bin/activate
+------------------------------------------------------------------------------------------------------------------------
+
+
+A.1) CREATING:
+    Windows:
+        $ py -m venv <venv_name>
+    Debian/Ubuntu:
+        $ sudo apt install python3.XX-venv
+        $ python3 -m venv <venv_name>
+    Mac:
+        $ python3 -m venv <venv_name>
+
+
+A.2) DELETING:
+    Windows:
+        $ xxx
+    Debian/Ubuntu:
+        $ rm -r <venv_name>
+    Mac:
+        $ xxxx
+
+
+A.3) ACTIVATING:
+    Windows:
+        $ xxx
+        $ xxx
+    Debian/Ubuntu:
+        $ xxxx
+        $ xxxx
+    Mac:
+        $ xxxx
+        $ xxxx
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+B.1) CREATING:
+    B.1.1) GO to the terminal;
+    B.1.2) Go to the folder that you want to install the virtual environment;
+    B.1.3) In the folder, type through Terminal to create the virtual environment: $ virtualenv <venv_unique_name>
+        If the command wasn't recognized, install the virtualenv module: $ pip install virtualenv
+
+
+B.2) DELETING:
+    Windows:
+        $ xxx
+    Debian/Ubuntu:
+        $ xxx
+    Mac:
+        $ xxxx
+
+
+B.3) ACTIVATING:
+    B.3.1) Go to the terminal;
+    ON WINDOWS:  B.3.2) $ <venv_name>/Scripts/activate
+    ON LINUX:    B.3.2) $ . <venv_name>/bin/activate
 
         Important: the feedback that you're using the right environment is the environment name is flagged in
         parentheses before the prompt command line as "(venv_name) ..."
 
 
-3) RECONFIGURE AS NEEDED:
-    3.1) In lower-right-corner of pycharm, select 'Add new interpreter' > 'Local interpreter'.
-    3.2) Select 'Existing' and, after that, select '<venv_of_your_project>/Scripts/python.exe'
-    3.3) Open the Python Interpreter windows (Ctrl+alt+0+S)
-    3.4) In 'Python interpreter' drop-menu, select 'Show all'.
-    3.5) Find the new environment and unselect the "Associate this venv with the current project".
-    3.6) Finally, rename the environment to make its selection easier.
+------------------------------------------------------------------------------------------------------------------------
+
+
+A+B) RECONFIGURE AS NEEDED:
+    1) In lower-right-corner of pycharm, select 'Add new interpreter' > 'Local interpreter'.
+    2) Select 'Existing' and, after that, select '<venv_of_your_project>/Scripts/python.exe'
+    3) Open the Python Interpreter windows (Ctrl+alt+0+S)
+    4) In 'Python interpreter' drop-menu, select 'Show all'.
+    5) Find the new environment and unselect the "Associate this venv with the current project".
+    6) Finally, rename the environment to make its selection easier.
 
 """
