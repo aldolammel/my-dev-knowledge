@@ -27,7 +27,7 @@ A.1) CREATING:
 
 A.2) DELETING:
     Windows:
-        $ xxx
+        $ rmdir <venv_name>
     Debian/Ubuntu:
         $ rm -r <venv_name>
     Mac:
@@ -53,9 +53,13 @@ B.2) DELETING:
 
 A+B) ACTIVATING:
     Windows:
-        $ <venv_name>/Scripts/activate
+        $ <venv_name>\Scripts\activate
+        # Execute this command if you are not allow to activate an environment via Windows Terminal:
+        $ Set-ExecutionPolicy Unrestricted -Scope Process
+
     Debian/Ubuntu:
         $ . <venv_name>/bin/activate
+
     Mac:
         $ source <venv_name>/bin/activate
 

@@ -2,12 +2,22 @@
 PIP (BUILT-IN MODULE)
 
 
+1) Make sure you are in the right Python Interpreter in your IDE.
+    PyCharm: check the right-lower-corner;
+    VSCode: press Ctrl+Shift+P and type 'Python Interpreter'
 
-Windows:
-    $ py -m pip install --upgrade pip
-Debian/Ubuntu:
-    $ python3 -m pip install --upgrade pip
-Mac:
-    $ python3 -m pip install --upgrade pip
+
+2) Active your environment:
+    <Check the folder '03-Virtual-Environment'>
+
+
+3) Now, do it:
+
+    Windows:
+        $ py -m pip install --upgrade pip
+    Debian/Ubuntu:
+        $ python3 -m pip install --upgrade pip
+    Mac:
+        $ python3 -m pip install --upgrade pip
 
 
