@@ -671,3 +671,4 @@ instance/*
 .webassets-cache
 .env
 
+!/venv_studies/
