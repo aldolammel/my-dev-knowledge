@@ -267,6 +267,7 @@ fabric.properties
 [Ss]cripts
 pyvenv.cfg
 .venv
+.venv_studies
 pip-selfcheck.json
 
 ### Windows template

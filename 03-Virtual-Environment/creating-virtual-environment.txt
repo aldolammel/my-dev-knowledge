@@ -17,12 +17,12 @@ There is 2 methods to create a virtual environment by terminal:
 
 A.1) CREATING:
     Windows:
-        $ py -m venv <venv_name>
+        $ py -m venv .<venv_name>
     Debian/Ubuntu:
         $ sudo apt install python3.XX-venv
-        $ python3 -m venv <venv_name>
+        $ python3 -m venv .<venv_name>     <--- add that dot "." to make it a hidden folder and be automatically ignore by gitignore file.
     Mac:
-        $ python3 -m venv <venv_name>
+        $ python3 -m venv .<venv_name>
 
 
 A.2) DELETING:
