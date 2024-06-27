@@ -20,10 +20,35 @@ INSTALLING DJANGO:
 
 5) Create the Django Project Structure:
     # make sure you're in project root folder and:
-    $ django-admin startproject <project_name> .
+    $ django-admin startproject proj_<project_name> .
 
 
-6) Get into the same folder where is the 'manager.py' file, and then start the django default application:
-    $ cd <project_name>
-    $ python .\manage.py runserver
+6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
+    $ python manage.py runserver
+
+
+7) In root of the project, create each app of your project:
+    $ python manage.py startapp <app_name>
+
+8) Create the urls.py file into each app created, adding the urlpatterns list in each file;
+    from django.urls import path
+    from . import views
+    urlpatters = [path('', views.index)]
+
+9) Through the views.py into each app created, add a function with each pattern created in the app urlpatterns;
+    from django.http import HttpResponse
+    def index():
+        return HttpResponse('Hello world')
+
+10) Go to your main project app (often the same name of the project) and open its urls.py file and include
+    each app url references right after the admin line:
+    from django.urls import path, include
+    path("<app_name>/", include("<app_name>.urls"))
+
+11) Still in main project app, go to 'settings.py' file and add each app name in the 'INSTALLED_APPS' list.
+    '<app_name>',
+    '<app_name>',
+
+12) Test your app, running it:
+    $ python manage.py runserver
 
