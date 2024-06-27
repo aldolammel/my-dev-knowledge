@@ -14,9 +14,15 @@ INSTALLING DJANGO:
     <Check the folder '04-Basic-Modules'>
 
 
-4) Install Django:
+4) Installation:
     $ pip install django
 
+    Only for VSCode:
+    # DjLint (html template formatter for django/jinja)
+    $ pip install -U djlint
+    # Install the DjLint extension.
+    # Install the Django (by Baptiste) extension.
+    # In Html's, change the language mode to 'Django-Html'
 
 5) Create the Django Project Structure:
     # make sure you're in project root folder and:
@@ -30,25 +36,30 @@ INSTALLING DJANGO:
 7) In root of the project, create each app of your project:
     $ python manage.py startapp <app_name>
 
-8) Create the urls.py file into each app created, adding the urlpatterns list in each file;
-    from django.urls import path
-    from . import views
-    urlpatters = [path('', views.index)]
+    7.X) Create these folders into each app folder created:
+        /app_folder/templates/
+        /app_folder/templates/<app_name>/
 
-9) Through the views.py into each app created, add a function with each pattern created in the app urlpatterns;
-    from django.http import HttpResponse
-    def index():
-        return HttpResponse('Hello world')
+    7.X) Create the urls.py file into each app created, adding the urlpatterns list in each file;
+        from django.urls import path
+        from . import views
+        urlpatters = [path('', views.index)]
 
-10) Go to your main project app (often the same name of the project) and open its urls.py file and include
-    each app url references right after the admin line:
-    from django.urls import path, include
-    path("<app_name>/", include("<app_name>.urls"))
+    7.X) Through the views.py into each app created, add a function with each pattern created in the app urlpatterns;
+        from django.http import HttpResponse
+        def index():
+            return HttpResponse('Hello world')
 
-11) Still in main project app, go to 'settings.py' file and add each app name in the 'INSTALLED_APPS' list.
-    '<app_name>',
-    '<app_name>',
+    7.X) Go to your main project app (often the same name of the project) and open its urls.py file and include
+        each app url references right after the admin line:
+        from django.urls import path, include
+        path("<app_name>/", include("<app_name>.urls"))
 
-12) Test your app, running it:
+    7.X) Still in main project app, go to 'settings.py' file and add each app name in the 'INSTALLED_APPS' list.
+        '<app_name>',
+        '<app_name>',
+
+8) Test your app, running it:
     $ python manage.py runserver
+
 

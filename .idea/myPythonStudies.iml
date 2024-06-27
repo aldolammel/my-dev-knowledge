@@ -10,7 +10,7 @@
       <excludeFolder url="file://$MODULE_DIR$/33-Web-development/forms/with-WTForms/9-flask-wtforms/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/25-Classes/venv_25" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (Python-Studies)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

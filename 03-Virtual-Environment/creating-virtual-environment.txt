@@ -65,8 +65,8 @@ A+B) ACTIVATING:
 
 ------------------------------------------------------------------------------------------------------------------------
 
-
-A+B) RECONFIGURE AS NEEDED:
+FOR PYCHARM:
+Reconfigure as needed:
     1) In lower-right-corner of pycharm, select 'Add new interpreter' > 'Local interpreter'.
     2) Select 'Existing' and, after that, select '<venv_of_your_project>/Scripts/python.exe'
     3) Open the Python Interpreter windows (Ctrl+alt+0+S)
@@ -74,3 +74,8 @@ A+B) RECONFIGURE AS NEEDED:
     5) Find the new environment and unselect the "Associate this venv with the current project".
     6) Finally, rename the environment to make its selection easier.
 
+FOR VSCODE:
+Selecting the Interpreter:
+    1) Ctrl+Shift+P
+    2) Type "Python Interpreter"
+    3) Select the environment desired.
