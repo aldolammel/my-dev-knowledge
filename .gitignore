@@ -670,5 +670,3 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
-
-!/venv_studies/
