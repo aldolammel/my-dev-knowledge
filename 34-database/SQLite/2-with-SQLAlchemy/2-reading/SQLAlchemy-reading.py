@@ -68,7 +68,7 @@ def all_movies():
 
 @app.route("/movie/<int:movie_id>")
 def movie_by_id(movie_id):
-    movie = db.get_or_404(Movie, movie_id)
+    movie = db.get_or_404(Movie, movie_id)  # or 'movie = Movie.query.get(movie_id)'
     # As I don't want to build an HTML page only to show the result, I'm using a json result:
     return jsonify(movie.to_dict())
 
@@ -76,7 +76,7 @@ def movie_by_id(movie_id):
 @app.route("/movie/random")
 def movie_random():
     movie_id = randint(1, Movie.query.count())  # checking the length of Movie table in database.
-    movie = db.get_or_404(Movie, movie_id)
+    movie = db.get_or_404(Movie, movie_id)  # or 'movie = Movie.query.get(movie_id)'
     # As I don't want to build an HTML page only to show the result, I'm using a json result:
     return jsonify(movie.to_dict())
 

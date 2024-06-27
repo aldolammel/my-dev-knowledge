@@ -28,7 +28,7 @@ def go_edit():
     if request.method == "POST":
         # UPDATING A RECORD BY PRIMARY KEY:
         book_id = request.form["id"]  # because when POST, it's not allow to request the value from URL (get method).
-        book_to_update = db.get_or_404(Book, book_id)
+        book_to_update = db.get_or_404(Book, book_id)  # or 'var = Book.query.get(book_id)'
         book_to_update.title = request.form["title"]
         book_to_update.author = request.form["author"]
         book_to_update.rating = request.form["rating"]
@@ -36,5 +36,5 @@ def go_edit():
         return redirect(url_for("go_home"))
     # If the method is "GET", do it:
     book_id = request.args.get("id")  # requesting the id through the URL (get method)
-    book_selected = db.get_or_404(Book, book_id)
+    book_selected = db.get_or_404(Book, book_id)  # or 'var = Book.query.get(book_id)'
     return render_template("edit.html", book=book_selected)
