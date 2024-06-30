@@ -40,6 +40,13 @@ INSTALLING DJANGO:
         /app_folder/templates/
         /app_folder/templates/<app_name>/
 
+    7.X) Show to Django where is each template folder in your apps, going to the project 'settings.py' and editing this line
+        in 'template' list:
+        from:
+            'dirs': [],
+        To:
+            'dirs': [BASE_DIR / 'templates'],
+
     7.X) Create the urls.py file into each app created, adding the urlpatterns list in each file;
         from django.urls import path
         from . import views
@@ -58,6 +65,9 @@ INSTALLING DJANGO:
     7.X) Still in main project app, go to 'settings.py' file and add each app name in the 'INSTALLED_APPS' list.
         '<app_name>',
         '<app_name>',
+
+    7.x) Perform the database basic tables creation:
+        $ python manage.py migrate
 
 8) Test your app, running it:
     $ python manage.py runserver

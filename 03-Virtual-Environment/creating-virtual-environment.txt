@@ -54,8 +54,11 @@ B.2) DELETING:
 A+B) ACTIVATING:
     Windows:
         $ <venv_name>\Scripts\activate
-        # Execute this command if you are not allow to activate an environment via Windows Terminal:
-        $ Set-ExecutionPolicy Unrestricted -Scope Process
+        # Execute this command below if you are not allow to activate an environment via Windows Terminal:
+        # In PowerShell as administrator:
+            $ Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+            # or:
+            $ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
     Debian/Ubuntu:
         $ . <venv_name>/bin/activate
