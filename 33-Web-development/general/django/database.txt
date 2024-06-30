@@ -1,6 +1,0 @@
-
-MODEL FIELD REFERENCE:
-https://docs.djangoproject.com/en/5.0/ref/models/fields/
-
-
-
