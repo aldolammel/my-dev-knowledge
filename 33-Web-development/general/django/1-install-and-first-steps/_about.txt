@@ -66,10 +66,16 @@ INSTALLING DJANGO:
         '<app_name>',
         '<app_name>',
 
-    7.x) Perform the database basic tables creation:
+8) Let's perform the database basic tasks:
+        # It creates the database with basic tables:
         $ python manage.py migrate
 
-8) Test your app, running it:
+    8.1) Creating the admin user:
+        $ python manage.py createsuperuser
+        # Now, try to login, making sure the application is running:
+        http://127.0.0.1:8000/admin/
+
+9) Test your app, running it:
     $ python manage.py runserver
 
 

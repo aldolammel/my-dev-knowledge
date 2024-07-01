@@ -1,0 +1,32 @@
+
+CREATING AND READING:
+
+Three ways to:
+    A) On Windows, using the open-source software called 'DB Brower' for SQLite;
+    B) On VSCode, using SQLite extension. After the install, press Ctrl+Shift+P and type
+        "SQLife: open database" and select the db. In Explorer column, you'll see "SQLife" tab;
+    C) Using the Python Shell (check below);
+
+
+Open the Python Shell:
+    $ python manage.py shell
+
+
+    CONSULTING:
+        
+    1) Ask to Django import a table content:
+        # eg.: from sandbox.models import Category:
+        $ from <app_name>.models import <class_model_name>
+
+    2) Define the content imported to a variable:
+        $ var = <class_model_name>.objects.all()
+        $ print(var)
+        # if empty, will be shown '<QuerySet []>'.
+
+
+    ADDING:
+
+    3) Lets add some value into the 'name' attribute of the table:
+        $ cat = <class_model_name>.objects.create(name='Something')
+
+    4) Just run again that print(var) directly;
