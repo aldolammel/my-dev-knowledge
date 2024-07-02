@@ -1,0 +1,18 @@
+
+MODELS.PY:
+
+
+    NULL vs BLANK
+
+        >> 'blank True' means the field is not mandatory.
+        >> 'null True' means, if the field is empty, in db the value is storage as 'null', not empty.
+
+            E.g. description = models.TextField(blank=True, null=True)
+
+
+    ON_DELETE CASCADE
+
+        >> If you use 'on_delete=models.CASCADE' in a models.py class, you are saying the entire
+            database content related with a foreign key must be deleted as well along the foreign key.
+            
+            E.g. category = models.ForeignKey(Category, on_delete=models.CASCADE)

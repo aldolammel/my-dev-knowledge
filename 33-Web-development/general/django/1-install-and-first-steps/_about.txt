@@ -36,7 +36,10 @@ INSTALLING DJANGO:
 7) In root of the project, create each app of your project:
     $ python manage.py startapp <app_name>
 
-    7.X) Create these folders into each app folder created:
+    7.X) Create these folders:
+        # This one in the main application root where you will set common html for all or most part of apps of the main application:
+        /templates/
+        # Now, these ones into each app of your main application:
         /app_folder/templates/
         /app_folder/templates/<app_name>/
 
