@@ -129,7 +129,11 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+<<<<<<< HEAD
 #.env  <--- in this case i am using this file as an example in wiki, so don't ignore it.
+=======
+#.env  <-- in this case ainda using this file as an example that cant be hidden.
+>>>>>>> 94e6cc9 (updating)
 .venv
 .venv_studies
 env/

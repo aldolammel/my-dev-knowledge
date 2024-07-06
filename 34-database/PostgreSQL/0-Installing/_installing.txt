@@ -18,12 +18,8 @@ Ask your self if you need to install a database for devolopment. Sometimes all y
         WINDOWS
             X) After the installation, go to start and search by 'pgAdmin';
             X) Create a new database;
-
-
         LINUX
             X) 
-
-
         MAC
             X) 
 
