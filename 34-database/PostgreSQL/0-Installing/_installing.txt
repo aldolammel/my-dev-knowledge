@@ -1,0 +1,32 @@
+
+POSTGRESQL: INSTALLATION
+
+Ask your self if you need to install a database for devolopment. Sometimes all you need is a free cloud as railway.app.
+
+    1) Before to install the database, check if there's the postgresql in the current machine:
+        WIN:
+            $ xxxx
+        LINUX:
+            $ xxxx
+        MAC:
+            $ xxxx
+
+
+    2) Download from: https://www.postgresql.org/
+
+
+        WINDOWS
+            X) After the installation, go to start and search by 'pgAdmin';
+            X) Create a new database;
+
+
+        LINUX
+            X) 
+
+
+        MAC
+            X) 
+
+
+
+

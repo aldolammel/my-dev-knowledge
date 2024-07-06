@@ -1,0 +1,11 @@
+
+POSTGRESQL
+
+    1) Install the PostgreSQL Python module:
+        https://www.psycopg.org/
+
+
+    2) If the database won't be in the cloud, install the PostgreSQL locally:
+        Go to the folder: 34-database/PostgreSQL/0-Installing/
+
+    
