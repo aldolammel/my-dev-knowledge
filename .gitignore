@@ -129,7 +129,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env  <--- in this case i am using this file as an example in wiki, so don't ignore it.
 .venv
 .venv_studies
 env/
