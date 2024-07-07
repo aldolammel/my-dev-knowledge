@@ -14,8 +14,35 @@ CREATING DJANGO PACKAGES OF FUNCTIONS (APPS):
         >> command 'migrate' = it's responsible for applying and unapplying migrations.
 
 
-    1) Working with models.py (custom db tables):
-        
+    1) In root of the project, create each app of your project:
+        $ python manage.py startapp <app_name>
+
+    2) Create these folders into the new app folder:
+        /<app_name>/templates/
+        /<app_name>/templates/<app_name>/
+
+    3) Create the urls.py file into each app created, adding the urlpatterns list in each file:
+        from django.urls import path
+        from . import views
+        app_name = "app_name"
+        urlpatterns = [path('', views.index)]
+
+    4) Through the views.py into each app created, add a function with each pattern created in the app urlpatterns;
+        from django.http import HttpResponse
+        def index():
+            return HttpResponse('<name of the app>')
+
+    5) Go to your project app (often the same name of the project) and open its urls.py file and include
+        each app url references right after the admin line:
+        from django.urls import path, include
+        path("<app_name>/", include("<app_name>.urls"))
+
+    6) Still in main project app, go to 'settings.py' file and add each app name in the 'INSTALLED_APPS' list.
+        '<app_name>',
+        '<app_name>',
+
+    7) If you will create/add something now in models.py file, after that, you need to do these steps, otherwise, ignore it:
+            
         # Ask to Django convert the objects in models to db instructions:
         $ python manage.py makemigrations <app_name>
         
@@ -23,9 +50,6 @@ CREATING DJANGO PACKAGES OF FUNCTIONS (APPS):
         
         # Next, if you gave a green light, ask Django to execute the instructions:
         $ python manage.py migrate
-
-
-
 
 
 
