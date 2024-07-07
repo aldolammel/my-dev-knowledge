@@ -1,0 +1,36 @@
+
+MODEL FIELD REFERENCE:
+https://docs.djangoproject.com/en/5.0/ref/models/fields/
+
+
+
+-----------
+
+CREATING DJANGO PACKAGES OF FUNCTIONS (APPS):
+
+    Basic to know:
+        >> file 'models.py' = this file represents through classes each table to be created for a specific app (package) of your main application/project;
+        >> command 'makemigrations' = it's responsible for creating new migrations based on the changes you have made to your models;
+        >> command 'migrate' = it's responsible for applying and unapplying migrations.
+
+
+    1) Working with models.py (custom db tables):
+        
+        # Ask to Django convert the objects in models to db instructions:
+        $ python manage.py makemigrations <app_name>
+        
+        # Now, check your app migrations folder to see if the instructions are okay.
+        
+        # Next, if you gave a green light, ask Django to execute the instructions:
+        $ python manage.py migrate
+
+
+
+
+
+
+
+
+
+
+
