@@ -1,0 +1,7 @@
+
+$ sudo systemctl status postgresql
+
+    # if not running:
+    $ sudo systemctl start postgresql
+    # if you want to stop it:
+    $ sudo systemctl stop postgresql

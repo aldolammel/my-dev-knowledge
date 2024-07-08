@@ -11,17 +11,36 @@ Ask your self if you need to install a database for development. Sometimes all y
         MAC:
             $ xxxx
 
-    2) Download from: https://www.postgresql.org/
+    2) Check if you must download some installer first: check in https://www.postgresql.org/
 
         WINDOWS
+            X) Download the file;
             X) After the installation, go to start and search by 'pgAdmin';
-            X) Create a new database;
+            X) xxxxxx
         LINUX
-            X) 
+            X) Execute that config script available on the official webpage;
+            X) Install the module CURL if needed: $ sudo apt install curl
+            X) Go to https://www.pgadmin.org/
+            X) Execute those lines before the installation of pgadmin itself;
+            X) Install the pgadmin-desktop ONLY to prevent to user apache to run the web version;
+            X) After that, run your application PGADMIN via your apps list;
+            X) Connect the pgadmin to the postgreSQL now. In pgAdmin app:
+                x) Add a new server, clicking in Register;
+                x) In General tab, in name set it as 'localhost';
+                X) In Connection tab, in host set it as 'localhost';
+                X) Dont save anything yet, and go to terminal and lets use the root user (postgres) now: $ sudo -u postgres psql
+                X) $ alter user postgres with password 'myNewPasswordWithQuotes';    <--- type that ; too!
+                X) $ quit
+                x) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
+                x) Save the changes finally! You're connected.
         MAC
             X) 
 
-    3) After to install the desired database, don't forget your environment variables:
+    3) Check if the PostgreSQL is running:
+        /34-database/PostgreSQL/starting-and-stoping.txt
+
+    
+    4) After to install the desired database, don't forget your environment variables:
        /31-Environment-Variables/
 
 
