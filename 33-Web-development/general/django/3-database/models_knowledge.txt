@@ -1,13 +1,46 @@
 
 MODELS.PY:
 
+    Most commom django attribute types:
+        >> HTML field type == Django class' attribute type:
 
+            <boolean>                      == BooleanField() or NullBooleanField()
+            <textarea>                     == TextField()
+            <input type="text">            == CharField(max_length=40)
+            <input type="button">          == 
+            <input type="checkbox">        == 
+            <input type="color">           == 
+            <input type="date">            == DateField(auto_now_add=True)
+            <input type="datetime-local">  == DateTimeField(auto_now_add=True)
+            <input type="email">           == EmailField()
+            <input type="file">            == FileField(upload_to='uploads/%Y/%m/%d/', max_length=100)
+            <input type="hidden">          == 
+            <input type="image">           == ImageField(upload_to='uploads/%Y/%m/%d/', max_length=100)
+            <input type="month">           == 
+            <input type="number">          == IntegerField() or FloatField() or DecimalField()
+            <input type="password">        == 
+            <input type="radio">           == 
+            <input type="range">           == 
+            <input type="reset">           == 
+            <input type="search">          == 
+            <input type="submit">          == 
+            <input type="tel">             == 
+            <input type="time">            == TimeField(auto_now_add=True) or DurationField()
+            <input type="url">             == URLField(max_length=200) or SlugField(max_length=60)
+            <input type="week">            == 
+
+    CHARFIELD VS TEXTFIELD
+
+        >> CharField demands a max_length;
+        >> TextField is free for large amount of text;
+    
+        
     NULL vs BLANK
 
         >> 'blank True' means the field is not mandatory.
         >> 'null True' means, if the field is empty, in db the value is storage as 'null', not empty.
 
-            E.g. description = models.TextField(blank=True, null=True)
+            Avoid the redundance: e.g. TextField(blank=True, null=True) or CharField (blank=True, null=True)
 
 
     ON_DELETE CASCADE
