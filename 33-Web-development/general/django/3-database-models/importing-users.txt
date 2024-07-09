@@ -1,0 +1,22 @@
+
+IMPORTING USERS
+
+    You want to connect all authenticated users from your app in another table:
+
+    1) In app models.py, import the django user table, and build up the new table
+        with the attribute that connect with your users:
+            
+            django.contrib.auth.models import User
+            Class Team(models.Model):
+                name = models.CharField(max_length=40)
+                users = models.ManyToMany(User)
+
+    
+    2) In app admin.py, import the Team class created recently, and register this in
+        the CMS:
+        
+            from .models import Team
+            admin.site.register(Team)
+
+    
+    3) Execute the 'makemigrations' in the specific app and check the CMS to see the result.

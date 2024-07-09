@@ -4,9 +4,10 @@ MODELS.PY:
     Most commom django attribute types:
         >> HTML field type == Django class' attribute type:
 
-            <boolean>                      == BooleanField() or NullBooleanField()
-            <textarea>                     == TextField()
             <input type="text">            == CharField(max_length=40)
+            <textarea>                     == TextField()
+            <select>                       == CharField(max_length=20, choices=(('value1_db', 'Value1'), ('value2_db', 'Value2')), default='value1_db')
+            <boolean>                      == BooleanField() or NullBooleanField()
             <input type="button">          == 
             <input type="checkbox">        == 
             <input type="color">           == 
@@ -29,23 +30,39 @@ MODELS.PY:
             <input type="url">             == URLField(max_length=200) or SlugField(max_length=60)
             <input type="week">            == 
 
-    CHARFIELD VS TEXTFIELD
+    
+    CHARFIELD vs TEXTFIELD
 
         >> CharField demands a max_length;
+                E.g. name = models.CharField(max_length=40)
+
         >> TextField is free for large amount of text;
-    
+                E.g. day_note = models.TextField(max_length=1200)
         
+    
     NULL vs BLANK
 
-        >> 'blank True' means the field is not mandatory.
-        >> 'null True' means, if the field is empty, in db the value is storage as 'null', not empty.
+        >> 'blank=True' means the field is not mandatory.
+        
+        >> 'null=True' means, if the field is empty, in db the value is storage as 'null', not empty.
 
-            Avoid the redundance: e.g. TextField(blank=True, null=True) or CharField (blank=True, null=True)
+        >> Avoid the redundance: e.g. TextField(blank=True, null=True) or CharField (blank=True, null=True)
+
+
+    AUTO_NOW_ADD vs AUTO_NOW
+
+        >> 'auto_now_add=True' means when a new entry is created in the table, the attribute will be
+            filled automatically once.
+                E.g. user_created = models.DateTimeField(auto_now_add=True)
+        
+        >> 'auto_now=True' means when an entry is modified, the attribute will be updated automatically.
+                E.g. last_updated = models.DateTimeField(auto_now=True)
 
 
     ON_DELETE CASCADE
 
         >> If you use 'on_delete=models.CASCADE' in a models.py class, you are saying the entire
             database content related with a foreign key must be deleted as well along the foreign key.
-            
-            E.g. category = models.ForeignKey(Category, on_delete=models.CASCADE)
+                E.g. category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    

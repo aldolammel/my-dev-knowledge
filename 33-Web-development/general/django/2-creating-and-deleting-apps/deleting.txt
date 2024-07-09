@@ -6,6 +6,9 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS):
     2) Make the same in 'admin.py' when needed. If other file is calling that classes, make sure to delete that calls too, including in other apps if it happened;
 
     3) Update your database with these changes:
+        # for all apps:
+        $ python manage.py makemigrations
+        # Or for a specific one:
         $ python manage.py makemigrations <app_name>
 
     4) Run the product and check if everything is okay:

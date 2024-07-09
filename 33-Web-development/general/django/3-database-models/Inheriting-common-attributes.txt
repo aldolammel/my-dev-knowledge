@@ -1,0 +1,27 @@
+
+
+INHERITING COMMON ATTRIBUTES:
+
+
+    >> Imagine you re-using common attributes almost are used in all your tables
+        like 'created_at', 'updated_at' and 'created_by'. Check this out:
+
+
+        class Common(models.Model):
+            created_at = ...
+            created_by = ...
+            updated_at = ...
+            updated_by = ...
+
+            class Meta:
+                # It will flag the database to don't create this table:
+                abstract = True
+
+        
+        class Post(Common):
+            title = ...
+            content = ...
+
+
+        class Comment(Common):
+            message = ...

@@ -1,0 +1,15 @@
+
+RELATION: MANY TO MANY
+
+    >> It's used to create a many-to-many relationship where Django automatically
+        creates an intermediary table (bridge) to manage the many-to-many relationship. 
+        This table contains two foreign keys: one pointing to each of the related models. 
+        This intermediary table is not directly visible in the models but is present 
+        in the database schema.
+
+    >> If you need an attribute contains many id's in, you must use a ManyToMany
+        releationship.
+
+
+    Check the content:
+        /33-Web-development/general/django/3-database-models/importing-users.txt
