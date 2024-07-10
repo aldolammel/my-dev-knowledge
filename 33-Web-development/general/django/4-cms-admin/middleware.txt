@@ -1,0 +1,18 @@
+
+MIDDLEWARE
+
+    >> It's a framework of hooks into Django's request/response processing. It's a light,
+        low-level 'plugin' system for globally altering Django's input or output.
+
+        People --> Request something ---> Middleware area --------------> Server
+            <--- Response for something  <--- Middleware area  <---
+            
+
+    >> Each middleware component is responsible for doing some specific function.
+        E.g. 'AuthenticationMiddleware' is a default Django's component that associates
+            users with requests using sessions.
+
+
+    >> It's correct to say that Middlewares are the middle of the way, codes that can intercept
+        something before to reach the server (intercepting the request) or 
+        before to reach the people (intercepting the response).

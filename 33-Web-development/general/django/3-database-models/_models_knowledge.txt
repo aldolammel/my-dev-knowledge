@@ -16,9 +16,9 @@ MODELS.PY:
             <input type="email">           == EmailField()
             <input type="file">            == FileField(upload_to='uploads/%Y/%m/%d/', max_length=100)
             <input type="hidden">          == 
-            <input type="image">           == ImageField(upload_to='uploads/%Y/%m/%d/', max_length=100)
+            <input type="image">           == ImageField(default='placeholder.png', max_length=100, blank=True)
             <input type="month">           == 
-            <input type="number">          == IntegerField() or FloatField() or DecimalField()
+            <input type="number">          == PositiveIntegerField or IntegerField() or FloatField() or DecimalField()
             <input type="password">        == 
             <input type="radio">           == 
             <input type="range">           == 

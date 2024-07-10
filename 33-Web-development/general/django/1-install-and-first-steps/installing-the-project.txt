@@ -54,7 +54,16 @@ INSTALLING DJANGO:
     http://127.0.0.1:8000/admin/
 
 
-10) Test your app, running it:
+10) Optionals:
+
+    10.1) Will you use file upload?
+        /33-Web-development/general/django/5-uploads/files/
+
+    10.2) Will you use imagem upload?
+        /33-Web-development/general/django/5-uploads/images/
+
+
+11) Test your app, running it:
     $ python manage.py runserver
 
 

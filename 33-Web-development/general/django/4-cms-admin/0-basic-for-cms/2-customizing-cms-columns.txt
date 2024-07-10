@@ -1,0 +1,42 @@
+
+
+    CUSTOMIZING THE CMS COLUMNS:
+
+        If you want to add new columns in the CMS content tables, and you already have at least a models.py
+        class built in some sub-app folder, follow these steps:
+
+
+        1) In that sub-app folser, open the file 'admin.py';
+
+
+        2) Import the model class you want to custom in the CMS;
+            E.g. 
+            
+                from .models import Recipe
+
+
+        3) Create a class with a similar name of the original class you're working on:
+            E.g. 
+
+                class RecipeAdmin(admin.ModelAdmin):
+                    # The tuple 'list_display' will reorder columns (attributes) on the CMS front-end:
+                    list_display = ('id', 'name', 'created_at')
+                    # It activates the searching field and select which columns will be used as source:
+                    search_fields = ['name', 'description']
+
+
+        4) If the class wasn't register yet, do it, but now including the admin class version too:
+            E.g.
+
+                admin.site.register(Recipe, RecipeAdmin)
+
+
+        5) Execute those commands to update the db:
+            $ python manage.py makemigrations
+            $ python manage.py migrate
+
+
+        6) Test the result?
+            $ python manage.py runserver
+            
+            http://127.0.0.1:8000/admin/

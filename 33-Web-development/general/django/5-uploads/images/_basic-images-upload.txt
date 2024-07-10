@@ -1,0 +1,26 @@
+
+
+    MAKING IMAGE UPLOAD:
+
+
+        1) Install the Pillow module:
+            $ pip install pillow
+
+        2) In the project folder, open the settings.py, find the 'Static files' section
+            and do this (it's no needed to create any folder):
+
+                MEDIA_URL = 'media/'
+                MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+        3) Still in the project folder, open the urls.py, and right after the 'urlpatterns'
+            list, include these lines:
+
+                # Telling for the main app where are the images:
+                urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+        4) Now, in the sub-apps' models.py, you can build the image attributes like this:
+
+                class JustExample(models.Model):
+                    img = models.ImageField(default='placeholder.png', max_length=100, blank=True)

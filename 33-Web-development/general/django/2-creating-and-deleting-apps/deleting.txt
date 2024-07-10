@@ -1,9 +1,10 @@
 
 DELETING DJANGO PACKAGE OF FUNCTIONS (APPS):
 
-    1) Basicaly, in the folder app, delete all classes/tables from its 'models.py';
+    1) Basicaly, in the sub-app folder, delete all classes/tables from its 'models.py';
 
-    2) Make the same in 'admin.py' when needed. If other file is calling that classes, make sure to delete that calls too, including in other apps if it happened;
+    2) Make the same in 'admin.py' when needed. If other file is calling that classes, 
+        make sure to delete that calls too, including in other sub-apps if needed too;
 
     3) Update your database with these changes:
         # for all apps:
@@ -17,8 +18,8 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS):
     5) If everything is fine, apply the migration:
         $ python manage.py migrate
 
-    6) Remove the app path from the project 'urls.py'!
+    6) In project folder, remove the sub-app path from the 'urls.py' file;
 
-    7) Remove the app name from the project 'settings.py'!
+    7) Still in project folder, remove the sub-app name from the 'settings.py' file;
 
-    8) Test the application/project again!
+    8) Test the main-app again!
