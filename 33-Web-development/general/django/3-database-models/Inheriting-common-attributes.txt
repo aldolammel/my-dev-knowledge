@@ -25,3 +25,7 @@ INHERITING COMMON ATTRIBUTES:
 
         class Comment(Common):
             message = ...
+
+    
+    >> CRITICAL: to avoid errors, remove any foreign key or many-to-many attribute 
+        from your abstracted/inherited class!
