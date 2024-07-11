@@ -1,0 +1,44 @@
+
+COMPOSED FIELD
+
+    Field = 'name'
+    Field = 'lastname'
+    Composed field = 'name' + 'lastname'
+
+    >> Composed field allows you to build an attribute (column) automatically,
+        join two or more attributes to create another one.
+
+
+    1) Add in the class/table an attribute not editable:
+
+        class Person(models.Model):
+            fname = models.CharField(max_length=10)
+            lname = models.CharField(max_length=10)
+            full_name = models.CharField(editable=False)
+
+    
+    2) Now, in the same class, override the built-in save() method with the
+        instruction about how to build the 'full_name' attribute before
+        to save all data to the database:
+
+            def save(self, *args, **kwargs):
+                self.full_name = f'{self.fname} {self.lname}'
+                super().save(*args, **kwargs)
+
+
+    3) In the admin.py file, add this:
+
+        class PersonCMS(admin.ModelAdmin):
+            readonly_fields = ('full_name',)
+
+
+        # Make sure you are registering the admin class also:
+        admin.site.register(Person, PersonCMS)
+
+
+    4) Execute the commands to prepare the database and test the CMS:
+        $ python manage.py makemigrations
+        $ python manage.py migrate
+        $ python manage.py runserver
+        
+        http://127.0.0.1:8000/admin/
