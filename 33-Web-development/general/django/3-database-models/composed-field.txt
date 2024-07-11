@@ -26,17 +26,38 @@ COMPOSED FIELD
                 super().save(*args, **kwargs)
 
 
-    3) In the admin.py file, add this:
+    3) In the admin.py file, you have 3 approaches, depending of your goal:
 
-        class PersonCMS(admin.ModelAdmin):
-            readonly_fields = ('full_name',)
+        3.1) If you want to show the 'full_name' field but keep it unavailable
+            for edition, do it:
+
+                class PersonCMS(admin.ModelAdmin):
+                    # Locks the field on the detail-view:
+                    readonly_fields = ('full_name',)
+
+        
+        3.2) If you want to hide the 'full_name' field on the detail-view and 
+            making it be shown on the list-view, do it:
+
+                class PersonCMS(admin.ModelAdmin):
+                    # Includes the field as a column on the list-view:
+                    list_display = ('id', 'full_name')
+                    # But excludes the field from the detail-view:
+                    exclude = ('full_name',)
+
+        3.3) If you want to hide the 'full_name' field completely, leaving it
+            available only in the database, do it:
+
+                class PersonCMS(admin.ModelAdmin):
+                    exclude = ('full_name',)
 
 
-        # Make sure you are registering the admin class also:
+        >> Make sure you're registering the admin class also:
         admin.site.register(Person, PersonCMS)
-
+        
 
     4) Execute the commands to prepare the database and test the CMS:
+        
         $ python manage.py makemigrations
         $ python manage.py migrate
         $ python manage.py runserver
