@@ -1,69 +1,90 @@
 INSTALLING DJANGO:
 
 
-1) Create the project folder, and get it:
-    $ mkdir <project_folder>
-    $ cd <project_folder>
+    1) Create the project folder, and get it:
+        $ mkdir <project_folder>
+        $ cd <project_folder>
 
 
-2) Create the virtual environment and active it:
-    <Check the folder '03-Virtual-Environment'>
+    2) Create the virtual environment and active it:
+        <Check the folder '03-Virtual-Environment'>
 
 
-3) Update the pip:
-    <Check the folder '04-Basic-Modules'>
+    3) Update the pip:
+        <Check the folder '04-Basic-Modules'>
 
 
-4) Installation:
-    $ pip install django
+    4) Installation:
+        $ pip install django
 
-    Only for VSCode:
-    # DjLint (html template formatter for django/jinja)
-    $ pip install -U djlint
-    # Install the DjLint extension.
-    # Install the Django (by Baptiste) extension.
-    # In Html's, change the language mode to 'Django-Html'
-
-5) Create the Django Project Structure:
-    # make sure you're in project root folder and:
-    $ django-admin startproject proj_<project_name> .
+        Only for VSCode:
+        # DjLint (html template formatter for django/jinja)
+        $ pip install -U djlint
+        # Install the DjLint extension for VSCode.
+        # Install the Django (by Baptiste) extension for VSCode.
+        # In VSCode, In Html's, change the language mode to 'Django-Html'
 
 
-6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
-    $ python manage.py runserver
+    5) Create the Django Project Structure:
+        # make sure you're in project root folder and:
+        $ django-admin startproject proj_<project_name> .
 
 
-7) Create the 'templates' folder in root of the main application (Dont mistake with the project folder, e.g. /main_app_folder(root)/project_folder/);
+    x) If you won't use the SQLite as database, do it:
+        /33-Web-development/general/django/3-database-models/0-installing-and-adminUser/1-define-your-database/
 
 
-8) Create your first app in the main application:
-
-    8.1) Show to Django where will be each template folder in your apps, going to the project 'settings.py' and editing this line
-        in 'template' list:
-            From:
-                'dirs': [],
-            To:
-                'dirs': [BASE_DIR / 'templates'],
-
-    8.2) Do this: /33-Web-development/general/2-creating-and-deleting-apps/creating.txt
+    6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
+        $ python manage.py runserver
 
 
-9) Creating the admin user:
-    $ python manage.py createsuperuser
-    # Now, try to login, making sure the application is running:
-    http://127.0.0.1:8000/admin/
+    7) Create the 'templates' folder in root of the main-app
+        (Don't mistake with the project folder, e.g. /main_app_folder(root)/project_folder/);
+
+        E.g. Django Project Structure:
+
+            Main-app-folder
+                project-folder
+                    settings.py
+                    ...
+                sub-app1-folder
+                    ...
+                sub-app2-folder
+                    ...
+                sub-app3-folder
+                    ...
+                ...
+                manage.py
 
 
-10) Optionals:
+    8) Create your first sub-app in the main-app:
 
-    10.1) Will you use file upload?
-        /33-Web-development/general/django/5-uploads/files/
+        8.1) Show to Django where will be each template folder in your sub-apps, going to the project folder 'settings.py' file
+            and editing this line in 'template' list:
+                From:
+                    'DIRS': [],
+                To:
+                    'DIRS': [BASE_DIR / 'templates'],
 
-    10.2) Will you use imagem upload?
-        /33-Web-development/general/django/5-uploads/images/
+        8.2) Do this: /33-Web-development/general/2-creating-and-deleting-apps/creating.txt
 
 
-11) Test your app, running it:
-    $ python manage.py runserver
+    9) Creating the admin user:
+        $ python manage.py createsuperuser
+        # Now, try to login, making sure the main-app is running:
+        http://127.0.0.1:8000/admin/
+
+
+    10) Optionals:
+
+        10.1) Will you use file upload?
+            /33-Web-development/general/django/5-uploads/files/
+
+        10.2) Will you use imagem upload?
+            /33-Web-development/general/django/5-uploads/images/
+
+
+    11) Test your main-app, running it:
+        $ python manage.py runserver
 
 

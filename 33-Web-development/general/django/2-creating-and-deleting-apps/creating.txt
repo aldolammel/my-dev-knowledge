@@ -17,9 +17,10 @@ CREATING DJANGO PACKAGES OF FUNCTIONS (APPS):
     1) In root of the project, create each app of your project:
         $ python manage.py startapp <app_name>
 
-    2) Create these folders into the new app folder:
+    2) Create these folders and file into the new app folder:
         /<app_name>/templates/
         /<app_name>/templates/<app_name>/
+        /<app_name>/templates/<app_name>/temp.html   <--- only for github create the folders at repository too.
 
     3) Create the urls.py file into each app created, adding the urlpatterns list in each file:
         from django.urls import path
