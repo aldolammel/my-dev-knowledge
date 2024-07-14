@@ -34,6 +34,10 @@ INSTALLING DJANGO:
         /33-Web-development/general/django/3-database-models/0-installing-and-adminUser/1-define-your-database/
 
 
+    x) Set the environment variables and create your .env file:
+        /33-Web-development/general/django/1-install-and-first-steps/environment-variables-django.py
+
+
     6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
         $ python manage.py runserver
 

@@ -1,0 +1,6 @@
+# ENVIRONMENT VARIABLES:
+
+'''
+Those variables linked exclusively with the environment where the code is running. It's a safe option to save
+keys, passwords, tokens and other information that must be unique for each environment.
+'''
