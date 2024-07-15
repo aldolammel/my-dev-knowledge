@@ -10,6 +10,24 @@ RELATION: MANY TO MANY
     >> If you need an attribute contains many id's in, you must use a ManyToMany
         releationship.
 
+        E.g.
+
+            class AffectedArea(models.Model):
+                # This table (class) will receive many entries (areas) that will be shown
+                # on 'affected_areas' checkbox field in 'HeadacheAttack' class.
+
+                area = models.CharField(max_length=40)                   
+                    
+                def __str__(self):
+                    return self.area
+
+
+            class HeadacheAttack(models.Model):
+                affected_areas = models.ManyToManyField(
+                    AffectedArea,  # calling the class that the relation many-to-many must be created.
+                )
+
+
 
     Check the content:
         /33-Web-development/general/django/3-database-models/importing-users.txt
