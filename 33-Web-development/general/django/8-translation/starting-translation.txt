@@ -1,0 +1,16 @@
+
+
+    STARTING A TRANSLATION PROJECT:
+
+        
+        >> xxxxxxxxxxxxxxxxxxx
+        
+        
+        1) In settings.py, add this Middleware between the 'CommonMiddleware'
+            and 'CsrfViewMiddleware':
+        
+                'django.middleware.locale.LocaleMiddleware',
+        
+        
+        2) xxxxxxxxxxxxxxxxxxx
+
