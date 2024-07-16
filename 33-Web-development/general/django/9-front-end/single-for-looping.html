@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Attack{% endblock title %}
+
+{% block content %}
+    <h1>Attacks</h1>
+    {% if attacks %}
+        <u>
+            {% for attack in attacks %}
+                <li>{{ attack.start_at }}</li>
+            {% endfor %}
+        </u>
+    {% else %}
+        <p>No attack records available yet.</p>
+        <p><a href="#">Create your first attack report!</a></p>
+    {% endif %}
+    
+{% endblock content %}
