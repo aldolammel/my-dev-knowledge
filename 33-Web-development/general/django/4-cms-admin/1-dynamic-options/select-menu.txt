@@ -1,49 +1,14 @@
 
 
-DYNAMIC OPTIONS: SELECT MENU
+Let's see:
 
-    >> If you want to build a class/table where you select week by week an 'Artist of the week',
-        and you got new artists to consider always, you should create an Artist() class/table
-        to save all artists you want as option. In the sub-app models.py file...
+    >> FIELD: SELECT-MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
+    >> FIELD: SELECT-MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
+    >> FIELD: MULTI-SELECT-MENU (DYNAMIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+    >> FIELD: MULTI-SELECT-MENU (STATIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+
+
+    All of them in:
+        /33-Web-development/general/django/3-1-backend-models-database/field-select-menu-single.txt
+        /33-Web-development/general/django/3-1-backend-models-database/field-select-menu-multiple.txt
         
-        
-        1) Create both classes:
-
-                class Artist(models.Model):
-                    name = ...
-
-                class ArtistOfWeek(models.Model):
-                    week = ...
-                    artist_selected = ...
-
-
-        2) In the same code snippet, lets create a releationship between both classes through
-            a foreign key:
-
-                class ArtistOfWeek(models.Model):
-                    week = ...
-                    artist_selected = models.ForeignKey(Artist, on_delete=models.CASCADE)
-
-
-        3) In admin.py file:
-            
-                from .models import Artist, ArtistOfWeek
-
-
-                class ArtistCMS(admin.ModelAdmin):
-                    list_display = ('id', 'name')
-
-
-                class ArtistOfWeekCMS(admin.ModelAdmin):
-                    list_display = ('id', 'week', 'artist_selected')
-
-
-                admin.site.register(Artist, ArtistCMS)
-                admin.site.register(ArtistOfWeek, ArtistOfWeekCMS)
-
-
-        4) Run the commands:
-                
-                $ python manage.py makemigrations <subapp_name>
-                $ python manage.py migrate
-                $ python manage.py runserver

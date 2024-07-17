@@ -1,5 +1,5 @@
 
-CREATING AND READING:
+QUERYSET: CREATING AND READING
 
 Three ways to:
     A) On Windows, using the open-source software called 'DB Brower' for SQLite;

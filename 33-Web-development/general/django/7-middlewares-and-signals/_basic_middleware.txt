@@ -1,4 +1,5 @@
 
+
 MIDDLEWARE
 
     >> It's a framework of hooks into Django's request/response processing. It's a light,

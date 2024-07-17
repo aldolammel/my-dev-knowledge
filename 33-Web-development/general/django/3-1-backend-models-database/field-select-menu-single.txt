@@ -1,0 +1,92 @@
+
+Let's see:
+
+    >> FIELD: SELECT MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
+    >> FIELD: SELECT MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
+
+
+
+1) FIELD: SELECT MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
+
+    >> You want your CMS page to show a SELECT MENU with some dynamic options to select just one
+        of them. 
+        
+        Let's build a class/table where you select week by week an 'Artist of the week', and you
+        got new artists to consider always, you should create an Artist() class/table to save all 
+        artists you want as option. In the sub-app 'models.py' file, do it:
+        
+        
+        1.1) Create both classes:
+
+                class Artist(models.Model):
+                    name = ...
+
+                class ArtistOfWeek(models.Model):
+                    week = ...
+                    artist_selected = ...
+
+
+        1.2) In the same code snippet, lets create a releationship between both classes through
+            a foreign key:
+
+                class ArtistOfWeek(models.Model):
+                    week = ...
+                    artist_selected = models.ForeignKey(Artist, on_delete=models.CASCADE)
+
+
+        1.3) In admin.py file:
+            
+                from .models import Artist, ArtistOfWeek
+
+
+                class ArtistCMS(admin.ModelAdmin):
+                    list_display = ('id', 'name')
+
+
+                class ArtistOfWeekCMS(admin.ModelAdmin):
+                    list_display = ('id', 'week', 'artist_selected')
+
+
+                admin.site.register(Artist, ArtistCMS)
+                admin.site.register(ArtistOfWeek, ArtistOfWeekCMS)
+
+
+        1.4) Only to make sure everything will be ready to test, execute the migration:
+                
+                $ python manage.py makemigrations <subapp_name>
+                $ python manage.py migrate
+                $ python manage.py runserver
+
+
+
+2) FIELD: SELECT MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
+
+    >> You want to show in your CMS a select menu with only with the same options, e.g. a
+        select menu called 'status' where the two options always will be 'active' and 'archived':
+
+        2.1) In 'models.py' file, define the constants:
+
+                # Constants:
+                ACTIVE = 'on'       # In postgreSQL 'on' and 'off' are 1/true and 0/false too;
+                ARCHIVED = 'off'
+                STATUS_CHOICES = (
+                    (ACTIVE, 'Active'), 
+                    (ARCHIVED, 'Archived')
+                )
+
+
+        2.2) In the same file but into the class you want apply the 
+            select-menu 'status' as attribute:
+
+                class Example(models.Model):
+                    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=ACTIVE)
+
+
+        2.3) Only to make sure everything will be ready to test, execute the migration:
+                
+                $ python manage.py makemigrations <subapp_name>
+                $ python manage.py migrate
+                $ python manage.py runserver
+
+
+
