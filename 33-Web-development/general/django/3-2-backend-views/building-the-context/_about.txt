@@ -1,0 +1,22 @@
+
+
+BUILDING THE CONTEXT:
+
+
+    >> Context is the package of data the back-end sends to the front-end through sub-app views.py
+        files.
+
+
+    >> Something from the database is visible in a template (html) because this data is accessible
+        in the dictionary called 'context' (convention!).
+
+        views.py e.g.
+
+            <code of query_sets> ...
+
+            context = {
+                'recipes': recipes,  # In the template (index.html), it'll be called as {{ recipes }}.
+                'restaurants': restaurants,
+            }
+
+            return render(request, "recipes/index.html", context)

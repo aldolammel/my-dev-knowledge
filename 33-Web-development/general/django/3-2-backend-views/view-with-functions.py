@@ -1,3 +1,15 @@
+'''
+
+VIEWS.PY WITH FUNCTIONS:
+
+    >> 
+    
+    >> 
+    
+    
+
+'''
+
 from django.shortcuts import render
 from .models import Recipe
 

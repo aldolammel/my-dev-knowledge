@@ -1,0 +1,25 @@
+
+
+DJANGO STRUCTURE: MODELS.PY
+
+
+    >> Django is divided in 3 main parts: models, views, and templates.
+
+    >> Models are responsable for listing the data structure of a Django application, using
+        classes to build tables and their attributes in a database. Through models.py you:
+
+        - Define the schema of your database;
+        - Provide methods for querying and manipulating the data;
+        - Enforce data integrity by defining constraints and validations.
+
+
+
+    MORE ABOUT:
+
+        >> VIEWS: 
+
+            /33-Web-devolopment/general/django/3-2-backend-views/
+
+        >> TEMPLATES:
+
+            /33-Web-devolopment/general/django/3-3-frontend-templates/

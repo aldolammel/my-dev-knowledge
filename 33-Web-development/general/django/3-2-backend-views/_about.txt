@@ -1,0 +1,25 @@
+
+
+DJANGO STRUCTURE: VIEWS.PY
+
+
+    >> Django is divided in 3 main parts: models, views, and templates.
+
+    >> Views are responsable for manage what data will be send to user. Views.py contains all
+        logic the user can see and which template/page the data will be seen. Through views.py you:
+
+        - Handle user input and interact with models to retrieve data;
+        - Render templates with the data obtained from models;
+        - Return HTTP responses (like HTML, JSON, XML, etc).
+
+
+
+    MORE ABOUT:
+
+        >> MODELS: 
+
+            /33-Web-devolopment/general/django/3-1-backend-models-database/
+
+        >> TEMPLATES:
+
+            /33-Web-devolopment/general/django/3-3-frontend-templates/
