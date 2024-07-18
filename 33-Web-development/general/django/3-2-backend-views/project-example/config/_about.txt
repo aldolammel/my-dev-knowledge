@@ -1,0 +1,6 @@
+
+>> This 'config' folder, in a real project, it's commonly has the same name of the project, and
+    it's responsable for all global settings of the project.
+
+>> Unlike sub-app folders, config folder has no views.py file but has the urls.py where
+    the main URL routes of the project is defined.

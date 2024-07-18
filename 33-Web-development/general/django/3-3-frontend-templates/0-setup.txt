@@ -1,0 +1,15 @@
+
+
+DJANGO TEMPLATES: SETUP
+
+    >> VSCode users:
+        
+        1) Install the DjLint extension to get syntax highlights properly configured:
+
+            $ pip install djlint
+
+        2) In VSCode, open a HTML with some Django templates/jinja elements and,
+            if the colors are not highlighted, change the file language mode
+            (lower-right-cornor of VSCode), selecting 'Django-HTML'. 
+
+            Elements like {{ blablabla }} and {% mimimi %} must be hightlighted.

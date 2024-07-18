@@ -1,0 +1,56 @@
+
+
+DJANGO TEMPLATES: BASIC
+
+
+    >> Percentage signs within curly-braces {% %} are TEMPLATE-TAGS used to perform logic
+        operations, control structures, and include other template functionalities within a
+        template.
+
+            E.g.
+                
+                <!-- Calling another template as base for this template -->
+                {% extends 'base.html' %}
+
+                <!-- Defining the content block of the template must be loaded here -->
+                {% block content %}
+                {% endblock content %}
+
+                <!-- A conditional example -->
+                {% if cars %}
+                    <p>Good, there is at least one car available!</p>
+                {% else %}
+                    <p>Oops, there is no car available!</p>
+                {% endif %}
+                
+                <!-- A For loop example -->
+                {% for car in cars %}
+
+                    <!-- Applying dynamic links/routes -->
+                    <!-- namespace and pattern-name are defined in each sub-app urls.py file -->
+                    <p><a href="{% url '<namespace>:<pattern_name>' <parameter> %}">xxxxxxxx</a></p>
+
+                {% endfor %}
+                
+
+
+    >> Double curly-braces {{ }} are TEMPLATE-VARIABLES which are used to output the value of
+        a variable sent by the CONTEXT (dictionary) from a views.py file.
+
+            E.g.
+
+                <!-- Reading the variable/object -->
+                {{ car }}   <!-- if dunder '__str__' is already define in 'models' with veh name -->
+                OR
+                {{ car.name }} OR {{ car['name'] }}  <!-- both if no dunder '__str__' defined -->
+
+                <!-- Accessing the attributes that object -->
+                {{ car.brand }}    OR    {{ car['brand'] }}
+                {{ car.year }}     OR    {{ car['year'] }}
+
+
+
+    >> A perfect example of using the template you find in a project example that
+        I create to examplify the usage of views:
+            
+            /33-Web-development/general/django/3-2-backend-views/project-example/sub-app/templates/
