@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Recipe
+from django.views.generic import ListView
 
 
 def recipes(request):
@@ -18,3 +19,11 @@ def recipe(request, recipe_id):
     context = {'recipe': recipe}
     # Return the data to be rendered with the template when a key of the context dict is called:
     return render(request, 'recipes/recipe.html', context)
+
+
+class RecipesList(ListView):
+    model = Recipe
+    template_name = 'recipes/index.html'
+    context_object_name = 'recipes'
+    # Check the urls.py file to see how this class-based method is different from the
+    # function-based method.

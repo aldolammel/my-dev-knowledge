@@ -13,6 +13,8 @@ urlpatterns = [
     # Crucial: this 'name' above is the 'pattern name' you'll use to build the URL's in templates.
     # http://127.0.0.1:8000/recipes/1
     path('<int:recipe_id>', views.recipe, name='detail_view'),
+    # Using class-based views:
+    path('testing/', views.RecipesList.as_view())
 ]
 
 
