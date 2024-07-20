@@ -1,0 +1,27 @@
+
+
+USING GENERIC VIEWS:
+
+    >> With a generic view, you don't need to create a view for commom things like list-views and
+        detail-views.
+
+    >> To use a gerecic view, you must inherit the generic class that meet the purpose of 
+        the class you are creating:
+            
+            E.g.
+
+                # A view for LIST products:
+                from django.views.generic import ListView
+                class ProductsList(ListView):
+                    pass
+
+                # A view for a product DETAIL:
+                from django.views.generic import DetailView
+                class ProductDetail(DetailView):
+                    pass
+
+
+    >> Django Documentation brings a lot of built-in methods that each of generic views bring
+        within to be used:
+
+            https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/

@@ -1,0 +1,23 @@
+
+
+USING CUSTOM VIEWS:
+
+    >> With a custom view, you can create a specific view to use with another views,  ihenrit
+
+    >> To create a custom view, you must inherit View class:
+        E.g.
+
+            class MyTest(View):
+                pass
+
+
+
+
+
+
+
+
+
+
+            MORE HERE: 
+            https://www.udemy.com/course/django-python-web/learn/lecture/43405890#questions/22047757
