@@ -4,13 +4,13 @@ CLASS-BASED METHOD: USING QUERYSET VIA VIEWS.PY (FILTERING)
 """
 
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import View
 from .models import Recipe
 
 
-class Recipes(ListView):
+class Recipes(View):
     model = Recipe
-    template_name = 'recipes/index.html'
+    template_name = 'recipes/custom.html'
     context_object_name = 'recipes'
 
     def get_queryset(self):

@@ -2,20 +2,17 @@
 
 USING CUSTOM VIEWS:
 
-    >> With a custom view, you can create a specific view to use with another views,  ihenrit
+    >> With a custom view, you can create a specific view to use with another views through ihenrit
+        advantages, exactly in the same way if your new view class would be a ListView or 
+        DetailView view classes.
 
     >> To create a custom view, you must inherit View class:
+        
         E.g.
 
+            from django.views.generic import View
             class MyTest(View):
                 pass
-
-
-
-
-
-
-
 
 
 

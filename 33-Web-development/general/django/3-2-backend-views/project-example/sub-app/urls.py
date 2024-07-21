@@ -22,7 +22,7 @@ app_name = 'recipes'
     # Defining the routes to be used by this sub-app:
     urlpatterns = [
         # http://127.0.0.1:8000/recipes or http://127.0.0.1:8000/recipes/index.html
-        path('classmethod/', views.RecipesList.as_view(), name='list_view'),
+        path('', views.RecipesList.as_view(), name='list_view'),
         # http://127.0.0.1:8000/recipes/1
         path('<int:pk>', views.RecipeDetail.as_view(), name='detail_view'),
         # Crucial: this 'name' above is the 'pattern name' you'll use to build the URL's in templates.
