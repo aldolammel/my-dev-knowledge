@@ -1,0 +1,10 @@
+
+
+BACK-END: FORMS
+
+    >> Exactly as models.py where you build your database classes, there is a file called 'forms.py'
+        that works similar. So have this in mind before start to create a lot of classes in your
+        models.py without get to know the forms.py.
+    
+    >> Learn more about forms for back-end and front-end:
+        /33-Web-development/general/django/9-forms/

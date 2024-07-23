@@ -1,0 +1,12 @@
+
+
+CUSTOMIZING THE FORM FIELDS ON TEMPLATES:
+
+    >> Check the notes in:
+        /33-Web-devolopment/general/django/3-3-frontend-templates/
+            
+            E.g. 
+
+                /form-fields-as-p-or-div.html
+                /form-fields-custom-display.html
+                

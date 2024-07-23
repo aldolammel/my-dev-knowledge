@@ -1,13 +1,31 @@
 
 
-# DJANGO FORMS
 
-    # >> All data that can be input in the database from front-end;
+    """
+    DJANGO FORMS:
+    
+        >> Unless you're planning to build websites and applications that do nothing but publish
+            content, and don't accept input from your visitors, you're going to need to understand 
+            and use forms. Django provides a range of tools and libraries to help you build forms to
+            accept input from site visitors, and then process and respond to the input.
+            
+            That said: The forms.py is for all data that can be inputed to database from a
+                        front-end form!
 
-    # >> Let's imagine you got in the models.py file a class to record movies with a few fields to
-    #   fill. Now, to the user add movies from the front-end, we need to create a form class to
-    #   connect the database with the template:
+        
+        >> Forms always are created in forms.py file into the sub-app folder;
+        
+        >> There are two ways to build up a front-end form:
+        
+            1) Connecting a models.py class to a forms.py class (inherit from forms.ModelForm);
+            2) Creating a custom forms.py class (inherit from forms.Form);
 
+        >> Let's imagine you got in the models.py file a class to record movies with a few fields to
+        fill. Now, to the user add movies from the front-end, we need to create a form class to
+        connect the database with the template:
+    
+    """
+    
         # 1) In some sub-app folder, create a file called 'forms.py';
 
         
@@ -29,21 +47,23 @@
                         model = Movie  # assuming it's the table you got in your models.py;
 
                         # Bring all class attributes/database columns that will be worked by form:
+                        fields = '__all__'
+                        # or only a few of them: 
                         fields = [
                             'title',
-                            'release_year',
                             'rating',
                         ]
+                        # or show all but less them:
+                        exclude = ('release_year',)
                         # Customizing each field name:
                         labels = {
                             'title': 'Movie title',
-                            'release_year': "The year of the movie's release",
                             'rating': 'Your personnal rating',
                         }
                     
 
     
-        # 3) In the sub-app views.py file, create the function-view or the class-view responsable for
+        # 3) In the sub-app views.py, create the function-view or the class-view responsable for
         #   this form to be used in a template:
 
             # E.g.
@@ -53,21 +73,24 @@
                 
                 # Using a function-based method:
                 def movie_add(request):
-                    # When the user submits the form to the database:
+                    # When the application need to save something from the page:
                     if request.method == 'POST':
                         form = MovieForm(request.POST)
                         if form.is_valid():
                             # Finally record the new things on the database:
                             form.save()
+                            # After that, send user to another page:
                             return redirect('movies_namespace:list_view')
+                        # If NOT valid, load the page again (GET), but keeping
+                        # the form data already validated:
                         else:
-                            return HttpResponse("The form wasn't valid! Try again!")
-                        
-                    # When the user will add a movie:
+                            context = {'form': form}
+                    # When the application just need to print the page:
                     else:
                         form = MovieForm()
                         context = {'form': form}
-                        return render(request, 'movies/add.html', context)
+                    #
+                    return render(request, 'movies/add.html', context)
 
 
 
@@ -97,13 +120,11 @@
                 
                 <h1>Adding New Movie</h1>
 
-                <form method="post">
+                <form method="post" action="."> # action = '.' means the same page.
 
-                    <!-- Add this on each form for Django security reason -->
+                    # Add this on each form for Django security reason:
                     {% csrf_token %}
-
-                    {{ form.as_p }}
-                    OR 
+                    # Load the entire form where each form field will be a div:
                     {{ form.as_div }}
 
                     <button type="submit">Save</button>
