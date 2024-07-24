@@ -1,0 +1,35 @@
+
+
+
+FRONT-END: USER LOGIN FORM
+
+
+    1) xxxxxxxxxxxxxxx
+
+
+    2) xxxxxxxxxxxxxxx
+
+
+    3) xxxxxxxxxxxxxxx
+
+    
+
+    4) xxxxxxxxxxxxxxx
+
+
+    X) If you want to print the user (username or first_name or last_name) on the template,
+        you DONT need bring some in your views.py CONTEXT. Just call 'user.username' on the
+        template:
+
+            e.g
+
+                {{ user.username }}
+
+
+
+
+MORE ABOUT USER:
+
+    >> If you're looking for how to import users in your models.py classes:
+
+        /33-Web-development/general/django/3-1-backend-models-database/importing-users.txt

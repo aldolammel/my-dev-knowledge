@@ -20,3 +20,16 @@ IMPORTING USERS
 
     
     3) Execute the 'makemigrations' in the specific app and check the CMS to see the result.
+
+
+
+
+MORE ABOUT USER:
+
+    >> If you're looking for about register and login forms:
+
+        /33-Web-development/general/django/9-forms/frontend-user-register-form.txt
+        /33-Web-development/general/django/9-forms/frontend-user-login-form.txt
+
+
+        
