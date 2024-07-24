@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Movie
 from .forms import MovieForm
 
@@ -55,7 +55,7 @@ def movie_edit(request, movie_id):
     but with a specific movie data loaded in fields.
     """
     # Defining the specific movie to update:
-    movie = Movie.objects.get(id=movie_id)
+    movie = get_object_or_404(Movie, id=movie_id)  # Movie.objects.get(id=movie_id)
     # When the form asks to update the data:
     if request.method == 'POST':
         # Defining the form object based in an existent movie in db ready to POST method:

@@ -60,6 +60,14 @@
                             'title': 'Movie title',
                             'rating': 'Your personnal rating',
                         }
+                        widgets = {
+                            'title': forms.TextInput(
+                                attrs={
+                                    'placeholder': 'place_holder_text_here',
+                                    'class': 'my-css-class',
+                                }
+                            ),
+                        }
                     
 
     

@@ -10,3 +10,23 @@ CUSTOMIZING THE FORM FIELDS ON TEMPLATES:
                 /form-fields-as-p-or-div.html
                 /form-fields-custom-display.html
                 
+                
+
+    >> A lot of HTML input attributes can be controlled by forms.py when a form class is using
+        'widgets' skills with built-in 'Meta' class:
+            
+            class MovieForm(forms.ModelForm):
+
+                class Meta:
+
+                    widgets = {
+                        'title': forms.TextInput(
+                            attrs={
+                                'placeholder': 'place_holder_text_here',
+                                'class': 'my-css-class',
+                            }
+                        ),
+                        
+                        # All HTML Input Attributes:
+                        # https://www.google.com/search?q=html+input+attributes&oq=html+input+attributes&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUwMTJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+                    }
