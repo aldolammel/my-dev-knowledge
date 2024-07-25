@@ -23,48 +23,11 @@ LOGIN AND LOGOUT: USING THE FRONT-END
                 
 
 
-        X) Login: 
-
-            X.1) In 'accounts' sub-app, go to /templates/registration/ and create the 'login.html':
-
-                {% extends "base.html" %}
-
-                {% block title %}Login{% endblock title %}
-
-                {% block content %}
-                    
-                    <div class="row login text-center">
-                        <h1>Login</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="login-form">
-
-                            <!-- LOGIN FORM - START -->
-                            <form action="{% url 'accounts:login' %}" method="post">
-                                {% csrf_token %}
-                                {{ form.as_p }}
-                                <button type="submit">Login</button>
-                                <a href="{% url 'accounts:register_view' %}">Create a new account</a>
-                            </form>
-                            <!-- LOGIN FORM - END --> 
-
-                        </div>
-                        <div class="col"></div>
-                    </div>     
-                    
-                {% endblock content %}
+        3) Login page/form:
+            /33-Web-development/general/django/9-forms/frontend-user-login.txt 
 
 
 
-
-
-        X) Logout:
-
-            In some file of your template, add the logout button:
-
-                <form action="{% url 'accounts:logout' %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">Logout</button>
-                </form>
-                
+        4) Logout:
+            /33-Web-development/general/django/9-forms/frontend-user-logout.txt
+            
