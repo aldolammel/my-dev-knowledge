@@ -1,0 +1,70 @@
+
+
+
+LOGIN AND LOGOUT: USING THE FRONT-END
+
+    >> To make your web application gives to its users the hability to login and logout, do it:
+
+
+        1) Make sure they will be able to register as authenticated user for the application:
+            /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+
+
+        2) In your config-folder, open the settings.py and add it:
+
+                LOGIN_URL = 'accounts:login'  # It's built-in.
+                
+                LOGIN_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
+                    # E.g. 'dashboard:home_logged_view'
+                
+                LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>' 
+                    # E.g. 'website:home_view'
+
+                
+
+
+        X) Login: 
+
+            X.1) In 'accounts' sub-app, go to /templates/registration/ and create the 'login.html':
+
+                {% extends "base.html" %}
+
+                {% block title %}Login{% endblock title %}
+
+                {% block content %}
+                    
+                    <div class="row login text-center">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="login-form">
+
+                            <!-- LOGIN FORM - START -->
+                            <form action="{% url 'accounts:login' %}" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Login</button>
+                                <a href="{% url 'accounts:register_view' %}">Create a new account</a>
+                            </form>
+                            <!-- LOGIN FORM - END --> 
+
+                        </div>
+                        <div class="col"></div>
+                    </div>     
+                    
+                {% endblock content %}
+
+
+
+
+
+        X) Logout:
+
+            In some file of your template, add the logout button:
+
+                <form action="{% url 'accounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+                

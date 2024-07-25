@@ -1,0 +1,85 @@
+
+
+
+LOGIN AND LOGOUT: REGISTERING AN USER BY FRONT-END
+
+
+    >> Try to use all names declared here because, for some settings, Django is waiting
+        exactly like that! 
+
+
+    1) Create a sub-app for this, called 'accounts' and register in the config-folder settings.py
+        the 'accounts' sub-app as 'accounts' in Installed Apps section;
+
+
+    2) In the 'accounts' folder, create the folders and file called 'register.html':
+        /templates/registration/register.html
+
+        (Don't worry with the content. We will see it later!)
+
+
+    3) Still in the 'accounts' folder, edit the views.py file with:
+
+        from django.shortcuts import render
+        from django.contrib.auth.forms import UserCreationForm
+        from django.contrib.auth import login
+
+
+        def register(request):
+            # if the form method is NOT POST:
+            if request.method != 'POST':
+                form = UserCreationForm()  # built-in class.
+            else:
+                form = UserCreationForm(data=request.POST)
+                if form.is_valid():
+                    # log the user in:
+                    new_user = form.save()
+                    login(request, new_user)
+                    return render(request, 'dashboard/logged.html')
+
+            context = {'register_form': form}
+            return render(request, 'registration/register.html', context)
+
+    
+
+    4) Still in the 'accounts' sub-app, create the urls.py file and fill it with:
+
+        from django.urls import path, include
+        from . import views
+
+        # Namespace:
+        app_name = 'accounts'
+
+
+        urlpatterns = [
+            # http://127.0.0.1:8000/accounts/register
+            path('register/', views.register, name='register_view'),
+            
+            # http://127.0.0.1:8000/accounts
+            # I'm saying that all user accounts must be handle by django that automatically includes
+            # pattern-names as 'login' and 'logout':
+            path('', include('django.contrib.auth.urls')),
+        ]
+
+
+    5) Open the register.html file and customize it:
+
+        /33-Web-development/general/django/9-forms/frontend-user-register-form.txt
+
+
+    6) If you want to print the user (username or first_name or last_name) on the template,
+        you DONT need bring some in your views.py CONTEXT. Just call 'user.username' on the
+        template:
+
+            e.g
+
+                {{ user.username }}
+
+
+
+
+MORE ABOUT USER:
+
+    >> If you're looking for how to import users in your models.py classes:
+
+        /33-Web-development/general/django/3-1-backend-models-database/importing-users.txt

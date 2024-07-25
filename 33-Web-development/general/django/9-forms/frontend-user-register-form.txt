@@ -4,57 +4,8 @@
 FRONT-END: USER REGISTER FORM
 
 
-    1) Create a sub-app for this, e.g. 'accounts' and register it in the config-folder settings.py;
-
-
-    2) In the 'acounts' folder (sub-app), create the folders and file:
-        /templates/accounts/register.html
-
-
-    3) Still in the 'accounts' folder, edit the views.py file with:
-
-        from django.http import HttpResponse
-        from django.shortcuts import render
-        from django.contrib.auth.forms import UserCreationForm
-        from django.contrib.auth import login
-
-
-        def register(request):
-            # if the form method is NOT POST:
-            if request.method != 'POST':
-                form = UserCreationForm()  # built-in class.
-            else:
-                form = UserCreationForm(data=request.POST)
-                if form.is_valid():
-                    # log the user in:
-                    new_user = form.save()
-                    login(request, new_user)
-                    return HttpResponse('User has been created!')
-
-            context = {'register_form': form}
-            return render(request, 'accounts/register.html', context)
-
     
-
-    4) Still in the 'accounts' folder, create the urls.py file and fill it with:
-
-        from django.urls import path, include
-        from . import views
-
-        # Namespace:
-        app_name = 'accounts'
-
-
-        urlpatterns = [
-            # http://127.0.0.1:8000/account/register
-            path('register/', views.register, name='register'),
-            # http://127.0.0.1:8000/account
-            # I'm saying that all user accounts must be handle by django:
-            path('', include('django.contrib.auth.urls')),
-        ]
-
-
-    5) Open the register.html file and customize this:
+    1) In a template (e.g. register.html) customize this:
 
         {% extends "base.html" %}
         {% block title %}Register{% endblock title %}
@@ -66,7 +17,7 @@ FRONT-END: USER REGISTER FORM
                 <div class="col"></div>
                 <div class="login-form">
                     <!-- REGISTER FORM - START -->
-                    <form action="{% url 'accounts:register' %}" method="post">
+                    <form action="{% url 'accounts:register_view' %}" method="post">
                         {% csrf_token %}
                         {{ register_form.as_p }}
                         <button type="submit">Register</button>
@@ -79,19 +30,14 @@ FRONT-END: USER REGISTER FORM
         {% endblock content %}
 
 
-    6) If you want to print the user (username or first_name or last_name) on the template,
-        you DONT need bring some in your views.py CONTEXT. Just call 'user.username' on the
-        template:
-
-            e.g
-
-                {{ user.username }}
-
-
 
 
 MORE ABOUT USER:
 
+    >> If you want to build the entire registering flow, including Django configs, look this:
+    
+        /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+    
     >> If you're looking for how to import users in your models.py classes:
 
         /33-Web-development/general/django/3-1-backend-models-database/importing-users.txt
