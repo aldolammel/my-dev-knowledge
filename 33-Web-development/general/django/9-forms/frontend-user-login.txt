@@ -23,7 +23,7 @@ FRONT-END: USER LOGIN FORM
                         <div class="login-form">
 
                             <!-- LOGIN FORM - START -->
-                            <form action="{% url 'accounts:login' %}" method="post">
+                            <form method="post">
                                 {% csrf_token %}
                                 {{ form.as_p }}
                                 <button type="submit">Login</button>

@@ -17,7 +17,7 @@ FRONT-END: USER REGISTER FORM
                 <div class="col"></div>
                 <div class="login-form">
                     <!-- REGISTER FORM - START -->
-                    <form action="{% url 'accounts:register_view' %}" method="post">
+                    <form method="post">
                         {% csrf_token %}
                         {{ register_form.as_p }}
                         <button type="submit">Register</button>
