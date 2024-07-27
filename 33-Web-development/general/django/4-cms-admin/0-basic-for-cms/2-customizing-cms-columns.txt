@@ -40,3 +40,18 @@
             $ python manage.py runserver
             
             http://127.0.0.1:8000/admin/
+
+
+
+
+VERBOSE IN ADMIN LIST AND DETAIL VIEWS: 
+    
+    If you want to create a verbose-name for an Admin table columns:
+    In the sub-app models.py, in your class, add "verbose_name='<something>'"
+    in attritute model-field arguments:
+
+        E.g. 
+
+            class Recipe(models.Model):
+                start_datetime = models.DateTimeField(verbose_name='Start')
+

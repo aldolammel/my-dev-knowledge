@@ -1,0 +1,50 @@
+
+
+
+HTML INPUT TYPES         MODELS FIELDS                FORMS WIDGET FIELDS
+
+text..................... TextField ..................... TextInput
+date .................... DateField ..................... DateInput
+time .................... TimeField ..................... TimeInput
+datetime-local .......... DateTimeField ................. DateTimeInput
+......................... SplitDateTimeField ............ SplitDateTimeWidget
+......................... DurationField ................. TextInput
+email ................... EmailField .................... EmailInput
+file .................... FileField ..................... ClearableFileInput
+......................... FilePathField ................. Select
+......................... GenericIPAddressField ......... TextInput
+image ................... ImageField .................... ClearableFileInput
+number .................. IntegerField .................. NumberInput when Field.localize is False, else TextInput.
+......................... DecimalField .................. NumberInput when Field.localize is False, else TextInput.
+......................... FloatField .................... NumberInput when Field.localize is False, else TextInput
+......................... JSONField ..................... Textarea
+......................... ChoiceField ................... Select
+......................... MultipleChoiceField ........... SelectMultiple
+......................... TypedMultipleChoiceField ...... SelectMultiple
+......................... TypedChoiceField .............. Select
+......................... ModelChoiceField .............. Select
+......................... ModelMultipleChoiceField ...... SelectMultiple
+checkbox ................ BooleanField .................. CheckboxInput
+......................... NullBooleanField .............. NullBooleanSelect
+......................... RegexField .................... TextInput
+......................... SlugField ..................... TextInput
+url ..................... URLField ...................... URLInput
+......................... UUIDField ..................... TextInput
+......................... ComboField .................... TextInput
+......................... MultiValueField ............... TextInput
+ 
+
+<input type="button">
+<input type="color">
+<input type="hidden">
+<input type="month">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="week">
+
