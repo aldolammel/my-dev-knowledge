@@ -1,39 +1,40 @@
 
 
 
-HTML INPUT TYPES         MODELS FIELDS                FORMS WIDGET FIELDS
+HTML INPUT              MODELS FIELDS                FORMS WIDGET FIELDS
 
-text..................... TextField ..................... TextInput
-date .................... DateField ..................... DateInput
-time .................... TimeField ..................... TimeInput
-datetime-local .......... DateTimeField ................. DateTimeInput
+<textarea> .............. TextField ..................... TextInput
+type= text............... TextField ..................... TextInput
+type= date .............. DateField ..................... DateInput
+type= time .............. TimeField ..................... TimeInput
+type= datetime-local .... DateTimeField ................. DateTimeInput
 ......................... SplitDateTimeField ............ SplitDateTimeWidget
 ......................... DurationField ................. TextInput
-email ................... EmailField .................... EmailInput
-file .................... FileField ..................... ClearableFileInput
+type= email ............. EmailField .................... EmailInput
+type= file .............. FileField ..................... ClearableFileInput
 ......................... FilePathField ................. Select
 ......................... GenericIPAddressField ......... TextInput
-image ................... ImageField .................... ClearableFileInput
-number .................. IntegerField .................. NumberInput when Field.localize is False, else TextInput.
+type= image ............. ImageField .................... ClearableFileInput
+type= number ............ IntegerField .................. NumberInput when Field.localize is False, else TextInput.
 ......................... DecimalField .................. NumberInput when Field.localize is False, else TextInput.
 ......................... FloatField .................... NumberInput when Field.localize is False, else TextInput
 ......................... JSONField ..................... Textarea
-......................... ChoiceField ................... Select
+<select>................. ChoiceField ................... Select
 ......................... MultipleChoiceField ........... SelectMultiple
 ......................... TypedMultipleChoiceField ...... SelectMultiple
 ......................... TypedChoiceField .............. Select
 ......................... ModelChoiceField .............. Select
 ......................... ModelMultipleChoiceField ...... SelectMultiple
-checkbox ................ BooleanField .................. CheckboxInput
+type= checkbox .......... BooleanField .................. CheckboxInput
 ......................... NullBooleanField .............. NullBooleanSelect
 ......................... RegexField .................... TextInput
 ......................... SlugField ..................... TextInput
-url ..................... URLField ...................... URLInput
+type= url ............... URLField ...................... URLInput
 ......................... UUIDField ..................... TextInput
 ......................... ComboField .................... TextInput
 ......................... MultiValueField ............... TextInput
  
-
+<select>
 <input type="button">
 <input type="color">
 <input type="hidden">
