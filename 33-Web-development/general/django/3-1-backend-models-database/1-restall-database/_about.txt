@@ -1,0 +1,15 @@
+
+
+
+HOW TO RESTALL A NEW DATABASE:
+
+    >> If you need to re-create your database from the beginning, do it:
+
+        1) Delete the current database;
+
+        2) Create the new database;
+
+        3) Delete all migration folder content from all sub-apps;
+
+        4) Edit your .env file as needed;
+

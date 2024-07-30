@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}MOVIES{% endblock title %}
+
+{% block content %}
+    <h1>MOVIES</h1>
+    {% if movies %}
+        <u>
+            {% for movie in movies %}
+                <li><a href="{% url 'sandbox:movie_step_one' movie.pk %}">{{ movie.name }} ({{ movie.released_year }})</a></li>
+            {% endfor %}
+        </u>
+    {% else %}
+        <p>No movie records available yet.</p>
+    {% endif %}
+    <p><a href="{% url 'sandbox:movie_step_one' %}">Add New Movie</a></p>
+{% endblock content %}

@@ -1,20 +1,17 @@
 
-# ENVIRONMENT VARIABLES: DJANGO PROJECTS
+POSTGRESQL
 
-'''
-Those variables linked exclusively with the environment where the code is running. It's a safe option to save
-keys, passwords, tokens and other information that must be unique for each environment.
-'''
+    1) Install the PostgreSQL Python module:
+        https://www.psycopg.org/
 
-    # 1) Install this module in your project:
-        # $ pip install django-environ
 
-    # 2) Create a file called ".env" on the project root (same place of 'manage.py' file):
-        # model: /31-Environment-Variables/.env
+    2) If the database won't be in the cloud, install the PostgreSQL locally:
+        Go to the folder: 34-database/PostgreSQL/0-Installing/
 
-    # 3) In the Django settings.py file, add these lines:
+    
+    3) Go to your project folder and open the settings.py file and add these lines
+        in the right place:
 
-        
             import os
             import environ
 
@@ -56,5 +53,19 @@ keys, passwords, tokens and other information that must be unique for each envir
 
 
 
+    
+    4) Make a copy of '.env' file to the project root folder:
+        
+            /31-Environment-Variables/
 
-    # 4) Crucial: make sure if you want or not the .gitignore file ignoring the .env file;
+        >> customize the .env as needed following the step-3 variables right above!
+
+
+    5) If you see the file sqlite.db in the project root folder, delete it;
+
+    
+    6) Give the order to build the database:
+         $ python manage.py migrate
+
+
+

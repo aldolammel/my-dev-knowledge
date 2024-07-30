@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }}{% endblock title %}
+
+{% block content %}
+    
+    <h1>{{ page_title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <hr />
+
+        <button type="submit">{{ bt_submit }}</button>
+        <button type="submit" name="save_draft">{{ bt_draft }}</button>
+        <button type="submit" name="discard_draft">{{ bt_discard }}</button>
+    </form>
+    
+{% endblock content %}
