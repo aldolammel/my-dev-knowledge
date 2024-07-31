@@ -34,6 +34,13 @@ keys, passwords, tokens and other information that must be unique for each envir
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
 
+            # Allowed hosts
+            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])  # type: ignore
+
+            if DEBUG:
+                print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))  # type: ignore
+                print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
+                print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
 
 
             # Database
@@ -47,15 +54,6 @@ keys, passwords, tokens and other information that must be unique for each envir
                 'default': env.db(),
             }
 
-            # Allowed hosts
-            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])  # type: ignore
-
-            if DEBUG:
-                print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))  # type: ignore
-                print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
-                print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
-
-
-
+            
 
     # 4) Crucial: make sure if you want or not the .gitignore file ignoring the .env file;

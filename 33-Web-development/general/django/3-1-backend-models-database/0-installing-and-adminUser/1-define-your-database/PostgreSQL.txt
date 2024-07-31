@@ -6,7 +6,8 @@ POSTGRESQL
 
 
     2) If the database won't be in the cloud, install the PostgreSQL locally:
-        Go to the folder: 34-database/PostgreSQL/0-Installing/
+        Go to the folder: 
+            /34-database/PostgreSQL/0-Installing/
 
     
     3) Go to your project folder and open the settings.py file and add these lines

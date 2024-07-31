@@ -1,0 +1,18 @@
+
+
+HOW TO CREATE A REQUIREMENTS.TXT FILE:
+
+    1) Go to the project folder;
+
+    2) Active the virtual environment;
+
+    3) Do it:
+
+        Win:
+            $ 
+
+        Linux/Ubuntu:
+            $ pip freeze > requirements.txt
+
+        Mac:
+            $
