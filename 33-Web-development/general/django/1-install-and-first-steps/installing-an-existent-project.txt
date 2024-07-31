@@ -5,6 +5,12 @@ INSTALLING DJANGO:
         $ mkdir <project_folder>
         $ cd <project_folder>
 
+        
+        1.1) Clone the project repository;
+
+            $ git clone HTTPS_OF_PROJECT .    // that "." makes the clone to be installed exactly in the folder where you are, dont creating the parent folder.
+            $ git status                      // everything must be fine.
+
 
     2) Create the virtual environment and active it:
         <Check the folder '03-Virtual-Environment'>
@@ -26,23 +32,19 @@ INSTALLING DJANGO:
             # In VSCode, In Html's, change the language mode to 'Django-Html'
 
 
-    5) Create the Django Project Structure:
-        # make sure you're in project root folder and:
-        $ django-admin startproject proj_<project_name> .
+    5) Install all custom modules required by the project;
 
 
-    6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
-        $ python manage.py migrate
-        $ python manage.py runserver
+    6) If you won't use the SQLite as database, do it:
+        /33-Web-development/general/django/3-database-models/0-installing-and-adminUser/1-define-your-database/
 
 
-    7) If you won't use the SQLite as database, do it:
-        /33-Web-development/general/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
-
-
-    8) Set the environment variables and create your .env file:
+    7) Set the environment variables and create your .env file:
         /33-Web-development/general/django/1-install-and-first-steps/environment-variables-django.py
 
+
+    8) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
+        $ python manage.py runserver
 
 
     9) Create the 'templates' folder in the project-folder (main-app folder).
@@ -73,7 +75,7 @@ INSTALLING DJANGO:
                 To:
                     'DIRS': [BASE_DIR / 'templates'],
 
-        10.2) Do this: /33-Web-development/general/django/2-creating-and-deleting-apps/creating.txt
+        10.2) Do this: /33-Web-development/general/2-creating-and-deleting-apps/creating.txt
 
 
     11) Creating the admin user:

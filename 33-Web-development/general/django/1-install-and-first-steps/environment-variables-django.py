@@ -15,14 +15,14 @@ keys, passwords, tokens and other information that must be unique for each envir
     # 3) In the Django settings.py file, add these lines:
 
         
-            import os
+            from pathlib import Path
             import environ
 
             # Set the project base directory
-            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            BASE_DIR = Path(__file__).resolve().parent.parent
 
             # Take environment variables from .env file
-            environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+            environ.Env.read_env(BASE_DIR / '.env')
 
             # Initialize environment variables
             env = environ.Env(
@@ -33,6 +33,7 @@ keys, passwords, tokens and other information that must be unique for each envir
             # Quick-start development settings - unsuitable for production
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
+
 
 
             # Database

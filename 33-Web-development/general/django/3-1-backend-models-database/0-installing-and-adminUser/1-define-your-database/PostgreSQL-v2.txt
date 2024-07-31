@@ -6,20 +6,21 @@ POSTGRESQL
 
 
     2) If the database won't be in the cloud, install the PostgreSQL locally:
-        Go to the folder: 34-database/PostgreSQL/0-Installing/
+        Go to the folder: 
+            /34-database/PostgreSQL/0-Installing/
 
     
     3) Go to your project folder and open the settings.py file and add these lines
         in the right place:
 
-            import os
+            from pathlib import Path
             import environ
 
             # Set the project base directory
-            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            BASE_DIR = Path(__file__).resolve().parent.parent
 
             # Take environment variables from .env file
-            environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+            environ.Env.read_env(BASE_DIR / '.env')
 
             # Initialize environment variables
             env = environ.Env(
@@ -30,6 +31,7 @@ POSTGRESQL
             # Quick-start development settings - unsuitable for production
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
+
 
 
             # Database
@@ -50,7 +52,6 @@ POSTGRESQL
                 print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))  # type: ignore
                 print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
                 print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
-
 
 
     
