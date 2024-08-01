@@ -6,7 +6,7 @@ DJANGO TEMPLATES: SETUP
         
         1) Install the DjLint extension to get syntax highlights properly configured:
 
-            $ pip install djlint
+            $ pip install -U djlint
 
         2) In VSCode, open a HTML with some Django templates/jinja elements and,
             if the colors are not highlighted, change the file language mode

@@ -1,0 +1,8 @@
+
+
+NON-INSTALLATION BOOTSTRAP VERSION:
+
+    >> Use this html version if you want to use bootstrap without installation: 
+    
+            /33-Web-development/general/bootstrap/creating-html-recommended.html
+
