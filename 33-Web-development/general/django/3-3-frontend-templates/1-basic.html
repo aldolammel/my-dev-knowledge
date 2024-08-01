@@ -9,25 +9,27 @@ DJANGO TEMPLATES: BASIC
 
             E.g.
                 
-                <!-- Calling another template as base for this template -->
+                {# Calling another template as base for this template #}
                 {% extends 'base.html' %}
 
-                <!-- Defining the content block of the template must be loaded here -->
+                {#  Defining the content block of the template must be loaded here #}
                 {% block content %}
                 {% endblock content %}
 
-                <!-- A conditional example -->
+                {# A conditional example #}
                 {% if cars %}
                     <p>Good, there is at least one car available!</p>
                 {% else %}
                     <p>Oops, there is no car available!</p>
                 {% endif %}
                 
-                <!-- A For loop example -->
+                {# A For loop example #} 
                 {% for car in cars %}
 
-                    <!-- Applying dynamic links/routes -->
-                    <!-- namespace and pattern-name are defined in each sub-app urls.py file -->
+                    {% comment %} 
+                    Applying dynamic links/routes
+                    namespace and pattern-name are defined in each sub-app urls.py file
+                    {% endcomment %}
                     <p><a href="{% url '<namespace>:<pattern_name>' <parameter> %}">xxxxxxxx</a></p>
 
                 {% endfor %}
@@ -39,14 +41,14 @@ DJANGO TEMPLATES: BASIC
 
             E.g.
 
-                <!-- Reading the variable/object -->
-                {{ car }}   <!-- if dunder '__str__' is already define in 'models' with veh name -->
-                OR
-                {{ car.name }} OR {{ car['name'] }}  <!-- both if no dunder '__str__' defined -->
+                {# Reading the variable/object #}
+                {{ car }}   {# if dunder '__str__' is already define in 'models' with veh name #}
+                {# OR #}
+                {{ car.name }} OR {{ car['name'] }}  {# both if no dunder '__str__' defined #} 
 
-                <!-- Accessing the attributes that object -->
-                {{ car.brand }}    OR    {{ car['brand'] }}
-                {{ car.year }}     OR    {{ car['year'] }}
+                {# Accessing the attributes that object #} 
+                {{ car.brand }}    {# OR #}   {{ car['brand'] }}
+                {{ car.year }}     {# OR #}    {{ car['year'] }}
 
 
 
