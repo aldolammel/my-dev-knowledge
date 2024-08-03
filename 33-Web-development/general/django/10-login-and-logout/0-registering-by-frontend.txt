@@ -1,15 +1,11 @@
 
 
 
-LOGIN AND LOGOUT: REGISTERING AN USER BY FRONT-END
+LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
 
-    >> Try to use all names declared here because, for some settings, Django is waiting
-        exactly like that! 
-
-
-    1) Create a sub-app for this, called 'accounts' and register in the config-folder settings.py
-        the 'accounts' sub-app as 'accounts' in Installed Apps section;
+    1) Users setup first:
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
 
 
     2) In the 'accounts' folder, create the folders and file called 'register.html':
@@ -74,6 +70,26 @@ LOGIN AND LOGOUT: REGISTERING AN USER BY FRONT-END
             e.g
 
                 {{ user.username }}
+
+
+    7) In your config-folder, open the settings.py and add it:
+
+                LOGIN_URL = 'accounts:login'  # It's built-in.
+                
+                LOGIN_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
+                    # E.g. 'dashboard:home_logged_view'
+                
+                LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>' 
+                    # E.g. 'website:home_view'
+
+
+     8) Login page/form:
+            /33-Web-development/general/django/9-forms/frontend-user-login.txt 
+
+
+
+     9) Logout:
+            /33-Web-development/general/django/9-forms/frontend-user-logout.txt
 
 
 

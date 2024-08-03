@@ -26,6 +26,11 @@ IMPORTING USERS
 
 MORE ABOUT USER:
 
+    >> Basic:
+
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
+
+        
     >> If you're looking for about register and login forms:
 
         /33-Web-development/general/django/9-forms/frontend-user-register-form.txt

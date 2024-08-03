@@ -3,8 +3,9 @@
 
 FRONT-END: USER LOGIN FORM
 
-    >> Make sure you already have done all the setup steps:
-        /33-Web-development/general/django/10-login-and-logout/using-frontend.txt
+    >> Make sure you already have done:
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
     1) In 'accounts' sub-app, go to /templates/registration/ and create the 'login.html':

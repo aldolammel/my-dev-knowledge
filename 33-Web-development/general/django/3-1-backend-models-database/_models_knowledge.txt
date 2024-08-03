@@ -99,3 +99,15 @@ MODELS.PY:
                             labels = {
                                 'start_datetime': 'When did it gets start?',
                             }
+
+    RELATED_NAME
+
+        >> When you create a model, you can use an argument called 'related_name' that
+            allow you to call this model easily:
+
+                class UserProfile(models.Model):
+                    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+
+            So you can access it using that name:
+                user.profile
+            

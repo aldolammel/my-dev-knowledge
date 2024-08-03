@@ -1,0 +1,18 @@
+
+
+USERS SETUP
+
+    >> If your project needs any kind of user management, you must use this settings!
+    
+    >> These settings are built-in features of Django, so do not change anything! 
+
+
+    1) Create a sub-app called 'accounts' and add it in the config-folder settings.py
+        file as 'accounts' in 'Installed Apps' list;
+
+
+    
+    More:
+
+        >> To register users by the front-end:
+            /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt

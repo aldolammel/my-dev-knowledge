@@ -1,0 +1,17 @@
+
+
+
+EXPANDING THE USER USAGE
+
+
+    >> Basic:
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+
+
+    1) In 'accounts' sub-app, open the 'models.py' file:
+
+        from django.contrib.auth.models import User
+
+        class UserProfile(models.Model):
+            user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
