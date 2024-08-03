@@ -1,7 +1,10 @@
 
 
+FORMS KNOWLEDGE:
 
-HTML INPUT              MODELS FIELDS                FORMS WIDGET FIELDS
+
+
+HTML INPUT                MODELS FIELDS                   FORMS WIDGET FIELDS
 
 <textarea> .............. TextField ..................... TextInput
 type= text............... TextField ..................... TextInput
@@ -26,7 +29,7 @@ type= number ............ IntegerField .................. NumberInput when Field
 ......................... ModelChoiceField .............. Select
 ......................... ModelMultipleChoiceField ...... SelectMultiple
 type= checkbox .......... BooleanField .................. CheckboxInput
-......................... NullBooleanField .............. NullBooleanSelect
+......................... NullBooleanField .............. NullBooleanSelect (when null=True)
 ......................... RegexField .................... TextInput
 ......................... SlugField ..................... TextInput
 type= url ............... URLField ...................... URLInput
@@ -49,3 +52,8 @@ type= url ............... URLField ...................... URLInput
 <input type="text">
 <input type="week">
 
+
+
+
+MODEL FIELDS, MORE:
+    /33-Web-development/general/django/3-1-backend-models-database/_models_knowledge.txt

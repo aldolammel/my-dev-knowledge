@@ -15,3 +15,45 @@ EXPANDING THE USER USAGE
 
         class UserProfile(models.Model):
             user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+
+            def __str__(self):
+                return self.user.username
+
+        
+    2) Create a 'signals.py' file in 'accounts' sub-app if not available yet, and:
+
+        from django.dispatch import receiver
+        from django.db.models.signals import post_save
+        from django.contrib.auth.models import User
+        from .models import UserProfile
+
+        # The function listens the post_save signal sent by the User built-in-Django-module:
+        @receiver(post_save, sender=User)
+        def create_or_update_user_profile(sender, instance, created, **kwargs):
+            # When the Django User instance is saved, it creates the UserProfile instance as well:
+            if created:
+                UserProfile.objects.create(user=instance)
+            else:
+                instance.profile.save()
+
+
+    3) Open the accounts 'admin.py' file, and:
+
+        from django.contrib import admin
+        from .models import UserProfile
+
+        admin.site.register(UserProfile)
+
+    
+    4) Migrate and test it:
+
+        $ python manage.py makemigrations accounts
+        $ python manage.py migrate
+        $ python manage.py runserver
+
+        # Now, try the admin and check if you are seen the User Profile area:
+        http://127.0.0.1:8000/admin/
+
+
+    >> Now, each user created will generate a UserProfile instance connected that will be
+        available to read/update/delete.

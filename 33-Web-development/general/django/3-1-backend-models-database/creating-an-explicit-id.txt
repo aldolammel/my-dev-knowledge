@@ -1,0 +1,19 @@
+
+
+CREATING AN EXPLICIT ID/PK:
+
+    >> In Django, primary keys are created automatically, but you can force it if needed:
+
+        E.g.
+
+            class Movie(models.Model):
+                # 'id' here can be customized too:
+                id = models.AutoField(primary_key=True)
+
+    
+    
+    SmallAutoField .................. guaranteed to fit numbers from 1 to 32767.
+
+    AutoField ....................... guaranteed to fit numbers from -2147483648 to 2147483647.
+
+    BigAutoField .................... guaranteed to fit numbers from 1 to 9223372036854775807.

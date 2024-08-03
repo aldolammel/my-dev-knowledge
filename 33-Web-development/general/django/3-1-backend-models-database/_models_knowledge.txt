@@ -2,35 +2,42 @@
 MODELS.PY:
 
     Most commom django attribute types:
-        >> HTML field type == Django class' attribute type:
 
-            <input type="text">            == CharField(unique=False, max_length=40)
-            <textarea>                     == TextField()
-            <select>                       == CharField(max_length=20, choices=(('value1_db', 'Value1'), ('value2_db', 'Value2')), default='value1_db')
-            <boolean>                      == BooleanField() or NullBooleanField()
-            <input type="button">          == 
-            <input type="checkbox">        == ManyToMany() /33-Web-development/general/django/3-database-models/relation-many-to-many.txt
-            <input type="color">           == 
-            <input type="date">            == DateField(auto_now_add=True)
-            <input type="datetime-local">  == DateTimeField(auto_now_add=True)
-            <input type="email">           == EmailField()
-            <input type="file">            == FileField(default='', upload_to='this_folder_will_be_in_media_folder/%Y/%m/%d/', max_length=100)
-            <input type="hidden">          == 
-            <input type="image">           == ImageField(default='placeholder.png', upload_to='this_folder_will_be_in_media_folder/%Y/%m/%d/', max_length=100, blank=True)
-            <input type="month">           == 
-            <input type="number">          == PositiveSmallIntegerField or PositiveIntegerField or IntegerField() or FloatField() or DecimalField()
-            <input type="password">        == 
-            <input type="radio">           == 
-            <input type="range">           == 
-            <input type="reset">           == 
-            <input type="search">          == 
-            <input type="submit">          == 
-            <input type="tel">             == 
-            <input type="time">            == TimeField(auto_now_add=True) or DurationField()
-            <input type="url">             == URLField(max_length=200) or SlugField(max_length=60)
-            <input type="week">            == 
+
+    HTML INPUT                         MODELS FIELDS 
+
+    <input type="text"> .............. CharField(unique=False, max_length=40)
+    <textarea> ....................... TextField()
+    <select> ......................... CharField(max_length=20, choices=(('value1_db', 'Value1'), ('value2_db', 'Value2')), default='value1_db')
+    <boolean> ........................ BooleanField() or NullBooleanField() <- when null=True
+    <input type="button"> ............ 
+    <input type="checkbox"> .......... ManyToMany() /33-Web-development/general/django/3-database-models/relation-many-to-many.txt
+    <input type="color"> .............
+    <input type="date"> .............. DateField(auto_now_add=True)
+    <input type="datetime-local"> .... DateTimeField(auto_now_add=True)
+    <input type="email"> ............. EmailField()
+    <input type="file"> .............. FileField(default='', upload_to='this_folder_will_be_in_media_folder/%Y/%m/%d/', max_length=100)
+    <input type="hidden"> ............ 
+    <input type="image"> ............. ImageField(default='placeholder.png', upload_to='this_folder_will_be_in_media_folder/%Y/%m/%d/', max_length=100, blank=True)
+    <input type="month"> ............. 
+    <input type="number"> ............ PositiveSmallIntegerField or PositiveIntegerField or IntegerField() or FloatField() or DecimalField()
+    <input type="password"> .......... 
+    <input type="radio"> ............. 
+    <input type="range"> ............. 
+    <input type="reset"> ............. 
+    <input type="search"> ............ 
+    <input type="submit"> ............
+    <input type="tel"> ............... 
+    <input type="time"> .............. TimeField(auto_now_add=True) or DurationField()
+    <input type="url"> ............... URLField(max_length=200) or SlugField(max_length=60)
+    <input type="week"> .............. 
+
+    FORM FIELDS, INCLUDING WIDGET FIELDS:
+        /33-Web-development/general/django/9-forms/_forms_knowledge.txt
 
     
+
+
     CHARFIELD vs TEXTFIELD
 
         >> CharField demands a max_length;
