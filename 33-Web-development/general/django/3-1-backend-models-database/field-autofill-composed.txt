@@ -1,5 +1,5 @@
 
-COMPOSED FIELD
+AUTOFILL FIELD: COMPOSED FIELD
 
     Field = 'name'
     Field = 'lastname'
@@ -14,7 +14,7 @@ COMPOSED FIELD
         class Person(models.Model):
             fname = models.CharField(max_length=10)
             lname = models.CharField(max_length=10)
-            full_name = models.CharField(editable=False)
+            full_name = models.CharField(max_length=60, editable=False)
 
     
     2) Now, in the same class, override the built-in save() method with the
@@ -63,3 +63,4 @@ COMPOSED FIELD
         $ python manage.py runserver
         
         http://127.0.0.1:8000/admin/
+
