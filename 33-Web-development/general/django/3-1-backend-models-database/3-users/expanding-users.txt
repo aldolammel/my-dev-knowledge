@@ -9,6 +9,7 @@ EXPANDING THE USER USAGE
         /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
+
     1) In 'accounts' sub-app, open the 'models.py' file:
 
         from django.contrib.auth.models import User
@@ -20,6 +21,7 @@ EXPANDING THE USER USAGE
                 return self.user.username
 
         
+
     2) Create a 'signals.py' file in 'accounts' sub-app if not available yet, and:
 
         from django.dispatch import receiver
@@ -37,7 +39,23 @@ EXPANDING THE USER USAGE
                 instance.profile.save()
 
 
-    3) Open the accounts 'admin.py' file, and:
+
+    3) Open the accounts 'app.py' file, and ensure that the signals are connected at the right
+        time. The common practice is to import the signals module in the ready method of your
+        sub-app's configuration class:
+
+            from django.apps import AppConfig
+
+            class AccountsConfig(AppConfig):
+                ...
+                name = 'accounts'
+
+                def ready(self):
+                    import accounts.signals
+
+
+    
+    4) Open the accounts 'admin.py' file, and:
 
         from django.contrib import admin
         from .models import UserProfile
@@ -45,7 +63,8 @@ EXPANDING THE USER USAGE
         admin.site.register(UserProfile)
 
     
-    4) Migrate and test it:
+
+    5) Migrate and test it:
 
         $ python manage.py makemigrations accounts
         $ python manage.py migrate
