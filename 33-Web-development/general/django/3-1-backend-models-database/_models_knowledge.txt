@@ -107,14 +107,28 @@ MODELS.PY:
                                 'start_datetime': 'When did it gets start?',
                             }
 
+
     RELATED_NAME
 
+
         >> When you create a model, you can use an argument called 'related_name' that
-            allow you to call this model easily:
+            allows you to call this model easily:
 
                 class UserProfile(models.Model):
                     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
 
-            So you can access it using that name:
-                user.profile
-            
+            # So you can access it using that name:
+            #    user.profile
+
+
+        >> In this example, you can call all comments from a specific recipe or from a specific
+            user:
+
+                class Comment(models.Model):
+                    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments') 
+                    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+
+            # So you can access those results like this:
+            #    recipe.comments
+            #    or
+            #    author.comments
