@@ -1,6 +1,0 @@
-
-
-FIELD NOT EDITABLE:
-
-    Check this out:
-        /33-Web-development/general/django/3-database-models/composed-field.txt

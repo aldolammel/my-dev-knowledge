@@ -1,0 +1,86 @@
+
+
+FIELD: VISIBLE BUT LOCKED (NOT EDITABLE)
+
+
+    >> If you want to make a specific field visible but also locked in the CMS detail view, unable
+        for manual changes, do it:
+
+        1) In 'admin.py', create or edit the class related with the original models.py class, 
+            including:
+
+                E.g.
+
+                    class ExampleClassCMS(admin.ModelAdmin):
+                        readonly_fields = ('<field_you_wanna_lock>',)
+
+                    admin.site.register(ExampleClass, ExampleClassCMS)
+
+
+            Important: if that specific attribute in your 'models.py' class is using 'editable=...'
+                        argument, the editable value (True or False) will be ignored by your CMS;
+
+
+
+
+FIELD: COMPLETELY HIDDEN
+
+
+    >> If you want to make a specific field invible in the entire CMS, do it:
+
+        1) In 'models.py', go to the right class and its specific attribute;
+        2) In the attribute arguments, add or edit the 'editable':
+
+                E.g.
+                
+                    class ExampleClass(models.Model):
+                        attrib_example = models.CharField(editable=False)
+
+        3) In 'admin.py', make sure the attribute that must be hidden is NOT in the list_display:
+
+                E.g.
+                
+                    class ExampleClassCMS(admin.ModelAdmin):
+                        list_display = ('<the_field_shouldnt_be_here>',)
+
+
+
+FIELD: PARTIALY HIDDEN
+
+
+    >> If you want to make a specific field visible in CMS List View but NOT in Detail View:
+
+        1) In 'models.py', go to the right class and its specific attribute;
+        2) In the attribute arguments, add or edit the 'editable':
+
+                E.g.
+                
+                    class ExampleClass(models.Model):
+                        attrib_example = models.CharField(editable=False)
+
+        3) In 'admin.py', make sure the attribute that must be hidden is in the list_display:
+
+                E.g.
+                
+                    class ExampleClassCMS(admin.ModelAdmin):
+                        list_display = ('<the_field_must_be_here>',)
+
+
+
+    >> If you want to make a specific field visible in CMS Detail View but NOT in List View:
+
+        1) In 'models.py', go to the right class and its specific attribute;
+        2) In the attribute arguments, edit as 'True' the 'editable' or remove the arg. completely:
+
+                E.g.
+                
+                    class ExampleClass(models.Model):
+                        attrib_example = models.CharField()
+        
+        3) In 'admin.py', if there's the related admin class for the original models.py class, 
+            make sure the attribute that must be hidden in CMS List View is NOT listed:
+
+                E.g.
+
+                    class ExampleClassCMS(admin.ModelAdmin):
+                        list_display = ('<the_field_shouldnt_be_here>',)

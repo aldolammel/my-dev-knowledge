@@ -17,7 +17,7 @@ def movie_add(request):
     Responsable to show the same front-end form of movie_edit function
     but with clean fields to add a new movie.
     """
-    # When the form asks to save the data:
+    # When the form wants to change some in the database:
     if request.method == 'POST':
         # Creating the form object ready to POST method:
         form = MovieForm(request.POST)
@@ -27,25 +27,17 @@ def movie_add(request):
             form.save()
             # Send user to the list of movies:
             return redirect('movies:movie_list_view')
-        # If NOT valid, load the page again, but as 'GET' and keeping
-        # the fields data already validated:
-        else:
-            context = {
-                'form': form,
-                'page_title': 'Adding movie',
-                'bt_submit': 'Add',
-            }
-    # If method GET:
+    # When the form doesn't change any (GET method):
     else:
         # Creating the form object only to be read (GET):
         form = MovieForm()
-        context = {
-            'form': form,
-            'page_title': 'Adding movie',
-            'bt_submit': 'Add',
-        }
-
-    # Render the movie form:
+    # Defining what will be sent to the front-end/template:
+    context = {
+        'form': form,
+        'page_title': 'Adding movie',
+        'bt_submit': 'Add',
+    }
+    # Load the template:
     return render(request, 'movies/movie.html', context)
 
 
@@ -56,7 +48,7 @@ def movie_edit(request, movie_id):
     """
     # Defining the specific movie to update:
     movie = get_object_or_404(Movie, id=movie_id)  # Movie.objects.get(id=movie_id)
-    # When the form asks to update the data:
+    # When the form wants to change some in the database:
     if request.method == 'POST':
         # Defining the form object based in an existent movie in db ready to POST method:
         form = MovieForm(request.POST, instance=movie)
@@ -66,27 +58,17 @@ def movie_edit(request, movie_id):
             form.save()
             # Send user to the list of movies:
             return redirect('movies:movie_list_view')
-        # If NOT valid, load the page again, but as 'GET' and keeping
-        # the fields data already validated:
-        else:
-            # Defining what will be sent to the front-end/template:
-            context = {
-                'form': form,
-                'page_title': 'Editing movie',
-                'bt_submit': 'Update',
-            }
-    # If method GET:
+    # When the form doesn't change any (GET method):
     else:
         # Defining the form object based in an existent movie in db
         form = MovieForm(instance=movie)
-        # Defining what will be sent to the front-end/template:
-        context = {
-            'form': form,
-            'page_title': 'Editing movie',
-            'bt_submit': 'Update',
-        }
-
-    # Render the movie form:
+    # Defining what will be sent to the front-end/template:
+    context = {
+        'form': form,
+        'page_title': 'Editing movie',
+        'bt_submit': 'Update',
+    }
+    # Load the template:
     return render(request, 'movies/movie.html', context)
 
 
