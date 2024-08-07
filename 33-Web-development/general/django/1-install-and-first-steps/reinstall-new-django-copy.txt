@@ -1,0 +1,15 @@
+
+
+HOW TO RE-INSTALL ONLY THE DJANGO:
+
+    >> The same steps??????
+        /33-Web-development/general/django/1-install-and-first-steps/installing-an-existent-project.txt
+
+
+
+
+
+
+HOW TO RE-INSTALL ONLY THE DATABASE:
+
+    /33-Web-development/general/django/3-1-backend-models-database/1-reinstall-database/

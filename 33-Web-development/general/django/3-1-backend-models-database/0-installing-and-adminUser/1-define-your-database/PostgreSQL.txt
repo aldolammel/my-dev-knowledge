@@ -32,6 +32,14 @@ POSTGRESQL
             SECRET_KEY = os.getenv('SECRET_KEY')
 
 
+            INSTALLED_APPS = [
+                ...
+                # YOUR SUB-APPS:
+                'django.contrib.postgres',  # Expands the postgres options.
+                ...
+            ]
+
+
             # Database
 
             DATABASES = {

@@ -40,6 +40,15 @@ POSTGRESQL
                 print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
                 print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
 
+
+            INSTALLED_APPS = [
+                ...
+                # YOUR SUB-APPS:
+                'django.contrib.postgres',  # Expands the postgres options.
+                ...
+            ]
+
+
             # Database
             # Parse database connection url strings
             # like psql://user:pass@127.0.0.1:8458/db

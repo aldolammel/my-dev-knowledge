@@ -1,32 +1,76 @@
 
 QUERYSET: CREATING AND READING
 
-Three ways to:
-    A) On Windows, using the open-source software called 'DB Brower' for SQLite;
-    B) On VSCode, using SQLite extension. After the install, press Ctrl+Shift+P and type
-        "SQLife: open database" and select the db. In Explorer column, you'll see "SQLife" tab;
-    C) Using the Python Shell (check below);
+    >> A QuerySet is a collection of data from a database.
+
+    >> A QuerySet is built up as a list of objects.
 
 
-Open the Python Shell:
-    $ python manage.py shell
+
+    Three ways to:
+        A) On Windows, using the open-source software called 'DB Brower' for SQLite;
+        B) On VSCode, using SQLite extension. After the install, press Ctrl+Shift+P and type
+            "SQLife: open database" and select the db. In Explorer column, you'll see "SQLife" tab;
+        C) Using the Python Shell (check below);
 
 
-    CONSULTING:
+    Open the Python Shell:
+        $ python manage.py shell
+
+
+        CONSULTING:
+            
+        1) Ask to Django import a table content:
         
-    1) Ask to Django import a table content:
-        # eg.: from sandbox.models import Category:
-        $ from <app_name>.models import <class_model_name>
+            $ from <subapp_name>.models import <ClassModelName>
 
-    2) Define the content imported to a variable:
-        $ var = <class_model_name>.objects.all()
-        $ print(var)
-        # if empty, will be shown '<QuerySet []>'.
+                E.g. 
+                    
+                    $ from event_attack.models import EventAttack
 
 
-    ADDING:
+        2) Define the content imported to a variable:
+            $ q = <ClassModelName>.objects.all()
+            
+            # printing the object. If empty, will be shown '<QuerySet []>':
+            $ q         
 
-    3) Lets add some value into the 'name' attribute of the table:
-        $ cat = <class_model_name>.objects.create(name='Something')
 
-    4) Just run again that print(var) directly;
+        3.1) Checking all objects/rows of the table:
+
+            # Returns the query dictionary:
+            $ vars(q)    or    $ q.__dict__
+
+            # Show a dictionary of all attributes of the first object: 
+            $ vars(q.first())    or    $ q.first().__dict__
+            
+
+        3.2) Checking a specific attribute of one object/row of the table:
+
+            $ q = <ClassModelName>.objects.first()
+            
+            # Checking the internal representation of the object:
+            $ q.<attribute_name>
+            
+            # Checking the string method representation (if available):
+            $ print(q.<attribute_name>)
+
+
+        ADDING:
+        
+        1) Ask to Django import a table content:
+        
+            $ from <subapp_name>.models import <ClassModelName>
+
+                E.g. 
+                    
+                    $ from event_attack.models import EventAttack
+
+
+        2) Lets add some value into the 'name' attribute/column of the class/table:
+            $ q = <ClassModelName>.objects.create(name='Something')
+
+
+        3) Check the new data in the same query:
+            $ q
+            $ vars(q)    or    $ q.__dict__

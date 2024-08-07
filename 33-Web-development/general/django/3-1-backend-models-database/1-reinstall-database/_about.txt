@@ -1,7 +1,7 @@
 
 
 
-HOW TO RE-INSTALL THE DATABASE:
+HOW TO RE-INSTALL ONLY THE DATABASE:
 
     >> If you need to re-create your database from the beginning, do it:
 
@@ -13,5 +13,20 @@ HOW TO RE-INSTALL THE DATABASE:
 
         4) Edit your .env file as needed;
 
-        5) Run makemigrations? But for sure to run migrate;
+        5) CRITICAL: close all Terminals/Prompts you ran with the old .env before (it avoids
+            issues with old environment variables)!
 
+        6) Run makemigrations for each sub-app;
+        
+        7) Run migrate;
+
+        >> If you'll' use the CMS:
+
+        8) Run createsuperuser;
+
+
+
+
+HOW TO RE-INSTALL ONLY THE DJANGO:
+
+    /33-Web-development/general/django/1-install-and-first-steps/reinstall-new-django-copy.txt
