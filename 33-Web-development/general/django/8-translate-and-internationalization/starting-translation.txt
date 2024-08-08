@@ -1,0 +1,48 @@
+
+
+    STARTING A TRANSLATION PROJECT:
+
+        
+        >> xxxxxxxxxxxxxxxxxxx
+        
+        
+        1) In settings.py, add this Middleware between the 'CommonMiddleware'
+            and 'CsrfViewMiddleware':
+        
+                'django.middleware.locale.LocaleMiddleware',
+        
+        
+        2) Still in settings.py:
+
+            # Internationalization
+
+            LANGUAGE_CODE = 'en'  # pt-br
+            # Doc: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+            TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
+            USE_I18N = True
+            USE_TZ = True
+            
+            # Date and time format settings
+            DATE_FORMAT = 'Y-m-d'
+            TIME_FORMAT = 'H:i:s'
+            DATETIME_FORMAT = 'Y-m-d H:i:s'
+            SHORT_DATE_FORMAT = 'd/m/Y'
+            SHORT_DATETIME_FORMAT = 'd/m/Y P'
+            FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
+            # Input format settings
+            DATE_INPUT_FORMATS = [
+                '%d-%m-%Y',
+                '%d/%m/%Y',
+                '%d%m%Y',
+            ]
+            TIME_INPUT_FORMATS = [
+                '%H:%M',
+                '%H%M',
+            ]
+            DATETIME_INPUT_FORMATS = [
+                '%Y-%m-%d %H:%M',
+                '%Y/%m/%d %H:%M',
+            ]
+
+
+

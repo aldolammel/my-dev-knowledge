@@ -48,12 +48,15 @@ QUERYSET: CREATING AND READING
         3.2) Checking a specific attribute of one object/row of the table:
 
             $ q = <ClassModelName>.objects.first()
-            
+
             # Checking the internal representation of the object:
             $ q.<attribute_name>
             
             # Checking the string method representation (if available):
             $ print(q.<attribute_name>)
+
+            # Show a dictionary of all attributes of the first object: 
+            $ vars(q)      or     $ q.__dict__
 
 
         ADDING:
