@@ -74,3 +74,10 @@ def movie_edit(request, movie_id):
 
 def movie_delete(request, id):
     pass
+
+
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/3-2-backend-views/
+
+"""

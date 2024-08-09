@@ -1,12 +1,11 @@
 from django.urls import path
 from . import views
 
-# By convention, it defines the sub-app namespace:
-# It'll be used, for example, when we create routes on templates.
+# NAMESPACE
 app_name = 'movies'
 
 
-# EXAMPLE USING ONLY FUNCTION-BASED METHOD:
+# EXAMPLE USING ONLY FUNCTION-BASED METHOD
 # Defining the routes to be used by this sub-app:
 urlpatterns = [
     # http://127.0.0.1:8000/movies/
@@ -19,8 +18,8 @@ urlpatterns = [
 ]
 
 
-# IMPORTANT:
-# This 'movies/' as a folder in the URL, it's defined in the
-# config_folder (in the project, this folder has the same name of the project).
-# In config_folder, you find a file called 'urls.py'. There you can
-# define that 'movies/' (kind of a 'directory' to organize URLs).
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/3-2-backend-views/2-building-urls/urls-from-subapp.py
+
+"""

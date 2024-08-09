@@ -73,3 +73,12 @@ def movie_step_two(request, pk):
         'bt_discard': 'Discard all',
     }
     return render(request, 'sandbox/movie_step_two.html', context)
+
+
+
+
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/3-2-backend-views/
+
+"""

@@ -1,0 +1,15 @@
+
+
+
+VIEWS REQUIRING LOGIN AUTHENTICATED:
+
+    >> In each sub-app that you want to protect with login, open its 'views.py' and do this.
+        Apply the decorator 'login_required' right before each protected function-based view:
+
+        E.g.
+
+            from django.contrib.auth.decorators import login_required
+
+            @login_required
+            def blablabla(request):
+                pass

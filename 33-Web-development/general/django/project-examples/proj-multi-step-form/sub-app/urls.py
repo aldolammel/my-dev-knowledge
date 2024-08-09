@@ -15,3 +15,10 @@ urlpatterns = [
     # http://127.0.0.1:8000/sandbox/movie/step-two/12
     path('movie/step-two/<int:pk>/', views.movie_step_two, name='movie_step_two'),
 ]
+
+
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/3-2-backend-views/2-building-urls/urls-from-subapp.py
+
+"""

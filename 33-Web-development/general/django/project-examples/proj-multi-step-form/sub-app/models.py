@@ -31,3 +31,10 @@ class Movie(models.Model):
 
     def delete_instance(self):
         self.delete()
+
+
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/3-1-backend-models-database/
+
+"""

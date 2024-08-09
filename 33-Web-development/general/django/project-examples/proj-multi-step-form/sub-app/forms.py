@@ -12,3 +12,10 @@ class StepTwoForm(forms.ModelForm):
     class Meta:
         model = Movie
         fields = ['director', 'rating']
+
+
+"""
+    MORE OPTIONS:
+    /33-Web-development/general/django/9-forms/
+
+"""
