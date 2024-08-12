@@ -14,6 +14,9 @@ DJANGO STRUCTURE: TEMPLATES
         - Use template tags and filters to render data dynamically;
         - Separate the presentation from the business logic.
 
+        Built-in template tags and filters:
+        https://docs.djangoproject.com/en/5.0/ref/templates/builtins/
+
 
 
     MORE ABOUT:

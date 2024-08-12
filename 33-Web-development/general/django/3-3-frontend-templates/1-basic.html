@@ -30,7 +30,7 @@ DJANGO TEMPLATES: BASIC
                     Applying dynamic links/routes
                     namespace and pattern-name are defined in each sub-app urls.py file
                     {% endcomment %}
-                    <p><a href="{% url '<namespace>:<pattern_name>' <parameter> %}">xxxxxxxx</a></p>
+                    <p><a href="{% url '<namespace>:<pattern_name>' <optional_arg1> <optional_arg2> %}">xxxxxxxx</a></p>
 
                 {% endfor %}
                 
@@ -52,6 +52,17 @@ DJANGO TEMPLATES: BASIC
 
 
 
+    >> Includes:
+
+        https://www.udemy.com/course/python-django-the-practical-guide/learn/lecture/26372962
+
+        AWARE: to call all variables use in the same template you are using an include, 
+                you must use 'with':
+
+                {% includes "<subapp_folder>/includes/example.html" with active_page="var" %}
+
+
+                
     >> A perfect example of using the template you find in a project example that
         I create to examplify the usage of views.py:
             

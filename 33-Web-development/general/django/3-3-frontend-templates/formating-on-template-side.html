@@ -1,0 +1,14 @@
+
+
+{# CAPITALIZE THE TEXT FIELD #}
+{{ form.name|title }}
+{# Before capitalize: save private ryan #}
+{# After capitalize: Save Private Ryan #}
+
+{# LOWERCASE THE TEXT FIELD #}
+{{ form.name|lower }}
+{# Before lowercase: SaVE Private rYAN #}
+{# After lowercase: save private ryan #}
+
+{# DATE FIELD #}
+{{ form.added_at|date:"M d, Y H:i" }}
