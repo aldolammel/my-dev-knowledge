@@ -44,11 +44,15 @@ DJANGO TEMPLATES: BASIC
                 {# Reading the variable/object #}
                 {{ car }}   {# if dunder '__str__' is already define in 'models' with veh name #}
                 {# OR #}
-                {{ car.name }} OR {{ car['name'] }}  {# both if no dunder '__str__' defined #} 
+                {{ car.name }}   {# if no dunder '__str__' defined #} 
 
-                {# Accessing the attributes that object #} 
-                {{ car.brand }}    {# OR #}   {{ car['brand'] }}
-                {{ car.year }}     {# OR #}    {{ car['year'] }}
+                {# Accessing the attributes that object / content of dictionary #} 
+                {{ car['brand'] }}             {# DOESNT WORK #}
+                {{ car.brand }}                {# WORKS! #}
+                  
+                {# Result from a function #}
+                {{ result_from_a_function() }}  {# DOESNT WORK #}
+                {{ result_from_a_function }}    {# WORKS! #}
 
 
 

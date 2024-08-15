@@ -1,0 +1,28 @@
+
+
+SLUG FIELD:
+
+    1) In models.py:
+
+        E.g.
+
+            class Movie(models.Model):
+                title = models.CharField(max_length=40, blank=False, unique=True)
+                slug = models.SlugField(default='', blank=True, null=False, db_index=True)
+
+
+            CRUCIAL: avoid to use in the slugify(self.title) method, otherwise one the instance
+                is created, the slug attribute would be overriden.
+
+
+
+    2) In admin.py:
+
+        E.g. 
+
+            class MovieCMS(admin.MovelAdmin):
+                prepopulated_fields = {'slug': ('title',)}
+
+            admin.site.register(Movie, MovieCMS)
+
+
