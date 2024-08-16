@@ -20,7 +20,7 @@ MODELS.PY:
     <input type="hidden"> ............ 
     <input type="image"> ............. ImageField(default='placeholder.png', upload_to='this_folder_will_be_in_media_folder/%Y/%m/%d/', max_length=100, blank=True)
     <input type="month"> ............. 
-    <input type="number"> ............ PositiveSmallIntegerField or PositiveIntegerField or IntegerField() or FloatField() or DecimalField()
+    <input type="number"> ............ PositiveSmallIntegerField or PositiveIntegerField or PositiveBigIntegerField or IntegerField() or FloatField() or DecimalField()
     <input type="password"> .......... 
     <input type="radio"> ............. 
     <input type="range"> ............. 
@@ -47,7 +47,7 @@ MODELS.PY:
                 E.g. day_note = models.TextField(max_length=1200)
         
     
-    NULL vs BLANK
+    ARGUMENT: NULL vs BLANK
 
         >> 'blank=True' means the field is not mandatory (models are blank=False as default value).
         
@@ -61,7 +61,7 @@ MODELS.PY:
         >> Avoid the redundance: e.g. CharField(blank=True, null=True)
 
 
-    AUTO_NOW_ADD vs AUTO_NOW
+    ARGUMENT: AUTO_NOW_ADD vs AUTO_NOW
 
         >> 'auto_now_add=True' means when a new instance/entry is created in the table, the attribute will be
             filled automatically once.
@@ -71,7 +71,7 @@ MODELS.PY:
                 E.g. last_updated = models.DateTimeField(auto_now=True)
 
 
-    ON_DELETE 
+    ARGUMENT: ON_DELETE 
 
         >> 'on_delete' is an argument to be use with ForeignKey model where you define what happen
             with the entire instance if the foreign key is deleted:
@@ -102,7 +102,7 @@ MODELS.PY:
                     column turn to 'null' when the director is deleted, preserving the movie instances.
 
 
-    VERBOSE NAME
+    ARGUMENT: VERBOSE NAME
 
         >> It's possible to add a verbose name for each attribute but it is NOT database level.
             In the database, the column name will exactly be the attribute name as it is.
@@ -136,27 +136,6 @@ MODELS.PY:
                             }
 
 
-    RELATED_NAME
+    ARGUMENT: RELATED_NAME
 
-
-        >> When you create a model, you can use an argument called 'related_name' that
-            allows you to call this model easily:
-
-                class UserProfile(models.Model):
-                    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-
-            # So you can access it using that name:
-            #    user.profile
-
-
-        >> In this example, you can call all comments from a specific recipe or from a specific
-            user:
-
-                class Comment(models.Model):
-                    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments') 
-                    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
-
-            # So you can access those results like this:
-            #    recipe.comments
-            #    or
-            #    author.comments
+        /33-Web-development/general/django/3-1-backend-models-database/queryset-reverse.txt

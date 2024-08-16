@@ -1,0 +1,61 @@
+
+
+QUERYSET: REVERSE RELATIONSHIP
+
+    >> This is what you got in your models.py file, for example:
+
+            class Director(models.Model):
+                last_name = ...
+                
+            class Movie(models.Model):
+                title = ...
+                director = models.ForeignKey(Director, ...)
+
+
+    >> If you got classes 'Director' and 'Movie', the Movie class will get a ForeignKey called
+        'director'. It means one 'Director' instance can have more than one 'Movie' instance
+        associated.
+
+        E.g.
+
+            "How many directors 'Alien Romulus' movie got?"
+
+            $ python manage.py shell
+            >>> from movies.models import Movie
+            >>> alien = Movie.objects.get(title='Alien Romulus')
+            >>> Output: <Movie: Movie object (1)>
+            >>> alien.director
+            >>> Output: 'Fede Álvarez'
+
+
+    >> But the reverse information ("all movies from Fede Álvarez") apparently is not available
+        in the traditional way to research, but Django smartly solves it:
+
+            "How many movies 'Fede Álvarez' got?"
+
+            >>> from movies.models import Director
+            >>> alvarez = Director.objects.get(last_name='Álvarez')
+            >>> Output: <Director: Director object (1)>
+            >>> alvarez.movie_set.all()
+            >>> Output: <QuerySet [...]>
+
+            Important: Django creates automatically the method '<classname>_set' to help you
+                        with this kind of reverse research.
+
+
+    >> Even easier and smarter way to research through reverse relationship:
+
+        1) Returning in our first example in models.py, add the argument 'related_name' to
+            the ForeignKey attribute:
+
+                class Director(models.Model):
+                    last_name = ...
+                    
+                class Movie(models.Model):
+                    title = ...
+                    director = models.ForeignKey(Director, related_name='movies')
+
+
+        2) Now, you can do reverse research like this:
+
+            >>> alvarez.movies.all()
