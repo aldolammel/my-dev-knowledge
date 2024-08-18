@@ -1,4 +1,5 @@
 
+
 RELATION: MANY TO MANY
 
     >> It's used to create a many-to-many relationship where Django automatically
@@ -25,6 +26,10 @@ RELATION: MANY TO MANY
             class HeadacheAttack(models.Model):
                 affected_areas = models.ManyToManyField(
                     AffectedArea,  # calling the class that the relation many-to-many must be created.
+
+                    # ManyToMany doesn't need the on_delete argument because if some list option
+                    # is deleted, Django will delete the reference directly in the brigde table (mapping)
+                    # created automatically in ManyToManyField releationship.
                 )
 
 
