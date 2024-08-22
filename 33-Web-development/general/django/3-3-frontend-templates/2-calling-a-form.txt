@@ -1,0 +1,12 @@
+
+
+TEMPLATES: CALLING A FORM
+
+    >> When you call a form like below, it means Django will search it in the view (views.py)
+        that the current template URL belongs.
+
+    >> If the 'form' is declared in the VIEW CONTEXT, the form will be shown correctly:
+
+    >> To call the form in your template (html):
+
+        {{ form }}

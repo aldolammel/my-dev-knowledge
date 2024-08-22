@@ -1,0 +1,14 @@
+
+
+RELATION: ITSELF
+
+
+    >> Relation with the same model:
+
+        class User(models.Model):
+            ...
+            friends = models.ManyToManyField('self') 
+        
+            >> The special self keyword (used as a string value) tells Django that it should form a
+            relationship with (other) instances of the same model.
+

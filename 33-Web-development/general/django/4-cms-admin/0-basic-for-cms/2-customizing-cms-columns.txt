@@ -2,23 +2,28 @@
 
     CUSTOMIZING THE CMS COLUMNS:
 
-        If you want to add new columns in the CMS content tables, and you already have at least a models.py
-        class built in some sub-app folder, follow these steps:
+        >> In case of admin.py files, any class created there WON'T affect database tables and
+            their columns. Classes in admin.py files stay in Django back-end level only.
+        
+        >> If you want to add new columns in the CMS-html-content-tables, and you already have at least
+            a models.py class in some sub-app folder, follow these steps:
 
 
-        1) In that sub-app folser, open the file 'admin.py';
+        1) In that sub-app folder, open the 'admin.py' file;
 
 
-        2) Import the model class you want to custom in the CMS;
+        2) Import the model class you want to custom in the CMS:
+            
             E.g. 
             
                 from .models import Recipe
 
 
         3) Create a class with a similar name of the original class you're working on:
+  
             E.g. 
 
-                class RecipeAdmin(admin.ModelAdmin):
+                class RecipeAdmin(admin.ModelAdmin):  # this 'Admin' in the classname is a convention.
                     # The tuple 'list_display' will reorder columns (attributes) on the CMS front-end:
                     list_display = ('id', 'name', 'created_at')
                     # It activates the searching field and select which columns will be used as source:
@@ -26,6 +31,7 @@
 
 
         4) If the class wasn't register yet, do it, but now including the admin class version too:
+  
             E.g.
 
                 admin.site.register(Recipe, RecipeAdmin)

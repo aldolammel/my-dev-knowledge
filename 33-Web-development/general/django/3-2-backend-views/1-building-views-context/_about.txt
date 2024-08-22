@@ -3,20 +3,45 @@
 BUILDING THE CONTEXT:
 
 
-    >> Context is the package of data the back-end sends to the front-end through sub-app views.py
-        files.
+    >> Here 'Context' is the package of data that sub-app views.py (back-end) sends to
+        the template (front-end).
 
 
-    >> Something from the database is visible in a template (html) because this data is accessible
-        in the dictionary called 'context' (convention!).
+    >> If something from the database is visible in a template (html) it's because the data
+        is accessible in some 'return render()' dictionary called 'context' (convention!)
+        in one of sub-app views.py files.
 
         views.py e.g.
 
-            <code of query_sets> ...
+            def ViewNameExample(request):
 
-            context = {
-                'recipes': recipes,  # In the template (index.html), it'll be called as {{ recipes }}.
-                'restaurants': restaurants,
-            }
+                <code of query_sets>
 
-            return render(request, "recipes/index.html", context)
+                context = {
+                    'recipes': recipes,  # In the template (index.html), it'll be called as {{ recipes }}.
+                    'restaurants': restaurants,
+                    'has_error': False,
+                }
+                return render(request, "recipes/index.html", context)
+
+
+    >> Another example, respecting the 'context' convention:
+
+        >> Instead of this:
+          
+             return render(request, 'template_path_here.html', {'key1': 'value1', 'key2': 'value2'})
+
+
+        >> This approach is expected:
+
+                context = {
+                    'key1': 'value1',
+                    'key2': 'value2',
+                }
+                return render(request, 'template_path_here.html', context)
+
+
+        >> You could easily add new variables in your dictionary (context) dynamically through
+            your views functions/classes, using it (below) before returning render():
+
+                context['key3'] = 'value3'

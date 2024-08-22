@@ -6,7 +6,7 @@ FORMS KNOWLEDGE:
 
 HTML INPUT                MODELS FIELDS                   FORMS WIDGET FIELDS
 
-<textarea> .............. TextField ..................... TextInput
+<textarea> .............. TextField ..................... TextInput/Textarea
 type= text............... TextField ..................... TextInput
 type= date .............. DateField ..................... DateInput
 type= time .............. TimeField ..................... TimeInput

@@ -1,6 +1,6 @@
 
 
-    REGISTERING YOUR APP MODELS (db tables) TO BE MANAGED BY DJANGO CMS:
+    REGISTERING YOUR SUB-APP MODELS (db tables) TO BE MANAGED BY DJANGO CMS:
         
         
         1) Go to 'admin.py' into your specific app folder, and register the desired model/table:
