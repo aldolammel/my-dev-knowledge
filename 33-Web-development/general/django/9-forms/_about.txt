@@ -3,31 +3,36 @@
 
 DJANGO FORMS:
 
-    >> If you're developing a web application that accepts user input on the front end, 
-        you'll need to understand and use forms. Django provides a variety of tools and 
-        libraries to help you build forms to accept input from site visitors and then 
+    >> If you're developing a web application that accepts user input from the front-end, 
+        you'll need to understand and use forms (forms.py). Django provides a variety of 
+        tools and libraries to help you build forms to accept input from site visitors and then 
         process and respond to the input.
         
         That said: sub-app forms.py files by theirselves DOESN'T input anything into database.
                     If a forms.py class apparently is inputting data, it's because that
-                    form class is linked with some models.py class. 
+                    form class is linked with some models.py class.
 
     
-    >> The forms.py always is manually created by the developer into some sub-app folder.
-        You can create one for each sub-app folders that depends forms.
+    >> The forms.py file is always manually created by the developer into some sub-app folder.
+        You can create one for each sub-app folders that depend of forms.
+
+
+    >> Imagine you got in the models.py file a class to record movies with a few fields to
+        fill, and these fields must be filled by website visitors. As the models.py file is
+        responsable to design our database, its tables and columns, the forms.py file is the 
+        place to set the form that should be used by the visitors in order to include new
+        movies in the database.
+    
     
     >> There are two ways to build up a front-end form:
     
-        1) Connecting a models.py class to a forms.py class (inherit from forms.ModelForm);
+        1) Connecting a models.py class to a forms.py class (inherit from forms.ModelForm):
 
-            /33-Web-development/general/django/9-forms/1-form-linked-models.py
+            /33-Web-development/general/django/9-forms/based-class-ModelForm/forms.py
 
-        2) Or creating a custom forms.py class (inherit from forms.Form) doesn't impact the db;
+        2) Or creating a custom forms.py class (inherit from forms.Form) that doesn't impact the db
+            and is not the best method to do forms if you consider the 'Movies' example mention
+            before:
 
-            /33-Web-development/general/django/9-forms/2-form-independent.py
+            /33-Web-development/general/django/9-forms/based-class-Form/forms.py
 
-    >> Let's imagine you got in the models.py file a class to record movies with a few fields to
-        fill. Now, to the visitor add movies from the website template (front-end), we need to 
-        create a form class to linked with the Movie class in models.py that will connect the
-        database with the template:
-    

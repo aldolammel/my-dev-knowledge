@@ -25,7 +25,7 @@ BUILDING THE CONTEXT:
                 return render(request, "recipes/index.html", context)
 
 
-    >> Another example, respecting the 'context' convention:
+    >> Another example, using the same logic of Context convention:
 
         >> Instead of this:
           

@@ -1,0 +1,21 @@
+
+
+VIEWS CLASSES: USING BASIC INHERIT:
+
+    >> With a basic view inherit, you are able to create your own view-class with all the potential
+        offered by classes in views.py.
+        
+        E.g.
+
+            from django.views.generic import View
+            
+            class MyOwnTestView(View):  # This 'View' in classname is a convention.
+                pass
+
+
+
+
+
+    HOW TO USAGE (EXAMPLE):
+    
+    /33-Web-development/general/django/3-2-backend-views/1-building-context/class-based/view-class-basic-usage.py

@@ -1,0 +1,37 @@
+
+
+VIEWS CLASSES: USING PRESETS INHERIT:
+
+    >> With a preset view, you can take benefits of other most used views through class ihenrit;
+
+    >> To use a preset view, you must understand what's the purpose of the class you're creating:
+                
+        E.g.
+
+            # A view for LIST products page:
+            from django.views.generic import ListView
+
+            class ProductsListView(ListView):  # This 'View' in classname is a convention.
+                pass
+
+            # A view for a product DETAIL page:
+            from django.views.generic import DetailView
+            
+            class ProductDetailView(DetailView):  # This 'View' in classname is a convention.
+                pass
+
+
+    >> Django Documentation brings a lot of built-in methods that each of generic views bring
+        within to be used:
+
+            https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/
+
+
+    
+     HOW TO USAGE (EXAMPLE):
+    
+    /33-Web-development/general/django/3-2-backend-views/1-building-context/class-based/view-class-preset-usage.py
+
+
+
+

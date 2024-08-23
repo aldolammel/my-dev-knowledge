@@ -26,11 +26,21 @@ class Movie(models.Model):
         editable=False,
     )
 
+    class Meta:
+        db_table = 'movie'
+        ordering = ['name', '-released_year']
+        # verbose_name = 'Movie'
+        # verbose_name_plural = 'Movies'
+
     def __str__(self):
         return f'{self.name} ({self.released_year})'
 
     def delete_instance(self):
         self.delete()
+
+    # def save(self, *args, **kwargs):
+    # ...
+    # super().save(*args, **kwargs)
 
 
 """

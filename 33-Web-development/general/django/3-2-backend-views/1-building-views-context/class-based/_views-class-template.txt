@@ -1,0 +1,24 @@
+
+
+VIEWS CLASSES: USING TEMPLATE INHERIT:
+
+    >> Wxxxxxxxxxxxxxxx;
+
+    >> To use a template view, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:
+                
+        E.g.
+
+            from django.views.generic import TemplateView
+
+            class ThankYouView(TemplateView):
+                pass
+
+
+    
+     HOW TO USAGE (EXAMPLE):
+    
+    /33-Web-development/general/django/3-2-backend-views/1-building-context/class-based/view-class-template-usage.py
+
+
+
+

@@ -9,7 +9,7 @@ from .models import Recipe
 from django.db.models import Count  # Crucial to use aggregation counting!
 
 
-class Recipes(View):
+class RecipesView(View):
     model = Recipe
     template_name = 'recipes/custom.html'
     context_object_name = 'recipes'

@@ -8,7 +8,7 @@ from django.views.generic import View
 from .models import Recipe
 
 
-class Recipes(View):
+class RecipesView(View):
     model = Recipe
     template_name = 'recipes/custom.html'
     context_object_name = 'recipes'
