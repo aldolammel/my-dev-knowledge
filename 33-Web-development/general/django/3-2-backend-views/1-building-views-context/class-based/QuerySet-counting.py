@@ -23,3 +23,13 @@ class RecipesView(View):
         return Recipe.objects.filter(id__gt=5).count()
         # Counting how many items/entries in a filter we got (using Count Class)
         return Recipe.objects.filter(id__gt=5).aggregate(Count('id'))
+
+        # LOOK THIS OUT:
+        """
+            Old videos from Django show these differences:
+            
+                def get_queryset(self):
+                    base_query = super().get_queryset()
+                    data = base_query.filter(id__gt=1)
+                    return data
+        """

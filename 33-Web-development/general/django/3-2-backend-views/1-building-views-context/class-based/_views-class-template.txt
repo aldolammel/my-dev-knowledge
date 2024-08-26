@@ -8,14 +8,14 @@ VIEWS CLASSES: USING TEMPLATE INHERIT:
                 
         E.g.
 
-            from django.views.generic import TemplateView
+            from django.views.generic.base import TemplateView
 
             class ThankYouView(TemplateView):
                 pass
 
 
     
-     HOW TO USAGE (EXAMPLE):
+    HOW TO USAGE (EXAMPLE):
     
     /33-Web-development/general/django/3-2-backend-views/1-building-context/class-based/view-class-template-usage.py
 

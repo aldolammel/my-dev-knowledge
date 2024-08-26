@@ -14,6 +14,7 @@ urlpatterns = [
     path('movie/step-one/<int:pk>/', views.movie_step_one, name='movie_step_one'),
     # http://127.0.0.1:8000/sandbox/movie/step-two/12
     path('movie/step-two/<int:pk>/', views.movie_step_two, name='movie_step_two'),
+    # Crucial: this 'name' argument above is the 'pattern name' you'll use to build the URL's in templates.
 ]
 
 

@@ -12,7 +12,7 @@ urlpatterns = [
     path('', views.recipes, name='list_view'),
     # http://127.0.0.1:8000/recipes/1
     path('<int:recipe_id>', views.recipe, name='detail_view'),
-    # Crucial: this 'name' above is the 'pattern name' you'll use to build the URL's in templates.
+    # Crucial: this 'name' argument above is the 'pattern name' you'll use to build the URL's in templates.
 ]
 
 

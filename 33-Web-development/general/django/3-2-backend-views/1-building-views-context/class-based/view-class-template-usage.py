@@ -1,6 +1,6 @@
 # IN VIEWS.PY FILE:
 
-from django.views.generic import TemplateView
+from django.views.generic.base import TemplateView
 from .models import Recipe
 
 
@@ -26,7 +26,7 @@ class RecipeDetailView(TemplateView):
 
 
 
-# IN URLS.PY FILE:
+# IN URLS.PY FILE: ---------------------------------------------------------------------------------
 
 from django.urls import path
 from . import views
@@ -38,12 +38,13 @@ urlpatterns = [
     path('', views.RecipeListView.as_view(), name='list-view'),
     # http://127.0.0.1:8000/recipes/12
     path('<int:id>', views.RecipeDetailView.as_view(), name='detail-view'),
+    # Crucial: this 'name' argument above is the 'pattern name' you'll use to build URL's in templates.
 ]
 
 
 
     
-# IN THE LIST-TEMPLATE (list.html):
+# IN THE LIST-TEMPLATE (list.html): ----------------------------------------------------------------
 
 <html>
     <body>
@@ -68,7 +69,7 @@ urlpatterns = [
 
 
 
-# IN THE DETAIL-TEMPLATE (detail.html):
+# IN THE DETAIL-TEMPLATE (detail.html): ------------------------------------------------------------
 
 <html>
     <body>

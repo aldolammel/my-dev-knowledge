@@ -14,7 +14,7 @@ urlpatterns = [
     path('add/', views.movie_add, name='movie_add_view'),
     # http://127.0.0.1:8000/movies/1
     path('<int:movie_id>', views.movie_edit, name='movie_edit_view'),
-    # Crucial: this 'name' above is the 'pattern name' you'll use to build the URL's in templates.
+    # Crucial: this 'name' argument above is the 'pattern name' you'll use to build the URL's in templates.
 ]
 
 

@@ -3,7 +3,6 @@ CLASS-BASED METHOD: USING QUERYSET VIA VIEWS.PY (FILTERING)
 
 """
 
-from django.shortcuts import render
 from django.views.generic import View
 from .models import Recipe
 
@@ -51,3 +50,13 @@ class RecipesView(View):
         # Filtering even more:
         return Recipe.objects.exclude(name__icontains='soup').order_by('-date_added')
         """ This '-date_added' is asking for descending order of date_added. """
+
+        # LOOK THIS OUT:
+        """
+            Old videos from Django show these differences:
+            
+                def get_queryset(self):
+                    base_query = super().get_queryset()
+                    data = base_query.filter(id__gt=1)
+                    return data
+        """

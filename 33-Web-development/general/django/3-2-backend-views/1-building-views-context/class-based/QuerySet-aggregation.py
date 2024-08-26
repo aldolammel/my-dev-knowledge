@@ -25,3 +25,13 @@ class RecipesView(View):
         return Recipe.objects.filter(Q(name__istartswith='a') | Q(description__icontains='salt'))
         """ In Django '|' means the logical operator 'OR'. 
         Remember: those initial 'i' in 'istartswith' and 'icontains' mean the case-sensitive is off. """
+
+        # LOOK THIS OUT:
+        """
+            Old videos from Django show these differences:
+            
+                def get_queryset(self):
+                    base_query = super().get_queryset()
+                    data = base_query.filter(id__gt=1)
+                    return data
+        """

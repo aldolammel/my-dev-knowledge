@@ -2,12 +2,12 @@
 
 VIEWS CLASSES: USING BASIC INHERIT:
 
-    >> With a basic view inherit, you are able to create your own view-class with all the potential
-        offered by classes in views.py.
+    >> With a basic view inherit, you are able to create your own view-class-based with all the
+        potential offered by classes in views.py writing a little bit more code lines.
         
         E.g.
 
-            from django.views.generic import View
+            from django.views import View
             
             class MyOwnTestView(View):  # This 'View' in classname is a convention.
                 pass

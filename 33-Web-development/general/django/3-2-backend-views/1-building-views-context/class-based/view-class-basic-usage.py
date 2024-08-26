@@ -1,11 +1,14 @@
 # IN VIEWS.PY FILE:
 
 from django.shortcuts import render
-from django.views.generic import View
+from django.views import View
 from .models import Recipe  # hypothetical class just for example purposes.
 
 
+# Creating a class that inherits the most basic Django views, perfect to create your own view class.
+# In this case, 'View' class:
 class RecipeView(View):
+    # To show data from database:
     def get(self, request):
         form = Recipe()
         context = {
@@ -13,6 +16,7 @@ class RecipeView(View):
         }
         return render(request, 'recipes/list.html', context)
 
+    # To update data to database:
     def post(self, request):
         form = Recipe(request.POST)
         if form.is_valid():
@@ -24,7 +28,7 @@ class RecipeView(View):
 
 
 
-# IN URLS.PY FILE:
+# IN URLS.PY FILE: ---------------------------------------------------------------------------------
 
 from django.urls import path
 from . import views
@@ -35,13 +39,13 @@ urlspatterns = [
     # http://127.0.0.1:8000/recipes
     path('', views.RecipeView.as_view(), name='list_view'),
     # http://127.0.0.1:8000/recipes/12
-    path('<int:id>', views.RecipeView.as_view(), name='detail_view'),
-    # Crucial: this 'name' above is the 'pattern name' you'll use to build URL's in templates.
+    path('<int:pk>', views.RecipeView.as_view(), name='detail_view'),
+    # Crucial: this 'name' argument above is the 'pattern name' you'll use to build URL's in templates.
 ]
 
 
 
-# IN LIST-TEMPLATE (list.html):
+# IN LIST-TEMPLATE (list.html): --------------------------------------------------------------------
 
 <html>
     <body>
@@ -66,7 +70,7 @@ urlspatterns = [
 
 
 
-# IN DETAIL-TEMPLATE (detail.html):
+# IN DETAIL-TEMPLATE (detail.html): ----------------------------------------------------------------
 
 <html>
     <body>

@@ -2,20 +2,27 @@
 
 BUILDING THE CONTEXT:
 
+    
+    >> Here 'Context' is the package of data that a sub-app-view (back-end) sends to
+        the template (front-end);
 
-    >> Here 'Context' is the package of data that sub-app views.py (back-end) sends to
-        the template (front-end).
+    
+    >> All views of a sub-app must be in the automatically created sub-app views.py file;
 
 
     >> If something from the database is visible in a template (html) it's because the data
-        is accessible in some 'return render()' dictionary called 'context' (convention!)
-        in one of sub-app views.py files.
+        was called by some sub-app views.py class or function;
+
+    
+    >> In order to alocate data in a view, most of the time you'll have to set the data in a
+        dictionary named as 'context' (convention);
 
         views.py e.g.
 
-            def ViewNameExample(request):
+            # A view-function-based example:
+            def view_name_example(request):
 
-                <code of query_sets>
+                <code>
 
                 context = {
                     'recipes': recipes,  # In the template (index.html), it'll be called as {{ recipes }}.
@@ -25,14 +32,20 @@ BUILDING THE CONTEXT:
                 return render(request, "recipes/index.html", context)
 
 
+            # A view-class-based example:
+            class ViewNameExample(View):
+
+                <IDK YET!!!!!!>
+
+
     >> Another example, using the same logic of Context convention:
 
-        >> Instead of this:
+        >> Avoid to declare your context dictionary like this...
           
              return render(request, 'template_path_here.html', {'key1': 'value1', 'key2': 'value2'})
 
 
-        >> This approach is expected:
+        >> Instead, declare like this:
 
                 context = {
                     'key1': 'value1',
