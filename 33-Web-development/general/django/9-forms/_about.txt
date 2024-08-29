@@ -28,11 +28,11 @@ DJANGO FORMS:
     
         1) Connecting a models.py class to a forms.py class (inherit from forms.ModelForm):
 
-            /33-Web-development/general/django/9-forms/based-class-ModelForm/forms.py
+            /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
 
         2) Or creating a custom forms.py class (inherit from forms.Form) that doesn't impact the db
             and is not the best method to do forms if you consider the 'Movies' example mention
             before:
 
-            /33-Web-development/general/django/9-forms/based-class-Form/forms.py
+            /33-Web-development/general/django/9-forms/class-based/inherit-Form/forms.py
 

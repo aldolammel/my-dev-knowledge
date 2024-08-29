@@ -14,7 +14,7 @@ FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 
     2) In new 'forms.py' file, create a form class linked with its models.py class brother:
 
-        /33-Web-development/general/django/9-forms/based-class-ModelForm/forms.py
+        /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
 
 
     3) In the sub-app views.py, create views.py function or class responsable for your

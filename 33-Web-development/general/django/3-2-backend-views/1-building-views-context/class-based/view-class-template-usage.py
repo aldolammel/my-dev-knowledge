@@ -4,9 +4,13 @@ from django.views.generic.base import TemplateView
 from .models import Recipe
 
 
-class RecipeListView(TemplateView):
+# Creating another class that also inherits pre-defined features brought by Django.
+# In this case, 'TemplateView' class:
+class RecipeListView(TemplateView):  # This 'View' in classname is a convention.
+    # Defining with template must be used to show the data:
     template_name = 'recipes/list.html'
     
+    # When using 'TemplateView' this built-in function is avaliable to work with context concept:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Adding to context:

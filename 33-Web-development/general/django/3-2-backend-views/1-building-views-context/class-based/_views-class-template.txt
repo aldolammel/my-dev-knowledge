@@ -2,16 +2,23 @@
 
 VIEWS CLASSES: USING TEMPLATE INHERIT:
 
-    >> Wxxxxxxxxxxxxxxx;
+    >> A subclass of 'View' (basic class) that renders a template. It automatically handles 
+        GET requests and provides context data to the template;
 
-    >> To use a template view, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:
+    >> Perfect when you simply need to render a template with context data and don’t require
+        complex logic beyond that;
                 
-        E.g.
+    E.g.
 
-            from django.views.generic.base import TemplateView
+        from django.views.generic import TemplateView
 
-            class ThankYouView(TemplateView):
-                pass
+        class ThankYouMsgView(TemplateView):
+            template_name = '<HtmlTemplatePath>'
+    
+            def get_context_data(self, **kwargs):
+                context = super().get_context_data(**kwargs)
+                context['message'] = "It was very much appreciated!"
+                return context
 
 
     
@@ -21,4 +28,7 @@ VIEWS CLASSES: USING TEMPLATE INHERIT:
 
 
 
+    WHO INHERIT TEMPLATE-VIEW CLASS:
+    >> ListView
+    >> DetailView
 
