@@ -1,0 +1,41 @@
+
+
+SESSION FEATURES:
+
+    >> What is it: a ongoing-connection between a client-browser and server!
+
+    >> The identification is NOT forever but the developer defines how long it will work;
+
+    >> Data stored in a session persists as long as the session is active. So session preserves
+        temporarily the client and server relation;
+
+    >> Client sends to the server a cookie with their unique Session ID;
+
+    >> Without the session, even logged users will be logout when page is reloaded or broser is closed;
+
+
+
+
+ACTIVING SESSION IN THE PROJECT:
+
+    1) In config-folder, open 'settings.py' file;
+
+
+    2) In 'MIDDLEWARE' list, add this right after the '.SecurityMiddleware' middleware:
+
+        'django.contrib.sessions.middleware.SessionMiddleware',
+
+        >> More about middleware: 
+            /33-Web-development/general/django/7-middlewares-and-signals/
+
+
+    3) In 'INSTALLED_APPS' list, add this right after the '.contenttypes' app:
+        
+        'django.contrib.sessions',
+
+
+    4) Still in settings file, add with '# Authentification' group:
+
+        # How long the session cookie must survive, in secs:
+        # Default = 1209600 = 2 weeks
+        SESSION_COOKIE_AGE = 2419200  # a month

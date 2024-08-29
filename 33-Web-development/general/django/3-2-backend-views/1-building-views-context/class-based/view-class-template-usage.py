@@ -24,7 +24,6 @@ class RecipeDetailView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         recipe_id = kwargs['id']
-        # Adding to context:
         context['recipe'] = Recipe.objects.get(id=recipe_id)
         return context
 

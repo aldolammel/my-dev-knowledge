@@ -2,6 +2,8 @@
 
 VIEWS CLASSES: USING CREATE INHERIT:
 
+    >> With 'CreateView' you don't need to create a form-class in forms.py when something simple;
+    
     >> Provides a form for creating a new object and saving it to the database. It uses
         a model form to handle form validation and object creation;
 
