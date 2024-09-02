@@ -1,12 +1,14 @@
 
 
 FORMS KNOWLEDGE:
+https://docs.djangoproject.com/en/5.1/topics/forms/modelforms/#field-types
 
 
 
-HTML INPUT                MODELS FIELDS                   FORMS WIDGET FIELDS
 
-<textarea> .............. TextField ..................... TextInput/Textarea
+HTML INPUT                MODELS.PY FIELDS                FORMS.PY FIELDS
+
+<textarea> .............. TextField ..................... CharField with widget=forms.Textarea
 type= text............... TextField ..................... TextInput
 type= date .............. DateField ..................... DateInput
 type= time .............. TimeField ..................... TimeInput

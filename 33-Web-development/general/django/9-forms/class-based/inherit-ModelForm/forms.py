@@ -36,9 +36,21 @@ class ReviewForm(forms.ModelForm):  # That 'Form' in the classname is a conventi
         }
         # Customizing the error msgs for required fields:
         error_messages = {
-            'user_name': 'xxxxxxxxxxxxxxxxx',
-            'review_text': 'xxxxxxxxxxxxxxxxx',
-            'rating': 'xxxxxxxxxxxxxxxxx',
+            'user_name': {
+                'required': 'xxxxxxxxxxxxxxxxx',
+                'max_length': 'yyyyyyyyyyyyyy',
+                'incomplete': 'nnnnnnnnnnnn',
+            },
+            'review_text': {
+                'required': 'xxxxxxxxxxxxxxxxx',
+                'max_length': 'yyyyyyyyyyyyyy',
+                'incomplete': 'nnnnnnnnnnnn',
+            },
+            'rating': {
+                'required': 'xxxxxxxxxxxxxxxxx',
+                'max_length': 'yyyyyyyyyyyyyy',
+                'incomplete': 'nnnnnnnnnnnn',
+            },
         }
 
 
