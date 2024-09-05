@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Index example{% endblock %}
+
+{% block content %}
+<h2>My Movies</h2>
+{% if user_movies %}
+    <ul>
+        {% for movie in user_movies %}
+            <li>
+                <a href="{% url 'movies:edit_movie' movie.id %}">{{ movie.movie_title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No movie recorded yet!</p>
+{% endif %}
+<a href="{% url 'movies:add_movie' %}">Add new movie</a>
+{% endblock %}
