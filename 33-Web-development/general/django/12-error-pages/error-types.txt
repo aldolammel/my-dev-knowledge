@@ -40,6 +40,9 @@ WEB ERROR TYPES:
         >> The requested resource could not be found but may be available in the future. 
             Subsequent requests by the client are permissible.
 
+        >> IMPORTANT: When out of Debug mode, Django already looks automatically for the 404.html
+                        file in the project global 'templates' folder.
+
         >> Example:
             /33-Web-development/general/django/12-error-pages/404/
 

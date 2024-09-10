@@ -1,0 +1,28 @@
+<html>
+    <body>
+
+        <!-- 
+            HIPERLINK EXAMPLES
+            Let's assuming this is the Context:
+                context = {
+                    'form': form,
+                    'instance_pk': instance.pk,
+                    'instance_slug': instance.slug,
+                }
+
+            If needed to understand what's Context:
+            /33-Web-development/general/django/3-2-backend-views/1-building-views-context/_about.txt
+        -->
+
+        
+        <!-- Without argument -->
+        <a href="{% url '<namespace>:<pattern_name>' %}">text</a>
+
+        <!-- With an argument -->
+        <a href="{% url '<namespace>:<pattern_name>' instance_pk %}">text</a>
+
+        <!-- With more than one argument -->
+        <a href="{% url '<namespace>:<pattern_name>' instance_pk instance_slug %}">text</a>
+
+    </body>
+</html>

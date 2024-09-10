@@ -1,0 +1,19 @@
+
+
+ERROR 404 INFORMATION: 
+
+    >> When Debug mode is false, Django looks automatically for the 404.html
+        file in the project global 'templates' folder, making unnecessary to set it in urls.py files.
+
+    >> Since DEBUG=False, Django relies on the web server to serve static files, and you must
+        ensure all static files (including admin CSS) are collected into the STATIC_ROOT 
+        directory by running:
+
+        $ python manage.py collectstatic
+
+        It'll create the 'staticfiles' folder in the project folder.
+
+    >> Debug Mode can be customized through Django config-folder file called 'settings.py' or
+        in '.env' file. More about in:
+
+            /31-Environment-Variables/
