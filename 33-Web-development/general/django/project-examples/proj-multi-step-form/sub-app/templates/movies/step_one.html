@@ -13,9 +13,12 @@
 
         <hr />
 
+        <a href="{% url 'movies:list_view' %}">{{ bt_back }}</a>
+        {% if instance_pk %}
+            <button type="submit" name="discard">{{ bt_discard }}</button>
+        {% endif %}    
         <button type="submit">{{ bt_submit }}</button>
-        <button type="submit" name="save_draft">{{ bt_draft }}</button>
-        <button type="submit" name="discard_draft">{{ bt_discard }}</button>
+
     </form>
     
 {% endblock %}

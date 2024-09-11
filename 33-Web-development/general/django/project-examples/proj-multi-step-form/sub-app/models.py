@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # CONSTANTS
 RATING = (
@@ -24,6 +25,13 @@ class Movie(models.Model):
         choices=IS_DONE,
         default=DRAFT,
         editable=False,
+    )
+    created_by = models.ForeignKey(
+        User,
+        related_name='created_movies',
+        on_delete=models.SET_NULL,
+        null=True,
+        # editable=False,
     )
 
     class Meta:

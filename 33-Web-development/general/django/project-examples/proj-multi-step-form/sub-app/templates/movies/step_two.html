@@ -13,12 +13,11 @@
 
         <hr />
 
+        <a href="{% url 'movies:step_one_view' instance_pk %}">{{ bt_back }}</a>
+        <button type="submit" name="discard">{{ bt_discard }}</button>
+        <!--<button type="submit" name="save_draft">{{ bt_draft }}</button>-->
         <button type="submit">{{ bt_submit }}</button>
-        <a href="{% url 'sandbox:movie_list' %}">{{ bt_cancel }}</a>
         
-        {% if has_data %}
-            <button type="submit" name="del">{{ bt_del }}</button>
-        {% endif %}    
     </form>
     
 {% endblock %}
