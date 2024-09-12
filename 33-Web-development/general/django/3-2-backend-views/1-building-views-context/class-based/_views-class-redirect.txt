@@ -11,7 +11,7 @@ VIEWS CLASSES: USING REDIRECT INHERIT:
 
     E.g.
 
-        from django.views.generic import RedirectView
+        from django.views.generic.base import RedirectView
         
         class GoToGoogleView(RedirectView):  # This 'View' in classname is a convention.
             url = 'https://google.com/'

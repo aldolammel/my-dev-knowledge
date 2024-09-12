@@ -10,7 +10,7 @@ VIEWS CLASSES: USING TEMPLATE INHERIT:
                 
     E.g.
 
-        from django.views.generic import TemplateView
+        from django.views.generic.base import TemplateView
 
         class ThankYouMsgView(TemplateView):
             template_name = '<HtmlTemplatePath>'
