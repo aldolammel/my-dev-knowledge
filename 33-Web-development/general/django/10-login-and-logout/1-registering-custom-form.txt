@@ -3,75 +3,177 @@
 REGISTERING: CUSTOMIZING THE FRONT-END FORM
 
 
-    >> forms.py in your app (e.g., accounts/forms.py)
+    0) Very basic to use Django built-in user features:
+
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/expanding-users.txt
+
+
+    1) Create or open the forms.py file in 'accounts' sub-app:
 
         from django import forms
         from django.contrib.auth.forms import UserCreationForm
         from django.contrib.auth.models import User
+        from .models import UserProfile
+
 
         class CustomUserCreationForm(UserCreationForm):
-            # Add additional fields if needed
-            email = forms.EmailField(required=True)
+            """
+            Only the additional fields to be shown in the original Django Registering page on front-end.
+            """
+            
+            # Adding additional fields not originally present in the built-in User class:
+            profile_type = forms.ChoiceField(
+                widget=forms.RadioSelect,
+                label='Account type',
+                choices=(('1', 'Example A'), ('2', 'Example B')),
+            )
+            sex = forms.ChoiceField(
+                widget=forms.RadioSelect,
+                label='Biological sex',
+                choices=(('f', 'Female'), ('m', 'Male')),
+            )
+            birthdate = forms.DateField(
+                label='Birthdate',
+            )
 
             class Meta:
                 model = User
-                # Specify the fields to include in the form, in the order you want
-                fields = ['username', 'email', 'password1', 'password2']
+                # Specify the fields to include in the form, in the order you want:
+                fields = [
+                    'profile_type',
+                    'sex',
+                    'birthdate',
+                    'username',
+                    'email',
+                    'password1',
+                    'password2',
+                ]
 
             def save(self, commit=True):
-                # Save the provided password in hashed format
+                # Save the user instance first:
                 user = super().save(commit=False)
-                user.email = self.cleaned_data['email']
+                # Store the additional fields data in the instance temporarily:
+                user._profile_data = {
+                    'profile_type': self.cleaned_data['profile_type'],
+                    'sex': self.cleaned_data['sex'],
+                    'birthdate': self.cleaned_data['birthdate'],
+                }
+                #
                 if commit:
                     user.save()
+                #
                 return user
 
 
+        class UserProfileForm(forms.ModelForm):
+            """
+            Form of the user profile itself to be shown on the front-end.
+            """
+            
+            class Meta:
+                # Connecting the form with the model/table it will populate:
+                model = UserProfile
+                # Defining which Model class fields will be associated to this form:
+                fields = [
+                    #'profile_type',
+                    #'user',
+                    'sex',
+                    'birthdate',
+                ]
 
-    >> html with the register form:
+
+
+    2) Create the signal to create the UserProfile automatically when a new user is
+        created in Django:
+
+        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
+
+
+
+    3) html with the register form:
 
         /33-Web-development/general/django/9-forms/frontend-user-register-form.txt
 
 
 
-    >> views.py in your app (e.g., accounts/views.py)
+    4) views.py in account sub-app too:
 
-        from django.shortcuts import render, redirect
+        from django.contrib.auth.decorators import login_required
         from django.contrib.auth import login
-        from .forms import CustomUserCreationForm
+        from django.shortcuts import render, redirect, get_object_or_404
+        from .models import UserProfile
+        from .forms import CustomUserCreationForm, UserProfileForm
+
 
         def register(request):
             if request.method == 'POST':
                 form = CustomUserCreationForm(request.POST)
                 if form.is_valid():
-                    user = form.save()
-                    # Log the user in after successful registration (optional)
-                    login(request, user)
-                    return redirect('home')  # Redirect to a home page or any other page
+                    new_user = form.save()
+                    # Log the user in after successful registration (optional):
+                    login(request, new_user)
+                    return redirect('<sub_app_namespace>:<desired_page_view>')
             else:
-                form = CustomUserCreationForm()
+                form = CustomUserCreationForm()  # built-in class.
+            #
+            context = {'form': form}
+            return render(request, 'registration/register.html', context)
 
-            return render(request, 'accounts/register.html', {'form': form})
+
+        @login_required
+        def user_profile(request, pk):
+            instance = get_object_or_404(UserProfile, pk=pk)
+            # When the form wants to change some in the database:
+            if request.method == 'POST':
+                # When Delete Account button is pressed:
+                if 'del_account' in request.POST:
+                    # instance.delete_instance() ------------------------------ ADD!!!
+                    return redirect('general:home_patient_view')
+                # Defining the object of the current form:
+                form = UserProfileForm(request.POST, instance=instance)
+                if form.is_valid():
+                    instance = form.save()
+                    return redirect('accounts:profile_view', pk=instance.pk)
+            # When the form doesn't change any (GET method):
+            else:
+                form = UserProfileForm(instance=instance)
+            # Defining what will be sent to the front-end/template:
+            context = {
+                'form': form,
+                'bt_submit': 'Update',
+                'bt_del': 'Delete account',
+            }
+            # Load the template:
+            return render(request, 'accounts/profile.html', context)
 
 
 
-    >> urls.py in your app (e.g., accounts/urls.py)
 
-        from django.urls import path
+    5) urls.py:
+
+        from django.urls import path, include
         from . import views
 
         # Namespace:
         app_name = 'accounts'
 
+
         urlpatterns = [
             # http://127.0.0.1:8000/accounts/register/
             path('register/', views.register, name='register_view'),
+            # http://127.0.0.1:8000/accounts/12
+            path('<int:pk>', views.user_profile, name='profile_view'),
+            # http://127.0.0.1:8000/accounts
+            # I'm saying that all user accounts must be handle by django that automatically includes
+            # pattern-names as 'login' and 'logout':
+            path('', include('django.contrib.auth.urls')),
         ]
 
 
 
-    >> settings.py in your config-folder:
 
-        LOGIN_REDIRECT_URL = '<subapp_namespace>:<name_viwe>'  # Where to redirect after login
-        LOGOUT_REDIRECT_URL = '<subapp_namespace>:<name_viwe>'  # Where to redirect after logout
+    6) settings.py in your config-folder:
+
+        LOGIN_REDIRECT_URL = '<subapp_namespace>:<desired_page_view>'  # Where to redirect after login
+        LOGOUT_REDIRECT_URL = '<subapp_namespace>:<desired_page_view>'  # Where to redirect after logout
 

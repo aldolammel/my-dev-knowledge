@@ -8,7 +8,8 @@ FRONT-END: USER REGISTER FORM
     1) In a template (e.g. register.html) customize this:
 
         {% extends "base.html" %}
-        {% block title %}Register{% endblock title %}
+        {% block title %}Registro{% endblock %}
+        {% block description %}{% endblock %}
         {% block content %}
             <div class="row login text-center">
                 <h1>Register</h1>
@@ -19,16 +20,17 @@ FRONT-END: USER REGISTER FORM
                     <!-- REGISTER FORM - START -->
                     <form method="post">
                         {% csrf_token %}
-                        {{ register_form.as_p }}
-                        <button type="submit">Register</button>
-                        <a href="#">I already have an account</a>
+                        {{ form.as_p }}
+                        <button type="submit">Register now!</button>
+                        <ul>
+                            <li><a href="{% url 'accounts:login' %}">I already have an account</a></li>
+                        </ul>
                     </form>
                     <!-- REGISTER FORM - END --> 
                 </div>
                 <div class="col"></div>
             </div>     
-        {% endblock content %}
-
+        {% endblock %}
 
 
 

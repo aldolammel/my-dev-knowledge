@@ -1,46 +1,42 @@
 
 
-
 EXPANDING THE USER USAGE
 
 
-    >> Basic:
+    1) Very basic to use Django built-in user features:
         /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
         /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
 
-    1) In 'accounts' sub-app, open the 'models.py' file:
+    2) In 'accounts' sub-app, open the 'models.py' file:
 
         from django.contrib.auth.models import User
 
         class UserProfile(models.Model):
             user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+            sex = models.CharField(
+                verbose_name='Biological Sex',
+                max_length=20,
+                choices=(('f', 'Female'), ('m', 'Male'), ('i', 'Intersex')),
+                null=True,
+                blank=True,
+            )
+            birthdate = models.DateField(null=True, blank=True)
 
             def __str__(self):
                 return self.user.username
 
         
 
-    2) Create a 'signals.py' file in 'accounts' sub-app if not available yet, and:
+    3) Create the signal to create the UserProfile automatically when a new user is
+        created in Django:
 
-        from django.dispatch import receiver
-        from django.db.models.signals import post_save
-        from django.contrib.auth.models import User
-        from .models import UserProfile
-
-        # The function listens the post_save signal sent by the User built-in-Django-module:
-        @receiver(post_save, sender=User)
-        def create_or_update_user_profile(sender, instance, created, **kwargs):
-            # When the Django User instance is saved, it creates the UserProfile instance as well:
-            if created:
-                UserProfile.objects.create(user=instance)
-            else:
-                instance.profile.save()
+        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
 
 
 
-    3) Open the accounts 'app.py' file, and ensure that the signals are connected at the right
+    4) Open the accounts 'app.py' file, and ensure that the signals are connected at the right
         time. The common practice is to import the signals module in the ready method of your
         sub-app's configuration class:
 
@@ -55,7 +51,7 @@ EXPANDING THE USER USAGE
 
 
     
-    4) Open the accounts 'admin.py' file, and:
+    5) Open the accounts 'admin.py' file, and:
 
         from django.contrib import admin
         from .models import UserProfile
@@ -64,11 +60,19 @@ EXPANDING THE USER USAGE
             list_display = (
                 'id',
                 'user',
-                'first_name',  # Custom method from other class
                 'last_login',  # Custom method from other class
             )
-            readonly_fields = ('user', 'first_name', 'last_name', 'email', 'date_joined', 'last_login')
-            search_fields = ['user', 'last_name', 'email']
+            readonly_fields = (
+                'user',
+                'first_name',
+                'last_name',
+                'email',
+                'date_joined',
+                'last_login',
+            )
+            # exclude = ('xxxx',)
+            list_filter = ('sex',)
+            search_fields = ['user', 'email', 'first_name', 'last_name']
 
             def first_name(self, obj):
                 return obj.user.first_name
@@ -88,9 +92,14 @@ EXPANDING THE USER USAGE
 
         admin.site.register(UserProfile, UserProfileCMS)
 
-    
 
-    5) Migrate and test it:
+
+    6) (OPTIONAL) If you need to customize your registration fields:
+        /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
+
+
+
+    7) Migrate and test it:
 
         $ python manage.py makemigrations accounts
         $ python manage.py migrate
