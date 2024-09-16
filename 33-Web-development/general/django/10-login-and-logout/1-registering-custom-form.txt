@@ -177,3 +177,8 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
         LOGIN_REDIRECT_URL = '<subapp_namespace>:<desired_page_view>'  # Where to redirect after login
         LOGOUT_REDIRECT_URL = '<subapp_namespace>:<desired_page_view>'  # Where to redirect after logout
 
+
+
+    7) How to add these custom fields in the CMS User Register too:
+
+        SOON
