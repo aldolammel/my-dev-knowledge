@@ -24,7 +24,8 @@ type= number ............ IntegerField .................. NumberInput when Field
 ......................... DecimalField .................. NumberInput when Field.localize is False, else TextInput.
 ......................... FloatField .................... NumberInput when Field.localize is False, else TextInput
 ......................... JSONField ..................... Textarea
-<select>................. ChoiceField ................... Select
+<select>.................             ................... Select
+type= radio  ............ CharField ..................... forms.ChoiceField(widget=forms.RadioSelect, choices=(('1', 'First'), ('2', 'Second')))
 ......................... MultipleChoiceField ........... SelectMultiple
 ......................... TypedMultipleChoiceField ...... SelectMultiple
 ......................... TypedChoiceField .............. Select
@@ -39,13 +40,11 @@ type= url ............... URLField ...................... URLInput
 ......................... ComboField .................... TextInput
 ......................... MultiValueField ............... TextInput
  
-<select>
 <input type="button">
 <input type="color">
 <input type="hidden">
 <input type="month">
 <input type="password">
-<input type="radio">
 <input type="range">
 <input type="reset">
 <input type="search">

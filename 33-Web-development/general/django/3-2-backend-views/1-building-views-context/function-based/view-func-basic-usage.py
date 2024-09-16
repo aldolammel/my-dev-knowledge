@@ -1,16 +1,5 @@
-'''
+# IN VIEWS.PY FILE:
 
-
-VIEWS WITH FUNCTIONS:
-
-    >> 
-    
-    >> 
-
-'''
-
-
-# 1) IN SUB-APP VIEWS.PY
 from django.shortcuts import render
 from .models import Recipe
 
@@ -31,7 +20,8 @@ def recipe(request, recipe_id):
 
 
 
-# 2) IN SUB-APP URLS.PY
+# IN URLS.PY FILE: ---------------------------------------------------------------------------------
+
 from django.urls import path
 from . import views
 
@@ -47,7 +37,8 @@ urlpatterns = [
 
 
 
-# 3) IN SOME TEMPLATE TO LIST RECIPES
+# IN LIST-TEMPLATE (list.html): --------------------------------------------------------------------
+
 <html>
     <body>
     

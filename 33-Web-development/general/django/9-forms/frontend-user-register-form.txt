@@ -41,3 +41,7 @@ MORE ABOUT USER:
     >> If you're looking for how to import users in your models.py classes:
 
         /33-Web-development/general/django/3-1-backend-models-database/importing-users.txt
+
+    >> For customize the User Register Form:
+
+        /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
