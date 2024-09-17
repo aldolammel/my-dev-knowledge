@@ -11,6 +11,11 @@ IMPORTING USERS
                 name = models.CharField(max_length=40)
                 users = models.ManyToMany(User)
 
+
+            >> More about ManyToMany relationship:
+                /33-Web-development/general/django/3-1-backend-models-database/relation-many-to-many.txt
+
+    
     
     2) In app admin.py, import the Team class created recently, and register this in
         the CMS:

@@ -8,31 +8,15 @@ RELATION: MANY TO MANY
         This intermediary table is not directly visible in the models but is present 
         in the database schema.
 
-    >> If you need an attribute contains many id's in, you must use a ManyToMany
+    >> If you need an attribute contains one or maybe many id's in, you must use a ManyToMany
         releationship.
 
         E.g.
-
-            class AffectedArea(models.Model):
-                # This table (class) will receive many entries (areas) that will be shown
-                # on 'affected_areas' checkbox field in 'HeadacheAttack' class.
-
-                area = models.CharField(max_length=40)                   
-                    
-                def __str__(self):
-                    return self.area
+            
+            /33-Web-development/general/django/3-1-backend-models-database/field-select-menu-multiple.txt
 
 
-            class HeadacheAttack(models.Model):
-                affected_areas = models.ManyToManyField(
-                    AffectedArea,  # calling the class that the relation many-to-many must be created.
+    >> ManyToMany doesn't need the on_delete argument because if some list option is deleted, 
+        Django will delete the reference directly in the brigde table (mapping) created
+        automatically in ManyToManyField releationship.
 
-                    # ManyToMany doesn't need the on_delete argument because if some list option
-                    # is deleted, Django will delete the reference directly in the brigde table (mapping)
-                    # created automatically in ManyToManyField releationship.
-                )
-
-
-
-    Check the content:
-        /33-Web-development/general/django/3-database-models/importing-users.txt

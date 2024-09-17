@@ -1,27 +1,90 @@
 
-Let's see:
 
-    >> FIELD: MULTI-SELECT-MENU (DYNAMIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
-    >> FIELD: MULTI-SELECT-MENU (STATIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+FIELD: MULTI-SELECT-MENU
 
-
-
-1) FIELD: MULTI-SELECT-MENU (DYNAMIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
-
-    1.1) xxxxxxxxxx
-
-    1.2) xxxxxxxxxx
-
-    1.3) xxxxxxxxxx
+    >> Field with: DYNAMIC OPTIONS, one or more options to return previously added via CMS;
+    >> Field with: STATIC OPTIONS, one or more options to return (hardcoded);
 
 
 
-2) FIELD: MULTI-SELECT-MENU (STATIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+1) FIELD: DYNAMIC OPTIONS, one or more options to return previously added via CMS:
 
-    2.1) xxxxxxxxxx
+    >> You want your CMS page to show a MULTI SELECT MENU with dynamic options to select one or more of them:
+        
+        Let's build a class/table where you select each musician type belongs a band. 
+        In the sub-app 'models.py' file, do it:
+        
+        
+        1.1) In models.py, create both classes:
 
-    2.2) xxxxxxxxxx
+                class MusicianType(models.Model):
+                    instrument = ...
 
-    2.3) xxxxxxxxxx
+                    def __str__(self):
+                    return self.instrument
+
+                class Band(models.Model):
+                    band_name = ...
+                    musicians = models.ManyToManyField(MusicianType, blank=True)
+
+                    def __str__(self):
+                    return self.band_name
+
+
+            >> More about ManyToMany relationship:
+                /33-Web-development/general/django/3-1-backend-models-database/relation-many-to-many.txt
+                
+
+
+        1.2) In admin.py file:
+            
+                from .models import Band, MusicianType
+
+
+                class MusicianTypeCMS(admin.ModelAdmin):
+                    list_display = ('instrument',)
+
+
+                class BandCMS(admin.ModelAdmin):
+                    list_display = ('band_name', 'musicians',)
+
+
+                admin.site.register(MusicianType, MusicianTypeCMS)
+                admin.site.register(Band, BandCMS)
+
+
+        1.3) Execute the migration:
+                
+                $ python manage.py makemigrations <subapp_name>
+                $ python manage.py migrate
+                $ python manage.py runserver
+
+
+
+2) FIELD: STATIC OPTIONS, one or more options to return (hardcoded):
+
+    >> You want your CMS page to show a MULTI SELECT MENU with static options to select one or more of them:
+
+        2.1) In 'models.py' file, define the constants:
+
+                # CONSTANTS:
+                CHOICES_MUSICIANS = (
+                    ('guitar', 'Guitarist'), 
+                    ('bass', 'Bassist'),
+                    ('drums', 'Drummer'),
+                    ('vocals', 'Vocalist'),
+                )
+
+                class Band(models.Model):
+                    band_name = ...
+                    musicians = models.CharField(max_length=10, choices=CHOICES_MUSICIANS, default=('vocals', 'Vocalist'))
+
+
+        2.2) Only to make sure everything will be ready to test, execute the migration:
+                
+                $ python manage.py makemigrations <subapp_name>
+                $ python manage.py migrate
+                $ python manage.py runserver
+
 
 

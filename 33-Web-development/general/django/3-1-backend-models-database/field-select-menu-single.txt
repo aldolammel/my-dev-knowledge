@@ -40,11 +40,11 @@ Let's see:
 
 
                 class ArtistCMS(admin.ModelAdmin):
-                    list_display = ('id', 'name')
+                    list_display = ('name', )
 
 
                 class ArtistOfWeekCMS(admin.ModelAdmin):
-                    list_display = ('id', 'week', 'artist_selected')
+                    list_display = ('week', 'artist_selected',)
 
 
                 admin.site.register(Artist, ArtistCMS)
@@ -66,12 +66,12 @@ Let's see:
 
         2.1) In 'models.py' file, define the constants:
 
-                # Constants:
-                ACTIVE = 'on'       # In postgreSQL 'on' and 'off' are 1/true and 0/false too;
-                ARCHIVED = 'off'
-                STATUS_CHOICES = (
-                    (ACTIVE, 'Active'), 
-                    (ARCHIVED, 'Archived')
+                # CONSTANTS:
+                VALUE_ACTIVE = 'on'       # In postgreSQL 'on' and 'off' are 1/true and 0/false too;
+                VALUE_ARCHIVED = 'off'
+                CHOICES_STATUS = (
+                    (VALUE_ACTIVE, 'Active'), 
+                    (VALUE_ARCHIVED, 'Archived')
                 )
 
 
@@ -79,7 +79,7 @@ Let's see:
             select-menu 'status' as attribute:
 
                 class Example(models.Model):
-                    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=ACTIVE)
+                    status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=VALUE_ACTIVE)
 
 
         2.3) Only to make sure everything will be ready to test, execute the migration:

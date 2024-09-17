@@ -1,6 +1,6 @@
 
 
-    CUSTOMIZING THE CMS COLUMNS:
+    CUSTOMIZING CMS COLUMNS:
 
         >> In case of admin.py files, any class created there WON'T affect database tables and
             their columns. Classes in admin.py files stay in Django back-end level only.

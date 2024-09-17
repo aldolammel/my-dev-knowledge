@@ -29,8 +29,8 @@ EXPANDING THE USER USAGE
 
         
 
-    3) Create the signal to create the UserProfile automatically when a new user is
-        created in Django:
+    3) Create the signal to create a linked UserProfile entry automatically when a new user is
+        created via front-end and Django CMS:
 
         /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
 
@@ -89,14 +89,36 @@ EXPANDING THE USER USAGE
             def last_login(self, obj):
                 return obj.user.last_login
 
+            # Remove the delete action (bulk) from the list-view:
+            def get_actions(self, request):
+                actions = super().get_actions(request)
+                if 'delete_selected' in actions:
+                    del actions['delete_selected']
+                return actions
 
+            # Remove all CMS capacity to delete a UserProfile entry, removing buttons and hyperlinks too:
+            def has_delete_permission(self, request, obj=None):
+                return False
+            
+            # Remove all CMS capacity to add a UserProfile entry, removing buttons and hyperlinks too:
+            def has_add_permission(self, request):
+                return False
+
+        # Registering Django CMS customizations:
+        # Reserved space...
+        # Registering Product CMS features:
         admin.site.register(UserProfile, UserProfileCMS)
 
 
 
-    6) (OPTIONAL) If you need to customize your registration fields:
-        /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
+    6) OPTIONALS:
+    
+        6.1) If you need to customize your registration fields:
+            /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
 
+        6.2) If you need to customize your CMS Accounts/Users (list-view and/or detail-view):
+            /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
+            /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
 
 
     7) Migrate and test it:
