@@ -14,7 +14,11 @@ FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 
     2) In new 'forms.py' file, create a form class linked with its models.py class brother:
 
-        /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
+            /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
+
+        2.1) Define which fields are mandatory and which of them are not:
+
+            /33-Web-development/general/django/9-forms/frontend-fields-required-and-not-required.txt
 
 
     3) In the sub-app views.py, create views.py function or class responsable for your

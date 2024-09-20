@@ -16,12 +16,11 @@ USING SIGNALS: EXPANDING THE DJANGO USER DATA
         from .models import UserProfile
 
 
-        # The function listens to the post_save signal sent by the User model:
+        # Creates the UserProfile when a new User is created, associating the UserProfile to the new User:
         @receiver(post_save, sender=User)
-        def create_or_update_user_profile(sender, instance, created, **kwargs):
-            # When the Django User instance is CREATED, it creates the UserProfile instance as well:
+        def user_profile_auto_creation(sender, instance, created, **kwargs):
             if created:
-                # Create the UserProfile with the additional fields data from the form (if available):
+                # Create the UserProfile with additional fields data from the form (if available):
                 profile_data = getattr(instance, '_profile_data', {})
                 UserProfile.objects.create(
                     user=instance,
@@ -29,16 +28,4 @@ USING SIGNALS: EXPANDING THE DJANGO USER DATA
                         'profile_type', UserProfile._meta.get_field('profile_type').default
                     ),
                     sex=profile_data.get('sex', None),
-                    birthdate=profile_data.get('birthdate', None),
                 )
-            # Otherwise:
-            else:
-                # Update the profile if it already exists:
-                if hasattr(instance, 'profile'):
-                    profile_data = getattr(instance, '_profile_data', {})
-                    instance.profile.profile_type = profile_data.get(
-                        'profile_type', instance.profile.profile_type
-                    )
-                    instance.profile.sex = profile_data.get('sex', instance.profile.sex)
-                    instance.profile.birthdate = profile_data.get('birthdate', instance.profile.birthdate)
-                    instance.profile.save()

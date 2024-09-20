@@ -26,8 +26,10 @@ class UserProfileCMS(admin.ModelAdmin):
             del actions['delete_selected']
         return actions
 
-    # Remove all CMS capacity to delete a UserProfile entry, removing buttons and hyperlinks too:
+    # Prevent deletion of UserProfile from the CMS, except when User is deleted through list or detail-view:
     def has_delete_permission(self, request, obj=None):
+        if request.path.startswith('/admin/auth/user/'):
+            return True
         return False
 
 

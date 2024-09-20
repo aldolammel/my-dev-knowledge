@@ -16,25 +16,28 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
     3) Still in the 'accounts' folder, edit the views.py file with:
 
-        from django.shortcuts import render
-        from django.contrib.auth.forms import UserCreationForm
         from django.contrib.auth import login
-
+        from django.contrib.auth.forms import UserCreationForm
+        from django.shortcuts import render, redirect
 
         def register(request):
-            # if the form method is NOT POST:
-            if request.method != 'POST':
-                form = UserCreationForm()  # built-in class.
+            # If the user is already authenticated:
+            if request.user.is_authenticated:
+                return redirect('in:home_view')
+            # Otherwise, if not authenticated:
             else:
-                form = UserCreationForm(data=request.POST)
-                if form.is_valid():
-                    # log the user in:
-                    new_user = form.save()
-                    login(request, new_user)
-                    return render(request, 'dashboard/logged.html')
-
-            context = {'register_form': form}
-            return render(request, 'registration/register.html', context)
+                if request.method == 'POST':
+                    form = UserCreationForm(request.POST)
+                    if form.is_valid():
+                        new_user = form.save()
+                        # Log the user in after successful registration (optional):
+                        login(request, new_user)
+                        return redirect('in:home_view')
+                else:
+                    form = UserCreationForm()  # built-in class.
+                #
+                context = {'form': form}
+                return render(request, 'registration/register.html', context)
 
     
 
@@ -77,10 +80,10 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
                 LOGIN_URL = 'accounts:login'  # It's built-in.
                 
                 LOGIN_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
-                    # E.g. 'dashboard:home_logged_view'
+                    # E.g. 'in:home_view'
                 
                 LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>' 
-                    # E.g. 'website:home_view'
+                    # E.g. 'general:home_view'
 
 
      8) Login page/form:
