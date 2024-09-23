@@ -53,7 +53,6 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
         urlpatterns = [
             # http://127.0.0.1:8000/accounts/register
             path('register/', views.register, name='register_view'),
-            
             # http://127.0.0.1:8000/accounts
             # I'm saying that all user accounts must be handle by django that automatically includes
             # pattern-names as 'login' and 'logout':

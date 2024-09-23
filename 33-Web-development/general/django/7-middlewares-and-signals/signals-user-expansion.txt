@@ -29,3 +29,16 @@ USING SIGNALS: EXPANDING THE DJANGO USER DATA
                     ),
                     sex=profile_data.get('sex', None),
                 )
+
+
+
+    3) Register the signals.py file in the app.py file:
+
+        from django.apps import AppConfig
+
+        class AccountsConfig(AppConfig):
+            default_auto_field = 'django.db.models.BigAutoField'
+            name = 'accounts'
+
+            def ready(self):
+                import accounts.signals

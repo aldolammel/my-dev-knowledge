@@ -14,7 +14,16 @@ EXPANDING THE USER USAGE
         from django.contrib.auth.models import User
 
         class UserProfile(models.Model):
-            user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+            id = models.BigAutoField(
+                primary_key=True,
+                unique=True,
+                editable=False,
+            )
+            user = models.OneToOneField(
+                User, 
+                on_delete=models.CASCADE, 
+                related_name='profile',
+            )
             sex = models.CharField(
                 verbose_name='Biological Sex',
                 max_length=20,
@@ -23,34 +32,28 @@ EXPANDING THE USER USAGE
                 blank=True,
             )
 
+            class Meta:
+                db_table = 'user_profile'
+                ordering = ['user', 'sex']
+                # verbose_name = 'User Profile'
+                # verbose_name_plural = 'User Profiles'
+
             def __str__(self):
-                return self.user.username
+                if self.user:
+                    return self.user.username
+                return 'ERROR: no profile!'
 
         
 
     3) Create the signal to create a linked UserProfile entry automatically when a new user is
-        created via front-end and Django CMS:
+        created via front-end or Django CMS:
 
         /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
 
 
 
-    4) Open the accounts 'app.py' file, and ensure that the signals are connected at the right
-        time. The common practice is to import the signals module in the ready method of your
-        sub-app's configuration class:
-
-            from django.apps import AppConfig
-
-            class AccountsConfig(AppConfig):
-                ...
-                name = 'accounts'
-
-                def ready(self):
-                    import accounts.signals
-
-
     
-    5) Open the accounts 'admin.py' file, and:
+    4) Open the accounts 'admin.py' file, and:
 
         from django.contrib import admin
         from .models import UserProfile
@@ -58,6 +61,7 @@ EXPANDING THE USER USAGE
         class UserProfileCMS(admin.ModelAdmin):
             list_display = (
                 'user',
+                'sex',
                 'last_login',  # Custom method from other class
             )
             readonly_fields = (
@@ -111,17 +115,17 @@ EXPANDING THE USER USAGE
 
 
 
-    6) OPTIONALS:
+    5) OPTIONALS:
     
-        6.1) If you need to customize your registration fields:
+        5.1) If you need to create your front-end Registration and Profile forms:
             /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
 
-        6.2) If you need to customize your CMS Accounts/Users (list-view and/or detail-view):
+        5.2) If you need to customize your CMS Accounts > Users (list-view and/or detail-view):
             /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
             /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
 
 
-    7) Migrate and test it:
+    6) Migrate and test it:
 
         $ python manage.py makemigrations accounts
         $ python manage.py migrate
