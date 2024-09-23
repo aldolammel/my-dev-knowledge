@@ -7,9 +7,9 @@
     
     <p>
         {% if user.is_authenticated %}
-            <a href="{{ url 'in:home_view' }}">Or return to start page!</a>
+            <a href="{% url 'in:home_view' %}">Or return to start page!</a>
         {% else %}
-            <a href="{{ url 'general:home_view' }}">Or return to start page!</a>
+            <a href="{% url 'general:home_view' %}">Or return to start page!</a>
         {% endif %}
     </p>
     
