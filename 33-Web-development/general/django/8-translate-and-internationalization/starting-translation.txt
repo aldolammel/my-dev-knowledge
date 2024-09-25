@@ -2,8 +2,10 @@
 
     STARTING A TRANSLATION PROJECT:
 
-        
-        >> xxxxxxxxxxxxxxxxxxx
+
+        0) Install the gettext module:
+
+            $ sudo apt install gettext
         
         
         1) In settings.py, add this Middleware between the 'CommonMiddleware'
@@ -15,13 +17,17 @@
         2) Still in settings.py:
 
             # Internationalization
-
-            LANGUAGE_CODE = 'en'  # pt-br
-            # Doc: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-            TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
+            # https://docs.djangoproject.com/en/5.0/topics/i18n/
             USE_I18N = True
+            LANGUAGES = [
+                ('en', 'English'),
+                ('pt-br', 'Brazilian Portuguese'),
+            ]
+            LANGUAGE_CODE = 'en'  # Default language
+            LOCALE_PATHS = BASE_DIR / 'locale'
+            # Doc: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
             USE_TZ = True
-            
+            TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
             # Date and time format settings
             DATE_FORMAT = 'Y-m-d'
             TIME_FORMAT = 'H:i:s'
@@ -43,6 +49,80 @@
                 '%Y-%m-%d %H:%M',
                 '%Y/%m/%d %H:%M',
             ]
+
+
+        3) Use like this in Views and Models:
+
+            from django.utils.translation import gettext_lazy as _  # This '_' is a convention!
+
+            class Product(models.Model):
+                name = models.CharField(
+                    verbose_name=_("Product Name"),
+                    ...
+                )
+                description = models.TextField(
+                    verbose_name=_("Description"),
+                    ...
+                )
+
+
+        4) Use like this in templates:
+
+            {% load i18n %}
+            <!doctype html>
+            <html>
+                <body>
+                    <h1>{% trans "Welcome" %}</h1>
+                    <p>{% trans "I am Aldo Lammel" %}.</p>
+                </body>
+            </html>
+
+
+        5) Create the translate files:
+
+            $ django-admin makemessages -l pt_BR
+ 
+            # This will create a .po file for the pt_BR locale under the /locale/ path.
+
+
+        6) Translate the files:
+
+            msgid "Welcome"
+            msgstr "Bem-vindo(a)"
+
+            msgid "I am Aldo Lammel"
+            msgstr "Me chamo Aldo Lammel"
+
+
+        7) Compiling translations: once you've translated the strings in the .po file, you need
+            to compile them into .mo files for Django to use.
+
+                $ django-admin compilemessages
+
+
+        8) Language switching (template):
+
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                <select name="language">
+                    {% for lang_code, lang_name in LANGUAGES %}
+                        <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ lang_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Change Language">
+            </form>
+
+
+        9) Database: If your database contains any content that will be translated,
+            ensure your PostgreSQL database is set up with UTF-8 encoding, which is necessary
+            for handling multi-language content.
+
+                $ psql -U yourusername -d yourdbname -c
+
+
 
 
 

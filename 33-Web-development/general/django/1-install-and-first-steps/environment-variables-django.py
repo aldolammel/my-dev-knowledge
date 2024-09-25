@@ -33,6 +33,7 @@ keys, passwords, tokens and other information that must be unique for each envir
             # Quick-start development settings - unsuitable for production
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
+            ADMIN_EMAIL = env('ADMIN_EMAIL')
 
             # Allowed hosts
             ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])  # type: ignore

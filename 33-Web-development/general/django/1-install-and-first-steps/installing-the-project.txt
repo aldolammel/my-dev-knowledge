@@ -86,11 +86,19 @@ INSTALLING DJANGO:
         http://127.0.0.1:8000/admin/
 
 
-    12) Optionals:
 
-        12.1) Will you use file upload?
+    12) Will this project have more than one language?
+
+            If not, add in your settings.py:
+                USE_I18N = False
+            Otherwise:
+                /33-Web-development/general/django/8-translate-and-internationalization/starting-translation.txt
+    
+
+    13) Optionals:
+
+        13.1) Will you use file upload?
             /33-Web-development/general/django/5-uploads/files/
 
-        12.2) Will you use imagem upload?
+        13.2) Will you use imagem upload?
             /33-Web-development/general/django/5-uploads/images/
-

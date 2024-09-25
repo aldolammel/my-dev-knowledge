@@ -1,8 +1,0 @@
-
-
-PROTECTING VIEW: AGAINST NON-AUTHENTICATED USERS
-
-
-    >> Check these examples:
-    
-        /33-Web-development/general/django/3-2-backend-views/1-building-views-context/views-access-only-authenticated.txt
