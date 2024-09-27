@@ -3,36 +3,57 @@
 DJANGO TEMPLATES: BASIC
 
 
+    
+    >> Hashtag signs with curly-braces {# #} are TEMPLATE-COMMENTS that will be only server-side, 
+        unlike when is used the <!-- -->. 
+
+            E.g. 
+
+                {# This is just a server-side comment! #}
+
+
     >> Percentage signs within curly-braces {% %} are TEMPLATE-TAGS used to perform logic
         operations, control structures, and include other template functionalities within a
         template.
 
             E.g.
                 
-                {# Calling another template as base for this template #}
-                {% extends 'base.html' %}
-
-                {#  Defining the content block of the template must be loaded here #}
-                {% block content %}
-                {% endblock %}
-
-                {# A conditional example #}
-                {% if cars %}
-                    <p>Good, there is at least one car available!</p>
-                {% else %}
-                    <p>Oops, there is no car available!</p>
-                {% endif %}
+                >> Calling another template as base for this template:
+                    
+                    {% extends 'base.html' %}
+                    
                 
-                {# A For loop example #} 
-                {% for car in cars %}
+                >> The 'base.html' example you find here:          
+                    
+                    /33-Web-development/general/django/project-examples/proj-common/templates/base.html
 
-                    {% comment %} 
-                    Applying dynamic links/routes
-                    namespace and pattern-name are defined in each sub-app urls.py file
-                    {% endcomment %}
-                    <p><a href="{% url '<namespace>:<pattern_name>' <optional_arg1> <optional_arg2> %}">xxxxxxxx</a></p>
 
-                {% endfor %}
+                >> Defining the template's content-block must be loaded here:
+                
+                    {% block content %}
+                    {% endblock %}
+
+
+                >> A conditional example:
+                
+                    {% if cars %}
+                        <p>Good, there is at least one car available!</p>
+                    {% else %}
+                        <p>Oops, there is no car available!</p>
+                    {% endif %}
+                
+
+                >> A For loop example:
+
+                    {% for car in cars %}
+
+                        {% comment %} 
+                        Applying dynamic links/routes
+                        namespace and pattern-name are defined in each sub-app urls.py file
+                        {% endcomment %}
+                        <p><a href="{% url '<namespace>:<pattern_name>' <optional_arg1> <optional_arg2> %}">xxxxxxxx</a></p>
+
+                    {% endfor %}
                 
 
 
@@ -41,18 +62,19 @@ DJANGO TEMPLATES: BASIC
 
             E.g.
 
-                {# Reading the variable/object #}
-                {{ car }}   {# if dunder '__str__' is already define in 'models' with veh name #}
-                {# OR #}
-                {{ car.name }}   {# if no dunder '__str__' defined #} 
+                >> Reading the variable/object: 
 
-                {# Accessing the attributes that object / content of dictionary #} 
-                {{ car['brand'] }}             {# DOESNT WORK #}
-                {{ car.brand }}                {# WORKS! #}
-                  
-                {# Result from a function #}
-                {{ result_from_a_function() }}  {# DOESNT WORK #}
-                {{ result_from_a_function }}    {# WORKS! #}
+                    {{ car }}   {# if dunder '__str__' is already define in 'models' with veh name #}
+                    {# OR #}
+                    {{ car.name }}   {# if no dunder '__str__' defined #} 
+
+                    {# Accessing the attributes that object / content of dictionary #} 
+                    {{ car['brand'] }}             {# DOESNT WORK #}
+                    {{ car.brand }}                {# WORKS! #}
+                    
+                    {# Result from a function #}
+                    {{ result_from_a_function() }}  {# DOESNT WORK #}
+                    {{ result_from_a_function }}    {# WORKS! #}
 
 
 
@@ -67,7 +89,6 @@ DJANGO TEMPLATES: BASIC
 
 
                 
-    >> A perfect example of using the template you find in a project example that
-        I create to examplify the usage of views.py:
+    >> A perfect example of using the template and its other details, look this out:
             
-            /33-Web-development/general/django/3-2-backend-views/project-example/sub-app/templates/
+            /33-Web-development/general/django/project-examples/proj-common/

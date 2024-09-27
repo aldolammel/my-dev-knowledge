@@ -35,3 +35,11 @@ VIEWS REQUIRING LOGIN AUTHENTICATED:
             @method_decorator(login_required, name='dispatch')
             class BlablablaView(ListView):
                 pass
+
+
+
+    
+
+    NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
+
+        /33-Web-development/general/django/12-error-pages/401/

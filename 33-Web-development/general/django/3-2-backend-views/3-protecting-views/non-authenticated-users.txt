@@ -21,3 +21,8 @@ PROTECTING VIEW: NON-AUTHENTICATED USERS
             if request.user.is_anonymous:
                 pass
 
+
+
+    >> NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
+
+        /33-Web-development/general/django/12-error-pages/401/
