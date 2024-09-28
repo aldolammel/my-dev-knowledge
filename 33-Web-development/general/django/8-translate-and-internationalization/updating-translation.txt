@@ -2,27 +2,26 @@
 
     UPDATING A TRANSLATION PROJECT:
 
-        There are 2 approaches:
+        There are two approaches:
 
-            >> Update the default language on templates;
-            >> Update only the translation in a language (.po) file;
+            I) Update the original language used on templates, views and models;
+                
+                >> Crucial: the original language (msgid) NEVER be updated directly in a .po file!
+
+            II) Update a translation;
+
+                >> Crucial: a translation (msgstr) is updated only through its .po file!
 
 
 
 
-        >> Update the default language on templates:
-
-            1) Backup the language .po files (for precaution);
-
-                E.g.
-
-                    /project_folder/locale/
+        >> Update the original language used on templates, views and models:
             
             
-            2) Update the templates files as you need;
+            1) Update the original text (models, views and templates);
 
             
-            3) Re-generate each language .po file;
+            2) Re-generate each language .po file;
 
                 E.g.
 
@@ -33,15 +32,14 @@
                     $ django-admin makemessages --all
 
 
-            4) In each language .po file, re-add all msgstr:
-
-                E.g.
-
-                    msgid "Welcome to our awesome website"  # Changed msgid
-                    msgstr ""  # Translation needs to be filled in again
+                    >> After that, test the product. If everything is fine, open the 'django.po'
+                        from the specific language you've been updated and delete all 'fuzzy' lines and those
+                        comment lines with old texts, except those in lines number 6, 7 and 8.
+                        This will keep to file clean!
 
 
-            5) Command to compile;
+
+            4) Just to make sure, compile the translations again:
 
                 $ django-admin compilemessages
 
