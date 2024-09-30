@@ -4,47 +4,67 @@
 
         There are two approaches:
 
-            I) Update the original language used on templates, views and models;
+
+            CASE A) Update the original language;
                 
                 >> Crucial: the original language (msgid) NEVER be updated directly in a .po file!
 
-            II) Update a translation;
 
-                >> Crucial: a translation (msgstr) is updated only through its .po file!
+            CASE B) Update an additional translation;
+
+                >> Crucial: a translation (msgstr) is updated only through its .po file or
+                            via Rosetta Module!
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-        >> Update the original language used on templates, views and models:
+        >> CASE A:
             
-            
-            1) Update the original text (models, views and templates);
+            1) Update the original/default text directly in models, views and templates files;
 
-            
-            2) Re-generate each language .po file;
-
-                E.g.
-
-                    $ django-admin makemessages -l pt_BR
-
-                    or 
+            2) Re-generate all translations (.po) because you've tweaked the original language,
+                consequently changing the 'msgid' those files are using to link their translations:
 
                     $ django-admin makemessages --all
+            
+            3) Re-compile (it updates the application):
 
+                    $ django-admin compilemessages
 
-                    >> After that, test the product. If everything is fine, open the 'django.po'
-                        from the specific language you've been updated and delete all 'fuzzy' lines and those
-                        comment lines with old texts, except those in lines number 6, 7 and 8.
-                        This will keep to file clean!
+                    >> Important: if some .po file lines got 'fuzzy' flag after the file header,
+                                    it's because the translator needs to work on it!
 
-
-
-            4) Just to make sure, compile the translations again:
-
-                $ django-admin compilemessages
+            4) Test the update!
 
 
 
-        >> Update only the translation in a language (.po) file:
+        >> CASE B:
 
-            1) soon...
+            >> With NO translation manager:
+            
+                1) Open the .PO file related with the additional language that need to be updated;
+
+                2) In the .po file, update all 'msgstr' that need attention;
+
+                3) Re-generate the .PO file:
+
+                    E.g.
+
+                        $ django-admin makemessages -l pt_BR
+
+                4) Re-compile (it updates the application):
+
+                    $ django-admin compilemessages
+
+                    >> Important: if some .po file lines got 'fuzzy' flag after the file header,
+                                    it's because the translator needs to work on it!
+
+                5) Test the update!
+
+
+            >> Or with Rosetta Manager:
+
+                1) Open Rosetta: http://127.0.0.1:8000/rosetta
+
+                2) ...

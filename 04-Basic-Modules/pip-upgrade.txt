@@ -1,23 +1,34 @@
 
+
 PIP (BUILT-IN MODULE)
 
-
-1) Make sure you are in the right Python Interpreter in your IDE.
-    PyCharm: check the right-lower-corner;
-    VSCode: press Ctrl+Shift+P and type 'Python Interpreter'
+    >> It's a package manager for Python packages, or modules if you like. 
+        Note: If you have Python version 3.4 or later, PIP is included by default.
 
 
-2) Active your environment:
-    <Check the folder '03-Virtual-Environment'>
+        1) Make sure you are in the right Python Interpreter in your IDE.
+            PyCharm: check the right-lower-corner;
+            VSCode: press Ctrl+Shift+P and type 'Python Interpreter'
 
 
-3) Now, do it:
+        2) Active your environment:
+            <Check the folder '03-Virtual-Environment'>
 
-    Windows:
-        $ py -m pip install --upgrade pip
-    Debian/Ubuntu:
-        $ python3 -m pip install --upgrade pip
-    Mac:
-        $ python3 -m pip install --upgrade pip
+
+        3) Now, do it:
+
+            Windows:
+                $ py -m pip install --upgrade pip
+            
+            Debian/Ubuntu:
+
+                # Just for make sure even the system apps list is updated:
+                $ sudo apt update
+            
+                # Updating the own Module manager of Python (PIP):
+                $ python3 -m pip install --upgrade pip
+
+            Mac:
+                $ python3 -m pip install --upgrade pip
 
 

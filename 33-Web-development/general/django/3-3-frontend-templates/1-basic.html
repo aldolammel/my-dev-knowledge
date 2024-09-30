@@ -7,9 +7,16 @@ DJANGO TEMPLATES: BASIC
     >> Hashtag signs with curly-braces {# #} are TEMPLATE-COMMENTS that will be only server-side, 
         unlike when is used the <!-- -->. 
 
-            E.g. 
+            E.g. inline comment:
 
-                {# This is just a server-side comment! #}
+                {# This is just a server-side inline-comment! #}
+
+
+            E.g. block comment:
+
+                {% comment "Optional note" %}  
+                    This is just a server-side block-comment!
+                {% endcomment %}                
 
 
     >> Percentage signs within curly-braces {% %} are TEMPLATE-TAGS used to perform logic

@@ -53,18 +53,18 @@ INSTALLING DJANGO:
 
         E.g. Django Project Structure:
 
-            Project-folder (it's the 'main-app', it's the root folder)
-                config-folder (same name of the project)
-                    settings.py (where you register each sub-app in use)
+            >Project-folder (it's the 'main-app', it's the root folder)
+                >config-folder (same name of the project)
+                    -settings.py (where you register each sub-app in use)
                     ...
-                sub-app1-folder
+                >sub-app1-folder
                     ...
-                sub-app2-folder
+                >sub-app2-folder
                     ...
-                sub-app3-folder
+                >sub-app3-folder
                     ...
                 ...
-                manage.py
+                -manage.py
 
 
     10) Create your first sub-app in the project:
