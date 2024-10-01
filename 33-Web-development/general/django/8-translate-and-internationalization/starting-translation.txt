@@ -31,8 +31,8 @@
 
                         >> Make sure it’s one of the first middleware installed;
                         
-                        >> It should come after SessionMiddleware, because LocaleMiddleware makes use of
-                            session data;
+                        >> It should come after SessionMiddleware, because LocaleMiddleware makes
+                            use of session data;
                         
                         >> It should come before CommonMiddleware because CommonMiddleware needs an
                             activated language in order to resolve the requested URL;
@@ -157,7 +157,7 @@
 
 
 
-        3) Translating process: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        3) Non-database Translation process: - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             3.1) Default language:
 
@@ -200,11 +200,89 @@
                     http://127.0.0.1:8000/pt-br/
                     http://127.0.0.1:8000/es/
 
+
+
+
+
         
+        3) Database Translation process: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            3.1) Install the Parler Module:
+
+                $ pip install django-parler
+
+
+            3.2) Going back to settings.py, in 'Installed Apps', add:
+
+                'parler',
+
+
+            3.3) Still throught settings.py, add in 'Internationalization' section:
+
+                PARLER_DEFAULT_LANGUAGE_CODE = 'en'
+
+                PARLER_LANGUAGES = {
+                    None: (
+                        {'code': 'en',},
+                        {'code': 'en-us',},
+                        {'code': 'pt-br',},
+                    ),
+                    'default': {
+                        'fallbacks': ['en'],
+                        'hide_untranslated': False,
+                    }
+                }
+
+                >> For multi-site project: replace None with the SITE_ID. Each SITE_ID can be added
+                    as additional entry in the dictionary.
+
+
+            3.4) Open all your models.py you want to translate the database values too, and convert
+                the original models.Model class to TranslatableModel class:
+
+                    E.g.
+
+                        from parler.models import TranslatableModel, TranslatedFields
+
+                        class Movie(TranslatableModel):
+                            translations = TranslatedFields(
+                                title = ...
+                                sinopsys = ...
+                            )
+
+                            director = ...
+                            year_released = ...
+
+                            ...
+
+
+            3.5) Through each sub-app admin.py file that has its models.py file envolved:
+
+                E.g
+
+                    from django.contrib import admin
+                    from .models import Movie
+                    from parler.admin import TranslatableAdmin
+
+                    admin.site.register(Movie, TranslatableAdmin)
+                    
 
 
 
-        4) Final touch: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            X) xxxxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+        5) Final touch: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
             4.1) Check each translation to fix all 'fuzzy' flag that means the translation needs
                 translator attention!
@@ -230,3 +308,20 @@
                 for handling multi-language content.
 
                     $ psql -U yourusername -d yourdbname -c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
