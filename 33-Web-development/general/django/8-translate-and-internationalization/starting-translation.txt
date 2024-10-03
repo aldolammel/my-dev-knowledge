@@ -23,7 +23,7 @@
 
                     MIDDLEWARE = [
                         "django.contrib.sessions.middleware.SessionMiddleware",
-                        "django.middleware.locale.LocaleMiddleware",
+                        "django.middleware.locale.LocaleMiddleware",  # Django additional feature!
                         "django.middleware.common.CommonMiddleware",
                     ]
 
@@ -43,15 +43,13 @@
             1.3) Still in settings.py, in 'internationalization' section:
 
                 # Internationalization
-                # https://docs.djangoproject.com/en/5.0/topics/i18n/
                 USE_I18N = True
+                LANGUAGE_CODE = 'en'  # Default language!
                 LANGUAGES = [
-                    ('en-us', 'English'),
+                    (LANGUAGE_CODE, 'English'),
                     ('pt-br', 'Brazilian Portuguese'),
                 ]
-                LANGUAGE_CODE = 'en-us'  # Default language
                 LOCALE_PATHS = [BASE_DIR / 'locale']
-                # Doc: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
                 USE_TZ = True
                 TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
                 # Date and time format settings
@@ -85,8 +83,11 @@
                 from django.urls import path, include
 
                 urlpatterns = i18n_patterns(
+                    # DJANGO:
                     path('admin/', admin.site.urls),
+                    # THIRD-PARTY:
                     path('rosetta/', include('rosetta.urls')),
+                    # PRODUCT:
                     # path('<virtual_folder>/', include('<subapp_name>.urls')),
                     # path('<virtual_folder>/', include('<subapp_name>.urls')),
                 )
@@ -219,16 +220,14 @@
 
             3.3) Still throught settings.py, add in 'Internationalization' section:
 
-                PARLER_DEFAULT_LANGUAGE_CODE = 'en'
-
+                PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE
                 PARLER_LANGUAGES = {
                     None: (
-                        {'code': 'en',},
-                        {'code': 'en-us',},
-                        {'code': 'pt-br',},
+                        {'code': LANGUAGE_CODE,},
+                        {'code': 'pt-br',},  # example only!
                     ),
                     'default': {
-                        'fallbacks': ['en'],
+                        'fallbacks': [PARLER_DEFAULT_LANGUAGE_CODE],
                         'hide_untranslated': False,
                     }
                 }
@@ -246,8 +245,8 @@
 
                         class Movie(TranslatableModel):
                             translations = TranslatedFields(
-                                title = ...
-                                sinopsys = ...
+                                title = models.CharField(...),
+                                sinopsys = models.CharField(...),
                             )
 
                             director = ...
@@ -255,27 +254,114 @@
 
                             ...
 
+                    Crucial:
 
-            3.5) Through each sub-app admin.py file that has its models.py file envolved:
+                        >> There is a known issue where after 'makemessages' command, the migration
+                            file will be created as usual, but when you perform the 'migrate'
+                            command, you'll get an error. To fix that, do it:
 
-                E.g
+                            1) Open your latest migration file in the targeted sub-app;
+                            2) Find the line 'bases=(parler.models.TranslatedFieldsModelMixin, models.Model),';
+                            3) Replace the 'TranslatedFieldsModelMixin' by 'TranslatableModel' and
+                                make sure you saved the file;
+                            4) Perform the 'migrate' command;
+                            5) Go to the next step (tests only after that!);
+
+
+            3.5) Finally, through each sub-app admin.py file that has its models.py envolved:
+
+                E.g. Model-class with NO CMS customs:
 
                     from django.contrib import admin
                     from .models import Movie
                     from parler.admin import TranslatableAdmin
 
+                    # Registering Product CMS features:
                     admin.site.register(Movie, TranslatableAdmin)
+
+
+                E.g. Model-class with CMS customs:
+
+                    from django.contrib import admin
+                    from .models import Movie
+                    from parler.admin import TranslatableAdmin
+
+                    class MovieCMS(TranslatableAdmin):
+                        ...
+
+                    # Registering Product CMS features:
+                    admin.site.register(Movie, MovieCMS)
                     
 
 
 
-            X) xxxxxxxxxxxxxxxx
+
+        4) Language switching on the interface: - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
+            4.1) Create a global-context file called 'context_processors.py' in some general sub-app:
+
+                from django.conf import settings
+
+                def languages(request):
+                    """
+                    Add LANGUAGES and current LANGUAGE_CODE to the context globally.
+                    """
+                    return {
+                        'LANGUAGES': settings.LANGUAGES,  # Available languages!
+                        'LANGUAGE_CODE': request.LANGUAGE_CODE  # Currently active language!
+                    }
+            
+
+            4.2) In settings.py, include that new global-context:
+
+                TEMPLATES = [
+                    {
+                        ...
+                        'OPTIONS': {
+                            'context_processors': [
+                                # DJANGO DEFAULT GLOBAL CONTEXTS:
+                                ...
+                                # DJANGO ADDITIONAL GLOBAL CONTEXTS:
+                                'general.context_processors.languages',
+                                # THIRD-PARTY GLOBAL CONTEXTS:
+                                ...
+                                # PRODUCT CUSTOM GLOBAL CONTEXTS:
+                                ...
+                            ],
+                        },
+                    },
+                ]
+
+            
+            4.3) On config-folder urls.py file:
+
+                # DJANGO:
+                path('i18n/', include('django.conf.urls.i18n')),
+                
+                    >> This will enable Django's 'set_language' view, which processes
+                        the language change request.
 
 
+            4.4) On the template:
 
-
+                <!-- LANGUAGE FORM - START -->
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    {# Redirect to the current page after switching language: #}
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    {# Dropdown: #}
+                    <select name="language">
+                        {% for lang_code, lang_name in LANGUAGES %}
+                            <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ lang_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    {# Submit button: #}
+                    <input type="submit" value="Language / Idioma">
+                </form>
+                <!-- LANGUAGE FORM - END -->
 
 
 
@@ -284,44 +370,13 @@
 
         5) Final touch: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
-            4.1) Check each translation to fix all 'fuzzy' flag that means the translation needs
+            5.1) Check each translation to fix all 'fuzzy' flag that means the translation needs
                 translator attention!
             
-            4.2) Language switching (template):
-
-                <form action="{% url 'set_language' %}" method="post">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}">
-                    <select name="language">
-                        {% for lang_code, lang_name in LANGUAGES %}
-                            <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected{% endif %}>
-                                {{ lang_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                    <input type="submit" value="Change Language">
-                </form>
-
-
-            4.3) Database: If your database contains any content that will be translated,
+            
+            5.2) (I never needed) Database: If your database contains any content that will be translated,
                 ensure your PostgreSQL database is set up with UTF-8 encoding, which is necessary
                 for handling multi-language content.
 
                     $ psql -U yourusername -d yourdbname -c
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

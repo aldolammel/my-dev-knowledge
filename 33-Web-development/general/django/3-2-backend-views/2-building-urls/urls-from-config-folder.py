@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # CMS address:
-    # http://127.0.0.1:8000/admin/
-    path('admin/', admin.site.urls),
-    # Example only:
-    # path('<url_structure_folder>/', include('<sub_app_name>.urls'))
-    # http://127.0.0.1:8000/recipes/
-    path('recipes/', include('recipes.urls')),
+    # DJANGO URLS:
+    path('admin/', admin.site.urls),  # http://127.0.0.1:8000/admin/
+    # THIRD-PARTY URLS:
+    # Reserved space...
+    # PRODUCT URLS:
+    path('', include('general.urls')),  # sub-app called 'general' example, http://127.0.0.1:8000/
+    path('recipes/', include('recipes.urls')),  # http://127.0.0.1:8000/recipes/
+    path('url_structure_folder/', include('sub_app_name.urls')),  # Structure example...
 ]

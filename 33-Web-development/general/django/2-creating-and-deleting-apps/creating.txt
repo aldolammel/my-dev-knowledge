@@ -62,8 +62,19 @@ CREATING DJANGO APPS*:
     4) Go to your config-folder (often the same name of the project) and open its urls.py file
         and include each sub-app URL references right after the admin line:
             
+            from django.contrib import admin
             from django.urls import path, include
-            path("<subapp_name>/", include("<subapp_name>.urls"))
+
+            urlpatterns = [
+                # DJANGO URLS:
+                path('admin/', admin.site.urls),
+                # THIRD-PARTY URLS:
+                # Reserved space...
+                # PRODUCT URLS:
+                path('', include('general.urls')),
+                path("<subapp_name>/", include("<subapp_name>.urls")),
+                path("<subapp_name>/", include("<subapp_name>.urls")),
+            ]
 
 
     5) Create these folders and file into the new sub-app folder:
@@ -77,6 +88,8 @@ CREATING DJANGO APPS*:
         the 'INSTALLED_APPS' list.
         
             # Application definition
+            # About each Installed Apps here: 
+            # <Engineering Data document hyperlink here!!!>
             INSTALLED_APPS = [
                 # DJANGO DEFAULT SUB-APPS:
                 'django.contrib.admin',
