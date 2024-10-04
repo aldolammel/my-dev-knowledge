@@ -1,11 +1,15 @@
 
 
-USING SIGNALS: EXPANDING THE DJANGO USER DATA
+USING SIGNALS: EXTENDING THE DJANGO USER DATA
 
 
-    1) Very basic to use Django built-in user features:
+    1) Extending Django built-in user features:
+        
+        >> Very basic to use:
+            /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-basic.txt
 
-        /33-Web-development/general/django/3-1-backend-models-database/3-users/expanding-users.txt
+        >> Way where signals are needed:
+            /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-with-profile.txt
 
 
     2) Create a 'signals.py' file into the 'accounts' sub-app if not available yet, and:

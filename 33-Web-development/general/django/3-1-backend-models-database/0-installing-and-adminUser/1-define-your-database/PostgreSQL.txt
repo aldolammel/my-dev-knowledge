@@ -1,5 +1,5 @@
 
-POSTGRESQL
+POSTGRESQL v1
 
     1) Install the PostgreSQL Python module:
         https://www.psycopg.org/

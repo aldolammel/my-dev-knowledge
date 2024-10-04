@@ -9,7 +9,7 @@ HOW TO RE-INSTALL ONLY THE DATABASE:
 
         2) Create the new database;
 
-        3) In each sub-app migration folder, delete all its content, except the dunder init;
+        3) In each sub-app migration-folder, delete all its content, except the dunder init;
 
         4) Edit your .env file as needed;
 

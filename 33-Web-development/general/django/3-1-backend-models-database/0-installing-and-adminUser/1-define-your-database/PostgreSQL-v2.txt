@@ -1,5 +1,6 @@
 
-POSTGRESQL
+
+POSTGRESQL v2 (RECOMENDED!)
 
     1) Install the PostgreSQL Python module:
         https://www.psycopg.org/
@@ -15,24 +16,13 @@ POSTGRESQL
 
             from pathlib import Path
             import environ
-
-            # Set the project base directory
-            BASE_DIR = Path(__file__).resolve().parent.parent
-
-            # Take environment variables from .env file
-            environ.Env.read_env(BASE_DIR / '.env')
-
-            # Initialize environment variables
-            env = environ.Env(
-                # Set casting, default value
-                DEBUG=(bool, False)
-            )
-
-            # Quick-start development settings - unsuitable for production
+            
+            # App Essential Settings:
+            BASE_DIR = Path(__file__).resolve().parent.parent  # project base directory.
+            environ.Env.read_env(BASE_DIR / '.env')  # Take environment variables from .env file.
+            env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
-
-            # Allowed hosts
             ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])  # type: ignore
 
             if DEBUG:
@@ -40,11 +30,20 @@ POSTGRESQL
                 print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
                 print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
 
+            # App Essential Info:
+            ...
 
+            # Application definition
+            # About each Installed Apps here:
+            # <Product Engineering Data Document link here!>
             INSTALLED_APPS = [
+                # DJANGO DEFAULT SUB-APPS:
                 ...
-                # YOUR SUB-APPS:
+                # DJANGO ADDITIONAL SUB-APPS:
                 'django.contrib.postgres',  # Expands the postgres options.
+                # THIRD-PARTY SUB-APPS:
+                ...
+                # PROJECT ORIGINAL SUB-APPS:
                 ...
             ]
 
@@ -64,7 +63,7 @@ POSTGRESQL
     
     4) Make a copy of '.env' file to the project root folder:
         
-            /31-Environment-Variables/
+        /31-Environment-Variables/
 
         >> customize the .env as needed following the step-3 variables right above!
 

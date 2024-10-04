@@ -1,0 +1,127 @@
+
+
+EXTENDING THE USER FEATURES (BASIC):
+
+
+    1) Very basic to use Django built-in user features:
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+
+
+
+    2) Create Custom User Model (Extending the original one):
+
+        >> The built-in class 'User' is a child of AbstractUser class where all original fields are;  
+        
+        >> Create your custom User class:
+
+            >> Recommended to set in here: /accounts/models.py
+
+            from django.contrib.auth.models import AbstractUser
+            from django.db import models
+
+            class CustomUser(AbstractUser):
+                # Overriding the original fields just to custom them (as translating, for example):
+                first_name = models.CharField(
+                    max_length=150,
+                    blank=True,
+                )
+                last_name = models.CharField(
+                    max_length=150,
+                    blank=True,
+                )
+                email = models.EmailField(
+                    blank=True,
+                )
+                # Those original fields (from AbstractUser) that are not overriden, they'll be working normally!
+
+                # Adding new fields to extending the User features:
+                ...
+
+                class Meta:
+                    db_table = 'user'
+                    ordering = ['username']
+                    # verbose_name = 'User'
+                    # verbose_name_plural = 'Users'
+                
+                
+                def __str__(self):
+                    return self.username
+
+                
+
+
+    3) In settings.py, say that Django needs to look for users in the new extended class:
+
+        # App Essential Settings:
+        ...
+        AUTH_USER_MODEL = 'accounts.User'  # 'my_subapp.User'
+
+
+
+    4) Run makemigrations and migrate!
+
+
+
+    5) Customizing the CMS User list-view and detail-view:
+
+        from django.contrib import admin
+        from django.contrib.auth.admin import UserAdmin
+        from .models import User  # Your user extended!
+
+
+        class UserCMS(UserAdmin):
+            list_display = (
+                'username',
+                'email',
+                'first_name',
+                'last_name',
+                'is_staff',
+            )
+            # How the fields will be organized in the User CMS detail-view:
+            fieldsets = (
+                (
+                    None,
+                    {
+                        'fields': (
+                            'username',
+                            'password',
+                        )
+                    },
+                ),
+                (
+                    'Personal info',
+                    {
+                        'fields': (
+                            'first_name',
+                            'last_name',
+                            'email',
+                        )
+                    },
+                ),
+                (
+                    'Permissions',
+                    {
+                        'fields': (
+                            'is_active',
+                            'is_staff',
+                            'is_superuser',
+                            'groups',
+                            'user_permissions',
+                        )
+                    },
+                ),
+                (
+                    'Important dates',
+                    {
+                        'fields': (
+                            'last_login',
+                            'date_joined',
+                        )
+                    },
+                ),
+            )
+            
+            
+        admin.site.register(User, UserCMS)
+

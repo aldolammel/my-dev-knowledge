@@ -5,7 +5,7 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
 
     0) Very basic to use Django built-in user features:
 
-        /33-Web-development/general/django/3-1-backend-models-database/3-users/expanding-users.txt
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-basic.txt
 
 
     1) Create or open the forms.py file in 'accounts' sub-app:

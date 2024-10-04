@@ -1,20 +1,26 @@
+
+
 INSTALLING DJANGO:
 
 
     1) Create the project folder, and get it:
+
         $ mkdir <project_folder>
         $ cd <project_folder>
 
 
     2) Create the virtual environment and active it:
-        <Check the folder '03-Virtual-Environment'>
+
+        /03-Virtual-Environment/
 
 
     3) Update the pip:
-        <Check the folder '04-Basic-Modules'>
+
+        /04-Basic-Modules/
 
 
     4) Installation:
+
         $ pip install django
 
         Only for VSCode:
@@ -27,20 +33,43 @@ INSTALLING DJANGO:
 
 
     5) Create the Django Project Structure:
+
         # make sure you're in project root folder and:
         $ django-admin startproject proj_<project_name> .
 
 
-    6) Make sure you're in the same folder the 'manage.py' file, and then start the django for testing purposes:
-        $ python manage.py migrate
-        $ python manage.py runserver
+    6) Make sure you're in the same folder the 'manage.py' file, and then start the django
+        for testing purposes:
+
+            $ python manage.py migrate
+            $ python manage.py runserver
 
 
-    7) If you won't use the SQLite as database, do it:
+    7) Through the Config-folder, open the settings.py file:
+    
+        7.1) Organize the settings.py header:
 
-        7.1) Copy your SECRET KEY from settings.py;
+            # App Essential Settings:
+            BASE_DIR = ...
+            SECRET_KEY = ...
+            DEBUG = ...
+            ALLOWED_HOSTS = ...
+            ADMIN_EMAIL = 'aldolammel@gmail.com'
 
-        7.2) Define your database:
+            # App Essential Info:
+            BRAND_NAME = 'Brand Name'
+            BRAND_EMAIL = 'brand_email@domain.com'
+            BRAND_URL = 'https://branddomain.com'
+            DEV_NAME = 'ABCOO'
+            DEV_EMAIL = 'abcoo_ideias@gmail.com'
+            DEV_URL = 'https://abcoo.com.br'
+        
+
+        7.2) Still in settings.py file, if you won't use the SQLite as database,
+            keep in mind your 'SECRET KEY';
+
+
+        7.3) Define your database:
             /33-Web-development/general/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
 
 

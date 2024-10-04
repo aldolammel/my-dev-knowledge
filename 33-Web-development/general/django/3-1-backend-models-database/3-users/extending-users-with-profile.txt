@@ -1,11 +1,18 @@
 
 
-EXPANDING THE USER USAGE
+EXTENDING THE USER FEATURES WITH PROFILE:
+
+    >> Let's create another model/table in order to isolate extra data associate with each user,
+        creating a UserProfile class;
+
+    >> This approach make easier to management user-data that might change drastically if a special
+        setting is activated, for example, from personnal account to business one where the data
+        associated with the user probably change a lot;
 
 
     1) Very basic to use Django built-in user features:
         /33-Web-development/general/django/3-1-backend-models-database/3-users/0-users-setup.txt
-        /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-basic.txt
 
 
 
@@ -48,7 +55,7 @@ EXPANDING THE USER USAGE
     3) Create the signal to create a linked UserProfile entry automatically when a new user is
         created via front-end or Django CMS:
 
-        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
+        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-extended.txt
 
 
 

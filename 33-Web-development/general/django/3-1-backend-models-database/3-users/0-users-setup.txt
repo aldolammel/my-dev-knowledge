@@ -16,3 +16,6 @@ USERS SETUP
 
         >> To register users by the front-end:
             /33-Web-development/general/django/10-login-and-logout/0-registering-by-frontend.txt
+
+        >> To expand user data:
+            /33-Web-development/general/django/3-1-backend-models-database/3-users/expanding-users-basic.txt
