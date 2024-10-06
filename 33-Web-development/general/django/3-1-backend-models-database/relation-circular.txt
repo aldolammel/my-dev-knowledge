@@ -17,3 +17,8 @@ RELATION: CIRCULAR
                 Hence we might need to define them in both models. By using the model name as 
                 a string instead of a direct reference, Django is able to resolve such dependencies.
 
+
+
+    >> Is an itself relationship?
+
+        /33-Web-development/general/django/3-1-backend-models-database/relation-itself.txt

@@ -2,22 +2,36 @@
 
     GLOBAL CONTEXT:
 
-        >> If you need a Context that need to be available, for example, in the entire application,
-            you want a 'Global Context', e.g. Dropbox with Interface Language Options!
+        >> If you need a Context that need to be available on the entire application,
+            you want a 'Global Context'!
+
+
+        0) Where is the data you want to make global? For example purposes, let's use
+            custom data defined in settings.py!
 
 
         1) In a sub-app (recommend the 'general' one), create a file called 'context_processors.py':
 
-            from django.conf import settings
+            from django.conf import settings as stt
+            from django.utils import timezone
 
-            def your_global_feature_example(request):
+
+            def app_info(request):
+                """
+                Information about the app:
+                """
                 return {
-                    'LANGUAGES': settings.LANGUAGES,  # Just context content examples!
-                    'LANGUAGE_CODE': request.LANGUAGE_CODE,
+                    'BRAND_NAME': stt.BRAND_NAME,
+                    'BRAND_EMAIL': stt.BRAND_EMAIL,
+                    'BRAND_URL': stt.BRAND_URL,
+                    'DEV_NAME': stt.DEV_NAME,
+                    'DEV_URL': stt.DEV_URL,
+                    'ADMIN_EMAIL': stt.ADMIN_EMAIL,
+                    'CURRENT_YEAR': timezone.now().year,
                 }
 
         
-        2) In settings.py file, find 'TEMPLATES' section and add it:
+        2) In settings.py file, find 'TEMPLATES' section and add:
 
             TEMPLATES = [
                 {
@@ -27,11 +41,11 @@
                             # DJANGO DEFAULT GLOBAL CONTEXTS:
                             ...
                             # DJANGO ADDITIONAL GLOBAL CONTEXTS:
-                            'general.context_processors.your_global_feature_example',
+                            ...
                             # THIRD-PARTY GLOBAL CONTEXTS:
                             ...
-                            # PRODUCT CUSTOM GLOBAL CONTEXTS:
-                            ...
+                            # APP CUSTOM GLOBAL CONTEXTS:
+                            'general.context_processors.app_info',
                         ],
                     },
                 },
@@ -42,10 +56,4 @@
 
             E.g.
 
-                <select name="...">
-                    {% for lang_code, lang_name in LANGUAGES %}
-                        <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected{% endif %}>
-                            {{ lang_name }}
-                        </option>
-                    {% endfor %}
-                </select>
+                <a href="mailto:{{ BRAND_EMAIL }}?subject={{ BRAND_NAME }}: Contact from website" target="_blank">Contact us</a>

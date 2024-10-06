@@ -8,7 +8,7 @@
 
     <h1>Content Not Found</h1>
     <h2>The content you are trying to access apparently doesn't exist.</h2>
-    <p>If you think there's some mistake happening here, please, <a href="{% url 'general:contact_view' %}" target="_blank">let us know<a/>.</p>
+    <p>If you think there's some mistake happening here, please <a href="mailto:{{ ADMIN_EMAIL }}?subject={{ BRAND_NAME }}: Error404" target="_blank">let us know<a/>.</p>
 
     <p>
         {% if user.is_authenticated %}

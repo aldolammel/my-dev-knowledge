@@ -54,22 +54,25 @@ INSTALLING DJANGO:
             SECRET_KEY = ...
             DEBUG = ...
             ALLOWED_HOSTS = ...
-            ADMIN_EMAIL = 'aldolammel@gmail.com'
 
             # App Essential Info:
             BRAND_NAME = 'Brand Name'
             BRAND_EMAIL = 'brand_email@domain.com'
             BRAND_URL = 'https://branddomain.com'
             DEV_NAME = 'ABCOO'
-            DEV_EMAIL = 'abcoo_ideias@gmail.com'
             DEV_URL = 'https://abcoo.com.br'
+            ADMIN_EMAIL = 'aldolammel@gmail.com'
+
+
+        7.2) Prepare a Global Context with the Essentioal info about the app:
+                /33-Web-development/general/django/3-2-backend-views/1-building-views-context/global-context.txt
         
 
-        7.2) Still in settings.py file, if you won't use the SQLite as database,
+        7.3) Still in settings.py file, if you won't use the SQLite as database,
             keep in mind your 'SECRET KEY';
 
 
-        7.3) Define your database:
+        7.4) Define your database:
             /33-Web-development/general/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
 
 

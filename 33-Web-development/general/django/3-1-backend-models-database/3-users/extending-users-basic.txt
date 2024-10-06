@@ -20,7 +20,7 @@ EXTENDING THE USER FEATURES (BASIC):
             from django.contrib.auth.models import AbstractUser
             from django.db import models
 
-            class CustomUser(AbstractUser):
+            class User(AbstractUser):
                 # Overriding the original fields just to custom them (as translating, for example):
                 first_name = models.CharField(
                     max_length=150,
@@ -39,11 +39,10 @@ EXTENDING THE USER FEATURES (BASIC):
                 ...
 
                 class Meta:
-                    db_table = 'user'
+                    db_table = 'auth_user'  # I like to keep the original name!
                     ordering = ['username']
-                    # verbose_name = 'User'
-                    # verbose_name_plural = 'Users'
-                
+                    verbose_name = 'User'
+                    verbose_name_plural = 'Users'
                 
                 def __str__(self):
                     return self.username
@@ -71,12 +70,12 @@ EXTENDING THE USER FEATURES (BASIC):
 
 
         class UserCMS(UserAdmin):
+            '''Defining how the User Model class will exclusivily be shown on the CMS.'''
+            
             list_display = (
                 'username',
                 'email',
-                'first_name',
-                'last_name',
-                'is_staff',
+                'last_login',
             )
             # How the fields will be organized in the User CMS detail-view:
             fieldsets = (
@@ -120,6 +119,21 @@ EXTENDING THE USER FEATURES (BASIC):
                         )
                     },
                 ),
+            )
+            list_filter = (
+                'is_active',
+                'is_staff',
+                'is_superuser',
+            )
+            search_fields = [
+                'username',
+                'first_name',
+                'last_name',
+                'email',
+            ]
+            readonly_fields = (
+                'date_joined',
+                'last_login',
             )
             
             

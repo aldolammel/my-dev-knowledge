@@ -25,15 +25,15 @@
             
             readonly_fields = (
                 'user',
-                'first_name',
-                'last_login',
+                'first_name',  # imported from User model class!
+                'last_login',  # imported from User model class!
             )
 
-            # Declaring a existent method from another class:
+            # Importing field from User model class:
             def first_name(self, obj):
                 return obj.user.first_name
 
-            # Declaring a existent method from another class:
+            # Importing field from User model class:
             def last_login(self, obj):
                 return obj.user.last_login
 

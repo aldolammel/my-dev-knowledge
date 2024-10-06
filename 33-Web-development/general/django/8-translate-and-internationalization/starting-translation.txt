@@ -299,16 +299,16 @@
         4) Language switching on the interface: - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-            4.1) Create a global-context file called 'context_processors.py' in some general sub-app:
+            4.1) Create a global-context file called 'context_processors.py' in 'general' sub-app:
 
-                from django.conf import settings
+                from django.conf import settings as stt
 
                 def languages(request):
                     """
                     Add LANGUAGES and current LANGUAGE_CODE to the context globally.
                     """
                     return {
-                        'LANGUAGES': settings.LANGUAGES,  # Available languages!
+                        'LANGUAGES': stt.LANGUAGES,  # Available languages!
                         'LANGUAGE_CODE': request.LANGUAGE_CODE  # Currently active language!
                     }
             
@@ -326,7 +326,7 @@
                                 'general.context_processors.languages',
                                 # THIRD-PARTY GLOBAL CONTEXTS:
                                 ...
-                                # PRODUCT CUSTOM GLOBAL CONTEXTS:
+                                # APP CUSTOM GLOBAL CONTEXTS:
                                 ...
                             ],
                         },
@@ -359,7 +359,7 @@
                         {% endfor %}
                     </select>
                     {# Submit button: #}
-                    <input type="submit" value="Language / Idioma">
+                    <input type="submit" value="Change / Cambiar / Mudar">
                 </form>
                 <!-- LANGUAGE FORM - END -->
 

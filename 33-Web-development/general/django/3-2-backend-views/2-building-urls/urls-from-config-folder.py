@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # http://127.0.0.1:8000/admin/
     # THIRD-PARTY URLS:
     # Reserved space...
-    # PRODUCT URLS:
+    # APP URLS:
     path('', include('general.urls')),  # sub-app called 'general' example, http://127.0.0.1:8000/
     path('recipes/', include('recipes.urls')),  # http://127.0.0.1:8000/recipes/
     path('url_structure_folder/', include('sub_app_name.urls')),  # Structure example...
