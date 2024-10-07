@@ -8,19 +8,40 @@ FRONT-END: USER PROFILE FORM
     1) In a template (e.g. profile.html) customize this:
 
         {% extends "base.html" %}
-        {% block title %}{{ user.username }}{% endblock %}
+
+        {% block title %}{{ page_title }}{% endblock %}
+
         {% block description %}{% endblock %}
+
         {% block content %}
-            <h1>{{ user.username }}</h1>
+            
+            <h1>{{ page_title }}</h1>
+
             <!-- PROFILE FORM - START -->
             <form name="form-crise" method="post">
+
                 {% csrf_token %}
+
+                <!-- feedback messages - start -->
+                {% if messages %}
+                    <ul class="messages">
+                        {% for msg in messages %}
+                            <li{% if msg.tags %} class="{{ msg.tags }}"{% endif %}>{{ msg }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <!-- feedback messages - end -->
+
                 <div class="col-md-12">
+
                     {{ form.as_p }}
+
                 </div>
                 <button type="submit">{{ bt_submit }}</button>
                 {% comment %} <button type="submit" name="del_account">{{ bt_del }}</button> {% endcomment %}
+
             </form>
             <!-- PROFILE FORM - END -->
+            
         {% endblock %}
 

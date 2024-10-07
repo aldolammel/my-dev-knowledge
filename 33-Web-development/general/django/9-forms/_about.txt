@@ -31,8 +31,15 @@ DJANGO FORMS:
             /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
 
         2) Or creating a custom forms.py class (inherit from forms.Form) that doesn't impact the db
-            and is not the best method to do forms if you consider the 'Movies' example mention
+            and is NOT the best method to do forms if you consider the 'Movies' example mention
             before:
 
             /33-Web-development/general/django/9-forms/class-based/inherit-Form/forms.py
 
+
+    CMS FORMS:
+
+        >> forms.py never be responsable for CMS forms. The forms specifically to CMS use
+            'admin.py' file:
+
+                /33-Web-development/general/django/4-cms-admin/

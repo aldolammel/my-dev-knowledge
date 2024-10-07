@@ -1,0 +1,29 @@
+
+
+    TRANSLATING: DYNAMIC INFORMATION ON THE CMS
+
+        1) Open the 'admin.py' file from the specific sub-app:
+
+        2) Examples:
+        
+            >> Model-class with NO CMS customs:
+
+                from django.contrib import admin
+                from .models import Movie
+                from parler.admin import TranslatableAdmin
+
+                # Registering Product CMS features:
+                admin.site.register(Movie, TranslatableAdmin)
+
+
+            >> Model-class with CMS customs:
+
+                from django.contrib import admin
+                from .models import Movie
+                from parler.admin import TranslatableAdmin
+
+                class MovieCMS(TranslatableAdmin):
+                    ...
+
+                # Registering Product CMS features:
+                admin.site.register(Movie, MovieCMS)

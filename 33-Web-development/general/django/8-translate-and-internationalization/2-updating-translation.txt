@@ -2,18 +2,24 @@
 
     UPDATING A TRANSLATION PROJECT:
 
-        There are two approaches:
+        There some approaches with different steps:
 
 
-            CASE A) Update the original language;
+            CASE A) Non-database data: Update the original language;
                 
                 >> Crucial: the original language (msgid) NEVER be updated directly in a .po file!
 
 
-            CASE B) Update an additional translation;
+            CASE B) Non-database data: Update an additional translation;
 
                 >> Crucial: a translation (msgstr) is updated only through its .po file or
                             via Rosetta Module!
+
+
+            CASE C) Database data: update a model-attribute already as 'translations';
+
+
+            CASE D) Database data: add a new model-attribute as 'translations';
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -68,3 +74,35 @@
                 1) Open Rosetta: http://127.0.0.1:8000/rosetta
 
                 2) ...
+
+
+
+
+        >> CASE C:
+        
+            1) Update the desired 'translations' attribute as you wish; 
+
+            2) makemigrations and migrate commands!
+            
+
+
+        >> CASE D:
+            
+            1) Check if the model is already child of 'TranslatableModel'. Create a 'translations' 
+                attribute in the class or, then, add the new translatable field in the existent 
+                'translations' attribute:
+
+                    E.g.
+
+                        /33-Web-development/general/django/8-translate-and-internationalization/translate-models.txt
+
+                        >> CRUCIAL: To avoid the 'migration' BUG, make sure you are following
+                                    steps from the link above!
+
+
+            5) For CMS, if some admin.py changes is needed, don't forget the 'TranslatableAdmin' inherit:
+
+                /33-Web-development/general/django/8-translate-and-internationalization/translate-cms.txt
+
+
+            6) Test!

@@ -236,61 +236,14 @@
                     as additional entry in the dictionary.
 
 
-            3.4) Open all your models.py you want to translate the database values too, and convert
-                the original models.Model class to TranslatableModel class:
+            3.4) For Models:
 
-                    E.g.
-
-                        from parler.models import TranslatableModel, TranslatedFields
-
-                        class Movie(TranslatableModel):
-                            translations = TranslatedFields(
-                                title = models.CharField(...),
-                                sinopsys = models.CharField(...),
-                            )
-
-                            director = ...
-                            year_released = ...
-
-                            ...
-
-                    Crucial:
-
-                        >> There is a known issue where after 'makemessages' command, the migration
-                            file will be created as usual, but when you perform the 'migrate'
-                            command, you'll get an error. To fix that, do it:
-
-                            1) Open your latest migration file in the targeted sub-app;
-                            2) Find the line 'bases=(parler.models.TranslatedFieldsModelMixin, models.Model),';
-                            3) Replace the 'TranslatedFieldsModelMixin' by 'TranslatableModel' and
-                                make sure you saved the file;
-                            4) Perform the 'migrate' command;
-                            5) Go to the next step (tests only after that!);
+                /33-Web-development/general/django/8-translate-and-internationalization/translate-models.txt
 
 
-            3.5) Finally, through each sub-app admin.py file that has its models.py envolved:
+            3.5) For CMS, through each sub-app admin.py file that has its models.py envolved:
 
-                E.g. Model-class with NO CMS customs:
-
-                    from django.contrib import admin
-                    from .models import Movie
-                    from parler.admin import TranslatableAdmin
-
-                    # Registering Product CMS features:
-                    admin.site.register(Movie, TranslatableAdmin)
-
-
-                E.g. Model-class with CMS customs:
-
-                    from django.contrib import admin
-                    from .models import Movie
-                    from parler.admin import TranslatableAdmin
-
-                    class MovieCMS(TranslatableAdmin):
-                        ...
-
-                    # Registering Product CMS features:
-                    admin.site.register(Movie, MovieCMS)
+                /33-Web-development/general/django/8-translate-and-internationalization/translate-cms.txt
                     
 
 
