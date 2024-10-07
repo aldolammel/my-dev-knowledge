@@ -6,13 +6,14 @@
             you want a 'Global Context'!
 
 
-        0) Where is the data you want to make global? For example purposes, let's use
-            custom data defined in settings.py!
+        0) RECOMMENDED: create a 'constants.py' file in your config-folder!
+
+            /33-Web-development/general/django/3-1-backend-models-database/_constants-map.py
 
 
         1) In a sub-app (recommend the 'general' one), create a file called 'context_processors.py':
 
-            from django.conf import settings as stt
+            from <config-folder-name>.constants import import <constant_name>, <constant_name>, ... 
             from django.utils import timezone
 
 
@@ -45,7 +46,7 @@
                             # THIRD-PARTY GLOBAL CONTEXTS:
                             ...
                             # APP CUSTOM GLOBAL CONTEXTS:
-                            'general.context_processors.app_info',
+                            '<config-folder-name>.context_processors.app_info',
                         ],
                     },
                 },

@@ -1,0 +1,67 @@
+    
+"""
+    CONSTANT MAP:
+    
+        Recommended be deployed in config-folder as the name 'constants.py'.
+        
+        To call these constants in other files:
+        
+            from <config-folder-name>.constants import <constant_name>, ...
+            
+"""
+    
+# APP ESSENTIAL INFO: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ADMIN_EMAIL = 'xxxxx@gmail.com'
+BRAND_NAME = 'My Brand Here'
+BRAND_DESCRIPT = 'Soon...'
+BRAND_EMAIL = 'xxxxxx@gmail.com'
+BRAND_URL = 'https://xxxxxxxxx.com'
+DEV_NAME = 'ABCOO'
+DEV_URL = 'https://abcoo.com.br'
+
+# SUBAPPS AND THEIR PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+NAMESPACE_1 = 'general'
+NAMESPACE_2 = 'in'
+NAMESPACE_3 = 'accounts'
+NAMESPACE_4 = 'xxxxxxxxx'
+NAMESPACE_5 = 'xxxxxxxxx'
+# Pattern names from NAMESPACE_1:
+PATTERN_1_1 = 'home_view'
+PATTERN_1_2 = 'xxxxxx_view'
+PATTERN_1_3 = 'xxxxxx_view'
+PATTERN_1_4 = 'xxxxxx_view'
+PATTERN_1_5 = 'privacy_view'
+# Pattern names from NAMESPACE_2:
+PATTERN_2_1 = 'home_view'
+PATTERN_2_2 = 'xxxx_view'
+PATTERN_2_3 = 'xxxx_view'
+PATTERN_2_4 = 'xxxx_view'
+# Pattern names from NAMESPACE_3:
+PATTERN_3_1 = 'register_view'
+PATTERN_3_2 = 'profile_view'
+# Pattern names from NAMESPACE_4:
+PATTERN_4_1 = 'xxxxxx_view'
+PATTERN_4_2 = 'xxxxxx_view'
+PATTERN_4_3 = 'xxxxxx_view'
+PATTERN_4_4 = 'xxxxxx_view'
+PATTERN_4_5 = 'xxxxxx_view'
+PATTERN_4_6 = 'xxxxxx_view'
+PATTERN_4_7 = 'xxxxxx_view'
+PATTERN_4_8 = 'xxxxxx_view'
+
+# PATHS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PATH_XXXXX_XXXXX_XXXX = 'icons/events/attack/'
+
+# DATA FOR DATABASE (WARNING!): - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# If values are changed without maintenance on database, multiple errors will raise up!
+CHOICES_SEX = (
+    ('f', trans.TXT_USER_SEX_1),
+    ('m', trans.TXT_USER_SEX_2),
+    ('i', trans.TXT_USER_SEX_3),
+)
+CHOICES_STATUS_CONTENT = (
+    ('on', trans.CMS_CONTENT_ACTIVE),
+    ('off', trans.CMS_CONTENT_ARCHIVED),
+)
+
+# OTHERS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

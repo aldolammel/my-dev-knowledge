@@ -55,13 +55,6 @@ INSTALLING DJANGO:
             DEBUG = ...
             ALLOWED_HOSTS = ...
 
-            # App Essential Info:
-            BRAND_NAME = 'Brand Name'
-            BRAND_EMAIL = 'brand_email@domain.com'
-            BRAND_URL = 'https://branddomain.com'
-            DEV_NAME = 'ABCOO'
-            DEV_URL = 'https://abcoo.com.br'
-            ADMIN_EMAIL = 'aldolammel@gmail.com'
 
 
         7.2) Prepare a Global Context with the Essentioal info about the app:

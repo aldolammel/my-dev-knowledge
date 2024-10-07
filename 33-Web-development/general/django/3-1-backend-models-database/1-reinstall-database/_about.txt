@@ -9,20 +9,16 @@ HOW TO RE-INSTALL ONLY THE DATABASE:
 
         2) Create the new database;
 
-        3) In each sub-app migration-folder, delete all its content, except the dunder init;
+        3) Through each sub-app migration-folder, delete all its content, except the dunder init;
 
         4) Edit your .env file as needed;
 
         5) CRITICAL: close all Terminals/Prompts you ran with the old .env before (it avoids
             issues with old environment variables)!
 
-        6) Run makemigrations for each sub-app;
+        6) Run 'makemigrations' for each sub-app, and then run 'migrate';
         
-        7) Run migrate;
-
-        >> If you'll' use the CMS:
-
-        8) Run createsuperuser;
+        7) If you'll use the CMS, run createsuperuser;
 
 
 
