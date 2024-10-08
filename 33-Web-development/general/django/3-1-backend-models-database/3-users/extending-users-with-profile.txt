@@ -248,7 +248,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
             # Create a hyperlink to the associated UserProfile to be used on the list-view and detail-view:
             def profile_link(self, obj):
-                if obj.profile_type == VAL_PROFILE_1 and hasattr(obj, REL_PROFILE_1):
+                if obj.profile_type == '1' and hasattr(obj, REL_PROFILE_1):
                     url = reverse(
                         # Automatic admin-view creation structure: 'admin:app_label_modelname_change':
                         'admin:accounts_userprofileone_change',
@@ -257,7 +257,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                     return format_html(
                         "<a href='{}'>{} ({})</a>", url, 'personnal', 'more details'
                     )
-                elif obj.profile_type == VAL_PROFILE_2 and hasattr(obj, REL_PROFILE_2):
+                elif obj.profile_type == '2' and hasattr(obj, REL_PROFILE_2):
                     url = reverse(
                         'admin:accounts_userprofiletwo_change',
                         args=[getattr(obj, REL_PROFILE_2).id],

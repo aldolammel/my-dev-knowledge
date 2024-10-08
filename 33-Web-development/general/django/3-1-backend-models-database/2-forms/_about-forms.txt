@@ -1,10 +1,15 @@
 
 
-BACK-END: FORMS
+FORMS (SUPER BASIC INSTRUCTION)
 
-    >> Exactly as models.py where you build your database classes, there is a file called 'forms.py'
-        that works similar. So have this in mind before start to create a lot of classes in your
-        models.py without get to know the forms.py.
+    >> For Django, forms are specific formularies used ONLY through front-end, and this not include
+        the CMS forms at all;
+
+    >> If you want to build or improve a front-end form on your application, keep in mind you
+        must work with files called 'forms.py' that can be created once into each sub-app folder;
     
-    >> Learn more about forms for back-end and front-end:
+    >> Everything for forms.py works:
         /33-Web-development/general/django/9-forms/
+
+    >> Everything for forms present on the CMS (admin.py):
+        /33-Web-development/general/django/4-cms-admin/
