@@ -2,7 +2,7 @@
 
 INSTALLING DJANGO:
 
-
+    
     1) Create the project folder, and get it:
 
         $ mkdir <project_folder>
@@ -14,14 +14,26 @@ INSTALLING DJANGO:
         /03-Virtual-Environment/
 
 
-    3) Update the pip:
+    3) Installation:
 
-        /04-Basic-Modules/
+        The same for Ubuntu and Windows:
 
+            >> Update pip module:
+                
+                $ python -m pip install --upgrade pip
 
-    4) Installation:
+            >> Install Django:
 
-        $ pip install django
+                $ pip install django
+
+            >> Check the current django installed:
+
+                $ python -m django --version
+
+            >> upgrade django if needed;
+
+                $ python -m pip install --upgrade pip
+        
 
         Only for VSCode:
             # DjLint (html template formatter for django/jinja)
@@ -32,22 +44,22 @@ INSTALLING DJANGO:
             # In VSCode, In Html's, change the language mode to 'Django-Html'
 
 
-    5) Create the Django Project Structure:
+    4) Create the Django Project Structure:
 
         # make sure you're in project root folder and:
         $ django-admin startproject proj_<project_name> .
 
 
-    6) Make sure you're in the same folder the 'manage.py' file, and then start the django
+    5) Make sure you're in the same folder the 'manage.py' file, and then start the django
         for testing purposes:
 
             $ python manage.py migrate
             $ python manage.py runserver
 
 
-    7) Through the Config-folder, open the settings.py file:
+    6) Through the Config-folder, open the settings.py file:
     
-        7.1) Organize the settings.py header:
+        6.1) Organize the settings.py header:
 
             # App Essential Settings:
             BASE_DIR = ...
@@ -57,24 +69,24 @@ INSTALLING DJANGO:
 
 
 
-        7.2) Prepare a Global Context with the Essentioal info about the app:
+        6.2) Prepare a Global Context with the Essentioal info about the app:
                 /33-Web-development/general/django/3-2-backend-views/1-building-views-context/global-context.txt
         
 
-        7.3) Still in settings.py file, if you won't use the SQLite as database,
+        6.3) Still in settings.py file, if you won't use the SQLite as database,
             keep in mind your 'SECRET KEY';
 
 
-        7.4) Define your database:
+        6.4) Define your database:
             /33-Web-development/general/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
 
 
-    8) Set the environment variables and create your .env file:
+    7) Set the environment variables and create your .env file:
         /33-Web-development/general/django/1-install-and-first-steps/environment-variables-django.py
 
 
 
-    9) Create the 'templates' folder in the project-folder (Don't mistake with the config-folder);
+    8) Create the 'templates' folder in the project-folder (Don't mistake with the config-folder);
 
         E.g. Django Project Structure:
 
@@ -92,19 +104,19 @@ INSTALLING DJANGO:
                 -manage.py
 
 
-    10) Create your first sub-app in the project:
+    9) Create your first sub-app in the project:
 
-        10.1) Show to Django where will be each template folder in your sub-apps, going to the config-folder 'settings.py' file
+        9.1) Show to Django where will be each template folder in your sub-apps, going to the config-folder 'settings.py' file
             and editing this line in 'template' list:
                 From:
                     'DIRS': [],
                 To:
                     'DIRS': [BASE_DIR / 'templates'],
 
-        10.2) Do this: /33-Web-development/general/django/2-creating-and-deleting-apps/creating.txt
+        9.2) Do this: /33-Web-development/general/django/2-creating-and-deleting-apps/creating.txt
 
 
-    11) Creating the admin user:
+    10) Creating the admin user:
         $ python manage.py createsuperuser
         # Now, try to login, making sure the main-app is running:
         $ python manage.py runserver
@@ -112,7 +124,7 @@ INSTALLING DJANGO:
 
 
 
-    12) Will this project have more than one language?
+    11) Will this project have more than one language?
 
             If not, add in your settings.py:
                 USE_I18N = False
@@ -121,10 +133,10 @@ INSTALLING DJANGO:
                 /33-Web-development/general/django/8-translate-and-internationalization/starting-translation.txt
     
 
-    13) Optionals:
+    12) Optionals:
 
-        13.1) Will you use file upload?
+        12.1) Will you use file upload?
             /33-Web-development/general/django/5-uploads/files/
 
-        13.2) Will you use imagem upload?
+        12.2) Will you use imagem upload?
             /33-Web-development/general/django/5-uploads/images/
