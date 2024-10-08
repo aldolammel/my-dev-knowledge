@@ -12,20 +12,27 @@ class MovieForm(forms.ModelForm):
     # Django built-in Meta-class:
     class Meta:
         # Connecting this form-class (MovieForm) to a model-class (Movie), allowing the form
-        # to bring easily model fields/attributes:
+        # to bring automatically model fields/attributes:
         model = Movie
-        # Specify the fields to include in the form, in the order you want:
+        # Ordering fields on the form, doesn't matter if they're from connected model or extra ones:
         fields = [
             'movie_name',  # coming from connected model (movie)!
             'movie_director',  # coming from connected model!
-            'your_name',
-            'your_message',
+            'included_by',
         ]
         
-        # Extra form fields that will be used to receive data from the template/front-end:
-        # ...
+        # Extra form fields the connected model doesn't have:
+        included_by = forms.CharField(...)
         
-
+        def __init__(self, *args, **kwargs):
+            movie = kwargs.pop('movie', None)  # Get it from the View!
+            super().__init__(*args, **kwargs)
+            # Pre-populate fields with database data if available:
+            if movie:
+                self.fields['movie_name'].initial = movie.movie_name
+                self.fields['movie_director'].initial = movie.movie_director
+                # and 'included_by' ???????????????????????????????
+            
 
 class CustomUserCreationForm(UserCreationForm):
     """
