@@ -71,3 +71,14 @@ CHOICES_STATUS_CONTENT = (
 # OTHERS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # REL_ for 'related_name' on models!
 # VAL_ for constant values!
+
+
+
+
+"""
+    WHERE TO USE THE NAMESPACES:
+    
+        /33-Web-development/general/django/3-1-backend-models-database/namespaces-where-to-use.txt
+
+
+"""
