@@ -71,3 +71,54 @@ class CustomUserCreationForm(UserCreationForm):
         
         
         EXEMPLO INACABADO!!!!!!!!!!!!!!!!!
+        
+        
+        
+        
+class UserProfileTwoCMS(admin.ModelAdmin):
+    '''Defining how the UserProfileTwo Model class (business) will exclusivily be shown on the CMS.'''
+
+    list_display = (
+        'user',
+        'country',  # Imported field from User Model Class!
+        'last_login',  # Imported field from User Model Class!
+    )
+    readonly_fields = (
+        'user',
+        'first_name',  # Imported field from User Model Class!
+        'last_name',  # Imported field from User Model Class!
+        'email',  # Imported field from User Model Class!
+        'date_joined',  # Imported field from User Model Class!
+        'last_login',  # Imported field from User Model Class!
+    )
+    # exclude = ('', '',)
+    list_filter = (
+        'user__sex',  # Imported fields as filter: need to call the original class 'user__'!
+        'goal_primary',
+        'goal_secondary',
+    )
+    search_fields = [
+        'user',
+        'user__first_name',  # Imported fields as search: need to call the original class 'user__'!
+        'user__last_name',  # Imported fields as search: need to call the original class 'user__'!
+    ]
+
+    def first_name(self, obj):
+        return obj.user.first_name
+
+    def last_name(self, obj):
+        return obj.user.last_name
+
+    def email(self, obj):
+        return obj.user.email
+
+    def sex(self, obj):
+        return obj.user.sex
+
+    def date_joined(self, obj):
+        return obj.user.date_joined
+
+    def last_login(self, obj):
+        return obj.user.last_login
+
+    

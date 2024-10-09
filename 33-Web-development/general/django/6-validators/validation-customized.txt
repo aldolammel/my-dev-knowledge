@@ -1,0 +1,163 @@
+
+
+    VALIDATION: CUSTOMIZING WITH CLEAN() METHOD
+
+        clean() is a built-in method that's used in forms and models for customize validations. 
+        When a form (forms or models) is submitted, clean() takes each data field first
+        to execute the customized validation:
+
+        >> Important: all clean() in models will automatically impact on CMS validations,
+                        not needed to add something into 'admin.py' files.
+
+
+        1) Where to use:
+
+            
+            >> Usage for MODEL classes:
+
+                    class Example(model.Model):
+                        ...
+
+                        def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                            # Access model fields directly:
+                            p = self.goal_primary
+                            s = self.goal_secondary
+                            
+                            validate_goals(p, s)  # found in 'validators.py', for example...
+
+
+            >> Usage for FORM classes:
+
+                class ExampleForm(forms.ModelForm):
+                    ...
+
+                    def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                        cleaned_data = super().clean()
+                        p = cleaned_data.get('goal_primary')
+                        s = cleaned_data.get('goal_secondary')
+
+                        validate_goals(p, s)  # found in 'validators.py', for example...
+
+                        return cleaned_data  # Always return cleaned_data from the clean() method!
+
+
+
+        2) Creating the 'validators.py' in the sub-app needed:
+
+            from django.core.exceptions import ValidationError
+
+            def validate_goals(p, s):  # this 'validate_' is convention!
+                '''Checks primary and secondary goal fields logic before to save them on the db.'''        
+                if not p and s:
+                    raise ValidationError(
+                        'Select a primary goal at least!',
+                        code='invalid_choice'
+                    )
+                elif p and s and p == s:
+                    raise ValidationError(
+                        'Primary and secondary goals cant be the same!',
+                        code='overlap'
+                    )
+
+
+                
+                >> Function validators always return 'None' or raise an error message!
+
+
+                >> Error identification (useful for CSS as well) helps you to categorize errors: 
+              
+                
+                    >> code='invalid':
+                        
+                        Meaning that the provided data is not valid according to the specified
+                        rules.
+
+
+                    >> code='required':
+
+                        Raised when a required field is left empty.
+
+
+                    >> code='unique': 
+
+                        Raised when a field or model requires unique values, and the user submits a
+                        duplicate value.
+
+                    
+                    >> code='max_length' | code='min_length':
+
+                        Max - Raised when the length of the input exceeds the maximum allowed length
+                                for a field.
+                        
+                        Min - Raised when the length of the input is less than the minimum required
+                                length for a field.  
+                    
+
+                    >> code='max_value' | code='min_value':
+
+                        Max - Raised when the value of a numeric field exceeds the maximum
+                                allowable value.
+                        
+                        Min - Raised when the value of a numeric field is below the minimum
+                                allowable value.
+
+
+                    >> code='invalid_choice':
+
+                        Raised when a value is selected that is not a valid choice for
+                        a ChoiceField.
+
+                    
+                    >> code='overlap':
+
+                        Custom error code when two fields have overlapping or conflicting values
+                        (useful in date ranges, or two ChoiceField selected options conflicting).
+
+
+                    >> code='non_field_error':
+
+                        This is a catch-all error code used for validations that don't belong to
+                        a specific field, such as cross-field validations (conflicting).
+
+                    
+                    >> code='blank' | code='null':
+
+                        blank - Raised when a required field is left blank, even though null might
+                                be allowed at the database level, but blank=False for forms.
+
+                        null - Raised when a field value is None but the field does not allow null
+                                values (null=False in a model).
+
+
+                    >> code='permission_denied':
+
+                        Raised when the user doesn't have permission to perform a certain action.
+
+
+                    >> code='invalid_login':
+
+                        Raised when login credentials (username/password) are incorrect.
+
+            
+            
+
+
+        3) Customizing templates when needed:
+
+            In your templates, you can target errors based on
+            their codes. If you need to display a different message or style for errors with the 
+            'invalid' code versus another type, the error code helps you do that.
+
+                E.g.
+
+                    {% if form.goal_primary.errors %}
+                        {% for error in form.goal_primary.errors %}
+                            {% if error.code == 'invalid' %}
+                                <p>There is an invalid selection in the goals.</p>
+                            {% else %}
+                                <p>{{ error }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}

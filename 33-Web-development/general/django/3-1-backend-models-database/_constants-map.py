@@ -9,10 +9,14 @@
             from <config-folder-name>.constants import <constant_name>, ...
             
 """
+
+# To avoid circular-import with translation.py, translatable constants must stay here!
+# from django.utils.translation import gettext_lazy as _
+
     
 # APP ESSENTIAL INFO: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ADMIN_EMAIL = 'xxxxx@gmail.com'
-BRAND_NAME = 'My Brand Here'
+BRAND_NAME = 'My Brand Name'
 BRAND_DESCRIPT = 'Soon...'
 BRAND_EMAIL = 'xxxxxx@gmail.com'
 BRAND_URL = 'https://xxxxxxxxx.com'
@@ -55,13 +59,15 @@ PATH_XXXXX_XXXXX_XXXX = 'icons/events/attack/'
 # DATA FOR DATABASE (WARNING!): - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # If values are changed without maintenance on database, multiple errors will raise up!
 CHOICES_SEX = (
-    ('f', trans.TXT_USER_SEX_1),
-    ('m', trans.TXT_USER_SEX_2),
-    ('i', trans.TXT_USER_SEX_3),
+    ('f', 'Female'),    # ('f', _('Female')),
+    ('m', 'Male'),      # ('m', _('Male')),
+    ('i', 'Intersex'),  # ('i', _('Intersex')),
 )
 CHOICES_STATUS_CONTENT = (
-    ('on', trans.CMS_CONTENT_ACTIVE),
-    ('off', trans.CMS_CONTENT_ARCHIVED),
+    ('on', 'Active'),     # _('Active')
+    ('off', 'Archived'),  # _('Archived')
 )
 
 # OTHERS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# REL_ for 'related_name' on models!
+# VAL_ for constant values!

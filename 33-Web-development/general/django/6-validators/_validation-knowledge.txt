@@ -1,8 +1,6 @@
 
 
-    VALIDATIONS
-
-        
+    VALIDATION KNOWLEDGE:
 
 
         >> FOR FORMS AND MODELS:
@@ -12,13 +10,19 @@
             returns nothing if the value is valid or raises a ValidationError if not. 
 
 
+        >> CLEAN() METHOD:
+
+            clean() is a built-in method that's used in forms and models for customize validations.
+
+                /33-Web-development/general/django/6-validators/validation-customized.txt
+            
+
+            
+            
+        >> xxxxxxxxxxx
 
 
-
-
-
-            Validators can be used to validate values inside the field, let’s have a look at
-            Django’s SlugField:
+            Validators can be used to validate values inside the field:
 
                 from django.core import validators
                 from django.forms import CharField

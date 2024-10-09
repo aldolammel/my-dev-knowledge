@@ -33,7 +33,9 @@ class BrandCarStoreForm(forms.ModelForm):
             Make sure your View FBV or CBV has in its Context the 'form' with 'seller' data!
             
             CMS:
-            Don't forget to make the filtering also in admin.py to make the feature usefull
-            throught the admin area.
-        
+            Don't forget to make the filtering also in admin.py (different way) to make the feature
+            usefull throught the admin area.
+            
+                /33-Web-development/general/django/4-cms-admin/cms-queryset-filtering-dropdown.py
+
         """
