@@ -1,0 +1,37 @@
+
+
+    VALIDATIONS
+
+        
+
+
+        >> FOR FORMS AND MODELS:
+
+            Django’s form (and model) fields support use of utility functions and classes known
+            as validators. A validator is a callable object or function that takes a value and 
+            returns nothing if the value is valid or raises a ValidationError if not. 
+
+
+
+
+
+
+
+            Validators can be used to validate values inside the field, let’s have a look at
+            Django’s SlugField:
+
+                from django.core import validators
+                from django.forms import CharField
+
+                class SlugField(CharField):
+                    default_validators = [validators.validate_slug]
+
+            As you can see, SlugField is a CharField with a customized validator that validates
+            that submitted text obeys to some character rules. This can also be done on field
+            definition so:
+
+                slug = forms.SlugField()
+
+            is equivalent to:
+
+                slug = forms.CharField(validators=[validators.validate_slug])

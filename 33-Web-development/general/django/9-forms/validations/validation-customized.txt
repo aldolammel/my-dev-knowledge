@@ -1,0 +1,49 @@
+
+
+    VALIDATION: CUSTOMIZED
+
+
+
+
+
+
+
+    ERROR IDENTIFICATION: 
+
+        You can categorize the type of error. 
+    
+            >> code='invalid':
+                
+                Meaning that the provided data is not valid according to the specified rules.
+
+            >> code='required':
+
+                Raised when a required field is left empty.
+
+            >> code='unique': 
+
+                Raised when a field or model requires unique values, and the user submits a duplicate value.
+
+            
+            >> code='not unique':
+
+
+
+
+    ON TEMPLATES:
+
+        In your templates, you can target errors based on
+        their codes. If you need to display a different message or style for errors with the 
+        'invalid' code versus another type, the error code helps you do that.
+
+        E.g.
+
+            {% if form.goal_primary.errors %}
+                {% for error in form.goal_primary.errors %}
+                    {% if error.code == 'invalid' %}
+                        <p>There is an invalid selection in the goals.</p>
+                    {% else %}
+                        <p>{{ error }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
