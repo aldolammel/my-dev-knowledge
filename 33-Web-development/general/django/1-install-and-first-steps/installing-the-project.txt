@@ -2,6 +2,12 @@
 
 INSTALLING DJANGO:
 
+
+    0) If you are RE-installing Django, skip all of this, and following only this one:
+
+        /33-Web-development/general/django/1-install-and-first-steps/restall-new-django-copy.txt
+
+
     
     1) Create the project folder, and get it:
 
@@ -20,7 +26,7 @@ INSTALLING DJANGO:
 
             >> Update pip module:
                 
-                $ python -m pip install --upgrade pip
+                /04-Basic-Modules/pip-upgrade.txt
 
             >> Install Django:
 
@@ -47,7 +53,7 @@ INSTALLING DJANGO:
     4) Create the Django Project Structure:
 
         # make sure you're in project root folder and:
-        $ django-admin startproject proj_<project_name> .
+        $ django-admin startproject <project_name> .        <-- this install in the current folder!
 
 
     5) Make sure you're in the same folder the 'manage.py' file, and then start the django
@@ -55,6 +61,10 @@ INSTALLING DJANGO:
 
             $ python manage.py migrate
             $ python manage.py runserver
+
+            http://localhost:8000/
+            or
+            http://127.0.0.1:8000/
 
 
     6) Through the Config-folder, open the settings.py file:

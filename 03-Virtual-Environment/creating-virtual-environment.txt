@@ -1,88 +1,126 @@
 
 VIRTUAL ENVIRONMENT:
 
-A virtual environment is a way to have multiple, parallel instances of the Python interpreter, each with different sets
-of packages and different configurations. Each virtual environment contains a discrete copy of the Python interpreter,
-including copies of its support utilities. The packages installed in each virtual environment are seen only in that
-virtual environment and no other. Even large, complex packages with platform-dependent binaries can be corralled off
-from each other in virtual environments.
+    >> A virtual environment is a way to have multiple, parallel instances of the Python
+        interpreter, each with different sets of packages and different configurations. Each
+        virtual environment contains a discrete copy of the Python interpreter, including copies
+        of its support utilities.
+    
+    >> The packages installed in each virtual environment are seen only in that virtual environment 
+        and no other. Even large, complex packages with platform-dependent binaries can be
+        corralled off from each other in virtual environments.
 
-There is 2 methods to create a virtual environment by terminal:
-    A) by Python built-in command;
-    B) by installing a module called virtualenv;
-
-
-------------------------------------------------------------------------------------------------------------------------
-
-
-A.1) CREATING:
-    Windows:
-        $ py -m venv .<venv_name>
-    Debian/Ubuntu:
-        $ sudo apt install python3.XX-venv
-        $ python3 -m venv .<venv_name>     <--- add that dot "." to make it a hidden folder and be automatically ignore by gitignore file.
-    Mac:
-        $ python3 -m venv .<venv_name>
+    >> There is 2 methods to create a virtual environment by terminal:
+        
+        A) by Python built-in command;
+        B) by installing a module called virtualenv;
 
 
-A.2) DELETING:
-    Windows:
-        $ rmdir <venv_name>
-    Debian/Ubuntu:
-        $ rm -r <venv_name>
-    Mac:
-        $ xxxx
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    A) With Python built-in solution:
+
+        >> Creating:
+
+            Windows:
+                $ py -m venv .<venv_name>
+            
+            Debian/Ubuntu:
+                $ sudo apt install python3.XX-venv
+                $ python3 -m venv .<venv_name>  <-- add that dot "." to make it a hidden folder
+                                                    and be automatically ignore by gitignore file.
+            
+            Mac:
+                $ python3 -m venv .<venv_name>
+
+
+        >> Deleting (if needed):
+
+            Windows:
+                $ rmdir <venv_name>
+        
+            Debian/Ubuntu:
+                $ rm -r <venv_name>
+        
+            Mac:
+                $ xxxx
 
 
 
-B.1) CREATING:
-    B.1.1) GO to the terminal;
-    B.1.2) Go to the folder that you want to install the virtual environment;
-    B.1.3) In the folder, type through Terminal to create the virtual environment: $ virtualenv <venv_unique_name>
-        If the command wasn't recognized, install the virtualenv module: $ pip install virtualenv
+    B) With the third-party module:
+
+        >> Creating:
+
+            B1) GO to the terminal;
+            B2) Go to the folder that you want to install the virtual environment;
+            B3) In the folder, type through Terminal to create the virtual environment: 
+                
+                $ virtualenv <venv_unique_name>
+            
+                If the command wasn't recognized, install the virtualenv module: 
+                
+                $ pip install virtualenv
 
 
-B.2) DELETING:
-    Windows:
-        $ xxx
-    Debian/Ubuntu:
-        $ xxx
-    Mac:
-        $ xxxx
+        >> Deleting (if needed):
+            
+            Windows:
+                $ xxx
+
+            Debian/Ubuntu:
+                $ xxx
+
+            Mac:
+                $ xxxx
 
 
-A+B) ACTIVATING:
-    Windows:
-        $ <venv_name>\Scripts\activate
-        # Execute this command below if you are not allow to activate an environment via Windows Terminal:
-        # In PowerShell as administrator:
-            $ Set-ExecutionPolicy Unrestricted -Scope LocalMachine
-            # or:
-            $ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-
-    Debian/Ubuntu:
-        $ . <venv_name>/bin/activate
-
-    Mac:
-        $ source <venv_name>/bin/activate
-
-    Important: the feedback that you're using the right environment is the environment name is flagged in
-                parentheses before the prompt command line as "(venv_name) ..."
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-------------------------------------------------------------------------------------------------------------------------
+    HOW TO ACTIVATE A VIRTUAL ENVIRONMENT:
 
-FOR PYCHARM:
-Reconfigure as needed:
-    1) In lower-right-corner of pycharm, select 'Add new interpreter' > 'Local interpreter'.
-    2) Select 'Existing' and, after that, select '<venv_of_your_project>/Scripts/python.exe'
-    3) Open the Python Interpreter windows (Ctrl+alt+0+S)
-    4) In 'Python interpreter' drop-menu, select 'Show all'.
-    5) Find the new environment and unselect the "Associate this venv with the current project".
-    6) Finally, rename the environment to make its selection easier.
 
-FOR VSCODE:
-Selecting the Interpreter:
-    1) Ctrl+Shift+P
-    2) Type "Python Interpreter"
-    3) Select the environment desired.
+        >> Activating:
+
+            Windows:
+                $ <venv_name>\Scripts\activate
+
+                # Execute this command below if you're not allow to activate an env via Terminal:
+                # In PowerShell as administrator:
+                
+                    $ Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+                    # or:
+                    $ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+
+            Debian/Ubuntu:
+                $ . <venv_name>/bin/activate
+
+            Mac:
+                $ source <venv_name>/bin/activate
+
+            Important: the feedback that you're using the right environment is the environment name
+                        is flagged in parentheses before the prompt command line as "(venv_name) ..."
+
+
+
+        >> Deactivating:
+
+            $ deactivate
+
+
+
+        FOR PYCHARM:
+        Reconfigure as needed:
+            1) In lower-right-corner of pycharm, select 'Add new interpreter' > 'Local interpreter'.
+            2) Select 'Existing' and, after that, select '<venv_of_your_project>/Scripts/python.exe'
+            3) Open the Python Interpreter windows (Ctrl+alt+0+S)
+            4) In 'Python interpreter' drop-menu, select 'Show all'.
+            5) Find the new environ and unselect the "Associate this venv with the current project".
+            6) Finally, rename the environment to make its selection easier.
+
+        FOR VSCODE:
+        Selecting the Interpreter:
+            1) Ctrl+Shift+P
+            2) Type "Python Interpreter"
+            3) Select the environment desired.

@@ -2,9 +2,13 @@
 """
     CONSTANT MAP:
     
-        Recommended be deployed in config-folder as the name 'constants.py'.
+        Recommended be deployed in config-folder as 'constants.py' file.
         
-        To call these constants in other files:
+        To call these constants at the same folder:
+        
+            from .constants import <constant_name>, ...
+        
+        To call them at other folder:
         
             from <config-folder-name>.constants import <constant_name>, ...
             
@@ -23,12 +27,8 @@ BRAND_URL = 'https://xxxxxxxxx.com'
 DEV_NAME = 'ABCOO'
 DEV_URL = 'https://abcoo.com.br'
 
-# SUBAPPS AND THEIR PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-NAMESPACE_1 = 'general'
-NAMESPACE_2 = 'in'
-NAMESPACE_3 = 'accounts'
-NAMESPACE_4 = 'xxxxxxxxx'
-NAMESPACE_5 = 'xxxxxxxxx'
+# SUB-APP PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Critical: do not use sub-app names as a constant. Django demands it as explicity, unfortunately!
 # Pattern names from NAMESPACE_1:
 PATTERN_1_1 = 'home_view'
 PATTERN_1_2 = 'xxxxxx_view'

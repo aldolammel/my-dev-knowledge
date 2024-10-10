@@ -1,18 +1,37 @@
 
 
-HOW TO CREATE A REQUIREMENTS.TXT FILE:
+REQUIREMENTS.TXT FILE:
 
-    1) Go to the project folder;
+    >> The 'requirements.txt' file makes the entire installation process of project's dependencies
+        much easier and straightfoward. 
 
-    2) Active the virtual environment;
 
-    3) Do it:
+    >> How to create it:
 
-        Win:
-            $ 
+        1) In your application folder, with the virtual environment activated, do it:
 
-        Linux/Ubuntu:
-            $ pip freeze > requirements.txt
+            Win:
+                $ 
 
-        Mac:
-            $
+            Linux/Ubuntu:
+                $ pip freeze > requirements.txt
+
+            Mac:
+                $
+
+
+    >> How to use it:
+
+        1) Move the requirements.txt file to the project root;
+
+        2) Once you already got the right virtual environment activated, upgrade the pip:
+
+            /04-Basic-Modules/pip-upgrade.txt
+
+        3) Install the packages at once:
+
+            $ pip install -r requirements.txt
+
+        4) Check if everything is fine:
+
+            $ pip list

@@ -21,7 +21,7 @@
 
                         ...
 
-                Crucial:
+                CRITICAL:
 
                     >> There is a known issue where after 'makemessages' command, the migration
                         file will be created as usual, but when you perform the 'migrate'

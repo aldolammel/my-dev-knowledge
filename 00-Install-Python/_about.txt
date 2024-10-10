@@ -2,7 +2,8 @@ PYTHON INSTALLATION:
 --------------------
 
 WINDOWS:
-    Make sure to check the box that says “Add python.exe to PATH” to make Python accessible from the command line.
+    Make sure to check the box that says “Add python.exe to PATH” to make Python accessible
+    from the command line.
 
 
 UBUNTU:

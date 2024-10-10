@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/ref/models/fields/
 CREATING DJANGO APPS*:
 
     >> (*) Personally, I call 'app' as 'sub-app', meanwhile for me 'app' 
-        (aka 'main-app' or 'project-folder') is the the project itself.
+        (aka 'main-app' or 'project-folder') is the project itself.
 
             E.g. Django Project Structure:
 
@@ -29,17 +29,19 @@ CREATING DJANGO APPS*:
 
     >> Basic to know:
         
-        A) file 'models.py' = this file represents through classes each table to be created for a
-            specific sub-app of your project;
+        >> file 'models.py' = this file represents through classes each table and its columns 
+            to be created for a specific sub-app. Most part of tweaks here will result
+            a 'makemigrations' command necessity followed by 'migrate' one.
         
-        B) command 'makemigrations' = it's responsible for plan the new migrations based on the
-            changes you have made to your models;
+        >> command 'makemigrations' = it's responsible for planning the new features on the db
+            based on the changes you have made to your models;
         
-        C) command 'migrate' = it's responsible for applying and/or unapplying migrations already
+        >> command 'migrate' = it's responsible for applying and/or unapplying migrations already
             planned by 'makemigrations' command.
 
         
     1) In project-folder (root), create each sub-app you need:
+    
         $ python manage.py startapp <subapp_name>
 
 
