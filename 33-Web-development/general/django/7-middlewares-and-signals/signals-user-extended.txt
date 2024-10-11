@@ -45,4 +45,4 @@ USING SIGNALS: EXTENDING THE DJANGO USER DATA
             name = 'accounts'
 
             def ready(self):
-                import accounts.signals
+                from . import signals

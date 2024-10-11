@@ -155,7 +155,7 @@ RE-INSTALL ONLY THE DJANGO:
                             >> Include this method in the sub-app class:
 
                                 def ready(self):
-                                    import <subapp_name>.signals
+                                    from . import signals
 
 
     10) Files (3/3):
