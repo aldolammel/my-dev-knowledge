@@ -10,13 +10,14 @@
 """
 
 from django.contrib import admin
-from .models import UserProfile
+from .models import UserProfile  # type: ignore
 
 
 class UserProfileCMS(admin.ModelAdmin):
 
-    # Remove all CMS capacity to add a UserProfile entry, removing buttons and hyperlinks too:
     def has_add_permission(self, request):
+        '''This built-in method should return True if adding an object is permitted.'''
+        # Prevent the addition of a lone profile accidentally:
         return False
 
 

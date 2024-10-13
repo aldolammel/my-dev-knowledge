@@ -14,20 +14,23 @@
 """
 
 from django.contrib import admin
-from .models import UserProfile
+from .models import UserProfile  # type: ignore
 
 
 class UserProfileCMS(admin.ModelAdmin):
 
-    # Remove the delete action (bulk) from the list-view:
     def get_actions(self, request):
+        '''This built-in method can conditionally enable or disable CMS actions, returning
+        a dictionary of actions allowed.'''
+        # Remove the delete action from the list-view:
         actions = super().get_actions(request)
         if 'delete_selected' in actions:
             del actions['delete_selected']
         return actions
 
-    # Prevent deletion of UserProfile from the CMS, except when User is deleted through list or detail-view:
     def has_delete_permission(self, request, obj=None):
+        '''This built-in method should return True if deleting obj is permitted.'''
+        # Prevent deletion of profile from the CMS, except when User is deleted:
         if request.path.startswith('/admin/auth/user/'):
             return True
         return False
