@@ -1,0 +1,31 @@
+
+
+    ERROR MESSAGES: BASIC
+
+
+
+        >> Django Forms and its default error messages:
+        
+            If a Model Class has no 'blank=True' or has declared 'blank=False', Django Forms
+            will automatically set the form field as REQUIRED, including the error message 
+            'This field is required.' when the field is empty for submitting.
+
+        
+
+
+        >> Model argument 'error_messages={}':
+
+            xxxx
+
+
+
+
+        >> Error messages on forms (templates):
+
+            /33-Web-development/general/django/3-3-frontend-templates/form-error-messages.html
+
+
+
+        >> Error messages on base.html (template):
+
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

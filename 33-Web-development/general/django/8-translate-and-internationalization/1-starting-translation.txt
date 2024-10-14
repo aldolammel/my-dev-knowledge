@@ -92,6 +92,11 @@
                     # path('<virtual_folder>/', include('<subapp_name>.urls')),
                 )
 
+            1.5) (Optional) Create the 'language.py' file in your config-folder:
+
+                /33-Web-development/general/django/8-translate-and-internationalization/language-file-example.py
+                /33-Web-development/general/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
+                
 
       
         2) Defining which text-contents are translatable: - - - - - - - - - - - - - - - - - - - - - 

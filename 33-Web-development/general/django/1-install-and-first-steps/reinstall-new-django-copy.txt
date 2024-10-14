@@ -85,7 +85,7 @@ RE-INSTALL ONLY THE DJANGO:
 
             /config-folder/constants.py
             /config-folder/context_processors.py
-            /config-folder/translation.py                 <--- if you're working with translations!
+            /config-folder/language.py                 <--- if you're working with translations!
             /config-folder/urls.py
             /locale/                                      <--- if you're working with translations!
             /media/

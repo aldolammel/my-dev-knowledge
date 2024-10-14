@@ -22,3 +22,9 @@ HOW TO DEFINE WHICH FORM FIELDS ARE REQUIRED AND WHICH OF THEM ARE NOT:
             # These fields must NOT be required:
             self.fields['city'].required = False
             self.fields['language'].required = False
+
+
+
+
+
+        >> QUESTION: but isn't the 'blank=True' what defines whether a required field? 
