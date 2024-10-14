@@ -1,8 +1,6 @@
 from django.utils.translation import gettext_lazy as _
-from .constants import (
-    BRAND_NAME,
-    # You probably will create dynamic translations as well!
-)
+
+# Reminder: gettext_lazy doesn't work with dynamic compositions _(str) % {dict}, so don't in here!
 
 # SECTION NAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # General Sections (S_G_):
@@ -116,11 +114,11 @@ TX_HELP_USER_PROFILE = _(
 )
 TX_HELP_USER_SEX = _(
     "For clinical and %(brand)s understanding is crucial to get to know which is your birth sex."
-) % {'brand': BRAND_NAME}
+)
 TX_HELP_USER_NOTIF_EMAIL = _(
     'Whether you should receive important (non-ad) notifications from your account via e-mail.'
 )
-TX_HELP_USER_LANG = _('Your favorite language for the %(brand)s interface.') % {'brand': BRAND_NAME}
+TX_HELP_USER_LANG = _('Your favorite language for the %(brand)s interface.')
 TX_HELP_PROFILE_1_COUNTRY = _('Country where you live.')
 TX_HELP_PROFILE_1_NOMAD = _(
     "If you're moving countries very often, use this for some settings are adapted to your reality."

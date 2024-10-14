@@ -41,26 +41,16 @@ class Profile(models.ModelForm):
 """
     WARNING:
     
-    Unfortunately, you cannot make all dynamic translations directly on 'language.py' file.
-    If you use at same time a translatable variable that will feed another translatable variable, 
-    Parler badly will try to translate everything at the same time, bringing weird behaviors, some
-    times translating, sometimes bringing a wrong language, even making the 'makemigrations'
-    command perform changes that is not needed.
+    Unfortunately, you cannot make all translations directly on the 'language.py' file.
+    If you use at same time a translatable variable that will feed another translatable variable
+    (dynamic composition), Parler badly tries to translate everything at the same time, bringing
+    weird behaviors, some times translating to a wrong language, even making the 'makemigrations'
+    command performs unwanted changes.
     
-    Never do this:
+    Never do this (directly using gettext_lazy aside):
     
         TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(lb)s cannot exceed %(val)s characters.') % {
             'lb': lng.LB_PROFILE_NAME,
-            'val': VAL_PROFILE_NAME_MAXLNGH,
-        },
-        
-        
-
-    EXCEPTION:
-    
-    If you feed a translatable variable with a simple variable (not translatable), it's okay:
-    
-        TX_ERRO_PROFILE_NAME_MAXLNGH = _('Name cannot exceed %(val)s characters.') % {
             'val': VAL_PROFILE_NAME_MAXLNGH,
         },
 
