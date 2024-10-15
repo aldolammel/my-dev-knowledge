@@ -7,7 +7,9 @@ DJANGO ADMIN (CMS)
         1) Home: 
 
             It's a page where you get a resume of the CMS options:
-            http://127.0.0.1:8000/admin/
+            
+                http://127.0.0.1:8000/admin/
+
 
 
         2) List view: 
@@ -16,7 +18,9 @@ DJANGO ADMIN (CMS)
             all entries of one type of data in the database is shown. 
             
             E.g., User list: 
-            http://127.0.0.1:8000/admin/auth/user/
+
+                http://127.0.0.1:8000/admin/auth/user/
+
 
 
         3) Detail view:
@@ -25,4 +29,5 @@ DJANGO ADMIN (CMS)
             all data about that specific listed entry you previously have clicked.
 
             E.g., a specific User detail:
-            http://127.0.0.1:8000/admin/auth/user/3/change/
+
+                http://127.0.0.1:8000/admin/auth/user/3/change/

@@ -17,7 +17,7 @@ VAL_PROFILE_NAME_MAXLNGH = 20
 # E.g. in /config-folder/language.py:
 # More about: /33-Web-development/general/django/8-translate-and-internationalization/language-file-example.py
 LB_PROFILE_NAME = _('Profile Name')
-TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(lb)s cannot exceed %(val)s characters.')
+TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.')
 
 
 # E.g. in /accounts/models.py:
@@ -31,7 +31,7 @@ class Profile(models.ModelForm):
         verbose_name = lng.LB_PROFILE_NAME,
         error_messages={
             'max_length': lng.TX_ERRO_PROFILE_NAME_MAXLNGH % {
-                'lb': lng.LB_PROFILE_NAME,
+                'txt': lng.LB_PROFILE_NAME,
                 'val': VAL_PROFILE_NAME_MAXLNGH,
             },
         },
@@ -49,8 +49,8 @@ class Profile(models.ModelForm):
     
     Never do this (directly using gettext_lazy aside):
     
-        TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(lb)s cannot exceed %(val)s characters.') % {
-            'lb': lng.LB_PROFILE_NAME,
+        TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.') % {
+            'txt': lng.LB_PROFILE_NAME,
             'val': VAL_PROFILE_NAME_MAXLNGH,
         },
 
