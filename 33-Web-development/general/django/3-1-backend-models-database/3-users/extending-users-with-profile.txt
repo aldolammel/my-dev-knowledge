@@ -21,70 +21,9 @@ EXTENDING THE USER FEATURES WITH PROFILE:
         from django.db import models
         from django.contrib.auth.models import AbstractUser
 
-        # CONSTANTS:
-        VAL_PROFILE_1 = '1'
-        VAL_PROFILE_2 = '2'
-        VAL_SEX_1 = 'f'
-        VAL_SEX_2 = 'm'
-        VAL_SEX_3 = 'i'
-        REL_PROFILE_1 = 'profile_1'
-        REL_PROFILE_2 = 'profile_2'
-        CHOICES_PROFILE_TYPE = (
-            (VAL_PROFILE_1, 'personnal'),
-            (VAL_PROFILE_2, 'business'),
-        )
-        CHOICES_SEX = (
-            (VAL_SEX_1, 'female'),
-            (VAL_SEX_2, 'male'),
-            (VAL_SEX_3, 'intersex'),
-        )
-
 
         class User(AbstractUser):
-            profile_type = models.CharField(
-                max_length=15,
-                choices=CHOICES_PROFILE_TYPE,
-                default=VAL_PROFILE_1,  # Needed, e.g. when Django superuser is created.
-                blank=False,
-            )
-            first_name = models.CharField(
-                max_length=150,
-                blank=True,
-            )
-            last_name = models.CharField(
-                max_length=150,
-                blank=True,
-            )
-            email = models.EmailField(
-                blank=True,
-            )
-            sex = models.CharField(
-                max_length=20,
-                choices=CHOICES_SEX,
-                null=True,
-                blank=True,
-            )
-            birthdate = models.DateField(
-                null=True,
-                blank=True,
-            )
-            is_notified_by_email = models.BooleanField(
-                default=True,
-            )
-            # created_at = 'date_joined' from AbstractUser
-            updated_at = models.DateTimeField(
-                auto_now=True,
-                blank=True,
-            )
-
-            class Meta:
-                db_table = 'auth_user'
-                ordering = ['username',]
-                verbose_name = 'User'
-                verbose_name_plural = 'Users'
-
-            def __str__(self):
-                return self.username
+            ...
 
 
         class UserProfileOne(models.Model):
@@ -97,25 +36,124 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 User,
                 on_delete=models.CASCADE,  # Tells Django to del the UserProfileOne if the User is deleted.
                 related_name=REL_PROFILE_1,
+                verbose_name=lng.LB_USER,
+            )
+            first_name = models.CharField(
+                max_length=VAL_PROFILE_1_NAME_MAXLNGH,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_1_FNAME,
+                error_messages={
+                    'max_length': lng.TX_ERRO_PROFILE_1_FNAME_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_1_FNAME,
+                        'val': VAL_PROFILE_1_NAME_MAXLNGH,
+                    },
+                },
+            )
+            last_name = models.CharField(
+                max_length=VAL_PROFILE_1_NAME_MAXLNGH,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_1_LNAME,
+                error_messages={
+                    'max_length': lng.TX_ERRO_PROFILE_1_LNAME_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_1_LNAME,
+                        'val': VAL_PROFILE_1_NAME_MAXLNGH,
+                    }
+                },
+            )
+            sex = models.CharField(
+                max_length=20,
+                choices=CHOICES_SEX,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_1_SEX,
+                help_text=lng.TX_HELP_PROFILE_1_SEX % {'txt': BRAND_NAME},
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_1_SEX_BLNK % {'txt': lng.LB_PROFILE_1_SEX},
+                },
+            )
+            birthdate = models.DateField(
+                null=True,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_1_BIRTHDATE,
+                error_messages={
+                    'invalid': lng.TX_ERRO_PROFILE_1_BIRTH_INVLD,
+                },
+            )
+            birth_year = models.CharField(
+                max_length=4,
+                null=True,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_1_BIRTH_YEAR,
+            )
+            country = models.ForeignKey(
+                Country,
+                on_delete=models.SET_NULL,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_1_COUNTRY,
+                help_text=lng.TX_HELP_PROFILE_1_COUNTRY,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_1_COUNTRY_BLNK % {'txt': lng.LB_PROFILE_1_COUNTRY}
+                },
+            )
+            city = models.CharField(
+                max_length=40,
+                null=True,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_1_CITY,
+                help_text=lng.TX_HELP_PROFILE_1_CITY,
             )
             updated_at = models.DateTimeField(
                 auto_now=True,
                 blank=True,
+                verbose_name=lng.LB_UPDATED_AT,
             )
-            # All other fields exclusive from UserProfileOne!
+            updated_by = models.ForeignKey(
+                User,
+                related_name='updated_profiles_1',
+                on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
+                null=True,
+                verbose_name=lng.LB_UPDATED_BY,
+                help_text=lng.TX_HELP_UPDATED_BY,
+            )
 
             class Meta:
                 db_table = 'user_profile_one'
-                ordering = ['user']
-                verbose_name = 'Personnal Profile'
-                verbose_name_plural = 'Personnal Profiles'
+                ordering = ['user', '-updated_at']
+                verbose_name = 'Profile, Personal'
+                verbose_name_plural = 'Profiles, Personal'
 
             def __str__(self):
                 if self.user:
+                    if self.first_name and self.last_name:
+                        return f'{self.user.username} ({self.first_name} {self.last_name})'
                     return self.user.username
-                return 'ERROR: NO PROFILE!'
-            
-            
+                return lng.CMS_ERRO_PROFILE
+
+            def clean(self):
+                '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                validate_birth(self.birthdate)
+
+            def save(self, *args, **kwargs):
+                if self.first_name:
+                    self.first_name = self.first_name.title()
+                if self.last_name:
+                    self.last_name = self.last_name.title()
+                if self.city:
+                    self.city = self.city.title()
+                # Defining the user's birth year automatically:
+                if self.birthdate:
+                    self.birth_year = str(self.birthdate)[:4]
+                # Checking the updated_by:
+                # Important: this need to be checked in admin.py and views.py as well!
+                user = kwargs.pop('user', None)
+                if user and user.is_authenticated and self.updated_by != user:
+                    self.updated_by = user
+                super().save(*args, **kwargs)
+
+
         class UserProfileTwo(models.Model):
             id = models.BigAutoField(
                 primary_key=True,
@@ -124,32 +162,167 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             )
             user = models.OneToOneField(
                 User,
-                on_delete=models.CASCADE,  # Tells Django to del the UserProfileOne if the User is deleted.
-                related_name=REL_PROFILE_1,
+                on_delete=models.CASCADE,  # Tells Django to del the UserProfileTwo if the User is deleted.
+                related_name=REL_PROFILE_2,
+                verbose_name=lng.LB_USER,
+            )
+            business_name = models.CharField(
+                max_length=VAL_PROFILE_2_BNAME_MAXLNGH,
+                # unique=True,  # Commercial name must be flexible! Legal name, not!
+                null=False,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_BNAME,
+                help_text=lng.TX_HELP_PROFILE_2_BNAME,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_2_BNAME_BLNK % {'txt': lng.LB_PROFILE_2_BNAME},
+                    # 'unique': 'This business name already exists.'
+                    'max_length': lng.TX_ERRO_PROFILE_2_BNAME_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_2_BNAME,
+                        'val': VAL_PROFILE_2_BNAME_MAXLNGH,
+                    },
+                },
+            )
+            legal_name = models.CharField(
+                max_length=VAL_PROFILE_2_LEGAL_MAXLNGH,
+                unique=True,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_LEGAL,
+                help_text=lng.TX_HELP_PROFILE_2_LEGAL,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_2_LEGAL_BLNK % {'txt': lng.LB_PROFILE_2_LEGAL},
+                    'unique': lng.TX_ERRO_PROFILE_2_LEGAL_UNIQ,
+                    'max_length': lng.TX_ERRO_PROFILE_2_LEGAL_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_2_LEGAL,
+                        'val': VAL_PROFILE_2_LEGAL_MAXLNGH,
+                    },
+                },
+            )
+            country_business = models.ForeignKey(
+                Country,
+                on_delete=models.SET_NULL,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_COUNTRY,
+                help_text=lng.TX_HELP_PROFILE_2_COUNTRY,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_1_COUNTRY_BLNK,
+                },
+            )
+            city_business = models.CharField(
+                max_length=VAL_PROFILE_2_CITY_MAXLNGH,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_CITY,
+                help_text=lng.TX_HELP_PROFILE_2_CITY,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_2_CITY_BLNK % {'txt': lng.LB_PROFILE_2_CITY},
+                    'max_length': lng.TX_ERRO_PROFILE_2_CITY_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_2_CITY,
+                        'val': VAL_PROFILE_2_CITY_MAXLNGH,
+                    },
+                },
+            )
+            description = models.TextField(
+                max_length=VAL_PROFILE_2_DESC_MAXLNGH,
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_DESC,
+                help_text=lng.TX_HELP_PROFILE_2_DESC,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_2_DESC_BLNK % {'txt': lng.LB_PROFILE_2_DESC},
+                    'max_length': lng.TX_ERRO_PROFILE_2_DESC_MAXLNGH
+                    % {
+                        'txt': lng.LB_PROFILE_2_DESC,
+                        'val': VAL_PROFILE_2_DESC_MAXLNGH,
+                    },
+                },
+            )
+            business_url = models.URLField(
+                blank=True,
+                verbose_name=lng.LB_PROFILE_2_URL,
+            )
+            social_media = models.URLField(
+                blank=True,
+                verbose_name=lng.LB_PROFILE_2_URL_SOCIAL,
+            )
+            business_email = models.EmailField(
+                null=True,
+                blank=False,
+                verbose_name=lng.LB_PROFILE_2_EMAIL,
+                error_messages={
+                    'blank': lng.TX_ERRO_PROFILE_2_EMAIL_BLNK % {'txt': lng.LB_PROFILE_2_EMAIL},
+                    'invalid': lng.TX_ERRO_PROFILE_2_EMAIL_INVLD,
+                },
+            )
+            contact_first_name = models.CharField(
+                max_length=20,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_2_FNAME,
+            )
+            contact_last_name = models.CharField(
+                max_length=20,
+                blank=True,
+                verbose_name=lng.LB_PROFILE_2_LNAME,
             )
             updated_at = models.DateTimeField(
                 auto_now=True,
                 blank=True,
+                verbose_name=lng.LB_UPDATED_AT,
             )
-            # All other fields exclusive from UserProfileTwo!
+            updated_by = models.ForeignKey(
+                User,
+                related_name='updated_profiles_2',
+                on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
+                null=True,
+                verbose_name=lng.LB_UPDATED_BY,
+                help_text=lng.TX_HELP_UPDATED_BY,
+            )
 
             class Meta:
                 db_table = 'user_profile_two'
-                ordering = ['user']
-                verbose_name = 'Business Profile'
-                verbose_name_plural = 'Business Profiles'
+                ordering = ['user', '-updated_at']
+                verbose_name = 'Profile, Business'
+                verbose_name_plural = 'Profiles, Business'
 
             def __str__(self):
                 if self.user:
+                    if self.business_name:
+                        return f'{self.business_name} ({self.user.username})'
                     return self.user.username
-                return 'ERROR: NO PROFILE!'
+                return lng.CMS_ERRO_PROFILE
+
+            def clean(self):
+                '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                pass
+
+            def save(self, *args, **kwargs):
+                if self.business_name:
+                    self.business_name = self.business_name.title()
+                if self.legal_name:
+                    self.legal_name = self.legal_name.upper()
+                if self.contact_first_name:
+                    self.contact_first_name = self.contact_first_name.title()
+                if self.contact_last_name:
+                    self.contact_last_name = self.contact_last_name.title()
+                if self.city_business:
+                    self.city_business = self.city_business.title()
+                # Checking the updated_by:
+                # Important: this need to be checked in admin.py and views.py as well!
+                user = kwargs.pop('user', None)
+                if user and user.is_authenticated and self.updated_by != user:
+                    self.updated_by = user
+                super().save(*args, **kwargs)
 
         
 
     3) Create the signal to create a linked UserProfile entry automatically when a new user is
         created via front-end or Django CMS:
 
-        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-extended.txt
+        /33-Web-development/general/django/7-middlewares-and-signals/signals/signals-user-extended.txt
 
 
 
@@ -158,27 +331,60 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
         from django.contrib import admin
         from django.contrib.auth.admin import UserAdmin
+        from .forms import CustomUserCreationForm
         from django.utils.html import format_html
         from django.urls import reverse
+        from config_folder.constants import (
+            REL_PROFILE_1,
+            REL_PROFILE_2,
+            PATH_CMS_USERS,
+        )
         from .models import (
             User,
             UserProfileOne,
             UserProfileTwo,
-            VAL_PROFILE_1,
-            VAL_PROFILE_2,
-            REL_PROFILE_1,
-            REL_PROFILE_2,
+        )
+        from config_folder.language import (
+            TX_PROFILE_1,
+            TX_PROFILE_2,
+            CMS_MORE_DETAILS,
+            CMS_ERRO_PROFILE,
         )
 
 
         class UserCMS(UserAdmin):
             '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 
+            # Specify the custom form for creating users
+            add_form = CustomUserCreationForm
+
             list_display = (
                 'username',
                 'email',
                 'last_login',
+                'is_staff',
+                # List_display accept imported fields using prefix and imported method (prefix recommended):
+                # Reserved space...
             )
+            # All fields exclusivily for the CMS Adding New User:
+            add_fieldsets = (
+                (
+                    None,
+                    {
+                        'classes': ('wide',),
+                        'fields': (
+                            'profile_type',
+                            'username',
+                            'email',
+                            'password1',
+                            'password2',
+                            'accepted_min_age',
+                            'accepted_our_privacy',
+                        ),
+                    },
+                ),
+            )
+            # All fields exclusivily for the CMS Visualizing a User:
             fieldsets = (
                 (
                     None,
@@ -186,6 +392,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                         'fields': (
                             'username',
                             'password',
+                            'profile_type',
+                            'profile_link',  # Adding the UserProfile link in the User Detail-view!
                         )
                     },
                 ),
@@ -193,12 +401,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                     'Personal info',
                     {
                         'fields': (
-                            'first_name',
-                            'last_name',
                             'email',
-                            'sex',
-                            'birthdate',
-                            'profile_link',  # Adding the UserProfile link in the User Detail-view!
+                            'language',
                         )
                     },
                 ),
@@ -222,28 +426,49 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                             'date_joined',
                             'last_login',
                             'updated_at',
+                            'updated_by',
                         )
                     },
                 ),
             )
             list_filter = (
-                'is_active',
-                'sex',
+                'profile_type',
+                'language',
                 'is_notified_by_email',
+                'is_active',
                 'is_staff',
                 'is_superuser',
+                # List_filter only accepts imported fields using prefix:
+                # Important: Don't call UserProfile's content here in this case!
             )
             search_fields = [
                 'username',
-                'first_name',
-                'last_name',
                 'email',
+                'date_joined',
+                # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+                'userprofileone__first_name',
+                'userprofileone__last_name',
+                'userprofileone__birth_year',
+                'userprofileone__city',
+                'userprofileone__country',
+                'userprofiletwo__contact_first_name',
+                'userprofiletwo__contact_last_name',
+                'userprofiletwo__business_email',
+                'userprofiletwo__city_business',
+                'userprofiletwo__country_business',
             ]
             readonly_fields = (
-                'username',
+                # 'profile_type',  # Dynamicaly included!
+                # 'username',  # Dynamicaly included!
+                # 'accepted_min_age',  # Dynamicaly included!
+                # 'accepted_our_privacy',  # Dynamicaly included!
+                'profile_link',  # Important: don't remove 'profile_link' from here!
                 'date_joined',
                 'last_login',
                 'updated_at',
+                'updated_by',
+                # Readonly_fields only accept imported method, never with prefix:
+                # Important: Don't call UserProfile's content here in this case!
             )
 
             # Create a hyperlink to the associated UserProfile to be used on the list-view and detail-view:
@@ -254,165 +479,205 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                         'admin:accounts_userprofileone_change',
                         args=[getattr(obj, REL_PROFILE_1).id],
                     )
-                    return format_html(
-                        "<a href='{}'>{} ({})</a>", url, 'personnal', 'more details'
-                    )
+                    return format_html("<a href='{}'>{} ({})</a>", url, TX_PROFILE_1, CMS_MORE_DETAILS)
                 elif obj.profile_type == '2' and hasattr(obj, REL_PROFILE_2):
                     url = reverse(
                         'admin:accounts_userprofiletwo_change',
                         args=[getattr(obj, REL_PROFILE_2).id],
                     )
-                    return format_html(
-                        "<a href='{}'>{} ({})</a>", url, 'business', 'more details'
-                    )
-                return 'ERROR: NO PROFILE!'
+                    return format_html("<a href='{}'>{} ({})</a>", url, TX_PROFILE_2, CMS_MORE_DETAILS)
+                return CMS_ERRO_PROFILE
 
             profile_link.short_description = 'User Profile'
 
-            # Make profile_link readonly in the detail-view:
             def get_readonly_fields(self, request, obj=None):
-                return super().get_readonly_fields(request, obj) + ('profile_link',)  # type: ignore
+                """Built-in method to extend the 'readonly_fields' power."""
+                if obj:
+                    # If the user exists (obj), make some fields field read-only on detail-view,
+                    # but still editable on the CMS Add User form:
+                    return self.readonly_fields + (
+                        'profile_type',
+                        'username',
+                        'accepted_min_age',
+                        'accepted_our_privacy',
+                    )  # type: ignore
+                return self.readonly_fields
+
+            def save_model(self, request, obj, form, change):
+                # Checks to save the current user as updated_by:
+                cms_user = request.user
+                if change and cms_user != obj.updated_by:
+                    obj.updated_by = cms_user
+                super().save_model(request, obj, form, change)
 
 
         class UserProfileOneCMS(admin.ModelAdmin):
-            '''Defining how the UserProfileOne Model class will exclusivily be shown on the CMS.'''
+            '''Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS.'''
 
             list_display = (
                 'user',
-                # add here the unique fields from ProfileOne!
+                'sex',
+                'birth_year',
+                'country',
+                # List_display accept imported fields using prefix and imported method (prefix recommended):
+                'user__last_login',
             )
+            exclude = ('birth_year',)
+            list_filter = (
+                'sex',
+                'country',
+                'is_nomad',
+                # List_filter only accepts imported fields using prefix:
+                'user__language',
+            )
+            search_fields = [
+                'user',
+                'city',
+                'first_name',
+                'last_name',
+                'birth_year',
+                # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+                'user__email',
+            ]
             readonly_fields = (
                 'user',
-                'first_name',  # Imported field from User model class! 
-                'last_name',  # Imported field from User model class!
-                'email',  # Imported field from User model class!
-                'sex',  # Imported field from User model class!
-                'date_joined',  # Imported field from User model class!
-                'last_login',  # Imported field from User model class!
+                'updated_at',
+                'updated_by',
+                # Readonly_fields only accept imported method, never with prefix:
+                'email',  # Imported from User
+                'is_notified_by_email',  # Imported from User
+                'language',  # Imported from User
+                'last_login',  # Imported from User
+                'date_joined',  # Imported from User
             )
-            # exclude = ('xxxx',)
-            # List Filter: you cannot call imported fields!
-            # list_filter = ('xxx', 'xxx',)  # add here the filterable fields from ProfileOne!
-            search_fields = [
-                'user', 
-                'first_name', 
-                'last_name', 
-                'email',
-                # add here the searchable fields from ProfileOne!
-            ]
 
-            # Bringing from User class:
-            def first_name(self, obj):
-                return obj.user.first_name
-
-            # Bringing from User class:
-            def last_name(self, obj):
-                return obj.user.last_name
-
-            # Bringing from User class:
+            # Importing field from User model class:
             def email(self, obj):
                 return obj.user.email
 
-            # Bringing from User class:
-            def sex(self, obj):
-                return obj.user.sex
-            
-            # Bringing from User class:
-            def date_joined(self, obj):
-                return obj.user.date_joined
+            def is_notified_by_email(self, obj):
+                return obj.user.is_notified_by_email
 
-            # Bringing from User class:
+            def language(self, obj):
+                return obj.user.language
+
             def last_login(self, obj):
                 return obj.user.last_login
 
-            # Remove the delete action from the list-view:
+            def date_joined(self, obj):
+                return obj.user.date_joined
+
             def get_actions(self, request):
+                '''This built-in method can conditionally enable or disable CMS actions, returning
+                a dictionary of actions allowed.'''
+                # Remove the delete action from the list-view:
                 actions = super().get_actions(request)
                 if 'delete_selected' in actions:
                     del actions['delete_selected']
                 return actions
 
-            # Prevent deletion of profile from the CMS, except when User is deleted:
             def has_delete_permission(self, request, obj=None):
-                if request.path.startswith('/admin/auth/user/'):
+                '''This built-in method should return True if deleting obj is permitted.'''
+                # Prevent deletion of profile from the CMS, except when User is deleted:
+                if request.path.startswith(PATH_CMS_USERS):
                     return True
                 return False
 
-            # Prevent the addition of a lone profile accidentally:
             def has_add_permission(self, request):
+                '''This built-in method should return True if adding an object is permitted.'''
+                # Prevent the addition of a lone profile accidentally:
                 return False
+
+            def save_model(self, request, obj, form, change):
+                # Checks to save the current user as updated_by:
+                cms_user = request.user
+                if change and cms_user != obj.updated_by:
+                    obj.updated_by = cms_user
+                super().save_model(request, obj, form, change)
 
 
         class UserProfileTwoCMS(admin.ModelAdmin):
-            '''Defining how the UserProfileTwo Model class will exclusivily be shown on the CMS.'''
+            '''Defining how the UserProfileTwo Model class (business) will exclusivily be shown on the CMS.'''
 
             list_display = (
                 'user',
-                # add here the unique fields from ProfileTwo!
+                'business_name',
+                'country_business',
+                # List_display accept imported fields using prefix and imported method (prefix recommended):
+                'user__last_login',
             )
-            readonly_fields = (
-                'user',
-                'first_name',  # Custom field from User class 
-                'last_name',  # Custom field from User class
-                'email',  # Custom field from User class
-                'sex',  # Custom field from User class
-                'date_joined',  # Custom field from User class
-                'last_login',  # Custom field from User class
-            )
-            # exclude = ('xxxx',)
+            # exclude = ('', '',)
             list_filter = (
-                'sex',
-                # add here the filterable fields from ProfileTwo!
+                'country_business',
+                # List_filter only accepts imported fields using prefix:
+                'user__language',
             )
             search_fields = [
-                'user', 
-                'first_name', 
-                'last_name', 
-                'email',
-                # add here the searchable fields from ProfileTwo!
+                'user',
+                'description',
+                'city_business',
+                'contact_first_name',
+                'contact_last_name',
+                'business_email',
+                'date_joined',
+                # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+                'user__email',
             ]
+            readonly_fields = (
+                'user',
+                'updated_at',
+                'updated_by',
+                # Readonly_fields only accept imported method, never with prefix:
+                'email',  # Imported from User
+                'is_notified_by_email',  # Imported from User
+                'language',  # Imported from User
+                'last_login',  # Imported from User
+                'date_joined',  # Imported from User
+            )
 
-            # Bringing from User class:
-            def first_name(self, obj):
-                return obj.user.first_name
-
-            # Bringing from User class:
-            def last_name(self, obj):
-                return obj.user.last_name
-
-            # Bringing from User class:
             def email(self, obj):
                 return obj.user.email
 
-            # Bringing from User class:
-            def sex(self, obj):
-                return obj.user.sex
-            
-            # Bringing from User class:
-            def date_joined(self, obj):
-                return obj.user.date_joined
+            def is_notified_by_email(self, obj):
+                return obj.user.is_notified_by_email
 
-            # Bringing from User class:
+            def language(self, obj):
+                return obj.user.language
+
             def last_login(self, obj):
                 return obj.user.last_login
 
-            # Remove the delete action from the list-view:
+            def date_joined(self, obj):
+                return obj.user.date_joined
+
             def get_actions(self, request):
+                '''This built-in method can conditionally enable or disable CMS actions, returning
+                a dictionary of actions allowed.'''
+                # Remove the delete action from the list-view:
                 actions = super().get_actions(request)
                 if 'delete_selected' in actions:
                     del actions['delete_selected']
                 return actions
 
-            # Prevent deletion of profile from the CMS, except when User is deleted:
             def has_delete_permission(self, request, obj=None):
-                if request.path.startswith('/admin/auth/user/'):
+                '''This built-in method should return True if deleting obj is permitted.'''
+                # Prevent deletion of profile from the CMS, except when User is deleted:
+                if request.path.startswith(PATH_CMS_USERS):
                     return True
                 return False
 
-            # Prevent the addition of a lone profile accidentally:
             def has_add_permission(self, request):
+                '''This built-in method should return True if adding an object is permitted.'''
+                # Prevent the addition of a lone profile accidentally:
                 return False
-            
+
+            def save_model(self, request, obj, form, change):
+                # Checks to save the current user as updated_by:
+                cms_user = request.user
+                if change and cms_user != obj.updated_by:
+                    obj.updated_by = cms_user
+                super().save_model(request, obj, form, change)
+
 
         # Registering Django CMS customizations:
         admin.site.register(User, UserCMS)

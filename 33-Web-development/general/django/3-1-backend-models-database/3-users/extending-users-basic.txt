@@ -15,40 +15,39 @@ EXTENDING THE USER FEATURES (BASIC):
         
         >> Create your custom User class:
 
-            >> Recommended to set in here: /accounts/models.py
+            >> Highly recommended to set in here: /accounts/models.py
 
-            from django.contrib.auth.models import AbstractUser
-            from django.db import models
+                from django.contrib.auth.models import AbstractUser
+                from django.db import models
 
-            class User(AbstractUser):
-                # Overriding the original fields just to custom them (as translating, for example):
-                first_name = models.CharField(
-                    max_length=150,
-                    blank=True,
-                )
-                last_name = models.CharField(
-                    max_length=150,
-                    blank=True,
-                )
-                email = models.EmailField(
-                    blank=True,
-                )
-                # Those original fields (from AbstractUser) that are not overriden, they'll be working normally!
+                class User(AbstractUser):
+                    # Overriding the original fields just to custom them (as translating, for example):
+                    first_name = models.CharField(
+                        max_length=150,
+                        blank=True,
+                    )
+                    last_name = models.CharField(
+                        max_length=150,
+                        blank=True,
+                    )
+                    email = models.EmailField(
+                        blank=True,
+                    )
+                    # Those original fields (from AbstractUser) that are not overriden, they'll be working normally!
 
-                # Adding new fields to extending the User features:
-                ...
+                    # Adding new fields to extending the User features:
+                    ...
 
-                class Meta:
-                    db_table = 'auth_user'  # I like to keep the original name!
-                    ordering = ['username']
-                    verbose_name = 'User'
-                    verbose_name_plural = 'Users'
+                    class Meta:
+                        db_table = 'auth_user'  # I like to keep the original name!
+                        ordering = ['username']
+                        verbose_name = 'User'
+                        verbose_name_plural = 'Users'
+                    
+                    def __str__(self):
+                        return self.username
+
                 
-                def __str__(self):
-                    return self.username
-
-                
-
 
     3) In settings.py, say that Django needs to look for users in the new extended class:
 
@@ -62,22 +61,71 @@ EXTENDING THE USER FEATURES (BASIC):
 
 
 
-    5) Customizing the CMS User list-view and detail-view:
+    5) accounts/forms.py:
 
-        from django.contrib import admin
+        from django.contrib.auth.forms import UserCreationForm
+        from .models import User
+
+
+        class CustomUserCreationForm(UserCreationForm):
+            """Customizing the Django User Registration form for front-end."""
+
+            class Meta:
+                # Connected model to populate:
+                model = User
+                # Ordering fields on the form:
+                fields = [
+                    'username',
+                    'email',
+                    'password1',
+                    'password2',
+                ]
+
+            # Extra fields:
+            # Important: signals.py: should the extra fields be declared over there? Check it!
+            # Reserved space...
+
+
+
+
+    6) Customizing the CMS User list-view and detail-view:
+
         from django.contrib.auth.admin import UserAdmin
-        from .models import User  # Your user extended!
+        from .forms import CustomUserCreationForm
+        from .models import User
 
 
         class UserCMS(UserAdmin):
             '''Defining how the User Model class will exclusivily be shown on the CMS.'''
-            
+
+            # Specify the custom form for creating users
+            add_form = CustomUserCreationForm
+
             list_display = (
                 'username',
                 'email',
                 'last_login',
+                'is_staff',
+                # List_display accept imported fields using prefix and imported method (prefix recommended):
+                # Reserved space...
             )
-            # How the fields will be organized in the User CMS detail-view:
+            # All fields exclusivily for the CMS Adding New User:
+            add_fieldsets = (
+                (
+                    None,
+                    {
+                        'classes': ('wide',),
+                        'fields': (
+                            'profile_type',
+                            'username',
+                            'email',
+                            'password1',
+                            'password2',
+                        ),
+                    },
+                ),
+            )
+            # All fields exclusivily for the CMS Visualizing a User:
             fieldsets = (
                 (
                     None,
@@ -92,8 +140,6 @@ EXTENDING THE USER FEATURES (BASIC):
                     'Personal info',
                     {
                         'fields': (
-                            'first_name',
-                            'last_name',
                             'email',
                         )
                     },
@@ -114,8 +160,10 @@ EXTENDING THE USER FEATURES (BASIC):
                     'Important dates',
                     {
                         'fields': (
-                            'last_login',
                             'date_joined',
+                            'last_login',
+                            'updated_at',
+                            'updated_by',
                         )
                     },
                 ),
@@ -124,18 +172,47 @@ EXTENDING THE USER FEATURES (BASIC):
                 'is_active',
                 'is_staff',
                 'is_superuser',
+                # List_filter only accepts imported fields using prefix:
+                # Reserved space...
             )
             search_fields = [
                 'username',
-                'first_name',
-                'last_name',
                 'email',
+                'date_joined',
+                # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+                # Reserved space...
             ]
             readonly_fields = (
+                # 'username',  # Dynamicaly included!
                 'date_joined',
                 'last_login',
+                'updated_at',
+                'updated_by',
+                # Readonly_fields only accept imported method, never with prefix:
+                # Reserved space...
             )
-            
-            
+
+            def get_readonly_fields(self, request, obj=None):
+                """Built-in method to extend the 'readonly_fields' power."""
+                if obj:
+                    # If the user exists (obj), make some fields field read-only on detail-view,
+                    # but still editable on the CMS Add User form:
+                    return self.readonly_fields + (
+                        'username',
+                    )  # type: ignore
+                return self.readonly_fields
+
+            def save_model(self, request, obj, form, change):
+                # Checks to save the current user as updated_by:
+                cms_user = request.user
+                if change and cms_user != obj.updated_by:
+                    obj.updated_by = cms_user
+                super().save_model(request, obj, form, change)
+                
+                
+                
+        # Registering Django CMS customizations:
         admin.site.register(User, UserCMS)
+        # Registering App CMS features:
+        # Reserved space...
 

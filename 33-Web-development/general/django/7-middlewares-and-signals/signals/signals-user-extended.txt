@@ -16,23 +16,17 @@ USING SIGNALS: EXTENDING THE DJANGO USER DATA
 
         from django.dispatch import receiver
         from django.db.models.signals import post_save
-        from django.contrib.auth.models import User
-        from .models import UserProfile
+        from .models import User, UserProfileOne, UserProfileTwo
 
 
-        # Creates the UserProfile when a new User is created, associating the UserProfile to the new User:
+        # Creates and associates one of UserProfile types to the new User:
         @receiver(post_save, sender=User)
         def user_profile_auto_creation(sender, instance, created, **kwargs):
             if created:
-                # Create the UserProfile with additional fields data from the form (if available):
-                profile_data = getattr(instance, '_profile_data', {})
-                UserProfile.objects.create(
-                    user=instance,
-                    profile_type=profile_data.get(
-                        'profile_type', UserProfile._meta.get_field('profile_type').default
-                    ),
-                    sex=profile_data.get('sex', None),
-                )
+                if instance.profile_type == '1':
+                    UserProfileOne.objects.create(user=instance)
+                else:
+                    UserProfileTwo.objects.create(user=instance)
 
 
 

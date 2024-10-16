@@ -126,7 +126,7 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
     2) Create the signal to create the UserProfile automatically when a new user is
         created in Django:
 
-        /33-Web-development/general/django/7-middlewares-and-signals/signals-user-expansion.txt
+        /33-Web-development/general/django/7-middlewares-and-signals/signals/signals-user-expansion.txt
 
 
 

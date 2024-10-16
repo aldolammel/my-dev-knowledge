@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+    
+    <div class="row login text-center">
+        <h1>{{ page_title }}</h1>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="login-form">
+
+            <!-- REGISTER FORM - START -->
+            <form method="post">
+
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+
+                <button type="submit">{{ bt_submit }}</button>
+                <ul>
+                    <li><a href="{% url 'accounts:login' %}">{{ bt_have_account }}</a></li>
+                </ul>
+            </form>
+            <!-- REGISTER FORM - END --> 
+
+        </div>
+        <div class="col"></div>
+    </div>     
+    
+{% endblock %}

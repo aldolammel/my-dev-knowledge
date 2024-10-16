@@ -2,9 +2,9 @@
 
 USERS SETUP
 
-    >> If your project needs any kind of user management, you must use this settings!
+    >> If your project needs any kind of user management, you must use these settings!
     
-    >> These settings are built-in features of Django, so do not change anything! 
+    >> They are built-in features of Django, so do not change anything! 
 
 
     1) Create a sub-app called 'accounts' and add it in the config-folder settings.py

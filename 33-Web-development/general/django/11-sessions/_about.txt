@@ -26,7 +26,7 @@ ACTIVING SESSION IN THE PROJECT:
         'django.contrib.sessions.middleware.SessionMiddleware',
 
         >> More about middleware: 
-            /33-Web-development/general/django/7-middlewares-and-signals/
+            /33-Web-development/general/django/7-middlewares-and-signals/middlewares/
 
 
     3) In 'INSTALLED_APPS' list, add this right after the '.contenttypes' app:
