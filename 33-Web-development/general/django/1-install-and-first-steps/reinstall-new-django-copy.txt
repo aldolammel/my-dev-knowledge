@@ -167,6 +167,7 @@ RE-INSTALL ONLY THE DJANGO:
 
                     /sub-app/admin.py
                     /sub-app/forms.py
+                    /sub-app/middlewares.py
                     /sub-app/models.py
                     /sub-app/signals.py
                     /sub-app/validators.py

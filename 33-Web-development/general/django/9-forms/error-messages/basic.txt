@@ -19,7 +19,7 @@
             for a given attribute will generate the planned error message. However, this method is 
             server-side, that is, it is handled by the server and not by the client machine.
 
-                <example here>
+                <example here> xxxxxxxxxxxxxxxx
 
 
         >> Error messages on forms (templates):
@@ -34,3 +34,9 @@
         >> Error messages on base.html (template):
 
             /33-Web-development/general/django/3-3-frontend-templates/3-base.html
+
+
+
+        >> Error messages customizations:
+
+            /33-Web-development/general/django/6-validators/validation-customized.txt
