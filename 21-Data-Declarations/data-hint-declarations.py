@@ -14,18 +14,23 @@ anything = any
 """
 
 # simplest example of object data type declaration:
-my_age: int
-my_height: float
-my_name: str
+age: int
+height: float
+name: str
 is_adult: bool
+user: object
+date: str
+car: list
+store: dict
+final_score: tuple
 
 
 # Function with data type declaration:
-def police_check(age: int) -> bool:              # setting the "age" must get an integer and the fnc must return a bool.
+def police_check(age: int) -> bool:  # "age" must get integer and fnc return bool.
     can_drive = False
     if age > 18:
         can_drive = True
-    return can_drive                           # change it to string and see how the declaration will help you to debug.
+    return can_drive  # change it to string and see how the declaration will help you to debug.
 
 
-print(police_check(18))  # change int to string or bool for example to see how the previous declaration helps you.
+print(police_check(18))  # change int to string or bool to see how the previous declaration helps.

@@ -22,58 +22,58 @@ QUERYSET: CREATING AND READING
             
         1) Ask to Django import a table content:
         
-            $ from <subapp_name>.models import <ClassModelName>
+            >>> from <subapp_name>.models import <ClassModelName>
 
                 E.g. 
                     
-                    $ from event_attack.models import EventAttack
+                    >>> from event_attack.models import EventAttack
 
 
         2) Define the content imported to a variable:
-            $ q = <ClassModelName>.objects.all()
+            >>> q = <ClassModelName>.objects.all()
             
             # printing the object. If empty, will be shown '<QuerySet []>':
-            $ q         
+            >>> q         
 
 
         3.1) Checking all objects/rows of the table:
 
             # Returns the query dictionary:
-            $ vars(q)    or    $ q.__dict__
+            >>> vars(q)    or    >>> q.__dict__
 
             # Show a dictionary of all attributes of the first object: 
-            $ vars(q.first())    or    $ q.first().__dict__
+            >>> vars(q.first())    or    >>> q.first().__dict__
             
 
         3.2) Checking a specific attribute of one object/row of the table:
 
-            $ q = <ClassModelName>.objects.first()
+            >>> q = <ClassModelName>.objects.first()
 
             # Checking the internal representation of the object:
-            $ q.<attribute_name>
+            >>> q.<attribute_name>
             
             # Checking the string method representation (if available):
-            $ print(q.<attribute_name>)
+            >>> print(q.<attribute_name>)
 
             # Show a dictionary of all attributes of the first object: 
-            $ vars(q)      or     $ q.__dict__
+            >>> vars(q)      or     >>> q.__dict__
 
 
         ADDING:
         
         1) Ask to Django import a table content:
         
-            $ from <subapp_name>.models import <ClassModelName>
+            >>> from <subapp_name>.models import <ClassModelName>
 
                 E.g. 
                     
-                    $ from event_attack.models import EventAttack
+                    >>> from event_attack.models import EventAttack
 
 
         2) Lets add some value into the 'name' attribute/column of the class/table:
-            $ q = <ClassModelName>.objects.create(name='Something')
+            >>> q = <ClassModelName>.objects.create(name='Something')
 
 
         3) Check the new data in the same query:
-            $ q
-            $ vars(q)    or    $ q.__dict__
+            >>> q
+            >>> vars(q)    or    >>> q.__dict__

@@ -1,31 +1,42 @@
 
-IMPORTING
+IMPORTING MODULE:
 
         >> To import a entire module/file from the same folder as your current file:
 
                 from . import <file_name>
 
-                E.g.    from . import views
+                        E.g.    
+                                from . import views
 
                 Calling 'register' method from 'views':
-                E.g.    views.register
+
+                        E.g.
+                                var = views.register
+
 
         >> To import a specific function/method from the same folder as your current file:
 
                 from .<file_name> import <method_name>
 
-                E.g.    from .views import register
+                        E.g.
+                                from .views import register
 
                 Calling 'register' method from 'views':
-                E.g     register
+                
+                        E.g     
+                                var = register
+
 
         >> To import a entire module/file from a different folder as your current file:
 
-                import my_project_folder.views
+                E.g.
+
+                        import my_project_folder.views
 
 
         >> To import a specific function/method from a different folder as your current file:
 
-                from my_project_folder.views import register
+                E.g.
+                        from my_project_folder.views import register
 
             

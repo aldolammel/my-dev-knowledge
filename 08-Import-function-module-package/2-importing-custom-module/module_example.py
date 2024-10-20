@@ -4,54 +4,54 @@ Module names (file) the best practices ask to use all-lowercase and, if needed, 
 """
 
 
-def cal_factorial(_num=0):
-    _fact = 1
-    for _i in range(1, _num + 1):
-        _fact = _fact * _i
-    return _fact
+def cal_factorial(n=0):
+    fact = 1
+    for _i in range(1, n + 1):
+        fact = fact * _i
+    return fact
 
 
-def cal_double(_num=0, _format=False):
-    _num = _num * 2
-    if not _format:
-        return _num
+def cal_double(n=0, format_=False):
+    n = n * 2
+    if not format_:
+        return n
     else:
-        return currency(_num)
+        return currency(n)
 
 
-def cal_triple(_num=0, _format=False):
-    _num = _num * 3
-    if not _format:
-        return _num
+def cal_triple(n=0, format_=False):
+    n = n * 3
+    if not format_:
+        return n
     else:
-        return currency(_num)
+        return currency(n)
 
 
-def cal_increase(_price=0, _percent=0, _format=False):
-    _price = int(_price + ((_price / 100) * _percent))
-    if not _format:
-        return _price
+def cal_increase(price=0, percent=0, format_=False):
+    price = int(price + ((price / 100) * percent))
+    if not format_:
+        return price
     else:
-        return currency(_price)
+        return currency(price)
 
 
-def cal_half(_num=0, _format=False):
-    _num = int(_num / 2)
-    if not _format:
-        return _num
+def cal_half(n=0, format_=False):
+    n = int(n / 2)
+    if not format_:
+        return n
     else:
-        return currency(_num)
+        return currency(n)
 
 
-def currency(_price=0, _currency='R$'):
-    return f'{_currency}{_price:.2f}'.replace('.', ',')
+def currency(price=0, currency='R$'):
+    return f'{currency}{price:.2f}'.replace('.', ',')
 
 
-def resume(_price=0, _percent=0, _format=False):
+def resume(price=0, percent=0, format_=False):
     print(
-        f'\nAnalysing the price: {currency(_price)}'
+        f'\nAnalysing the price: {currency(price)}'
         f'\n{"- " * 18}'
-        f'\nIts half: {cal_half(_price, True):>20}'
-        f'\nIts double: {cal_double(_price, True):>19}'
-        f'\nPlus {_percent}%: {cal_increase(_price, _percent, True):>21}'
+        f'\nIts half: {cal_half(price, True):>20}'
+        f'\nIts double: {cal_double(price, True):>19}'
+        f'\nPlus {percent}%: {cal_increase(price, percent, True):>21}'
     )
