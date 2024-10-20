@@ -18,14 +18,27 @@ from .models import BrandCarStore, Vehicle
 class BrandCarStoreForm(forms.ModelForm):
     
     class Meta:
+        # Connected model to populate:
         model = BrandCarStore
+        # Ordering fields on the form:
+        # fields = []
+    
+    # Extra fields:
+    # Reserved space...
     
     def __init__(self, **args, **kwargs):
+        '''Built-in method that's called when the form is instantiated.'''
         seller = kwargs.pop('seller', None)  # 'seller' here is the authenticated User!
         super().__init__(*args, **kwargs)
         
         if seller and seller.brand:
+            
+            # Connected fields (from connected model), customizations:
             self.fields['sold_vehicle'].queryset = Vehicle.objects.filter(brand=seller.brand)  # type: ignore
+            
+            # Extra fields, pre-populating:
+            # Unlike fields from connected model, extra fields must be manually linked!
+            # Reserved space...
             
             
         """
@@ -36,6 +49,6 @@ class BrandCarStoreForm(forms.ModelForm):
             Don't forget to make the filtering also in admin.py (different way) to make the feature
             usefull throught the admin area.
             
-                /33-Web-development/general/django/4-cms-admin/cms-queryset-filtering-dropdown.py
+                /33-Web-development/general/django/4-cms-admin/cms-queryset-filtering.py
 
         """

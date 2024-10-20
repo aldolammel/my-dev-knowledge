@@ -249,6 +249,11 @@
             3.5) For CMS, through each sub-app admin.py file that has its models.py envolved:
 
                 /33-Web-development/general/django/8-translate-and-internationalization/translate-cms.txt
+
+
+            3.6) For Model Managers and Model QuerySets:
+
+                /33-Web-development/general/django/8-translate-and-internationalization/translate-querysets-and-managers.txt
                     
 
 

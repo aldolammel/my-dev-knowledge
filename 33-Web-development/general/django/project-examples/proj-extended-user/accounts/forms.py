@@ -69,7 +69,7 @@ class UserProfileOneForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if user:
 
-            # Conneced fields (from connected model), customizations:
+            # Connected fields (from connected model), customizations:
             self.fields['birthdate'].widget = forms.DateInput(attrs={'type': 'date'})
 
             # Extra fields, pre-populating:
@@ -132,7 +132,7 @@ class UserProfileTwoForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if user:
 
-            # Conneced fields (from connected model), customizations:
+            # Connected fields (from connected model), customizations:
             # Reserved space...
 
             # Extra fields, pre-populating:
