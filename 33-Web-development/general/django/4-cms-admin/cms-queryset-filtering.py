@@ -6,7 +6,7 @@
 """
 
 from django.contrib import admin
-from .models import BrandCarStore, Vehicle
+from .models import BrandCarStore, Vehicle, MedicineType
 
 
 class BrandCarStoreCMS(admin.ModelAdmin):
@@ -22,7 +22,7 @@ class BrandCarStoreCMS(admin.ModelAdmin):
     def get_queryset(self, request):
         return super().get_queryset().exclude(status='off')  # type: ignore
 
-    # FILTERING A FIELD (DROPDOWN):
+    # CMS FIELD FILTERING (DROPDOWN):
 
     """
         There's a database with a list of many vehicle from different brands. Each brand-seller
@@ -35,7 +35,7 @@ class BrandCarStoreCMS(admin.ModelAdmin):
             Let's go!
             
     """
-
+   
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         '''This built-in method allows to override the default formfield for a foreign keys field.'''
         # It filters vehicle field by seller's associated brand:
@@ -48,6 +48,15 @@ class BrandCarStoreCMS(admin.ModelAdmin):
                 # Filter the queryset based on the seller (user) associated brand:
                 kwargs['queryset'] = Vehicle.objects.filter(brand=store.seller.brand)
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+
+    # SIMPLEST EXAMPLE:
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        '''This built-in method allows to override the default formfield for a foreign keys field.'''
+        if db_field.name == "medicine_type":
+            kwargs["queryset"] = MedicineType.objects.filter(status='on')
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+    
 
     """
                     

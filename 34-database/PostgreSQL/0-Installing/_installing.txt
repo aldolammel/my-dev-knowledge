@@ -20,7 +20,9 @@ POSTGRESQL: INSTALLATION
                     X) xxxxxx
                 LINUX
                     X) Execute that config script available on the official webpage;
-                    X) Install the module CURL if needed: $ sudo apt install curl
+                    X) Install the module CURL if needed: 
+                        $ sudo apt install curl
+                    
                     X) Go to https://www.pgadmin.org/
                     X) Execute those lines before the installation of pgadmin itself;
                     X) Install the pgadmin-desktop ONLY to prevent to user apache to run the web version;
@@ -29,11 +31,27 @@ POSTGRESQL: INSTALLATION
                         x) Add a new server, clicking in Register;
                         x) In General tab, in name set it as 'localhost';
                         X) In Connection tab, in host set it as 'localhost';
-                        X) Dont save anything yet, and go to terminal and lets use the root user (postgres) now: $ sudo -u postgres psql
-                        X) $ alter user postgres with password 'myNewPasswordWithQuotes';    <--- type that ; too!
-                        X) $ quit
+                        X) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
+                            $ sudo systemctl status postgresql
+                            # if not:
+                            $ sudo systemctl start postgresql
+                        
+                        X) Let's use the root user (postgres) now: 
+                            $ sudo -u postgres psql
+
+                        X) Already using the PostgreSQL user, if the Postgres warns you about
+                            database version, do it:
+                            
+                            $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
+
+                        X) Already using the PostgreSQL user, do it:
+                            
+                            $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';    <--- type that ; too!
+                            $ exit
+                        
                         x) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
                         x) Save the changes finally! You're connected.
+                        
                 MAC
                     X) 
 
