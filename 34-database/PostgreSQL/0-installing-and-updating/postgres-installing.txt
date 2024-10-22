@@ -1,24 +1,67 @@
 
+
 POSTGRESQL: INSTALLATION
 
-    >> Ask your self if you need to install a database for development. Sometimes all
-        you need is a free cloud as railway.app:
 
-            1) Before to install the database, check if there's the postgresql in the current machine:
-                WIN:
+    >> Reminder: for updating:
+
+        /34-dababase/PostreSQL/0-installing-and-updating/postgres-updating.txt
+
+
+    >> For installation:
+
+
+            1) Check if there's the postgresql in the current machine:
+
+                WINDOWS:
+                        
+                    X) With no virtual environment activated, type:
+                    
+                        $ psql --version
+
+                    X) If the command is not recognized, open the Task Manager > Services;
+
+                    X) Look for 'postgres'. If nothing, let's install, skipping the next step;
+
+                    X) If you have it, forget this checklist and let's updating it with another:
+
+                        /34-dababase/PostreSQL/0-installing-and-updating/postgres-updating.txt
+
+
+                UBUNTU:
                     $ xxxx
-                LINUX:
-                    $ xxxx
+
+
                 MAC:
                     $ xxxx
 
+
+
             2) Check if you must download some installer first: check in https://www.postgresql.org/
 
-                WINDOWS
+                WINDOWS:
                     X) Download the file;
                     X) After the installation, go to start and search by 'pgAdmin';
                     X) xxxxxx
-                LINUX
+                    X) xxxxxxx
+                    X) After the installation, make sure the Windows Terminal and main environment
+                        will recognize the Postgres commands:
+
+                            >> Test it:
+                                
+                                $ psql --version
+
+                            
+                            >> If not recognized, do it but changing the version and path based on
+                                your current postgres version:
+
+                                    $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+
+
+                            >> Test it again!
+                                
+
+                UBUNTU:
                     X) Execute that config script available on the official webpage;
                     X) Install the module CURL if needed: 
                         $ sudo apt install curl
@@ -52,14 +95,19 @@ POSTGRESQL: INSTALLATION
                         x) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
                         x) Save the changes finally! You're connected.
                         
-                MAC
+                MAC:
                     X) 
 
+
+
             3) Check if the PostgreSQL is running:
+                
                 /34-database/PostgreSQL/starting-and-stoping.txt
+
 
             
             4) After to install the desired database, don't forget your environment variables:
-            /31-Environment-Variables/
+                
+                /31-Environment-Variables/
 
 

@@ -1,0 +1,82 @@
+
+
+POSTGRESQL: UPDATING
+
+
+    >> Windows:
+
+        X) First, figure out the number of the Postgres version FOR WINDOWS you want to install:
+
+            >> Test it out of any virtual environment:
+
+                $ psql --version
+
+            >> If the command is not recognized, keep going anyway!
+
+
+        X) Checks the postgres you got running by Task Manager > Service: postgres
+
+            >> The last number of the postgres service name is the version you got!
+
+        
+        X) Stop the postgres!
+
+            >> By Task Manager: right-click over the service, and click on 'Stop'.
+
+            >> By terminal: e.g. $ net stop postgresql-x64-14
+
+
+        X) Find the postgres folder and open the terminal into 'bin' subfolder:
+
+            E.g.
+                G:\Program Files\PostgreSQL\14\bin\
+
+
+        X) Type this long command where you are replacing the current version to the new one:
+
+            E.g.
+
+                $ pg_upgrade -b "C:\Program Files\PostgreSQL\14\bin" -B "C:\Program Files\PostgreSQL\16\bin" -d "C:\Program Files\PostgreSQL\14\data" -D "C:\Program Files\PostgreSQL\16\data" -k -u postgres
+
+        
+        X) Make sure the postgres main command is available on the Widnows Terminal/PowerShel:
+
+            >> Without any virtual environment activated, test it:
+
+                $ psql --version
+            
+            >> If not recognized, do it but changing the version and path based on
+                your current postgres version:
+
+                    $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+
+            >> Test again!
+        
+        
+        X) Restart the postgres:
+
+            E.g.
+
+                $ net start postgresql-x64-16
+
+
+        X) Make sure you turn the postgres ON/OFF to start with the system:
+
+            /34-dababase/PostreSQL/0-installing-and-updating/postgres-starting-and-stoping.txt
+
+
+
+
+
+
+    >> Ubuntu:
+
+
+
+
+
+
+
+
+    >> Mac:
+
