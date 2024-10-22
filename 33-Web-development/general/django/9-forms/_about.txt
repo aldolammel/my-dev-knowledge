@@ -8,9 +8,20 @@ DJANGO FORMS:
         tools and libraries to help you build forms to accept input from site visitors and then 
         process and respond to the input.
         
-        That said: sub-app forms.py files by theirselves DOESN'T input anything into database.
-                    If a forms.py class apparently is inputting data, it's because that
-                    form class is linked with some models.py class.
+        That said: a forms.py file by itself DOESN'T input anything into the database.
+                    If a Form class apparently is inputting data, it's because that
+                    Form class is linked with some models.py class or received data
+                    from a views.py file.
+
+
+                    >> Receiving data from Model:
+
+                        /33-Web-development/general/django/9-forms/form-receiving-data.py
+
+
+                    >> Receiving data from View:
+
+                        /33-Web-development/general/django/9-forms/form-receiving-data.py
 
     
     >> The forms.py file is always manually created by the developer into some sub-app folder.
@@ -26,13 +37,15 @@ DJANGO FORMS:
     
     >> There are two ways to build up a front-end form:
     
-        1) Connecting a models.py class to a forms.py class (inherit from forms.ModelForm):
+        1) Connecting a Model-class (models.py) to a Form-class (forms.py), making the
+            Form-class inherit  the 'forms.ModelForm':
 
-            /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
+                /33-Web-development/general/django/9-forms/class-based/inherit-ModelForm/forms.py
 
-        2) Or creating a custom forms.py class (inherit from forms.Form) that doesn't impact the db
-            and is NOT the best method to do forms if you consider the 'Movies' example mention
-            before:
+
+        2) Or creating a custom Form-class (forms.py), that inherit its features from 'forms.Form', 
+            that doesn't impact the db and is NOT the best method to do forms if you consider the 
+            'Movies' example mention before:
 
             /33-Web-development/general/django/9-forms/class-based/inherit-Form/forms.py
 

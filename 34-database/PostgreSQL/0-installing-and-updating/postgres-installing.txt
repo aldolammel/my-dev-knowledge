@@ -29,7 +29,10 @@ POSTGRESQL: INSTALLATION
 
 
                 UBUNTU:
-                    $ xxxx
+                    
+                    X) With no virtual environment activated, type:
+                    
+                        $ psql --version
 
 
                 MAC:
