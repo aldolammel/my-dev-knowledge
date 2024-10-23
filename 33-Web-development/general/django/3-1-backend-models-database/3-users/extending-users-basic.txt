@@ -33,10 +33,15 @@ EXTENDING THE USER FEATURES (BASIC):
                     email = models.EmailField(
                         blank=True,
                     )
-                    # Those original fields (from AbstractUser) that are not overriden, they'll be working normally!
-
-                    # Adding new fields to extending the User features:
-                    ...
+                    # Above, those original fields (from AbstractUser) that are not overriden, they'll be working normally!
+                    # Below, new fields to extending the User features:
+                    accepted_our_privacy = models.BooleanField(
+                        default=False,
+                        verbose_name=...,
+                        help_text=...,
+                        # error_messages in validators.py
+                    )
+                    # created_at = 'date_joined' from AbstractUser
 
                     class Meta:
                         db_table = 'auth_user'  # I like to keep the original name!
@@ -47,13 +52,24 @@ EXTENDING THE USER FEATURES (BASIC):
                     def __str__(self):
                         return self.username
 
-                
+                    def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                        validate_user_agreement(self)
 
-    3) In settings.py, say that Django needs to look for users in the new extended class:
+
+            >> Create the /accounts/validators.py file:
+
+                def validate_user_agreement(instance):
+                '''Server-side validation for user's acceptance of the minimum age and privacy policy.'''
+                    if not instance.accepted_our_privacy:
+                        raise ValidationError('To use our services, you must read and accept our Privacy Policy.', code='invalid_choice')
+
+
+    3) In settings.py, say Django needs to look for users in the new extended class:
 
         # App Essential Settings:
         ...
-        AUTH_USER_MODEL = 'accounts.User'  # 'my_subapp.User'
+        AUTH_USER_MODEL = 'accounts.User'  # '<my_subapp>.<user_model_class>'
 
 
 
@@ -61,14 +77,14 @@ EXTENDING THE USER FEATURES (BASIC):
 
 
 
-    5) accounts/forms.py:
+    5) /accounts/forms.py:
 
         from django.contrib.auth.forms import UserCreationForm
         from .models import User
 
 
         class CustomUserCreationForm(UserCreationForm):
-            """Customizing the Django User Registration form for front-end."""
+            '''Customizing the Django User Registration form for front-end.'''
 
             class Meta:
                 # Connected model to populate:
@@ -79,6 +95,7 @@ EXTENDING THE USER FEATURES (BASIC):
                     'email',
                     'password1',
                     'password2',
+                    'accepted_our_privacy',
                 ]
 
             # Extra fields:
@@ -95,6 +112,7 @@ EXTENDING THE USER FEATURES (BASIC):
         from .models import User
 
 
+        @admin.register(User)
         class UserCMS(UserAdmin):
             '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 
@@ -121,6 +139,7 @@ EXTENDING THE USER FEATURES (BASIC):
                             'email',
                             'password1',
                             'password2',
+                            'accepted_our_privacy',
                         ),
                     },
                 ),
@@ -184,6 +203,7 @@ EXTENDING THE USER FEATURES (BASIC):
             ]
             readonly_fields = (
                 # 'username',  # Dynamicaly included!
+                # 'accepted_our_privacy',  # Dynamicaly included!
                 'date_joined',
                 'last_login',
                 'updated_at',
@@ -199,6 +219,7 @@ EXTENDING THE USER FEATURES (BASIC):
                     # but still editable on the CMS Add User form:
                     return self.readonly_fields + (
                         'username',
+                        'accepted_our_privacy',
                     )  # type: ignore
                 return self.readonly_fields
 
@@ -212,7 +233,15 @@ EXTENDING THE USER FEATURES (BASIC):
                 
                 
         # Registering Django CMS customizations:
-        admin.site.register(User, UserCMS)
+        # Reserved space...
         # Registering App CMS features:
         # Reserved space...
+
+
+    X) Test it!
+
+    
+    >> USER PROFILE PAGE:
+
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-with-profile.txt
 

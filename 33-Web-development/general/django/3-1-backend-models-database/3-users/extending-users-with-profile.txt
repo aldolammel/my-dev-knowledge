@@ -352,6 +352,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
         )
 
 
+        @admin.register(User)
         class UserCMS(UserAdmin):
             '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 
@@ -511,6 +512,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 super().save_model(request, obj, form, change)
 
 
+        @admin.register(UserProfileOne)
         class UserProfileOneCMS(admin.ModelAdmin):
             '''Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS.'''
 
@@ -596,6 +598,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 super().save_model(request, obj, form, change)
 
 
+        @admin.register(UserProfileTwo)
         class UserProfileTwoCMS(admin.ModelAdmin):
             '''Defining how the UserProfileTwo Model class (business) will exclusivily be shown on the CMS.'''
 
@@ -680,24 +683,64 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
         # Registering Django CMS customizations:
-        admin.site.register(User, UserCMS)
-        # Registering App CMS features:
-        admin.site.register(UserProfileOne, UserProfileOneCMS)
-        admin.site.register(UserProfileTwo, UserProfileTwoCMS)
+        # Reserved space...
 
 
 
-    5) OPTIONALS:
+    5) Registration and Profile forms (templates):
+        /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
+
+
+    6) Adding the Change Password option:
+
     
-        5.1) If you need to create your front-end Registration and Profile forms:
-            /33-Web-development/general/django/10-login-and-logout/1-registering-custom-form.txt
+        X) /accounts/views.py:
 
-        5.2) If you need to customize your CMS Accounts > Users (list-view and/or detail-view):
-            /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
-            /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
+            from django.contrib.auth.views import PasswordChangeView
+
+            ...
+
+            class CustomPasswordChangeView(PasswordChangeView):
+                template_name = 'accounts/pwd_change.html'
+
+                def form_valid(self, form):
+                    messages.success(self.request, 'Your password was changed successfully.')
+                    return redirect('accounts:profile_view', username=self.request.user.username)  # type: ignore
+
+                def get_context_data(self, **kwargs):
+                    # Definitions:
+                    context = super().get_context_data(**kwargs)
+                    # Building context:
+                    context['page_title'] = f'Changing Password: {self.request.user.username}'  # type: ignore
+                    context['bt_back'] = 'Back'
+                    context['bt_submit'] = 'Change my password'
+                    return context
+
+        X) /accounts/urls.py:
+
+            from accounts.views import CustomPasswordChangeView
+
+            urlpatterns = [
+                ...
+                # http://127.0.0.1:8000/accounts/aldolammel/pwd/
+                path('pwd/', CustomPasswordChangeView.as_view(), name='pwd_change_view'),
+            ]
+
+        X) /accounts/templates/accounts/pwd_change.html:
+
+            /33-Web-development/general/django/9-forms/frontend-user-change-password.html
 
 
-    6) Migrate and test it:
+
+
+
+    XX) If you need to customize your CMS Accounts > Users (list-view and/or detail-view):
+        /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
+        /33-Web-development/general/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
+
+
+
+    X) Migrate and test it:
 
         $ python manage.py makemigrations accounts
         $ python manage.py migrate

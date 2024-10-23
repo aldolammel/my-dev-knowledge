@@ -49,7 +49,6 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
         # Namespace:
         app_name = 'accounts'
 
-
         urlpatterns = [
             # http://127.0.0.1:8000/accounts/register
             path('register/', views.register, name='register_view'),
@@ -85,19 +84,16 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
                     # E.g. 'general:home_view'
 
 
-     8) Login page/form:
+    8) Login page/form:
             /33-Web-development/general/django/9-forms/frontend-user-login.txt 
 
 
 
-     9) Logout:
+    9) Logout:
             /33-Web-development/general/django/9-forms/frontend-user-logout.txt
 
 
 
+    EXTENDING THE USER FEATURES:
 
-MORE ABOUT USER:
-
-    >> If you're looking for how to import users in your models.py classes:
-
-        /33-Web-development/general/django/3-1-backend-models-database/importing-users.txt
+        /33-Web-development/general/django/3-1-backend-models-database/3-users/extending-users-basic.txt
