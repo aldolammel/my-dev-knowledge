@@ -1,0 +1,108 @@
+
+    GIT
+
+        >> It's a version system to control project files version.
+
+
+        >> Getting in a project
+
+            $ git clone HTTPS_OF_PROJECT .         // that "." makes the clone to be installed exactly in the folder where you are, dont creating the parent folder.
+            $ git status                           // everything must be fine.
+
+        
+        >> Checking which branch you are
+        
+            # check local branch:
+            $ git branch
+
+            # check all branches available, including local:
+            $ git branch -a
+
+
+        >> Switching to another branch
+        
+            # If the branch exists locally:
+            $ git checkout <branch_name>
+
+            # If the branch exists only remotely:
+            $ git checkout -b branch_name origin/branch_name
+
+
+        >> Creating a new local branch
+        
+            # creating it:
+            $ git branch <new_branch_name>
+            
+            # selecting it:
+            $ git checkout <new_branch_name>
+
+
+        >> Creating a new remote branch
+        
+            # After creating it locally and selecting it, do it:
+            $ git push --set-upstream origin <new_branch_name>
+
+
+        >> Checking if you have the last version of the main
+        
+            # A report with all commits:
+            $ git log
+
+            # Find all changes without merging these changes into your current working branch:
+            $ git fetch origin
+            # OR below, it fetches and merges (or rebases) changes: 
+            $ git pull
+
+
+        >> Force the original branch again
+        
+            # Check exactly the branch name you want:
+            $ git branch -a
+            # Download that:
+            $ git reset --hard <branch_name>
+
+
+        >> Sending your new files to the LOCAL STAGE 
+
+
+        >> Coloca um arquivo específico em stage:
+        
+            $ git add <file-name>
+
+
+        >> Stages changes in the current directory and its subdirectories. It stages modifications and new files but does not include deletions:
+        
+            $ git add .
+
+
+        >> Stages all changes in the entire working directory, including modifications, new files, and deletions. It stages changes in the entire repository:
+        
+            $ git add --all
+
+
+        >> Sending your updates to the LOCAL REPO
+        
+            $ git commit -a -m "some description"
+
+
+        >> Taking updates from teammates to the REMOTE main
+        
+            $ git pull
+
+
+        >> Publishing your updates (in Local Repo) to the REMOTE main
+        
+            $ git push
+
+
+        >> Removing a useless file
+        
+            $ git rm <file>
+            $ git status                          // only to check what's ready for the stage.
+            $ git commit -a -m "removed useless file"
+            $ git push
+
+
+        >> Restore a file to its original content
+
+            $ git checkout <file>                 // bringing the file content from the origin.
