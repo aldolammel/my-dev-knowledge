@@ -18,6 +18,7 @@ INSTALLING DJANGO:
     2) Create the virtual environment and active it:
 
         /03-Virtual-Environment/
+        
 
 
     3) Installation:

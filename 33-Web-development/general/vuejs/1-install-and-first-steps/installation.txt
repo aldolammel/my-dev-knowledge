@@ -3,7 +3,16 @@
     VUE.JS INSTALLATION:
 
 
+        X) Install Node.js:
+
+            >> https://nodejs.org/en
+        
+        
         X) Install the Vue.JS:
+
+            $ npm create vue@latest
+
+            
 
             
 
