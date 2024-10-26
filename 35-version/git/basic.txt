@@ -3,6 +3,14 @@
 
         >> It's a version system to control project files version.
 
+        >> Git workflow:
+
+            1. Local > You develop something locally;
+            2. Local > Send it to Local Stage area (git add);
+            3. Local > Send it to Local Repo (git commit);
+            4. Remote > Send it to Remote Repo (git push);
+            5. Merge or not the main branch.
+
 
         >> Getting in a project
 
@@ -32,9 +40,11 @@
         
             # creating it:
             $ git branch <new_branch_name>
-            
+
             # selecting it:
             $ git checkout <new_branch_name>
+
+            >> remider: create it as remote too!
 
 
         >> Creating a new remote branch
@@ -64,38 +74,42 @@
 
         >> Sending your new files to the LOCAL STAGE 
 
+            $ xxxxxxxxxx
 
-        >> Coloca um arquivo específico em stage:
+
+        >> Put a specific file on Stage (local):
         
             $ git add <file-name>
 
 
-        >> Stages changes in the current directory and its subdirectories. It stages modifications and new files but does not include deletions:
+        >> Stages changes in the current directory and its subdirectories. 
+            It stages modifications and new files but does not include deletions:
         
-            $ git add .
+                $ git add .
 
 
-        >> Stages all changes in the entire working directory, including modifications, new files, and deletions. It stages changes in the entire repository:
+        >> Stages all changes in the entire working directory, including modifications,
+            new files, and deletions. It stages changes in the entire repository:
         
-            $ git add --all
+                $ git add --all
 
 
-        >> Sending your updates to the LOCAL REPO
+        >> Sending your updates to the LOCAL REPO:
         
             $ git commit -a -m "some description"
 
 
-        >> Taking updates from teammates to the REMOTE main
+        >> Taking updates from teammates to the REMOTE same branch:
         
             $ git pull
 
 
-        >> Publishing your updates (in Local Repo) to the REMOTE main
+        >> Publishing your updates (from Local Repo) to the REMOTE same branch:
         
             $ git push
 
 
-        >> Removing a useless file
+        >> Removing a useless file:
         
             $ git rm <file>
             $ git status                          // only to check what's ready for the stage.
@@ -103,6 +117,6 @@
             $ git push
 
 
-        >> Restore a file to its original content
+        >> Restore a file to its original content:
 
             $ git checkout <file>                 // bringing the file content from the origin.

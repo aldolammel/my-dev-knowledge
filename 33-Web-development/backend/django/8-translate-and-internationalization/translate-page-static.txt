@@ -1,0 +1,38 @@
+
+
+    TRANSLATING: STATIC PAGE
+
+        >> Using Gettext directly on template:
+
+            E.g. simplest way:
+
+                {% load i18n %}
+               
+                {% blocktrans %}
+                    <p>
+                        We are a company dedicated to helping people <strong>track their
+                        headache attacks</strong>. Our mission is to provide <em>simple, 
+                        efficient, and user-friendly</em> solutions to help users manage 
+                        their health effectively.
+                    </p>
+                {% endblocktrans %}
+
+            
+            E.g. solid way (focused only to translate text, not its features):
+
+                {% load i18n %}
+               
+                {% blocktrans with p_tag='<p>' strong_tag='<strong>' em_tag='<em>' p_end='</p>' strong_end='</strong>' em_end='</em>' %}
+                    {{ p_tag }}
+                        We are a company dedicated to helping people {{ strong_tag }}track their headache attacks{{ strong_end }}. 
+                        Our mission is to provide {{ em_tag }}simple, efficient, and user-friendly{{ em_end }} solutions 
+                        to help users manage their health effectively.
+                    {{ p_end }}
+                {% endblocktrans %}
+
+
+
+    
+    >> Translating pages dynamically:
+
+        /33-Web-development/backend/django/8-translate-and-internationalization/translate-page-dynamic.txt

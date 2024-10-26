@@ -1,0 +1,222 @@
+
+
+RE-INSTALL ONLY THE DJANGO:
+
+
+    0) If you are install Django for the very first time in this specific project, skip here and go:
+
+        /33-Web-development/backend/django/1-install-and-first-steps/installing-the-project.txt
+
+
+    
+    1) Create a new project folder, and get it:
+
+        $ mkdir <project_folder>
+        $ cd <project_folder>
+
+
+    2) Create a new virtual environment and active it:
+
+        /03-Virtual-Environment/creating-virtual-environment.txt
+
+
+    3) Installation:
+
+        >> Using the requirements.txt file:
+
+            /03-Virtual-Environment/creating-requirements.txt
+
+
+        >> (NOT RECOMMENDED) Or manually (the same for Ubuntu and Windows):
+
+                >> Update pip module:
+                    
+                    /04-Basic-Modules/pip-upgrade.txt
+
+                >> Install Django:
+
+                    $ pip install django
+
+                >> Check the current django installed:
+
+                    $ python -m django --version
+                    or 
+                    $ pip show django
+
+                >> upgrade django if needed:
+
+                    $ python -m pip install --upgrade django
+        
+
+        >> Only for VSCode:
+            # DjLint (html template formatter for django/jinja)
+            $ pip install -U djlint
+            
+            # Install the DjLint extension for VSCode.
+            # Install the Django (by Baptiste) extension for VSCode.
+            # In VSCode, In Html's, change the language mode to 'Django-Html'
+
+
+    4) Create the Django Project Structure:
+
+        >> Critical: keep exactly the same original project's name to avoid many
+            of adjustments on files!
+            
+            $ django-admin startproject <project_name> .     <-- this install in the current folder!
+
+
+    5) Make sure you're in the same folder the 'manage.py' file, and then start the django
+        for testing purposes:
+
+            $ python manage.py migrate
+            $ python manage.py runserver
+
+            http://localhost:8000/
+            or
+            http://127.0.0.1:8000/
+
+
+
+    6) Files (1/3):
+        
+        >> First of 3 steps to bring files: from old project folder to the new one, copy these:
+
+            CRITICAL: DO NOT copy the settings.py file yet!!!
+
+            /config-folder/constants.py
+            /config-folder/context_processors.py
+            /config-folder/language.py                 <--- if you're working with translations!
+            /config-folder/urls.py
+            /locale/                                      <--- if you're working with translations!
+            /media/
+            /static/
+            /templates/
+            /.env
+            /.gitignore
+
+        >> Except the settings.py, check if you don't need other file from the config-folder
+            not listed above!
+
+        >> Gitignore-aware: check if the new virtual environment folder is listed there.
+
+
+
+    7) Re-create each sub-app needed:
+
+        >> Critical: keep exactly the same original subapp's name to avoid many
+            of adjustments on files!
+
+                $ python manage.py startapp <subapp_name>
+
+
+
+    8) Database matters:
+
+        >> At first: no settings.py adjustments are need for now! Next step will handle it;
+
+        
+        >> If the existent db is local:
+
+            xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> If the existent db is on the cloud:
+
+            - Do nothing yet! As you have imported the .env file from the old project folder,
+                there should have the environment variables already set, including the db address;
+
+
+        >> If a new local db:
+
+            xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> If a new cloud db:
+
+            /33-Web-development/backend/django/3-1-backend-models-database/1-reinstall-database/
+
+
+        >> Recommended for all scenarios: to avoid weird behaviors from the terminal not calling
+                                            the environ variables configured through .env file, 
+                                            close the terminal, open a new one and active the
+                                            virtual environment of the new Django copy again! 
+
+
+
+    9) Files (2/3):
+
+        >> SETTINGS.PY: the second step is to bring line by line from the old project settings to
+                        the new settings.py. DON'T just copy the file! Bring carefully line by line
+                        instead, checking if the new Django version has news features, etc!
+
+        >> APPS.PY:     If you're using signals.py file somewhere, each sub-app using that needs a
+                        small adjustment in its apps.py file:
+
+                            >> Include this method in the sub-app class:
+
+                                def ready(self):
+                                    from . import signals
+
+
+    10) Files (3/3):
+    
+        >> Third/last step to bring original Django project files: from the old project folder
+            to the new one, copy the list below from each sub-app already created:
+
+                E.g.
+
+                    /sub-app/admin.py
+                    /sub-app/forms.py
+                    /sub-app/middlewares.py
+                    /sub-app/models.py
+                    /sub-app/signals.py
+                    /sub-app/validators.py
+                    /sub-app/views.py
+                    /sub-app/urls.py
+                    /sub-app/<all unique files that you won't to code again!>
+                    /sub-app/templates/
+
+
+    11) Finally, let's build up the original project as a new Django copy:
+
+        >> Run 'makemigrations' in the new Django project!
+
+        >> Now, STOP: if you have a multi-language project built up with Parler Module, there's 
+                        a known-bug where model-classes using Parler classes inherit will crash,
+                        printing out an error when 'migrate' is running. 
+                        
+                        To fix it, follow:
+
+                            >> Open each '/sub-app/migrations/0001_initial.py' you have found!
+
+                            >> Replace 'parler.models.TranslatableModelMixin'
+                                for 'parler.models.TranslatableModel'
+
+                            >> Save each file changed! If something went wrong, read it!
+
+                                /33-Web-development/backend/django/8-translate-and-internationalization/translate-models.txt
+
+        >> Run 'migrate':
+
+            >> If you are using the original project database, after migrate command
+                nothing will correctly happen once the database already have the 'old' schema.
+
+            >> If you are using a new database copy, the migration must run fine until the new db
+                take the right schema, ready to receive the content again!
+
+                >> In this case, creating the admin user:
+                
+                    $ python manage.py createsuperuser
+        
+
+    12) Test it!
+
+        $ python manage.py runserver
+
+
+
+    13) Clean up some useless stuff:
+
+        /requirements.txt
+        /db.sqlite3
+

@@ -1,0 +1,19 @@
+
+
+CLEAN THE ENTIRE DATABASE:
+
+
+    >> Reset the database:
+    
+        This command clears all data from all tables in our Django database, preserving the tables
+        and columns only:
+
+            $ python manage.py flush
+            $ python manage.py createsuperuser
+
+
+
+    >> Recreate the database from zero:
+
+        /33-Web-development/backend/django/3-1-backend-models-database/1-reinstall-database/_about.txt
+

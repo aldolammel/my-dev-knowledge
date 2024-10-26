@@ -1,0 +1,247 @@
+
+
+EXTENDING THE USER FEATURES (BASIC):
+
+
+    1) Very basic to use Django built-in user features:
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /33-Web-development/backend/django/10-login-and-logout/0-registering-by-frontend.txt
+
+
+
+    2) Create Custom User Model (Extending the original one):
+
+        >> The built-in class 'User' is a child of AbstractUser class where all original fields are;  
+        
+        >> Create your custom User class:
+
+            >> Highly recommended to set in here: /accounts/models.py
+
+                from django.contrib.auth.models import AbstractUser
+                from django.db import models
+
+                class User(AbstractUser):
+                    # Overriding the original fields just to custom them (as translating, for example):
+                    first_name = models.CharField(
+                        max_length=150,
+                        blank=True,
+                    )
+                    last_name = models.CharField(
+                        max_length=150,
+                        blank=True,
+                    )
+                    email = models.EmailField(
+                        blank=True,
+                    )
+                    # Above, those original fields (from AbstractUser) that are not overriden, they'll be working normally!
+                    # Below, new fields to extending the User features:
+                    accepted_our_privacy = models.BooleanField(
+                        default=False,
+                        verbose_name=...,
+                        help_text=...,
+                        # error_messages in validators.py
+                    )
+                    # created_at = 'date_joined' from AbstractUser
+
+                    class Meta:
+                        db_table = 'auth_user'  # I like to keep the original name!
+                        ordering = ['username']
+                        verbose_name = 'User'
+                        verbose_name_plural = 'Users'
+                    
+                    def __str__(self):
+                        return self.username
+
+                    def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                        validate_user_agreement(self)
+
+
+            >> Create the /accounts/validators.py file:
+
+                def validate_user_agreement(instance):
+                '''Server-side validation for user's acceptance of the minimum age and privacy policy.'''
+                    if not instance.accepted_our_privacy:
+                        raise ValidationError('To use our services, you must read and accept our Privacy Policy.', code='invalid_choice')
+
+
+    3) In settings.py, say Django needs to look for users in the new extended class:
+
+        # App Essential Settings:
+        ...
+        AUTH_USER_MODEL = 'accounts.User'  # '<my_subapp>.<user_model_class>'
+
+
+
+    4) Run makemigrations and migrate!
+
+
+
+    5) /accounts/forms.py:
+
+        from django.contrib.auth.forms import UserCreationForm
+        from .models import User
+
+
+        class CustomUserCreationForm(UserCreationForm):
+            '''Customizing the Django User Registration form for front-end.'''
+
+            class Meta:
+                # Connected model to populate:
+                model = User
+                # Ordering fields on the form:
+                fields = [
+                    'username',
+                    'email',
+                    'password1',
+                    'password2',
+                    'accepted_our_privacy',
+                ]
+
+            # Extra fields:
+            # Important: signals.py: should the extra fields be declared over there? Check it!
+            # Reserved space...
+
+
+
+
+    6) Customizing the CMS User list-view and detail-view:
+
+        from django.contrib.auth.admin import UserAdmin
+        from .forms import CustomUserCreationForm
+        from .models import User
+
+
+        @admin.register(User)
+        class UserCMS(UserAdmin):
+            '''Defining how the User Model class will exclusivily be shown on the CMS.'''
+
+            # Specify the custom form for creating users
+            add_form = CustomUserCreationForm
+
+            list_display = (
+                'username',
+                'email',
+                'last_login',
+                'is_staff',
+                # List_display accept imported fields using prefix and imported method (prefix recommended):
+                # Reserved space...
+            )
+            # All fields exclusivily for the CMS Adding New User:
+            add_fieldsets = (
+                (
+                    None,
+                    {
+                        'classes': ('wide',),
+                        'fields': (
+                            'profile_type',
+                            'username',
+                            'email',
+                            'password1',
+                            'password2',
+                            'accepted_our_privacy',
+                        ),
+                    },
+                ),
+            )
+            # All fields exclusivily for the CMS Visualizing a User:
+            fieldsets = (
+                (
+                    None,
+                    {
+                        'fields': (
+                            'username',
+                            'password',
+                        )
+                    },
+                ),
+                (
+                    'Personal info',
+                    {
+                        'fields': (
+                            'email',
+                        )
+                    },
+                ),
+                (
+                    'Permissions',
+                    {
+                        'fields': (
+                            'is_active',
+                            'is_staff',
+                            'is_superuser',
+                            'groups',
+                            'user_permissions',
+                        )
+                    },
+                ),
+                (
+                    'Important dates',
+                    {
+                        'fields': (
+                            'date_joined',
+                            'last_login',
+                            'updated_at',
+                            'updated_by',
+                        )
+                    },
+                ),
+            )
+            list_filter = (
+                'is_active',
+                'is_staff',
+                'is_superuser',
+                # List_filter only accepts imported fields using prefix:
+                # Reserved space...
+            )
+            search_fields = [
+                'username',
+                'email',
+                'date_joined',
+                # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+                # Reserved space...
+            ]
+            readonly_fields = (
+                # 'username',  # Dynamicaly included!
+                # 'accepted_our_privacy',  # Dynamicaly included!
+                'date_joined',
+                'last_login',
+                'updated_at',
+                'updated_by',
+                # Readonly_fields only accept imported method, never with prefix:
+                # Reserved space...
+            )
+
+            def get_readonly_fields(self, request, obj=None):
+                """Built-in method to extend the 'readonly_fields' power."""
+                if obj:
+                    # If the user exists (obj), make some fields field read-only on detail-view,
+                    # but still editable on the CMS Add User form:
+                    return self.readonly_fields + (
+                        'username',
+                        'accepted_our_privacy',
+                    )  # type: ignore
+                return self.readonly_fields
+
+            def save_model(self, request, obj, form, change):
+                # Checks to save the current user as updated_by:
+                cms_user = request.user
+                if change and cms_user != obj.updated_by:
+                    obj.updated_by = cms_user
+                super().save_model(request, obj, form, change)
+                
+                
+                
+        # Registering Django CMS customizations:
+        # Reserved space...
+        # Registering App CMS features:
+        # Reserved space...
+
+
+    X) Test it!
+
+    
+    >> USER PROFILE PAGE:
+
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/extending-users-with-profile.txt
+

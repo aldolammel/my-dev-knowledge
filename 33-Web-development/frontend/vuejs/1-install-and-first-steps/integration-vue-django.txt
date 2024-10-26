@@ -1,0 +1,140 @@
+
+
+    INTEGRATING VUE WITH DJANGO:
+
+        >> Reminder: basic steps about Vue.js:
+            /33-Web-development/general/vuejs/1-install-and-first-steps/installation.txt
+
+        >> If you are ready, let's go:
+
+
+            1) Install Vue-Command-Line-Interface (Vue CLI):
+    
+                >> Win:
+                    $
+
+                >> Ubuntu:
+                    $ sudo npm install -g @vue/cli
+
+                >> Mac:
+                    $
+
+            2) Create a new Vue project folder inside the Django project:
+            
+                >> Win:
+                    $
+
+                >> Ubuntu:
+                    $ vue create <frontend_folder_name>
+                    # e.g. vue create frontend
+
+                >> Mac:
+                    $
+
+            3) Build up the Vue project:
+            
+                >> Win:
+                    $
+                    
+                >> Ubuntu:
+                    $ cd <frontend_folder_name>
+                    $ sudo npm run build
+                
+                >> Mac:
+                    $
+
+            4) Integrate the Vue and Django! Move the contents of the 'dist' directory to a
+                new static directory within your Django project:
+
+                >> Win:
+                    $
+                    
+                >> Ubuntu:
+                    # Already in <frontend_folder_name>:
+                    $ sudo mv dist ../static
+                
+                >> Mac:
+                    $
+                    
+            5) Update the settings.py:
+
+                STATIC_URL = 'static/'
+                STATICFILES_DIRS = [
+                    BASE_DIR / "static",
+                ]
+
+
+            X) Update your main template header:
+
+                <!-- CSS -->
+                {% load static %}
+                <link href="{% static 'css/<vue_css_name_here>.css' %}" rel="stylesheet" />
+
+
+
+            X) Run both servers in different terminals with the right virtual env activated:
+
+                # In django folder:
+                $ python manage.py runserver
+
+                # In vue folder:
+                $ sudo npm run serve
+
+
+
+
+
+
+
+
+
+        >> Mac: 
+
+            xxxx
+
+        >> There are two approaches:
+
+            A) Use Vue.js in Django Templates;
+            B) Use Django REST Framework;
+
+
+
+        A) Use Vue.js in Django Templates:
+
+            A1) Include the Vue.js script in your Django template:
+            
+                >> Add the Vue.js library to your template:
+
+                    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+
+            AX) xxxxxxx
+
+
+            AX) xxxxxxx
+
+
+            AX) xxxxxxx
+
+
+            AX) xxxxxxx
+
+
+            AX) xxxxxxx
+
+
+
+
+        B) Use Django REST Framework:  https://medium.com/@nick_damoulakis/a-step-by-step-integration-of-django-and-vue-js-8b70fe60aec3
+
+            B1) xxxx
+
+            BX) xxxx
+
+            BX) xxxx
+
+            BX) xxxx
+
+            BX) xxxx
+
+            BX) xxxx

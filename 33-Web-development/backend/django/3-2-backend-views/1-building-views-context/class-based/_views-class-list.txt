@@ -1,0 +1,31 @@
+
+
+VIEWS CLASSES: USING LIST INHERIT:
+
+    >> A subclass of 'TemplateView' class designed for displaying a list of objects. 
+        It automates the process of fetching data from a model and rendering it in a template.
+
+    >> Perfect when you need to display a list of objects from a database, such as a list of
+        blog posts, products, etc;
+                
+
+    E.g.
+
+        from django.views.generic import ListView
+        
+        class ProductsListView(ListView):  # This 'View' in classname is a convention.
+            model = <ModelClass>
+            template_name = '<HtmlTemplatePath>'
+            context_object_name = 'products'
+
+
+        
+    
+    HOW TO USAGE (EXAMPLE):
+    
+    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-list-usage.py
+
+
+
+    WHO INHERIT LIST-VIEW CLASS:
+    >> No one!

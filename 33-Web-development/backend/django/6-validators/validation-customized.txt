@@ -1,0 +1,70 @@
+
+
+    VALIDATION: CUSTOMIZING WITH CLEAN() METHOD
+
+        clean() is a built-in method that's used in forms and models for customize validations. 
+        When a form (forms or models) is submitted, clean() takes each data field first
+        to execute the customized validation:
+
+        >> Important: all clean() in models will automatically impact on CMS validations,
+                        not needed to add something into 'admin.py' files.
+
+
+        1) Where to use:
+
+            
+            >> Usage for MODEL classes:
+
+                    class Example(model.Model):
+                        ...
+
+                        def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                            # Access model fields directly:
+                            validate_goals(self.goal_primary, self.goal_secondary)  # found in 'validators.py', for example...
+
+
+            >> Usage for FORM classes:
+
+                class ExampleForm(forms.ModelForm):
+                    ...
+
+                    def clean(self):
+                        '''It's a built-in method for adding custom validation logic before saving data to the db.'''
+                        cleaned_data = super().clean()
+                        p = cleaned_data.get('goal_primary')
+                        s = cleaned_data.get('goal_secondary')
+
+                        validate_goals(p, s)  # found in 'validators.py', for example...
+
+                        return cleaned_data  # Always return cleaned_data from the clean() method!
+
+
+
+        2) Creating the 'validators.py' in the sub-app needed:
+
+            from django.core.exceptions import ValidationError
+
+            def validate_goals(p, s):  # this 'validate_' is convention!
+                '''Checks primary and secondary goal fields logic before to save them on the db.'''        
+                if not p and s:
+                    raise ValidationError(
+                        'Select a primary goal at least!',
+                        code='invalid_choice'
+                    )
+                elif p and s and p == s:
+                    raise ValidationError(
+                        'Primary and secondary goals cant be the same!',
+                        code='overlap'
+                    )
+
+                
+                >> Function validators always return 'None' or raise an error message!
+
+
+            
+            
+
+        3) Customizing templates when needed:
+              
+            /33-Web-development/backend/django/3-3-frontend-templates/form-error-css-customization.txt

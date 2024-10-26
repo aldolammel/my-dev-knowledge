@@ -1,0 +1,99 @@
+
+
+
+LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
+
+
+    1) Users setup first:
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/0-users-setup.txt
+
+
+    2) In the 'accounts' folder, create the folders and file called 'register.html':
+        /templates/registration/register.html
+
+        (Don't worry with the content. We will see it later!)
+
+
+    3) Still in the 'accounts' folder, edit the views.py file with:
+
+        from django.contrib.auth import login
+        from django.contrib.auth.forms import UserCreationForm
+        from django.shortcuts import render, redirect
+
+        def register(request):
+            # If the user is already authenticated:
+            if request.user.is_authenticated:
+                return redirect('in:home_view')
+            # Otherwise, if not authenticated:
+            else:
+                if request.method == 'POST':
+                    form = UserCreationForm(request.POST)
+                    if form.is_valid():
+                        new_user = form.save()
+                        # Log the user in after successful registration (optional):
+                        login(request, new_user)
+                        return redirect('in:home_view')
+                else:
+                    form = UserCreationForm()  # built-in class.
+                #
+                context = {'form': form}
+                return render(request, 'registration/register.html', context)
+
+    
+
+    4) Still in the 'accounts' sub-app, create the urls.py file and fill it with:
+
+        from django.urls import path, include
+        from . import views
+
+        # Namespace:
+        app_name = 'accounts'
+
+        urlpatterns = [
+            # http://127.0.0.1:8000/accounts/register
+            path('register/', views.register, name='register_view'),
+            # http://127.0.0.1:8000/accounts
+            # I'm saying that all user accounts must be handle by django that automatically includes
+            # pattern-names as 'login' and 'logout':
+            path('', include('django.contrib.auth.urls')),
+        ]
+
+
+    5) Open the register.html file and customize it:
+
+        /33-Web-development/backend/django/9-forms/frontend-user-register-form.txt
+
+
+    6) If you want to print the user (username or first_name or last_name) on the template,
+        you DONT need bring some in your views.py CONTEXT. Just call 'user.username' on the
+        template:
+
+            e.g
+
+                {{ user.username }}
+
+
+    7) In your config-folder, open the settings.py and add it:
+
+                LOGIN_URL = 'accounts:login'  # It's built-in.
+                
+                LOGIN_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
+                    # E.g. 'in:home_view'
+                
+                LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>' 
+                    # E.g. 'general:home_view'
+
+
+    8) Login page/form:
+            /33-Web-development/backend/django/9-forms/frontend-user-login.txt 
+
+
+
+    9) Logout:
+            /33-Web-development/backend/django/9-forms/frontend-user-logout.txt
+
+
+
+    EXTENDING THE USER FEATURES:
+
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/extending-users-basic.txt

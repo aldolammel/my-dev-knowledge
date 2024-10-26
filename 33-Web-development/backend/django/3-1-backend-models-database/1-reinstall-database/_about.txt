@@ -1,0 +1,28 @@
+
+
+
+HOW TO RE-INSTALL ONLY THE DATABASE:
+
+    >> If you need to re-create your database from the beginning, do it:
+
+        1) Delete the current database;
+
+        2) Create the new database;
+
+        3) Through each sub-app migration-folder, delete all its content, except the dunder init;
+
+        4) Edit your .env file as needed;
+
+        5) CRITICAL: close all Terminals/Prompts you ran with the old .env before (it avoids
+            issues with old environment variables)!
+
+        6) Run 'makemigrations' for each sub-app, and then run 'migrate';
+        
+        7) If you'll use the CMS, run createsuperuser;
+
+
+
+
+HOW TO RE-INSTALL ONLY THE DJANGO:
+
+    /33-Web-development/backend/django/1-install-and-first-steps/reinstall-new-django-copy.txt

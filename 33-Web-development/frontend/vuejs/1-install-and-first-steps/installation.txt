@@ -1,0 +1,72 @@
+
+
+    VUE.JS (FULL) INSTALLATION:
+
+
+        1) Install Node.js:
+
+            >> Windows:
+
+                https://nodejs.org/en
+
+
+            >> Ubuntu:
+
+                >> Update the package list and install globally both Node.js
+                    and the 'npm' (node package manager):
+
+                    $ sudo apt update
+                    $ sudo apt install nodejs npm
+
+                    # Check current node version installed and update it:
+                    $ node -v
+                    $ sudo npm install -g n
+                    $ sudo n latest
+                    $ node -v
+
+                    # Check current npm version installed and update it:
+                    $ npm -v
+                    $ sudo npm install -g npm@latest
+                    $ npm -v
+
+
+
+            >> Mac:
+
+        
+        
+        2) Install the Vue.JS. Choose one that better fit the project:
+
+
+            >> Integrating Vue.js with Django:
+
+                /33-Web-development/general/vuejs/1-install-and-first-steps/integration-vue-django.txt
+
+
+            >> Integrating Vue.js with <other option>:
+            
+                # Reserved space...
+            
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        BELOW, NOT TESTED YET!
+
+
+        X) Improviding the Vue with Nuxt.JS (but it's not server-side-rendering):
+
+            >> Why work with Nuxt: https://www.youtube.com/watch?v=l2y8oYqNV8I (CDF TV)
+
+            >> Issue: Nuxt is NOT server-render, so it's client-rendered what is bad for SEO!!!
+                https://nuxt.com/docs/guide/concepts/rendering#client-side-rendering
+
+                X.1) Install node.JS (pre-requisite):
+
+
+                X.2) Instal the Nuxt.JS:
+                    
+
+                
+
+            

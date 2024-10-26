@@ -1,0 +1,18 @@
+
+
+
+FRONT-END: LOGOUT BUTTON
+
+    >> Make sure you already have done all the setup steps:
+        /33-Web-development/backend/django/10-login-and-logout/using-frontend.txt
+
+
+    >> In some file of your template, add the logout button:
+
+
+            <form action="{% url 'accounts:logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+
+

@@ -1,0 +1,15 @@
+
+
+    VUE.JS (SIMPLEST) INSTALLATION:
+
+
+        >> Only use this on your template header:
+
+            xxxxxxxxxxxxxx
+            xxxxxxxx
+            xxxxxxxxxxxxxxxxxxxxxxx
+            xxxxxx
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            xxxxxxxxxxxxx
+            xxxxxx
+            xxx

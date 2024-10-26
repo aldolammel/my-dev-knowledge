@@ -1,0 +1,45 @@
+
+
+
+VIEWS REQUIRING LOGIN AUTHENTICATED:
+
+
+
+    IF USING FUNCTION-BASED VIEWS (FBV):
+
+    >> In each sub-app that you want to protect with login, open its 'views.py' and do this.
+        Apply the decorator 'login_required' right before each protected function-based view:
+
+        E.g.
+
+            from django.contrib.auth.decorators import login_required
+
+            @login_required
+            def blablabla(request):
+                pass
+
+
+
+
+    IF USING CLASS-BASED VIEWS (CBV):
+
+    >> There's at least two ways, one of them is via urls.py and the other via views.py. Let's
+        follow the views.py way, similar the FBV, applying decorators too:
+
+        E.g.
+
+            from django.utils.decorators import method_decorator
+            from django.contrib.auth.decorators import login_required
+            from django.views.generic import ListView
+
+            @method_decorator(login_required, name='dispatch')
+            class BlablablaView(ListView):
+                pass
+
+
+
+    
+
+    NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
+
+        /33-Web-development/backend/django/12-error-pages/401/
