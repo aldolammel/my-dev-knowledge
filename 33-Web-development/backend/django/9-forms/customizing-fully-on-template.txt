@@ -1,0 +1,53 @@
+
+
+FORM: FULL CUSTOMIZATION ON THE TEMPLATE:
+
+    >> Don't forget that you need to create every form/field feature for this approach:
+
+    >> Examples below are using Bulma CSS Framework's classes.
+
+    >> The template below is receiving 'form' as context:
+
+
+
+        E.g. INPUT:
+
+            <input name="{{ form.first_name.id }}" id="{{ form.first_name.id }}" class="input is-large" type="text" value="{{ form.first_name.value }}">
+            <input name="{{ form.birthdate.id }}" id="{{ form.birthdate.id }}" class="input is-large" type="date" value="{{ form.birthdate.value|date:"Y-m-d" }}">
+            <input name="{{ form.last_pwd_update.id }}" id="{{ form.last_pwd_update.id }}" class="input is-large" type="datetime-local" value="{{ form.last_pwd_update.value }}" readonly>
+
+
+
+
+        E.g. SELECT:
+
+            {{ form.sex }}      (recommended because 'select' is not directly customizable)
+
+            or
+
+            <select>
+                {% for val, txt in form.fields.sex.choices %}
+                    <option value="{{ val }}"{% if val == form.fields.sex.value %} selected{% endif %}>
+                        {{ txt }}
+                    </option>
+                {% endfor %}
+            </select>
+
+
+
+
+        E.g. CHECKBOX:
+
+            <input type="checkbox" name="{{ form.is_nomad.id }}" id="{{ form.is_nomad.id }}" class="checkbox" {% if form.is_nomad.value %}checked{% endif %}>
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> If you don't want this deep of customization, check these out:
+
+        /33-Web-development/backend/django/9-forms/customizing-basic-attrs-connected-model.txt
+
+        /33-Web-development/backend/django/9-forms/customizing-basic-attrs-extra-field.txt

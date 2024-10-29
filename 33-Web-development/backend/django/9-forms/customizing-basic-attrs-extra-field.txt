@@ -1,0 +1,16 @@
+
+
+    FORM: BASIC CUSTOMIZING ATTRIBUTES OF AN EXTRA FIELD
+
+        >> xxxxxxx
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+    >> If you need to customize fully a form:
+
+        /33-Web-development/backend/django/9-forms/customizing-fully-on-template.txt

@@ -117,6 +117,16 @@
             $ git push
 
 
+        >> Deleting a local branch:
+
+            $ git branch -d <branch-name>
+
+
+        >> Deleting a remote branch:
+
+            $ git push origin --delete <branch-name>
+
+
         >> Restore a file to its original content:
 
             $ git checkout <file>                 // bringing the file content from the origin.
