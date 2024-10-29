@@ -19,6 +19,14 @@
                 >> Mac:
                     $
 
+                1.1) (Optional) Make sure you got the .gitignore updated:
+
+                    ### Vuejs ###
+                    dist/
+                    npm-debug.log
+                    yarn-error.log
+
+
             2) Create a new Vue project folder inside the Django project:
             
                 >> Win:

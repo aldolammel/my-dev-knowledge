@@ -1,0 +1,98 @@
+
+
+    FORMS: CUSTOMIZING ATTRIBUTES OF CONNECTED MODEL'S FIELD
+
+
+        >> There are 2 methods to customize attributes from the connected model in a form:
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            
+
+
+            A) Via Widgets-Dictionary in the Meta-Class;
+                
+                Purpose: 
+                    Best for static or predictable customizations, where you know the exact fields 
+                    and the styles they should have ahead of time.
+                
+                Usage: 
+                    Set CSS classes or attributes on each widget directly within the form’s 
+                    Meta class.
+
+                E.g.
+
+                    class Meta:
+                        # Connected model:
+                        model = ...
+
+                        fields = [
+                            'field1', 
+                            'field2', 
+                            'field3'
+                        ]
+                        
+                        widgets = {
+                            'field1': forms.TextInput(attrs={'class': 'custom-class-1'}),
+                            'field2': forms.TextInput(attrs={'class': 'custom-class-2'}),
+                            'field3': forms.Select(attrs={'class': 'custom-class-3'}),
+                        }
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+            
+
+            B) Via Widgets in the __init__ Method;
+
+                Purpose: 
+                    Useful when you need dynamic customizations that may change based on 
+                    factors like form state, context, or user preferences.
+
+                Usage: 
+                    Modify attributes by accessing each form field within the __init__ method, 
+                    where you can use conditional logic for more complex requirements.
+
+
+
+                B1) UPDATING an attribute preserving the original:
+
+                    Explanation: 
+                        This approach modifies the existing widget for start_date by adding or 
+                        updating attributes.
+
+                    Use Case: 
+                        Useful when you only need to change specific attributes without replacing 
+                        the entire widget. This keeps any other default settings on the widget 
+                        intact, adding just the new or updated attributes.
+
+                    E.g.
+
+                        def __init__(self, *args, **kwargs):
+                            super().__init__(*args, **kwargs)
+
+                            self.fields['start_date'].widget.attrs.update({'type': 'date'})
+
+
+
+                B2) REPLACING the entiry attributes of the original:
+
+                    Explanation: 
+                        This approach fully replaces the widget of the start_date field with a 
+                        new DateInput instance.
+
+                    Use Case: 
+                        Useful when you want to entirely redefine the widget, regardless of what 
+                        was there initially, or if you need to set multiple attributes at once.
+
+                    E.g.
+
+                        def __init__(self, *args, **kwargs):
+                            super().__init__(*args, **kwargs)
+
+                            self.fields['start_date'].widget = forms.DateInput(attrs={'type': 'date'})

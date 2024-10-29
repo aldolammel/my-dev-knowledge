@@ -1,0 +1,65 @@
+
+
+    NOJE.js
+
+        >> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> Install:
+
+            >> Windows:
+
+                https://nodejs.org/en
+
+
+            >> Ubuntu:
+
+                >> Update the package list and install globally both Node.js
+                    and the 'npm' (node package manager):
+
+                    $ sudo apt update
+                    $ sudo apt install nodejs npm
+
+                    # Check current node version installed and update it:
+                    $ node -v
+                    $ sudo npm install -g n
+                    $ sudo n latest
+                    $ node -v
+
+                    # Check current npm version installed and update it:
+                    $ npm -v
+                    $ sudo npm install -g npm@latest
+                    $ npm -v
+
+
+
+            >> Mac: 
+
+
+
+        >> Installing components:
+
+            Ubuntu:
+                $ sudo npm install <package_name>
+
+
+        >> (optional) Make sure you got the .gitignore updated:
+
+            ### Node.js ###
+            node_modules/
+            jspm_packages/
+
+
+        >> Listing installed components:
+
+            Ubuntu:
+               $ npm list --depth=0
+
+
+        >> Uninstalling components:
+
+            Ubuntu:
+                $ npm uninstall <package_name>
+                
+                e.g.
+                    npm uninstall naive-ui    (without '@' and version numbers)
