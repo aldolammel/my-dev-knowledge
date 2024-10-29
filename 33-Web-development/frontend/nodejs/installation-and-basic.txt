@@ -2,34 +2,49 @@
 
     NOJE.js
 
-        >> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        >> It's a runtime environment that allows you to run JavaScript code on the server side.
+            This enables JavaScript to be used for building fast, scalable server-side apps. 
+            That said, Node.js is a cross-platform, open-source JavaScript runtime environment that
+            can run on Windows, Linux, Unix, macOS, and more, executing JS code outside a browser.
 
-
+            
         >> Install:
 
-            >> Windows:
+            https://nodejs.org/en
 
-                https://nodejs.org/en
+
+            >> Windows:
+             
+                # installs fnm (Fast Node Manager):
+                $ winget install Schniz.fnm
+
+                # Restart the shell!!!
+
+                # configure fnm environment and download and install Node.js:
+                $ fnm env --use-on-cd | Out-String | Invoke-Expression
+                $ fnm use --install-if-missing 23    <-- FIRST NUMBER OF THE CURRENT VERSION!
+
+                # verifies the right Node.js and npm versions:
+                $ node -v
+                $ npm -v
 
 
             >> Ubuntu:
 
-                >> Update the package list and install globally both Node.js
-                    and the 'npm' (node package manager):
+                # Update the package list and install globally both:
+                $ sudo apt update
+                $ sudo apt install nodejs npm
 
-                    $ sudo apt update
-                    $ sudo apt install nodejs npm
+                # Check current node version installed and update it:
+                $ node -v
+                $ sudo npm install -g n
+                $ sudo n latest
+                $ node -v
 
-                    # Check current node version installed and update it:
-                    $ node -v
-                    $ sudo npm install -g n
-                    $ sudo n latest
-                    $ node -v
-
-                    # Check current npm version installed and update it:
-                    $ npm -v
-                    $ sudo npm install -g npm@latest
-                    $ npm -v
+                # Check current npm version installed and update it:
+                $ npm -v
+                $ sudo npm install -g npm@latest
+                $ npm -v
 
 
 
