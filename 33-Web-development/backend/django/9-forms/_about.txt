@@ -13,6 +13,10 @@ DJANGO FORMS:
                     Form class is linked with some models.py class or received data
                     from a views.py file.
 
+                    >> How works the form structure:
+
+                        /33-Web-development/backend/django/9-forms/form-structure.py
+
 
                     >> Receiving data from Model:
 

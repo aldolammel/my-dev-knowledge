@@ -17,7 +17,7 @@ class MovieForm(forms.ModelForm):
         # Connecting it (form-class) with the model-class must populate:
         model = Movie
 
-        # Original fields from the associated model:
+        # Original fields from the associated model. Here you define the field's ordering:
         fields = [
             ...
         ]
