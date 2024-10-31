@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/5.1/topics/forms/modelforms/#field-types
 
 HTML INPUT                MODELS.PY FIELDS                FORMS.PY FIELDS
 
-<textarea> .............. TextField ..................... CharField with widget=forms.Textarea
+<textarea> .............. TextField ..................... Textarea
 type= text............... TextField ..................... TextInput
 type= date .............. DateField ..................... DateInput
 type= time .............. TimeField ..................... TimeInput
