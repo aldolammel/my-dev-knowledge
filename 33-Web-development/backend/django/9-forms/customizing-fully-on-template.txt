@@ -1,10 +1,13 @@
 
 
-FORM: FULL CUSTOMIZATION ON THE TEMPLATE:
+FORM: FULL CUSTOMIZATION ON THE TEMPLATE (NOT RECOMMENDED):
+
 
     >> Don't forget that you need to create every form/field feature for this approach:
 
     >> Examples below are using Bulma CSS Framework's classes.
+
+    >> Fields called like this will ignore any 'widget' settings have done through forms.py or elsewhere;
 
     >> The template below is receiving 'form' as context:
 
@@ -12,9 +15,9 @@ FORM: FULL CUSTOMIZATION ON THE TEMPLATE:
 
         E.g. INPUT:
 
-            <input name="{{ form.first_name.id }}" id="{{ form.first_name.id }}" class="input is-large" type="text" value="{{ form.first_name.value }}">
-            <input name="{{ form.birthdate.id }}" id="{{ form.birthdate.id }}" class="input is-large" type="date" value="{{ form.birthdate.value|date:"Y-m-d" }}">
-            <input name="{{ form.last_pwd_update.id }}" id="{{ form.last_pwd_update.id }}" class="input is-large" type="datetime-local" value="{{ form.last_pwd_update.value }}" readonly>
+            <input name="{{ form.first_name.name }}" id="{{ form.first_name.id }}" class="input is-large" type="text" value="{{ form.first_name.value }}">
+            <input name="{{ form.birthdate.name }}" id="{{ form.birthdate.id }}" class="input is-large" type="date" value="{{ form.birthdate.value|date:"Y-m-d" }}">
+            <input name="{{ form.last_pwd_update.name }}" id="{{ form.last_pwd_update.id }}" class="input is-large" type="datetime-local" value="{{ form.last_pwd_update.value }}" readonly>
 
 
 
@@ -38,7 +41,7 @@ FORM: FULL CUSTOMIZATION ON THE TEMPLATE:
 
         E.g. CHECKBOX:
 
-            <input type="checkbox" name="{{ form.is_nomad.id }}" id="{{ form.is_nomad.id }}" class="checkbox" {% if form.is_nomad.value %}checked{% endif %}>
+            <input type="checkbox" name="{{ form.is_nomad.name }}" id="{{ form.is_nomad.id }}" class="checkbox" {% if form.is_nomad.value %}checked{% endif %}>
 
 
 
