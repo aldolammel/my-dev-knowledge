@@ -1,4 +1,3 @@
-
 '''
    
 FORM: BASIC CUSTOMIZING ATTRIBUTES OF CONNECTED MODEL'S FIELD
@@ -25,38 +24,41 @@ FORM: BASIC CUSTOMIZING ATTRIBUTES OF CONNECTED MODEL'S FIELD
         
 '''
 
-class EventAttackModelForm(forms.ModelForm):
-    
+
+class MyModelForm(forms.ModelForm):
+
     class Meta:
         # Connected model to populate:
-        model = EventAttackModel
-    # Ordering fields on the form:
+        model = MyModel
+        # Ordering fields on the form:
         fields = [
-            'start_date', 
-            'is_brazilian', 
-            'start_time',
-            'is_ongoing',
-            'end_date',
-            'end_time',
+            'text_example',
+            'select_example',
+            'email_example',
+            'password_example',
+            'date_example',
+            'time_example',
+            'bool_example',
         ]
         # Simple and static tweaks only for connected model's fields:
         widgets = {
-            'start_date': forms.DateInput(
+            'text_example': forms.TextInput(
+                attrs={'class': 'input is-large'},
+            ),
+            'select_example': forms.Select(attrs={}),
+            'email_example': forms.EmailInput(
+                attrs={'class': 'input is-large', 'type': 'email'},
+            ),
+            'password_example': forms.PasswordInput(
+                attrs={'class': 'input is-large', 'type': 'password'}
+            ),
+            'date_example': forms.DateInput(
                 format='%Y-%m-%d',  # Enforcing the db format explicitly!
                 attrs={'class': 'input is-large', 'type': 'date'},
             ),
-            'is_brazilian': forms.CheckboxInput(
-                attrs={'class': 'is-large', 'id': 'is_brazilian'}
-            ),
-            'start_time': forms.TimeInput(attrs={'class': 'input is-large', 'type': 'time'}),
-            'is_ongoing': forms.CheckboxInput(attrs={'class': 'is-large', 'id': 'is_ongoing'}),
-            'end_date': forms.DateInput(
-                format='%Y-%m-%d',  # Enforcing the db format explicitly!
-                attrs={'class': 'input is-large', 'type': 'date'},
-            ),
-            'end_time': forms.TimeInput(attrs={'class': 'input is-large', 'type': 'time'}),
+            'time_example': forms.TimeInput(attrs={'class': 'input is-large', 'type': 'time'}),
+            'bool_example': forms.CheckboxInput(attrs={'class': 'is-large', 'id': 'bool_example'}),
         }
-
 
 
 '''         
@@ -91,18 +93,17 @@ class EventAttackModelForm(forms.ModelForm):
             
 '''
 
-class EventAttackModelForm(forms.ModelForm):
-    
-    class Meta:
-        ...
-        
+
+class MyModelForm(forms.ModelForm):
+
+    class Meta: ...
+
     def __init__(self, *args, **kwargs):
         '''Built-in method that's called when the form is initializated.'''
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:
-        self.fields['start_date'].widget.attrs.update({'type': 'date'})
-
+        self.fields['date_example'].widget.attrs.update({'type': 'date'})
 
 
 '''
@@ -121,22 +122,17 @@ class EventAttackModelForm(forms.ModelForm):
         
 '''
 
-class EventAttackModelForm(forms.ModelForm):
-    
-    class Meta:
-        ...
-            
+
+class MyModelForm(forms.ModelForm):
+
+    class Meta: ...
+
     def __init__(self, *args, **kwargs):
         '''Built-in method that's called when the form is initializated.'''
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:
-        self.fields['start_date'].widget = forms.DateInput(attrs={'type': 'date'})
-
-
-
-
-
+        self.fields['date_example'].widget = forms.DateInput(attrs={'type': 'date'})
 
 
 '''
@@ -149,11 +145,11 @@ class EventAttackModelForm(forms.ModelForm):
         
 '''
 
-class EventAttackModelForm(forms.ModelForm):
-    
-    class Meta:
-        ...
-            
+
+class MyModelForm(forms.ModelForm):
+
+    class Meta: ...
+
     def __init__(self, *args, **kwargs):
         '''Built-in method that's called when the form is initializated.'''
         super().__init__(*args, **kwargs)
@@ -161,11 +157,7 @@ class EventAttackModelForm(forms.ModelForm):
         # More complex or dynamic tweaks for connected model's fields:
         d_current = timezone.now().date()
         d_limit = (timezone.now() - timedelta(days=180)).date()
-        self.fields['start_date'].widget.attrs.update({'max': d_current, 'min': d_limit})
-        self.fields['end_date'].widget.attrs.update({'max': d_current, 'min': d_limit})
-
-
-
+        self.fields['date_example'].widget.attrs.update({'max': d_current, 'min': d_limit})
 
 
 '''

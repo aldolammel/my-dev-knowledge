@@ -44,35 +44,49 @@
 
                 # Internationalization
                 USE_I18N = True
-                LANGUAGE_CODE = 'en'  # Default language!
+                # Available languages:
+                LANG_CODE_PTBR = 'pt'
+                LANG_CODE_ESLAT = 'es'
+                LANG_CODE_ENUS = 'en'
                 LANGUAGES = [
-                    (LANGUAGE_CODE, 'English'),
-                    ('pt-br', 'Brazilian Portuguese'),
+                    (LANG_CODE_PTBR, 'Português'),
+                    (LANG_CODE_ESLAT, 'Español'),
+                    (LANG_CODE_ENUS, 'English'),
                 ]
+                # Default language:
+                LANGUAGE_CODE = LANG_CODE_PTBR
                 LOCALE_PATHS = [BASE_DIR / 'locale']
+                LANGUAGE_COOKIE_NAME = 'user_language'
+                LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
+
+                # Timezone-aware
                 USE_TZ = True
                 TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
-                # Date and time format settings
-                DATE_FORMAT = 'Y-m-d'
-                TIME_FORMAT = 'H:i:s'
-                DATETIME_FORMAT = 'Y-m-d H:i:s'
-                SHORT_DATE_FORMAT = 'd/m/Y'
-                SHORT_DATETIME_FORMAT = 'd/m/Y P'
-                FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
-                # Input format settings
+
+                # FORMATS
+                # Date:
+                DATE_FORMAT = 'Y-m-d'  # ISO format for dates ('2006-10-25')
+                SHORT_DATE_FORMAT = 'd-m-Y'  # '25-10-2006'
+                # Time:
+                TIME_FORMAT = 'H:i'  # 24-hour format (H): '14:30'
+                # Datetime:
+                DATETIME_FORMAT = f'{DATE_FORMAT} {TIME_FORMAT}'  # '2006-10-25 14:30'
+                DATETIME_INPUT_FORMATS = [
+                    '%Y-%m-%d %H:%M',  # '2006-10-25 14:30'
+                    '%Y/%m/%d %H:%M',  # '2006/10/25 14:30'
+                ]
+                # Input formats:
                 DATE_INPUT_FORMATS = [
-                    '%d-%m-%Y',
-                    '%d/%m/%Y',
-                    '%d%m%Y',
+                    '%Y-%m-%d',  # ISO 'yyyy-mm-dd'
+                    '%d/%m/%Y',  # '25/10/2006'
+                    '%d-%m-%Y',  # '25-10-2006'
                 ]
                 TIME_INPUT_FORMATS = [
-                    '%H:%M',
-                    '%H%M',
+                    '%H:%M',  # '14:30'
+                    '%H%M',  # '1430'
                 ]
-                DATETIME_INPUT_FORMATS = [
-                    '%Y-%m-%d %H:%M',
-                    '%Y/%m/%d %H:%M',
-                ]
+                # Others:
+                FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
 
 
 
@@ -155,6 +169,8 @@
                         /pt/ or /pt_BR/
                         /es/
 
+                        >> Be carefull because <html lang="THIS_ATTRIBUTE"> accepts only 2 characters!
+
                 >> Create all language files (.PO):
 
                     $ django-admin makemessages --all
@@ -228,13 +244,14 @@
                 PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE
                 PARLER_LANGUAGES = {
                     None: (
-                        {'code': LANGUAGE_CODE,},
-                        {'code': 'pt-br',},  # example only!
+                        {'code': LANG_CODE_PTBR},
+                        {'code': LANG_CODE_ESLAT},
+                        {'code': LANG_CODE_ENUS},
                     ),
                     'default': {
                         'fallbacks': [PARLER_DEFAULT_LANGUAGE_CODE],
                         'hide_untranslated': False,
-                    }
+                    },
                 }
 
                 >> For multi-site project: replace None with the SITE_ID. Each SITE_ID can be added
@@ -306,25 +323,21 @@
                         the language change request.
 
 
-            4.4) On the template:
+            4.4) On your base.html template:
 
-                <!-- LANGUAGE FORM - START -->
-                <form action="{% url 'set_language' %}" method="post">
-                    {% csrf_token %}
-                    {# Redirect to the current page after switching language: #}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    {# Dropdown: #}
-                    <select name="language">
-                        {% for lang_code, lang_name in LANGUAGES %}
-                            <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected{% endif %}>
-                                {{ lang_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                    {# Submit button: #}
-                    <input type="submit" value="Change / Cambiar / Mudar">
-                </form>
-                <!-- LANGUAGE FORM - END -->
+                E.g.
+
+                    <html lang="{{ LANGUAGE_CODE }}">
+
+
+                >> To use a template-variable "{{ }}" globally:
+                    
+                    \33-Web-development\backend\django\3-2-backend-views\1-building-views-context\global-context.txt
+
+
+            4.5) Still on templates, a language-selector, language-switch:
+
+                \33-Web-development\backend\django\8-translate-and-internationalization\language-selector.html
 
 
 

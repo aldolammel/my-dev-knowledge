@@ -39,12 +39,12 @@ type= url ............... URLField ...................... URLInput
 ......................... UUIDField ..................... TextInput
 ......................... ComboField .................... TextInput
 ......................... MultiValueField ............... TextInput
- 
+type="password" .........                ................ PasswordInput
+
 <input type="button">
 <input type="color">
 <input type="hidden">
 <input type="month">
-<input type="password">
 <input type="range">
 <input type="reset">
 <input type="search">

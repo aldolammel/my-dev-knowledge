@@ -10,34 +10,26 @@ FRONT-END: USER LOGIN FORM
 
     1) In 'accounts' sub-app, go to /templates/registration/ and create the 'login.html':
 
-                {% extends "base.html" %}
-
-                {% block title %}Login{% endblock title %}
-
-                {% block content %}
+                
                     
-                    <div class="row login text-center">
-                        <h1>Login</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="login-form">
+                    <!-- LOGIN FORM - START -->
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% for field in form.fields %}
 
-                            <!-- LOGIN FORM - START -->
-                            <form method="post">
-                                {% csrf_token %}
-                                {{ form.as_p }}
-                                <button type="submit">Login</button>
-                                <a href="{% url 'accounts:password_reset' %}">I forgot my password</a>
-                                <a href="{% url 'accounts:register_view' %}">Create a new account</a>
-                            </form>
-                            <!-- LOGIN FORM - END --> 
+                            {{ field.label }}
+                            {{ field }}
 
-                        </div>
-                        <div class="col"></div>
-                    </div>     
+                        {% endfor %}
+
+                        <button type="submit">Login</button>
+                        <a href="{% url 'accounts:password_reset' %}">I forgot my password</a>
+                        <a href="{% url 'accounts:register_view' %}">Create a new account</a>
+                    </form>
+                    <!-- LOGIN FORM - END --> 
                     
-                {% endblock content %}
+                
 
 
     2) If you want to print the user (username or first_name or last_name) on the template,

@@ -1,0 +1,24 @@
+<!-- LANGUAGE FORM - START -->
+<form id="languageForm" action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <div class="control has-icons-left">
+        <div class="select">
+            {# Redirect to the current page after switching language: #}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            {# Dropdown: #}
+            <select name="language"
+                    onchange="document.getElementById('languageForm').submit();">
+                {% for lang_code, lang_name in LANGUAGES %}
+                    <option value="{{ lang_code }}"
+                            {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                        {{ lang_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <span class="icon is-left">
+            <i class="fa-solid fa-language"></i>
+        </span>
+    </div>
+</form>
+<!-- LANGUAGE FORM - END -->

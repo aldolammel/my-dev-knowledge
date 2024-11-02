@@ -1,7 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from .validators import validate_user_agreement, validate_birth
+from django.core.validators import MinLengthValidator
+from django.utils import timezone
 from parler.models import TranslatableModel, TranslatedFields
+
+# from parler.managers import TranslatableManager, TranslatableQuerySet
+from .validators import validate_user_agreement, validate_birth, validate_goals
 from cefalog import language as lng
 from cefalog.constants import (
     BRAND_NAME,
@@ -19,6 +23,11 @@ from cefalog.constants import (
     VAL_PROFILE_2_DESC_MAXLNGH,
 )
 
+# MODEL MANAGERS & MODEL QUERYSETS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+# MODELS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
 class Language(models.Model):
     id = models.SmallAutoField(
@@ -32,13 +41,15 @@ class Language(models.Model):
         blank=False,
         null=False,
         verbose_name=lng.LB_NAME,
+        validators=[MinLengthValidator(3)],
     )
     iso_code = models.CharField(
-        max_length=3,
+        max_length=2,
         unique=False,  # For flexibility, I can set the same ISO for more than one language.
         blank=False,
         null=False,
         verbose_name=lng.LB_ISO_CODE,
+        validators=[MinLengthValidator(2)],
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
@@ -65,6 +76,9 @@ class Language(models.Model):
         verbose_name=lng.LB_UPDATED_BY,
         help_text=lng.TX_HELP_UPDATED_BY,
     )
+
+    # Model Managers:
+    # Reserved space...
 
     class Meta:
         db_table = 'user_language'
@@ -98,6 +112,7 @@ class Country(models.Model):
         blank=False,
         null=False,
         verbose_name=lng.LB_NAME,
+        validators=[MinLengthValidator(4)],
     )
     abbreviation = models.CharField(
         max_length=2,
@@ -105,6 +120,7 @@ class Country(models.Model):
         blank=False,
         null=False,
         verbose_name=lng.LB_ABBREV,
+        validators=[MinLengthValidator(2)],
     )
     language = models.ForeignKey(
         Language,
@@ -138,6 +154,9 @@ class Country(models.Model):
         verbose_name=lng.LB_UPDATED_BY,
         help_text=lng.TX_HELP_UPDATED_BY,
     )
+
+    # Model Managers:
+    # Reserved space...
 
     class Meta:
         db_table = 'user_country'
@@ -177,6 +196,7 @@ class Phone(models.Model):
     )
     number = models.PositiveBigIntegerField(
         verbose_name=lng.LB_PHONE_NUMBER,
+        # TODO: Min and max characters!
     )
     # TODO FIX: if someone has register your number. How to validate the number is yours...
     """owner = models.OneToOneField(
@@ -184,7 +204,7 @@ class Phone(models.Model):
         on_delete=models.CASCADE,
         null=False,
         related_name='phone',
-        verbose_name=lng.LB_OWNER,
+        verbose_name=lng.LB_PHONE_OWNER,
     )"""
     created_at = models.DateTimeField(
         auto_now_add=True,
@@ -192,6 +212,9 @@ class Phone(models.Model):
         null=False,
         verbose_name=lng.LB_CREATED_AT,
     )
+
+    # Model Managers:
+    # Reserved space...
 
     class Meta:
         db_table = 'user_phone'
@@ -209,6 +232,84 @@ class Phone(models.Model):
         super().save(*args, **kwargs)
 
 
+class Goal(TranslatableModel):
+    id = models.SmallAutoField(
+        primary_key=True,
+        unique=True,
+        editable=False,
+    )
+    profile_type = models.CharField(
+        max_length=15,
+        null=True,
+        blank=True,
+        choices=CHOICES_PROFILE_TYPE,
+        verbose_name=lng.LB_PROFILE_TYPE,
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        blank=False,
+        null=False,
+        verbose_name=lng.LB_CREATED_AT,
+    )
+    status = models.CharField(
+        max_length=10,
+        choices=CHOICES_STATUS_CONTENT,
+        default='on',
+        verbose_name=lng.LB_STATUS_CONTENT,
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        blank=True,
+        verbose_name=lng.LB_UPDATED_AT,
+    )
+    updated_by = models.ForeignKey(
+        'User',  # Circular relationship!
+        related_name='updated_goals',
+        on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
+        null=True,
+        verbose_name=lng.LB_UPDATED_BY,
+        help_text=lng.TX_HELP_UPDATED_BY,
+    )
+    translations = TranslatedFields(
+        goal=models.CharField(
+            max_length=60,
+            unique=False,  # For model translation, this argument is set via 'meta' argument!
+            blank=False,
+            null=False,
+            verbose_name=lng.LB_GOAL,
+            validators=[MinLengthValidator(10)],
+        ),
+    )
+    # TODO Fix, try to fix this Parler issue (handling with Unique attributes) that i didn't yet:
+    """translations = TranslatedFields(
+        goal=models.CharField(
+            max_length=60,
+            unique=False,  # For model translation, this argument is set via 'meta' argument!
+            blank=False,
+            null=False,
+            verbose_name=lng.LB_GOAL,
+            meta={
+                'unique_together': [('language_code', lng.LB_GOAL)]
+            },  # unique title for each single language!
+        ),  # type: ignore
+    )"""
+
+    # Model Managers:
+    # Reserved space...
+
+    class Meta:
+        db_table = 'goal'
+        ordering = ['-status']
+        # verbose_name = 'Goal'
+        # verbose_name_plural = 'Goals'
+
+    def __str__(self):
+        return self.goal
+
+    def save(self, *args, **kwargs):
+        self.goal = self.goal.capitalize()
+        super().save(*args, **kwargs)
+
 
 class User(AbstractUser):
     id = models.BigAutoField(
@@ -225,15 +326,17 @@ class User(AbstractUser):
         verbose_name=lng.LB_PROFILE_TYPE,
         help_text=lng.TX_HELP_USER_PROFILE,
         error_messages={
-            'blank': lng.TX_ERRO_USER_PROFILE_BLNK % {'txt': lng.LB_PROFILE_TYPE},
+            'blank': lng.TX_ERRO_USER_PROFILE_BLNK,
         },
     )
     email = models.EmailField(
         blank=False,
         null=False,
         verbose_name=lng.LB_USER_EMAIL,
+        validators=[MinLengthValidator(8)],
+        help_text=lng.TX_HELP_USER_EMAIL,
         error_messages={
-            'blank': lng.TX_ERRO_USER_EMAIL_BLNK % {'txt': lng.LB_USER_EMAIL},
+            'blank': lng.TX_ERRO_USER_EMAIL_BLNK,
             'invalid': lng.TX_ERRO_USER_EMAIL_INVLD,
         },
     )
@@ -248,25 +351,25 @@ class User(AbstractUser):
         null=True,
         blank=True,
         verbose_name=lng.LB_LANG_INTERFACE,
-        help_text=lng.TX_HELP_USER_LANG % {'txt': BRAND_NAME},
+        help_text=lng.TX_HELP_USER_LANG,
     )
     accepted_min_age = models.BooleanField(
         default=False,
-        verbose_name=lng.LB_USER_AGE_MIN % {'val': VAL_PROFILE_1_BIRTH_MIN},
-        help_text=lng.TX_HELP_USER_AGE_MIN % {'val': VAL_PROFILE_1_BIRTH_MIN},
+        verbose_name=lng.LB_USER_AGE_MIN,
+        help_text=lng.TX_HELP_USER_AGE_MIN,
         # error_messages in validators.py
     )
     accepted_our_privacy = models.BooleanField(
         default=False,
-        verbose_name=lng.LB_USER_PRIVACY % {'txt': lng.S_G_PRIVACY_NAME},
-        help_text=lng.TX_HELP_USER_PRIVACY % {'txt': lng.LB_USER_PRIVACY},
+        verbose_name=lng.LB_USER_PRIVACY,
+        help_text=lng.TX_HELP_USER_PRIVACY,
         # error_messages in validators.py
     )
-    """last_pwd_update = models.DateField(
-        editable=False,
+    last_pwd_update = models.DateTimeField(
         null=True,
-        verbose_name=lng.LB_PWD_LAST_UPDATE,
-    )"""
+        blank=True,
+        verbose_name=lng.LB_USER_PWD_LAST_UPDATE,
+    )
     # created_at = 'date_joined' from AbstractUser
     updated_at = models.DateTimeField(
         auto_now=True,
@@ -282,6 +385,9 @@ class User(AbstractUser):
         help_text=lng.TX_HELP_UPDATED_BY,
     )
 
+    # Model Managers:
+    # Reserved space...
+
     class Meta:
         db_table = 'auth_user'
         ordering = ['username']
@@ -290,6 +396,13 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+    def set_password(self, raw_password):
+        '''Built-in method to deal the user's password, taking care of the password hashing.'''
+        super().set_password(raw_password)
+        if self.pk:  # avoids the error on register form!
+            self.last_pwd_update = timezone.now()
+            self.save(update_fields=['password', 'last_pwd_update'])
 
     def clean(self):
         '''It's a built-in method for adding custom validation logic before saving data to the db.'''
@@ -315,12 +428,14 @@ class UserProfileOne(models.Model):
         User,
         on_delete=models.CASCADE,  # Tells Django to del the UserProfileOne if the User is deleted.
         related_name=REL_PROFILE_1,
-        verbose_name=lng.LB_USER,
+        verbose_name=lng.LB_PROFILES_USER,
     )
     first_name = models.CharField(
         max_length=VAL_PROFILE_1_NAME_MAXLNGH,
         blank=True,
         verbose_name=lng.LB_PROFILE_1_FNAME,
+        validators=[MinLengthValidator(2)],
+        help_text=lng.TX_HELP_PROFILE_1_NAME,
         error_messages={
             'max_length': lng.TX_ERRO_PROFILE_1_FNAME_MAXLNGH
             % {
@@ -329,10 +444,12 @@ class UserProfileOne(models.Model):
             },
         },
     )
-    last_name = models.CharField(
+    # It's not used anymore!
+    """last_name = models.CharField(
         max_length=VAL_PROFILE_1_NAME_MAXLNGH,
         blank=True,
         verbose_name=lng.LB_PROFILE_1_LNAME,
+        validators=[MinLengthValidator(3)],
         error_messages={
             'max_length': lng.TX_ERRO_PROFILE_1_LNAME_MAXLNGH
             % {
@@ -340,22 +457,23 @@ class UserProfileOne(models.Model):
                 'val': VAL_PROFILE_1_NAME_MAXLNGH,
             }
         },
-    )
+    )"""
     sex = models.CharField(
         max_length=20,
         choices=CHOICES_SEX,
         null=True,
         blank=False,
         verbose_name=lng.LB_PROFILE_1_SEX,
-        help_text=lng.TX_HELP_PROFILE_1_SEX % {'txt': BRAND_NAME},
+        help_text=lng.TX_HELP_PROFILE_1_SEX,
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_1_SEX_BLNK % {'txt': lng.LB_PROFILE_1_SEX},
+            'blank': lng.TX_ERRO_PROFILE_1_SEX_BLNK,
         },
     )
     birthdate = models.DateField(
         null=True,
         blank=True,
         verbose_name=lng.LB_PROFILE_1_BIRTHDATE,
+        help_text=lng.TX_HELP_PROFILE_1_BIRTHDATE,
         error_messages={
             'invalid': lng.TX_ERRO_PROFILE_1_BIRTH_INVLD,
         },
@@ -384,7 +502,7 @@ class UserProfileOne(models.Model):
         verbose_name=lng.LB_PROFILE_1_COUNTRY,
         help_text=lng.TX_HELP_PROFILE_1_COUNTRY,
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_1_COUNTRY_BLNK % {'txt': lng.LB_PROFILE_1_COUNTRY}
+            'blank': lng.TX_ERRO_PROFILE_1_COUNTRY_BLNK,
         },
     )
     is_nomad = models.BooleanField(
@@ -398,6 +516,24 @@ class UserProfileOne(models.Model):
         blank=True,
         verbose_name=lng.LB_PROFILE_1_CITY,
         help_text=lng.TX_HELP_PROFILE_1_CITY,
+        validators=[MinLengthValidator(3)],
+    )
+    goal_primary = models.ForeignKey(
+        Goal,
+        related_name='goal_primary_personals',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name=lng.LB_PROFILE_1_GOAL_PRI,
+        help_text=lng.TX_HELP_PROFILE_1_GOAL_PRI,
+    )
+    goal_secondary = models.ForeignKey(
+        Goal,
+        related_name='goal_secundary_personals',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name=lng.LB_PROFILE_1_GOAL_SEC,
     )
     updated_at = models.DateTimeField(
         auto_now=True,
@@ -413,6 +549,9 @@ class UserProfileOne(models.Model):
         help_text=lng.TX_HELP_UPDATED_BY,
     )
 
+    # Model Managers:
+    # Reserved space...
+
     class Meta:
         db_table = 'user_profile_one'
         ordering = ['user', '-updated_at']
@@ -421,20 +560,21 @@ class UserProfileOne(models.Model):
 
     def __str__(self):
         if self.user:
-            if self.first_name and self.last_name:
-                return f'{self.user.username} ({self.first_name} {self.last_name})'
+            if self.first_name:
+                return f'{self.user.username} ({self.first_name})'
             return self.user.username
         return lng.CMS_ERRO_PROFILE
 
     def clean(self):
         '''It's a built-in method for adding custom validation logic before saving data to the db.'''
         validate_birth(self.birthdate)
+        validate_goals(self.goal_primary, self.goal_secondary)
 
     def save(self, *args, **kwargs):
-        if self.first_name:
-            self.first_name = self.first_name.title()
-        if self.last_name:
-            self.last_name = self.last_name.title()
+        # if self.first_name:
+        #     self.first_name = self.first_name.title()  # Let the user choose their way!
+        # if self.last_name:
+        #     self.last_name = self.last_name.title()  # It's not used anymore!
         if self.city:
             self.city = self.city.title()
         # Defining the user's birth year automatically:
@@ -458,7 +598,7 @@ class UserProfileTwo(models.Model):
         User,
         on_delete=models.CASCADE,  # Tells Django to del the UserProfileTwo if the User is deleted.
         related_name=REL_PROFILE_2,
-        verbose_name=lng.LB_USER,
+        verbose_name=lng.LB_PROFILES_USER,
     )
     business_name = models.CharField(
         max_length=VAL_PROFILE_2_BNAME_MAXLNGH,
@@ -467,8 +607,9 @@ class UserProfileTwo(models.Model):
         blank=False,
         verbose_name=lng.LB_PROFILE_2_BNAME,
         help_text=lng.TX_HELP_PROFILE_2_BNAME,
+        validators=[MinLengthValidator(4)],
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_2_BNAME_BLNK % {'txt': lng.LB_PROFILE_2_BNAME},
+            'blank': lng.TX_ERRO_PROFILE_2_BNAME_BLNK,
             # 'unique': 'This business name already exists.'
             'max_length': lng.TX_ERRO_PROFILE_2_BNAME_MAXLNGH
             % {
@@ -484,8 +625,9 @@ class UserProfileTwo(models.Model):
         blank=False,
         verbose_name=lng.LB_PROFILE_2_LEGAL,
         help_text=lng.TX_HELP_PROFILE_2_LEGAL,
+        validators=[MinLengthValidator(6)],
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_2_LEGAL_BLNK % {'txt': lng.LB_PROFILE_2_LEGAL},
+            'blank': lng.TX_ERRO_PROFILE_2_LEGAL_BLNK,
             'unique': lng.TX_ERRO_PROFILE_2_LEGAL_UNIQ,
             'max_length': lng.TX_ERRO_PROFILE_2_LEGAL_MAXLNGH
             % {
@@ -511,8 +653,9 @@ class UserProfileTwo(models.Model):
         blank=False,
         verbose_name=lng.LB_PROFILE_2_CITY,
         help_text=lng.TX_HELP_PROFILE_2_CITY,
+        validators=[MinLengthValidator(3)],
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_2_CITY_BLNK % {'txt': lng.LB_PROFILE_2_CITY},
+            'blank': lng.TX_ERRO_PROFILE_2_CITY_BLNK,
             'max_length': lng.TX_ERRO_PROFILE_2_CITY_MAXLNGH
             % {
                 'txt': lng.LB_PROFILE_2_CITY,
@@ -526,8 +669,9 @@ class UserProfileTwo(models.Model):
         blank=False,
         verbose_name=lng.LB_PROFILE_2_DESC,
         help_text=lng.TX_HELP_PROFILE_2_DESC,
+        validators=[MinLengthValidator(40)],
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_2_DESC_BLNK % {'txt': lng.LB_PROFILE_2_DESC},
+            'blank': lng.TX_ERRO_PROFILE_2_DESC_BLNK,
             'max_length': lng.TX_ERRO_PROFILE_2_DESC_MAXLNGH
             % {
                 'txt': lng.LB_PROFILE_2_DESC,
@@ -538,17 +682,20 @@ class UserProfileTwo(models.Model):
     business_url = models.URLField(
         blank=True,
         verbose_name=lng.LB_PROFILE_2_URL,
+        validators=[MinLengthValidator(12)],
     )
     social_media = models.URLField(
         blank=True,
         verbose_name=lng.LB_PROFILE_2_URL_SOCIAL,
+        validators=[MinLengthValidator(12)],
     )
     business_email = models.EmailField(
         null=True,
         blank=False,
         verbose_name=lng.LB_PROFILE_2_EMAIL,
+        validators=[MinLengthValidator(8)],
         error_messages={
-            'blank': lng.TX_ERRO_PROFILE_2_EMAIL_BLNK % {'txt': lng.LB_PROFILE_2_EMAIL},
+            'blank': lng.TX_ERRO_PROFILE_2_EMAIL_BLNK,
             'invalid': lng.TX_ERRO_PROFILE_2_EMAIL_INVLD,
         },
     )
@@ -561,15 +708,33 @@ class UserProfileTwo(models.Model):
         verbose_name=lng.LB_PHONE_NUMBER,
     )"""
     # TODO is_notified_by_phone = models.BooleanField(default=False, verbose_name=lng.LB_NOTIF_BY_PHONE,)
-    contact_first_name = models.CharField(
+    goal_primary = models.ForeignKey(
+        Goal,
+        related_name='goal_primary_businesses',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name=lng.LB_PROFILE_2_GOAL_PRI,
+    )
+    goal_secondary = models.ForeignKey(
+        Goal,
+        related_name='goal_secundary_businesses',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name=lng.LB_PROFILE_2_GOAL_SEC,
+    )
+    busi_first_name = models.CharField(
         max_length=20,
         blank=True,
         verbose_name=lng.LB_PROFILE_2_FNAME,
+        validators=[MinLengthValidator(3)],
     )
-    contact_last_name = models.CharField(
+    busi_last_name = models.CharField(
         max_length=20,
         blank=True,
         verbose_name=lng.LB_PROFILE_2_LNAME,
+        validators=[MinLengthValidator(3)],
     )
     updated_at = models.DateTimeField(
         auto_now=True,
@@ -584,6 +749,9 @@ class UserProfileTwo(models.Model):
         verbose_name=lng.LB_UPDATED_BY,
         help_text=lng.TX_HELP_UPDATED_BY,
     )
+
+    # Model Managers:
+    # Reserved space...
 
     class Meta:
         db_table = 'user_profile_two'
@@ -600,17 +768,17 @@ class UserProfileTwo(models.Model):
 
     def clean(self):
         '''It's a built-in method for adding custom validation logic before saving data to the db.'''
-        pass
+        validate_goals(self.goal_primary, self.goal_secondary)
 
     def save(self, *args, **kwargs):
         if self.business_name:
             self.business_name = self.business_name.title()
         if self.legal_name:
             self.legal_name = self.legal_name.upper()
-        if self.contact_first_name:
-            self.contact_first_name = self.contact_first_name.title()
-        if self.contact_last_name:
-            self.contact_last_name = self.contact_last_name.title()
+        if self.busi_first_name:
+            self.busi_first_name = self.busi_first_name.title()
+        if self.busi_last_name:
+            self.busi_last_name = self.busi_last_name.title()
         if self.city_business:
             self.city_business = self.city_business.title()
         # Checking the updated_by:

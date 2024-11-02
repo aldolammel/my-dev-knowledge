@@ -19,7 +19,7 @@ FORM: BASIC CUSTOMIZING ATTRIBUTES OF AN EXTRA FIELD (NOT FROM CONNECTED MODEL)
         
 '''
 
-class EventAttackModelForm(forms.ModelForm):
+class MyModelForm(forms.ModelForm):
     
     class Meta:
         # Connected model to populate:
@@ -35,37 +35,52 @@ class EventAttackModelForm(forms.ModelForm):
         }
         
     # Extra (non-model) fields:
-    email = forms.EmailField(
+    text_example = forms.TextField(
+        required=False,
+        Label='First Name',
+        widget=forms.TextInput(attrs={'class': 'input is-large'}),
+        help_text="You'll need to call this here too.",
+    )
+    email_example = forms.EmailField(
         required=True,
         label='E-mail'
         widget=forms.TextInput(attrs={'class': 'input is-large'}),
         help_text="You'll need to call this here too.",
-        error_messages={
-            'blank': 'E-mail is required!',
-            'invalid': 'Please, enter a valid e-mail.',
-        },
     )
-    is_notified_by_email = forms.BooleanField(
+    bool_example = forms.BooleanField(
         required=False,
         label='Notify me by email',
-        widget=forms.CheckboxInput(attrs={'class': 'is-large', 'id': 'is_notified_by_email'}),
+        widget=forms.CheckboxInput(attrs={'class': 'is-large', 'id': 'bool_example'}),
         help_text="You'll need to call this here too.",
     )
-    language = forms.ModelChoiceField(
+    dropdown_example = forms.ModelChoiceField(
         queryset=Language.objects.filter(status='on'),
         required=False,
         label='Language',
         help_text="You'll need to call this here too.",
     )
-    last_pwd_update = forms.DateTimeField(
+    datetime_example = forms.DateTimeField(
         required=False,
         label="Password's last update"
         widget=forms.TextInput(attrs={'class': 'input is-small'}),
+    )
+    password1 = forms.CharField(
+        required=True,
+        label=lng.LB_PROFILE_PWD_1,
+        widget=forms.PasswordInput(attrs={'class': 'input is-large', 'type': 'password'}),
+        help_text=password_validation.password_validators_help_text_html(),
+    )
+    password2 = forms.CharField(
+        required=True,
+        label=lng.LB_PROFILE_PWD_2,
+        widget=forms.PasswordInput(attrs={'class': 'input is-large', 'type': 'password'}),
+        help_text=lng.TX_HELP_PROFILE_PWD2,
     )
 
         
     def __init__(self, *args, **kwargs):
         '''Built-in method that's called when the form is initializated.'''
+        user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:
@@ -73,10 +88,11 @@ class EventAttackModelForm(forms.ModelForm):
         
         # Extra fields, pre-populating:
         # Unlike fields from connected model, extra fields must be manually linked!
-        self.fields['email'].initial = user.email
-        self.fields['is_notified_by_email'].initial = user.is_notified_by_email
-        self.fields['language'].initial = user.language
-        self.fields['last_pwd_update'].initial = user.last_pwd_update
+        self.fields['text_example'].initial = user.text_example  # Only if you want to pre-populate this, like for update the db.
+        self.fields['email_example'].initial = user.email_example  # Only if you want to pre-populate this, like for update the db.
+        self.fields['bool_example'].initial = user.bool_example  # Only if you want to pre-populate this, like for update the db.
+        self.fields['dropdown_example'].initial = user.dropdown_example  # Only if you want to pre-populate this, like for update the db.
+        self.fields['datetime_example'].initial = user.datetime_example  # Only if you want to pre-populate this, like for update the db.
 
 
 

@@ -5,39 +5,32 @@ FRONT-END: USER REGISTER FORM
 
 
     
-    1) In a template (e.g. register.html) customize this:
+    >> In a template (e.g. register.html) customize this:
 
-        {% extends "base.html" %}
-
-        {% block title %}{{ page_tile }}{% endblock %}
-
-        {% block description %}{% endblock %}
         
-        {% block content %}
-            <div class="">
-                <h1>Register</h1>
-            </div>
-            <div class="">
-                <div class=""></div>
-                <div class="">
 
-                    <!-- REGISTER FORM - START -->
-                    <form method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" name="action" value="register_account">Register now!</button>
-                        <ul>
-                            <li><a href="{% url 'accounts:login' %}">I already have an account</a></li>
-                        </ul>
-                    </form>
-                    <!-- REGISTER FORM - END -->
+            <!-- REGISTER FORM - START -->
+            <form method="post">
+                {% csrf_token %}
+                
+                {% for field in form.fields %}
 
-                </div>
-                <div class=""></div>
-            </div>     
-        {% endblock %}
+                    {{ field.label }}
+                    {{ field }}
 
-        {% block scripts %}{% endblock %}
+                {% endfor %}
+
+                <a href="{% url 'accounts:login' %}">
+                    I already have an account
+                </a>
+                <button type="submit" name="register_account">
+                    Create account
+                </button>
+
+            </form>
+            <!-- REGISTER FORM - END -->
+        
+        
 
 
 

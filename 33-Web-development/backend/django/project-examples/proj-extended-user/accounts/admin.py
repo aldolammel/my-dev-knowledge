@@ -15,6 +15,7 @@ from .models import (
     UserProfileTwo,
     Language,
     Country,
+    Goal,
 )
 from cefalog.language import (
     TX_PROFILE_1,
@@ -24,6 +25,7 @@ from cefalog.language import (
 )
 
 
+@admin.register(User)
 class UserCMS(UserAdmin):
     '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 
@@ -97,7 +99,7 @@ class UserCMS(UserAdmin):
                 'fields': (
                     'date_joined',
                     'last_login',
-                    # TODO 'last_pwd_update',
+                    'last_pwd_update',
                     'updated_at',
                     'updated_by',
                 )
@@ -120,12 +122,12 @@ class UserCMS(UserAdmin):
         'date_joined',
         # Search_fields accept imported fields using prefix and imported method (prefix recommended):
         'userprofileone__first_name',
-        'userprofileone__last_name',
+        #'userprofileone__last_name',  # It's not used anymore!
         'userprofileone__birth_year',
         'userprofileone__city',
         'userprofileone__country',
-        'userprofiletwo__contact_first_name',
-        'userprofiletwo__contact_last_name',
+        'userprofiletwo__busi_first_name',
+        'userprofiletwo__busi_last_name',
         'userprofiletwo__business_email',
         'userprofiletwo__city_business',
         'userprofiletwo__country_business',
@@ -138,7 +140,7 @@ class UserCMS(UserAdmin):
         'profile_link',  # Important: don't remove 'profile_link' from here!
         'date_joined',
         'last_login',
-        # TODO 'last_pwd_update',
+        'last_pwd_update',
         'updated_at',
         'updated_by',
         # Readonly_fields only accept imported method, never with prefix:
@@ -165,7 +167,7 @@ class UserCMS(UserAdmin):
     profile_link.short_description = 'User Profile'
 
     def get_readonly_fields(self, request, obj=None):
-        """Built-in method to extend the 'readonly_fields' power."""
+        '''Built-in method to extend the 'readonly_fields' power.'''
 
         if obj:
             # If the user exists (obj), make some fields field read-only on detail-view,
@@ -179,6 +181,7 @@ class UserCMS(UserAdmin):
         return self.readonly_fields
 
     def save_model(self, request, obj, form, change):
+        '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.'''
         # Checks to save the current user as updated_by:
         cms_user = request.user
         if change and cms_user != obj.updated_by:
@@ -186,6 +189,7 @@ class UserCMS(UserAdmin):
         super().save_model(request, obj, form, change)
 
 
+@admin.register(UserProfileOne)
 class UserProfileOneCMS(admin.ModelAdmin):
     '''Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS.'''
 
@@ -202,6 +206,8 @@ class UserProfileOneCMS(admin.ModelAdmin):
         'sex',
         'country',
         'is_nomad',
+        'goal_primary',
+        'goal_secondary',
         # List_filter only accepts imported fields using prefix:
         'user__language',
     )
@@ -209,7 +215,7 @@ class UserProfileOneCMS(admin.ModelAdmin):
         'user',
         'city',
         'first_name',
-        'last_name',
+        # 'last_name',  # It's not used anymore!
         'birth_year',
         # Search_fields accept imported fields using prefix and imported method (prefix recommended):
         'user__email',
@@ -242,6 +248,20 @@ class UserProfileOneCMS(admin.ModelAdmin):
     def date_joined(self, obj):
         return obj.user.date_joined
 
+    # TODO I guess I can replace this solution for a model.Manager queryset solution!
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        '''This built-in method allows to override the default formfield for a foreign keys field.'''
+        # It filters the goal fields by user's profile type:
+        if db_field.name in ['goal_primary', 'goal_secondary']:
+            # Get the current object being edited:
+            obj_id = request.resolver_match.kwargs.get('object_id')  # type: ignore
+            if obj_id:
+                # Retrieve the related UserProfile instance:
+                profile = UserProfileOne.objects.get(pk=obj_id)
+                # Filter the queryset based on the user's profile_type:
+                kwargs['queryset'] = Goal.objects.filter(profile_type=profile.user.profile_type)
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
     def get_actions(self, request):
         '''This built-in method can conditionally enable or disable CMS actions, returning
         a dictionary of actions allowed.'''
@@ -271,6 +291,7 @@ class UserProfileOneCMS(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+@admin.register(UserProfileTwo)
 class UserProfileTwoCMS(admin.ModelAdmin):
     '''Defining how the UserProfileTwo Model class (business) will exclusivily be shown on the CMS.'''
 
@@ -284,6 +305,8 @@ class UserProfileTwoCMS(admin.ModelAdmin):
     # exclude = ('', '',)
     list_filter = (
         'country_business',
+        'goal_primary',
+        'goal_secondary',
         # List_filter only accepts imported fields using prefix:
         'user__language',
     )
@@ -291,8 +314,8 @@ class UserProfileTwoCMS(admin.ModelAdmin):
         'user',
         'description',
         'city_business',
-        'contact_first_name',
-        'contact_last_name',
+        'busi_first_name',
+        'busi_last_name',
         'business_email',
         'date_joined',
         # Search_fields accept imported fields using prefix and imported method (prefix recommended):
@@ -325,6 +348,20 @@ class UserProfileTwoCMS(admin.ModelAdmin):
     def date_joined(self, obj):
         return obj.user.date_joined
 
+    # TODO I guess I can replace this solution for a model.Manager queryset solution!
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        '''This built-in method allows to override the default formfield for a foreign keys field.'''
+        # It filters the goal fields by user's profile type:
+        if db_field.name in ['goal_primary', 'goal_secondary']:
+            # Get the current object being edited:
+            obj_id = request.resolver_match.kwargs.get('object_id')  # type: ignore
+            if obj_id:
+                # Retrieve the related UserProfile instance:
+                profile = UserProfileTwo.objects.get(pk=obj_id)
+                # Filter the queryset based on the user's profile_type:
+                kwargs['queryset'] = Goal.objects.filter(profile_type=profile.user.profile_type)
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
     def get_actions(self, request):
         '''This built-in method can conditionally enable or disable CMS actions, returning
         a dictionary of actions allowed.'''
@@ -354,6 +391,7 @@ class UserProfileTwoCMS(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+@admin.register(Language)
 class LanguageCMS(admin.ModelAdmin):
     list_display = (
         'name',
@@ -390,6 +428,7 @@ class LanguageCMS(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+@admin.register(Country)
 class CountryCMS(admin.ModelAdmin):
     list_display = (
         'name',
@@ -428,10 +467,75 @@ class CountryCMS(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+"""
+# TODO!
+@admin.register(Phone)
+class PhoneCMS(admin.ModelAdmin):
+    list_display = (
+        'phone_id',
+        'country_code',
+        'region_code',
+        'number',
+        'owner',
+        'created_at',
+        # List_display accept imported fields using prefix and imported method (prefix recommended):
+        # Reserved space...
+    )
+    list_filter = (
+        'country_code',
+        # List_filter only accepts imported fields using prefix:
+        # Reserved space...
+    )
+    search_fields = [
+        'number',
+        # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+        # Reserved space...
+    ]
+    readonly_fields = (
+        'phone_id', 
+        'owner',
+        # Readonly_fields only accept imported method, never with prefix:
+        # Reserved space...
+    )"""
+
+
+@admin.register(Goal)
+class GoalCMS(TranslatableAdmin):
+    list_display = (
+        'goal',
+        'profile_type',
+        'status',
+        'updated_at',
+        # List_display accept imported fields using prefix and imported method (prefix recommended):
+        # Reserved space...
+    )
+    # exclude = ('', '',)
+    list_filter = (
+        'profile_type',
+        'status',
+        # List_filter only accepts imported fields using prefix:
+        # Reserved space...
+    )
+    search_fields = [
+        'goal',
+        # Search_fields accept imported fields using prefix and imported method (prefix recommended):
+        # Reserved space...
+    ]
+    readonly_fields = (
+        'created_at',
+        'updated_at',
+        'updated_by',
+        # Readonly_fields only accept imported method, never with prefix:
+        # Reserved space...
+    )
+
+    def save_model(self, request, obj, form, change):
+        # Checks to save the current user as updated_by:
+        cms_user = request.user
+        if change and cms_user != obj.updated_by:
+            obj.updated_by = cms_user
+        super().save_model(request, obj, form, change)
+
+
 # Registering Django CMS customizations:
-admin.site.register(User, UserCMS)
-# Registering App CMS features:
-admin.site.register(UserProfileOne, UserProfileOneCMS)
-admin.site.register(UserProfileTwo, UserProfileTwoCMS)
-admin.site.register(Language, LanguageCMS)
-admin.site.register(Country, CountryCMS)
+# Reserved space...
