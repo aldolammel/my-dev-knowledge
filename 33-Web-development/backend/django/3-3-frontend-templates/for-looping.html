@@ -1,18 +1,28 @@
-{% extends "base.html" %}
+    {% comment %}
 
-{% block title %}Attack{% endblock %}
+        FOR LOOPING EXAMPLE:
+            In this case, imagine a view sending through its context a dictionary with ' attacks'.
+            So, on template, just validate if 'attacks' is not empty and, if not, run the for-loop:
 
-{% block content %}
+    {% endcomment %}
+    
     <h1>Attacks</h1>
+    
     {% if attacks %}
+
         <u>
+
             {% for attack in attacks %}
+
                 <li>{{ attack.start_at }}</li>
+
             {% endfor %}
+
         </u>
+
     {% else %}
+
         <p>No attack records available yet.</p>
         <p><a href="#">Create your first attack report!</a></p>
+
     {% endif %}
-    
-{% endblock %}
