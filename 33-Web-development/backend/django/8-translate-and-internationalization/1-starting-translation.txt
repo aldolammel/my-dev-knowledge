@@ -45,11 +45,11 @@
                 # Internationalization
                 USE_I18N = True
                 # Available languages:
-                LANG_CODE_PTBR = 'pt'
+                LANG_CODE_PTBR = 'pt-br'
                 LANG_CODE_ESLAT = 'es'
                 LANG_CODE_ENUS = 'en'
                 LANGUAGES = [
-                    (LANG_CODE_PTBR, 'Português'),
+                    (LANG_CODE_PTBR, 'Português Brasileiro'),
                     (LANG_CODE_ESLAT, 'Español'),
                     (LANG_CODE_ENUS, 'English'),
                 ]
@@ -106,7 +106,17 @@
                     # path('<virtual_folder>/', include('<subapp_name>.urls')),
                 )
 
-            1.5) (Optional) Create the 'language.py' file in your config-folder:
+            1.5) (Optional) If you want your URL's, if through default language, without
+                the language prefix, do this:
+
+                    urlpatterns = i18n_patterns(
+                        ...,
+                        ...,
+                        ...,
+                        prefix_default_language=False,
+                    )
+
+            1.6) (Optional) Create the 'language.py' file in your config-folder:
 
                 /33-Web-development/backend/django/8-translate-and-internationalization/language-file-example.py
                 /33-Web-development/backend/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
@@ -139,7 +149,7 @@
                     translation benefits, EXCEPT if the template is calling
                     the template-tag 'extends':
                         
-                        {% extends "base.html" %}
+                        {% extends "base.html" %}     <-- Always the first line!
                         {% load i18n %}
 
                     >> Crucial: the 'load' must be called even in 'includes'.
