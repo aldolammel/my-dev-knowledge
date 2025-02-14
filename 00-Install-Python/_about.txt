@@ -7,8 +7,18 @@ WINDOWS:
 
 
 UBUNTU:
-    xxxxx
+    >> Check the python version installed:
+    $ python3 --version
+
+    >> To install if needed:
+    $ sudo apt Update
+    $ sudo apt install python3.12 (or the current version)
 
 
 MAC:
+    >> Check the python version installed:
     xxxxxx
+
+    >> To install if needed:
+    xxxxx
+    xxxxx    

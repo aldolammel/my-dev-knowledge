@@ -1,4 +1,6 @@
-INSTALLING DJANGO:
+
+
+INSTALLING AN EXISTENT DJANGO PROJECT:
 
 
     1) Create the project folder, and get it:
@@ -11,8 +13,13 @@ INSTALLING DJANGO:
             $ git clone HTTPS_OF_PROJECT .    // that "." makes the clone to be installed exactly in the folder where you are, dont creating the parent folder.
             $ git status                      // everything must be fine.
 
+        1.2) Be sure you are in the right branch to work! Are you sure you should use MASTER branch?
+            The last version of the project is the MASTER branch?
 
-    2) Create the virtual environment and active it:
+            /35-version/git/
+
+
+    2) Create the virtual environment and activate it:
         /03-Virtual-Environment/
 
 
@@ -50,16 +57,40 @@ INSTALLING DJANGO:
 
 
     5) Set the right database and the project environment variables:
-        /33-Web-development/backend/django/3-database-models/0-installing-and-adminUser/1-define-your-database/
+        /33-Web-development/backend/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
         /33-Web-development/backend/django/1-install-and-first-steps/environment-variables-django.py
 
-    6) Creating the admin user:
-        $ python manage.py createsuperuser
+    6) is there an Admin user for you?
+    
+        >> You didn't need to create a db a few minutes ago:
+        
+            >> There's an admin user, so use that!
+            
+            >> if there's no admin yet:
+            $ python manage.py createsuperuser
+
+        >> You needed to create a new db a few minutes ago:
+        
+            # Build up the database schema:
+            $ python manage.py migrate
+            
+            # Create the admin to you:
+            $ python manage.py createsuperuser
+
+
+    7) If the application is using more than one language:
+
+        >> Using Gettext/Rosetta/Parler:
+            
+            # Once the .po files already exists, this will compile them for this new application copy:        
+            $ django-admin compilemessages
         
 
-    7) Build up the database schema and run an application run test:
-        $ python manage.py migrate
+    8) Run an application:
         $ python manage.py runserver
 
         http://127.0.0.1:8000/admin/
+
+
+
 

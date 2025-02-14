@@ -36,7 +36,7 @@ POSTGRESQL: STARTING AND STOPING THE SERVICE
     UBUNTU: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
         >> To check the service status:
-            $ sudo systemctl status postgresql
+            $ systemctl status postgresql
         
         >> To Start the service:
             $ sudo systemctl start postgresql

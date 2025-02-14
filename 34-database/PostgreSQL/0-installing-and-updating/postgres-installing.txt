@@ -65,47 +65,47 @@ POSTGRESQL: INSTALLATION
                                 
 
                 UBUNTU:
-                    X) Execute that config script available on the official webpage;
-                    X) Install the module CURL if needed: 
+                    1) Execute that config script available on the official webpage;
+                    2) Install the module CURL if needed: 
                         $ sudo apt install curl
                     
-                    X) Go to https://www.pgadmin.org/
-                    X) Execute those lines before the installation of pgadmin itself;
-                    X) Install the pgadmin-desktop ONLY to prevent to user apache to run the web version;
-                    X) After that, run your application PGADMIN via your apps list;
-                    X) Connect the pgadmin to the postgreSQL now. In pgAdmin app:
-                        x) Add a new server, clicking in Register;
-                        x) In General tab, in name set it as 'localhost';
-                        X) In Connection tab, in host set it as 'localhost';
-                        X) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
-                            $ sudo systemctl status postgresql
+                    3) Go to https://www.pgadmin.org/
+                    4) Execute those lines before the installation of pgAdmin itself;
+                    5) Install the pgadmin-desktop ONLY to prevent to user apache to run the web version;
+                    6) After that, run your application PGADMIN via your apps list;
+                    7) Connect the pgadmin to the postgreSQL now. In pgAdmin app:
+                        x.1) Add a new server, clicking in Register;
+                        x.2) In General tab, in name set it as 'localhost';
+                        x.3) In Connection tab, in host set it as 'localhost';
+                        x.4) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
+                            $ systemctl status postgresql
                             # if not:
                             $ sudo systemctl start postgresql
                         
-                        X) Let's use the root user (postgres) now: 
+                        x.5) Let's use the root user (postgres) now: 
                             $ sudo -u postgres psql
 
-                        X) Already using the PostgreSQL user, if the Postgres warns you about
+                        x.6) Already using the PostgreSQL user, if the Postgres warns you about
                             database version, do it:
                             
                             $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
 
-                        X) Already using the PostgreSQL user, do it:
+                        x.7) Already using the PostgreSQL user, do it:
                             
                             $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';    <--- type that ; too!
                             $ exit
                         
-                        x) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
-                        x) Save the changes finally! You're connected.
+                        x.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
+                        x.9) Save the changes finally! You're connected.
                         
                 MAC:
                     X) 
 
 
 
-            3) Check if the PostgreSQL is running:
+            3) Define if PostgreSQL shouldn't run at the OS starts:
                 
-                /34-database/PostgreSQL/starting-and-stoping.txt
+                /34-database/PostgreSQL/postgres-starting-and-stoping.txt
 
 
             

@@ -209,13 +209,24 @@ RE-INSTALL ONLY THE DJANGO:
                     $ python manage.py createsuperuser
         
 
+    
     12) Test it!
 
         $ python manage.py runserver
 
 
+    
+    13) If the application is using more than one language, test if the site is changing
+        the language. If not, just compile the translation again:
 
-    13) Clean up some useless stuff:
+        >> Using Gettext/Rosetta/Parler:
+            
+            # Once the .po files already exists, this will compile them for this new application copy:        
+            $ django-admin compilemessages
+
+
+
+    14) Clean up some useless stuff:
 
         /requirements.txt
         /db.sqlite3
