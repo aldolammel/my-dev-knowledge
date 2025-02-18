@@ -2,7 +2,7 @@
 
 RUNNING A DJANDO APPLICATION:
 
-    0) Ask your selft if this application is using local dababase or a cloud one and be sure
+    0) Ask your self if this application is using local dababase or a cloud one and be sure
         the db is already running.
 
     1) On terminal, go to the project's folder!
