@@ -17,8 +17,33 @@ EXTENDING THE USER FEATURES (BASIC):
 
             >> Highly recommended to set in here: /accounts/models.py
 
-                from django.contrib.auth.models import AbstractUser
+                from django.contrib.auth.models import AbstractUser, BaseUserManager
                 from django.db import models
+
+                class CustomUserManager(BaseUserManager):
+                    """Built-in class to customize the superuser creation."""
+                    
+                    # This method is mandatory, but no changes were made:
+                    def create_user(self, email, password=None, **extra_fields):
+                        """Create and return a user with an email and password."""
+                        if not email:
+                            raise ValueError('The Email field must be set')
+                        email = self.normalize_email(email)
+                        user = self.model(email=email, **extra_fields)
+                        user.set_password(password)
+                        user.save()
+                        return user
+                    
+                    # Superuser creation customization:
+                    def create_superuser(self, email, password=None, **extra_fields):
+                        """Create and return a superuser with the given email and password."""
+                        extra_fields.setdefault('is_staff', True)
+                        extra_fields.setdefault('is_superuser', True)
+                        extra_fields.setdefault("is_active", True)
+                        # Set the custom fields as True:
+                        extra_fields.setdefault('accepted_our_privacy', True)
+                        # Call the existing create_user method from BaseUserManager:
+                        return self.create_user(email, password, **extra_fields)
 
                 class User(AbstractUser):
                     # Overriding the original fields just to custom them (as translating, for example):
@@ -42,6 +67,11 @@ EXTENDING THE USER FEATURES (BASIC):
                         # error_messages in validators.py
                     )
                     # created_at = 'date_joined' from AbstractUser
+
+                    # Model Managers:
+                    # Reserved space...
+                    
+                    objects = CustomUserManager()  # needed coz additional fields of superuser creation by terminal.
 
                     class Meta:
                         db_table = 'auth_user'  # I like to keep the original name!
@@ -152,6 +182,7 @@ EXTENDING THE USER FEATURES (BASIC):
                         'fields': (
                             'username',
                             'password',
+                            'accepted_our_privacy',
                         )
                     },
                 ),

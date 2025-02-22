@@ -31,8 +31,8 @@ class UserProfileCMS(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         '''This built-in method should return True if deleting obj is permitted.'''
         # Prevent deletion of profile from the CMS, except when User is deleted:
-        if request.path.startswith('/admin/auth/user/'):
-            return True
+        if request.path.startswith('/admin/auth/user/'):  # or '/admin/accounts/user/'
+            return request.user.is_superuser  # True if superuser!
         return False
 
 

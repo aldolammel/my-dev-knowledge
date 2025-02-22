@@ -1,0 +1,38 @@
+
+
+CONFIGURING EMAIL SERVICE IN Django
+
+    1) In settings.py:
+
+        # Email settings
+        EMAIL_BACKEND = env('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+        EMAIL_HOST = env('EMAIL_HOST')
+        EMAIL_PORT = env('EMAIL_PORT')
+        EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=True)
+        EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+        EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+        DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+
+    2) Update your .env file:
+    
+        >> E.g. using Gmail settings:
+
+            # EMAIL SETTINGS:
+            EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+            EMAIL_HOST=smtp.gmail.com
+            EMAIL_PORT=587
+            EMAIL_USE_TLS=True
+            EMAIL_HOST_USER=cefalogmaster@gmail.com
+            EMAIL_HOST_PASSWORD=password_generated_by_gmail
+            DEFAULT_FROM_EMAIL=cefalogmaster@gmail.com
+
+
+            2.1) How to generate a password by Gmail:
+                - Google Account -> Security -> 2-Step Verification -> App Passwords -> Select App -> Generate
+
+                If App Passwords option is not available, make sure you have enabled 
+                "2-Step Verification is enabled".
+
+                After that, go to Security home and, through the search bar, search for "App Passwords".
+            

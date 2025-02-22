@@ -21,7 +21,7 @@ UPDATING A WEB APPLICATION USING GIT:
             $ ssh -p 4928 root@186.202.57.118  
 
         2) Update the application repository:
-            $ git pull
+            $ sudo git pull
 
         3) Refresh the communication between the web server and the application, restarting the Gunicorn (WSGI):
             $ systemctl restart <your_application_name>   # e.g. portfolio
