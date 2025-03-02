@@ -1,0 +1,162 @@
+
+
+UV PACKAGE
+
+    >> Extremely fast Python package installer and resolver designed as a drop-in replacement for
+        pip and pip-tools workflows.
+
+    >> When you ask to UV to initiate a project, a "uv.lock" file is created automatically,
+        garanteeing that all copies of this project will have the same dependencies (like a Docker).
+
+    >> If you lose your virtual environment folder, you can recreate the venv using "uv sync"
+        command to re-install the project dependencies fast and easily.
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> BEFORE THE PROJECT: 
+    
+        1) Make sure you are in the MAIN python environment, not in a virtual one!
+
+        3) Now, install the UV package:
+
+            https://docs.astral.sh/uv/
+
+        4) Install all Python versions you will need:
+
+            >> Check which Python versions you got installed:
+                $ uv python list
+            
+            >> E.g. you want to install more than one Python version:
+                $ uv python install 3.11 3.12 3.13
+
+
+    
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> PROJECT SETUP:
+
+
+        5) Open the Python project folder through the IDE:
+
+            >> For VSCode:
+                - New Window option to open the specific project folder.
+            
+            >> For PyCharm:
+                - xxxxx
+        
+        
+        6) Choosing the way to create the project:
+
+            6A) CREATING A NEW PROJECT:
+            6B) OR I'M GETTING AN EXISTING PROJECT:
+
+            .........................................
+        
+            6A) CREATING A NEW PROJECT:
+        
+                >> Project folder:
+
+                    >> Already exist a project folder:
+                        # In the project folder (even with bunch of project files inside):
+                        $ uv init .
+
+                    >> Or there's NO project folder yet:
+                        # In the Python projects folder:
+                        $ uv init <project-name>
+
+
+                >> Open the new project in a new IDE window and let's into the first UV steps:
+                    
+                    >> In pyproject.toml file, check is the Python version is right!
+
+                    >> If not:
+                        >> Change it, typing the minimul right python version!
+                        >> On terminal, define with version this project will use:
+                            $ uv python pin <python-version>
+                
+                    >> Creating the virtual environment:
+                        
+                        >> If you already have the .venv folder not created by UV:
+                            >> Delete the virtual environment folder!
+                            >> Create a new one:
+                                $ uv venv
+                            >> Activate the virtual environment:
+                                $ . .venv/bin/activate
+
+                        >> Now, run a test:
+                            # If needed, it automatically creates the virtual environment to test it:
+                            $ uv run main.py
+
+            .........................................
+
+            6B) OR I'M GETTING AN EXISTING PROJECT:
+
+                >> Project folder:
+                    
+                    >> Already exist a project folder:
+                        # In the project folder (even with bunch of project files inside):
+                        $ uv init .
+
+                    >> Or there's NO project folder yet:
+                        # In the Python projects folder:
+                        $ uv init <project-name>
+
+                >> Make UV create the virtual environment based on the pyproject.toml file:
+                    
+                    # Create the virtual environment:
+                    $ uv venv
+
+                    # Activate the virtual environment:
+                    $ . .venv/bin/activate
+                    
+                    # Check your current pyproject.toml file:
+                    
+                    # Install the dependencies:
+                    $ uv sync
+
+
+        7) Installing a new project's dependency:
+
+            >> Make sure you are in the project environment!
+            
+            >> Adding a new dependency:
+                $ uv add <package-name>
+
+            >> Adding a new dependency only IF DEV environment: 
+                $ uv add --dev <package-name>
+
+                # This never will be installed in the production environment! ;)
+
+
+        8) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
+                        other things!
+
+
+        9) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
+            /04-Basic-Modules/ruff.txt
+
+
+        10) Continuing the Django configuration after the UV installation section:
+            /33-Web-development/backend/django/1-install-and-first-steps/0-installing-the-project.txt
+
+
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> IF YOU LOSE YOUR VIRTUAL ENVIRONMENT, HOW TO RECREATE IT WITH THE DEPENDENCIES:
+
+        1) Create a new venv;
+            $ uv venv
+        2) Make sure it's activated;
+            $ . .venv/bin/activate
+        3) Ask UV to reinstall the dependencies based on the pyproject.toml file:
+            $ uv sync
+
+
+    >> DJANGO EXAMPLES:
+
+        >> How to create a new Django project (in the current folder):
+            $ uv run django-admin startproject core .
+        
+        >> How to run the Django application:
+            $ uv run manage.py runserver
