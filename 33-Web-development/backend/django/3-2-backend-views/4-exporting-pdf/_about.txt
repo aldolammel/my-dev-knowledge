@@ -1,0 +1,8 @@
+
+
+EXPORTING HTML TO PDF:
+
+    >> Install the package: xhtml2pdf
+
+    >> Example:
+    /33-Web-development/backend/django/project-examples/proj-exporting-pdf/

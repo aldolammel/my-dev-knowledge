@@ -1,0 +1,34 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8">
+        <!-- Page info -->
+        <title>
+            {% block title %}
+            {% endblock title %}
+            | {{ BRAND_NAME }}
+        </title>
+        <meta name="description"
+              content="{% block description %}{% endblock description %}" />
+        <meta name="keywords"
+              content="{% block keywords %}{% endblock keywords %}">
+        <meta name="author" content="{{ DEV_NAME }}" />
+        <!-- CSS -->
+        <style type="text/css">
+            {% block css %}
+            {% endblock css %}
+        </style>
+        <!-- Scripts -->
+            <!-- reserved space -->
+    </head>
+    <body>
+        <section class="section">
+            {% block content %}
+            {% endblock content %}
+        </section>
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>
+</html>

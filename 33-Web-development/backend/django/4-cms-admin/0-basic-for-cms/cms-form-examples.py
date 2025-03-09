@@ -44,6 +44,32 @@ class UserProfileOneCMS(admin.ModelAdmin):
         'last_login',  # Imported from User
         'date_joined',  # Imported from User
     )
+    # Defining the Admin layout only:
+    fieldsets = (
+        ('Basic', {
+            'fields': (
+                'user',
+                'sex',
+            )
+        }),
+        ('Details', {
+            'fields': (
+                'is_nomad',
+                'birth_year',
+                'country',
+                'goal_primary',
+                'goal_secondary',
+            )
+        }),
+        ('Metadata', {
+            'fields': (
+                'user__last_login',
+                'date_joined',
+                'updated_at',
+                'updated_by',
+            )
+        }),
+    )
 
     # Importing field from User model class:
     def email(self, obj):
