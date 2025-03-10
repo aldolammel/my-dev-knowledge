@@ -15,11 +15,11 @@ def is_valid_queryparam(param):
     return param != '' and param is not None
 
 
-def attack_list_pdf(request):
+def pdf_<page-name>(request):
     # Initial values:
     user = request.user
     # Template and QuerySet:
-    template_path = 'sub-app-name/attack_list_pdf.html'
+    template_path = 'sub-app/pdf_<page-name>.html'
     attack_list = EventAttack.objects.filter(created_by=user)
     attack_list = attack_list.order_by('-start_datetime')
 

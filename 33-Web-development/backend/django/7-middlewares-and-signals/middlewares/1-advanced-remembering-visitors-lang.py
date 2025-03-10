@@ -1,4 +1,4 @@
-# config_folder/middlewares.py
+# core/middlewares.py
 
 from django.utils import translation
 from django.conf import settings
@@ -37,7 +37,7 @@ class UserLanguageMiddleware:
             MIDDLEWARE = [
                 ...
                 'django.middleware.locale.LocaleMiddleware',
-                'cefalog.middlewares.UserLanguageMiddleware',  # App custom!
+                'core.middlewares.UserLanguageMiddleware',  # Advanced geolocation feature. 
                 ...
             ]
         

@@ -2,28 +2,77 @@
 
     REMEMBERING THE USER LANGUAGE
 
-        >> If user authenticaded, the user last language chosen is saved on the database;
+        >> (Basic built-in) If user authenticaded, the user last language chosen is saved on the
+            database;
 
-        >> If an anonymous, let's create a cookie that will remember that visitor choice for X days;
+        >> (Basic built-in) If an anonymous, let's create a cookie that will remember that visitor
+            choice for X days;
+
+        >> (Advanced) Visitor's geolocation defines their first interface language.
 
 
-
-        1) Make sure you are ready for next moves:
-
-            /33-Web-development/backend/django/8-translate-and-internationalization/1-starting-translation.txt
 
         
-        X) settings.py:
+        BASIC BUILT-IN:
+        
+            1) Make sure you are ready for next moves:
+                /33-Web-development/backend/django/8-translate-and-internationalization/1-starting-translation.txt
 
-            LANGUAGE_COOKIE_NAME = 'user_language'
-            LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
-
-
-        X) Create and register (in settings.py 'middlewares' list) middleware that checks if the
-            user is logged in and retrieves the language from their profile, or checks the language 
-            cookie for anonymous users:
-
-                /33-Web-development/backend/django/7-middlewares-and-signals/middlewares/remembering-user-language.py
+            
+            X) Add in settings.py:
+                LANGUAGE_COOKIE_NAME = 'user_language'
+                LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
 
 
-        X)
+            X) Be sure you have registered (in settings.py 'middlewares' list) middleware that
+                checks if the user is logged-in and retrieves the language from their profile, or
+                checks the language cookie for anonymous users:
+
+                    MIDDLEWARE = [
+                        ...
+                        "django.middleware.locale.LocaleMiddleware",  # Django additional built-in language feature.
+                        ...
+                    ]
+
+                    LANGUAGES = [
+                        <your languages options>
+                    ]
+
+            >> These settings will automatically handle language persistence for visitors through a
+                cookie. When a visitor selects a language, Django will:
+
+                - Store their language preference in a cookie named "user_language"
+                - Keep this preference for 30 days
+                - Automatically use this language on return visits
+
+
+        ADVANCED:
+
+            >> If you want to add more sophisticated language handling logic in your product (like
+                setting language based on user's geolocation, or syncing language preferences
+                across devices), you need this advanced functionality!
+
+            >> Make sure the basic built-in is working.
+
+            X) In settings.py 'middlewares' list, add this:
+
+                "core.middlewares.UserLanguageMiddleware",  # Advanced geolocation feature. 
+
+            X) Create this middleware in your core folder:
+
+                /33-Web-development/backend/django/7-middlewares-and-signals/middlewares/1-advanced-remembering-visitors-lang.py
+
+            X)  Install if not yet:
+                $ pip install requests
+
+            >> This advanced implementation will:
+
+                - Check if the visitor already has a language preference;
+                - If not, detect their location using IP-API;
+                - Map their country to the most appropriate Cefalog language;
+                - Set that as their initial language;
+                - Still allow users to manually change the language, which will be saved in their
+                    cookie;
+                
+                >> The language mapping can be customized based on your target audience's geographic
+                   distribution.
