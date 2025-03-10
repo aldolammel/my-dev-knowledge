@@ -184,6 +184,11 @@
                 >> Create all language files (.PO):
 
                     $ django-admin makemessages --all
+                    
+                    Or, if you are using UV:
+
+                    $ uv run manage.py makemessages --all
+
 
                     >> Gettext Module automatically will set each .PO file in the right folder.
 
@@ -222,6 +227,10 @@
                 in some .po file, you should to compile that/them:
 
                     $ django-admin compilemessages
+
+                    Or, if you are using UV:
+
+                    $ uv run manage.py compilemessages
 
 
             3.4) To test results:

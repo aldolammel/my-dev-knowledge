@@ -19,7 +19,7 @@ UV PACKAGE
 
         3) Now, install the UV package:
 
-            https://docs.astral.sh/uv/
+            \04-Basic-Modules\uv.txt
 
         4) Install all Python versions you will need:
 
@@ -81,11 +81,27 @@ UV PACKAGE
                             >> Create a new one:
                                 $ uv venv
                             >> Activate the virtual environment:
-                                $ . .venv/bin/activate
+                                >> Linux/Ubuntu:
+                                    $ . .venv/bin/activate
+                                >> Windows:
+                                    $ .venv\Scripts\activate
 
                         >> Now, run a test:
                             # If needed, it automatically creates the virtual environment to test it:
                             $ uv run main.py
+
+
+                >> Installing a new project's dependency:
+
+                    >> Make sure you are in the project environment!
+                    
+                    >> Adding a new dependency:
+                        $ uv add <package-name>
+
+                    >> Adding a new dependency only IF DEV environment: 
+                        $ uv add --dev <package-name>
+
+                        # This never will be installed in the production environment! ;)
 
             .........................................
 
@@ -97,47 +113,66 @@ UV PACKAGE
                         # In the project folder (even with bunch of project files inside):
                         $ uv init .
 
+                        >> AWARE: if you get an error about "pyproject.toml" file, it's okay!
+
                     >> Or there's NO project folder yet:
                         # In the Python projects folder:
                         $ uv init <project-name>
 
                 >> Make UV create the virtual environment based on the pyproject.toml file:
                     
-                    # Create the virtual environment:
-                    $ uv venv
-
-                    # Activate the virtual environment:
-                    $ . .venv/bin/activate
+                    >> If there's a .venv folder, delete it (make sure you are not in that virtual environment)!
                     
-                    # Check your current pyproject.toml file:
-                    
-                    # Install the dependencies:
-                    $ uv sync
+                    >> Create a new virtual environment:
+                        $ uv venv
 
+                    >> Activate the virtual environment:
+                        
+                        # Linux:
+                        $ . .venv/bin/activate
+                        
+                        # Windows:
+                        $ .venv\Scripts\activate
 
-        7) Installing a new project's dependency:
+                    >> Install the dependencies based on the project pyproject.toml file:
+                        $ uv sync
 
-            >> Make sure you are in the project environment!
-            
-            >> Adding a new dependency:
-                $ uv add <package-name>
+                    >> Local project database:
 
-            >> Adding a new dependency only IF DEV environment: 
-                $ uv add --dev <package-name>
+                        >> You already have the local database created:
+                            
+                            >> Run the makemigrations command:
+                                $ uv run manage.py makemigrations
 
-                # This never will be installed in the production environment! ;)
+                            >> Even if no migrations in previously command, run the migrate command:
+                                $ uv run manage.py migrate
 
+                        >> OR if you don't have a local database created yet:
+                        
+                            xxxxxxxxxxxxxxxxxxxx
 
-        8) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
+       
+        X) (OPTIONAL) If you have multilanguage support in your project:
+
+            >> With Gettext module:
+                
+                $ uv run manage.py makemessages --all
+                $ uv run manage.py compilemessages
+        
+        
+        X) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
                         other things!
 
 
-        9) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
+        X) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
             /04-Basic-Modules/ruff.txt
 
 
-        10) Continuing the Django configuration after the UV installation section:
+        >> Continuing the Django configuration after the UV installation section:
             /33-Web-development/backend/django/1-install-and-first-steps/0-installing-the-project.txt
+
+        >> Or run the Django application using UV:
+            $ uv run manage.py runserver
 
 
      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -158,5 +193,3 @@ UV PACKAGE
         >> How to create a new Django project (in the current folder):
             $ uv run django-admin startproject core .
         
-        >> How to run the Django application:
-            $ uv run manage.py runserver
