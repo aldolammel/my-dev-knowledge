@@ -44,11 +44,12 @@ class Language(models.Model):
         validators=[MinLengthValidator(3)],
     )
     iso_code = models.CharField(
-        max_length=2,
+        max_length=5,  # en, en-us, pt, pt-br, es, es-mx ...
         unique=False,  # For flexibility, I can set the same ISO for more than one language.
         blank=False,
         null=False,
         verbose_name=lng.LB_ISO_CODE,
+        help_text=lng.TX_HELP_USER_LANG_ISO,
         validators=[MinLengthValidator(2)],
     )
     created_at = models.DateTimeField(
