@@ -46,12 +46,12 @@
                 USE_I18N = True
                 # Available languages:
                 LANG_CODE_PTBR = 'pt-br'
-                LANG_CODE_ESLAT = 'es'
-                LANG_CODE_ENUS = 'en'
+                LANG_CODE_ES = 'es'
+                LANG_CODE_ENUS = 'en'  # for big translation projects, it's better to use 'en-us'.
                 LANGUAGES = [
-                    (LANG_CODE_PTBR, 'Português Brasileiro'),
-                    (LANG_CODE_ESLAT, 'Español'),
-                    (LANG_CODE_ENUS, 'English'),
+                    (LANG_CODE_PTBR, 'Português (BR)'),
+                    (LANG_CODE_ES, 'Español (ES)'),
+                    (LANG_CODE_ENUS, 'English (US)'),
                 ]
                 # Default language:
                 LANGUAGE_CODE = LANG_CODE_PTBR
@@ -260,15 +260,15 @@
 
             3.3) Still throught settings.py, add in 'Internationalization' section:
 
-                PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE
+                #PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE  # Not needed because 'fallbacks' is set manually.
                 PARLER_LANGUAGES = {
                     None: (
                         {'code': LANG_CODE_PTBR},
-                        {'code': LANG_CODE_ESLAT},
+                        {'code': LANG_CODE_ES},
                         {'code': LANG_CODE_ENUS},
                     ),
                     'default': {
-                        'fallbacks': [PARLER_DEFAULT_LANGUAGE_CODE],
+                        'fallbacks': [LANG_CODE_ENUS, LANG_CODE_PTBR],  # Cascade fallbacks!
                         'hide_untranslated': False,
                     },
                 }
