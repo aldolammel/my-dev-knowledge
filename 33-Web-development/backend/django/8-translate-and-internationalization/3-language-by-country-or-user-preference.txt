@@ -1,0 +1,119 @@
+
+
+    LANGUAGE BY COUNTRY OR USER PREFERENCE
+
+
+        >> (MANDATORY) Basic built-in solution:
+
+            - If user authenticaded, the user last language chosen is saved on the db;
+
+            - First visit, it creates a visitor cookie that will remember the language for X days;
+
+
+        >> (OPTIONAL) Advanced solution:
+            
+            - User Authentication Check: It checks if the user is authenticated before processing
+                their language preferences.
+            
+            - Language Preference Handling: If the user is authenticated and has no language
+                preference, it sets the user's language based on the current URL's language. If the
+                user has a language preference, it activates that language for the request.
+            
+            - URL Language Redirection: If the URL's language doesn't match the user's preferred
+                language, it redirects the user to the same URL with the correct language code.
+            
+            - Cookie Management: It sets a cookie for non-authenticated users to remember their
+                language preference.
+            
+            - Geolocation Logic: If the user is not authenticated and no language preference is
+                found in cookies, it attempts to determine the user's language based on their
+                geolocation using their IP address. It maps country codes to specific languages and
+                activates the detected language.
+            
+            - Debugging Information: It prints debugging information about the authenticated user
+                and their language preferences when in debug mode.
+            
+            - Fallback Language Activation: If geolocation fails or if there are issues with the
+                API, it falls back to a default language setting.
+            
+            - Handling of Anonymous Visitors: It manages language preferences for anonymous visitors
+                based on their IP address and sets the appropriate language accordingly.
+            
+            - Request Processing: It processes the request and returns the response after applying
+                the language settings.
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        
+        >> STEP 1/2: (MANDATORY) Basic built-in solution:
+        
+            1.1) Make sure you are ready for next moves:
+                /33-Web-development/backend/django/8-translate-and-internationalization/1-starting-translation.txt
+
+            
+            1.2) Add in settings.py:
+                LANGUAGE_COOKIE_NAME = 'user_language'
+                LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
+
+
+            1.3) Be sure you have registered (in settings.py 'middlewares' list) middleware that
+                checks if the user is logged-in and retrieves the language from their profile, or
+                checks the language cookie for anonymous users:
+
+                    Carefully, be aware the this middleware rules:
+                    - Add that after: "django.contrib.sessions.middleware.SessionMiddleware",
+                    - Add that before: "django.contrib.auth.middleware.AuthenticationMiddleware",
+
+                    That said, do it:
+                    
+                    MIDDLEWARE = [
+                        ...
+                        "django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
+                        ...
+                    ]
+
+                    LANGUAGES = [
+                        <your languages options>
+                    ]
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        >> STEP 2/2: (OPTIONAL) Advanced solution:
+
+            >> Make sure the basic built-in is working.
+
+            2.1) Through the core-folder file "urls.py", turn True the prefix:
+
+                    urlpatterns = i18n_patterns(
+                        ...,
+                        ...,
+                        ...,
+                        prefix_default_language=False,
+                    )
+
+                    >> CRUCIAL! It will force the language prefix to be always on the URL! If you don't want
+                        that, just turn it False but test a lot before Prodution! Not sure my
+                        middlewares solution cover everything (I didn't test it yet).
+
+
+            2.2) In settings.py 'middlewares' list:
+
+                Carefully, be aware the this middleware rules:
+                - Add that after: "django.contrib.auth.middleware.AuthenticationMiddleware",
+                - Add that before: nothing to say yet...
+                
+                That said, do it:
+
+                MIDDLEWARE = [
+                    ...
+                    "core.middlewares.UserLanguageMiddleware",  # Advanced language features (need to be after the Locale and Authentication)!
+                    ...
+                ]
+
+            2.3) In core folder, create the file called "middlewares.py":
+
+                /33-Web-development/backend/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
+

@@ -116,6 +116,9 @@
                         prefix_default_language=False,
                     )
 
+                    >> Obs.: maybe for advanced language settings, you'll need to use it as True!
+                    
+
             1.6) (Optional) Create the 'language.py' file in your config-folder:
 
                 /33-Web-development/backend/django/8-translate-and-internationalization/language-file-example.py
