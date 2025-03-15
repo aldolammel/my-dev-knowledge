@@ -210,7 +210,7 @@
             3.2) Additional language:
 
                 >> In some additional language folder, e.g. /locale/pt_BR/,
-                    edit the 'django.po' file:
+                    edit the 'django.po' file (not-recommended):
 
                         E.g.
 
@@ -221,7 +221,7 @@
                             msgstr "Me chamo Aldo Lammel"
 
                 >> TIP: after to understand how a .po file works, it's advised to use Rosetta Module
-                    to work on a translation:
+                    to work on a translation (recommended):
 
                         http://127.0.0.1:8000/rosetta/
 
@@ -311,7 +311,7 @@
                     """
                     return {
                         'LANGUAGES': stt.LANGUAGES,  # Available languages!
-                        'LANGUAGE_CODE': request.LANGUAGE_CODE  # Currently active language!
+                        'LANGUAGE_CODE': request.LANGUAGE_CODE,  # Currently active language!
                     }
             
 
@@ -336,7 +336,7 @@
                 ]
 
             
-            4.3) On config-folder urls.py file:
+            4.3) On /core/urls.py file:
 
                 # DJANGO:
                 path('i18n/', include('django.conf.urls.i18n')),

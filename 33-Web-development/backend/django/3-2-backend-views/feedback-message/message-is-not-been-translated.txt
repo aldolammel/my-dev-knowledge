@@ -1,0 +1,26 @@
+
+
+FEEDBACK MESSAGE IS NOT BEEN TRANSLATED:
+
+    If you already have all django set to work with translations, but your feedback message keeps in a wrong language, the 
+    problem is probably the session.
+
+        >> How to fix it:
+            /33-Web-development/backend/django/3-2-backend-views/4-user-profile-view/profile-view.py
+
+                E.g.
+                    # Update the session language to match the new preference:
+                    # Important: keep it before the messages.success() to translate the message according to
+                    # the new language if the user has changed it.
+                    if 'language' in form.cleaned_data and form.cleaned_data['language']:
+                        # Get the ISO code from the Language model instance:
+                        language_code = form.cleaned_data['language'].iso_code
+                        # Set the new language in the session:
+                        translation.activate(language_code)
+                        request.session['_language'] = language_code
+                    # Feedback message:
+                    messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
+    
+
+        >> Or the basic of Django Translation:
+            /33-Web-development/backend/django/8-translate-and-internationalization/1-starting-translation.txt

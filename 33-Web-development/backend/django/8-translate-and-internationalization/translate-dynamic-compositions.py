@@ -3,7 +3,7 @@
     TRANSLATE WITH DYNAMIC COMPOSITION:
 
 
-        >> You can build smarth translations for all types of sensence through any language using 
+        >> You can build smart translations for all types of sensence through any language using 
             dynamic compositions with Parler module.
             
 

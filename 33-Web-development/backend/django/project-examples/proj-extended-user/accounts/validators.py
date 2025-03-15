@@ -1,28 +1,26 @@
 from django.core.exceptions import ValidationError
 from django.utils import timezone
-from cefalog.constants import (
+from core.constants import (
     VAL_PROFILE_1_BIRTH_MIN,
     VAL_PROFILE_1_BIRTH_MAX,
 )
-from cefalog.language import (
+from core.language import (
     TX_ERRO_USER_AGE_MIN,
     TX_ERRO_USER_PRIVACY,
-    S_G_PRIVACY_NAME,
+    # S_G_PRIVACY_NAME,
     TX_ERRO_PROFILE_1_BIRTH_MIN,
     TX_ERRO_PROFILE_1_BIRTH_MAX,
+    TX_ERRO_PROFILES_GOAL_P_NONE,
+    TX_ERRO_PROFILES_GOAL_SAME,
 )
 
 
 def validate_user_agreement(instance):
     """Server-side validation for user's acceptance of the minimum age and privacy policy."""
     if not instance.accepted_min_age:
-        raise ValidationError(
-            TX_ERRO_USER_AGE_MIN % {'val': VAL_PROFILE_1_BIRTH_MIN}, code='invalid_choice'
-        )
+        raise ValidationError(TX_ERRO_USER_AGE_MIN, code="invalid_choice")
     if not instance.accepted_our_privacy:
-        raise ValidationError(
-            TX_ERRO_USER_PRIVACY % {'txt': S_G_PRIVACY_NAME}, code='invalid_choice'
-        )
+        raise ValidationError(TX_ERRO_USER_PRIVACY, code="invalid_choice")
 
 
 def validate_birth(birth):
@@ -30,10 +28,15 @@ def validate_birth(birth):
     if birth:
         current_year = timezone.now().year
         if current_year - birth.year < VAL_PROFILE_1_BIRTH_MIN:
-            raise ValidationError(
-                TX_ERRO_PROFILE_1_BIRTH_MIN % {'val': VAL_PROFILE_1_BIRTH_MIN}, code='min_length'
-            )
+            raise ValidationError(TX_ERRO_PROFILE_1_BIRTH_MIN, code="min_length")
         elif current_year - birth.year > VAL_PROFILE_1_BIRTH_MAX:
-            raise ValidationError(
-                TX_ERRO_PROFILE_1_BIRTH_MAX % {'val': VAL_PROFILE_1_BIRTH_MAX}, code='max_length'
-            )
+            raise ValidationError(TX_ERRO_PROFILE_1_BIRTH_MAX, code="max_length")
+
+
+def validate_goals(primary, secondary):
+    """Server-side validation to check if the primary and secondary goals the user picks are not
+    the same."""
+    if not primary and secondary:
+        raise ValidationError(TX_ERRO_PROFILES_GOAL_P_NONE, code="invalid_choice")
+    elif primary and secondary and primary == secondary:
+        raise ValidationError(TX_ERRO_PROFILES_GOAL_SAME, code="overlap")

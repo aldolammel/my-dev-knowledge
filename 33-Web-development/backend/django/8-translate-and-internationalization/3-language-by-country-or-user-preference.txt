@@ -117,3 +117,22 @@
 
                 /33-Web-development/backend/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
 
+
+            2.4) In /accounts/views.py, an example of user's profile_view that's aware to the
+                change of user's language preference:
+
+                /33-Web-development/backend/django/3-2-backend-views/4-user-profile-view/profile-view.txt
+
+                    E.g.
+                        # Update the session language to match the new preference:
+                        # Important: keep it before the messages.success() to translate the message according to
+                        # the new language if the user has changed it.
+                        if 'language' in form.cleaned_data and form.cleaned_data['language']:
+                            # Get the ISO code from the Language model instance:
+                            language_code = form.cleaned_data['language'].iso_code
+                            # Set the new language in the session:
+                            translation.activate(language_code)
+                            request.session['_language'] = language_code
+                        # Feedback message:
+                        messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
+

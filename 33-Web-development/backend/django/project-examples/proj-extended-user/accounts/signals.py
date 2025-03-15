@@ -7,7 +7,7 @@ from .models import User, UserProfileOne, UserProfileTwo
 @receiver(post_save, sender=User)
 def user_profile_auto_creation(sender, instance, created, **kwargs):
     if created:
-        if instance.profile_type == '1':
+        if instance.profile_type == "1":
             UserProfileOne.objects.create(user=instance)
         else:
             UserProfileTwo.objects.create(user=instance)
