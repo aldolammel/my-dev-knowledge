@@ -71,7 +71,23 @@ POSTGRESQL: UPDATING
 
     >> Ubuntu:
 
+        X) Make sure you got the postgresql repository installed:
 
+                >> Windows:
+                    xxxxxx
+
+                >> Linux/Ubuntu:
+                    $ sudo apt install -y postgresql-common
+                    $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+                >> Mac:
+                    xxxxxx
+
+
+        X) Update the repository and upgrade the postgresql if new version is available:
+
+            $ sudo apt update
+            $ sudo apt upgrade
 
 
 

@@ -1,6 +1,6 @@
 
 
-CONFIGURING EMAIL SERVICE IN Django
+CONFIGURING EMAIL SERVICE IN DJANGO
 
     1) In settings.py:
 
@@ -23,9 +23,9 @@ CONFIGURING EMAIL SERVICE IN Django
             EMAIL_HOST=smtp.gmail.com
             EMAIL_PORT=587
             EMAIL_USE_TLS=True
-            EMAIL_HOST_USER=cefalogmaster@gmail.com
+            EMAIL_HOST_USER=abcoo.ideias@gmail.com
             EMAIL_HOST_PASSWORD=password_generated_by_gmail
-            DEFAULT_FROM_EMAIL=cefalogmaster@gmail.com
+            DEFAULT_FROM_EMAIL=abcoo.ideias@gmail.com
 
 
             2.1) How to generate a password by Gmail:

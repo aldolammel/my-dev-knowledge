@@ -12,7 +12,22 @@
             5. Merge or not the main branch.
 
 
-        >> Getting in a project
+        >> Creating a new repository (by terminal):
+            
+            # Creating the project folder:
+            $ mkdir <project-name>
+            
+            # In the project folder:
+            echo "# Project Name Here" >> README.md
+            git init
+            git add README.md
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin https://github.com/abcoo-ideias/<project_simpler_name>.git
+            git push -u origin main
+
+
+        >> Getting in an existent project/respository:
 
             $ git clone HTTPS_OF_PROJECT .         // that "." makes the clone to be installed exactly in the folder where you are, dont creating the parent folder.
             $ git status                           // everything must be fine.
@@ -72,29 +87,25 @@
             $ git reset --hard <branch_name>
 
 
-        >> Sending your new files to the LOCAL STAGE 
 
-            $ xxxxxxxxxx
-
-
-        >> Put a specific file on Stage (local):
+        >> Put a specific file/specific changes on LOCAL STAGE:
         
             $ git add <file-name>
 
 
-        >> Stages changes in the current directory and its subdirectories. 
+        >> Stages your specific changes in the current directory and its subdirectories. 
             It stages modifications and new files but does not include deletions:
         
                 $ git add .
 
 
-        >> Stages all changes in the entire working directory, including modifications,
+        >> Stages all your changes in the entire working directory, including modifications,
             new files, and deletions. It stages changes in the entire repository:
         
                 $ git add --all
 
 
-        >> Sending your updates to the LOCAL REPO:
+        >> Sending your changes to the LOCAL REPO:
         
             $ git commit -a -m "some description"
 
@@ -104,9 +115,15 @@
             $ git pull
 
 
-        >> Publishing your updates (from Local Repo) to the REMOTE same branch:
+        >> Publishing your changes (from Local Repo) to the REMOTE same branch:
         
             $ git push
+
+            or
+
+            $ git remote add origin https://github.com/<organization-name>/<project_name>.git
+            $ git branch -M main (or the name of the right branch to use)
+            $ git push -u origin main (or the name of the right branch to do it)
 
 
         >> Removing a useless file:

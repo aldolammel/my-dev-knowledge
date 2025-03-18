@@ -10,6 +10,18 @@ POSTGRESQL: INSTALLATION
 
     >> For installation:
 
+            0) Make sure you got the postgresql repository installed:
+
+                >> Windows:
+                    xxxxxx
+
+                >> Linux/Ubuntu:
+                    $ sudo apt install -y postgresql-common
+                    $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+                >> Mac:
+                    xxxxxx
+
 
             1) Check if there's the postgresql in the current machine:
 
@@ -31,10 +43,10 @@ POSTGRESQL: INSTALLATION
                 UBUNTU:
                     
                     X) With no virtual environment activated, type:
-                    
+
                         $ psql --version
-
-
+                        
+                    
                 MAC:
                     $ xxxx
 
@@ -43,10 +55,15 @@ POSTGRESQL: INSTALLATION
             2) Check if you must download some installer first: check in https://www.postgresql.org/
 
                 WINDOWS:
+
                     X) Download the file;
+
                     X) After the installation, go to start and search by 'pgAdmin';
+
                     X) xxxxxx
+
                     X) xxxxxxx
+
                     X) After the installation, make sure the Windows Terminal and main environment
                         will recognize the Postgres commands:
 
@@ -65,18 +82,29 @@ POSTGRESQL: INSTALLATION
                                 
 
                 UBUNTU:
+
                     1) Execute that config script available on the official webpage;
+
                     2) Install the module CURL if needed: 
                         $ sudo apt install curl
                     
                     3) Go to https://www.pgadmin.org/
+
                     4) Execute those lines before the installation of pgAdmin itself;
+
                     5) Install the pgadmin-desktop ONLY to prevent to user apache to run the web version;
+                    
                     6) After that, run your application PGADMIN via your apps list;
+
                     7) Connect the pgadmin to the postgreSQL now. In pgAdmin app:
+
                         x.1) Add a new server, clicking in Register;
-                        x.2) In General tab, in name set it as 'localhost';
+
+                        x.2) In General tab, in name set it as 'client_name_and_project_name_and_year_release';
+                            e.g.: cefalog_portal_2025
+
                         x.3) In Connection tab, in host set it as 'localhost';
+
                         x.4) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
                             $ systemctl status postgresql
                             # if not:
@@ -96,9 +124,12 @@ POSTGRESQL: INSTALLATION
                             $ exit
                         
                         x.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to remember the password;
+
                         x.9) Save the changes finally! You're connected.
                         
+                        
                 MAC:
+
                     X) 
 
 

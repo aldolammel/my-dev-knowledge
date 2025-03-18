@@ -23,16 +23,16 @@ POSTGRESQL
             env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
             SECRET_KEY = env('SECRET_KEY')
             DEBUG = env('DEBUG')
-            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])  # type: ignore
+            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
             if DEBUG:
-                print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))  # type: ignore
-                print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
-                print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore
+                print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))
+                print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))
+                print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))
                 
 
             # Application definition
-            # About each Installed Apps here:
+            # ABCOO - About each Installed Apps here:
             # <Product Engineering Data Document link here!>
             INSTALLED_APPS = [
                 # DJANGO DEFAULT SUB-APPS:

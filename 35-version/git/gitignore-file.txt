@@ -15,15 +15,19 @@
             PyCharm
             VisualStudioCode
             Python
-            Django
-            Flask
+            Django or Flask
             VirtualEnv
             Git
 
         4) Including in .gitignore manually:
-            <virtual_env_name>
+
+            .venv_<client_name>
+            .env_<client_name>
+            <or_other_virtual_env_name>
+            
             .idea/workspace.xml
             .idea/tasks.xml
+
             Find .vscode manually and:
             .vscode/*
             #!.vscode/settings.json

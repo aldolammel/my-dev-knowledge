@@ -6,30 +6,14 @@
             you want a 'Global Context'!
 
 
-        0) RECOMMENDED: create a 'constants.py' file in your config-folder!
+        0) RECOMMENDED: create a 'constants.py' file in your core-folder:
 
-            /33-Web-development/backend/django/3-1-backend-models-database/_constants-map.py
-
-
-        1) In a sub-app (recommend the 'general' one), create a file called 'context_processors.py':
-
-            from <config-folder-name>.constants import import <constant_name>, <constant_name>, ... 
-            from django.utils import timezone
+            /33-Web-development/backend/django/project-examples/proj-aldolammel-style/core/constants.py
 
 
-            def app_info(request):
-                """
-                Information about the app:
-                """
-                return {
-                    'BRAND_NAME': stt.BRAND_NAME,
-                    'BRAND_EMAIL': stt.BRAND_EMAIL,
-                    'BRAND_URL': stt.BRAND_URL,
-                    'DEV_NAME': stt.DEV_NAME,
-                    'DEV_URL': stt.DEV_URL,
-                    'ADMIN_EMAIL': stt.ADMIN_EMAIL,
-                    'CURRENT_YEAR': timezone.now().year,
-                }
+        1) In a core-folder, create a file called 'context_processors.py':
+
+            /33-Web-development/backend/django/project-examples/proj-aldolammel-style/core/context_processors.py
 
         
         2) In settings.py file, find 'TEMPLATES' section and add:
@@ -46,7 +30,7 @@
                             # THIRD-PARTY GLOBAL CONTEXTS:
                             ...
                             # APP CUSTOM GLOBAL CONTEXTS:
-                            '<config-folder-name>.context_processors.app_info',
+                            "core.context_processors.app_info",
                         ],
                     },
                 },

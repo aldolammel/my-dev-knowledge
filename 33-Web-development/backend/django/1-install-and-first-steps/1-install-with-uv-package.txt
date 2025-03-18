@@ -35,17 +35,16 @@ UV PACKAGE
 
     >> PROJECT SETUP:
 
+        X) Open the Project folder through the IDE;
 
-        5) Open the Python project folder through the IDE:
 
-            >> For VSCode:
-                - New Window option to open the specific project folder.
-            
-            >> For PyCharm:
-                - xxxxx
+        X) Project versioning:
+
+            >> Create a repository or use an existing one:
+                /35-version/
         
         
-        6) Choosing the way to create the project:
+        X) Choosing the way to create the project:
 
             6A) CREATING A NEW PROJECT:
             6B) OR I'M GETTING AN EXISTING PROJECT:
@@ -57,7 +56,7 @@ UV PACKAGE
                 >> Project folder:
 
                     >> Already exist a project folder:
-                        # In the project folder (even with bunch of project files inside):
+                        # In the project folder (even with a bunch of project files inside):
                         $ uv init .
 
                     >> Or there's NO project folder yet:
@@ -65,14 +64,14 @@ UV PACKAGE
                         $ uv init <project-name>
 
 
-                >> Open the new project in a new IDE window and let's into the first UV steps:
+                >> Into the first UV steps:
                     
                     >> In pyproject.toml file, check is the Python version is right!
 
-                    >> If not:
-                        >> Change it, typing the minimul right python version!
-                        >> On terminal, define with version this project will use:
-                            $ uv python pin <python-version>
+                        >> If not:
+                            >> Change it, typing the minimul right python version!
+                            >> On terminal, define with version this project will use:
+                                $ uv python pin <python-version>
                 
                     >> Creating the virtual environment:
                         
@@ -161,11 +160,14 @@ UV PACKAGE
         
         
         X) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
-                        other things!
+                        other things:
+                            
+                        /35-version/git/gitignore-file.txt
 
 
-        X) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
-            /04-Basic-Modules/ruff.txt
+        X) (OPTIONAL) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
+                        
+                        /04-Basic-Modules/ruff.txt
 
 
         >> Continuing the Django configuration after the UV installation section:
