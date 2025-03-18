@@ -6,17 +6,18 @@
             you want a 'Global Context'!
 
 
-        0) RECOMMENDED: create a 'constants.py' file in your core-folder:
+        1) RECOMMENDED: create a 'constants.py' file in your core-folder:
 
             /33-Web-development/backend/django/project-examples/proj-aldolammel-style/core/constants.py
 
 
-        1) In a core-folder, create a file called 'context_processors.py':
+        2) In a core-folder, create a file called 'context_processors.py':
 
             /33-Web-development/backend/django/project-examples/proj-aldolammel-style/core/context_processors.py
 
         
-        2) In settings.py file, find 'TEMPLATES' section and add:
+        3) (Skip it if you'll use an existent settings.py model later)
+            In settings.py file, find 'TEMPLATES' section and add:
 
             TEMPLATES = [
                 {
@@ -37,7 +38,7 @@
             ]
 
 
-        3) Now, call your global context wherever you want on templates:
+        4) Now, call your global context wherever you want on templates:
 
             E.g.
 

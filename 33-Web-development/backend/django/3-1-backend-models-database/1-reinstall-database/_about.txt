@@ -5,6 +5,10 @@ HOW TO RE-INSTALL ONLY THE DATABASE:
 
     >> If you need to re-create your database from the beginning, do it:
 
+        Before: if your application is multilingual and are using prefix_language mandatory,
+                your new db must be created and, right after, you must include on language table
+                at least one language for you be able to use the CMS! So be aware of this!
+        
         1) Delete the current database;
 
         2) Create the new database;
@@ -19,6 +23,10 @@ HOW TO RE-INSTALL ONLY THE DATABASE:
         6) Run 'makemigrations' for each sub-app, and then run 'migrate';
         
         7) If you'll use the CMS, run createsuperuser;
+
+        8) If your application is multilingual, and have prefix_language mandatory,
+            add manually at least one language in the language table for you are allowed 
+            to use the CMS;
 
 
 

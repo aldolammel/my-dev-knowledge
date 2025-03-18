@@ -35,6 +35,11 @@ UV PACKAGE
 
     >> PROJECT SETUP:
 
+        X) Local project folder:
+            >> Create the project folder;
+            >> Or, if it already exists, next step!
+        
+        
         X) Open the Project folder through the IDE;
 
 
@@ -44,7 +49,7 @@ UV PACKAGE
                 /35-version/
         
         
-        X) Choosing the way to create the project:
+        X) Choosing the way to create the Django project:
 
             6A) CREATING A NEW PROJECT:
             6B) OR I'M GETTING AN EXISTING PROJECT:
@@ -84,6 +89,8 @@ UV PACKAGE
                                     $ . .venv/bin/activate
                                 >> Windows:
                                     $ .venv\Scripts\activate
+                                >> Mac:
+                                    $ xxxxxxxxx
 
                         >> Now, run a test:
                             # If needed, it automatically creates the virtual environment to test it:
@@ -98,11 +105,13 @@ UV PACKAGE
                         $ uv add <package-name>
 
                     >> Adding a new dependency only IF DEV environment: 
+                        
+                        # This never will be installed in the production environment:
                         $ uv add --dev <package-name>
 
-                        # This never will be installed in the production environment! ;)
 
             .........................................
+
 
             6B) OR I'M GETTING AN EXISTING PROJECT:
 
@@ -151,12 +160,12 @@ UV PACKAGE
                             xxxxxxxxxxxxxxxxxxxx
 
        
-        X) (OPTIONAL) If you have multilanguage support in your project:
+                    >> (OPTIONAL) If you have multilingual support in your project:
 
-            >> With Gettext module:
-                
-                $ uv run manage.py makemessages --all
-                $ uv run manage.py compilemessages
+                        >> With Gettext module installed:
+                            
+                            $ uv run manage.py makemessages --all
+                            $ uv run manage.py compilemessages
         
         
         X) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
@@ -172,9 +181,6 @@ UV PACKAGE
 
         >> Continuing the Django configuration after the UV installation section:
             /33-Web-development/backend/django/1-install-and-first-steps/0-installing-the-project.txt
-
-        >> Or run the Django application using UV:
-            $ uv run manage.py runserver
 
 
      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

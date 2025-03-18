@@ -23,6 +23,7 @@ CONFIGURING EMAIL SERVICE IN DJANGO
             EMAIL_HOST=smtp.gmail.com
             EMAIL_PORT=587
             EMAIL_USE_TLS=True
+            # Other e-mails are in core/constants.py!
             EMAIL_HOST_USER=abcoo.ideias@gmail.com
             EMAIL_HOST_PASSWORD=password_generated_by_gmail
             DEFAULT_FROM_EMAIL=abcoo.ideias@gmail.com

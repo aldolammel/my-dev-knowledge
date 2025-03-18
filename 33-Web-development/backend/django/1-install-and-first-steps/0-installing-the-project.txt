@@ -84,7 +84,8 @@ INSTALLING DJANGO:
 
     5) Through the Config-folder (e.g. "core"), open the settings.py file:
     
-        3.1) Organize the settings.py header:
+        x.1) (Skip it if you'll use an existent settings.py model later)
+            Organize the settings.py header:
 
             # App Essential Settings:
             BASE_DIR = ...
@@ -93,15 +94,17 @@ INSTALLING DJANGO:
             ALLOWED_HOSTS = ...
 
 
-        3.2) Prepare a Global Context with the Essential info about the app:
+        x.2) Prepare a Global Context with the Essential info about the app:
                 /33-Web-development/backend/django/3-2-backend-views/1-building-views-context/global-context.txt
         
 
-        3.3) Still in settings.py file, if you won't use the SQLite as database,
-            keep in mind your 'SECRET KEY';
+        x.3) Still in settings.py file, if you WON'T use the SQLite as database:
+
+                >> If you'll use an settings.py model later, save this SECRET KEY to use in the
+                    new settings.py later!
 
 
-        3.4) Define your database:
+        x.4) Define your database:
             /33-Web-development/backend/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
 
 
@@ -110,11 +113,12 @@ INSTALLING DJANGO:
 
 
 
-    7) Create the 'templates' folder in the project-folder (Don't mistake with the core-folder);
+    7) Create the main 'templates' folder in the project-folder (Don't mistake with the core-folder):
 
         E.g. Django Project Structure:
 
             >Project-folder (it's the 'main-app' / the root folder)
+                >.venv
                 >core (it's the config-folder, sometimes with the same name of the project)
                     -settings.py (where you register each sub-app in use)
                     ...
@@ -124,25 +128,93 @@ INSTALLING DJANGO:
                     ...
                 >sub-app3-folder
                     ...
-                ...
+                >media-folder
+                    ...
+                >static-folder
+                    ...
                 -manage.py
+                ...
 
 
-    8) Create your first sub-app in the project:
+    8) Create the 'static' folder in the project-folder too!
 
-        8.1) Show to Django where will be each template folder in your sub-apps, going to the
-            config-folder 'settings.py' file and editing this line in 'template' list:
+        >> In static-folder, create a 'css' folder and a 'js' folder.
+        >> in css-folder, create a 'main.css' file.
+        >> in js-folder, create a 'main.js' file.
+
+
+    9) Create the 'media' folder in the project-folder too!
+
+        >> Keep it empty for now.
+
+
+    10) Create basic sub-apps in the project's application:
+
+        x.1) (Skip it if you'll use an existent settings.py model later) 
+            Show to Django where will be each template folder in your sub-apps, going to the
+            core-folder 'settings.py' file and editing this line in 'template' list:
                 
                 From:
                     'DIRS': [],
                 To:
                     'DIRS': [BASE_DIR / 'templates'],
 
-        8.2) If you already know what sub-apps to create:
-            /33-Web-development/backend/django/2-creating-and-deleting-apps/creating.txt
+
+        x.2) If you want to use a settings.py model file, now is the time!
+            /33-Web-development/backend/django/project-examples/proj-aldolammel-style/core/settings.py
+            
+            >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
+                file when you bring it to your project!
+
+            >> Keep commented the Installed sub-apps for now!
 
 
-    9) Creating the admin user:
+        x.3) Adding basic sub-apps:
+
+            >> How:  /33-Web-development/backend/django/2-creating-and-deleting-apps/creating.txt
+
+
+            >> 'general' sub-app:
+                About: /33-Web-development/backend/django/project-examples/proj-aldolammel-style/general/_readme.txt
+                
+                g.1) Bring the basic sub-app files and templates-folder too:
+                    
+                    /33-Web-development/backend/django/project-examples/proj-aldolammel-style/general/
+
+                g.2) Include it in the INSTALLED_APPS in the settings.py file!
+                g.3) Makemigrations and migrate!
+                g.4) Test it!
+
+
+            >> 'in' sub-app:
+                About: /33-Web-development/backend/django/project-examples/proj-aldolammel-style/in/_readme.txt
+                
+                i.1) Bring the basic sub-app files and templates-folder too:
+                    
+                    /33-Web-development/backend/django/project-examples/proj-aldolammel-style/in/
+
+                i.2) Include it in the INSTALLED_APPS in the settings.py file!
+                i.3) Makemigrations and migrate!
+                i.4) Test it!
+        
+
+            >> 'accounts' sub-app:
+                About: /33-Web-development/backend/django/project-examples/proj-aldolammel-style/accounts/_readme.txt
+                
+                a.1) Bring the basic sub-app files and templates-folder too:
+                    
+                    >> Advanced 'Accounts' solution:
+                        /33-Web-development/backend/django/project-examples/proj-aldolammel-style/accounts/
+                    
+                    >> Even more advanced 'Accounts' solution:
+                        /33-Web-development/backend/django/project-examples/proj-extended-user/
+
+                a.2) Include it in the INSTALLED_APPS in the settings.py file!
+                a.3) Makemigrations and migrate!
+                a.4) Test it!
+
+
+    11) Creating the admin user:
         
         $ python manage.py createsuperuser
         or
@@ -158,7 +230,8 @@ INSTALLING DJANGO:
 
 
 
-    10) Will this project have more than one language?
+    12) (Skip it if you'll use an existent settings.py model later)
+        Will this project have more than one language?
 
             If not, add in your settings.py:
                 USE_I18N = False
@@ -167,10 +240,10 @@ INSTALLING DJANGO:
                 /33-Web-development/backend/django/8-translate-and-internationalization/starting-translation.txt
     
 
-    11) Optionals:
+    13) Optionals:
 
-        11.1) Will you use file upload?
+        x.1) Will you use file upload?
             /33-Web-development/backend/django/5-uploads/files/
 
-        11.2) Will you use imagem upload?
+        x.2) Will you use imagem upload?
             /33-Web-development/backend/django/5-uploads/images/

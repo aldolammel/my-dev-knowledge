@@ -12,7 +12,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone, translation
-from .models import User, UserProfileOne, UserProfileTwo
+from .models import User, UserProfileOne
 from .forms import (
     CustomUserCreationForm,
     CustomLoginForm,
@@ -20,7 +20,6 @@ from .forms import (
     CustomPasswordChangeForm,
     CustomPasswordResetForm,
     UserProfileOneForm,
-    UserProfileTwoForm,
 )
 from core import language as lng
 from core.constants import (
@@ -149,7 +148,8 @@ class CustomPasswordChangeView(PasswordChangeView):
         # Definitions:
         user = self.request.user
         profile_type = (
-            lng.TX_PROFILE_1 if user.profile_type == "1" else lng.TX_PROFILE_2
+            lng.TX_PROFILE_1
+            #lng.TX_PROFILE_1 if user.profile_type == "1" else lng.TX_PROFILE_2
         )
         context = super().get_context_data(**kwargs)
         # Building context:
@@ -165,10 +165,10 @@ class CustomPasswordChangeView(PasswordChangeView):
 def custom_logout_view(request):
     """Select a more appropriated home to the user after logout"""
     if request.user.is_authenticated:
-        profile_type = request.user.profile_type
+        # profile_type = request.user.profile_type
         logout(request)
-        if profile_type == "2":
-            return redirect(NAMESPACE_1 + ":" + PATTERN_1_2)
+        # if profile_type == "2":
+        #     return redirect(NAMESPACE_1 + ":" + PATTERN_1_2)
     return redirect(NAMESPACE_1 + ":" + PATTERN_1_1)
 
 
@@ -187,10 +187,10 @@ def profile_view(request, username):
         instance = get_object_or_404(UserProfileOne, user=profile_user)
         form = UserProfileOneForm(instance=instance, user=user)
         profile_type = lng.TX_PROFILE_1
-    else:
-        instance = get_object_or_404(UserProfileTwo, user=profile_user)
-        form = UserProfileTwoForm(instance=instance, user=user)
-        profile_type = lng.TX_PROFILE_2
+    # else:
+    #     instance = get_object_or_404(UserProfileTwo, user=profile_user)
+    #     form = UserProfileTwoForm(instance=instance, user=user)
+    #     profile_type = lng.TX_PROFILE_2
 
     # If something's submitted:
     if request.method == "POST":
@@ -206,12 +206,9 @@ def profile_view(request, username):
         # Defining the object of the current form, passing also the user object:
         if is_profile_1:
             form = UserProfileOneForm(request.POST, instance=instance, user=user)
-        else:
-            form = UserProfileTwoForm(request.POST, instance=instance, user=user)
+        # else:
+        #     form = UserProfileTwoForm(request.POST, instance=instance, user=user)
         if form.is_valid():
-            # form.save()  # It seems duplicated!!!! So I commented it!
-            # Update the User model fields:
-            # profile_type is NOT available for user edition;
             profile_user.email = form.cleaned_data["email"]
             profile_user.is_notified_by_email = form.cleaned_data["is_notified_by_email"]
             profile_user.language = form.cleaned_data["language"]
@@ -248,6 +245,7 @@ def profile_view(request, username):
         "bt_del": lng.BT_PROFILE_DEL,
     }
     # Load template:
-    if is_profile_1:
-        return render(request, NAMESPACE_3 + "/profile_1.html", context)
-    return render(request, NAMESPACE_3 + "/profile_2.html", context)
+    # if is_profile_2:
+    #     return render(request, NAMESPACE_3 + "/profile_2.html", context)
+    return render(request, NAMESPACE_3 + "/profile_1.html", context)
+    

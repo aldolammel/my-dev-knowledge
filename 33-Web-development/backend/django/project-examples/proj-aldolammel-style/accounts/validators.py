@@ -10,8 +10,6 @@ from core.language import (
     # S_G_PRIVACY_NAME,
     TX_ERRO_PROFILE_1_BIRTH_MIN,
     TX_ERRO_PROFILE_1_BIRTH_MAX,
-    TX_ERRO_PROFILES_GOAL_P_NONE,
-    TX_ERRO_PROFILES_GOAL_SAME,
 )
 
 
@@ -32,11 +30,3 @@ def validate_birth(birth):
         elif current_year - birth.year > VAL_PROFILE_1_BIRTH_MAX:
             raise ValidationError(TX_ERRO_PROFILE_1_BIRTH_MAX, code="max_length")
 
-
-def validate_goals(primary, secondary):
-    """Server-side validation to check if the primary and secondary goals the user picks are not
-    the same."""
-    if not primary and secondary:
-        raise ValidationError(TX_ERRO_PROFILES_GOAL_P_NONE, code="invalid_choice")
-    elif primary and secondary and primary == secondary:
-        raise ValidationError(TX_ERRO_PROFILES_GOAL_SAME, code="overlap")

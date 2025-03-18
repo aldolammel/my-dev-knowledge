@@ -9,7 +9,7 @@ from django.contrib.auth.forms import (
 )
 from django.utils import timezone
 from datetime import timedelta
-from .models import User, UserProfileOne, UserProfileTwo, Language, Country, Goal
+from .models import User, UserProfileOne, Language  # TODO: has multilingual support?
 from core import language as lng
 from core.settings import DATE_INPUT_FORMATS
 from core.constants import (
@@ -145,36 +145,25 @@ class UserProfileOneForm(forms.ModelForm):
         model = UserProfileOne
         # Ordering fields on form:
         fields = [
-            "sex",  # from connected model
-            "birthdate",  # from connected model
+            #"sex",  # from connected model
+            #"birthdate",  # from connected model
             "first_name",  # from connected model
             #'last_name',  # from connected model # Not used anymore!
             "email",  # extra
             "is_notified_by_email",  # extra
-            "language",  # extra
-            "is_nomad",  # from connected model
-            "country",  # from connected model
-            "city",  # from connected model
-            "goal_primary",  # from connected model
-            "goal_secondary",  # from connected model
+            #"language",  # extra  # TODO: has multilingual support?
             "last_pwd_update",  # extra
         ]
         # Simple and static tweaks only for connected model's fields:
         widgets = {
             # 'sex': forms.Select(attrs={}),
-            "birthdate": forms.DateInput(
-                format=DATE_INPUT_FORMATS[0],  # Enforcing the db format explicitly!
-                attrs={"class": "input is-large", "type": "date"},
-            ),
+            # "birthdate": forms.DateInput(
+            #     format=DATE_INPUT_FORMATS[0],  # Enforcing the db format explicitly!
+            #     attrs={"class": "input is-large", "type": "date"},
+            # ),
             "first_name": forms.TextInput(attrs={"class": "input is-large"}),
             #'last_name': forms.TextInput(attrs={'class': 'input is-large'}), # Not used anymore!
-            "is_nomad": forms.CheckboxInput(
-                attrs={"class": "is-large", "id": "is_nomad"}
-            ),
             # 'country': forms.Select(attrs={}),
-            "city": forms.TextInput(attrs={"class": "input is-large"}),
-            # 'goal_primary': forms.Select(attrs={}),
-            # 'goal_secondary': forms.Select(attrs={}),
         }
 
     # Extra (non-model) fields:
@@ -196,12 +185,13 @@ class UserProfileOneForm(forms.ModelForm):
         ),
         help_text=lng.TX_HELP_USER_NOTIF_EMAIL,
     )
-    language = forms.ModelChoiceField(
-        queryset=Language.objects.filter(status="on"),
-        required=False,
-        label=lng.LB_USER_LANG,
-        help_text=lng.TX_HELP_USER_LANG,
-    )
+    # TODO: has multilingual support?
+    # language = forms.ModelChoiceField(
+    #     queryset=Language.objects.filter(status="on"),
+    #     required=False,
+    #     label=lng.LB_USER_LANG,
+    #     help_text=lng.TX_HELP_USER_LANG,
+    # )
     last_pwd_update = forms.DateTimeField(
         required=False,
         label=lng.LB_USER_PWD_LAST_UPDATE,
@@ -220,100 +210,16 @@ class UserProfileOneForm(forms.ModelForm):
             age_max = (
                 timezone.now() - timedelta(days=365.25 * VAL_PROFILE_1_BIRTH_MAX)
             ).date()
-            self.fields["birthdate"].widget.attrs.update(
-                {"max": age_min, "min": age_max}
-            )
-            self.fields["country"].queryset = Country.objects.filter(status="on")  # type: ignore
-            if user.profile_type:
-                # Filter both goal fields based on the user's profile_type:
-                by_type = Goal.objects.filter(
-                    status="on", profile_type=user.profile_type
-                )
-                self.fields["goal_primary"].queryset = by_type  # type: ignore
-                self.fields["goal_secondary"].queryset = by_type  # type: ignore
+            # self.fields["birthdate"].widget.attrs.update(
+            #     {"max": age_min, "min": age_max}
+            # )
 
             # Extra fields, pre-populating:
             # Unlike fields from connected model, extra fields must be manually linked!
             self.fields["email"].initial = user.email
             self.fields["is_notified_by_email"].initial = user.is_notified_by_email
-            self.fields["language"].initial = user.language
+            #self.fields["language"].initial = user.language  # TODO: has multilingual support?
             self.fields["last_pwd_update"].initial = user.last_pwd_update
-
-    def save(self, user=None, commit=True):
-        """Built-in method that, if triggered, create or update an instance in the connected model."""
-        instance = super().save(
-            commit=False
-        )  # commit=False will not save in db immediately.
-        if user:
-            instance.updated_at = timezone.now()
-            instance.updated_by = user
-        if commit:
-            instance.save()
-        return instance
-
-
-class UserProfileTwoForm(forms.ModelForm):
-    """UserProfile form specific for Business usage through front-end."""
-
-    class Meta:
-        # Connected model to populate:
-        model = UserProfileTwo
-        # Ordering fields on the form:
-        fields = [
-            "country_business",  # from connected model
-            "city_business",  # from connected model
-            "language",  # extra
-            "business_name",  # from connected model
-            "legal_name",  # from connected model
-            "description",  # from connected model
-            "business_url",  # from connected model
-            "social_media",  # from connected model
-            "business_email",  # from connected model
-            "goal_primary",  # from connected model
-            "goal_secondary",  # from connected model
-            "busi_first_name",  # from connected model
-            "busi_last_name",  # from connected model
-            "email",  # extra
-            "is_notified_by_email",  # extra
-        ]
-
-    # Extra fields:
-    email = forms.EmailField(
-        required=True,
-        label=lng.LB_USER_EMAIL,
-    )
-    is_notified_by_email = forms.BooleanField(
-        required=False,
-        label=lng.LB_USER_NOTIF_BY_EMAIL,
-    )
-    language = forms.ModelChoiceField(
-        queryset=Language.objects.filter(status="on"),
-        required=False,
-        label=lng.LB_USER_LANG,
-    )
-
-    def __init__(self, *args, **kwargs):
-        """Built-in method that's called when the form is initializated."""
-        user = kwargs.pop("user", None)  # Get the current user (from view)!
-        super().__init__(*args, **kwargs)
-        if user:
-            # Connected fields (from connected model), customizations:
-            if user.profile_type:
-                # Filter both goal fields based on the user's profile_type:
-                by_type = Goal.objects.filter(
-                    status="on", profile_type=user.profile_type
-                )
-                self.fields["goal_primary"].queryset = by_type  # type: ignore
-                self.fields["goal_secondary"].queryset = by_type  # type: ignore
-                self.fields["country_business"].queryset = Country.objects.filter(
-                    status="on"
-                )  # type: ignore
-
-            # Extra fields, pre-populating:
-            # Unlike fields from connected model, extra fields must be manually linked!
-            self.fields["email"].initial = user.email
-            self.fields["is_notified_by_email"].initial = user.is_notified_by_email
-            self.fields["language"].initial = user.language
 
     def save(self, user=None, commit=True):
         """Built-in method that, if triggered, create or update an instance in the connected model."""

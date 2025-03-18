@@ -1,3 +1,10 @@
+"""
+    ALDO!!!!!
+    
+    Be aware, DON'T replace/update this example-code below WITHOUT consider lines below have "commented" option's to follow the "New Project Installation" logic where "accounts" and multi-language options are commented, for example.
+
+"""
+
 from pathlib import Path
 import environ
 from .constants import (
@@ -14,15 +21,16 @@ from .constants import (
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(BASE_DIR / ".env")  # Take environment variables from .env file.
 env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
-AUTH_USER_MODEL = NAMESPACE_3 + ".User"  # Extending Django User features.
+# TODO: uncomment after to create the 'accounts' sub-app:
+#AUTH_USER_MODEL = NAMESPACE_3 + ".User"  # Extending Django User features.
 SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])  # type: ignore
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 
 """if DEBUG:
-    print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))  # type: ignore
-    print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))  # type: ignore
-    print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))  # type: ignore """
+    print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))
+    print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))
+    print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))"""
 
 # Application definition
 # About each Installed Apps here:
@@ -36,26 +44,28 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # DJANGO ADDITIONAL SUB-APPS:
-    "django.contrib.postgres",
+    # "django.contrib.postgres",  # TODO: uncomment if POSTGRES DB!
     #'django_extensions',  # to use the show_url command in shell!
     # THIRD-PARTY SUB-APPS:
-    "rosetta",
-    "parler",
+    #"rosetta",  # TODO: uncomment if multilingual!
+    #"parler",  # TODO: uncomment if multilingual!
     # APP ORIGINAL SUB-APPS:
-    NAMESPACE_1,
-    NAMESPACE_2,
-    NAMESPACE_3,
-    NAMESPACE_4,
+    #NAMESPACE_1,  # TODO: uncomment after to create the sub-app!
+    #NAMESPACE_2,  # TODO: uncomment after to create the sub-app!
+    #NAMESPACE_3,  # TODO: uncomment after to create the sub-app!
+    #NAMESPACE_4,  # TODO: uncomment after to create the sub-app!
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
+    # TODO: uncomment if multilingual:
+    #"django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "core.middlewares.UserLanguageMiddleware",  # Advanced language features (need to be after the Locale and Authentication)!
+    # TODO: uncomment if multilingual:
+    #"core.middlewares.UserLanguageMiddleware",  # Advanced language features (need to be after the Locale and Authentication)!
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -81,7 +91,8 @@ TEMPLATES = [
                 # APP CUSTOM GLOBAL CONTEXTS:
                 "core.context_processors.app_info",
                 "core.context_processors.constants_to_template",
-                "core.context_processors.languages",
+                # TODO: uncomment if multilingual:
+                #"core.context_processors.languages",
             ],
         },
     },
@@ -127,9 +138,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# TODO: uncomment (and make USE_IE8N 'True') if multilingual:
 # Internationalization
-USE_I18N = True
+USE_I18N = False  # 'True' for multi-language support!
+"""
 # Available languages:
 # LANG_CODE_PT = "pt"
 LANG_CODE_PTBR = "pt-br"
@@ -166,9 +178,11 @@ PARLER_LANGUAGES = {
 }
 LANGUAGE_COOKIE_NAME = "user_language"
 LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
+"""
 
 # Timezone-aware
-USE_TZ = True
+# TODO: make USE_TZ 'True' for multilingual support:
+USE_TZ = False  # 'True' for multi-language support compatibility!
 TIME_ZONE = "America/Sao_Paulo"  # 'UTC'
 
 # FORMATS

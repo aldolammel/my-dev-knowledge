@@ -2,7 +2,13 @@
 
     GIT IGNORE FILE:
 
-        1) Create the .gitignore file in the repo root;
+        1) Create the .gitignore file in the repo root:
+            
+            >> Model for Django projects:
+                /33-Web-development/backend/django/project-examples/proj-aldolammel-style/.gitignore
+            
+            >> xxxxxxxxxxxxxxxxxxxx
+            
 
         2) Online Generator (options):
             https://mrkandreev.name/snippets/gitignore-generator/

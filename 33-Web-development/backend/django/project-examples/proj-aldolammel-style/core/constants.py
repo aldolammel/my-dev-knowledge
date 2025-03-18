@@ -93,16 +93,16 @@ CHOICES_STATUS_CONTENT = (
 # VAL_HEADACHE_LIFE_TIME_MAX = 3  # in days, based in Headache Life Time Maximum.
 # VAL_HEADACHE_LIFE_TIME_MIN = 15  # in minutes, based in Headache Life Time Minimum.
 # VAL_EVT_ATTK_NOTE_MAXLNGH = 600
-# VAL_PROFILE_1_BIRTH_MIN = 13  # in years old. Legal matter in Brazil!
-# VAL_PROFILE_1_BIRTH_MAX = 85  # in years old. Migraine over than 70 is rare!
-# VAL_PROFILE_1_NAME_MAXLNGH = 12
-# VAL_PROFILE_1_DEL_SCHEDULE = 30  # in days!
+VAL_PROFILE_1_BIRTH_MIN = 13  # in years old. Legal matter in Brazil!
+VAL_PROFILE_1_BIRTH_MAX = 85  # in years old. Migraine over than 70 is rare!
+VAL_PROFILE_1_NAME_MAXLNGH = 12
+VAL_PROFILE_1_DEL_SCHEDULE = 30  # in days!
 # VAL_PROFILE_2_DEL_SCHEDULE = VAL_PROFILE_1_DEL_SCHEDULE  # in days!
 # VAL_PROFILE_2_BNAME_MAXLNGH = 50
 # VAL_PROFILE_2_LEGAL_MAXLNGH = 100
 # VAL_PROFILE_2_CITY_MAXLNGH = 40
 # VAL_PROFILE_2_DESC_MAXLNGH = 400
-# REL_PROFILE_1 = "profile_1"
+REL_PROFILE_1 = "profile_1"
 # REL_PROFILE_2 = "profile_2"
 
 
