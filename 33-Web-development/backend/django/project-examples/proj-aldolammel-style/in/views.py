@@ -7,7 +7,6 @@ from core.constants import (
     NAMESPACE_2,
     NAMESPACE_3,
     PATTERN_2_2,
-    PATTERN_2_3,
     PATTERN_3_3,
 )
 from core.language import (
@@ -41,3 +40,13 @@ def home_profile_one_view(request):
     # Return the data to be rendered with the template when a key of the context dict is called:
     return render(request, NAMESPACE_2 + "/home_one.html", context)
 
+
+# @login_required
+# def home_profile_two_view(request):
+#     # If you wanna pass variables to the template, you need this always as dictionary:
+#     context = {
+#         "page_title": S_I_HOME_2_TTL,
+#         "profile_type": f"{LB_PROFILE_TYPE}: {TX_PROFILE_2}",
+#     }
+#     # Return the data to be rendered with the template when a key of the context dict is called:
+#     return render(request, NAMESPACE_2 + "/home_two.html", context)

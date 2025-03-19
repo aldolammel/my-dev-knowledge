@@ -1,8 +1,41 @@
-<!--
-
-   
-    /33-Web-development/backend/django/3-3-frontend-templates/3-base.html
-
-
--->
-
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Page info -->
+        <title>
+            {% block title %}
+            {% endblock title %}
+            | {{ BRAND_NAME }}
+        </title>
+        <meta name="description"
+              content="{% block description %}{{ BRAND_DESCRIPT }}{% endblock description %}" />
+        <meta name="keywords"
+              content="{% block keywords %}{{ BRAND_KEYWORDS }}{% endblock keywords %}">
+        <meta name="author" content="{{ DEV_NAME }}" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Scripts -->
+        <!-- Reserved space... -->
+    </head>
+    <body>
+        <!-- MAIN NAV - START -->
+        {% include "inc/nav_main.html" %}
+        <!-- MAIN NAV - END -->
+        <!-- FEEDBACK MESSAGES - START -->
+        {% include "inc/feedback_messages.html" %}
+        <!-- FEEDBACK MESSAGES - END -->
+        <section class="section">
+            {% block content %}
+            {% endblock content %}
+        </section>
+        <!-- FOOTER - START -->
+        {% include "inc/nav_footer.html" %}
+        <!-- FOOTER - END -->
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>
+</html>
