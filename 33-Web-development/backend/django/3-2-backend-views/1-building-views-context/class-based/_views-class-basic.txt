@@ -22,11 +22,11 @@ VIEWS CLASSES: USING BASIC INHERIT:
                 return HttpResponse("Hello, this is a POST request")
 
 
-    HOW TO USAGE (EXAMPLE):
+    HOW TO USE (EXAMPLE):
     
-    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-basic-usage.py
+        /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-basic-usage.py
 
 
     WHO INHERIT VIEW CLASS:
     
-    >> All other view-classes!
+        >> All other view-classes!

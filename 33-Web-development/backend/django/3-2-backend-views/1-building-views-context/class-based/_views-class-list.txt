@@ -23,9 +23,9 @@ VIEWS CLASSES: USING LIST INHERIT:
     
     HOW TO USAGE (EXAMPLE):
     
-    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-list-usage.py
-
+        /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-list-usage.py
 
 
     WHO INHERIT LIST-VIEW CLASS:
-    >> No one!
+        
+        >> No one!

@@ -9,15 +9,16 @@
 
         # 1) In the sub-app folder, open the 'admin.py':
             
+            from django.contrib import admin
             # Import the specific model/table of the sub-app:
-            from .models import Movie  # type: ignore
+            from .models import Movie
             
             # Registering Django CMS customizations:
             # Reserved space...
             # Registering Product CMS features:
-            admin.site.register(Movie)  # type: ignore
+            admin.site.register(Movie)
 
-        # 2) Check the result: http://127.0.0.1:8000/admin/
+        # 2) Check the result: http://localhost:8000/admin/
 
 
 

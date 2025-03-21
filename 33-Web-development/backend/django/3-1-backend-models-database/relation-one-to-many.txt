@@ -23,7 +23,7 @@ RELATION: ONE TO MANY (FOREIGN KEY)
 
 
             MORE ABOUT ON_DELETE:
-            /33-Web-development/backend/django/3-1-backend-models-database/_models_knowledge.txt
+            /33-Web-development/backend/django/3-1-backend-models-database/_model-arguments.txt
 
 
     2) Still in the same sub-app, in admin.py file:

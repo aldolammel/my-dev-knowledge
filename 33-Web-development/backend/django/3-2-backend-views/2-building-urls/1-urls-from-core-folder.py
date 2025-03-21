@@ -1,15 +1,15 @@
 """
 
-    URLS.PY FOR CONFIG-FOLDER
-    (Config-folder is the folder where you find settings.py file)
+    URLS.PY FOR CONFIG-FOLDER (CORE)
+    (Core is the folder where you find settings.py file)
     
-    >> This file is called 'urls.py' and it belongs to config-folder.
+    >> This file is called 'urls.py' and it belongs to core folder.
         This file is autocreated when the Django Project is created.
         
     >> This file is the base of all urls.py files probably created into
         each sub-app folder.
         
-        /33-Web-development/backend/django/3-2-backend-views/2-building-urls/urls-from-subapp.py
+        /33-Web-development/backend/django/3-2-backend-views/2-building-urls/2-urls-from-subapp.py
 
 
 """

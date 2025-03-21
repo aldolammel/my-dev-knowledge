@@ -1,0 +1,11 @@
+
+
+MODEL FIELD: ID
+
+
+    >> by default, Django will create a field called 'id' for you (so when you create a model class, you don't need to declare it), which is the primary key.
+
+
+    >> For explicitly create a field called 'id', you can use:
+        
+        /33-Web-development/backend/django/3-1-backend-models-database/creating-explicit-id.txt

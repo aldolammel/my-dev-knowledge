@@ -223,7 +223,7 @@
                 >> TIP: after to understand how a .po file works, it's advised to use Rosetta Module
                     to work on a translation (recommended):
 
-                        http://127.0.0.1:8000/rosetta/
+                        http://localhost:8000/rosetta/
 
 
             3.3) For all or just one (it don't matter) language: once you've translated the strings
@@ -240,9 +240,9 @@
 
                 E.g.
 
-                    http://127.0.0.1:8000/en/
-                    http://127.0.0.1:8000/pt-br/
-                    http://127.0.0.1:8000/es/
+                    http://localhost:8000/en/
+                    http://localhost:8000/pt-br/
+                    http://localhost:8000/es/
 
 
 

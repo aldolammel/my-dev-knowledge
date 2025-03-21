@@ -5,7 +5,9 @@
     >> This file is called 'urls.py' and it belongs to a sub-app created by the developer.
         This file should be created manually in the sub-app folder when needed.
         
-    >> This file depends of the its relationship with 'urls.py' in config-folder (another file).
+    >> This file depends of the its relationship with 'urls.py' in core-folder (another file):
+    
+        /33-Web-development/backend/django/3-2-backend-views/2-building-urls/1-urls-from-core-folder.py
 
 
 """

@@ -26,9 +26,10 @@ VIEWS CLASSES: USING UPDATE INHERIT:
     
     HOW TO USAGE (EXAMPLE):
     
-    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-update-usage.py
+        /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-update-usage.py
 
 
     WHO INHERIT UPDATE-VIEW CLASS:
-    >> No one!
+    
+        >> No one!
 

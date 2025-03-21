@@ -27,9 +27,10 @@ VIEWS CLASSES: USING CREATE INHERIT:
     
     HOW TO USAGE (EXAMPLE):
     
-    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-create-usage.py
+        /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-create-usage.py
 
 
     WHO INHERIT CREATE-VIEW CLASS:
-    >> No one!
+    
+        >> No one!
 

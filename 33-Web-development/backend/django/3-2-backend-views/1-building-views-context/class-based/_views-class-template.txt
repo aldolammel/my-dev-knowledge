@@ -22,13 +22,13 @@ VIEWS CLASSES: USING TEMPLATE INHERIT:
 
 
     
-    HOW TO USAGE (EXAMPLE):
+    HOW TO USE (EXAMPLE):
     
-    /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-template-usage.py
-
+        /33-Web-development/backend/django/3-2-backend-views/1-building-context/class-based/view-class-template-usage.py
 
 
     WHO INHERIT TEMPLATE-VIEW CLASS:
-    >> ListView
-    >> DetailView
+
+        >> ListView
+        >> DetailView
 

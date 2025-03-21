@@ -8,7 +8,7 @@ DJANGO ADMIN (CMS)
 
             It's a page where you get a resume of the CMS options:
             
-                http://127.0.0.1:8000/admin/
+                http://localhost:8000/admin/
 
 
 
@@ -19,7 +19,7 @@ DJANGO ADMIN (CMS)
             
             E.g., User list: 
 
-                http://127.0.0.1:8000/admin/auth/user/
+                http://localhost:8000/admin/auth/user/
 
 
 
@@ -30,4 +30,4 @@ DJANGO ADMIN (CMS)
 
             E.g., a specific User detail:
 
-                http://127.0.0.1:8000/admin/auth/user/3/change/
+                http://localhost:8000/admin/auth/user/3/change/

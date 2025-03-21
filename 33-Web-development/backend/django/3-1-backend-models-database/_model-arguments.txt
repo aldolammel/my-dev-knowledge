@@ -21,12 +21,15 @@ MODEL ARGUMENTS:
 
     ARGUMENT: AUTO_NOW_ADD vs AUTO_NOW
 
-        >> 'auto_now_add=True' means when a new instance/entry is created in the table, the attribute will be
-            filled automatically once.
-                E.g. user_created = models.DateTimeField(auto_now_add=True)
+        >> 'auto_now_add=True' means when a new instance/entry is created in the table, the attribute
+            will be filled automatically once.
+
+                E.g. created_at = models.DateTimeField(auto_now_add=True)
         
-        >> 'auto_now=True' means when an instance/entry is modified, the attribute will be updated automatically.
-                E.g. last_updated = models.DateTimeField(auto_now=True)
+        >> 'auto_now=True' means when an instance/entry is modified, the attribute will be updated
+            automatically.
+
+                E.g. updated_at = models.DateTimeField(auto_now=True)
 
 
     ARGUMENT: ON_DELETE 
@@ -97,3 +100,13 @@ MODEL ARGUMENTS:
     ARGUMENT: RELATED_NAME
 
         /33-Web-development/backend/django/3-1-backend-models-database/queryset-reverse.txt
+
+
+    ARGUMENT: DB_INDEX
+
+        >> It works similarly to an index in a book, allowing the database to quickly locate rows without scanning the entire table. When you set db_index=True on a field in your Django model, Django will create a database index for that field when you run migrations. This can significantly speed up queries that filter, order, or perform lookups on that field.
+
+            E.g. in models.py:
+
+                class Product(models.Model):
+                    name = models.CharField(max_length=100, db_index=True)
