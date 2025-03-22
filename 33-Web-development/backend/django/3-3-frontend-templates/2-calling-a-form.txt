@@ -23,8 +23,8 @@ TEMPLATES: CALLING A FORM
     >> CALLING A FORM: PROFESSIONAL
         >> Let explore the Django power without loose customization:
 
-            {{ form.first_name.label}}  <- It brings the field name!
-            {{ form.first_name}}        <- This will create the input and its configs automatically!
+            {{ form.first_name.label }}  <- It brings the field name!
+            {{ form.first_name }}        <- This will create the input and its configs automatically!
 
 
             >> To customize the input created by Django, use forms.py associated with 'widgets':

@@ -28,7 +28,7 @@ from . import views
 app_name = 'recipes'
 
 urlpatterns = [
-    # http://127.0.0.1:8000/recipes/12
+    # http://localhost:8000/recipes/12
     path('<int:pk>', views.RecipeDetailView.as_view(), name='detail_view')
     # Crucial: this 'name' argument above is the 'pattern name' you'll use to build URL's in templates.
 ]
