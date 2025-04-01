@@ -29,6 +29,7 @@ DEV_URL = 'https://abcoo.com.br'
 BRAND_KEYWORDS = "Soon..."  # TODO How do I translate this?
 
 # SUB-APP PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NAMESPACE_0 = "admin"
 NAMESPACE_1 = "general"
 NAMESPACE_2 = "in"
 NAMESPACE_3 = "accounts"
@@ -66,7 +67,7 @@ PATTERN_4_7 = 'xxxxxx_view'
 PATTERN_4_8 = 'xxxxxx_view'
 
 # PATHS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-PATH_CMS_USERS = "/admin/accounts/user/"  # '/admin/auth/user/'
+PATH_NAMESPACE_0_USERS = "/" + NAMESPACE_0 + "/" + NAMESPACE_3 + "/user/"  # '/admin/auth/user/'
 #PATH_XXXXX_XXXXX_XXXX = 'icons/events/attack/'
 
 # DATA FOR DATABASE (WARNING!): - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

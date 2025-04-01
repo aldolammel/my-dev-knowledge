@@ -1,3 +1,5 @@
+# FILE: /accounts/admin.py
+
 from django.contrib.auth.admin import UserAdmin
 from .forms import CustomUserCreationForm
 from django.utils.html import format_html
@@ -128,6 +130,7 @@ class UserCMS(UserAdmin):
             return format_html("<a href='{}'>{} ({})</a>", url, 'User Profile', CMS_MORE_DETAILS)
         return CMS_ERRO_PROFILE
 
+    # Defining this method label:
     profile_link.short_description = 'User Profile'
 
     def get_readonly_fields(self, request, obj=None):

@@ -21,6 +21,8 @@ QUERYSET: REVERSE RELATIONSHIP
             "How many directors 'Alien Romulus' movie got?"
 
             $ python manage.py shell
+            or
+            $ uv run manage.py shell
             >>> from movies.models import Movie
             >>> alien = Movie.objects.get(title='Alien Romulus')
             >>> Output: <Movie: Movie object (1)>

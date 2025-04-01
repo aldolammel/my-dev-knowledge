@@ -22,7 +22,7 @@ from core.language import (
 
 @admin.register(User)
 class UserCMS(UserAdmin):
-    """Defining how the User Model class will exclusivily be shown on the CMS."""
+    '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 
     # Specify the custom form for creating users
     add_form = CustomUserCreationForm  # TODO What if I don't use it?
@@ -162,7 +162,7 @@ class UserCMS(UserAdmin):
     profile_link.short_description = "User Profile"
 
     def get_readonly_fields(self, request, obj=None):
-        """Built-in method to extend the 'readonly_fields' power."""
+        '''Built-in method to extend the 'readonly_fields' power.'''
 
         if obj:
             # If the user exists (obj), make some fields field read-only on detail-view,
@@ -176,17 +176,15 @@ class UserCMS(UserAdmin):
         return self.readonly_fields
 
     def save_model(self, request, obj, form, change):
-        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
-        # Checks to save the current user as updated_by:
-        cms_user = request.user
-        if change and cms_user != obj.updated_by:
-            obj.updated_by = cms_user
-        super().save_model(request, obj, form, change)
+        '''It's a key part of Django's admin customization that allows you to control what happens
+        when a model instance (models.py) is created/updated through the CMS.'''
+        # Sending to models.py the current user in CMS:
+        obj.save(user=request.user)
 
 
 @admin.register(UserProfileOne)
 class UserProfileOneCMS(admin.ModelAdmin):
-    """Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS."""
+    '''Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS.'''
 
     list_display = (
         "user",
@@ -229,8 +227,8 @@ class UserProfileOneCMS(admin.ModelAdmin):
         return obj.user.is_notified_by_email
 
     # TODO: has multilingual support?
-    """def language(self, obj):
-        return obj.user.language"""
+    '''def language(self, obj):
+        return obj.user.language'''
 
     def last_login(self, obj):
         return obj.user.last_login
@@ -239,13 +237,13 @@ class UserProfileOneCMS(admin.ModelAdmin):
         return obj.user.date_joined
 
     # def formfield_for_foreignkey(self, db_field, request, **kwargs):
-    #     """This built-in method allows to override the default formfield for a foreign keys field."""
+    #     '''This built-in method allows to override the default formfield for a foreign keys field.'''
     #     ...
     #     return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
     def get_actions(self, request):
-        """This built-in method can conditionally enable or disable CMS actions, returning
-        a dictionary of actions allowed."""
+        '''This built-in method can conditionally enable or disable CMS actions, returning
+        a dictionary of actions allowed.'''
         # Remove the delete action from the list-view:
         actions = super().get_actions(request)
         if "delete_selected" in actions:
@@ -253,14 +251,14 @@ class UserProfileOneCMS(admin.ModelAdmin):
         return actions
 
     def has_delete_permission(self, request, obj=None):
-        """This built-in method should return True if deleting obj is permitted."""
+        '''This built-in method should return True if deleting obj is permitted.'''
         # Prevent deletion of profile from the CMS, except when User is deleted:
         if request.path.startswith(PATH_CMS_USERS):
             return request.user.is_superuser  # True if superuser!
         return False
 
     def has_add_permission(self, request):
-        """This built-in method should return True if adding an object is permitted."""
+        '''This built-in method should return True if adding an object is permitted.'''
         # Prevent the addition of a lone profile accidentally:
         return False
 
@@ -287,11 +285,11 @@ class LanguageCMS(admin.ModelAdmin):
         # List_filter only accepts imported fields using prefix:
         # Reserved space...
     )
-    """search_fields = [
+    '''search_fields = [
         'name',
         # Search_fields accept imported fields using prefix and imported method (prefix recommended):
         # Reserved space...    
-    ]"""
+    ]'''
     # exclude = ('xxxxx',)
     readonly_fields = (
         "created_at",
@@ -302,11 +300,10 @@ class LanguageCMS(admin.ModelAdmin):
     )
 
     def save_model(self, request, obj, form, change):
-        # Checks to save the current user as updated_by:
-        cms_user = request.user
-        if change and cms_user != obj.updated_by:
-            obj.updated_by = cms_user
-        super().save_model(request, obj, form, change)
+        '''It's a key part of Django's admin customization that allows you to control what happens
+        when a model instance (models.py) is created/updated through the CMS.'''
+        # Sending to models.py the current user in CMS:
+        obj.save(user=request.user)
 
 
 # Registering Django CMS customizations:

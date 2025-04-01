@@ -44,8 +44,10 @@
 
         6) Test the result?
             $ python manage.py runserver
+            or
+            $ uv run manage.py runserver
             
-            http://127.0.0.1:8000/admin/
+            http://localhost:8000/admin/
 
 
 

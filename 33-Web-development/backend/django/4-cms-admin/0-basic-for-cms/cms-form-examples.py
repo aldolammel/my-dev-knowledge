@@ -6,6 +6,7 @@ from .models import UserProfileOne, Goal # type: ignore
 class UserProfileOneCMS(admin.ModelAdmin):
     '''Defining how the UserProfileOne Model class (personal) will exclusivily be shown on the CMS.'''
 
+    # Those fields that will be shown on the CMS list-page as columns:
     list_display = (
         'user',
         'sex',
@@ -14,7 +15,11 @@ class UserProfileOneCMS(admin.ModelAdmin):
         # List_display accept imported fields using prefix and imported method (prefix recommended):
         'user__last_login',
     )
+    
+    # Those fields that must be hidden on the CMS detail-page:
     exclude = ('birth_year',)
+    
+    # Those fields that can be data filters on this CMS list page:
     list_filter = (
         'sex',
         'country',
@@ -24,6 +29,8 @@ class UserProfileOneCMS(admin.ModelAdmin):
         # List_filter only accepts imported fields using prefix:
         'user__language',
     )
+    
+    # Those fields that can be read if the search box is used on this CMS page:
     search_fields = [
         'user',
         'city',
@@ -33,6 +40,8 @@ class UserProfileOneCMS(admin.ModelAdmin):
         # Search_fields accept imported fields using prefix and imported method (prefix recommended):
         'user__email',
     ]
+    
+    # Those fields that are not editable on this CMS page:
     readonly_fields = (
         'user',
         'updated_at',
@@ -44,6 +53,7 @@ class UserProfileOneCMS(admin.ModelAdmin):
         'last_login',  # Imported from User
         'date_joined',  # Imported from User
     )
+    
     # Defining the Admin layout only:
     fieldsets = (
         ('Basic', {
@@ -127,3 +137,13 @@ class UserProfileOneCMS(admin.ModelAdmin):
         if change and cms_user != obj.updated_by:
             obj.updated_by = cms_user
         super().save_model(request, obj, form, change)
+        
+        
+        
+"""
+
+    A BLANK VERSION FOR NEW PROJECTS:
+    
+    /33-Web-development/backend/django/4-cms-admin/0-basic-for-cms/cms-form-blank-for-new-projects.py
+
+"""

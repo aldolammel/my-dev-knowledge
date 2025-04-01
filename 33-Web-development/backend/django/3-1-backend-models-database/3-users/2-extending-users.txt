@@ -1,14 +1,16 @@
 
 
-EXTENDING THE USER FEATURES (BASIC):
+EXTENDING THE USER FEATURES:
+If your project needs to show User Profile on the application front-end, or even a simple user creation form also on the application front-end, you must use these settings!
 
 
-    1) Very basic to use Django built-in user features:
-        /33-Web-development/backend/django/3-1-backend-models-database/3-users/0-users-setup.txt
-        /33-Web-development/backend/django/10-login-and-logout/0-registering-by-frontend.txt
+    >> But for VERY BASIC user solution, use Django built-in user features:
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
 
 
-
+    1) Create a sub-app called 'accounts' and add it in the core-folder settings.py
+        file as 'accounts' in 'Installed Apps' list;
+    
     2) Create Custom User Model (Extending the original one):
 
         >> The built-in class 'User' is a child of AbstractUser class where all original fields are;  
@@ -21,11 +23,11 @@ EXTENDING THE USER FEATURES (BASIC):
                 from django.db import models
 
                 class CustomUserManager(BaseUserManager):
-                    """Built-in class to customize the superuser creation."""
+                    '''Built-in class to customize the superuser creation.'''
                     
                     # This method is mandatory, but no changes were made:
                     def create_user(self, email, password=None, **extra_fields):
-                        """Create and return a user with an email and password."""
+                        '''Create and return a user with an email and password.'''
                         if not email:
                             raise ValueError('The Email field must be set')
                         email = self.normalize_email(email)
@@ -36,7 +38,7 @@ EXTENDING THE USER FEATURES (BASIC):
                     
                     # Superuser creation customization:
                     def create_superuser(self, email, password=None, **extra_fields):
-                        """Create and return a superuser with the given email and password."""
+                        '''Create and return a superuser with the given email and password.'''
                         extra_fields.setdefault('is_staff', True)
                         extra_fields.setdefault('is_superuser', True)
                         extra_fields.setdefault("is_active", True)
@@ -132,7 +134,8 @@ EXTENDING THE USER FEATURES (BASIC):
             # Important: signals.py: should the extra fields be declared over there? Check it!
             # Reserved space...
 
-
+        >> Check this out too:
+            /33-Web-development/backend/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
     6) Customizing the CMS User list-view and detail-view:
@@ -157,65 +160,61 @@ EXTENDING THE USER FEATURES (BASIC):
                 # List_display accept imported fields using prefix and imported method (prefix recommended):
                 # Reserved space...
             )
-            # All fields exclusivily for the CMS Adding New User:
+            # All fields exclusivily for the CMS Adding New object:
             add_fieldsets = (
-                (
-                    None,
-                    {
-                        'classes': ('wide',),
-                        'fields': (
-                            'profile_type',
-                            'username',
-                            'email',
-                            'password1',
-                            'password2',
-                            'accepted_our_privacy',
-                        ),
-                    },
+                (None, {
+                    # "classes": ("wide",),
+                    "fields": (
+                        "profile_type",
+                        "username",
+                        "email",
+                        "password1",
+                        "password2",
+                        "accepted_min_age",
+                        "accepted_our_privacy",
+                    )},
                 ),
             )
-            # All fields exclusivily for the CMS Visualizing a User:
+            # All fields exclusivily for the CMS Visualizing an object:
             fieldsets = (
-                (
-                    None,
-                    {
-                        'fields': (
-                            'username',
-                            'password',
-                            'accepted_our_privacy',
-                        )
-                    },
+                (None, {
+                    # "classes": ("wide",),
+                    "fields": (
+                        "username",
+                        "password",
+                        "profile_type",
+                        "profile_link",  # Adding the UserProfile link in the User Detail-view!
+                        "accepted_min_age",
+                        "accepted_our_privacy",
+                    )},
                 ),
-                (
-                    'Personal info',
-                    {
-                        'fields': (
-                            'email',
-                        )
-                    },
+                ("Personal info", {
+                    # "classes": ("wide",),
+                    "fields": (
+                        "email",
+                        "language",
+                    )},
                 ),
-                (
-                    'Permissions',
-                    {
-                        'fields': (
-                            'is_active',
-                            'is_staff',
-                            'is_superuser',
-                            'groups',
-                            'user_permissions',
-                        )
-                    },
+                ("Permissions", {
+                    # "classes": ("wide",),
+                    "fields": (
+                        "is_active",
+                        "is_notified_by_email",
+                        "is_staff",
+                        "is_superuser",
+                        "groups",
+                        "user_permissions",
+                    )},
                 ),
-                (
-                    'Important dates',
-                    {
-                        'fields': (
-                            'date_joined',
-                            'last_login',
-                            'updated_at',
-                            'updated_by',
-                        )
-                    },
+                ("Important dates", {
+                    # "classes": ("wide",),
+                    "fields": (
+                        "date_joined",
+                        "last_login",
+                        "last_pwd_update",
+                        "updated_at",
+                        "updated_by",
+                    )},
                 ),
             )
             list_filter = (
@@ -243,8 +242,14 @@ EXTENDING THE USER FEATURES (BASIC):
                 # Reserved space...
             )
 
+            # Use this in case error trying to include or editing the object:
+            """def get_fieldsets(self, request, obj=None):
+                if not obj:  # Adding a new object
+                    return self.add_fieldsets
+                return self.fieldsets  # Editing an existing object"""
+            
             def get_readonly_fields(self, request, obj=None):
-                """Built-in method to extend the 'readonly_fields' power."""
+                '''Built-in method to extend the 'readonly_fields' power.'''
                 if obj:
                     # If the user exists (obj), make some fields field read-only on detail-view,
                     # but still editable on the CMS Add User form:
@@ -255,11 +260,10 @@ EXTENDING THE USER FEATURES (BASIC):
                 return self.readonly_fields
 
             def save_model(self, request, obj, form, change):
-                # Checks to save the current user as updated_by:
-                cms_user = request.user
-                if change and cms_user != obj.updated_by:
-                    obj.updated_by = cms_user
-                super().save_model(request, obj, form, change)
+                '''It's a key part of Django's admin customization that allows you to control what happens
+                when a model instance (models.py) is created/updated through the CMS.'''
+                # Sending to models.py the current user in CMS:
+                obj.save(user=request.user)
                 
                 
                 
@@ -274,5 +278,5 @@ EXTENDING THE USER FEATURES (BASIC):
     
     >> USER PROFILE PAGE:
 
-        /33-Web-development/backend/django/3-1-backend-models-database/3-users/extending-users-with-profile.txt
+        /33-Web-development/backend/django/3-1-backend-models-database/3-users/3-extending-users-with-profile.txt
 

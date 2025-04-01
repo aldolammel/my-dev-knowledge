@@ -1,65 +1,103 @@
 
 
+VALIDATIONS:
+
+
+    >> Django’s form (and model) fields support use of utility functions and classes known
+        as validators. A validator is a callable object or function that takes a value and 
+        returns nothing if the value is valid or raises a ValidationError if not.
+
+
+    >> CLEAN() METHOD:
+        It's a built-in method for adding custom validation logic before a Model or Form saving
+        data to the db. This method works little different for each one!
+
+
+    >> MODEL VALIDATIONS:
+        Method 1) By django.core.validators;
+        Method 2) By Clean() with external file;
+
+        ..............
+    
+        1)  By django.core.validators:
+
+            in models.py e.g.
+
+                from django.core.validators import MinLengthValidator, MaxLengthValidator
+                
+                class Page(models.Model):
+                    title = models.CharField(
+                        ...
+                        max_length=100,  # Database level checking.
+                        validators=[  # Application form level checking.
+                            MinLengthValidator(3),
+                            MaxLengthValidator(100),
+                        ],
+                    )
+
+
+        2) By Clean() with external file:
+
+            The clean method for Models is simpler, we can pass straight the instance (object) and
+            it's enough to access the instance attributes:
+
+            E.g. of clean() called in a model class:
+
+                clean(self):
+
+                    self.the_model_class_attr_is_callable_directly
+
+            E.g. using a validators method:
+
+                # models.py
+                from .validators import validate_example
+                class BlaBlaBla(...):
+                    ...
+                    attr_example = ...
+
+                    clean(self):
+                        validate_example(self)
+
+                # validators.py
+                def validate_example(instance):
+                    instance.attr_example
+
+                
+                >> Avoid duplicity: if you're using validators, remove the 
+                                    'error messages' declaration from your model 
+                                    attribute. Replace for:
+
+                                        # error_messages in validators.py
+
+            
+            2.1) Creation of a 'validators.py' file in the sub-app folder!
+            
+            2.2) xxxxxxxxxxxxxxxxxxxxxxxxx (Exemple in Cefalog > sub-app Event_Attack) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+    >> FORM VALIDATIONS:
+        Method 1) xxxxxxxxxxxxx;
+        Method 2) By Clean();
+
+
+        >> For Forms (client-side validation):
+                        
+            The clean method for Forms we need to pass a dictionary-like object
+            (like cleaned_data from a form) where it can use the .get() method to
+            retrieve form values.
+
+            /33-Web-development/backend/django/6-validators/validation-customized.txt
+
+
+
+
+
+
     VALIDATION KNOWLEDGE:
 
 
-        >> FOR FORMS AND MODELS:
-
-            Django’s form (and model) fields support use of utility functions and classes known
-            as validators. A validator is a callable object or function that takes a value and 
-            returns nothing if the value is valid or raises a ValidationError if not. 
-
-
-        >> CLEAN() METHOD:4
-
-            It's a built-in method for adding custom validation logic before a Model or Form saving
-            data to the db. This method works little different for each one!
-
-
-                    >> For Models (server-side validation):
-
-                        The clean method for Models is simpler, we can pass straight the instance
-                        (object) and it's enough to access the instance attributes:
-
-                            E.g. of clean() called in a model class:
-
-                                clean(self):
-
-                                    self.the_model_class_attr_is_callable_directly
-
-                            E.g. using a validators method:
-
-                                # models.py
-                                from .validators import validate_example
-                                class BlaBlaBla(...):
-                                    ...
-                                    attr_example = ...
-
-                                    clean(self):
-                                        validate_example(self)
-
-                                # validators.py
-                                def validate_example(instance):
-                                    instance.attr_example
-
-                                
-                                >> Avoid duplicity: if you're using validators, remove the 
-                                                    'error messages' declaration from your model 
-                                                    attribute. Replace for:
-
-                                                        # error_messages in validators.py
-
-
-
-                    >> For Forms (client-side validation):
-                        
-                        The clean method for Forms we need to pass a dictionary-like object
-                        (like cleaned_data from a form) where it can use the .get() method to
-                        retrieve form values.
-
-
-
-                /33-Web-development/backend/django/6-validators/validation-customized.txt
             
 
             

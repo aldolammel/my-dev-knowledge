@@ -41,16 +41,27 @@ FIELD: MULTI-SELECT-MENU
                 from .models import Band, MusicianType
 
 
+                @admin.register(MusicianType)
                 class MusicianTypeCMS(admin.ModelAdmin):
-                    list_display = ('instrument',)
+                    list_display = (
+                        'instrument',
+                    )
 
 
+                @admin.register(Band)
                 class BandCMS(admin.ModelAdmin):
-                    list_display = ('band_name', 'musicians',)
+                    list_display = (
+                        'band_name',
+                        'musicians',
+                    )
 
+                    # Creates a more user-friendly interface for managing many-to-many relationships,
+                    # displaying two boxes side by side, one with options and another with the selected ones.
+                    filter_horizontal = ('musicians',)
 
-                admin.site.register(MusicianType, MusicianTypeCMS)
-                admin.site.register(Band, BandCMS)
+                
+                #admin.site.register(MusicianType, MusicianTypeCMS)
+                #admin.site.register(Band, BandCMS)
 
 
         1.3) Execute the migration:

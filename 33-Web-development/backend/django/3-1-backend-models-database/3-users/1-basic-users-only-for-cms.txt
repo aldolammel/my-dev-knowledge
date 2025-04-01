@@ -1,0 +1,57 @@
+
+
+VERY BASIC USER SOLUTION:
+If you need user registration through CMS/ADMIN only, without the necessity of creating or updating users from application front-end, so use this simplest default solution:
+
+
+    >> Calling the User to use as ForeignKey in Model Classes:
+
+        E.g. 
+        
+            >> in models.py:
+                
+                from django.contrib.auth import get_user_model
+
+                User = get_user_model()
+
+                # Now, you can call User in your models, like:
+                updated_by = models.ForeignKey(
+                    User,
+                    ...
+                )
+
+
+    >> Making CMS record who has created and/or updated something in CMS:
+
+        E.g.
+
+            >> Asking to the CMS who is the current user using the CMS (in admin.py):
+
+                PageAdmin(admin.ModelAdmin):
+                    ...
+
+                    def save_model(self, request, obj, form, change):
+                        '''It's a key part of Django's admin customization that allows you to control
+                        what happens when a model instance (models.py) is created/updated through
+                        the CMS.'''
+                        # Sending to models.py the current user in CMS:
+                        obj.save(user=request.user)
+
+
+            >> Now, tell to the database who is using the CMS (in models.py):
+
+                    class Page(models.Model):
+                        ...
+
+                        def save(self, *args, **kwargs):
+                            '''Built-in method that's executed when the entry saving runs.'''
+                            # Retrieve the user from kwargs, default to None if not passed:
+                            user = kwargs.pop("user", None)
+                            # Set created_by if this is a new object:
+                            if not self.pk and user:
+                                self.created_by = user
+                            # Otherwise, set updated_by:
+                            elif user and user.is_authenticated and user != self.updated_by:
+                                self.updated_by = user
+                            super().save(*args, **kwargs)
+

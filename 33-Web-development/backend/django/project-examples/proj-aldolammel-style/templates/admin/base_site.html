@@ -1,0 +1,5 @@
+{% extends "admin/base_site.html" %}
+{% block title %}{{ title }} | {{ BRAND_NAME }} CMS{% endblock title %}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ BRAND_NAME }}: Gerenciador de Conteúdo</a></h1>
+{% endblock branding %}

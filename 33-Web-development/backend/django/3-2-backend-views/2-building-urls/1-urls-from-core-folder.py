@@ -16,10 +16,12 @@
 
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     # DJANGO URLS:
     path('admin/', admin.site.urls),  # http://127.0.0.1:8000/admin/
+    path("admin", RedirectView.as_view(url='/admin/')),
     # THIRD-PARTY URLS:
     # Reserved space...
     # APP URLS:

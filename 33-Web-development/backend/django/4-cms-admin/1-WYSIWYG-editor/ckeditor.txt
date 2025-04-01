@@ -1,0 +1,72 @@
+
+
+>> CKEeditor:
+
+    https://ckeditor.com/
+
+
+        1) pip install django-ckeditor-5
+
+
+        2) settings.py:
+
+            INSTALLED_APPS = [
+                ...
+                # THIRD-PARTY SUB-APPS:
+                'django_ckeditor_5',
+                ...
+            ]
+
+            
+            # Static files (CSS, JavaScript, Images)
+            MEDIA_URL = "media/"
+            MEDIA_ROOT = BASE_DIR / "media"
+
+
+            # CKEditor 5 configuration
+            CKEDITOR_5_CONFIGS = {
+                'default': {
+                    'toolbar': [
+                        'undo', 'redo', '|',
+                        'heading', '|',
+                        'alignment', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', '|',
+                        'insertTable', 'imageUpload', 'mediaEmbed', '|',
+                        'sourceEditing'
+                    ],
+                    'height': 450,
+                },
+            }
+            CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+            CKEDITOR_5_UPLOAD_PATH = 'uploads/ckeditor/'
+
+
+        3) Core URLS.py:
+
+            from django.conf.urls.static import static
+            from .settings import (
+                DEBUG,
+                MEDIA_URL,
+                MEDIA_ROOT,
+            )
+
+            urlpatterns = [
+                ...
+                path('ckeditor5/', include('django_ckeditor_5.urls')),
+            ]
+
+            if DEBUG:
+                urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+
+
+        4) models.py:
+
+            from django_ckeditor_5.fields import CKEditor5Field
+
+            class Page(models.Model):
+                ...                
+                content = CKEditor5Field(
+                    ...
+                    config_name='default',  # Use the config name defined in settings!
+                )
+                ...
+
