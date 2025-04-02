@@ -119,8 +119,8 @@ DATABASES = {
 }
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# For models that don’t have a field with primary_key=True:
+# DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

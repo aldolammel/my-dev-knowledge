@@ -21,69 +21,61 @@ class UserCMS(UserAdmin):
         # List_display accept imported fields using prefix and imported method (prefix recommended):
         # Reserved space...
     )
-    # All fields exclusivily for the CMS Adding New User:
+    # All fields exclusivily for the CMS Adding New object:
     add_fieldsets = (
-        (
-            None,
-            {
-                'classes': ('wide',),
-                'fields': (
-                    'profile_type',
-                    'username',
-                    'email',
-                    'password1',
-                    'password2',
-                    'accepted_min_age',
-                    'accepted_our_privacy',
-                ),
-            },
+        (None, {
+            # "classes": ("wide",),
+            "fields": (
+                "profile_type",
+                "username",
+                "email",
+                "password1",
+                "password2",
+                "accepted_min_age",
+                "accepted_our_privacy",
+            )},
         ),
     )
-    # All fields exclusivily for the CMS Visualizing a User:
+    # All fields exclusivily for the CMS Visualizing an object:
     fieldsets = (
-        (
-            None,
-            {
-                'fields': (
-                    'username',
-                    'password',
-                    'profile_type',
-                    'profile_link',  # Adding the UserProfile link in the User Detail-view!
-                )
-            },
+        (None, {
+            # "classes": ("wide",),
+            "fields": (
+                "username",
+                "password",
+                "profile_type",
+                "profile_link",  # Adding the UserProfile link in the User Detail-view!
+                "accepted_min_age",
+                "accepted_our_privacy",
+            )},
         ),
-        (
-            'Personal info',
-            {
-                'fields': (
-                    'email',
-                    'language',
-                )
-            },
+        ("Personal info", {
+            # "classes": ("wide",),
+            "fields": (
+                "email",
+                "language",
+            )},
         ),
-        (
-            'Permissions',
-            {
-                'fields': (
-                    'is_active',
-                    'is_notified_by_email',
-                    'is_staff',
-                    'is_superuser',
-                    'groups',
-                    'user_permissions',
-                )
-            },
+        ("Permissions", {
+            # "classes": ("wide",),
+            "fields": (
+                "is_active",
+                "is_notified_by_email",
+                "is_staff",
+                "is_superuser",
+                "groups",
+                "user_permissions",
+            )},
         ),
-        (
-            'Important dates',
-            {
-                'fields': (
-                    'date_joined',
-                    'last_login',
-                    'updated_at',
-                    'updated_by',
-                )
-            },
+        ("Important dates", {
+            # "classes": ("wide",),
+            "fields": (
+                "date_joined",
+                "last_login",
+                "last_pwd_update",
+                "updated_at",
+                "updated_by",
+            )},
         ),
     )
     list_filter = (
