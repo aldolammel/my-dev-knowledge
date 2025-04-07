@@ -55,7 +55,7 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
 
 
 
-    >>> def __call__(self, ...):
+    >> def __call__(self, ...):
 
         This method allows an instance of a class to be called as if it were a function. When you
         define the __call__ method in a class, instances of that class become callable objects. This
@@ -77,3 +77,7 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
                     result = adder(5)
                     print(result)  # Output: 15
 
+
+
+    >> More about:
+        /25-Classes/3-smart-solutions/1-using-magic-dunder-methods.py

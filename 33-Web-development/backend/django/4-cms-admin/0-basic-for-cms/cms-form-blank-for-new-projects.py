@@ -50,14 +50,16 @@ class PageAdmin(admin.ModelAdmin):
             'fields': (
                 'title',
                 'slug',
-            )
+            ),
+            # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
         }),
         ('Content', {
             # "classes": ("wide",),
             'fields': (
                 'img_highlight',
                 'content',
-            )
+            ),
+            # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
         }),
         ('SEO', {
             # "classes": ("wide",),
@@ -65,7 +67,8 @@ class PageAdmin(admin.ModelAdmin):
                 'seo_title',
                 'seo_desc',
                 'seo_keys',
-            )
+            ),
+            # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
         }),
         ('Controlling', {
             # "classes": ("wide",),
@@ -75,7 +78,8 @@ class PageAdmin(admin.ModelAdmin):
                 'updated_at',
                 #'created_by',
                 #'updated_by',
-            )
+            ),
+            # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
         })
     )
 

@@ -55,9 +55,7 @@ class UserCMS(UserAdmin):
     )
     # All fields exclusivily for the CMS Visualizing a User:
     fieldsets = (
-        (
-            None,
-            {
+        (None, {
                 "fields": (
                     "username",
                     "password",
@@ -65,21 +63,19 @@ class UserCMS(UserAdmin):
                     "profile_link",  # Adding the UserProfile link in the User Detail-view!
                     "accepted_min_age",
                     "accepted_our_privacy",
-                )
+                ),
+                # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
             },
         ),
-        (
-            "Personal info",
-            {
+        ("Personal info", {
                 "fields": (
                     "email",
                     #"language",  # TODO: has multilingual support?
-                )
+                ),
+                # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
             },
         ),
-        (
-            "Permissions",
-            {
+        ("Permissions", {
                 "fields": (
                     "is_active",
                     "is_notified_by_email",
@@ -87,19 +83,19 @@ class UserCMS(UserAdmin):
                     "is_superuser",
                     "groups",
                     "user_permissions",
-                )
+                ),
+                # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
             },
         ),
-        (
-            "Important dates",
-            {
+        ("Important dates", {
                 "fields": (
                     "date_joined",
                     "last_login",
                     "last_pwd_update",
                     "updated_at",
                     "updated_by",
-                )
+                ),
+                # 'description': 'xxxxxxxxxxxxxxxxxxxxxxx'
             },
         ),
     )

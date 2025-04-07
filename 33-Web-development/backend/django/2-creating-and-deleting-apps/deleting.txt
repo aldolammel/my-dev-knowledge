@@ -1,5 +1,8 @@
 
-DELETING DJANGO PACKAGE OF FUNCTIONS (APPS):
+DELETING DJANGO PACKAGE OF FUNCTIONS (APPS*):
+
+    (*) Personally, I call 'app' as 'sub-app', meanwhile for me 'app'
+        (aka 'main-app' or 'project-folder') is the project itself.
 
 
     >> If sub-app is NOT installed yet:
@@ -15,19 +18,24 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS):
             make sure to delete that calls too, including in other sub-apps if needed too;
 
         3) Update your database with these changes:
+           
             # for all apps:
             $ python manage.py makemigrations
+
             # Or for a specific one:
             $ python manage.py makemigrations <app_name>
 
-        4) Run the product and check if everything is okay:
+
+        4) Run the application and check if everything is okay:
             $ python manage.py runserver
 
         5) If everything is fine, apply the migration:
             $ python manage.py migrate
 
-        6) In project folder, remove the sub-app path from the 'urls.py' file;
+        6) In core-folder, remove the sub-app path from the 'urls.py' file;
 
-        7) Still in project folder, remove the sub-app name from the 'settings.py' file;
+        7) Still in core-folder, remove the sub-app name from the 'settings.py' file;
 
-        8) Test the main-app again!
+        8) Delete the sub-app folder;
+
+        9) Test the main-app again!
