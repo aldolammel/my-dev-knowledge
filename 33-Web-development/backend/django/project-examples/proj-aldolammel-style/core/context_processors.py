@@ -13,7 +13,7 @@ from core import language as lng
 
 def app_info(request):
     """Information about the app."""
-    return {
+    context = {
         "BRAND_NAME": BRAND_NAME,
         "BRAND_EMAIL": BRAND_EMAIL,
         "BRAND_URL": BRAND_URL,
@@ -22,6 +22,7 @@ def app_info(request):
         "ADMIN_EMAIL": ADMIN_EMAIL,
         "CURRENT_YEAR": timezone.now().year,
     }
+    return context
 
 
 def languages(request):
