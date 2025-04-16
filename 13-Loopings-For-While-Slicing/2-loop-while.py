@@ -1,3 +1,7 @@
+"""
+-WHILE-, UNLIMITED LOOPING STRUCTURE:
+(LAÇO DE REPETIÇÃO: WHILE)
+"""
 from random import randint
 
 # MY COLORS:

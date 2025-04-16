@@ -10,8 +10,13 @@ RUFF (Python Linter and code formatter)
 
     >> Create a list of error exceptions in the pyproject.toml file:
         
-        [tool.ruff.lint]
-        ignore = []  # add an error-type like "F401" (with quotes!) to create exceptions.
+        >> If you don't have the file yet, create it:
+            /33-Web-development/pyproject-file-model.txt
+
+        >> Apply the error exceptions section:
+        
+            [tool.ruff.lint]
+            ignore = []  # add an error-type like "F401" (with quotes!) to create exceptions.
 
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

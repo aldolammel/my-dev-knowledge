@@ -1,3 +1,7 @@
+"""
+-WHILE-, UNLIMITED LOOPING STRUCTURE (skipping with 'continue' command):
+(LAÇO DE REPETIÇÃO: WHILE)
+"""
 from time import sleep
 
 controller = 1

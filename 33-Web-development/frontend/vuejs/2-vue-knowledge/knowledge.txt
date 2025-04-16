@@ -1,0 +1,97 @@
+
+VUE.JS KNOWLEDGE
+
+
+    >> DECLARATIVE RENDERING
+        It's the same as 'Template variable' in Django Templates.
+        You can use this only in HTML elements/tags, but never in their attributes (more about it,
+        next).
+
+            E.g. 
+
+                {{ my_template_var }}
+
+
+    >> DECLARATIVE RENDERING FOR DYNAMIC ATTRIBUTES
+        If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
+        Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
+
+            >> context:
+                You're using a for-loop that wanna call an image from db.
+                Each product has an 'image' attribute with the string value:
+                    "/img/<nameImage.fileType>"
+
+                <div v-for="p in products">
+                    <img src="/img/anyimage.gif">
+                </div>
+            
+            >> from this:
+                <img src="/img/anyimage.gif">
+            
+            >> to this:
+                wrong:
+                    <img src={{ p.image }}>
+                    <img src="{{ p.image }}">
+                right:
+                    <img :src="p.image">
+
+
+
+    >> DIRECTIVES
+        They are special tokens (attributes) in the markup that tell the library to do something to
+        a DOM element. They are prefixed with v- to indicate that they are Vue-specific.
+
+        >> v-text             (string)
+
+                <span v-text="msg"></span>
+                <!-- or -->
+                <span>{{ msg }}</span>
+
+        >> v-html             (string)
+        >> v-show             (any)
+        >> v-if               (any)
+
+                <h1 v-if="awesome">It's awesome!</h1>
+
+                >> Important: it's NOT recommended to use v-if and v-for on the same element due to
+                    implicit precedence.
+
+        >> v-else             (don't expect expression)
+
+                <div v-if="Math.random() > 0.5">
+                    Now you see me
+                </div>
+                <div v-else>
+                    Now you don't
+                </div>
+                
+        >> v-else-if          (any)
+
+                <div v-if="type === 'A'">
+                    A
+                </div>
+                <div v-else-if="type === 'B'">
+                    B
+                </div>
+                <div v-else-if="type === 'C'">
+                    C
+                </div>
+                <div v-else>
+                    Not A/B/C
+                </div>
+
+        >> v-for              (array, object, number, string, iterable)
+                
+                <div v-for="item in items">
+                    {{ item.text }}
+                </div>
+
+        >> v-on               (function, inline statement, object (without arg))
+        >> v-bind             (any (with arg), obj (without arg))
+        >> v-model            (varies based on value of form inputs element or output of components)
+        >> v-slot             (JavaScript expression that's valid in a function arg position)
+        >> v-pre              (don't expect expression)
+        >> v-once             (don't expect expression)
+        >> v-memo             (any[])
+        >> v-cloak            (don't expect expression)
+

@@ -1,5 +1,6 @@
 """
 -FOR-, A LIMITED LOOPING STRUCTURE:
+(LAÇO DE REPETIÇÃO: FOR)
 FOR is a looping structure that it allows us to execute a command over and over again
 until it's met a defined number of times.
 

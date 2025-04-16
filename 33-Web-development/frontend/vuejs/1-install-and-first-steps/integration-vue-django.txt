@@ -3,55 +3,46 @@
     INTEGRATING VUE WITH DJANGO:
 
         >> Reminder: basic steps about Vue.js:
-            /33-Web-development/general/vuejs/1-install-and-first-steps/installation.txt
-
-        >> If you are ready, let's go:
+            /33-Web-development/general/vuejs/1-install-and-first-steps/_installation.txt
 
 
-            1) Install Vue-Command-Line-Interface (Vue CLI):
-    
-                >> Win:
-                    $
+        >> Installing Vue:
 
-                >> Ubuntu:
-                    $ sudo npm install -g @vue/cli
+            X) Go to the Django Project folder and execute this command:
+                $ npm create vue@latest
 
-                >> Mac:
-                    $
+                # Config:
+                Project name = vue-<client_name>
+                ESLint = Yes!
 
-                1.1) (Optional) Make sure you got the .gitignore updated:
+                # Check the Vue version installed:
+                $ npm list vue
 
-                    ### Vuejs ###
-                    dist/
-                    npm-debug.log
-                    yarn-error.log
+            X) Install the Vue project dependencies and start the dev server:
+                $ cd vue-<client_name>
+                $ npm install
+                $ npm run dev
+
+                # Run the localhost to check the default page running.
+
+            X) (optional) Official Vue extension for VSCode:
+                https://marketplace.visualstudio.com/items?itemName=Vue.volar
 
 
-            2) Create a new Vue project folder inside the Django project:
-            
-                >> Win:
-                    $
+            X) (Your project on Prod) When you are ready to ship your app to production,
+                run the following:
 
-                >> Ubuntu:
-                    $ vue create <frontend_folder_name>
-                    # e.g. vue create frontend
+                $ npm run build
 
-                >> Mac:
-                    $
+                # This will create a production-ready build of your app in the project's ./dist directory.
 
-            3) Build up the Vue project:
-            
-                >> Win:
-                    $
-                    
-                >> Ubuntu:
-                    $ cd <frontend_folder_name>
-                    $ sudo npm run build
-                
-                >> Mac:
-                    $
 
-            4) Integrate the Vue and Django! Move the contents of the 'dist' directory to a
+
+
+        >> Integrating Vue and Django:
+
+
+            X) Integrate the Vue and Django! Move the contents of the 'dist' directory to a
                 new static directory within your Django project:
 
                 >> Win:
@@ -64,7 +55,7 @@
                 >> Mac:
                     $
                     
-            5) Update the settings.py:
+            X) Update the settings.py:
 
                 STATIC_URL = 'static/'
                 STATICFILES_DIRS = [
@@ -87,6 +78,11 @@
 
                 # In vue folder:
                 $ sudo npm run serve
+
+
+
+
+
 
 
 

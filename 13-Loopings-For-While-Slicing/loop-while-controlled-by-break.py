@@ -1,3 +1,7 @@
+"""
+-WHILE-, UNLIMITED LOOPING STRUCTURE (breaking with break command):
+(LAÇO DE REPETIÇÃO: WHILE)
+"""
 from time import sleep
 
 while True:

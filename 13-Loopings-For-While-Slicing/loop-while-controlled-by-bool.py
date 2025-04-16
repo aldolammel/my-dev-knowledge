@@ -1,3 +1,8 @@
+"""
+-WHILE-, UNLIMITED LOOPING STRUCTURE (breaking with boolean):
+(LAÇO DE REPETIÇÃO: WHILE)
+"""
+
 from time import sleep
 
 isRunning = True
