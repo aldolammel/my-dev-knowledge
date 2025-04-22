@@ -1,6 +1,8 @@
 
 VUE.JS KNOWLEDGE
 
+    >> With Vue.js, part of the work is done in javascript file, and the another part in the html file.
+
 
     >> DECLARATIVE RENDERING
         It's the same as 'Template variable' in Django Templates.
@@ -12,28 +14,28 @@ VUE.JS KNOWLEDGE
                 {{ my_template_var }}
 
 
-    >> DECLARATIVE RENDERING FOR DYNAMIC ATTRIBUTES
-        If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
-        Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
+        >> DECLARATIVE RENDERING FOR DYNAMIC ATTRIBUTES
+            If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
+            Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
 
-            >> context:
-                You're using a for-loop that wanna call an image from db.
-                Each product has an 'image' attribute with the string value:
-                    "/img/<nameImage.fileType>"
+                >> context:
+                    You're using a for-loop that wanna call an image from db.
+                    Each product has an 'image' attribute with the string value:
+                        "/img/<nameImage.fileType>"
 
-                <div v-for="p in products">
+                    <div v-for="p in products">
+                        <img src="/img/anyimage.gif">
+                    </div>
+                
+                >> from this:
                     <img src="/img/anyimage.gif">
-                </div>
-            
-            >> from this:
-                <img src="/img/anyimage.gif">
-            
-            >> to this:
-                wrong:
-                    <img src={{ p.image }}>
-                    <img src="{{ p.image }}">
-                right:
-                    <img :src="p.image">
+                
+                >> to this:
+                    wrong:
+                        <img src={{ p.image }}>
+                        <img src="{{ p.image }}">
+                    right (using v-bind abbreviation ":" before html-tag's attribute):
+                        <img :src="p.image">
 
 
 
@@ -86,8 +88,28 @@ VUE.JS KNOWLEDGE
                     {{ item.text }}
                 </div>
 
+
         >> v-on               (function, inline statement, object (without arg))
+
+                <div
+                    v-for="product in products"
+                    class="product"
+                    v-on: click="product.active = !product.active"
+                >
+                Or shorter version: <div ... @click="product.active = !product.active">
+
+
         >> v-bind             (any (with arg), obj (without arg))
+
+                <img v-bind:src="p.image">
+                Or shorter version: <img :src="p.image">
+
+                Also:
+
+                <div v-bind:class="{ selected : product.active }"
+                Or shorter version: <div :class="{ selected : product.active }"
+
+
         >> v-model            (varies based on value of form inputs element or output of components)
         >> v-slot             (JavaScript expression that's valid in a function arg position)
         >> v-pre              (don't expect expression)

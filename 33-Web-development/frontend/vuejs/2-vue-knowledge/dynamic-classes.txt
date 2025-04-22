@@ -1,0 +1,24 @@
+
+
+DYNAMIC CSS CLASSES IN AN HTML FILE:
+
+    >> If you want to add a new class in a html tag, you should use the 'v-bind directive':
+
+        >> Example 1: you wanna see a div with another css class if the user to click over the div:
+            
+            Static html of a selected div:
+                
+                <div class="selected">
+
+            Now, using dynamic class with v-bind:
+                
+                <div 
+                    <!-- class attribute empty or not -->
+                    class=""
+
+                    <!-- If the div's clicked, the 'active' value is changed to its opposite value -->
+                    @click="product.active = !product.active"
+                    
+                    <!-- If the 'active' is true, the div-class will get the 'selected' class too -->
+                    :class="{ selected : product.active }"
+                >
