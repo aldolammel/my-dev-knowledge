@@ -91,6 +91,7 @@ VUE.JS KNOWLEDGE
 
         >> v-on               (function, inline statement, object (without arg))
 
+            E.g.
                 <div
                     v-for="product in products"
                     class="product"
@@ -98,6 +99,16 @@ VUE.JS KNOWLEDGE
                 >
                 Or shorter version: <div ... @click="product.active = !product.active">
 
+            E.g.
+                # Decrease amount:
+                <button @click="product.quantity--"> - </button>
+                or
+                <button @click="product.quantity = product.quantity - 1"> - </button>
+
+                # Increase amount:
+                <button @click="product.quantity++"> + </button>
+                or
+                <button @click="product.quantity = product.quantity + 1"> + </button>
 
         >> v-bind             (any (with arg), obj (without arg))
 
