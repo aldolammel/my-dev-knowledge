@@ -1,0 +1,18 @@
+
+
+DIRECTIVE: V-IF
+
+
+    >> It's accepted for: any.
+
+    >> Examples:
+        <h1 v-if="awesome">It's awesome!</h1>
+
+        >> Important: it's NOT recommended to use v-if and v-for on the same element due to
+            implicit precedence.
+
+    
+    
+    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
+
+        xxxxxxxxxxxxxxxxxxxxxxx

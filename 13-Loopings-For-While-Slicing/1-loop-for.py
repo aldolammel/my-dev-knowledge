@@ -96,14 +96,14 @@ A good way to save lots of code lines.
 Important: the -else- only runs the -for- runs completely, with no breaks.  
 
 """
-_cars = ['Ok', 'Ok', 'Ok', 'Ok', 'Ok']           # Try to change a car status to 'Not ok', for example.
-for _carStatus in _cars:
+cars = ['Ok', 'Ok', 'Ok', 'Ok', 'Ok']           # Try to change a car status to 'Not ok', for example.
+for car in cars:
     print(f'This car is:', end=' ')
-    if _carStatus == 'Ok':
-        print(_carStatus)
+    if car == 'Ok':
+        print(car)
         print('Shipping the car to customer.\n')
     else:
-        print(_carStatus)
+        print(car)
         print('Stopping the production line...\n')
         break
 else:                                            # using ELSE with FOR can save a lot of code lines ;)
@@ -111,15 +111,15 @@ else:                                            # using ELSE with FOR can save 
 
 print('\n- - - -\n')
 
-_userPrimeNum = int(input('Lets find out the prime numbers by the number (e.g. 30): '))
+user_prime_n = int(input('Lets find out the prime numbers by the number (e.g. 30): '))
 
-for _num in range(2, _userPrimeNum + 1):
-    for _x in range(2, _num):
-        if _num % _x == 0:
-            print(f'{_num} equals {_x} * {_num // _x}')
+for n in range(2, user_prime_n + 1):
+    for x in range(2, n):
+        if n % x == 0:
+            print(f'{n} equals {x} * {n // x}')
             break
     else:
-        print(f'{_num} is a prime number.')
+        print(f'{n} is a prime number.')
 
 print('\n- - - -\n')
 
@@ -201,8 +201,8 @@ _startAP = int(input('A first term (e.g. 20): '))
 _razaoAP = int(input('"razão" number (e.g. 5): '))
 _tenTerm = _startAP + (10 - 1) * _razaoAP
 
-for _x in range(_startAP, _tenTerm + _razaoAP, _razaoAP):
-    print(_x, end=' >> ')
+for x in range(_startAP, _tenTerm + _razaoAP, _razaoAP):
+    print(x, end=' >> ')
 print('Done!')
 
 print('\n- - - -\n')

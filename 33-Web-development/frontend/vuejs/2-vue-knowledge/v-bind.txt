@@ -1,0 +1,21 @@
+
+
+DIRECTIVE: V-BIND
+
+
+    >> It's accepted for: any (with arg), obj (without arg).
+
+    >> Examples:
+        <img v-bind:src="p.image">
+        Or shorter version: <img :src="p.image">
+
+        Also:
+
+        <div v-bind:class="{ selected : product.active }"
+        Or shorter version: <div :class="{ selected : product.active }"
+
+    
+    
+    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
+
+        xxxxxxxxxxxxxxxxxxxxxxx

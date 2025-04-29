@@ -1,0 +1,39 @@
+
+
+>> DIRECTIVES
+    They are special tokens (attributes) in the markup that tell the library to do something to
+    a DOM element. They are prefixed with v- to indicate that they are Vue-specific.
+
+    >> v-text
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-text.txt
+
+    >> v-html             (string)
+    >> v-show             (any)
+    >> v-If
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-if.txt
+
+    >> v-else
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-else.txt
+            
+    >> v-else-if
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-else-if.txt
+
+    >> v-for
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-for.txt
+
+    >> v-on
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-on.txt
+
+    >> v-bind
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-bind.txt
+
+            
+
+
+    >> v-model            (varies based on value of form inputs element or output of components)
+    >> v-slot             (JavaScript expression that's valid in a function arg position)
+    >> v-pre              (don't expect expression)
+    >> v-once             (don't expect expression)
+    >> v-memo             (any[])
+    >> v-cloak            (don't expect expression)
+

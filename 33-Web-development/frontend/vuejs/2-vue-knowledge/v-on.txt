@@ -1,0 +1,31 @@
+
+
+DIRECTIVE: V-ON
+
+
+    >> It's accepted for: function, inline statement, object (without arg).
+
+    >> Example 1:
+        <div
+            v-for="product in products"
+            class="product"
+            v-on: click="product.active = !product.active"
+        >
+        Or shorter version: <div ... @click="product.active = !product.active">
+
+    >> Example 2:
+        # Decrease amount:
+        <button @click="product.quantity--"> - </button>
+        or
+        <button @click="product.quantity = product.quantity - 1"> - </button>
+
+        # Increase amount:
+        <button @click="product.quantity++"> + </button>
+        or
+        <button @click="product.quantity = product.quantity + 1"> + </button>
+
+    
+    
+    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
+
+        xxxxxxxxxxxxxxxxxxxxxxx

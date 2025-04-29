@@ -1,0 +1,35 @@
+
+
+DIRECTIVE: V-FOR
+
+
+    >> It's accepted for: array, object, number, string, iterable.
+
+    >> Examples:
+        <div v-for="item in items">
+            {{ item.text }}
+        </div>
+
+    
+    
+    >> HOW TO USE V-FOR WITH V-IF:
+
+        >> Beginner solution:
+            
+            <tbody>
+                <tr v-for="p in products">
+                    <td v-if="p.active">{{ p.quantity }}x {{ p.name }}</td>
+                    <td v-if="p.active">{{ p.quantity * p.price }}</td>
+                </tr>
+            </tbody>
+
+        >> Professional solution:
+
+            <tbody>
+                <tr v-for="p in products">
+                    <template v-if="p.active">
+                        <td>{{ p.quantity + 'x ' + p.name }}</td>
+                        <td>{{ (p.quantity * p.price).toFixed(2) }}</td>
+                    </template>
+                </tr>
+            </tbody>

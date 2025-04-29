@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
     <head>
@@ -21,8 +20,8 @@
                     <div
                         v-for="product in products"
                         class="product"
-                        @click="product.active = !product.active"
-                        :class="{ selected : product.active }"
+                        @click="product.isActive = !product.isActive"
+                        :class="{ selected : product.isActive }"
                     >
                         <div class="photo">
                             <img :src="product.photo">
@@ -30,7 +29,7 @@
                         <div class="description">
                             <span class="name">{{ product.name }}</span>
                             <span class="price">{{ product.price }}</span>
-                            <div class="quantity-area" v-if="product.active">
+                            <div class="quantity-area" v-if="product.isActive">
                                 <button @click.stop="product.quantity--" :disabled="product.quantity <= 1">-</button>
                                 <span class="quantity">{{ product.quantity }}</span>
                                 <button @click.stop="product.quantity++">+</button>
@@ -39,8 +38,8 @@
                     </div>
             </section>
 
-            <section class="summary">
-                <strong>Resumo do pedido</strong>
+            <section class="summary" v-if="total() > 0">
+                <strong>Order Details</strong>
                 <table>
                     <thead>
                         <tr>
@@ -49,14 +48,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1x Big Mac</td>
-                            <td>5.99</td>
+                        <tr v-for="product in products">
+                            <template v-if="product.isActive">
+                                <td>{{ product.quantity + 'x ' + product.name }}</td>
+                                <td>{{ (product.quantity * product.price).toFixed(2) }}</td>
+                            </template>
                         </tr>
                         
                         <tr>
                             <th>Total</th>
-                            <th>5.99</th>
+                            <th>{{ total() }}</th>
                         </tr>
                     </tbody>
                 </table>
@@ -66,7 +67,7 @@
         <!-- CDN VUE - START -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- CDN VUE - END -->
-        <script src="db.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

@@ -1,0 +1,67 @@
+
+VUE.JS KNOWLEDGE
+
+    >> Two main vue-cores:
+        
+        1) Declarative Rendering:
+            Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
+
+        2) Reactivity:
+            Vue automatically tracks JavaScript state changes and efficiently updates the DOM (Document Object Model) when changes happen.
+
+    
+    >> Vue.js is splitted in 3 pieces:
+        
+        1) Template:
+            xxxx
+
+        2) Script: 
+            xxxx
+
+        3) Style:
+            xxx
+    
+
+    >> Vue logic structure:
+        /33-Web-development/frontend/vuejs/_vue_structure.png
+
+    
+    >> With Vue.js, part of the work is done in javascript file, and the another part in the html file.
+
+
+    >> DECLARATIVE RENDERING
+        It's the same as 'Template variable' in Django Templates.
+        You can use this only in HTML elements/tags, but never in their attributes (more about it,
+        next).
+
+            E.g. 
+
+                {{ my_template_var }}
+
+
+        >> DECLARATIVE RENDERING FOR DYNAMIC ATTRIBUTES
+            If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
+            Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
+
+                >> context:
+                    You're using a for-loop that wanna call an image from db.
+                    Each product has an 'image' attribute with the string value:
+                        "/img/<nameImage.fileType>"
+
+                    <div v-for="p in products">
+                        <img src="/img/anyimage.gif">
+                    </div>
+                
+                >> from this:
+                    <img src="/img/anyimage.gif">
+                
+                >> to this:
+                    wrong:
+                        <img src={{ p.image }}>
+                        <img src="{{ p.image }}">
+                    right (using v-bind abbreviation ":" before html-tag's attribute):
+                        <img :src="p.image">
+
+
+
+    
