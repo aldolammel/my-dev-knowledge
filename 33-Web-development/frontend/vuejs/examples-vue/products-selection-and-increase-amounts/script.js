@@ -80,7 +80,7 @@ const SelfServiceMachine = {
     },
     // Methods (custom code) to use through the templates:
     methods: {
-        total: function() {
+        total() {
             // Declarations:
             var total = 0;
             // For looping:
@@ -96,5 +96,5 @@ const SelfServiceMachine = {
     }
 };
 
-// I can call Vue. here because the index.html is already using the VUE CDN:
-Vue.createApp(SelfServiceMachine).mount('#app');  // This '#app' is the main tag id in index.html
+// I can call Vue here because the template.html is already using the VUE CDN:
+Vue.createApp(SelfServiceMachine).mount('#app');  // This '#app' is the main tag id in template.html

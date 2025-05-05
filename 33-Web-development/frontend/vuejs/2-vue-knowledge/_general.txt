@@ -13,13 +13,13 @@ VUE.JS KNOWLEDGE
     >> Vue.js is splitted in 3 pieces:
         
         1) Template:
-            xxxx
+            Where the user interacts with the web application.
 
         2) Script: 
-            xxxx
+            Where the Vue.js methods and other functions stuff is set.
 
         3) Style:
-            xxx
+            Where CSS classes used by Vue.js will be stored. 
     
 
     >> Vue logic structure:
