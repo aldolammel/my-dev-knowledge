@@ -1,14 +1,14 @@
 // Simulating a database or Json from an external service:
 var members = [
     {
-        'fname': 'John',
-        'lname': 'Lennon',
-        'role': 'Acoustic Guitar'
+        fname: 'John',
+        lname: 'Lennon',
+        role: 'Acoustic Guitar'
     },
     {
-        'fname': 'George',
-        'lname': 'Harrison',
-        'role': 'Guitar'
+        fname: 'George',
+        lname: 'Harrison',
+        role: 'Guitar'
     }
 ];
 
@@ -23,24 +23,24 @@ const handlingForms = {
             members: window.members,
                 // If you want to call members attributes through the templates,
                 // you can use {{ members[0].role }} to take the first member role, e.g.
-            new_member: {}  // Vue.js understands you want to use the same fields from the form!
+            newMember: {}  // Vue.js understands you want to use the same fields from the form!
         }
     },
     // Methods (custom code) to use through the templates:
     methods: {
-        add_member() {
+        addMember() {
             // This function includes a new member to the musician's list.
             // Validate fields
-            if (!this.new_member.fname || !this.new_member.lname || !this.new_member.role) {
+            if (!this.newMember.fname || !this.newMember.lname || !this.newMember.role) {
                 alert('Please fill all fields');
                 return;
             }
             // Add new member:
-            this.members.push(this.new_member); // '.push' adds something in the array's end.
+            this.members.push(this.newMember); // '.push' adds something in the array's end.
             // Reset form:
-            this.new_member = {};
+            this.newMember = {};
         },
-        remove_member(idx) {
+        removeMember(idx) {
             // This function removes a member to the musician's list.
             // Remove 1 element at the specific index: 
             this.members.splice(idx, 1);

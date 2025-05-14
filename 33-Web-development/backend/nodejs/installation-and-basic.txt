@@ -1,0 +1,137 @@
+
+
+NOJE.js
+
+    >> It's a runtime environment that allows you to run JavaScript code on the server side.
+        This enables JavaScript to be used for building fast, scalable server-side apps. 
+        That said, Node.js is a cross-platform, open-source JavaScript runtime environment that
+        can run on Windows, Linux, Unix, macOS, and more, executing JS code outside a browser.
+
+        
+    x) Install Node.js:
+
+        https://nodejs.org/en
+
+
+        >> Windows:
+            
+            # installs fnm (Fast Node Manager):
+            $ winget install Schniz.fnm
+
+            # Restart the shell!!!
+
+            # configure fnm environment and download and install Node.js:
+            $ fnm env --use-on-cd | Out-String | Invoke-Expression
+            $ fnm use --install-if-missing 23    <-- FIRST NUMBER OF THE CURRENT VERSION!
+
+            # verifies the right Node.js and npm versions:
+            $ node -v
+            $ npm -v
+
+
+        >> Ubuntu:
+
+            # Update the package list and install globally both:
+            $ sudo apt update
+
+            # Install Node.js and NPM (Node Package Manager):
+            $ sudo apt install nodejs npm
+
+            # Check the current node and npm versions installed and update it:
+            $ node -v
+            $ npm -v
+            
+            # Update the NPM globally (-g) if needed:
+            $ sudo npm install -g npm@latest
+            $ npm -v
+
+
+        >> Mac: 
+            xxxxxxxxxxxxxxx
+
+
+    x) Install the Node-Version-Manager:
+        It's used to manage the Node version in different situations:
+
+        x.1) (Better) Using the NVM (doesn't demand 'sudo' for its commands);
+        x.2) (Simpler) Using the N (demands 'sudo' for its commands);
+        
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        x.1) Using the NVM:
+            
+            >> Windows:
+                xxxxxxxxxxxxxxx
+            
+            >> Ubuntu:
+
+                >> Download and Installation the NVM:
+                $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+            
+                >> To the latest Node.js version:
+                    $ nvm install node
+                
+                >> To a specific Node.js version:
+                    /33-Web-development/backend/nodejs/switch-node-version.txt
+            
+            >> Mac:
+                xxxxxxxxxxxxxxxxxx
+    
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        x.2) Or using the N:
+
+            >> Windows:
+                xxxxxxxxxxxxxxx
+            
+            >> Ubuntu:
+
+                >> Installing globally (-g) the N:
+                $ sudo npm install -g n
+                $ sudo n latest
+            
+                >> To the latest Node.js version:
+                    $ sudo n xxxxxxxxxxxxxxxxxxxxxxxx
+                
+                >> To a specific Node.js version:
+                    /33-Web-development/backend/nodejs/switch-node-version.txt
+            
+            >> Mac:
+                xxxxxxxxxxxxxxxxxx
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+            
+        
+
+    x) Installing/Uninstalling Node.js components:
+
+        >> Ubuntu:
+            # Locally (recommended):
+            $ sudo npm install <package_name>
+            
+            # Globally:
+            $ sudo npm install -g <package_name>
+
+        >> Uninstalling components, if needed:
+
+            >> Ubuntu:
+                $ npm uninstall <package_name>
+                    e.g.
+                        npm uninstall naive-ui    (without '@' and version numbers)
+
+
+    x) (Optional) Make sure you got the .gitignore updated:
+
+        ### Node.js ###
+        node_modules/
+        jspm_packages/
+
+
+    x) Listing Node.js installed components:
+
+        Ubuntu:
+            $ npm list --depth=0
+
+
+
+

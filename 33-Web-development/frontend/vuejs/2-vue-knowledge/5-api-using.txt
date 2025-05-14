@@ -1,0 +1,17 @@
+
+
+HOW TO USE API WITH VUE:
+
+    >> Using the JavaScript native solution 'Fetch API':
+
+        xxxxxxxxxxxxxxxxxxx
+
+    
+    >> Use the Vue-Axios (Deprecated):
+        
+        # In the project folder, install it:
+        https://www.npmjs.com/package/vue-axios
+        
+        $ npm install --save axios vue-axios
+
+        

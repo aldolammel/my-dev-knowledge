@@ -1,0 +1,197 @@
+
+
+CREATING A VUE PROJECT:
+
+
+    0) If Node.js, and Node Version Manager are installed, ignore this step. Otherwise:
+        /33-Web-development/frontend/vuejs/1-install-and-first-steps/_installation.txt
+
+
+    1) Define how you will implement Vue.js in your project:
+
+        1.1) Using CDN (simple inclusion);
+        1.2) Or via Node-Package-Manager as NPM or YARN (for build setups);
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1.1) Using CDN:
+
+            >> In your html, include:
+                <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+            >> Xxxxxxxxxxxx 
+
+            >> xxxxxxxx 
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1.2) Installing the Vue Frontend-Build-Tool and Creating the Vue project:
+            Info: my personnal choice for Node-Package-Manager command is the NPM instead of YARN!
+            
+            >> Choosing the scaffolding and managing tool for Vue.js projects:
+            
+                1.2.1) Using Vite (Command Line Interface / same creator of Vue.js / faster & modern);
+                1.2.2) Or using Vue-CLI (Command Line Interface / Webpack-based);
+                
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                
+                1.2.1) Using Vite:
+
+                    >> Install Vite locally (without -g) and start the project creation:
+                        $ npm create vite@latest
+                        # Just follow the prompt instructions/options!
+
+                        >> Recommended Vite settings:
+                            - Framework = vue
+                            - Variant = JavaScript
+
+                        >> Get in the project folder:
+                            $ cd vue-<project_name_chosen>
+
+                        >> Finishing the installations:
+                            $ npm install
+                            # Check what is locally installed:
+                            $ npm list
+                        
+                    >> Run the Vue service:
+                        # On the vue-project-folder:
+                        $ npm run dev
+                        
+
+                    >> Update Vite:
+
+                        # Update locally (without -g):
+                        $ npm update -g vite
+
+                        # Check the current Vite version:
+                        $ vite --version
+                        
+                        # Check whether Vite is locally of globally installed:
+                        $ npm list
+
+
+                    >> Uninstall Vite:
+
+                        # Locally:
+                        $ npm uninstall vite
+
+                        # Or globally:
+                        $ npm uninstall -g vite
+
+                        # Check if uninstalled:
+                        $ vite --version
+
+
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+                1.2.2) Or using Vue-CLI:
+
+                    >> Install Vue-CLI globally (-g):
+                        $ npm install -g @vue/cli
+
+                        # Checking installation:
+                        $ vue --version  # 'vue' command means 'vue-cli' and not the Vue itself.
+
+                        >> Important: check if the Vue CLI is attached to the right Node.js version,
+                                    looking for this line in the terminal right after the Vue-cli
+                                    installation is finished:
+                                    
+                                    "npm warn EBADENGINE   current: { node: 'v24.0.1', npm: '11.3.0' }"
+
+                                    >> If node version is NOT what you want, do it:
+
+                                        A) Switch the Node version to use:
+                                            /33-Web-development/backend/nodejs/switch-node-version.txt
+
+                                        B) Re-install the Vue-CLI!
+
+                    >> Start the project creation:
+                        $ vue create vue-<project_name>
+                        # E.g. $ vue create vue-cefalog
+                        # Just follow the prompt instructions/options!
+
+                        >> Recommended Vue-CLI settings:
+
+                            A) Select "Manually select features"!
+                            B) Select Vue version 3;
+                            C) Select the options:
+                                - Babel
+                                - CSS Pre-processors
+                                - Linter / Formatter0,
+                            D) Select "Sass/SCSS (with dart-sass)";
+                            E) Select "ESLint with error prevention only";
+                            F) Select "Lint on save";
+                            G) Now be aware:
+                                >> For small projects:
+                                    select "package.json";
+                                >> For medium or big projects:
+                                    select "dedicated config files";
+
+                        >> Get in the project folder:
+                            $ cd vue-<project_name_chosen>
+                            # Check what is locally installed:
+                            $ npm list
+                        
+                    >> Run the Vue service:
+                        # On the vue-project-folder:
+                        $ npm run serve
+
+
+                    >> Update Vue-CLI:
+
+                        # Update globally (-g):
+                        $ npm update -g @vue/cli
+
+                        # Check the current Vue-CLI version:
+                        $ vue --version
+                        
+                        # Check whether Vue-CLI is locally of globally installed:
+                        $ npm list
+
+
+                    >> Uninstall Vue-cli:
+
+                        # Globally:
+                        $ npm uninstall -g @vue/cli
+                        
+                        # Or locally:
+                        $ npm uninstall @vue/cli
+
+                        # Check if uninstalled:
+                        $ vue --version
+
+
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            >> Use these links to access your Vue project on browser:
+
+                http://localhost:<port>
+                
+                # Vue Devtools dedicated windows:
+                http://localhost:<port>/__devtools__/  
+                
+                # Vue Devtools modal window shortcut:
+                Alt+Shift+D
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+
+    2) Open the vue-project folder in an IDE;
+
+
+    3) (Optional) Make sure you got the .gitignore updated:
+
+        ### Node.js ###
+        node_modules/
+        jspm_packages/
+
+        >> IMPORTANT: and vue on .gitignore???????????????????????
+
+
+    4) Start your work through the "src" (source) folder;
+
+        # Running the project:
+        $ npm run serve
+        # or
+        $ yarn serve
+

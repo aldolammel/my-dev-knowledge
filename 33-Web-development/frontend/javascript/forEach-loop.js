@@ -1,3 +1,8 @@
+
+
+// FOREACH LOOP:
+
+
 const myArray = ['apple', 'banana', 'orange'];
 
 // Basic syntax

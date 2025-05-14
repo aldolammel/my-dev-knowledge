@@ -144,6 +144,14 @@
             $ git push origin --delete <branch-name>
 
 
+        >> Deleting the local repository:
+            # delete the .git folder,
+            # or inside the project folder, do it:
+            $ rm -rf .git
+
+    
+
+
         >> Restore a file to its original content:
 
             $ git checkout <file>                 // bringing the file content from the origin.

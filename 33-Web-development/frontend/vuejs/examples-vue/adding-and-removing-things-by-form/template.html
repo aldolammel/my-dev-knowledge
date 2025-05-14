@@ -31,7 +31,7 @@
                     <td>{{ member.lname }}</td>
                     <td>{{ member.role }}</td>
                     <td>
-                        <a href="#" @click="remove_member(member)"><img src="img/remove.png" alt="Remove musician?" width=15 height=15></a>
+                        <a href="#" @click="removeMember(member)"><img src="img/remove.png" alt="Remove musician?" width=15 height=15></a>
                     </td>
                 </tr>
                 </tbody>
@@ -41,13 +41,13 @@
                 <p>Adding a musician</p>
                 <form>
                     <label for="fname">Name:</label><br>
-                    <input type="text" id="fname" name="fname" v-model="new_member.fname"><br>
+                    <input type="text" id="fname" name="fname" v-model="newMember.fname"><br>
                     
                     <label for="lname">Lastname:</label><br>
-                    <input type="text" id="lname" name="lname" v-model="new_member.lname"><br>
+                    <input type="text" id="lname" name="lname" v-model="newMember.lname"><br>
 
                     <label for="role">Role:</label><br>
-                    <select id="role" name="role" v-model="new_member.role">
+                    <select id="role" name="role" v-model="newMember.role">
                         <option disabled selected value> -- select an option -- </option>
                         <option value="Bass">Bass</option>
                         <option value="Guitar">Guitar</option>
@@ -56,7 +56,7 @@
                     </select>
                     <br><br>
                     
-                    <input type="button" value="Add" @click="add_member()">
+                    <input type="button" value="Add" @click="addMember()">
                 </form> 
             </section>
 

@@ -2,12 +2,8 @@
 
 JAVASCRIPT KNOWLEDGE:
 
+    >> JS is PRIMARILY a client-side language, but it can also run on the server-side depending on the environment. In modern use, JS can be ran as server-side (outside the browser) using environments like Node.js.
+    
+    >> varnames and function names use camelCase convention.
 
-    >> Event 'click':
-
-        # How to change a bool value through a click trigger:
-        click="product.active = !product.active
-        
-        # This "!" above means "the opposite", so above I'm saying the
-        'product.active' attribute is after the click exactly its
-        opposite current value.
+    

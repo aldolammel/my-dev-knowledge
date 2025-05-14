@@ -2,44 +2,17 @@
 
     INTEGRATING VUE WITH DJANGO:
 
-        >> Reminder: basic steps about Vue.js:
-            /33-Web-development/general/vuejs/1-install-and-first-steps/_installation.txt
+        0.1) (Dependence) Node.js installation:
+            /33-Web-development/backend/nodejs/installation-and-basic.txt
+        
+        0.2) Vue.js installation:
+            /33-Web-development/frontend/vuejs/1-install-and-first-steps/_installation.txt
+
+        0.3) Creating a Vue.js project:
+            /33-Web-development/frontend/vuejs/1-install-and-first-steps/create-vue-project.txt
 
 
-        >> Installing Vue:
-
-            X) Go to the Django Project folder and execute this command:
-                $ npm create vue@latest
-
-                # Config:
-                Project name = vue-<client_name>
-                ESLint = Yes!
-
-                # Check the Vue version installed:
-                $ npm list vue
-
-            X) Install the Vue project dependencies and start the dev server:
-                $ cd vue-<client_name>
-                $ npm install
-                $ npm run dev
-
-                # Run the localhost to check the default page running.
-
-            X) (optional) Official Vue extension for VSCode:
-                https://marketplace.visualstudio.com/items?itemName=Vue.volar
-
-
-            X) (Your project on Prod) When you are ready to ship your app to production,
-                run the following:
-
-                $ npm run build
-
-                # This will create a production-ready build of your app in the project's ./dist directory.
-
-
-
-
-        >> Integrating Vue and Django:
+        >> Integrating:
 
 
             X) Integrate the Vue and Django! Move the contents of the 'dist' directory to a

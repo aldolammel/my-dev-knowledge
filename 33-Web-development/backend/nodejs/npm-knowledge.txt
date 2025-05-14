@@ -1,0 +1,14 @@
+
+
+
+NPM (NODE PACKAGE MANAGER) KNOWLEDGE:
+
+
+    >> Install a package:
+        # In the project folder:
+        $ npm install <package_name>
+
+
+    >> Uninstall a package:
+        # In the project folder:
+        $ npm uninstall <package_name>
