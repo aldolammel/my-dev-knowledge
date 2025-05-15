@@ -30,61 +30,161 @@ CREATING A VUE PROJECT:
             
             >> Choosing the scaffolding and managing tool for Vue.js projects:
             
-                1.2.1) Using Vite (Command Line Interface / same creator of Vue.js / faster & modern);
-                1.2.2) Or using Vue-CLI (Command Line Interface / Webpack-based);
+                1.2.1) Using Vite (Modern & faster Command Line Interface / same creator of Vue.js);
+                1.2.2) Or using Vue-CLI (Vue stardard Command Line Interface / Webpack-based);
                 
                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
                 
                 1.2.1) Using Vite:
+                        More abount in https://vite.dev/
 
                     >> Install Vite locally (without -g) and start the project creation:
                         $ npm create vite@latest
-                        # Just follow the prompt instructions/options!
+                            # Just follow the prompt instructions/options!
 
                         >> Recommended Vite settings:
                             - Framework = vue
+                            
                             - Variant = JavaScript
+                            
+                            - CSS Pre-processors? Yes but later!
+                                Vite 6+ has native support for: .scss, .sass, .less, .styl, .stylus,
+                                so NO need to install plugins for them;
+                            
+                            - Babel? No:
+                                Vite already convert JS code for all browsers;
+                            
+                            - Linter/Formatter? Yes but later!
+                                Vite has NO standard solution;
 
                         >> Get in the project folder:
                             $ cd vue-<project_name_chosen>
 
                         >> Finishing the installations:
-                            $ npm install
+                                $ npm install
                             # Check what is locally installed:
-                            $ npm list
+                                $ npm list
                         
                     >> Run the Vue service:
                         # On the vue-project-folder:
-                        $ npm run dev
+                            $ npm run dev
                         
 
                     >> Update Vite:
 
-                        # Update locally (without -g):
-                        $ npm update -g vite
+                        # Checking the current Vite version:
+                        # if Vite is global, anywhere, otherwise, in the project folder!
+                            $ npm list
+                        # Updating to the latest version:
+                            $ npm update vite
+                        # Or updating to a specific version:
+                            $ npm install vite@6.3.5
 
-                        # Check the current Vite version:
-                        $ vite --version
-                        
-                        # Check whether Vite is locally of globally installed:
-                        $ npm list
+                        # Checking again the current Vite version:
+                            $ npm list
 
 
                     >> Uninstall Vite:
 
                         # Locally:
-                        $ npm uninstall vite
-
+                            $ npm uninstall vite
                         # Or globally:
-                        $ npm uninstall -g vite
-
+                            $ npm uninstall -g vite
                         # Check if uninstalled:
-                        $ vite --version
+                        # Locally:
+                            $ npm list
+                        # Globally:
+                            $ npm list -g
+
+                    >> Extending Vite:
+
+                        >> CSS Pre-processors (Vite built-in solutions):
+                            # .scss and .sass
+                                $ npm add -D sass-embedded
+                                    # check if okay in the package.json's project-folder!
+                        
+                        >> Linter (Vite needs plugins to run one):
+                            # ESLint
+                                # Installing the ESLint and its plugins as the Dev dependence only:
+                                    $ npm install -D eslint eslint-plugin-vue vite-plugin-eslint @eslint/js
+                                        # check if okay in the package.json's project-folder!
+                                
+                                # Create ESLint configuration adding this file on the project root:
+                                    eslint.config.js
+                                        # Its content:
+                                        
+                                            // MORE ABOUT: https://eslint.vuejs.org/
+
+                                            import js from '@eslint/js';
+                                            import pluginVue from 'eslint-plugin-vue';
+                                            import globals from 'globals';
+
+                                            export default [
+                                                js.configs.recommended,
+                                                ...pluginVue.configs['flat/recommended'],
+                                                {
+                                                    files: ['**/*.vue', '**/*.js', '**/*.mjs'],
+                                                    languageOptions: {
+                                                        parser: pluginVue.parser,
+                                                        ecmaVersion: 2022,
+                                                        sourceType: 'module',
+                                                        globals: {
+                                                            ...globals.browser,
+                                                            process: true
+                                                        }
+                                                    },
+                                                    rules: {
+                                                        // Vue rules
+                                                        'vue/multi-word-component-names': 'off',
+                                                        'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+                                                        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+                                                    },
+                                                },
+                                                {
+                                                    ignores: [
+                                                        'node_modules/**',
+                                                        'dist/**',
+                                                        'public/**',
+                                                    ],
+                                                },
+                                            ];
+
+                                # Add lint script to package.json:
+                                    "scripts": {
+                                        // other scripts...
+                                        "lint": "eslint . --fix",
+                                        "lint:check": "eslint ."
+                                    }
+
+                                # In vite.config.js file:
+                                    <...>
+                                    import eslintPlugin from 'vite-plugin-eslint'
+                                    <...>
+                                        plugins: [
+                                            <...>,
+                                            eslintPlugin({
+                                            include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
+                                            exclude: ['node_modules/**', 'dist/**'],
+                                            cache: false
+                                            })
+                                        ],
+
+                                >> How to use this linter:
+                                    
+                                    # Just run your app normally that ESLint checks your files:
+                                        $ npm run dev
+
+                                    # Check for errors manually:
+                                        $ npm run lint:check
+
+                                    # Check manually but fix automatically all errors found:
+                                        $ npm run lint
 
 
                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
                 1.2.2) Or using Vue-CLI:
+                        More abount in https://cli.vuejs.org/
 
                     >> Install Vue-CLI globally (-g):
                         $ npm install -g @vue/cli
@@ -115,9 +215,9 @@ CREATING A VUE PROJECT:
                             A) Select "Manually select features"!
                             B) Select Vue version 3;
                             C) Select the options:
-                                - Babel
-                                - CSS Pre-processors
-                                - Linter / Formatter0,
+                                - Babel (make your JS lines more compatible with modern browsers);
+                                - CSS Pre-processors (support to scss/sass/less/stylus);
+                                - Linter / Formatter (code checker);
                             D) Select "Sass/SCSS (with dart-sass)";
                             E) Select "ESLint with error prevention only";
                             F) Select "Lint on save";
@@ -128,37 +228,35 @@ CREATING A VUE PROJECT:
                                     select "dedicated config files";
 
                         >> Get in the project folder:
-                            $ cd vue-<project_name_chosen>
+                                $ cd vue-<project_name_chosen>
                             # Check what is locally installed:
-                            $ npm list
+                                $ npm list
                         
                     >> Run the Vue service:
                         # On the vue-project-folder:
-                        $ npm run serve
+                            $ npm run serve
 
 
                     >> Update Vue-CLI:
 
                         # Update globally (-g):
-                        $ npm update -g @vue/cli
+                            $ npm update -g @vue/cli
 
                         # Check the current Vue-CLI version:
-                        $ vue --version
+                            $ vue --version
                         
                         # Check whether Vue-CLI is locally of globally installed:
-                        $ npm list
+                            $ npm list
 
 
                     >> Uninstall Vue-cli:
 
                         # Globally:
-                        $ npm uninstall -g @vue/cli
-                        
+                            $ npm uninstall -g @vue/cli
                         # Or locally:
-                        $ npm uninstall @vue/cli
-
+                            $ npm uninstall @vue/cli
                         # Check if uninstalled:
-                        $ vue --version
+                            $ vue --version
 
 
                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -7,61 +7,63 @@ SSL CERTIFICATION CERTIFICATION (http to https)
 
         SSL Certification with Certbot + Nginx
 
-        1) Install the Certbot with its Nginx plugin if you're using Nginx:
-            $ apt update
-            $ apt install certbot python3-certbot-nginx
+        >> Install:
 
-        2) Obtain an SSL Certificate:
-            $ certbot --nginx -d yourdomain.com -d www.yourdomain.com
+            1) Install the Certbot with its Nginx plugin if you're using Nginx:
+                $ sudo apt update
+                $ sudo apt install certbot python3-certbot-nginx
 
-            # After that, the Certbot will automatically create a CRON to renew the certification
-            each period. 
+            2) Obtain an SSL Certificate:
+                $ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 
-        3) To make sure the SSL certification will be renewed:
-            $ certbot renew --dry-run
+                # After that, the Certbot will automatically create a CRON to renew the certification
+                each period. 
 
-
-        Now the Nginx Settings must to be like this (below) to load only with HTTPS and without WWW: 
-            $ nano /etc/nginx/sites-available/<project_name>
-
-                server {
-                        listen 80;
-                        listen [::]:80;
-
-                        server_name www.abcoo.com.br abcoo.com.br;
-
-                        return 301 https://abcoo.com.br$request_uri;
-                }
-                server {
-                        listen 443 default_server ssl;
-
-                        server_name www.abcoo.com.br abcoo.com.br;
-
-                        ssl_certificate /etc/letsencrypt/live/abcoo.com.br/fullchain.pem;
-                        ssl_certificate_key /etc/letsencrypt/live/abcoo.com.br/privkey.pem;
-
-                        location / {
-                                include proxy_params;
-                                proxy_pass http://unix:/home/admin/portfolio/gunicorn.sock;
-                        }
-
-                        include /etc/letsencrypt/options-ssl-nginx.conf;
-                        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-                }
+            3) To make sure the SSL certification will be renewed:
+                $ certbot renew --dry-run
 
 
-        Something's weird?
-        
-        # Restart the web server:
-        $ systemctl restart nginx
-        $ systemctl status nginx
+            Now the Nginx Settings must to be like this (below) to load only with HTTPS and without WWW: 
+                $ nano /etc/nginx/sites-available/<project_name>
 
-        # Restart the communication between the web server and the web application:
-        $ systemctl restart <your_application_name>
-        $ systemctl status <your_application_name>
+                    server {
+                            listen 80;
+                            listen [::]:80;
 
-        # Nothing yet? Restart the server and repeat this entire step:
-        $ reboot
+                            server_name www.abcoo.com.br abcoo.com.br;
+
+                            return 301 https://abcoo.com.br$request_uri;
+                    }
+                    server {
+                            listen 443 default_server ssl;
+
+                            server_name www.abcoo.com.br abcoo.com.br;
+
+                            ssl_certificate /etc/letsencrypt/live/abcoo.com.br/fullchain.pem;
+                            ssl_certificate_key /etc/letsencrypt/live/abcoo.com.br/privkey.pem;
+
+                            location / {
+                                    include proxy_params;
+                                    proxy_pass http://unix:/home/admin/portfolio/gunicorn.sock;
+                            }
+
+                            include /etc/letsencrypt/options-ssl-nginx.conf;
+                            ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+                    }
+
+
+            Something's weird?
+            
+            # Restart the web server:
+            $ systemctl restart nginx
+            $ systemctl status nginx
+
+            # Restart the communication between the web server and the web application:
+            $ systemctl restart <your_application_name>
+            $ systemctl status <your_application_name>
+
+            # Nothing yet? Restart the server and repeat this entire step:
+            $ reboot
 
 
     ------------------------------------------------------------------------------------------------
