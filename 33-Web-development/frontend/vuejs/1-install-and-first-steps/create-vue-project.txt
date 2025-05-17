@@ -99,9 +99,7 @@ CREATING A VUE PROJECT:
                     >> Extending Vite:
 
                         >> CSS Pre-processors (Vite built-in solutions):
-                            # .scss and .sass
-                                $ npm add -D sass-embedded
-                                    # check if okay in the package.json's project-folder!
+                            /33-Web-development/frontend/css/scss/vue-integration.txt
                         
                         >> Linter (Vite needs plugins to run one):
                             # ESLint
