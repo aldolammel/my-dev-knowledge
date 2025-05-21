@@ -1,27 +1,17 @@
 
 
->> METHODS
-    
-    
-    >> In Vue.js, Methods are functions defined inside a Vue instance's methods option. They are
-    used to perform specific tasks, such as responding to user interactions (e.g., clicks),
-    processing data, or executing any custom JavaScript logic. Methods can be called directly in
-    your Vue templates or elsewhere in your component.
+>> METHODS (USING 'OPTIONS API' APPROACH)
 
-    # Script:
-    const MyProjectThing = {
-        data() {
-            return {
-                ...
-            }
-        },
-        methods: {
-            <HERE YOUR CODE!>
-        }
-    };
 
-    >> Example 1:
-        # In script:
+    >> To understand 'Options API' approach:
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/3-component-approach.txt
+    
+        In Vue.js, methods are functions defined inside a Vue instance's methods option. They are
+        used to perform specific tasks, such as responding to user interactions (e.g., clicks),
+        processing data, or executing any custom JavaScript logic. Methods can be called directly in
+        your Vue templates or elsewhere in your component.
+
+        # <script>:
         const MyProjectThing = {
             data() {
                 return {
@@ -29,24 +19,37 @@
                 }
             },
             methods: {
-                total: function() {
-                    // Declarations:
-                    var total = 0;
-                    // For looping:
-                    this.products.forEach(function(product){
-                        // Only those products actived:
-                        if (product.isActive) {
-                            total += product.price * product.quantity;
-                        }
-                    });
-                    // Returning result rounded yet:
-                    return total.toFixed(2);
-                }
+                ...HERE YOUR CODE!
             }
         };
 
-        # In template:
-        {{ total() }}
+        >> Example 1:
+            # <script>:
+            const MyProjectThing = {
+                data() {
+                    return {
+                        ...
+                    }
+                },
+                methods: {
+                    total: function() {
+                        // Declarations:
+                        var total = 0;
+                        // For looping:
+                        this.products.forEach(function(product){
+                            // Only those products actived:
+                            if (product.isActive) {
+                                total += product.price * product.quantity;
+                            }
+                        });
+                        // Returning result rounded yet:
+                        return total.toFixed(2);
+                    }
+                }
+            };
 
-    >> Example 2:
-        /33-Web-development/frontend/vuejs/examples-vue/products-selection-and-increase-amounts/
+            # <template>:
+            {{ total() }}
+
+        >> Example 2:
+            /33-Web-development/frontend/vuejs/examples-vue/products-selection-and-increase-amounts/

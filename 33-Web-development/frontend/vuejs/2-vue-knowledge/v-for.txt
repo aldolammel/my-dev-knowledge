@@ -10,8 +10,16 @@ DIRECTIVE: V-FOR
             {{ item.text }}
         </div>
 
-    
-    
+        >> Best practice: always when you use for-loop, use also the v-bind in order to define
+                            an iterantion ID for each repeatition.
+
+                            E.g.
+                                <div v-for="(item, idx) in items" :key="idx">
+                                    {{ item.text }}
+                                </div>
+
+
+
     >> HOW TO USE V-FOR WITH V-IF:
 
         >> Beginner solution:

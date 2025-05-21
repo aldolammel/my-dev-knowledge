@@ -4,10 +4,10 @@ HOW TO USE API WITH VUE:
 
     >> Using the JavaScript native solution 'Fetch API':
 
-        xxxxxxxxxxxxxxxxxxx
+        /33-Web-development/frontend/javascript/examples/fetch-api-on-vuejs/
 
     
-    >> Use the Vue-Axios (Deprecated):
+    >> Use the Vue-Axios (Deprecated???????):
         
         # In the project folder, install it:
         https://www.npmjs.com/package/vue-axios

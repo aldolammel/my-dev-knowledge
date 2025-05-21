@@ -27,10 +27,12 @@
     >> v-bind
         /33-Web-development/frontend/vuejs/2-vue-knowledge/v-bind.txt
 
-            
-
-
     >> v-model            (varies based on value of form inputs element or output of components)
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/v-model.txt
+
+
+
+
     >> v-slot             (JavaScript expression that's valid in a function arg position)
     >> v-pre              (don't expect expression)
     >> v-once             (don't expect expression)

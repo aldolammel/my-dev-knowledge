@@ -1,0 +1,57 @@
+
+
+COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
+
+
+    >> There are 2 ways to create Vue scripts, and them are called 'Options API'
+        and 'Composition API':
+            
+
+        >> Options API:
+
+            It's a way to define Vue components using an object with predefined option properties.
+            The code is organized by options (data, methods, computed, etc.)
+
+            E.g.
+                <script>
+                export default {
+                    // Component state/data
+                    data() {
+                        return {
+                        count: 0,
+                        user: null
+                        }
+                    },
+
+                    // Lifecycle hooks
+                    // /33-Web-development/frontend/javascript/lifecycle-hooks.js
+                    mounted() {
+                        console.log('Component is mounted!')
+                    },
+
+                    // Methods/functions
+                    methods: {
+                        increment() {
+                        this.count++
+                        }
+                    },
+
+                    // Computed properties
+                    computed: {
+                        doubleCount() {
+                            return this.count * 2
+                        }
+                    }
+                }
+                </script>
+
+
+        >> Composition API:
+
+            The modern script syntax that is more concise and recommended approach for Vue 3.
+            
+            E.g.
+                <script setup>
+                    import { ref } from 'vue'
+                    // Direct code here
+                </script>

@@ -22,8 +22,6 @@ RUNNING A VUE APP:
 
         >> Using the front-built-tool Vue-CLI:
             $ npm run serve
-            or
-            $ yarn serve
 
             >> Check the app through the browser:
                 http://localhost:8080/
