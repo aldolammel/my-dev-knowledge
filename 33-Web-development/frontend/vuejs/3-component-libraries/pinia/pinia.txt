@@ -1,0 +1,23 @@
+
+
+LIBRARY: PINIA (it replaces Vuex needs)
+
+
+    >> https://pinia.vuejs.org/
+
+
+    >> Pinia is a store library for Vue, it allows you to share a state across components/pages.
+
+
+    >> To install:
+        $ npm install pinia
+
+        # Check the installation:
+        $ npm list
+
+    
+    >> To uninstall:
+        $ npm uninstall pinia
+
+        # Check removal:
+        $ npm list

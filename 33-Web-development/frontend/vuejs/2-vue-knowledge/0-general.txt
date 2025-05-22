@@ -1,5 +1,9 @@
 
+
 VUE.JS KNOWLEDGE
+
+    >> What is Vue.js:
+        /33-Web-development/frontend/vuejs/_about.txt
 
     >> Two main vue-cores:
         
@@ -10,23 +14,31 @@ VUE.JS KNOWLEDGE
             Vue automatically tracks JavaScript state changes and efficiently updates the DOM (Document Object Model) when changes happen.
 
     
-    >> Vue.js is splitted in 3 pieces:
+    >> Vue.js is splitted in 3 layers:
         
-        1) Template:
-            Where the user interacts with the web application.
-
-        2) Script: 
+        1) Script: 
             Where the Vue.js methods and other functions stuff is set.
+                In a .vue file, it is represented by a <script> tag.
+
+        2) Template:
+            Where the user interacts with the web application.
+                In a .vue file, it is represented by a <template> tag.
 
         3) Style:
-            Where CSS classes used by Vue.js will be stored. 
+            Where CSS classes used by Vue.js will be stored.
+                In a .vue file, it is represented by a <style> tag.
     
 
     >> Vue logic structure:
         /33-Web-development/frontend/vuejs/_vue_structure.png
 
     
-    >> With Vue.js, part of the work is done in javascript file, and the another part in the html file.
+    >> With Vue.js, part of the work is done in JavaScript file, and another part
+        in the HTML file.
+
+
+    >> To create a Vue.js project, you will need a Build-Tool. Here is some options:
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/1-build-tools-for-vue.txt
 
 
     >> DECLARATIVE RENDERING

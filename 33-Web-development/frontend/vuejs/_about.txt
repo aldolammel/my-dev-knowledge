@@ -1,22 +1,26 @@
 
 
-    VUE.JS:
+VUE.JS: WHAT IS IT
 
-        Vue.js (pronounced "view JS") is a progressive and open-source model–view–viewmodel
-        front-end JavaScript framework for building user interfaces and single-page applications.
+    Vue.js (pronounced "view JS") is a progressive and open-source model–view–viewmodel
+    front-end JavaScript framework for building user interfaces and single-page apps.
 
-        >> Vue.js is primarily a client-side JavaScript framework. It runs in the browser
-            (front-end) and is used to build dynamic, reactive user interfaces.
+    >> Vue.js is primarily a client-side JavaScript framework. It runs in the browser
+        (front-end) and is used to build dynamic, reactive user interfaces.
 
-        >> Vue.js features an incrementally adaptable architecture that focuses on declarative 
-            rendering and component composition. The core library is focused on the view layer 
-            only. Advanced features required for complex applications such as routing, state 
-            management and build tooling are offered via officially maintained supporting 
-            libraries and packages.
+    >> Vue.js features an incrementally adaptable architecture that focuses on declarative 
+        rendering and component composition. The core library is focused on the view layer 
+        only. Advanced features required for complex applications such as routing, state 
+        management and build tooling are offered via officially maintained supporting 
+        libraries and packages.
 
-        >> Once Vue.js is a JavaScript framework, Vue varnames and function names should respect
-            the JS convention: to use camelCase.
+    >> Once Vue.js is a JavaScript framework, Vue varnames and function names should respect
+        the JS convention: to use camelCase.
 
 
-        >> To run the vue app:
-        /33-Web-development/frontend/vuejs/_running-app.txt
+    >> How to install Vue.js:
+        /33-Web-development/frontend/vuejs/1-install-and-first-steps/_installation.txt
+
+
+    >> More knowledge about:
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/

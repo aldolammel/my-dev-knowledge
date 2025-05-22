@@ -1,0 +1,27 @@
+
+
+LIBRARY: VUEX (Deprecated since 2025)
+
+    IMPORTANT: Vuex was replaced by Pinia.
+
+
+    >> https://vuex.vuejs.org/
+
+
+    >> Vuex is a state management pattern + library for Vue.js applications. It serves as a
+        centralized store for all the components in an application, with rules ensuring that the
+        state can only be mutated in a predictable fashion.
+
+
+    >> To install:
+        $ npm install vuex@<version you want>
+
+        # Check the installation:
+        $ npm list
+
+    
+    >> To uninstall:
+        $ npm uninstall vuex@<version you want>
+
+        # Check removal:
+        $ npm list

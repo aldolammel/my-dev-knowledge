@@ -7,6 +7,11 @@ CREATING A VUE PROJECT:
         /33-Web-development/frontend/vuejs/1-install-and-first-steps/_installation.txt
 
 
+    0.1) You are working in an existent Vue project? If so, about these next steps,
+        following just this one:
+            /33-Web-development/frontend/vuejs/1.1-install-existent-project/installing-an-existent-project.txt
+
+
     1) Define how you will implement Vue.js in your project:
 
         1.1) Using CDN (simple inclusion);
@@ -25,24 +30,31 @@ CREATING A VUE PROJECT:
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        1.2) Installing the Vue Frontend-Build-Tool and Creating the Vue project:
-            Info: my personnal choice for Node-Package-Manager command is the NPM instead of YARN!
+        1.2) Installing a Vue Frontend-Build-Tool to create a Vue project:
             
-            >> Choosing the scaffolding and managing tool for Vue.js projects:
+            >> For Node-Package-Manager I will use NPM (Node.js standard command);
             
-                1.2.1) Using Vite (Modern & faster Command Line Interface / same creator of Vue.js);
-                1.2.2) Or using Vue-CLI (Vue stardard Command Line Interface / Webpack-based);
+            >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
+            
+                1.2.1) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
+                1.2.2) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
                 
                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
                 
                 1.2.1) Using Vite:
-                        More abount in https://vite.dev/
+                        More about in https://vite.dev/
 
+                    >> On terminal, go to the folder where you wanna create the project folder
+                        BUT don't do that yet!
+                    
                     >> Install Vite locally (without -g) and start the project creation:
+                        # This process will create the project folder, asking you the folder name soon!
                         $ npm create vite@latest
                             # Just follow the prompt instructions/options!
 
                         >> Recommended Vite settings:
+                            - Project name: = vue-<clientName_productType_releaseYear>
+                            
                             - Framework = vue
                             
                             - Variant = JavaScript

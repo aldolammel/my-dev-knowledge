@@ -1,3 +1,5 @@
+// Using OptionsApi approach!
+// More about: /33-Web-development/frontend/vuejs/2-vue-knowledge/4-component-approach.txt
 
 // Constant:
 const ConstantSomeName = {

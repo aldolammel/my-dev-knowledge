@@ -1,0 +1,26 @@
+
+
+LIBRARY: VUE ROUTER
+
+
+    >> https://router.vuejs.org/
+
+
+    >> Vue Router is the official client-side routing solution for Vue. Client-side routing is used
+        by single-page apps (SPAs) to tie the browser URL to the content seen by the user. As users
+        navigate around the app, the URL updates accordingly, but the page doesn't need to be
+        reloaded from the server.
+
+
+    >> To install:
+        $ npm install vue-router@<version you want>
+
+        # Check installation:
+        $ npm list
+
+
+    >> To uninstall:
+        $ npm uninstall vue-router@<version you want>
+
+        # Check removal:
+        $ npm list
