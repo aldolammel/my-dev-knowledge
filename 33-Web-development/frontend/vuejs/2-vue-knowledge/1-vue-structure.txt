@@ -11,8 +11,8 @@ VUE.JS: ITS FILE AND FOLDER STRUCTURE
             >> src                   ! xxxxxxxxxxxxxxxxxxxxxx
                 >> assets            ! xxxxxxxxxxxxxxxxxxxxxx
                 >> components        ! stores small pieces of a page.
-                >> router            ! xxxxxxxxxxxxxxxxxxxxxx
-                >> store             ! xxxxxxxxxxxxxxxxxxxxxx
+                >> router            ! where URLS of the app is set (by Vue-Router).
+                >> store             ! unique front-end database source (by VueX/Pinia).
                 >> views             ! stores entire app pages.
                 - App.vue            ! the app itself. It's ran when you wanna see the app working.
                 - main.js            ! xxxxxxxxxxxxxxxxxxxxxx

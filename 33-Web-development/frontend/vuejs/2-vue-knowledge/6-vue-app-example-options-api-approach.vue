@@ -1,6 +1,14 @@
+<!-- 
+  
+  Using the "Options API" approach:
+  More about: /33-Web-development/frontend/vuejs/2-vue-knowledge/4-component-approach.txt 
+
+-->
+
 <script>
-// Using the "Options API" approach:
-// More about: /33-Web-development/frontend/vuejs/2-vue-knowledge/4-component-approach.txt
+// Importing things:
+// Reserved space...
+
 export default {
   // Component state/data
   data() {

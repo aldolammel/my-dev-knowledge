@@ -1,0 +1,5 @@
+
+
+ESLINT: INSTALLING IT WITH VUE-CLI
+
+    The Own Vue-CLI has this Linter as option on the project setup's scaffolding manager!

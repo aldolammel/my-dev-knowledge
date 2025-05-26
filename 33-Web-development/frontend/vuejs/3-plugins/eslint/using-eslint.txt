@@ -1,0 +1,23 @@
+
+
+LINTER: ESLINT
+
+    >> Just run your app normally that ESLint checks your files:
+        
+        >> Using VITE:
+            $ npm run dev
+        
+        >> Or using Vue-CLI:
+            $ npm run serve
+
+
+
+    >> Check for errors manually:
+        
+        $ npm run lint:check
+
+
+
+    >> Check manually but fix automatically all errors found:
+        
+        $ npm run lint

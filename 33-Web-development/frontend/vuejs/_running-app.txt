@@ -14,13 +14,13 @@ RUNNING A VUE APP:
 
     3) Run the app:
 
-        >> Using the front-built-tool VITE:
+        >> Using the frontend-built-tool VITE:
             $ npm run dev
 
             >> Check the app through the browser:
                 http://localhost:5173/
 
-        >> Using the front-built-tool Vue-CLI:
+        >> Using the frontend-built-tool Vue-CLI:
             $ npm run serve
 
             >> Check the app through the browser:

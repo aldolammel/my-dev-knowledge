@@ -1,0 +1,21 @@
+
+
+URL ROUTERS:
+
+    
+    >> The router is a library that enables client-side routing for single-page apps (SPAs).
+        It allows you to create multi-page navigation experiences without actually reloading
+        the browser page.
+
+        Different URL's without browser reloading:
+
+            E.g.
+                https://domain.com/
+                https://domain.com/about
+                https://domain.com/products/biketrial
+                etc
+
+    
+    >> To use routers, install the Vue.js library for that:
+        /33-Web-development/frontend/vuejs/3-component-libraries/vue-router/vue-router.txt
+

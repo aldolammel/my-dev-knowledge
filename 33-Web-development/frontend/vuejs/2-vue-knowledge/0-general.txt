@@ -38,7 +38,7 @@ VUE.JS KNOWLEDGE
 
 
     >> To create a Vue.js project, you will need a Build-Tool. Here is some options:
-        /33-Web-development/frontend/vuejs/2-vue-knowledge/1-build-tools-for-vue.txt
+        /33-Web-development/frontend/vuejs/2-vue-knowledge/1-build-tools.txt
 
 
     >> DECLARATIVE RENDERING

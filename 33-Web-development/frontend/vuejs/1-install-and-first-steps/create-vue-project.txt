@@ -82,7 +82,7 @@ CREATING A VUE PROJECT:
                             $ npm run dev
                         
 
-                    >> Update Vite:
+                    >> (optional) Update Vite:
 
                         # Checking the current Vite version:
                         # if Vite is global, anywhere, otherwise, in the project folder!
@@ -96,7 +96,7 @@ CREATING A VUE PROJECT:
                             $ npm list
 
 
-                    >> Uninstall Vite:
+                    >> (optional) Uninstall Vite:
 
                         # Locally:
                             $ npm uninstall vite
@@ -108,87 +108,18 @@ CREATING A VUE PROJECT:
                         # Globally:
                             $ npm list -g
 
+
                     >> Extending Vite:
 
                         >> CSS Pre-processors (Vite built-in solutions):
                             /33-Web-development/frontend/css/scss/vue-integration.txt
                         
                         >> Linter (Vite needs plugins to run one):
-                            # ESLint
-                                # Installing the ESLint and its plugins as the Dev dependence only:
-                                    $ npm install -D eslint eslint-plugin-vue vite-plugin-eslint @eslint/js
-                                        # check if okay in the package.json's project-folder!
-                                
-                                # Create ESLint configuration adding this file on the project root:
-                                    eslint.config.js
-                                        # Its content:
-                                        
-                                            // MORE ABOUT: https://eslint.vuejs.org/
+                            >> ESLint:
+                                /33-Web-development/frontend/vuejs/3-plugins/eslint/installing-with-vite.txt
 
-                                            import js from '@eslint/js';
-                                            import pluginVue from 'eslint-plugin-vue';
-                                            import globals from 'globals';
-
-                                            export default [
-                                                js.configs.recommended,
-                                                ...pluginVue.configs['flat/recommended'],
-                                                {
-                                                    files: ['**/*.vue', '**/*.js', '**/*.mjs'],
-                                                    languageOptions: {
-                                                        parser: pluginVue.parser,
-                                                        ecmaVersion: 2022,
-                                                        sourceType: 'module',
-                                                        globals: {
-                                                            ...globals.browser,
-                                                            process: true
-                                                        }
-                                                    },
-                                                    rules: {
-                                                        // Vue rules
-                                                        'vue/multi-word-component-names': 'off',
-                                                        'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-                                                        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-                                                    },
-                                                },
-                                                {
-                                                    ignores: [
-                                                        'node_modules/**',
-                                                        'dist/**',
-                                                        'public/**',
-                                                    ],
-                                                },
-                                            ];
-
-                                # Add lint script to package.json:
-                                    "scripts": {
-                                        // other scripts...
-                                        "lint": "eslint . --fix",
-                                        "lint:check": "eslint ."
-                                    }
-
-                                # In vite.config.js file:
-                                    <...>
-                                    import eslintPlugin from 'vite-plugin-eslint'
-                                    <...>
-                                        plugins: [
-                                            <...>,
-                                            eslintPlugin({
-                                            include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
-                                            exclude: ['node_modules/**', 'dist/**'],
-                                            cache: false
-                                            })
-                                        ],
-
-                                >> How to use this linter:
-                                    
-                                    # Just run your app normally that ESLint checks your files:
-                                        $ npm run dev
-
-                                    # Check for errors manually:
-                                        $ npm run lint:check
-
-                                    # Check manually but fix automatically all errors found:
-                                        $ npm run lint
+                                >> How to use execute the linter / How to check code with it:
+                                    /33-Web-development/frontend/vuejs/3-plugins/eslint/using-eslint.txt
 
 
                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

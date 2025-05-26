@@ -1,0 +1,46 @@
+
+
+VUEX: HOW TO ADD/MODIFY DATA
+
+    >> Basic: 
+        
+        >> all front-end data is stored in /projectroot/store/;
+        
+        >> VueX config-file is in /store/index.js;
+        
+        >> In config-file, the "state" dictionary means data, so it's all data being sent to
+            the template/front-end.
+
+                E.g.
+                    state: {
+                        products: [1, 2, 3];
+                    }
+        
+        >> If a component needs data, it must be provided by state properties;
+
+        
+
+        >> To change a state/data property, Vuex demands you to create an "action" first to 
+            request a change in the state. After that and finally, it will make the change be shown
+            at the view (Vue components). This is the concept of one-way data flow.
+
+                One-way data flow chart:
+                    /33-Web-development/frontend/vuejs/3-component-libraries/vuex/one-way-data-flow.png
+
+                    In other words, you cannot make a state change directly from .vue file.
+                    You must use the VueX config-file to do that: /store/index.js.
+
+        >> If you are coding .vue files using "Options API" approach, be aware:
+            Store data never must be used through the component "data", but component "computed";
+
+            >> What's Options API approach:
+                /33-Web-development/frontend/vuejs/2-vue-knowledge/4-component-approach.txt
+
+        >> xxxxxxxx
+
+    >> xxxx
+
+
+    >> HOW TO RECEIVE DATA (STATE PROPERTY) THROUGH AN API:
+        /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+    
