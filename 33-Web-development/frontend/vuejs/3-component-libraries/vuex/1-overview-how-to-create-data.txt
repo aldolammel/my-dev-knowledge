@@ -1,0 +1,72 @@
+
+
+VUEX: HOW TO CREATE DATA
+
+    0) Just look the VueX flow:
+        /33-Web-development/frontend/vuejs/3-component-libraries/vuex/one-way-data-flow.png
+
+
+    1) Declare the state property in /store/index.js (front-end's database of the Vue.js):
+
+        E.g.
+            state: {
+                products = [],
+            },
+
+
+    2) Still in /store/index.js, create an action to request/take the data:
+
+        2.1A) Data comes from an JSON:
+            
+            >> Using FetchAPI (native of JavaScript):
+                /33-Web-development/frontend/javascript/examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
+
+            >> Using Axios:
+                /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        2.1B) Data is local:
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    
+    3) Each Vue component (view) that need data (or part of it) must despatch an action (previsouly
+        created) through some lifecycle-hook, just like the 'created' one.
+        Then in a component or in the app .vue file (recommended):
+
+        E.g.
+            export default {
+                // Lifecycle hook:
+                created() {
+                    this.$store.dispatch('loadProducts');
+                }
+            }
+
+            >> More about Lifecycle-hooks:
+                /33-Web-development/frontend/vuejs/2-vue-knowledge/lifecycle-hooks.txt
+
+
+    4) Let's create the mutation that will execute the action over a state. In other words, let's
+        add/update a specific data/state:
+
+        E.g.
+            mutations: {
+                setProducts(state, products) {
+                    state.products = products;
+                }
+            },
+
+            >> Crucial: make sure your action (in /store/index.js) is calling this mutation function!
+
+
+    5) Checking whether the data is been sent to the browser, using the "Vue DevTool";
+        - Open the Browser Develop Tool;
+        - Go to the Vue tab;
+        - Click over the component where the data is;
+        - If everything's fine, you're seeing the 'computed' data somewhere on the dev panel;
+
+
+    X) Create the link/button that will execute the action to add/update (mutation) an data;
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        
+

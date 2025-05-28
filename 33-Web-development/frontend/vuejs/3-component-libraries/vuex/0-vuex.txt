@@ -25,3 +25,9 @@ LIBRARY: VUEX (Deprecated since 2025)
 
         # Check removal:
         $ npm list
+
+
+
+
+>> HOW TO CREATE/UPDATE A DATA USING VUEX:
+    /33-Web-development/frontend/vuejs/3-component-libraries/vuex/1-overview-how-to-create-data.txt

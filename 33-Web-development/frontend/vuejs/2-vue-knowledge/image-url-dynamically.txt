@@ -1,0 +1,15 @@
+
+
+CALLING AN IMAGE URL DYNAMICALLY IN VUE:
+
+    <div
+        class="..."
+        :style="{ backgroundImage: `url(${product.image})` }"
+    />
+
+    OR
+
+    <div
+        class="..."
+        :style="{ backgroundImage: 'url(' + product.image + ')' }"
+    />

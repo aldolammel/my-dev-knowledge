@@ -10,11 +10,17 @@ DIRECTIVE: V-FOR
             {{ item.text }}
         </div>
 
+        >> In v-for, that 'items' is a computed-property that comes from the <script> layer of
+            the same .vue file where that v-for is!
+
         >> Best practice: always when you use for-loop, use also the v-bind in order to define
-                            an iterantion ID for each repeatition.
+                            an iteration ID for each repeatition.
 
                             E.g.
-                                <div v-for="(item, idx) in items" :key="idx">
+                                <div 
+                                    v-for="(item, idx) in items"
+                                    :key="idx"
+                                >
                                     {{ item.text }}
                                 </div>
 
