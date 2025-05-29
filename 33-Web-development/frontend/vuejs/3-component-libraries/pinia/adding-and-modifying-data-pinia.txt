@@ -1,4 +1,0 @@
-Soon
-
-    template:
-        /33-Web-development/frontend/vuejs/3-component-libraries/vuex/adding-and-modifying-data-vuex.txt

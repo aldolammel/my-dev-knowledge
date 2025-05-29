@@ -28,10 +28,12 @@ VUE WITH FORMS: SUBMIT BUTTON
         
 
         # On <template> layer:
-            
+                       
             <button
                 type="button"
                 @click="submitForm"
             >
                 Submit
             </button>
+
+            # Important: you can pass args if needed: @click="submitForm(arg1, arg2, ...)"

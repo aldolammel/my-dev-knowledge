@@ -2,21 +2,101 @@
 
 VUEX: HOW TO CREATE DATA
 
-    0) Just look the VueX flow:
+    STEP 0: WORKFLOW) Overview of the VueX workflow:
         /33-Web-development/frontend/vuejs/3-component-libraries/vuex/one-way-data-flow.png
 
 
-    1) Declare the state property in /store/index.js (front-end's database of the Vue.js):
+    STEP 1: STATE) Declare the state property and its initial value in /store/index.js (frontend db):
 
         E.g.
-            state: {
-                products = [],
-            },
+            import { createStore } from 'vuex'
+            export default createStore({
+                // State means data for VueX:
+                state: {
+                    products = [],  // this is the declaration of 'products' state/data!
+                    cart = [],      // this is another declaration.
+                },
+                actions: {}
+                mutations: {}
+                modules: {}
+            }
 
 
-    2) Still in /store/index.js, create an action to request/take the data:
+    STEP 2: VIEW AND DISPATCH) In a component .vue file or in the app .vue main file,
+        the component (view) need to be linked with its state and dispatch:
 
-        2.1A) Data comes from an JSON:
+        >> VIEW:
+            At first, let's allow the view to display the state/data:
+
+            >> When the view is a component .vue file:
+                export default {
+                    name: 'Home',  // component name
+                    data() {
+                        ...
+                    }
+                    // Lifecycle hook:
+                    computed: {
+                        // Computed properties
+                        products() {
+                            return this.$store.state.products;  // this '.products' is a state property (data)!
+                        },
+                        cart() {
+                            return this.$store.state.cart;  // this '.cart' is a state property (data)!
+                        }
+                    },
+                }
+
+            >> When the view is an App .vue file:
+                XXXXXXXXXXXXXX NO SURE IF IT CAN HAPPENING xXXXXXXXXXXXXXXXXXXXX
+
+        >> DISPATCH:
+            In the view where the data is shown, address/dispatch the action to update
+            a specific state property (data):
+            
+            >> When the data must be loaded automatically, set the dispatch in the App .vue file:
+
+                export default {
+                    // Lifecycle hook:
+                    created() {
+                        this.$store.dispatch('loadProducts');  // 'loadProducts' is the action to call.
+                    }
+                }
+
+                >> More about Lifecycle-hooks:
+                    /33-Web-development/frontend/vuejs/2-vue-knowledge/lifecycle-hooks.txt
+
+            >> When the data must be loaded just after some user directly interaction,
+                set the dispatch in a component .vue file:
+
+                >> On <template> layer:
+
+                    <button
+                        type="button"
+                        @click="btAddToCart(product)"  <!-- considering 'product' comes from a for-loop -->
+                    >
+                        Add to Cart
+                    </button>
+
+                >> On <script> layer:
+
+                    export default {
+                        // Lifecycle hook:
+                        ...
+                        // Methods/functions:
+                        methods: {
+                            // Addressing/Dispatching the action responsable for update something:
+                            btAddToCart(product) {
+                                // This function is called if a user click over the 'Add to Cart' button.
+                                this.$store.dispatch('addToCart');  // 'addToCart' is the action to call.
+                            }
+                        }
+                    }
+
+
+    STEP 3: ACTION) Back to the /store/index.js, create an action that will execute a
+        mutation (next step) to update a specific state/data when called:
+
+        >> When the data must be loaded directly from an API/JSON:
             
             >> Using FetchAPI (native of JavaScript):
                 /33-Web-development/frontend/javascript/examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
@@ -24,49 +104,42 @@ VUEX: HOW TO CREATE DATA
             >> Using Axios:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-        2.1B) Data is local:
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        >> When the data is already in a state, but can be updated by another action:
+            
+            export default createStore({
+                //...
+                actions: {
+                    //...,
+                    addToCart({ commit }, product) {  // 'addToCart' is the action!
+                        // This function call the mutation responsable to update the shopping cart.
+                        commit('updateCart', product);  // 'updateCart' is the mutation to call!
+                    },
+                },
+                //...
+            })
     
-    
-    3) Each Vue component (view) that need data (or part of it) must despatch an action (previsouly
-        created) through some lifecycle-hook, just like the 'created' one.
-        Then in a component or in the app .vue file (recommended):
 
-        E.g.
-            export default {
-                // Lifecycle hook:
-                created() {
-                    this.$store.dispatch('loadProducts');
-                }
-            }
+    STEP 4: MUTATION) Finally and still in /store/index.js, create the mutation that will execute
+        the action over a state. In other words, it adds/updates a specific state/data when activated:
 
-            >> More about Lifecycle-hooks:
-                /33-Web-development/frontend/vuejs/2-vue-knowledge/lifecycle-hooks.txt
+        Both mutation examples used on this overview about VueX:
 
-
-    4) Let's create the mutation that will execute the action over a state. In other words, let's
-        add/update a specific data/state:
-
-        E.g.
             mutations: {
-                setProducts(state, products) {
-                    state.products = products;
+                updateProducts(state, products) {  // 'updateProducts' is a mutation!
+                    state.products = products;  // 'state.products' is the state to be updated.
+                },
+                updateCart(state, product) {  // 'updateCart' is a mutation!
+                    state.cart.push(product);  // adding a product to the cart state property;
                 }
             },
 
-            >> Crucial: make sure your action (in /store/index.js) is calling this mutation function!
 
+TESTING IT:
 
-    5) Checking whether the data is been sent to the browser, using the "Vue DevTool";
+    X) Checking whether the data is been sent to the browser, using the "Vue DevTool":
         - Open the Browser Develop Tool;
         - Go to the Vue tab;
-        - Click over the component where the data is;
-        - If everything's fine, you're seeing the 'computed' data somewhere on the dev panel;
-
-
-    X) Create the link/button that will execute the action to add/update (mutation) an data;
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-        
+        - Select the component where the data is;
+        - If everything's fine, you're seeing the 'computed' with its data (array, probably)
+            somewhere on the dev panel;
 

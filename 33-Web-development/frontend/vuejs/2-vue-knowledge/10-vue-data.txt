@@ -16,7 +16,7 @@ VUE DATA: HOW TO MANUPULATE DATA IN THE FRONT-END
     >> Modifying data in the front-end:
 
         >> via VueX:
-            /33-Web-development/frontend/vuejs/3-component-libraries/vuex/adding-and-modifying-data-vuex.txt
+            /33-Web-development/frontend/vuejs/3-component-libraries/vuex/1-overview-how-to-create-data.txt
         
         >> via Pinia:
-            /33-Web-development/frontend/vuejs/3-component-libraries/pinia/adding-and-modifying-data-pinia.txt
+            /33-Web-development/frontend/vuejs/3-component-libraries/pinia/1-overview-how-to-create-data.txt
