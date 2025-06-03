@@ -8,14 +8,15 @@
 export default createStore({
     //...
     actions: {
-        loadProducts({ commit }) {
-            // This function read an API (json) and set the response to a mutation (updateProducts).
+        actLoadProducts({ commit }) {  // 'actLoadProducts' is the action!
+            // This function calls an API that returns fake products to be displayed on the website.
             fetch('https://fakestoreapi.com/products')
                 .then(response => response.json())
                 .then(data => {
-                    commit('updateProducts', data)  // 'updateProducts' is the mutation to call, and 'data' is the products to change!
+                    commit('mutLoadProducts', data)  // 'mutLoadProducts' is the mutation!
                 })
-        }
+        },
+        //...
     },
     //...
 })

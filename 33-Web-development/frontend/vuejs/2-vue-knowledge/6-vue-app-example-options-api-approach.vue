@@ -18,6 +18,14 @@ export default {
       }
   },
 
+  // Computed properties
+  // /33-Web-development/frontend/vuejs/2-vue-knowledge/computed-properties.txt
+  computed: {
+      doubleCount() {
+          return this.count * 2
+      }
+  },
+
   // Lifecycle hooks
   // /33-Web-development/frontend/javascript/lifecycle-hooks.js
   mounted() {
@@ -28,13 +36,6 @@ export default {
   methods: {
       increment() {
       this.count++
-      }
-  },
-
-  // Computed properties
-  computed: {
-      doubleCount() {
-          return this.count * 2
       }
   }
 }
