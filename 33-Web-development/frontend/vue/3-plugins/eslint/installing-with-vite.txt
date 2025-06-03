@@ -1,0 +1,71 @@
+
+
+ESLINT: INSTALLING IT WITH VITE
+
+    0) How to install Vue+Vite in a project:
+        /33-Web-development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
+
+    1) Installing the ESLint and its plugins as the Dev dependence only:
+        $ npm install -D eslint eslint-plugin-vue vite-plugin-eslint @eslint/js
+            # check if okay in the package.json's project-folder!
+    
+    2) Create ESLint configuration adding this file on the project root:
+        eslint.config.js
+            # Its content:
+            
+                // MORE ABOUT: https://eslint.vuejs.org/
+
+                import js from '@eslint/js';
+                import pluginVue from 'eslint-plugin-vue';
+                import globals from 'globals';
+
+                export default [
+                    js.configs.recommended,
+                    ...pluginVue.configs['flat/recommended'],
+                    {
+                        files: ['**/*.vue', '**/*.js', '**/*.mjs'],
+                        languageOptions: {
+                            parser: pluginVue.parser,
+                            ecmaVersion: 2022,
+                            sourceType: 'module',
+                            globals: {
+                                ...globals.browser,
+                                process: true
+                            }
+                        },
+                        rules: {
+                            // Vue rules
+                            'vue/multi-word-component-names': 'off',
+                            'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+                            'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+                        },
+                    },
+                    {
+                        ignores: [
+                            'node_modules/**',
+                            'dist/**',
+                            'public/**',
+                        ],
+                    },
+                ];
+
+    3) Add lint script to package.json:
+        "scripts": {
+            // other scripts...
+            "lint": "eslint . --fix",
+            "lint:check": "eslint ."
+        }
+
+    4) In vite.config.js file:
+        <...>
+        import eslintPlugin from 'vite-plugin-eslint'
+        <...>
+            plugins: [
+                vue(),
+                <...>,
+                eslintPlugin({
+                include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
+                exclude: ['node_modules/**', 'dist/**'],
+                cache: false
+                })
+            ],

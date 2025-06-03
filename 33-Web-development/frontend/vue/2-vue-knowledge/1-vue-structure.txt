@@ -1,0 +1,66 @@
+
+
+VUE.JS: ITS FILE AND FOLDER STRUCTURE
+
+
+    >> Folders structure:
+
+        > Vue Project folder
+            >> node_modules          ! stores all dependencies of the project and node.js stuff.
+            >> public                ! xxxxxxxxxxxxxxxxxxxxxx
+            >> src                   ! xxxxxxxxxxxxxxxxxxxxxx
+                >> assets            ! xxxxxxxxxxxxxxxxxxxxxx
+                >> components        ! stores small pieces of a page.
+                >> router            ! where URLS of the app is set (by Vue-Router).
+                >> store             ! unique front-end database source (by VueX/Pinia).
+                >> views             ! stores entire app pages.
+                - App.vue            ! the app itself. It's ran when you wanna see the app working.
+                - main.js            ! xxxxxxxxxxxxxxxxxxxxxx
+            - index.html             ! xxxxxxxxxxxxxxxxxxxxxx
+            - package.json           ! xxxxxxxxxxxxxxxxxxxxxx
+
+
+
+    >> A Vue.js app file (.vue) divide itself by 3 layers:
+        1) Script
+        2) Template
+        3) Style
+
+        Important knowledge about each one:
+
+
+        >> <SCRIPT> layer:
+            
+            >> There are 2-ways to code components, using 'Options API' or 'Component API':
+                /33-Web-development/frontend/vue/2-vue-knowledge/4-component-approach.txt
+
+            >> xxxxxxx
+
+
+
+        >> <TEMPLATE> layer:
+
+            >> xxxxxxx
+
+            >> xxxxxxx
+
+
+
+        >> <STYLE> layer:
+
+            >> To say to the style tag in the .vue file that that style settings
+                is just for that specific vue app, you must use 'scoped' attribute:
+                    <style scoped>
+                        ...
+                    </style>
+
+            >> xxxxxxx
+
+
+
+>> MORE ABOUT:
+    /33-Web-development/frontend/vue/2-vue-knowledge/0-general.txt
+
+
+>> INSTALL A VUE PROJECT:
+    /33-Web-development/frontend/vue/1-install-and-first-steps/_installation.txt

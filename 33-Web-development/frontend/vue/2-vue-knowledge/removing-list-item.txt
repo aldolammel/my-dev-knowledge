@@ -1,0 +1,53 @@
+
+
+REMOVING LIST ITEM:
+
+
+    >> script.js:
+
+        const handlingForms = {
+            data() {
+                return {
+                    members: window.members,
+                    new_member: {}
+                }
+            },
+            methods: {
+                add_member() {
+                   ...
+                },
+                remove_member(idx) {
+                    // This function removes a member to the musician's list.
+                    // Remove 1 element at the specific index: 
+                    this.members.splice(idx, 1);
+                }
+            }
+        };
+
+        Vue.createApp(handlingForms).mount('#app');
+
+
+
+
+    >> template.html:
+
+        <tr v-for="member in members">
+            <td>
+                <a href="#" @click="remove_member(member)">
+                    Delete musician!
+                </a>
+            </td>
+        </tr>
+
+
+    >> style.css:
+
+        Nothing.
+
+
+
+    >> Adding example:
+        /33-Web-development/frontend/vue/2-vue-knowledge/adding-list-item.txt
+        
+    >> Project Example:
+        /33-Web-development/frontend/vue/examples-vue/adding-and-removing-things-by-form/

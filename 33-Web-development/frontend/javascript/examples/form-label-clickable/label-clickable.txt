@@ -3,4 +3,4 @@
 The label of each input is clickable!
 (Example from a Vue.js app solution)
 
-    /33-Web-development/frontend/vuejs/2-vue-knowledge/forms/label-clickable.html
+    /33-Web-development/frontend/vue/2-vue-knowledge/forms/label-clickable.html
