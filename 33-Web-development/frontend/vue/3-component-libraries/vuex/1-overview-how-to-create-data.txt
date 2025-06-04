@@ -2,11 +2,13 @@
 
 VUEX: HOW TO CREATE DATA
 
-    STEP 0: WORKFLOW) Overview of the VueX workflow:
+    STEP 0: WORKFLOW
+        Overview of the VueX workflow:
         /33-Web-development/frontend/vue/3-component-libraries/vuex/one-way-data-flow.png
 
 
-    STEP 1: STATE) Declare the state property and its initial value in /store/index.js (frontend db):
+    STEP 1: STATE
+        Declare the state property and its initial value in /store/index.js (frontend db):
 
         E.g.
             import { createStore } from 'vuex'
@@ -22,28 +24,30 @@ VUEX: HOW TO CREATE DATA
             }
 
 
-    STEP 2: VIEW AND DISPATCH) In a component .vue file or in the app .vue main file,
-        the component (view) need to be linked with its state and dispatch:
+    STEP 2: VIEW AND DISPATCH
+        In a component .vue file or in the app .vue main file, the component (view) need to be
+        linked with its state and dispatch:
 
         >> VIEW:
             At first, let's allow the view to display the state/data:
 
             >> When the view is a component .vue file:
+                // Importing a Vuex Helper to handle states:
+                import { mapState } from 'vuex'
+                
                 export default {
                     name: 'Home',  // component name
                     data() {
                         ...
                     }
+                    // Computed Properties:
+                    computed: mapState([
+                        'products',  // It's a state property (data)!
+                        'cart'  // It's a state property (data)!
+                    ]),
+
                     // Lifecycle hook:
-                    computed: {
-                        // Computed properties
-                        products() {
-                            return this.$store.state.products;  // this '.products' is a state property (data)!
-                        },
-                        cart() {
-                            return this.$store.state.cart;  // this '.cart' is a state property (data)!
-                        }
-                    },
+                    // ...
                 }
 
             >> When the view is an App .vue file:
@@ -58,7 +62,10 @@ VUEX: HOW TO CREATE DATA
                 >> Set the data dispatch in the App .vue file:
                 
                     export default {
-                        // Lifecycle hook:
+                        // Computed Properties:
+                        // ...
+
+                        // Lifecycle hooks:
                         created() {
                             this.$store.dispatch('actLoadProducts');  // 'actLoadProducts' is the action to call.
                         }
@@ -84,7 +91,8 @@ VUEX: HOW TO CREATE DATA
 
                     export default {
                         // Lifecycle hook:
-                        ...
+                        // ...
+
                         // Methods/functions:
                         methods: {
                             // Addressing/Dispatching the action responsable for update something:
@@ -96,8 +104,9 @@ VUEX: HOW TO CREATE DATA
                     }
 
 
-    STEP 3: ACTION) Back to the /store/index.js, create an action that will execute a
-        mutation (next step) to update a specific state/data when called:
+    STEP 3: ACTION
+        Back to the /store/index.js, create an action that will execute a mutation (next step) to
+        update a specific state/data when called:
 
         >> When the data must be loaded directly from an API/JSON:
             
@@ -122,16 +131,18 @@ VUEX: HOW TO CREATE DATA
             })
     
 
-    STEP 4: MUTATION) Finally and still in /store/index.js, create the mutation that will execute
-        the action over a state. In other words, it adds/updates a specific state/data when activated:
+    STEP 4: MUTATION
+        Finally and still in /store/index.js, create the mutation that will execute the action over
+        a state. In other words, it adds/updates a specific state/data when activated:
 
         All mutation examples used on this overview about VueX:
 
             mutations: {
+                // Finally, it 'sends' all products to Vue components that request its action!
                 mutLoadProducts(state, products) {
                     state.products = products;
                 },
-                // 'mutAddProducts' is the mutation, and 'prod' argument is the data itself
+                // 'mutAddProd' is the mutation, and 'prod' argument is the data itself
                 // defined from the action step:
                 mutAddProd(state, prod) {
                     state.cart.push(prod);

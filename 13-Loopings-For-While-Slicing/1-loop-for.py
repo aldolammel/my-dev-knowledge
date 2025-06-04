@@ -10,6 +10,37 @@ for _each in _myList:
 
 """
 
+
+# Just keys
+for key in my_dict.keys():
+    print(key)
+
+# Just values  
+for value in my_dict.values():
+    print(value)
+
+# You can also iterate over keys by default (without .keys())
+for key in my_dict:
+    print(key)
+
+# Dictionary example
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+# Using .items() to get both key and value in the loop
+# This is called "dictionary unpacking" or "tuple unpacking":
+for key, value in my_dict.items():
+    print(f"Key: {key}, Value: {value}")
+
+
+
+
+
+
+
+
+
+
+
+
 from time import sleep
 from datetime import date
 

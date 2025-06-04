@@ -2,8 +2,8 @@
     
     SPREAD OPERATOR:
     The spread operator "..." in JavaScript expands an iterable (like an array, string, or object)
-    into individual elements. It is commonly used for. The spread operator simplifies code, improves
-    readability, and helps avoid unintended side effects by creating copies instead of modifying
+    into individual elements. It is commonly used for. It also simplifies code, improves
+    readability, and helps avoid unintended side effects by creating copies instead of modifying 
     original data structures.
 
 */
