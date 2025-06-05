@@ -24,6 +24,8 @@ DIRECTIVE: V-FOR
                                     {{ item.text }}
                                 </div>
 
+        >> forEach in JS (you could apply it as a function via script layer of a Vue component):
+            /33-Web-development/frontend/javascript/forEach-loop.js
 
 
     >> HOW TO USE V-FOR WITH V-IF:
