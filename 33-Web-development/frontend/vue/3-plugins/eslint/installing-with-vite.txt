@@ -7,8 +7,12 @@ ESLINT: INSTALLING IT WITH VITE
 
     1) Installing the ESLint and its plugins as the Dev dependence only:
         $ npm install -D eslint eslint-plugin-vue vite-plugin-eslint @eslint/js
-            # check if okay in the package.json's project-folder!
-    
+            # check if okay in the package.json's project-folder:
+                "@eslint/js": "^9.28.0",
+                "eslint": "^9.28.0",
+                "eslint-plugin-vue": "^10.2.0",
+                "vite-plugin-eslint": "^1.8.1"
+
     2) Create ESLint configuration adding this file on the project root:
         eslint.config.js
             # Its content:
@@ -64,8 +68,8 @@ ESLINT: INSTALLING IT WITH VITE
                 vue(),
                 <...>,
                 eslintPlugin({
-                include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
-                exclude: ['node_modules/**', 'dist/**'],
-                cache: false
+                    include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
+                    exclude: ['node_modules/**', 'dist/**'],
+                    cache: false
                 })
             ],

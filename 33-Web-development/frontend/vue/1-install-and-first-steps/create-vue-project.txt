@@ -220,17 +220,24 @@ CREATING A VUE PROJECT:
 
     3) (Optional) Make sure you got the .gitignore updated:
 
-        ### Node.js ###
+        ### Node.js + Vue.js ###
         node_modules/
-        jspm_packages/
-
-        >> IMPORTANT: and vue on .gitignore???????????????????????
+        dist/
+        npm-debug.log
+        yarn-error.log
 
 
     4) Start your work through the "src" (source) folder;
 
         # Running the project:
-        $ npm run serve
-        # or
-        $ yarn serve
+            
+            # CLI by Vite:
+                $ npm run dev
+                # or
+                $ yarn dev
 
+            # CLI by Vue-CLI:
+                $ npm run serve
+                # or
+                $ yarn serve
+            

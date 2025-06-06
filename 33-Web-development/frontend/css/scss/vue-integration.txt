@@ -12,7 +12,7 @@ SCSS/SASS: VUE INTEGRATION
                         E.g.
                             {
                                 "devDependencies": {
-                                    "sass-embedded": "^1.88.0"
+                                    "sass-embedded": "^1.89.1",
                                 }
                             }
         

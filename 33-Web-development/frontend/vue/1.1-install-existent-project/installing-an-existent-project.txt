@@ -20,3 +20,18 @@ INSTALLING AN EXISTENT VUE PROJECT:
 
             >> Ask to NPM install all dependencies:
                 $ npm i
+
+
+    >> After the install:
+
+        >> Consider to install if needed:
+            
+            >> CSS Pre-processors (Vite built-in solutions):
+                            /33-Web-development/frontend/css/scss/vue-integration.txt
+
+            >> Linter (Vite needs plugins to run one):
+                >> ESLint:
+                    /33-Web-development/frontend/vue/3-plugins/eslint/installing-with-vite.txt
+
+                    >> How to use execute the linter / How to check code with it:
+                        /33-Web-development/frontend/vue/3-plugins/eslint/using-eslint.txt
