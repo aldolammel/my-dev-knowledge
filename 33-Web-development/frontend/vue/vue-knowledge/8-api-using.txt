@@ -1,0 +1,13 @@
+
+
+HOW TO USE API WITH VUE:
+
+    >> Using the JavaScript native solution 'Fetch API':
+
+        /33-Web-development/frontend/vue/3-component-libraries/api/fetch-api.txt
+
+    
+    >> Use the Vue-Axios (Deprecated???????):
+
+        /33-Web-development/frontend/vue/3-component-libraries/api/axios.txt
+                

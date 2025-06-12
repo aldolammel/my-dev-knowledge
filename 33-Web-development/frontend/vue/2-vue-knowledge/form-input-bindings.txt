@@ -1,6 +1,0 @@
-
-
-FORM INPUT BINDINGS:
-
-
-    /33-Web-development/frontend/vue/2-vue-knowledge/forms/

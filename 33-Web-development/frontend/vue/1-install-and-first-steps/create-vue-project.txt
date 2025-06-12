@@ -72,7 +72,7 @@ CREATING A VUE PROJECT:
                         >> Get in the project folder:
                             $ cd vue-<project_name_chosen>
 
-                        >> Finishing the installations:
+                        >> Finishing the installations (it creates the 'node_modules' folder):
                                 $ npm install
                             # Check what is locally installed:
                                 $ npm list

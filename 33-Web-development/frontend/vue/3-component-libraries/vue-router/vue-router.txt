@@ -47,4 +47,4 @@ LIBRARY: VUE ROUTER
 
 
 WHAT IS ROUTERS:
-    /33-Web-development/frontend/vue/2-vue-knowledge/5-router-url.txt
+    /33-Web-development/frontend/vue/5-router-url.txt

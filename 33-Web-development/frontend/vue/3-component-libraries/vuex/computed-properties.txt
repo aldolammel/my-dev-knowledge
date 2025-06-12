@@ -7,28 +7,40 @@ VUEX: COMPUTED PROPERTIES
 
 
         >> I forget, what is Vue.js Computed Properties:
-            /33-Web-development/frontend/vue/2-vue-knowledge/computed-properties.txt
+            
+            >> Using Options API approach:
+                /33-Web-development/frontend/vue/vue-knowledge/using-options-api/option-computed.txt
+            
+            >> Using Composition API approach:
+                /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
         >> Using computed properties to access Vuex Store:
 
-            // In a Vue component file:
-            export default {
-                // Computed Properties:
-                computed: {
-                    // Accessing Vuex state through computed property
-                    currentUser() {
-                        return this.$store.state.user.currentUser;
+            >> Using Options API approach:
+
+                // In a Vue component file:
+                export default {
+                    // Computed Properties:
+                    computed: {
+                        // Accessing Vuex state through computed property
+                        currentUser() {
+                            return this.$store.state.user.currentUser;
+                        },
+                        
+                        // Accessing Vuex getters through computed property
+                        isLoggedIn() {
+                            return this.$store.getters.isAuthenticated;
+                        }
                     },
-                    
-                    // Accessing Vuex getters through computed property
-                    isLoggedIn() {
-                        return this.$store.getters.isAuthenticated;
-                    }
-                },
-                // Lifecycle hooks:
-                // ...
-            }
+                    // Lifecycle hooks:
+                    // ...
+                }
+
+
+            >> Using Composition API approach:
+
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
         >> Using Vuex Helpers to make this above easier:

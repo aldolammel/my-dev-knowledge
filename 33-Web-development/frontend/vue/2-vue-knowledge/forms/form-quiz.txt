@@ -1,4 +1,0 @@
-
-
-QUIZ FORM EXAMPLE:
-    /33-Web-development/frontend/vue/examples-vue/quiz/

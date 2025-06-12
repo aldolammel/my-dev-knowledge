@@ -72,7 +72,7 @@ VUEX: HOW TO CREATE DATA
                     }
 
                     >> More about Lifecycle-hooks:
-                        /33-Web-development/frontend/vue/2-vue-knowledge/lifecycle-hooks.txt
+                        /33-Web-development/frontend/vue/lifecycle-hooks.txt
 
 
             >> When the data must be loaded just after some user directly interaction,

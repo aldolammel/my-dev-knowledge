@@ -6,4 +6,8 @@ JAVASCRIPT KNOWLEDGE:
     
     >> varnames and function names use camelCase convention.
 
-    
+    >> To declare variables, you got these ways:
+        /33-Web-development/frontend/javascript/variables.js
+
+    >> Creating an object:
+        /33-Web-development/frontend/javascript/object.js
