@@ -1,0 +1,17 @@
+
+
+COMPUTED PROPERTIES VS METHODS:
+
+
+    Basically, both do the same, but:
+
+
+        >> Computed Properties:
+
+            - Better performance because they only are recalculated if their
+                variables (dependencies too) are updated;
+
+
+        >> Methods:
+        
+            - Each interation the methods are recalculated;

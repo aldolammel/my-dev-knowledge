@@ -1,3 +1,6 @@
+# On Python, "F-Strings" concept is pretty similar
+# to JavaScript "String Interpolation" concept.
+
 from datetime import datetime
 from time import sleep
 from random import choice

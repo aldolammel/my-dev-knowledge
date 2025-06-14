@@ -1,6 +1,6 @@
+<!--
 
-
-COMPOSITION API: METHODS OPTION
+    COMPOSITION API: METHODS OPTION
     
     Unlike in Options API approach, here there isn't a dedicated "methods option." Instead, you
     simply declare regular JavaScript functions within the setup() function or <script setup>.
@@ -9,8 +9,19 @@ COMPOSITION API: METHODS OPTION
     JavaScript logic. Methods can be called directly in your Vue templates or elsewhere in your
     component.
 
-    <script setup>
-    const handleClick = () => {
+-->
+
+
+<script setup>
+const handleClick = () => {
     console.log('Button clicked')
-    }
-    </script>
+}
+</script>
+
+
+<!--
+
+    >> Computed vs Methods:
+        /33-Web-development/frontend/vue/vue-knowledge/computed-vs-methods.txt
+
+-->
