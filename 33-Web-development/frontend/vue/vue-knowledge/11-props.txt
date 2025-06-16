@@ -2,11 +2,71 @@
 
 VUE: PROPS
 
-    Props in Vue.js are a way to pass data from a parent component to a child component. They create a one-way data flow where the parent sends data down to the child.
+    Props in Vue.js are a way to pass data from a parent component to a child component. They create
+    a one-way data flow where the parent sends data down to the child.
 
     What Props Do:
 
-    - Allow parent components to pass data to child components;
-    - Make components reusable by accepting different input values;
-    - Create a communication channel from parent to child;
-    - Are read-only in the child component (shouldn't be mutated directly);
+        - Allow parent components to pass data to child components;
+        - Make components reusable by accepting different input values;
+        - Create a communication channel from parent to child;
+        - Are read-only in the child component (shouldn't be mutated directly);
+
+
+    E.g.
+
+
+        # Step 1 - Create a props in ComponentName.vue file:
+
+            <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
+                // It's a good practice to type the variable:
+                const { books } = defineProps({
+                    books: {
+                    type: Array,
+                    required: true,
+                    }
+                });
+            </script>
+        
+
+        # Step 2 - Data in App.vue file:
+            
+            <script>
+                let dbBooks = [
+                    // ...
+                ];
+            </script>
+
+            <template>
+                <!-- Defining which props to use: -->
+                <Books :books="dbBooks" />
+            </template>
+
+
+        # Step 3 - In your component separately:
+            # Now, call all data needed on the template, e.g.:
+
+            <template v-if="!books.length">
+              <p>No books yet.</p>
+            </template>
+            <template v-else>
+                <div
+                    v-for="book in books"
+                    :key="book.isbn"
+                    class="book"
+                >
+                    <img 
+                        :src="book.cover"
+                        :alt="book.title"
+                    >
+                    {{ book.title }}
+                    {{ book.author }}
+                    <button :class="{ isRead : book.isRead }">
+                        <span>
+                            {{ book.isRead ? 'Read!' : 'Not read yet' }}
+                        </span>
+                    </button>
+                </div>
+            </template>
+
+

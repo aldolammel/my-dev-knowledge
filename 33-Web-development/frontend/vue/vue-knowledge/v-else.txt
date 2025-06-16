@@ -5,6 +5,7 @@ DIRECTIVE: V-ELSE
 
     >> It's accepted for: don't expect expression.
 
+
     >> Examples:
         <div v-if="Math.random() > 0.5">
             Now you see me
@@ -13,8 +14,11 @@ DIRECTIVE: V-ELSE
             Now you don't
         </div>
 
-    
-    
-    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
 
-        xxxxxxxxxxxxxxxxxxxxxxx
+    >> Avoiding v-if and v-else:
+        <span>
+            {{ book.isReady ? "I'm ready" : "NOT READY YET" }}
+        </span>
+
+    
+    

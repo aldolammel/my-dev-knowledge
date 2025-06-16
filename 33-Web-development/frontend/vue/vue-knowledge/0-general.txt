@@ -72,12 +72,18 @@ VUE.JS KNOWLEDGE
                     <img src="/img/anyimage.gif">
                 
                 >> to this:
+
                     wrong:
                         <img src={{ p.image }}>
                         <img src="{{ p.image }}">
+
                     right (using v-bind abbreviation ":" before html-tag's attribute):
                         <img :src="p.image">
 
+
+        >> CONDITIONAL DECLARATIVE RENDERING
+
+            {{ book.isReady ? "I'm ready" : 'NOT READY YET' }}
 
 
     

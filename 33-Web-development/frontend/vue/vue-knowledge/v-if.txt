@@ -24,13 +24,14 @@ DIRECTIVE: V-IF
             </small>
 
 
+        >> Avoiding v-if and v-else:
+            <span>
+                {{ book.isReady ? "I'm ready" : "NOT READY YET" }}
+            </span>
 
 
         >> Important: it's NOT recommended to use v-if and v-for on the same element due to
             implicit precedence.
 
-    
-    
-    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
 
-        xxxxxxxxxxxxxxxxxxxxxxx
+        
