@@ -1,6 +1,33 @@
+/*
+
+    FOREACH() LOOP
+
+    Purpose: ....... Execute a function for each array element;
+    Returns: ....... undefined (always);
+    Early Exit: .... No way to break/stop;
+    Use Case: ...... When you need to perform an action on every element;
+
+    Traditional For() loop method:
+        /33-Web-development/frontend/javascript/for.js
+
+    Some() loop method:
+        /33-Web-development/frontend/javascript/some.js
+
+    Find() method:
+        /33-Web-development/frontend/javascript/find.js
+*/
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Execute code for every element
+numbers.forEach((num, index) => {
+    console.log(`Index ${index}: ${num * 2}`);
+});
+// Output: Index 0: 2, Index 1: 4, Index 2: 6, Index 3: 8, Index 4: 10
+// Returns: undefined
 
 
-// FOREACH LOOP:
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 const myArray = ['apple', 'banana', 'orange'];
@@ -18,6 +45,8 @@ myArray.forEach((item, index) => {
 // One-liner for simple operations
 myArray.forEach(item => console.log(item));
 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 // ARRAY DESTRUCTURING / DESTRUCTURING ASSIGNMENT:

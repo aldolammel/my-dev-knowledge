@@ -7,6 +7,10 @@
     user interactions (e.g., clicks), processing data, or executing any custom JavaScript logic.
     Methods can be called directly in your Vue templates or elsewhere in your component.
 
+    Methods VS Computed:
+        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+        
+
     E.g. in a vue component file:
     
 -->

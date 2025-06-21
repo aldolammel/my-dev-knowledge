@@ -8,6 +8,10 @@
         
     They are part of Vue's reactivity system and are available in every Vue component by default.
 
+    Methods VS Computed:
+        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+
+    
     E.g. in a vue component file:
 
 -->

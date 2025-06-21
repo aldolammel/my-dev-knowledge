@@ -1,11 +1,15 @@
 <!--
     OPTIONS API: COMPUTED PROPERTIES
 
-    >> They are functions that return a value based on other reactive data. They're defined in the
+    They are functions that return a value based on other reactive data. They're defined in the
     computed section of a Vue component and are accessed like regular data properties in
     the template.
     
-    >> They are part of Vue's reactivity system and are available in every Vue component by default.
+    They are part of Vue's reactivity system and are available in every Vue component by default.
+
+    Methods VS Computed:
+        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+
 
     E.g. in a vue component file:
 -->

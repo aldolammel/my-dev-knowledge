@@ -1,0 +1,59 @@
+
+
+VUE: EMITS
+
+    In Vue.js with the Composition API, emits are a way for child components to communicate with
+    their parent components by sending custom events upward through the component tree.
+
+    The defineEmits() is a compiler macro (available in <script setup>) that:
+
+        - Declares what custom events your component can emit;
+        - Returns an emit function that you use to actually trigger those events;
+        - Provides type safety (in TypeScript) for the events and their payloads;
+        - Enables better IDE support with autocomplete and validation;
+
+    E.g.
+
+
+        <!-- Child Component -->
+        <script setup>
+            // Define what events this component can emit
+            const emit = defineEmits(['update-name', 'delete-item'])
+
+            // Function that triggers an emit
+            function handleNameChange(newName) {
+                // Emit the event with data to the parent
+                emit('update-name', newName)
+            }
+
+            function handleDelete(itemId) {
+                // Emit another event
+                emit('delete-item', itemId)
+            }
+        </script>
+
+        <template>
+            <div>
+                <input @input="handleNameChange($event.target.value)" />
+                <button @click="handleDelete(123)">Delete</button>
+            </div>
+        </template>
+
+
+        <!-- Parent Component -->
+        <script setup>
+            function onNameUpdated(newName) {
+            console.log('Name updated to:', newName)
+            }
+
+            function onItemDeleted(itemId) {
+            console.log('Item deleted:', itemId)
+            }
+        </script>
+
+        <template>
+            <ChildComponent 
+                @update-name="onNameUpdated"
+                @delete-item="onItemDeleted"
+            />
+        </template>

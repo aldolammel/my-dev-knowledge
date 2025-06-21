@@ -5,7 +5,7 @@ VUE: PROPS
     Props in Vue.js are a way to pass data from a parent component to a child component. They create
     a one-way data flow where the parent sends data down to the child.
 
-    What Props Do:
+    The defineProps(), what Props do:
 
         - Allow parent components to pass data to child components;
         - Make components reusable by accepting different input values;

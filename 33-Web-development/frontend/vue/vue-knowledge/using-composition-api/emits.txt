@@ -1,0 +1,5 @@
+
+
+VUE: EMITS
+
+    /33-Web-development/frontend/vue/vue-knowledge/12-emits.txt
