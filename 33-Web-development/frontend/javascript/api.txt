@@ -12,4 +12,4 @@ API SOLUTION: FETCH API (JS native solution)
 
     
         E.g.
-            /33-Web-development/frontend/javascript/examples/fetch-api/fetchapi.js
+            /33-Web-development/frontend/javascript/z-examples/fetch-api/fetchapi.js

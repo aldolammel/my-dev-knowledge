@@ -17,7 +17,7 @@ UV PACKAGE
     >> WEB PROJECT:
 
         >> Using Django:
-
+            
             /33-Web-development/backend/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
 

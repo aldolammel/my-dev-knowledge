@@ -21,8 +21,23 @@ CREATING A VUE PROJECT:
 
         1.1) Using CDN:
 
-            >> In your html, include:
-                <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            >> In your main HTML file, add the CDN script before you call the main script file URL:
+                
+                <!-- Main HTML file -->
+                <html>
+                    ...
+                    <body>
+                        ...
+
+                        <!-- Vue CDN -->
+                        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+                        
+                        <!-- Main JS file -->
+                        <script src="app.js"></script>
+                    </body>
+                </html>
+
+
 
             >> Xxxxxxxxxxxx 
 
