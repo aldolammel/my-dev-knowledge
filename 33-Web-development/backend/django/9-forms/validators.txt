@@ -1,5 +1,0 @@
-
-
-    VALIDATORS:
-
-        /33-Web-development/backend/django/6-validators/

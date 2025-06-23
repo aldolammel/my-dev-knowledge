@@ -1,7 +1,0 @@
-
-
-    MODEL: RECEIVING DATA (AND SENDING TOO)
-
-        >> From Form (forms.py):
-
-            /33-Web-development/backend/django/9-forms/form-receiving-data.py

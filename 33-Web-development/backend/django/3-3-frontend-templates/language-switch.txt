@@ -1,5 +1,0 @@
-
-
-    LANGUAGE SWITCH:
-
-        \33-Web-development\backend\django\8-translate-and-internationalization\language-selector.html

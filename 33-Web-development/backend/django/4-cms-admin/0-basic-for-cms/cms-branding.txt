@@ -1,9 +1,0 @@
-
-
-CMS BRANDING
-
-    >> Changing the ADMIN TITLE:
-
-        Create inside /root/templates/admin/base_site.html
-        
-            /33-Web-development/backend/django/project-examples/proj-aldolammel-style/templates/admin/base_site.html

@@ -1,0 +1,14 @@
+
+
+Let's see:
+
+    >> FIELD: SELECT-MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
+    >> FIELD: SELECT-MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
+    >> FIELD: MULTI-SELECT-MENU (DYNAMIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+    >> FIELD: MULTI-SELECT-MENU (STATIC OPTIONS AND ONE OR MORE OPTIONS TO RETURN)
+
+
+    All of them in:
+        /33-Web-development/backend/python/django/3-1-backend-models-database/field-select-menu-single.txt
+        /33-Web-development/backend/python/django/3-1-backend-models-database/field-select-menu-multiple.txt
+        

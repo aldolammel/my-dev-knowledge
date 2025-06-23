@@ -1,5 +1,0 @@
-
-
-    TEMPLATES: RECEIVING DATA
-
-        /33-Web-development/backend/django/3-2-backend-views/1-building-views-context/

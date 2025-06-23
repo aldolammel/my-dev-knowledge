@@ -1,3 +1,0 @@
-
-
-    /33-Web-development/backend/django/3-1-backend-models-database/4-querysets/queryset-filter-exclude.txt

@@ -1,0 +1,20 @@
+
+
+VIEWS CLASSES: USING FORM-VIEW INHERIT:
+
+    >> With a form view inherit, you are able to work better with class-based views
+        from forms.py file.
+        
+        E.g.
+
+            from django.views.generic.edit import FormView
+            
+            class MyFormTestView(FormView):  # This 'View' in classname is a convention.
+                pass
+
+
+
+
+    HOW TO USAGE (EXAMPLE):
+    
+    /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-form-usage.py

@@ -1,7 +1,0 @@
-
-
-NODE.js
-
-It's predominantly used for backend development but also plays a significant role in frontend development.
-
-/33-Web-development/backend/nodejs/

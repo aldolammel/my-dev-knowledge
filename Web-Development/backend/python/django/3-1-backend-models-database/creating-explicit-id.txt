@@ -1,0 +1,37 @@
+
+
+CREATING AN EXPLICIT ID/PK:
+
+
+    >> In Django, primary keys are created automatically:
+        
+        /33-Web-development/backend/python/django/3-1-backend-models-database/field-id.txt
+
+
+    >> But you can force it if needed:
+
+        E.g.
+
+            class Movie(models.Model):
+                id = models.AutoField(primary_key=True)  # 'id' arg/param can be customized too!
+
+    
+    
+    SmallAutoField ............ guaranteed to fit numbers from 1 to 32767.
+
+    AutoField ................. guaranteed to fit numbers from -2147483648 to 2147483647.
+
+    BigAutoField .............. guaranteed to fit numbers from 1 to 9223372036854775807.
+    
+    UUIDField ................. Faster and more secure, but the db won't generate it for you,
+                                so it's recommended to use default:
+
+                                    # In models.py:
+                                    import uuid
+
+                                    # In the model-class:
+                                    id = models.UUIDField(
+                                        primary_key=True, 
+                                        default=uuid.uuid4, 
+                                        editable=False
+                                    )

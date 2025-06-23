@@ -1,7 +1,0 @@
-
-
-Where are the Templates' files?
-
-    Here (to avoid duplicite):
-    
-        /33-Web-development/backend/django/project-examples/proj-aldolammel-style/accounts/templates/

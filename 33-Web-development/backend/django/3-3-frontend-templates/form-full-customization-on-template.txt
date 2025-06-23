@@ -1,4 +1,0 @@
-
-
-
-    /33-Web-development/backend/django/9-forms/customizing-fully-on-template.txt

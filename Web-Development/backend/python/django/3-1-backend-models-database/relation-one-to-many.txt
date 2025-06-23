@@ -1,0 +1,37 @@
+
+
+RELATION: ONE TO MANY (FOREIGN KEY)
+
+    >> Meanwhile an author has one or more books, a book usually has only one author.
+        Here we got a perfect example of one-to-many releationship.
+
+
+    1) Building up both needed classes for our example in models.py file, remembering
+        in this case we use 'ForeignKey' model:
+
+        class Author(models.Model):
+            name = ...
+
+        class Book(models.Model):
+            title = ...
+            author = models.ForeignKey(
+                Author, 
+                related_name='books', 
+                on_delete=models.CASCADE,    # .PROTECT  or  .SET_NULL   or   .CASCADE
+                null=True,
+            )
+
+
+            MORE ABOUT ON_DELETE:
+            /33-Web-development/backend/python/django/3-1-backend-models-database/_model-arguments.txt
+
+
+    2) Still in the same sub-app, in admin.py file:
+
+        from .models import Author, Book
+
+        admin.site.register(Author)
+        admin.site.register(Book)
+
+    
+    3) Run the CMS and check the if everything is fine.
