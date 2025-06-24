@@ -54,7 +54,7 @@ RE-INSTALL THE GIT IN THE EXISTENT LOCAL PROJECT FOLDER:
                         $ git add .
 
                         # Commit your current state
-                        $ git commit -m "Restore project after .git folder deletion"
+                        $ git commit -m "Restore .git folder after its local deletion"
 
                         # Pull the remote changes and merge them:
                         $ git pull origin main --allow-unrelated-histories
