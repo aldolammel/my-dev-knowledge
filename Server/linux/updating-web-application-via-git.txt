@@ -1,0 +1,45 @@
+
+UPDATING A WEB APPLICATION USING GIT:
+
+    1) First of all, you need to know:
+
+        Current Web App on Prod:
+            E.g.
+                http://vps51935.publiccloud.com.br/
+        
+        Current application files on Git:
+            E.g. 
+                https://github.com/abcoo-ideias/portfolio/tree/main
+
+        Current app path on server:
+            E.g. 
+                $ cd /home/admin/portfolio
+
+    2) Updating files:
+        
+        1) Connect to the server:
+            $ ssh -p 4928 root@186.202.57.118  
+
+        2) Update the application repository:
+            $ sudo git pull
+
+        3) Refresh the communication between the web server and the application, restarting the Gunicorn (WSGI):
+            $ systemctl restart <your_application_name>   # e.g. portfolio
+            $ systemctl status <your_application_name>
+
+    3) Something wrong? Try it:
+        # Restart the web server:
+        $ systemctl restart nginx
+        $ systemctl status nginx
+
+        # Restart the communication between the web server and the web application:
+        $ systemctl restart <your_application_name>
+        $ systemctl status <your_application_name>
+
+        # Nothing yet? Restart the server and repeat this entire step:
+        $ reboot
+
+    4) Updating database:
+        
+        I'm currently using the portfolio repo to store the DB ("instance" folder).
+

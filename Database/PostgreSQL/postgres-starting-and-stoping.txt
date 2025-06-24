@@ -1,0 +1,57 @@
+
+POSTGRESQL: STARTING AND STOPING THE SERVICE
+
+
+    WINDOWS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> To check the service status:
+            Open the Task Manager, go to Service tab. Search for 'postgres'.
+
+        >> To Start the service:
+            
+            # to check the postgres service name, open your Task Manager and, 
+            # in Services tab, look for 'postgres' and take note:
+            
+            $ net start postgresql-x64-16
+        
+        >> To Stop the service:
+            
+            # to check the postgres service name, open your Task Manager and, in Services tab, look
+            # for 'postgres' and take note:
+            
+            $ net stop postgresql-x64-16
+        
+        >> To prevent postgres to startup with the system:
+            
+            1) Open the Task Manager, go to Service tab;
+            2) Search for postgresql and click over it and select 'Open Services';
+            3) Again, find the postgresql and change its 'startup type' to 'manual';
+
+        >> To set postgres to startup with the system again:
+            
+            Pretty similar the previous step.
+        
+    
+        
+    UBUNTU: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+        >> To check the service status:
+            $ systemctl status postgresql
+        
+        >> To Start the service:
+            $ sudo systemctl start postgresql
+
+        >> To Stop the service:
+            $ sudo systemctl stop postgresql
+
+        >> To prevent postgres to startup with the system:
+            $ sudo systemctl disable postgresql
+        
+        >> To set postgres to startup with the system again:
+            $ sudo systemctl enable postgresql
+
+
+
+    MAC: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        xxxxxxxxx

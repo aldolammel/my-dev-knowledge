@@ -1,0 +1,31 @@
+
+{% comment %}
+
+    FORMATING ON TEMPLATE SIDE:
+    https://docs.djangoproject.com/en/5.1/ref/templates/builtins/
+
+{% endcomment %}
+
+
+{{ form.name|title }}
+{# Before: save PRIVATE ryan #}
+{# After: Save Private Ryan #}
+
+
+{{ form.name|capfirst }}
+{# Before: save PRIVATE ryan #}
+{# After: Save private ryan #}
+
+
+{{ form.name|lower }}
+{# Before: SaVe PRIVATE rYaN #}
+{# After: save private ryan #}
+
+
+{{ form.created_at|timesince }}
+{# Before: Sep, 3, 2024, 2:30 p.m. #}
+{# After: 55 minutes ago #}
+
+{{ form.created_at|date:"M d, Y H:i" }}
+{# https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date #}
+

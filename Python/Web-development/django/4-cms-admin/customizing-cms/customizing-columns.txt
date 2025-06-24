@@ -1,0 +1,65 @@
+
+
+    CUSTOMIZING CMS COLUMNS:
+
+        >> In case of admin.py files, any class created there WON'T affect database tables and
+            their columns. Classes in admin.py files stay in Django back-end level only.
+        
+        >> If you want to add new columns in the CMS-html-content-tables, and you already have at least
+            a models.py class in some sub-app folder, follow these steps:
+
+
+        1) In that sub-app folder, open the 'admin.py' file;
+
+
+        2) Import the model class you want to custom in the CMS:
+            
+            E.g. 
+            
+                from .models import Recipe
+
+
+        3) Create a class with a similar name of the original class you're working on:
+  
+            E.g. 
+
+                class RecipeAdmin(admin.ModelAdmin):  # this 'Admin' in the classname is a convention.
+                    # The tuple 'list_display' will reorder columns (attributes) on the CMS front-end:
+                    list_display = ('id', 'name', 'created_at')
+                    # It activates the searching field and select which columns will be used as source:
+                    search_fields = ['name', 'description']
+
+
+        4) If the class wasn't register yet, do it, but now including the admin class version too:
+  
+            E.g.
+
+                admin.site.register(Recipe, RecipeAdmin)
+
+
+        5) Execute those commands to update the db:
+            $ python manage.py makemigrations
+            $ python manage.py migrate
+
+
+        6) Test the result?
+            $ python manage.py runserver
+            or
+            $ uv run manage.py runserver
+            
+            http://localhost:8000/admin/
+
+
+
+
+VERBOSE IN ADMIN LIST AND DETAIL VIEWS: 
+    
+    If you want to create a verbose-name for an Admin table columns:
+    In the sub-app models.py, in your class, add "verbose_name='<something>'"
+    in attritute model-field arguments:
+
+        E.g. 
+
+            class Recipe(models.Model):
+                start_datetime = models.DateTimeField(verbose_name='Start')
+

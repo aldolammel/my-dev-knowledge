@@ -1,0 +1,5 @@
+
+
+JAVASCRIPT: LIFECYCLE HOOKS
+
+    /33-Web-development/frontend/javascript/lifecycle-hooks.js

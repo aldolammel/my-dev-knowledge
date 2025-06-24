@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Adding: {% endblock %}
+
+{% block content %}
+    <h1>Add item:</h1>
+    <form action="{{ url_for('go_add') }}" method="POST">
+
+        <label>Name:</label>
+        <input name="name" type="text" value="">
+
+        <label>Description:</label>
+        <input name="description" type="text" value="">
+
+        <label>Country:</label>
+        <input name="country" type="text" value="">
+
+        <label>Photo path:</label>
+        <input name="photo" type="text" value="/">
+
+        <input type="submit" value="Add item">
+
+    </form>
+
+    <a href="{{ url_for('go_home') }}">Back to home</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% load i18n %}
+
+{% if var.help_text %}
+    <div class="icon-text">
+        {% comment %} <span class="icon is-hidden-touch has-text-grey-lighter">
+            <i class="fa-solid fa-circle-question"></i>
+        </span> {% endcomment %}
+        <span class="content is-small has-text-grey-lighter">
+            {{ var.help_text }}
+        </span>
+    </div>
+{% endif %}

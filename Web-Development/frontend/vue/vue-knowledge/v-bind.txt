@@ -1,0 +1,39 @@
+
+
+DIRECTIVE: V-BIND
+
+
+    >> It's accepted for: any (with arg), obj (without arg).
+
+        >> You can apply v-bind using 'v-bind:' or just ':' before an attribute for example:
+
+            >> Calling URL:
+            
+            <img :src="p.image" /> so its the same of <img src="https://somedomain.com/image.png" />
+        
+
+        >> Using v-bind to deactivate a button:
+
+            <button
+              :disabled="product.quantity <= 1"
+              ...
+            >
+                Remove
+            </button>
+
+        
+        >> Including a css-class dynamically:
+
+            <div
+                class="menu-link"
+                :class="{ selected : product.active }"
+            >
+
+                # Output if menu-link is selected: 
+                    class="menu-link selected"
+
+    
+    
+    >> HOW TO XXXXXXXXXXXXXXXXXXXXXXXXX:
+
+        xxxxxxxxxxxxxxxxxxxxxxx

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Index example{% endblock %}
+
+{% block content %}
+    
+    <h1>Recipes:</h1>
+    
+    {% if recipes %}
+        
+        <ul>
+            {% for i in recipes %}
+                <li><a href="{% url 'recipes:detail_view' i.id %}">{{ i }}</a></li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+    
+        <p>No recipes available yet!</p>
+
+    {% endif %}
+    
+{% endblock %}

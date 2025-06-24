@@ -1,0 +1,25 @@
+
+
+RUNNING A DJANDO APPLICATION:
+
+    0) Ask your self if this application is using local dababase or a cloud one and be sure
+        the db is already running.
+
+    1) On terminal, go to the project's folder!
+
+    2) If needed, get the right virtual environment:
+        $ . <venv_folder>/bin/activate
+
+    3) Check if there's Git version control:
+        $ git status
+
+        3.1) If so, be aware if you are in the right branch to use the application!
+    
+    4) Run the application:
+        $ python manage.py runserver
+        or
+        $ uv run manage.py runserver
+    
+    5) Check the app through the browser:
+        http://localhost:8000/
+        http://127.0.0.1:8000/

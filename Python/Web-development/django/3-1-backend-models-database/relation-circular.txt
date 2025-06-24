@@ -1,0 +1,24 @@
+
+
+RELATION: CIRCULAR
+
+
+    >> Two models that have a circular relationship:
+
+        class Product(models.Model):
+            ...
+            last_buyer = models.ForeignKey('User')
+        
+        class User(models.Model):
+            ...
+            created_products = models.ManyToManyField('Product')
+
+            >> In this example, we have multiple relationships between the same two models.
+                Hence we might need to define them in both models. By using the model name as 
+                a string instead of a direct reference, Django is able to resolve such dependencies.
+
+
+
+    >> Is an itself relationship?
+
+        /33-Web-development/backend/python/django/3-1-backend-models-database/relation-itself.txt

@@ -1,0 +1,16 @@
+<html>
+    <body>
+
+        <!-- 
+            Those 'form.' below are the key in the CONTEXT (or CONTEXT_OBJECT_NAME) variable
+            defined in a specific class from the sub-app views.py file.
+        -->
+
+        <!-- It shows only the label of the field called 'band_name' -->
+        {{ form.band_name.label }}
+
+        <!-- It shows only the field called 'band_name' without its label -->
+        {{ form.band_name }}
+
+    </body>
+</html>

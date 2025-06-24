@@ -1,0 +1,16 @@
+
+SQLITE
+
+    1) xxxxxxxxxx
+
+
+    2) xxxxxxxxxxx
+
+
+
+
+
+
+
+
+        6) <check the last steps of postgres checkist to migrate those steps here maybe!!!>

@@ -1,0 +1,97 @@
+
+
+    QUERYSET: EXCLUDE FILTERING
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        >> For Model:                              
+
+            >> Impact: everywhere!
+
+                E.g.
+
+                    cccccccccccccccccccccccccccccccccc
+
+            
+            >> More:
+
+                xxxxxxxxxxxxxxxx
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        >> For Forms:
+
+            >> Impact: only on templates.
+
+                E.g.
+
+                    class MovieForm(forms.ModelForm):
+                        class Meta:
+                            # Connected model:
+                            model = Movie
+                            # Ordering fields on the form:
+                            fields = [
+                                'category',  # from connected model
+                                'country',  # extra
+                            ]
+
+                        # Extra fields:
+                        country = forms.ModelChoiceField(
+                            queryset=Country.objects.filter(status='on'),
+                            required=False,
+                        )
+
+                        def __init__(self, *args, **kwargs):
+                            '''Built-in method that's called when the form is instantiated.'''
+                            super().__init__(*args, **kwargs)
+                            
+                            # Connected fields (from connected model), customizations:
+                            self.fields['category'].queryset = Category.objects.filter(status='on')
+
+                            # Extra fields, pre-populating:
+                            # Unlike fields from connected model, extra fields must be manually linked!
+                            self.fields['country'].initial = user.country
+
+
+            >> More:
+
+                /33-Web-development/backend/python/django/9-forms/form-queryset-filtering-dropdown.py
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        >> For CMS:
+
+            >> Impact: only on CMS.
+
+                E.g.
+
+                    class MovieCMS(admin.ModelAdmin):
+                        ...
+
+                        def get_queryset(self, request):
+                            return super().get_queryset().exclude(status='off')
+
+
+            >> More:
+
+                /33-Web-development/backend/python/django/4-cms-admin/cms-queryset-filtering.py
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        >> AWARE: when an entry-queried is flagged as 'archived' for example, everything that
+                  had the entry-queried as part of its data, won't show the entry-queried
+                  anymore, but it the entry-queried is 'active' again, the entry-queried turn
+                  visible back to all entry that entry-queried belonged.

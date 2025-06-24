@@ -1,0 +1,15 @@
+
+
+REST = Representational State Transfer
+
+    REST is an approach for creating Web Services and APIs. Unlike SOAP, REST is NOT a protocol, but an architectural
+    style for designing networked applications. REST uses the HTTP protocol.
+
+    TABLE OF RESTFUL ROUTING:
+
+    HTTP VERBS              /BOOKS                          /BOOKS/DIA_922
+    - GET ..........   Fetches all books     .........Fetches the specific book
+    - POST ......... Creates one new book    ...........          -
+    - PUT ..........         -               ...........  Updates that book
+    - PATCH ........         -               ...........  Updates that book
+    - DELETE ....... Deletes all books       ...........  Deletes that book

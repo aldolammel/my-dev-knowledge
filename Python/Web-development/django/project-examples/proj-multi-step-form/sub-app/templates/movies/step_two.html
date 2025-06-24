@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+    
+    <h1>{{ page_title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <hr />
+
+        <a href="{% url 'movies:step_one_view' instance_pk %}">{{ bt_back }}</a>
+        <button type="submit" name="discard">{{ bt_discard }}</button>
+        <!--<button type="submit" name="save_draft">{{ bt_draft }}</button>-->
+        <button type="submit">{{ bt_submit }}</button>
+        
+    </form>
+    
+{% endblock %}

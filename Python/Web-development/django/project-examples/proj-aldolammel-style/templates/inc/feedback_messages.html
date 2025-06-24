@@ -1,0 +1,36 @@
+{% load i18n %}
+
+{% if messages %}
+    
+    <div class="container">
+        <div class="columns">
+
+            <div class="column"></div>
+            <div class="column is-8">
+
+                <div class="content notification is-success is-light mt-4">
+                    <div class="columns">
+                        <div class="column is-narrow">
+                            <div class="icon-text">
+                                <span class="icon has-text-primary-25">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content has-text-primary-15">
+                                {% for msg in messages %}        
+                                    {{ msg }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column"></div>
+
+        </div>
+    </div>
+    
+{% endif %}

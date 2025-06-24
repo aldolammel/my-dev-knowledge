@@ -1,0 +1,101 @@
+
+VIRTUAL ENVIRONMENT:
+
+    >> A virtual environment is a way to have multiple, parallel instances of the Python
+        interpreter, each with different sets of packages and different configurations. Each
+        virtual environment contains a discrete copy of the Python interpreter, including copies
+        of its support utilities.
+    
+    >> The packages installed in each virtual environment are seen only in that virtual environment 
+        and no other. Even large, complex packages with platform-dependent binaries can be
+        corralled off from each other in virtual environments.
+
+    >> There is 2 methods to create a virtual environment by terminal:
+        
+        A) by Python built-in command;
+        B) by installing a module called virtualenv;
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    A) With Python built-in solution:
+
+        >> Creating:
+
+            Windows:
+                $ py -m venv .<venv_name>
+            
+            Debian/Ubuntu:
+                $ sudo apt install python3.XX-venv
+                $ python3 -m venv .<venv_name>  <-- add that dot "." to make it a hidden folder
+                                                    and be automatically ignore by gitignore file.
+            
+            Mac:
+                $ python3 -m venv .<venv_name>
+
+
+        >> Deleting (if needed):
+
+            Windows:
+                $ rmdir <venv_name>
+        
+            Debian/Ubuntu:
+                # Deactivate the virtual environment first:
+                $ deactivate 
+
+                # Delete the virtual environment folder (be aware if the folder has or not '.'):
+                $ rm -r <venv_name>
+
+                # Check if deleted (-a to consider the hidden files/folders too):
+                $ ls -a
+        
+            Mac:
+                $ xxxx
+
+
+
+    B) With the third-party module:
+
+        >> Creating:
+
+            B1) GO to the terminal;
+            B2) Go to the folder that you want to install the virtual environment;
+            B3) In the folder, type through Terminal to create the virtual environment: 
+                
+                $ virtualenv <venv_unique_name>
+            
+                If the command wasn't recognized, install the virtualenv module: 
+                
+                $ pip install virtualenv
+
+
+        >> Deleting (if needed):
+            
+            Windows:
+                $ xxx
+
+            Debian/Ubuntu:
+                
+                # Deactivate the virtual environment first:
+                $ deactivate 
+
+                # Check the project folder path:
+                $ pwd
+
+                # Delete the virtual environment folder (be aware if the folder has or not '.'):
+                $ rm -rf /path/to/.venv/
+
+                # Check if deleted (-a to consider the hidden files/folders too):
+                $ ls -a
+
+            Mac:
+                $ xxxx
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    HOW TO ACTIVATE A VIRTUAL ENVIRONMENT:
+
+    /03-Virtual-Environment/activate-and-deactivate.txt

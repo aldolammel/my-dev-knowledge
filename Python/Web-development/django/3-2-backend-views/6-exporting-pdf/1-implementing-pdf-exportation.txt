@@ -1,0 +1,41 @@
+
+
+IMPLEMENTING PDF EXPORTATION:
+
+    >> Example of this implementation:
+        /33-Web-development/backend/python/django/project-examples/proj-exporting-pdf/
+    
+    >> Checklist:
+    
+        x) Install the package: xhtml2pdf
+            https://xhtml2pdf.readthedocs.io/en/latest/
+        
+        x) In your sub-app folder that will contain the PDF exportation, create the folder and these files (both empties):
+            /sub-app/templatetags/
+            /sub-app/templatetags/__init__.py
+            /sub-app/templatetags/custom_filters.py
+
+        x) Still in the sub-app folder, create the file that will contain the PDF template into the "templates" folder:
+            /sub-app/templates/
+            /sub-app/templates/pdf_<page-name>.html
+
+            >> the content you can get it from the example project folder!
+
+        x) Back to the project root folder, and create, in the main templates folder, the base_pdf.html file:
+            /templates/base_pdf.html
+
+            >> the content you can get it from the example project folder!
+
+        x) In the sub-app folder, create the function view "pdf_<page-name>" in views.py.
+
+            >> the content you can get it from the example project folder!
+
+        x) After that, create the url for the PDF exportation in the urls.py file.
+
+            >> the content you can get it from the example project folder!
+
+        x) In the front-end app's page that will have the PDF exportation button, add the following code, for example:
+
+            <a href="{% url 'namespace_here:pdf_<page-name>_view' %}" target="_blank">Export PDF</a>
+
+        x) Test it!

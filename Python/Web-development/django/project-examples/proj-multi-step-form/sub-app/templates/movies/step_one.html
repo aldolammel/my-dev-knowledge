@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+    
+    <h1>{{ page_title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <hr />
+
+        <a href="{% url 'movies:list_view' %}">{{ bt_back }}</a>
+        {% if instance_pk %}
+            <button type="submit" name="discard">{{ bt_discard }}</button>
+        {% endif %}    
+        <button type="submit">{{ bt_submit }}</button>
+
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,14 @@
+
+
+JAVASCRIPT: ALERT()
+
+    E.g.
+    
+        if (!this.chosenAnswer) {
+            alert("Please, select an answer!");
+        }
+
+    
+    
+    >> JAVASCRIPT: CONFIRM()
+        /33-Web-development/frontend/javascript/confirm.txt

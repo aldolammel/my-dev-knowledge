@@ -1,0 +1,42 @@
+
+
+CREATING A NEW COMPONENT:
+
+
+    1) Make sure you got the folder:
+        /your_project_root/src/components/
+
+
+    2) In /components/ create the component file:
+        MyComponentName.vue
+
+            # Its content:
+
+            <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
+                // code...
+            </script>
+
+            <template>
+                <div>
+                    My New Component
+                </div>
+            </template>
+
+            <!-- Not mandatory: -->
+            <style>
+            </style>
+
+
+    3) Import the component in your App.vue:
+
+        <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
+            import MyComponentName from './components/MyComponentName.vue';
+            
+            //...
+        </script>
+
+
+    4) If youo need to call external data (from App.vue, for example), you must to use PROPS in
+        your component file:
+            /33-Web-development/frontend/vue/vue-knowledge/11-props.txt
+

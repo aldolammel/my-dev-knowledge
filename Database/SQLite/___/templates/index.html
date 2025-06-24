@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+  {% block title %}Welcome{% endblock %}
+
+  {% block body %}
+    <div class="col-sm-12">
+      <h1>My Library</h1>
+      <ul>
+          {% if books|length == 0 %}
+            <li>The library still empty.</li>
+          {% else %}
+            {% for book in books %}
+              <li><strong><em>{{ book.title }}</em></strong> | by {{ book.author }} | Rating: {{ book.rating }} [ <a href="{{ url_for('go_edit', id=book.id) }}">Edit</a> ]</li>
+            {% endfor %}
+          {% endif %}
+      </ul>
+    </div>
+  {% endblock %}
+
+  {% block footer_menu %}
+    <div class="col-sm-12">
+      <a href="{{ url_for('go_add') }}">Add New Book</a>
+    </div>
+  {% endblock %}

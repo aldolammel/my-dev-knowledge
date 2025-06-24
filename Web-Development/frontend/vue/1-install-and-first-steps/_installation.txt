@@ -1,0 +1,29 @@
+
+
+    VUE.JS (FULL) INSTALLATION:
+
+
+        1) Install Node.js (dependence):
+
+            /33-Web-development/backend/javascript/nodejs/installation-and-basic.txt
+
+
+        
+            1.1) (optional) Install 'Vue.js devtools' (Extension) for your browser!
+
+
+
+            1.2) (optional) Install the Vue extension in your IDE:
+            
+                >> For VSCode:
+                    https://marketplace.visualstudio.com/items?itemName=Vue.volar
+
+                >> For xxxxxxxx:
+                    xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        
+                
+        2) Install the Vue built-tool and Create the Vue.js project:
+            /33-Web-development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
+
+            

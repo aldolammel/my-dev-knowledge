@@ -1,0 +1,29 @@
+
+
+RELATION: ITSELF
+
+
+    >> Relation with the same model:
+
+        # Example 1:
+        class User(models.Model):
+            ...
+            friends = models.ManyToManyField(
+                'self',
+            ) 
+        
+            
+        # Example 2:
+        class User(AbstractUser):
+            ...
+            updated_by = models.ForeignKey(
+                'self',  # Itself relationship!
+                related_name='updated_users',
+                on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
+                null=True,
+            )
+
+
+
+        >> The special self keyword (used as a string value) tells Django that it should form a
+            relationship with (other) instances of the same model.

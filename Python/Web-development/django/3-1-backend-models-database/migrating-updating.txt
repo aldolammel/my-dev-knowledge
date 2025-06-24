@@ -1,0 +1,11 @@
+UPDATING
+
+If you performe any modification in a models.py file, you must execute the migration again:
+    # Convert all new python instructions of each modified sub-app of the project to SQL instructions:
+    # For all apps in the same time:
+    $ python manage.py makemigrations
+    # Or for each of them separately:
+    $ python manage.py makemigrations <subapp_name>
+    
+    # check the files in the sub-app migrations folder, and, if everything is okay, do it:
+    $ python manage.py migrate

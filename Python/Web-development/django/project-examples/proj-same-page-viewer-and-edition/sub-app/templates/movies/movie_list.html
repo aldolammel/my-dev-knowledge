@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}MOVIES{% endblock %}
+
+{% block content %}
+    <h1>MOVIES</h1>
+    {% if movies %}
+        <u>
+            {% for movie in movies %}
+                <li><a href="{% url 'movies:movie_edit_view' movie.id %}">{{ movie.name }} ({{ movie.released_year }})</a></li>
+            {% endfor %}
+        </u>
+        <p><a href="{% url 'movies:movie_add_view' %}">Add a new movie</a></p>
+    {% else %}
+        <p>No movie records available yet.</p>
+        <p><a href="{% url 'movies:movie_add_view' %}">Create your first movie record!</a></p>
+    {% endif %}
+    
+{% endblock %}

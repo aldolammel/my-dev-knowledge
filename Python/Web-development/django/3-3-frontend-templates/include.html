@@ -1,0 +1,31 @@
+<html>
+    <body>
+
+        <!--
+
+            INCLUDE SIMPLE
+
+        -->
+
+        {# This is in project 'templates' folder #}
+        {% include "inc/nav_in.html" %}
+
+
+    </body>
+</html>
+
+<html>
+    <body>
+
+        <!--
+
+            INCLUDE WITH VARIABLE
+
+        -->
+
+        {# This is in sub-app 'templates' folder #}
+        {% include "<subapp_name>/inc/nav_in.html" with var=form.start_date %}
+
+
+    </body>
+</html>

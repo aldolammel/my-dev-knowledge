@@ -1,0 +1,37 @@
+
+
+REQUIREMENTS.TXT FILE:
+
+    >> The 'requirements.txt' file makes the entire installation process of project's dependencies
+        much easier and straightfoward. 
+
+
+    >> How to create it:
+
+        1) In your application folder, with the virtual environment activated, do it:
+
+            Win:
+                $ 
+
+            Linux/Ubuntu:
+                $ pip freeze > requirements.txt
+
+            Mac:
+                $
+
+
+    >> How to use it:
+
+        1) Move the requirements.txt file to the project root;
+
+        2) Once you already got the right virtual environment activated, upgrade the pip:
+
+            /04-Basic-Modules/pip-upgrade.txt
+
+        3) Install the packages at once:
+
+            $ pip install -r requirements.txt
+
+        4) Check if everything is fine:
+
+            $ pip list

@@ -1,0 +1,99 @@
+{% extends "base_pdf.html" %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+{% block title %}
+    {{ page_title }}
+{% endblock title %}
+{% block description %}
+{% endblock description %}
+{% block keywords %}
+{% endblock keywords %}
+{% block css %}    
+    @page {
+        size: A4 landscape;
+        page-orientation: rotate-right;
+        margin: 1cm;
+        bleed: 1cm;
+        background-color: red;
+    }
+    .table-header th,
+    .table-header td {
+        font-size: 1.4em;
+        font-family: 'Times New Roman', serif;
+        font-weight: normal;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    .table-content th {
+        font-weight: bold;
+    }
+    .table-content th,
+    .table-content td {
+        font-size: 1.2em;
+        font-family: 'Times New Roman', serif;
+        text-align: right;
+        padding: 7px 0 3px 3px;
+        border-bottom: 1px dashed #dddddd;
+        border-collapse: collapse; 
+    }
+    .table-footer th,
+    .table-footer td {
+        font-size: 1.2em;
+        font-family: 'Times New Roman', serif;
+        font-weight: normal;
+        padding-left: 0px !important;
+        border-collapse: collapse; 
+    }
+{% endblock css %}
+{% block content %}
+    <table class="table-header">
+        <tr>
+            <th>
+                <strong>{{ report_title }}:</strong> {{ report_length }} | <strong>{{ BRAND_NAME }} xxx</strong>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <strong>{{ user_type }}:</strong> {{ user }} | {% trans "Exported in" %} {{ today }}.
+            </th>
+        </tr>
+        {% comment %} <tr><th>admin@zolacodingschool.com</th></tr>
+        <tr><th>https://zolacodingschool.com</th></tr> {% endcomment %}
+    </table>
+    <hr>
+    <table class="table-content">
+        <thead>
+            <tr>
+                {% for header in table_headers %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for attk in attack_list %}
+                <tr>
+                    {% for attribute in attributes %}
+                        <td>
+                            {% if attk|get_attribute:attribute == True %}
+                                {{ yes|capfirst }}
+                            {# If the attr is 'medicines' and the query has medicine recorded: #}
+                            {% elif attribute == 'medicines' and attk|get_attribute:attribute|length > 0 %}
+                                {{ yes|capfirst }}
+                            {% else %}
+                                {# If the attk attribute results in a None or False, the final result is a "-": #}
+                                {{ attk|get_attribute:attribute|default:"-" }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <table class="table-footer">
+        <tr><td>{{ report_title }} {{ ends }}</td></tr>
+    </table>
+{% endblock content %}
+{% block scripts %}
+{% endblock scripts %}

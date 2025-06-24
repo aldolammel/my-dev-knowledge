@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Content Not Found{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+
+    <h1>Content Not Found</h1>
+    <h2>The content you are trying to access apparently doesn't exist.</h2>
+    <p>If you think there's some mistake happening here, please <a href="mailto:{{ ADMIN_EMAIL }}?subject={{ BRAND_NAME }}: Error404" target="_blank">let us know<a/>.</p>
+
+    <p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'in:home_view' %}">Or return to start page!</a>
+        {% else %}
+            <a href="{% url 'general:home_view' %}">Or return to start page!</a>
+        {% endif %}
+    </p>
+
+{% endblock %}

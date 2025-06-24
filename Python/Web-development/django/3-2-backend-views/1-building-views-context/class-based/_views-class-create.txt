@@ -1,0 +1,36 @@
+
+
+VIEWS CLASSES: USING CREATE INHERIT:
+
+    >> With 'CreateView' you don't need to create a form-class in forms.py when something simple;
+    
+    >> Provides a form for creating a new object and saving it to the database. It uses
+        a model form to handle form validation and object creation;
+
+    >> Perfect when you need to provide a view that allows users to create new objects, 
+        such as submitting a new blog post or registering a new user;
+                
+    
+    E.g.
+
+        from django.views.generic import CreateView
+        from django.urls import reverse_lazy
+
+        class BlogPostCreateView(CreateView):
+            model = <ModelClass>
+            fields = ['title', 'content']
+            template_name = '<HtmlTemplatePath>'
+            success_url = reverse_lazy('blogpost_list')
+
+
+
+    
+    HOW TO USAGE (EXAMPLE):
+    
+        /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-create-usage.py
+
+
+    WHO INHERIT CREATE-VIEW CLASS:
+    
+        >> No one!
+

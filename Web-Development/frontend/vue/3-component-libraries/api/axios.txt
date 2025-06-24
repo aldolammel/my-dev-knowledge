@@ -1,0 +1,26 @@
+
+
+API SOLUTION: AXIOS
+
+    Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a
+    simple to use library in a small package with a very extensible interface.
+    Its strengths include:
+
+    - Automatic JSON transformation
+    - Request/response interceptors
+    - Better error handling than Fetch
+    - Browser and Node.js support
+    - Request cancellation
+    - Built-in CSRF protection
+
+    About: https://axios-http.com/
+
+
+    >> Installing Axios (compatible w/ Vue.js):
+
+        Prompt to request for some AI:
+        "I'm working in a Vue.js + Vite (both in their latest versions) project. I would like to know how to implement Axios as API solution for this project."
+
+
+    >> For simplest solution for JS:
+        /33-Web-development/frontend/javascript/api.txt

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Unauthorized access{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+
+    <h1>Unauthorized access</h1>
+    <h2>It looks like you're trying to access data that doesn't belong to you.</h2>
+    <p>If you think there's some mistake happening here, please <a href="mailto:{{ ADMIN_EMAIL }}?subject={{ BRAND_NAME }}: Error401" target="_blank">let us know<a/>.</p>
+    
+    <p>
+        {% if user.is_authenticated %}
+            <a href="{% url 'in:home_view' %}">Or return to start page!</a>
+        {% else %}
+            <a href="{% url 'general:home_view' %}">Or return to start page!</a>
+        {% endif %}
+    </p>
+
+{% endblock %}

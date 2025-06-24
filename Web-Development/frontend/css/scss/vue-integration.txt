@@ -1,0 +1,33 @@
+
+
+SCSS/SASS: VUE INTEGRATION
+
+    >> CSS Pre-processors using Vue.js + Vite:
+
+        >> .scss/.sass (a Vite built-in solution):
+            
+            # Associating the Vite built-in solution to the project:
+                $ npm add -D sass-embedded
+                    # Verify your SASS dependency in package.json in the root project-folder:
+                        E.g.
+                            {
+                                "devDependencies": {
+                                    "sass-embedded": "^1.89.1",
+                                }
+                            }
+        
+            # In all Vue components using CSS, include the language in Style tag:
+                
+                E.g.:
+                    # .scss/.sass
+                    <style lang="scss" scoped>
+
+            >> More about Vite:
+                https://vite.dev/
+
+
+        >> .less (an alternative Vite built-in solution too):
+            /33-Web-development/frontend/css/less/vue-integration.txt
+
+    >> More about Vue.js:
+        /33-Web-development/frontend/vuejs

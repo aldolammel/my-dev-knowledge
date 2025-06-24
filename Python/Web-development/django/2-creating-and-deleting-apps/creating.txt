@@ -1,0 +1,130 @@
+
+MODEL FIELD REFERENCE:
+https://docs.djangoproject.com/en/5.1/ref/models/fields/
+
+
+
+-----------
+
+CREATING DJANGO APPS*:
+
+    >> (*) Personally, I call 'app' as 'sub-app', meanwhile for me 'app' 
+        (aka 'main-app' or 'project-folder') is the project itself.
+
+            E.g. Django Project Structure:
+
+                >Project-folder (it's the 'main-app' / the root folder)
+                    >core (it's the config-folder, sometimes with the same name of the project)
+                        -settings.py (where you register all sub-apps in use)
+                        ...
+                    >sub-app1-folder
+                        ...
+                    >sub-app2-folder
+                        ...
+                    >sub-app3-folder
+                        ...
+                    ...
+                    -manage.py
+
+
+    >> Basic to know:
+        
+        >> file 'models.py' = this file represents through classes each table and its columns 
+            to be created for a specific sub-app. Most part of tweaks here will result
+            a 'makemigrations' command necessity followed by 'migrate' one.
+        
+        >> command 'makemigrations' = it's responsible for planning the new features on the db
+            based on the changes you have made to your models;
+        
+        >> command 'migrate' = it's responsible for applying and/or unapplying migrations already
+            planned by 'makemigrations' command.
+
+        
+    1) In project-folder (root), create each sub-app you need:
+    
+        $ python manage.py startapp <subapp_name>
+        or
+        $ uv run manage.py startapp <subapp_name>
+
+
+    2) Through the views.py into each sub-app created, add a function for the index page to that 
+        sub-app;
+            
+            from django.http import HttpResponse
+            def index(request):
+                return HttpResponse('<name of the sub-app>')
+
+
+    3) Create the urls.py file into each new sub-app, and add the 'urlpatterns' list in each
+        new urls.py files:
+        
+            from django.urls import path
+            from . import views
+            urlpatterns = [path('', views.index)]
+
+
+    4) Go to your config-folder (often the same name of the project) and open its urls.py file
+        and include each sub-app URL references right after the admin line:
+            
+            from django.contrib import admin
+            from django.urls import path, include
+
+            urlpatterns = [
+                # DJANGO URLS:
+                path('admin/', admin.site.urls),
+                # THIRD-PARTY URLS:
+                # Reserved space...
+                # PRODUCT URLS:
+                path('', include('general.urls')),
+                path("<subapp_name>/", include("<subapp_name>.urls")),
+                path("<subapp_name>/", include("<subapp_name>.urls")),
+            ]
+
+
+    5) Create these folders and file into the new sub-app folder:
+        
+        /<subapp_name>/templates/
+        /<subapp_name>/templates/<subapp_name>(convention)/
+        /<subapp_name>/templates/<subapp_name>/temp.html  <- only for GitHub to create the folder.
+
+
+    6) Still in config-folder, go to 'settings.py' file and add each sub-app name in
+        the 'INSTALLED_APPS' list.
+        
+            # Application definition
+            # About each Installed Apps here: 
+            # <Engineering Data document hyperlink here!!!>
+            INSTALLED_APPS = [
+                # DJANGO DEFAULT SUB-APPS:
+                'django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',
+                # DJANGO ADDITIONAL SUB-APPS:
+                # Reserved space...
+                # THIRD-PARTY SUB-APPS:
+                # Reserved space...
+                # <PRODUCT_NAME> ORIGINAL SUB-APPS:
+                '<project_subapp1_name>',
+                '<project_subapp2_name>',
+            ]
+
+
+    7) If you will create/add something now in models.py file, after that, you need to do these steps:
+            
+        # Ask to Django convert the objects in models to db instructions:
+        # Convert for all new sub-apps:
+        $ python manage.py makemigrations   OR    $ uv run manage.py makemigrations
+        # Or for a specific one:
+        $ python manage.py makemigrations <subapp_name>   OR    $ uv run manage.py makemigrations <subapp_name>
+        
+        # Now, check your app migrations folder to see if the instructions are okay.
+        
+        # Next, if you gave a green light, ask Django to execute the instructions:
+        $ python manage.py migrate
+        or
+        $ uv run manage.py migrate
+
+        

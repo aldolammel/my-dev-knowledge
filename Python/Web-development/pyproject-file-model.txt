@@ -1,0 +1,27 @@
+# PYPROJECT.TOML FILE:
+
+[project]
+name = "xxxxxxxxxxxxxxxxxx"
+version = "0.1.0"
+description = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "Aldo Lammel", email = "aldolammel@gmail.com"}
+]
+maintainers = [
+    {name = "Aldo Lammel", email = "aldolammel@gmail.com"}
+]
+keywords = ["xxxx", "cccccc", "vvvvvvv"]
+classifiers = [
+    "Development Status :: 4 - Beta"
+]
+dependencies = []
+[dependency-groups]
+dev = []
+[project.urls]
+"Homepage" = "https://xxxxxxxxxxxxxxxxxxx"
+"Repository" = "https://github.com/xxxxxxxxxxx/"
+"Documentation" = "https://github.com/xxxxxxxxxxxxxxx/README.md"
+"Bug Tracker" = "https://not-applied"

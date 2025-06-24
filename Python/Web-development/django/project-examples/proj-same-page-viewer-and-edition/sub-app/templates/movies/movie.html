@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    
+    <h1>{{ title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <hr />
+
+        <button type="submit">{{ bt_submit }}</button>
+        <a href="{% url 'movies:movie_list_view' %}">Cancel</a>
+    </form>
+    
+{% endblock %}

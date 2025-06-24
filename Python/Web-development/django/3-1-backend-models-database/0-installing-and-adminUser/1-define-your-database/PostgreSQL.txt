@@ -1,0 +1,100 @@
+
+
+POSTGRESQL
+
+    1) Install the PostgreSQL Python module:
+        https://www.psycopg.org/
+
+
+    2) If the database won't be in the cloud, install the PostgreSQL locally:
+        Go to the folder: 
+            /34-database/PostgreSQL/0-installing-and-updating/
+
+    
+    3) (Skip it if you'll use an existent settings.py model later)
+        Go to your project folder and open the settings.py file and add these lines
+        in the right place:
+
+            from pathlib import Path
+            import environ
+            
+            # App Essential Settings:
+            BASE_DIR = Path(__file__).resolve().parent.parent  # project base directory.
+            environ.Env.read_env(BASE_DIR / '.env')  # Take environment variables from .env file.
+            env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
+            SECRET_KEY = env('SECRET_KEY')
+            DEBUG = env('DEBUG')
+            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+
+            if DEBUG:
+                print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))
+                print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))
+                print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))
+
+
+        >> If local database:
+
+            # Database
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': env('DATABASE_NAME'),
+                    'USER': env('DATABASE_USER'),
+                    'PASSWORD': env('DATABASE_PASSWORD'),
+                    'HOST': env('DATABASE_HOST'),
+                    'PORT': env('DATABASE_PORT'),
+                }
+            }
+
+
+        >> If cloud database:
+
+            # Database
+            DATABASES = {
+                # The db() method is an alias for db_url().
+                'default': env.db_url('DATABASE_URL'),
+            }
+
+
+    4) Still in settings.py file, right after the "ALLOWED_HOST" or "if DEBUG:" line, add:
+
+        # Application definition
+        # ABCOO - About each Installed Apps here:
+        # TODO: <Product Engineering Data Document link here!>
+        INSTALLED_APPS = [
+            # DJANGO DEFAULT SUB-APPS:
+            ...
+            # DJANGO ADDITIONAL SUB-APPS:
+            'django.contrib.postgres',  # Expands the postgres options.
+            # THIRD-PARTY SUB-APPS:
+            ...
+            # PROJECT ORIGINAL SUB-APPS:
+            ...
+        ]
+
+
+    
+    5) Make a copy of '.env' file to the project root folder:
+        
+        /31-Environment-Variables/
+
+        >> customize the .env as needed following the step-3 variables right above!
+
+
+    6) If you see the file sqlite.db in the project root folder, delete it;
+
+
+    7) If you are installing a new Django project or re-installing a new database, return to the
+        previously installation checklist because other steps are needed before to migrate command.
+
+        Otherwise, if it's not the case, in a new Terminal window, select the virtual environment
+                    again and give the order to build the database, finally:
+        
+                        $ python manage.py makemigrations
+                        $ python manage.py migrate
+                        
+                        or
+
+                        $ uv run manage.py makemigrations
+                        $ uv run manage.py migrate
+    

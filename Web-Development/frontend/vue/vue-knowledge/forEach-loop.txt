@@ -1,0 +1,4 @@
+
+
+Vue uses the JS forEach:
+    /33-Web-development/frontend/javascript/forEach-loop.js

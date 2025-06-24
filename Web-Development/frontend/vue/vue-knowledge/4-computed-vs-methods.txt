@@ -1,0 +1,31 @@
+
+
+COMPUTED PROPERTIES VS METHODS:
+
+
+    Basically, both do the same, but:
+
+
+        >> Computed Properties:
+
+            - Better performance because they only are recalculated if their
+                variables (dependencies too) are updated;
+
+
+        >> Methods:
+        
+            - Each interation the methods are recalculated;
+
+
+
+
+
+MORE ABOUT THEM:
+    
+    >> Composition API:
+        /33-Web-development/frontend/vue/vue-knowledge/using-composition-api/_computed.vue
+        /33-Web-development/frontend/vue/vue-knowledge/using-composition-api/_methods.vue
+    
+    >> Options API:
+        /33-Web-development/frontend/vue/vue-knowledge/using-options-api/_option-computed.vue
+        /33-Web-development/frontend/vue/vue-knowledge/using-options-api/_option-methods.vue

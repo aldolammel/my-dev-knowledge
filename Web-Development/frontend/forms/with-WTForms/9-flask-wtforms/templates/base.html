@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    {% block styles %}
+      <!-- Load Bootstrap-Flask CSS + Link to styles.css to apply styling to all the child templates -->
+      {{ bootstrap.load_css() }}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+      {% block footer %}
+
+      {% endblock %}
+    </footer>
+
+    <!-- Load Bootstrap-Flask JS to apply effects to all the child templates -->
+    {{ bootstrap.load_js() }}
+  </body>
+</html>

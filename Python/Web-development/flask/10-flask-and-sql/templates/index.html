@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Palaského Coffee Shop{% endblock %}
+
+{% block content %}
+    <h2>Coffees</h2>
+    {% if not items %}
+        <p>There's no any item on the coffee menu yet. Add some!</p>
+    {% else %}
+        <ul>
+            {% for item in items %}
+                <li><strong>{{ item.name }}</strong> ({{ item.country }}) | <a href="{{ url_for('go_edit', id=item.id) }}">Edit</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <p><a href="{{ url_for('go_add') }}" target="_self">Add New Coffee</a></p>
+{% endblock %}

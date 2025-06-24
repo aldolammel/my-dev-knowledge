@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>CALLING A FORM IN A TEMPLATE</h1>
+    
+    <form action="/" method="POST">
+
+        {% csrf_token %}
+
+        {# This loop will print out each form field in that pattern #}
+        {% for field in form %}
+            <div class="form-control {% if field.errors %}errors{% endif %}">
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+            </div>
+        {% endfor %}
+
+        <button type="submit">Send</button>
+
+    </form>
+    
+{% endblock content %}

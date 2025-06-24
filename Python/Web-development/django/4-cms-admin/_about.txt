@@ -1,0 +1,33 @@
+
+
+DJANGO ADMIN (CMS)
+
+    >> The CMS is divided by this areas:
+
+        1) Home: 
+
+            It's a page where you get a resume of the CMS options:
+            
+                http://localhost:8000/admin/
+
+
+
+        2) List view: 
+        
+            When you click on a CMS menu option, you'll be taken to a list page where 
+            all entries of one type of data in the database is shown. 
+            
+            E.g., User list: 
+
+                http://localhost:8000/admin/auth/user/
+
+
+
+        3) Detail view:
+
+            When you click on an options listed in some List view, you'll be taken to a page with
+            all data about that specific listed entry you previously have clicked.
+
+            E.g., a specific User detail:
+
+                http://localhost:8000/admin/auth/user/3/change/

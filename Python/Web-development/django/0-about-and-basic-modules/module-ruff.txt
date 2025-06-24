@@ -1,0 +1,34 @@
+
+
+RUFF (Python Linter and code formatter)
+
+    >> You need to use UV package to use Ruff!
+        /00-New-Project/1-new-project-with-uv-package.txt
+
+    >> Already in the right virtual env, installing Ruff to the project:
+        $ uv add ruff
+
+    >> Create a list of error exceptions in the pyproject.toml file:
+        
+        >> If you don't have the file yet, create it:
+            /33-Web-development/pyproject-file-model.txt
+
+        >> Apply the error exceptions section:
+        
+            [tool.ruff.lint]
+            ignore = []  # add an error-type like "F401" (with quotes!) to create exceptions.
+
+    
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    
+    >> HOW TO CHECK CODE ERRORS:
+        $ uv run ruff check
+
+
+    >> HOW TO FIX CODE ERRORS AUTOMATICALLY:
+        $ uv run ruff check --fix
+
+
+    >> HOW TO FIX CODE FORMATTING:
+        $ uv run ruff format

@@ -1,0 +1,50 @@
+
+
+    POSTGRESQL: LISTING DATABASE AVAILABLE
+
+
+        >> Windows:
+
+            # Getting-in the PosgreSQL prompt:
+            $ psql -U postgres
+
+            #In the PosgreSQL prompt:
+            $ psql
+            $ \l
+
+            >> To show the database port:
+
+                #In the PosgreSQL prompt:
+                $ SHOW port;              <-- the ';' is needed!
+
+
+
+        >> Ubuntu:
+
+            # Getting-in the PosgreSQL prompt:
+            $ sudo -i -u postgres
+
+            #In the PosgreSQL prompt:
+            $ psql
+            $ \l
+
+            >> To show the database port:
+                
+                #In the PosgreSQL prompt:
+                $ SHOW port;            <-- the ';' is needed!
+
+
+
+        >> Mac: 
+
+            # Getting-in the PosgreSQL prompt:
+            $ sudo -i -u postgres
+            
+            # In the PosgreSQL prompt:
+            $ psql
+            $ \l
+
+            >> To show the database port:
+                
+                #In the PosgreSQL prompt:
+                $ SHOW port;                 <-- the ';' is needed!

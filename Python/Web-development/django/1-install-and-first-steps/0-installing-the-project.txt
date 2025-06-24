@@ -1,0 +1,254 @@
+
+
+INSTALLING DJANGO:
+
+    0) If you are RE-installing Django, skip all of this, and following only this one:
+
+        /33-Web-development/backend/python/django/1-install-and-first-steps/reinstall-new-django-copy.txt
+
+
+    1) Create the project folder, and get it:
+
+        $ mkdir <project_folder>
+        $ cd <project_folder>
+
+
+    2) Define the method to install Django:
+
+        2A) Using UV package (recommended, more professional)!
+        2B) Or using common method (pip).
+
+        ..........................
+    
+        2A) Using UV package:
+            If you want to use the UV package, follow this:
+            /33-Web-development/backend/python/django/1-install-and-first-steps/1-install-with-uv-package.txt
+
+        2B) Using common method (pip):
+
+            2B.1) Create the virtual environment and active it:
+                /03-Virtual-Environment/
+
+            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and other things!
+                
+            2B.3) Installation:
+
+                >> The same for Ubuntu and Windows:
+
+                    >> Update pip module:
+                        /04-Basic-Modules/pip-upgrade.txt
+
+                    >> Install Django:
+                        $ pip install django
+
+                    >> Check the current django installed:
+                        $ python -m django --version
+
+                    >> upgrade django if needed;
+                        $ python -m pip install --upgrade pip
+                
+
+                Only for VSCode:
+                    # DjLint (html template formatter for django/jinja)
+                    $ pip install -U djlint
+                    
+                    # Install the DjLint extension for VSCode.
+                    # Install the Django (by Baptiste) extension for VSCode.
+                    # In VSCode, In Html's, change the language mode to 'Django-Html'
+
+
+    3) Create the Django Project Structure:
+
+        # make sure you're in project root folder and:
+        $ django-admin startproject core .          <-- This dot's important!
+        Or
+        $ uv run django-admin startproject core .   <-- This dot's important!
+
+
+    4) Make sure you're in the same folder the 'manage.py' file, and then start the django
+        
+        4.1) for testing purposes:
+
+            # 1/3:
+            $ python manage.py migrate
+            or
+            $ uv run manage.py migrate
+
+            # 2/3:
+            $ python manage.py runserver
+            or
+            $ uv run manage.py runserver
+
+            # 3/3:
+            http://localhost:8000/
+
+        4.2) Create the project information file:
+
+            - Create: 'pyproject.toml' in the project root;
+            - Template of the file content:
+                /33-Web-development/pyproject-file-model.txt
+
+
+    5) Through the Config-folder (e.g. "core"), open the settings.py file:
+    
+        x.1) (Skip it if you'll use an existent settings.py model later)
+            Organize the settings.py header:
+
+            # App Essential Settings:
+            BASE_DIR = ...
+            SECRET_KEY = ...
+            DEBUG = ...
+            ALLOWED_HOSTS = ...
+
+
+        x.2) Prepare a Global Context with the Essential info about the app:
+                /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/global-context.txt
+        
+
+        x.3) Still in settings.py file, if you WON'T use the SQLite as database:
+
+                >> If you'll use an settings.py model later, save this SECRET KEY to use in the
+                    new settings.py later!
+
+
+        x.4) Define your database:
+            /33-Web-development/backend/python/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
+
+
+    6) Set the environment variables and create your .env file:
+        /33-Web-development/backend/python/django/1-install-and-first-steps/environment-variables-django.py
+
+
+
+    7) Create the main 'templates' folder in the project-folder (Don't mistake with the core-folder):
+
+        E.g. Django Project Structure:
+
+            >Project-folder (it's the 'main-app' / the root folder)
+                >.venv
+                >core (it's the config-folder, sometimes with the same name of the project)
+                    -settings.py (where you register each sub-app in use)
+                    ...
+                >sub-app1-folder
+                    ...
+                >sub-app2-folder
+                    ...
+                >sub-app3-folder
+                    ...
+                >media-folder
+                    ...
+                >static-folder
+                    ...
+                -manage.py
+                ...
+
+
+    8) Create the 'static' folder in the project-folder too!
+
+        >> In static-folder, create a 'css' folder and a 'js' folder.
+        >> in css-folder, create a 'main.css' file.
+        >> in js-folder, create a 'main.js' file.
+
+
+    9) Create the 'media' folder in the project-folder too!
+
+        >> Keep it empty for now.
+
+
+    10) Create basic sub-apps in the project's application:
+
+        x.1) (Skip it if you'll use an existent settings.py model later) 
+            Show to Django where will be each template folder in your sub-apps, going to the
+            core-folder 'settings.py' file and editing this line in 'template' list:
+                
+                From:
+                    'DIRS': [],
+                To:
+                    'DIRS': [BASE_DIR / 'templates'],
+
+
+        x.2) If you want to use a settings.py model file, now is the time!
+            /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/core/settings.py
+            
+            >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
+                file when you bring it to your project!
+
+            >> Keep commented the Installed sub-apps for now!
+
+
+        x.3) Adding sub-apps:
+
+            
+            
+            >> How to create a sub-app:
+                /33-Web-development/backend/python/django/2-creating-and-deleting-apps/creating.txt
+
+
+            >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!!)
+                'general' sub-app:
+                About: /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/general/_readme.txt
+                
+                g.1) Bring the basic sub-app files and templates-folder too:
+                    
+                    /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/general/
+
+                g.2) Include it in the INSTALLED_APPS in the settings.py file!
+                g.3) Makemigrations and migrate!
+                g.4) Test it!
+
+
+            >> Do you need user management through the application front-end too?
+
+                >> If not:
+                    /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
+
+                >> If so:
+                    /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/2-extending-users.txt
+
+
+                    >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)
+                    'in' sub-app:
+                    About: /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/in/_readme.txt
+                    
+                    i.1) Bring the basic sub-app files and templates-folder too:
+                        
+                        /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/in/
+
+                    i.2) Include it in the INSTALLED_APPS in the settings.py file!
+                    i.3) Makemigrations and migrate!
+                    i.4) Test it!
+
+
+    11) Creating the admin user:
+        
+        $ python manage.py createsuperuser
+        or
+        $ uv run manage.py createsuperuser
+
+        # Now, try to login, making sure the main-app is running:
+        $ python manage.py runserver
+        or 
+        $ uv run manage.py runserver
+
+        # Go to:
+        http://localhost:8000/admin/
+
+
+
+    12) (Skip it if you'll use an existent settings.py model later)
+        Will this project have more than one language?
+
+            If not, add in your settings.py:
+                USE_I18N = False
+                
+            Otherwise:
+                /33-Web-development/backend/python/django/8-translate-and-internationalization/starting-translation.txt
+    
+
+    13) Optionals:
+
+        x.1) Will you use file upload?
+            /33-Web-development/backend/python/django/5-uploads/files/
+
+        x.2) Will you use imagem upload?
+            /33-Web-development/backend/python/django/5-uploads/images/

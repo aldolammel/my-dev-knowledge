@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do List</title>
+    </head>
+
+    <body>
+        
+        <main id="app">
+            
+            <section class="todo-list">
+                
+                
+                <h3>To-Do List</h3>
+                
+                <div class="all-todos">    
+                    <div 
+                        v-for="task in tasks"
+                        class="single-todo"
+                        :class="{ done : task.isDone }"
+                        @click="task.isDone = !task.isDone; storingTasks()"
+                    >
+                    <!--
+                        ABOUT THE DIV ABOVE:
+
+                        # looping to check each task in the tasks array:
+                        v-for="task in tasks"
+
+                        # Regular css-class for this DIV:
+                        class="single-todo"
+
+                        # CSS-class changes/adding in case of the task is done:
+                        :class="{ done : task.isDone }"
+
+                        # If Event Click takes place, the task status change to its opposite status:
+                        @click="task.isDone = !task.isDone; storingTasks()"
+                    -->
+                        <p>{{ task.title }}</p>
+                    </div>
+                </div>
+                
+                <!-- If tasks.length is empty, this button is NOT shown -->
+                <button class="clear" @click="tasksClean(); storingTasks()" v-if="tasks.length">
+                    Remove all
+                </button>
+
+                <!-- Important to create a form tag to make the Enter key to work properly -->
+                <form @submit.prevent="taskAdding(); storingTasks()">
+                    <input type="text" placeholder="..." v-model="newTask.title">
+                    <button class="add" type="submit">
+                        Add task
+                    </button>
+                </form>
+            </section>
+
+        </main>
+         <!-- CDN VUE - START -->
+         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+         <!-- CDN VUE - END -->
+        <script src="scripts.js"></script>
+    </body>
+
+</html>

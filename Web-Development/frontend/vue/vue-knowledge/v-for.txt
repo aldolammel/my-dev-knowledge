@@ -1,0 +1,55 @@
+
+
+DIRECTIVE: V-FOR
+
+
+    >> It's accepted for: array, object, number, string, iterable.
+
+    >> Examples:
+        <div v-for="item in items">
+            {{ item.text }}
+        </div>
+
+        >> In v-for, that 'items' is a computed-property that comes from the <script> layer of
+            the same .vue file where that v-for is!
+
+        >> Best practice: always when you use for-loop, use also the v-bind in order to define
+                            an iteration ID for each repeatition.
+
+                            E.g.
+                                <div 
+                                    v-for="(item, idx) in items"
+                                    :key="idx"
+                                >
+                                    {{ item.text }}
+                                </div>
+
+        >> forEach(), for(), find(), some() in JS (you could apply it as a function via script layer
+            of a Vue component):
+                /33-Web-development/frontend/javascript/for.js
+                /33-Web-development/frontend/javascript/forEach-loop.js
+                /33-Web-development/frontend/javascript/some.js
+                /33-Web-development/frontend/javascript/find.js
+
+
+    >> HOW TO USE V-FOR WITH V-IF:
+
+        >> Beginner solution:
+            
+            <tbody>
+                <tr v-for="p in products">
+                    <td v-if="p.active">{{ p.quantity }}x {{ p.name }}</td>
+                    <td v-if="p.active">{{ p.quantity * p.price }}</td>
+                </tr>
+            </tbody>
+
+        >> Professional solution:
+
+            <tbody>
+                <tr v-for="p in products">
+                    <template v-if="p.active">
+                        <td>{{ p.quantity + 'x ' + p.name }}</td>
+                        <td>{{ (p.quantity * p.price).toFixed(2) }}</td>
+                    </template>
+                </tr>
+            </tbody>

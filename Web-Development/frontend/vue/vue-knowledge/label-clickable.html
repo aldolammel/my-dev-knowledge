@@ -1,0 +1,19 @@
+<!-- 
+    The label of each input from a for-loop is clickable!
+-->
+<template
+    v-for="(answer, idx) in answers"
+    :key="idx"
+>
+    <input
+        :id="`answr_${idx}`"
+        v-model="chosenAnswer"
+        type="radio"
+        name="options"
+        :value="answer"
+    >
+    <label
+        :for="`answr_${idx}`"
+        v-html="answer"
+    /><br>
+</template>
