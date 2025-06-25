@@ -18,7 +18,7 @@
                 >> For VSCode:
                     https://marketplace.visualstudio.com/items?itemName=Vue.volar
 
-                >> For xxxxxxxx:
+                >> For PyCharm:
                     xxxxxxxxxxxxxxxxxxxxxxxxxx
 
         

@@ -1,11 +1,11 @@
 
 
-VUE.JS KNOWLEDGE
+VUE.JS DEEPER KNOWLEDGE
 
-    >> What is Vue.js:
-        /33-Web-development/frontend/vue/vue-knowledge/_about.txt
+    >> What is Vue.js (basic):
+        /Web-Development/frontend/vue/vue-knowledge/_about.txt
 
-    >> Two main vue-cores:
+    >> Two main Vue-cores:
         
         1) Declarative Rendering:
             Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
@@ -34,7 +34,7 @@ VUE.JS KNOWLEDGE
     
 
     >> Vue logic structure:
-        /33-Web-development/frontend/vue/vue-knowledge/vue_structure.png
+        /Web-Development/frontend/vue/vue-knowledge/1-vue-structure.txt
 
     
     >> With Vue.js, part of the work is done in JavaScript file, and another part
@@ -42,11 +42,11 @@ VUE.JS KNOWLEDGE
 
 
     >> To create a Vue.js project, you will need a Build-Tool. Here is some options:
-        /33-Web-development/frontend/vue/vue-knowledge/1-build-tools.txt
+        /Web-Development/frontend/vue/vue-knowledge/1-build-tools.txt
 
 
     >> DECLARATIVE RENDERING
-        It's the same as 'Template variable' in Django Templates.
+        It's the same as 'Template variable' in Django Templates, for example.
         You can use this only in HTML elements/tags, but never in their attributes (more about it,
         next).
 

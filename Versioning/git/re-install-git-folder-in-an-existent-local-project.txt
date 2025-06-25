@@ -1,6 +1,6 @@
 
 
-RE-INSTALL THE GIT IN THE EXISTENT LOCAL PROJECT FOLDER:
+RE-INSTALL THE .GIT FOLDER IN AN EXISTENT LOCAL PROJECT FOLDER:
 
     You can reconnect your local project folder to the existing GitHub repository by re-initializing
     Git and adding the remote repository. So execute these 2 steps carefully:

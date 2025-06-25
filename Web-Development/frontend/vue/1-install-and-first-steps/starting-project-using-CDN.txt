@@ -1,0 +1,55 @@
+
+
+1) In your main HTML file, add the CDN script before you call the main script file URL:
+                
+    <!-- Main HTML file -->
+    <html>
+        ...
+        <body>
+            ...
+
+            <!-- Vue CDN -->
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            
+            <!-- Main JS file -->
+            <script src="app.js"></script>
+        </body>
+    </html>
+
+
+2) Create the JS file where you will write the Vue logic - app.js:
+
+    Vue.createApp({
+        data() {
+            // Always need to return an object:
+            return {
+                // Piece of data that Vue is aware of:
+                arrayExample: [],
+                anInputInitialValue: ''
+            };
+        },
+        methods: {
+            myFunctioForSomething() {
+                this.arrayExample.push(this.anInputInitialValue);
+            }
+        }
+    // this '.mount' is where Vue must create the app written above:
+    }).mount('#app');  
+
+
+3) Back again to the Main HTML file, set which DIV has the ID 'app'! It's there where
+    Vue will work on. 
+
+
+4) To test and run the Vue using the CDN solution, you'll use:
+
+    >> For IDE VSCode: Live Server extension
+        https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+    >> For IDE PyCharm: xxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+>> Back to the installation instructions:
+
+    /Web-Development/frontend/vue/1-install-and-first-steps/create-vue-project.txt

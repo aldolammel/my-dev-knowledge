@@ -32,7 +32,7 @@ VUE.JS: ITS FILE AND FOLDER STRUCTURE
         >> <SCRIPT> layer:
             
             >> There are 2-ways to code components, using 'Options API' or 'Component API':
-                /33-Web-development/frontend/vue/4-component-approach.txt
+                /Web-Development/frontend/vue/vue-knowledge/3-approaches-to-code.txt
 
             >> xxxxxxx
 
@@ -59,8 +59,8 @@ VUE.JS: ITS FILE AND FOLDER STRUCTURE
 
 
 >> MORE ABOUT:
-    /33-Web-development/frontend/vue/0-general.txt
+    /Web-Development/frontend/vue/vue-knowledge/0-overview-deep-knowledge.txt
 
 
 >> INSTALL A VUE PROJECT:
-    /33-Web-development/frontend/vue/1-install-and-first-steps/_installation.txt
+    /Web-Development/frontend/vue/1-install-and-first-steps/_installation.txt

@@ -17,7 +17,7 @@
 -->
 
 <template>
-  <!-- By convention, in Options API approach, template layer should be the first layer -->
+	<!-- By convention, in Options API approach, template layer should be the first layer -->
 </template>
 
 <script>
@@ -26,26 +26,37 @@
 
 	export default {
 		// Component name (optional but recommended)
-		name: 'MyComponent',
+		//name: 'MyComponent',
 
 		// Component state/data
 		data() {
 			// 'return' here always need to return an JS obj "{}":
 			return {
 				// Piece of data that Vue is aware of:
-				myString: 'Hello World',  // ...... storing a string.
-				myArray: ['one', 'two'], // ....... storing an array.
-				myBool: true,  // ................. storing a boolean.
-				myNum: 123,  // ................... storing an integer.
-				myObj: {}  // ..................... storing an object.
+				count: 0,
+				user: null
 			}
+		},
+
+		// Computed properties
+		// /Web-Development/frontend/vue/vue-knowledge/using-options-api/_option-computed.vue
+		computed: {
+			doubleCount() {
+				return this.count * 2
+			}
+		},
+
+		// Lifecycle hooks
+		// /JavaScript/Web-development/frontend/lifecycle-hooks.js
+		mounted() {
+			console.log('Component is mounted!')
 		},
 
 		// Methods/functions
 		// /Web-Development/frontend/vue/vue-knowledge/using-options-api/_option-methods.vue
 		methods: {
-			updateMessage() {
-				this.myString = 'Updated!'
+			increment() {
+				this.count++
 			}
 		}
 	}
