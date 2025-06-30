@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics | Aldo Lammel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Calling the Vue CDN (2025) -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Where the Vue is configured -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="assignment">
+      <!-- your name -->
+      <h2>{{ name }}</h2>
+      
+      <label>Your age:</label>
+      <p>{{ userAge() }}</p>
+      
+      <label>And 5 year later:</label>
+      <p>{{ userAge(2030) }}</p>
+
+      <label>Random number between 0 and 1:</label>
+      <p>{{ Math.random().toFixed(2) }}</p>
+      <div>
+        <!-- 5) Display some image you found via Google -->
+        <img :src="img" />
+      </div>
+      <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
+      <input type="text" :value="name" class="txt-center" />
+    </section>
+  </body>
+</html>

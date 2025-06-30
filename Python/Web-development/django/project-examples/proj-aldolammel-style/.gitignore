@@ -208,7 +208,16 @@ media
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
+### CSS ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+*.scssc
+#*.less
+
 # User-specific stuff
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
@@ -319,10 +328,10 @@ pyvenv.cfg
 pip-selfcheck.json
 
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
 *.code-workspace
 
 # Local History for Visual Studio Code

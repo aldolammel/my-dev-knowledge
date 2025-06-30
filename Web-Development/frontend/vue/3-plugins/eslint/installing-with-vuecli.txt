@@ -3,3 +3,12 @@
 ESLINT: INSTALLING IT WITH VUE-CLI
 
     The Own Vue-CLI has this Linter as option on the project setup's scaffolding manager!
+
+
+    >> In case of Git versioning, add it in your .gitignore file:
+
+        ### NODE.JS ###
+        ...
+        
+        # Optional eslint cache
+        .eslintcache

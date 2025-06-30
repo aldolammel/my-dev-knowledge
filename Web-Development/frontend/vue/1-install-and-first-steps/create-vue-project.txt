@@ -4,12 +4,12 @@ CREATING A VUE PROJECT:
 
 
     0) If Node.js, and Node Version Manager are installed, ignore this step. Otherwise:
-        /33-Web-development/frontend/vue/1-install-and-first-steps/_installation.txt
+        /Web-Development/frontend/vue/1-install-and-first-steps/_installation.txt
 
 
     0.1) You are working in an existent Vue project? If so, about these next steps,
         following just this one:
-            /33-Web-development/frontend/vue/1.1-install-existent-project/installing-an-existent-project.txt
+            /Web-Development/frontend/vue/1.1-install-existent-project/installing-an-existent-project.txt
 
 
     1) Define how you will implement Vue.js in your project:
@@ -23,12 +23,21 @@ CREATING A VUE PROJECT:
 
             /Web-Development/frontend/vue/1-install-and-first-steps/starting-project-using-CDN.txt
 
+            >> Project example using CDN:
+
+                /Web-Development/frontend/vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
+
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         1.2) Installing a Vue Frontend-Build-Tool to create a Vue project (RECOMMENDED):
             
             /Web-Development/frontend/vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
+
+            >> Project example using Vue local solution:
+                It's the same of any CDN example but without the HTML head CDN script URL, demanding
+                a Vue local installation via terminal.
+
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
@@ -38,11 +47,33 @@ CREATING A VUE PROJECT:
 
     3) (Optional) Make sure you got the .gitignore updated:
 
-        ### Node.js + Vue.js ###
+        ### Node.js ###
         node_modules/
-        dist/
-        npm-debug.log
-        yarn-error.log
+        jspm_packages/
+        dist/                         <-- Aware: probably duplicated!
+        dist-ssr/
+        logs
+        *.log                         <-- Aware: probably duplicated!
+        npm-debug.log*
+        yarn-debug.log*
+        yarn-error.log*
+        lerna-debug.log*
+        .pnpm-debug.log*
+        # Yarn Integrity file
+        .yarn-integrity
+        # yarn v2
+        .yarn/cache
+        .yarn/unplugged
+        .yarn/build-state.yml
+        .yarn/install-state.gz
+        .pnp.*
+
+        ### Vue.js ###
+        .vuepress/dist
+
+
+        3.1) Check if the .gitignore is NOT duplicated along the project child folder.
+            For example, Vue installation by Vite will create a git file in vue root folder!
 
 
     4) Start your work through the "src" (source) folder;

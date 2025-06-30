@@ -122,6 +122,8 @@ NOJE.js
 
     x) (Optional) Make sure you got the .gitignore updated:
 
+        .idea/
+        
         ### Node.js ###
         node_modules/
         jspm_packages/

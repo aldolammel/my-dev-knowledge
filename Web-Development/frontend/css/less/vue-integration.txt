@@ -27,7 +27,7 @@ LESS: VUE INTEGRATION
 
 
         >> .scss/.sass (an alternative Vite built-in solution too):
-            /33-Web-development/frontend/css/scss/vue-integration.txt
+            /Web-Development/frontend/css/scss/vue-integration.txt
 
     >> More about Vue.js:
-        /33-Web-development/frontend/vuejs
+        /Web-Development/frontend/vue/

@@ -3,7 +3,7 @@
 ESLINT: INSTALLING IT WITH VITE
 
     0) How to install Vue+Vite in a project:
-        /33-Web-development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
+        /Web-Development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
 
     1) Installing the ESLint and its plugins as the Dev dependence only:
         $ npm install -D eslint eslint-plugin-vue vite-plugin-eslint @eslint/js
@@ -13,7 +13,7 @@ ESLINT: INSTALLING IT WITH VITE
                 "eslint-plugin-vue": "^10.2.0",
                 "vite-plugin-eslint": "^1.8.1"
 
-    2) Create ESLint configuration adding this file on the project root:
+    2) Create ESLint configuration adding this file on the Vue project root:
         eslint.config.js
             # Its content:
             
@@ -73,3 +73,11 @@ ESLINT: INSTALLING IT WITH VITE
                     cache: false
                 })
             ],
+
+    5) (Optional) In case of Git versioning, add it in your .gitignore file:
+
+        ### NODE.JS ###
+        ...
+
+        # Optional eslint cache
+        .eslintcache

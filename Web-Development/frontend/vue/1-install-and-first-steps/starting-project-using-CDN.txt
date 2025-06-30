@@ -50,6 +50,8 @@
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
+
 >> Back to the installation instructions:
 
     /Web-Development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
+

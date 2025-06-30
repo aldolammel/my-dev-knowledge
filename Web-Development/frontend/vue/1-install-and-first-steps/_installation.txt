@@ -3,9 +3,19 @@
     VUE.JS (FULL) INSTALLATION:
 
 
+        0) In case your project will have a back-end:
+
+            >> Django Backend headups:
+                /Web-Development/frontend/vue/1-install-and-first-steps/backend-python-django.txt
+                
+            
+            >> No backend or Vue.js will be the full solution, keep going anyway...
+
+
+
         1) Install Node.js (dependence):
 
-            /33-Web-development/backend/javascript/nodejs/installation-and-basic.txt
+            /JavaScript/Web-development/backend/nodejs/installation-and-basic.txt
 
 
         
@@ -23,7 +33,7 @@
 
         
                 
-        2) Install the Vue built-tool and Create the Vue.js project:
-            /33-Web-development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
+        2) Install the Vue build-tool and Create the Vue.js project:
+            /Web-Development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
 
             

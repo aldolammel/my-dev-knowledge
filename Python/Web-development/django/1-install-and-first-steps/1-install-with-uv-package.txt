@@ -171,16 +171,16 @@ UV PACKAGE
         X) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
                 other things:
                             
-                /35-version/git/gitignore-file.txt
+                /Versioning/git/gitignore-file.txt
 
 
         X) (OPTIONAL) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
                         
-                /33-Web-development/backend/python/django/0-about-and-basic-modules/module-ruff.txt
+                /Python/Web-development/django/0-about-and-basic-modules/module-ruff.txt
 
 
         >> Continuing the Django configuration after the UV installation section:
-            /33-Web-development/backend/python/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
 
 
      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -1,0 +1,15 @@
+
+
+VUE COMPONENTS:
+
+    >> A component in Vue.js is a reusable, self-contained piece of code that encapsulates HTML
+        template, JavaScript logic, and CSS styling into a single unit. Think of it as a custom
+        HTML element that you can use throughout your app.
+
+
+
+
+
+
+>> HOW TO CREATE A COMPONENT:
+    /Web-Development/frontend/vue/vue-knowledge/5-creating-component.txt

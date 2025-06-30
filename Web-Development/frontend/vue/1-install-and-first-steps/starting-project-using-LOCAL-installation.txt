@@ -1,18 +1,28 @@
 
 
->> For Node-Package-Manager I will use NPM (Node.js standard command);
+>> ATTENTION: regardless anything, don't install Vue in these paths to avoid conflicts:
+
+            >> If Django backend: /project_root/templates/*
+                More: /Web-Development/frontend/vue/1-install-and-first-steps/backend-python-django.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> For Node-Package-Manager I will use NPM (Node.js standard command):
+
             
     >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
         1.2.1) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
         1.2.2) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
         1.2.1) Using Vite:
                 More about in https://vite.dev/
 
-            >> On terminal, go to the folder where you wanna create the project folder
+            >> On terminal, go to the folder where you wanna create the Vue project folder
                 BUT don't do that yet!
             
             >> Install Vite locally (without -g) and start the project creation:
@@ -21,7 +31,7 @@
                     # Just follow the prompt instructions/options!
 
                 >> Recommended Vite settings:
-                    - Project name: = vue-<clientName_productType_releaseYear>
+                    - Project name: = vue-<clientName_productType_releaseYear> or just 'frontend' when in the backend folder.
                     
                     - Framework = vue
                     
@@ -80,17 +90,17 @@
             >> Extending Vite:
 
                 >> CSS Pre-processors (Vite built-in solutions):
-                    /33-Web-development/frontend/css/scss/vue-integration.txt
+                    /Web-Development/frontend/css/scss/vue-integration.txt
                 
                 >> Linter (Vite needs plugins to run one):
                     >> ESLint:
-                        /33-Web-development/frontend/vue/3-plugins/eslint/installing-with-vite.txt
+                        /Web-Development/frontend/vue/3-plugins/eslint/installing-with-vite.txt
 
                         >> How to use execute the linter / How to check code with it:
-                            /33-Web-development/frontend/vue/3-plugins/eslint/using-eslint.txt
+                            /Web-Development/frontend/vue/3-plugins/eslint/using-eslint.txt
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         1.2.2) Or using Vue-CLI:
                 More abount in https://cli.vuejs.org/
@@ -110,7 +120,7 @@
                             >> If node version is NOT what you want, do it:
 
                                 A) Switch the Node version to use:
-                                    /33-Web-development/backend/javascript/nodejs/switch-node-version.txt
+                                    /JavaScript/Web-development/backend/nodejs/switch-node-version.txt
 
                                 B) Re-install the Vue-CLI!
 
@@ -168,7 +178,7 @@
                     $ vue --version
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     >> Use these links to access your Vue project on browser:
 
@@ -181,7 +191,7 @@
         Alt+Shift+D
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 >> Back to the installation instructions:

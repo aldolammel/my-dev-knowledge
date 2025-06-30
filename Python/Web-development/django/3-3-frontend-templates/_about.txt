@@ -7,7 +7,7 @@ DJANGO STRUCTURE: TEMPLATES
 
     >> Templates are responsable for display the data to the user through a text or layout file
         such as an HTML page. All data rendered via templates came from a views.py. Unlike Models
-        and Views, template is not a specific file but a folder structure and its content basically
+        and Views, template is NOT a specific file but a folder structure and its content basically
         formed by HTML files. Templates are responsible for:
 
         - Define the presentation layer of your application;
@@ -23,13 +23,13 @@ DJANGO STRUCTURE: TEMPLATES
 
         >> VIEWS: 
 
-            /33-Web-development/backend/python/django/3-2-backend-views/
+            /Python/Web-development/django/3-2-backend-views/
 
         >> MODELS:
 
-            /33-Web-development/backend/python/django/3-1-backend-models-database/
+            /Python/Web-development/django/3-1-backend-models-database/
 
 
     EXTERNAL TEMPLATE SOLUTIONS:
 
-        /33-Web-development/frontend/
+        /Web-Development/frontend/

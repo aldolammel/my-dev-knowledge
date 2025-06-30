@@ -126,12 +126,41 @@
             $ git push -u origin main (or the name of the right branch to do it)
 
 
-        >> Removing a useless file:
+        >> Deleting a file (from local machine and repository):
         
             $ git rm <file>
             $ git status                          // only to check what's ready for the stage.
-            $ git commit -a -m "removed useless file"
+            $ git commit -m "removed useless file"
             $ git push
+
+
+        >> Deleting a folder (from local machine and repository):
+
+            $ git rm -r <folder>
+            $ git status                          // only to check what's ready for the stage.
+            $ git commit -m "removed useless folder"
+            $ git push
+
+        
+        >> Deleting a file (only from repository):
+
+                $ git rm --cached <full_file_name>
+                $ git commit -m "removed useless file only from repo"
+            
+            >> Now, make sure you updated .gitignore file with the file to avoid!
+
+                # Update the repo:
+                $ git push
+
+        >> Deleting a folder (only from repository):
+
+                $ git rm -r --cached <full_folder_name>
+                $ git commit -m "removed useless folder only from repo"
+            
+            >> Now, make sure you updated .gitignore file with the folder to avoid!
+            
+                # Update the repo:
+                $ git push
 
 
         >> Deleting a local branch:

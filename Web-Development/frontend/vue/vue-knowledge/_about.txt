@@ -24,17 +24,6 @@ VUE.JS: WHAT IS IT
         >> Vue varnames and function names should respect the JS convention: to use camelCase.
 
 
-        >> There are 2 ways to create a Vue project:
-            /33-Web-development/frontend/vue/vue-knowledge/vue-goal-approach.png
-            
-            >> Widget way: you use Vue just for a small portion of your web app, where the most of
-                            it is controled by server-side;
-            
-            >> Single-Page-Application (SPA): you use Vue to create/manage the entire web app,
-                                                so the server-side only sends one HTML page to the
-                                                client-side, and Vue takes over and controls the UI;
-
-
         >> Deep knowledge about Vue:
 
             /Web-Development/frontend/vue/vue-knowledge/0-overview-deep-knowledge.txt

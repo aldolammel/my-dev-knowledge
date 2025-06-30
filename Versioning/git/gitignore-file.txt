@@ -5,7 +5,7 @@
         1) Create the .gitignore file in the repo root:
             
             >> Model for Django projects:
-                /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/.gitignore
+                /Python/Web-development/django/project-examples/proj-aldolammel-style/.gitignore
             
             >> xxxxxxxxxxxxxxxxxxxx
             
@@ -24,6 +24,13 @@
             Django or Flask
             VirtualEnv
             Git
+            Node.js
+            Vue.js
+            css
+            SCSS
+            SASS
+            Stylus
+            less
 
         4) Including in .gitignore manually:
 
@@ -31,6 +38,7 @@
             .env_<client_name>
             <or_other_virtual_env_name>
             
+            .idea/
             .idea/workspace.xml
             .idea/tasks.xml
 
@@ -41,6 +49,7 @@
             #!.vscode/launch.json
             #!.vscode/extensions.json
             #!.vscode/*.code-snippets
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
