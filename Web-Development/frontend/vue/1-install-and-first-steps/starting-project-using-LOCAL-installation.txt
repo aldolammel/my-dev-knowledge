@@ -50,7 +50,8 @@
                 >> Get in the project folder:
                     $ cd vue-<project_name_chosen>
 
-                >> Finishing the installations (it creates the 'node_modules' folder):
+                >> Finishing the installation, executing a command that will install all the project's
+                    dependencies, and their other dependencies (it creates the 'node_modules' folder):
                         $ npm install
                     # Check what is locally installed:
                         $ npm list

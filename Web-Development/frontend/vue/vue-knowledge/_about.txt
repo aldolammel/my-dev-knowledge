@@ -34,7 +34,7 @@ VUE.JS: WHAT IS IT
 
 >> HOW TO INSTALL VUE:
 
-    /33-Web-development/frontend/vue/1-install-and-first-steps/_installation.txt
+    /Web-Development/frontend/vue/1-install-and-first-steps/_installation.txt
 
 
 

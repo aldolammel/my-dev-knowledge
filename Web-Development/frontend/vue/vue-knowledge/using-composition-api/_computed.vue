@@ -9,7 +9,7 @@
     They are part of Vue's reactivity system and are available in every Vue component by default.
 
     Methods VS Computed:
-        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+        /Web-Development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
 
     
     E.g. in a vue component file:
@@ -30,11 +30,8 @@ const fullName = computed(() => {
 
 
 <!--
-
-    >> Computed vs Methods:
-        /33-Web-development/frontend/vue/vue-knowledge/computed-vs-methods.txt
     
     >> Using Computed Properties to acess VueX store:
-        /33-Web-development/frontend/vue/3-component-libraries/vuex/computed-properties.txt
+        /Web-Development/frontend/vue/3-component-libraries/vuex/computed-properties.txt
 
 -->

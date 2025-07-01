@@ -1,17 +1,20 @@
 
 
-CREATING A NEW COMPONENT:
+CREATING A NEW COMPONENT (DEDICATED FILES):
+
+
+    0) Basic about it:
+        /Web-Development/frontend/vue/vue-knowledge/5-components.txt
 
 
     1) Make sure you got the folder:
-        /your_project_root/src/components/
+        /vue_project_root/src/components/
 
 
     2) In /components/ create the component file:
         MyComponentName.vue
 
             # Its content:
-
             <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
                 // code...
             </script>
@@ -36,7 +39,7 @@ CREATING A NEW COMPONENT:
         </script>
 
 
-    4) If youo need to call external data (from App.vue, for example), you must to use PROPS in
+    4) If you need to call external data (from App.vue, for example), you must to use PROPS in
         your component file:
-            /33-Web-development/frontend/vue/vue-knowledge/11-props.txt
+            /Web-Development/frontend/vue/vue-knowledge/11-props.txt
 

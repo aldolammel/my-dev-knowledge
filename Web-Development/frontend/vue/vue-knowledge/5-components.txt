@@ -6,10 +6,26 @@ VUE COMPONENTS:
         template, JavaScript logic, and CSS styling into a single unit. Think of it as a custom
         HTML element that you can use throughout your app.
 
+    >> Components are mini-apps inside an app;
 
+    >> Convention: components' names must be composed by 2 names separated by dash. It avoids
+                    potential clashes with Vue or HTML built-in element names.
+                    Good example of component names to use:
+
+                        E.g.
+                            user-contact, hero-home, faq-section, h2-title, etc.
+
+    
 
 
 
 
 >> HOW TO CREATE A COMPONENT:
-    /Web-Development/frontend/vue/vue-knowledge/5-creating-component.txt
+
+    >> With dedicated files approach (Recommended):
+        /Web-Development/frontend/vue/vue-knowledge/5-creating-component-professional.txt
+    
+    >> Single file approach (NOT recommended, for information only):
+        /Web-Development/frontend/vue/vue-knowledge/5-creating-component-simplified.txt
+
+    

@@ -10,7 +10,7 @@
     component.
 
     Methods VS Computed:
-        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+        /Web-Development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
 
 -->
 
@@ -24,7 +24,7 @@ const handleClick = () => {
 
 <!--
 
-    >> Computed vs Methods:
-        /33-Web-development/frontend/vue/vue-knowledge/computed-vs-methods.txt
+    >> Example 2:
+        /Web-Development/frontend/vue/vue-knowledge/using-composition-api/z-examples/adding-and-removing-things-by-form/
 
 -->

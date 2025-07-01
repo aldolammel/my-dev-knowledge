@@ -41,7 +41,7 @@ VUE.JS DEEPER KNOWLEDGE
         in the HTML file.
 
 
-    >> To create a Vue.js project, you will need a Build-Tool. Here is some options:
+    >> To create a Vue.js project, you need a Build-Tool. Here is some options:
         /Web-Development/frontend/vue/vue-knowledge/1-build-tools.txt
 
 
@@ -84,6 +84,35 @@ VUE.JS DEEPER KNOWLEDGE
         >> CONDITIONAL DECLARATIVE RENDERING
 
             {{ book.isReady ? "I'm ready" : 'NOT READY YET' }}
+
+    
+    >> VUE APPs AND THEIR COMPONENTS
+
+            A Vue App is composed by a main app and, probably, its components (sub-apps).
+            Multiple Vue Apps vs Multiple Components:
+
+            You can use Vue.js to control parts of (possibly multiple HTML) pages OR you use it to
+            build so-called "Single Page Applications" (SPAs).
+
+            If you control multiple, independent parts of HTML pages, you will often work with 
+            multiple Vue apps (i.e. you create multiple apps by calling 'createApp()' more than once).
+
+            On the other hand, if you're building a SPA, you typically work with just one "root app"
+            (i.e. createApp() is only used once in your entire codebase) and you instead build up a
+            user interface with multiple components.
+
+            You absolutely are allowed to also use components in cases where you have multiple Vue
+            apps but you typically won't use multiple Vue apps if you build one big connected user
+            interface.
+
+            Why? 'Coz Vue apps are independent from each other - they can't really communicate with
+            each other. You might find "hacks" to make it work but there's no great "official" way
+            of sharing data between apps, updating something in app A in case something happens in
+            app B etc.
+
+            Components on the other hand - as you will learn soon - DO offer certain communication
+            mechanisms that allow you to exchange data between them. Hence you can build one
+            connected UI if you work with one root app that holds multiple components.
 
 
     

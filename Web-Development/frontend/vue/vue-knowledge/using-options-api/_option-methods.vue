@@ -8,7 +8,7 @@
     Methods can be called directly in your Vue templates or elsewhere in your component.
 
     Methods VS Computed:
-        /33-Web-development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
+        /Web-Development/frontend/vue/vue-knowledge/4-computed-vs-methods.txt
         
 
     E.g. in a vue component file:
@@ -52,10 +52,7 @@ const MyProjectThing = {
 
 <!--
 
-    >> Computed vs Methods:
-        /33-Web-development/frontend/vue/vue-knowledge/computed-vs-methods.txt
-
     >> Example 2:
-        /33-Web-development/frontend/vue/vue-knowledge/examples-using-options-api/products-selection-and-increase-amounts/
+        /Web-Development/frontend/vue/vue-knowledge/using-options-api/z-examples/products-selection-and-increase-amounts
 
 -->
