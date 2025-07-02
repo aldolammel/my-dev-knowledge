@@ -8,12 +8,12 @@ VUE COMPONENTS:
 
     >> Components are mini-apps inside an app;
 
-    >> Convention: components' names must be composed by 2 names separated by dash. It avoids
-                    potential clashes with Vue or HTML built-in element names.
-                    Good example of component names to use:
+    >> Convention: components' names must be written using kebab-case, it means to use 2 or more
+                    names separated by dash. It avoids potential clashes with Vue or HTML built-in
+                    element names. A good example of component named with kebab-case:
 
                         E.g.
-                            user-contact, hero-home, faq-section, h2-title, etc.
+                            user-contact, hero-home, faq-section, h2-title.
 
     
 

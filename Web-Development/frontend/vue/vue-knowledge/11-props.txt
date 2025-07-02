@@ -1,6 +1,6 @@
 
 
-VUE: PROPS
+VUE: PROPS ("PROPERTIES")
 
     Props in Vue.js are a way to pass data from a parent component to a child component. They create
     a one-way data flow where the parent sends data down to the child.
@@ -16,36 +16,48 @@ VUE: PROPS
     E.g.
 
 
-        # Step 1 - Create a props in ComponentName.vue file:
+        # Step 1 - Define what data (properties) this component wants to receive from
+                    its parent (App.vue, for example):
 
-            <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
-                // It's a good practice to type the variable:
+            <!-- E.g. ChildComponent.vue -->
+            <script setup>  // 'setup' only in case you're using 'Composition API' approach.
+
+                // The parent app must send to this component an object of books:
                 const { books } = defineProps({
                     books: {
-                    type: Array,
-                    required: true,
+                        type: Array,  // It's a good practice to type the variable!
+                        required: true,
                     }
                 });
+
             </script>
         
 
-        # Step 2 - Data in App.vue file:
+        # Step 2 - In the parent component, define which data (properties) will be sent for which
+                    one of its children components:
             
-            <script>
-                let dbBooks = [
+            <!-- E.g. App.vue -->
+            <script setup>  // 'setup' only in case you're using 'Composition API' approach.
+                
+                // Data:
+                const dbBooks = [
                     // ...
                 ];
+                const dbDrinks = [
+                    // ...
+                ]
+
             </script>
 
             <template>
-                <!-- Defining which props to use: -->
+                <!-- Defining which child component will receive which data: -->
                 <Books :books="dbBooks" />
             </template>
 
 
-        # Step 3 - In your component separately:
-            # Now, call all data needed on the template, e.g.:
+        # Step 3 - Back to the child component, apply the data properties received on the template:
 
+            <!-- E.g. ChildComponent.vue -->
             <template v-if="!books.length">
               <p>No books yet.</p>
             </template>
