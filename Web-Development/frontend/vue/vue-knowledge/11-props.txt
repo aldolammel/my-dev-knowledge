@@ -2,83 +2,101 @@
 
 VUE: PROPS ("PROPERTIES")
 
+
     Props in Vue.js are a way to pass data from a parent component to a child component. They create
     a one-way data flow where the parent sends data down to the child.
 
+
     The defineProps(), what Props do:
 
-        - Allow parent components to pass data to child components;
-        - Make components reusable by accepting different input values;
-        - Create a communication channel from parent to child;
-        - Are read-only in the child component (shouldn't be mutated directly);
+        - Props allow parent components to pass data to child components;
+        - Props make components reusable by accepting different input values;
+        - Props are read-only in the child component;
 
 
-    E.g.
+    >> Examples of detailed Props being used, including validation:
+        /Web-Development/frontend/vue/vue-knowledge/11.1-props-validation-examples.txt
 
 
-        # Step 1 - Define what data (properties) this component wants to receive from
+    >> Once the child is NOT allow to change parent's data, child can ask its parent for a change,
+        using 'emits':
+            /Web-Development/frontend/vue/vue-knowledge/12-emits.txt
+
+    
+
+    E.g. showing parent's data in a child component:
+
+
+        STEP 1/3 - Define what data (properties) this component wants to receive from
                     its parent (App.vue, for example):
 
-            <!-- E.g. ChildComponent.vue -->
-            <script setup>  // 'setup' only in case you're using 'Composition API' approach.
+                    <!-- E.g. ChildComponent.vue -->
+                    <script setup>  // 'setup' only in case you're using 'Composition API' approach.
 
-                // The parent app must send to this component an object of books:
-                const { books } = defineProps({
-                    books: {
-                        type: Array,  // It's a good practice to type the variable!
-                        required: true,
-                    }
-                });
+                        // The parent app must send to this component an object of books:
+                        const { books } = defineProps({
+                            books: {
+                                type: Array,  // It's a good practice to type the variable!
+                                required: true,
+                            }
+                        });
 
-            </script>
+                    </script>
         
 
-        # Step 2 - In the parent component, define which data (properties) will be sent for which
+        STEP 2/3 - In parent's component, define which data (properties) will be sent for which
                     one of its children components:
             
-            <!-- E.g. App.vue -->
-            <script setup>  // 'setup' only in case you're using 'Composition API' approach.
-                
-                // Data:
-                const dbBooks = [
-                    // ...
-                ];
-                const dbDrinks = [
-                    // ...
-                ]
+                    <!-- E.g. App.vue -->
+                    <script setup>  // 'setup' only in case you're using 'Composition API' approach.
+                        
+                        // Data:
+                        const dbBooks = [
+                            // ...
+                        ];
+                        const dbDrinks = [
+                            // ...
+                        ]
 
-            </script>
+                    </script>
 
-            <template>
-                <!-- Defining which child component will receive which data: -->
-                <Books :books="dbBooks" />
-            </template>
+                    <template>
+                        <!-- Defining which child component will receive which data: -->
+                        <Books :books="dbBooks" />
+                    </template>
 
 
-        # Step 3 - Back to the child component, apply the data properties received on the template:
+        STEP 3/3 - Back to the child component, apply the data properties received on the template:
 
-            <!-- E.g. ChildComponent.vue -->
-            <template v-if="!books.length">
-              <p>No books yet.</p>
-            </template>
-            <template v-else>
-                <div
-                    v-for="book in books"
-                    :key="book.isbn"
-                    class="book"
-                >
-                    <img 
-                        :src="book.cover"
-                        :alt="book.title"
-                    >
-                    {{ book.title }}
-                    {{ book.author }}
-                    <button :class="{ isRead : book.isRead }">
-                        <span>
-                            {{ book.isRead ? 'Read!' : 'Not read yet' }}
-                        </span>
-                    </button>
-                </div>
-            </template>
+                    <!-- E.g. ChildComponent.vue -->
+                    <template v-if="!books.length">
+                    <p>No books yet.</p>
+                    </template>
+                    <template v-else>
+                        <div
+                            v-for="book in books"
+                            :key="book.isbn"
+                            class="book"
+                        >
+                            <img 
+                                :src="book.cover"
+                                :alt="book.title"
+                            >
+                            {{ book.title }}
+                            {{ book.author }}
+                            <button :class="{ isRead : book.isRead }">
+                                <span>
+                                    {{ book.isRead ? 'Read!' : 'Not read yet' }}
+                                </span>
+                            </button>
+                        </div>
+                    </template>
 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> MORE ABOUT:
+
+    /Web-Development/frontend/vue/vue-knowledge/11.1-props-validation-examples.txt
 

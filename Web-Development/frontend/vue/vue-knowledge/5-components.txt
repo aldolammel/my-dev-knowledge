@@ -2,11 +2,21 @@
 
 VUE COMPONENTS:
 
+
     >> A component in Vue.js is a reusable, self-contained piece of code that encapsulates HTML
         template, JavaScript logic, and CSS styling into a single unit. Think of it as a custom
         HTML element that you can use throughout your app.
 
-    >> Components are mini-apps inside an app;
+
+    >> Each component is a sub-app (child) inside an app (parent);
+
+
+    >> Parent can send data to its children, but children CANNOT send data to their parents.
+        This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
+            
+            /Web-Development/frontend/vue/vue-knowledge/11-props.txt
+            /Web-Development/frontend/vue/vue-knowledge/12-emits.txt
+
 
     >> Convention: components' names must be written using kebab-case, it means to use 2 or more
                     names separated by dash. It avoids potential clashes with Vue or HTML built-in
@@ -15,17 +25,15 @@ VUE COMPONENTS:
                         E.g.
                             user-contact, hero-home, faq-section, h2-title.
 
-    
 
-
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 >> HOW TO CREATE A COMPONENT:
 
     >> With dedicated files approach (Recommended):
         /Web-Development/frontend/vue/vue-knowledge/5-creating-component-professional.txt
     
-    >> Single file approach (NOT recommended, for information only):
+    >> Single file approach (NOT recommended, for your information only):
         /Web-Development/frontend/vue/vue-knowledge/5-creating-component-simplified.txt
 
     

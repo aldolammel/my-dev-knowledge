@@ -1,0 +1,55 @@
+
+
+VUE: PROPS VALIDATION EXAMPLES
+
+    If you are working alone in a project, maybe props validation is too much, but if you're dealing
+    with third-party code or with a team, may this props validations are needed to preserve data!
+
+
+    >> In a ChildComponent.vue:
+
+        <script>
+            export default {
+                // props from child's parent: ['name', 'phone', 'isFavorite']
+                const { contact } = defineProps({
+                    contact: {
+                        name: {
+                            type: String,
+                            required: true,
+                        },
+                        phone: {
+                            type: String,
+                            required: true,
+                        },
+                        isFavorite: {
+                            type: String,
+                            required: false,
+                            default: '0',  // 0 = false / 1 = true / if no data was declared, '0'.
+                            validator: function(value) {
+                                // if the return is not a valid option, Vue console will show an error.
+                                return value === '1' || value === '0';
+                            }
+                        },
+                    },
+                    data() {
+                        return {
+                            //...
+                        }
+                    }
+                });
+            }
+        </script>
+
+
+
+    >> The Props type can be one of the following native constructors:
+
+        - String
+        - Number
+        - Boolean
+        - Array
+        - Object
+        - Date
+        - Function
+        - Symbol
+        - Error
