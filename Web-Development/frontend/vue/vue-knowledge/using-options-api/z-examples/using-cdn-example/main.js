@@ -1,6 +1,11 @@
 
+// IMPORTANT: if you want to use VUE calling its CDN, be aware you are NOT allow to use .vue files,
+// forcing you to define your components as JS objects!
+
+
 Vue.createApp({
   data() {
+    // returning a JS object "{...}":
     return {
       currentYear: new Date().getFullYear(),  // output e.g: 2025
       name: 'Aldo Lammel',
@@ -11,9 +16,9 @@ Vue.createApp({
   methods: {
     userAge(year) {
       if (!year) {
-        year = this.currentYear;
+        year = this.currentYear;  // 'this.' means the object returned by Vue data() method!
       };
       return (year - this.born);
-    }    
+    }
   }
-}).mount('#assignment');
+}).mount('#app');

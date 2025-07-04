@@ -1,6 +1,6 @@
 
 
-VUE: PROPS VALIDATION EXAMPLES
+VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
 
     If you are working alone in a project, maybe props validation is too much, but if you're dealing
     with third-party code or with a team, may this props validations are needed to preserve data!
@@ -10,8 +10,8 @@ VUE: PROPS VALIDATION EXAMPLES
 
         <script>
             export default {
-                // props from child's parent: ['name', 'phone', 'isFavorite']
-                const { contact } = defineProps({
+                
+                props: {
                     contact: {
                         name: {
                             type: String,
@@ -30,26 +30,14 @@ VUE: PROPS VALIDATION EXAMPLES
                                 return value === '1' || value === '0';
                             }
                         },
-                    },
-                    data() {
-                        return {
-                            //...
-                        }
                     }
-                });
+                };
             }
         </script>
 
 
 
-    >> The Props type can be one of the following native constructors:
+>> SAME EXAMPLE, BUT USING COMPOSITION-API:
+    /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-validation-example.txt
 
-        - String
-        - Number
-        - Boolean
-        - Array
-        - Object
-        - Date
-        - Function
-        - Symbol
-        - Error
+    

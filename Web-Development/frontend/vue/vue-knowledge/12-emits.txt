@@ -2,10 +2,10 @@
 
 VUE: EMITS
 
-    In Vue.js with the Composition API, emits are a way for child components to communicate with
-    their parent components by sending custom events upward through the component tree.
-
-    The defineEmits() is a compiler macro (available in <script setup>) that:
+    In Vue.js, emits are a way for child-components to communicate with their parent-components by
+    sending custom events upward through the component tree.
+    
+    The EMITS is a compiler macro (available in <script setup>) that:
 
         - Declares what custom events your component can emit;
         - Returns an emit function that you use to actually trigger those events;

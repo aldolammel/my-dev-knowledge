@@ -1,9 +1,12 @@
 
 
->> ATTENTION: regardless anything, don't install Vue in these paths to avoid conflicts:
+>> ATTENTION 1: assuming you already got Node.js:
+                /Web-Development/frontend/vue/1-install-and-first-steps/_installation.txt
 
-            >> If Django backend: /project_root/templates/*
-                More: /Web-Development/frontend/vue/1-install-and-first-steps/backend-python-django.txt
+
+>> ATTENTION 2: regardless anything, don't install Vue in these paths to avoid conflicts:
+                >> If using Django backend:
+                    /Web-Development/frontend/vue/1-install-and-first-steps/backend-python-django.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -15,7 +18,10 @@
     >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
         1.2.1) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
-        1.2.2) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
+
+        OR
+
+        1.2.2) Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         

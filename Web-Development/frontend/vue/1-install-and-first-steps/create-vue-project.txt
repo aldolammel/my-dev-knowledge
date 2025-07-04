@@ -14,17 +14,22 @@ CREATING A VUE PROJECT:
 
     1) Define how you will implement Vue.js in your project:
 
-        1.1) Using CDN (simplest solution);
-        1.2) Or via Node-Package-Manager as NPM or YARN (for build setups);
+        1.1) Using CDN (simplest solution / NOT recommended for mid-large projects);
+        
+        OR
+        
+        1.2) Or via Node-Package-Manager as NPM or YARN (for build setups / local installation);
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         1.1) Using CDN:
 
+            CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't
+                        understand .vue files.
+
             /Web-Development/frontend/vue/1-install-and-first-steps/starting-project-using-CDN.txt
 
-            >> Project example using CDN:
-
+            >> Project example using CDN solution:
                 /Web-Development/frontend/vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
 
 
@@ -34,9 +39,8 @@ CREATING A VUE PROJECT:
             
             /Web-Development/frontend/vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
 
-            >> Project example using Vue local solution:
-                It's the same of any CDN example but without the HTML head CDN script URL, demanding
-                a Vue local installation via terminal.
+            >> Project example using LOCAL solution:
+                /Web-Development/frontend/vue/vue-knowledge/using-composition-api/z-examples/hello-world/ 
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
