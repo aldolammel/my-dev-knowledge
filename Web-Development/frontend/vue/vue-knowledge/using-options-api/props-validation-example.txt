@@ -6,8 +6,12 @@ VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
     with third-party code or with a team, may this props validations are needed to preserve data!
 
 
-    >> In a ChildComponent.vue:
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+        <template>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </template>
+        
         <script>
             export default {
                 
@@ -35,6 +39,19 @@ VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
             }
         </script>
 
+
+    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        <template>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </template>
+
+        <script>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </script>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 >> SAME EXAMPLE, BUT USING COMPOSITION-API:

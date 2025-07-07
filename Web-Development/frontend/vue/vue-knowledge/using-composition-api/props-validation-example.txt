@@ -6,7 +6,7 @@ VUE USING COMPOSITION API: PROPS VALIDATION EXAMPLES
     with third-party code or with a team, may this props validations are needed to preserve data!
 
 
-    >> In a ChildComponent.vue:
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         <script setup>
             import { defineProps } from 'vue'
@@ -32,7 +32,24 @@ VUE USING COMPOSITION API: PROPS VALIDATION EXAMPLES
             }
         </script>
 
+        <template>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </template>
 
+
+    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        <script setup>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </script>
+
+        <template>
+            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </template>
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 

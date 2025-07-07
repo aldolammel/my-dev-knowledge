@@ -1,0 +1,122 @@
+
+
+VUE USING OPTIONS API: EMITS EXAMPLES
+
+
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        <!-- The template layer is the same for both API approaches -->
+        <template>
+            <div>
+                <button @click="handleSimpleClick">Simple Event</button>
+                <button @click="handleEventWithData">Event with Data</button>
+                <button @click="handleValidatedEvent">Validated Event</button>
+            </div>
+        </template>
+
+        <script>
+            export default {
+                name: 'ChildComponent',
+                
+                // Object with validation:
+                emits: {
+                    'simple-event': null,
+                    'data-event': (payload) => {
+                        // Validation logic - return true if valid
+                        return payload && typeof payload === 'object'
+                    },
+                    'validated-event': (value) => {
+                        return typeof value === 'string' && value.length > 0
+                    }
+                },
+            
+                methods: {
+                    handleSimpleClick() {
+                        // Emit simple event without data
+                        this.$emit('simple-event')
+                    },
+                    handleEventWithData() {
+                        // Emit event with data payload
+                        this.$emit('data-event', {
+                            message: 'Hello from child',
+                            timestamp: Date.now()
+                        })
+                    },
+                    handleValidatedEvent() {
+                        // Emit event with validation
+                        this.$emit('validated-event', 'Some string value')
+                    }
+                }
+            }
+        </script>
+
+
+
+    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        <!-- The template layer is the same for both API approaches -->
+        <template>
+            <div>
+                <!-- Listen to all emitted events -->
+                <ChildComponent
+                    @simple-event="onSimpleEvent"
+                    @data-event="onDataEvent"
+                    @validated-event="onValidatedEvent"
+                />
+                <div>
+                    <h3>Event Log:</h3>
+                    <ul>
+                        <li v-for="(log, index) in eventLogs" :key="index">
+                            {{ log }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </template>
+
+        <script>
+            import ChildComponent from './ChildComponent.vue'
+
+            export default {
+                name: 'ParentComponent',
+                
+                // Register child component
+                components: {
+                    ChildComponent
+                },
+                
+                // Component data using Options API
+                data() {
+                    return {
+                        eventLogs: []
+                    }
+                },
+                
+                // Event handler methods
+                methods: {
+                    onSimpleEvent() {
+                        // Push new log entry to reactive array
+                        this.eventLogs.push('Simple event received at ' + new Date().toLocaleTimeString())
+                    },
+                    
+                    onDataEvent(payload) {
+                        // Handle event with data payload
+                        this.eventLogs.push(`Data event: ${payload.message} at ${new Date(payload.timestamp).toLocaleTimeString()}`)
+                    },
+                    
+                    onValidatedEvent(value) {
+                        // Handle validated event
+                        this.eventLogs.push(`Validated event: "${value}" at ${new Date().toLocaleTimeString()}`)
+                    }
+                }
+            }
+        </script>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> SAME EXAMPLE, BUT USING COMPOSITION-API:
+    /Web-Development/frontend/vue/vue-knowledge/using-composition-api/emits-examples.txt
+
+    

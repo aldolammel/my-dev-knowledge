@@ -63,7 +63,7 @@ VUE: PROPS ("PROPERTIES")
 
 
 
-    >> Examples of detailed Props being used, including validation:
+    >> Full examples of Props being used, including validation:
         
         >> Using Options-API:
             /Web-Development/frontend/vue/vue-knowledge/using-options-api/props-validation-example.txt

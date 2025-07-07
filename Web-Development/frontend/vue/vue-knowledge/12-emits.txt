@@ -2,58 +2,75 @@
 
 VUE: EMITS
 
-    In Vue.js, emits are a way for child-components to communicate with their parent-components by
-    sending custom events upward through the component tree.
-    
-    The EMITS is a compiler macro (available in <script setup>) that:
+    In Vue.js, emits are a way for child-components to communicate with their parent-components that
+    some data need to be updated.
 
-        - Declares what custom events your component can emit;
-        - Returns an emit function that you use to actually trigger those events;
-        - Provides type safety (in TypeScript) for the events and their payloads;
-        - Enables better IDE support with autocomplete and validation;
+        - Emits declare what custom events a child-component can emit to its parent;
+        - Emits enable better IDE support with autocomplete and validation;
+        - Emits support validation functions that return boolean;
+        - Emits can send data with events (Payload);
+        - Emits require explicit emit declarations;
 
-    E.g.
+        >> If using Options-API:
 
+            - Emits are defined using 'emits' object;
+            - Access method: this.$emit();
+            - Emit events with this.$emit('event-name', payload)
 
-        <!-- Child Component -->
-        <script setup>
-            // Define what events this component can emit
-            const emit = defineEmits(['update-name', 'delete-item'])
+        >> If using Composition-API:
 
-            // Function that triggers an emit
-            function handleNameChange(newName) {
-                // Emit the event with data to the parent
-                emit('update-name', newName)
-            }
-
-            function handleDelete(itemId) {
-                // Emit another event
-                emit('delete-item', itemId)
-            }
-        </script>
-
-        <template>
-            <div>
-                <input @input="handleNameChange($event.target.value)" />
-                <button @click="handleDelete(123)">Delete</button>
-            </div>
-        </template>
+            - Emits are defined using 'defineEmits()' compiler macro;
+            - Access method: emit();
+            - No 'this.' context needed, but cleaner function calls;
+            - Returns an emit function that you call directly;
 
 
-        <!-- Parent Component -->
-        <script setup>
-            function onNameUpdated(newName) {
-            console.log('Name updated to:', newName)
-            }
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            function onItemDeleted(itemId) {
-            console.log('Item deleted:', itemId)
+
+    >> Emits using Options-API:
+
+        <script>
+            export default {
+                // In Option-API, to declare the component name:
+                name: 'ChildComponent',
+                
+                // Simple array declaration:
+                emits: ['simple-event', 'data-event', 'validated-event'],
+            },
+            methods: {
+                handleSimpleClick() {
+                    // Emit simple event without data:
+                    this.$emit('simple-event')
+                },
+                //...
             }
         </script>
 
-        <template>
-            <ChildComponent 
-                @update-name="onNameUpdated"
-                @delete-item="onItemDeleted"
-            />
-        </template>
+
+
+    >> Emits using Composition-API:
+
+        <script setup>
+            // Simple array declaration:
+            const emit = defineEmits(['simple-event', 'data-event', 'validated-event'])
+
+            const handleSimpleClick = () => {
+                // Emit simple event without data:
+                emit('simple-event')
+            }
+
+        </script>
+
+
+
+
+
+    >> Full examples of Emits being used, including validation:
+
+        >> Using Options-API:
+            /Web-Development/frontend/vue/vue-knowledge/using-options-api/emits-examples.txt
+        
+        >> Using Composition-API:
+            /Web-Development/frontend/vue/vue-knowledge/using-composition-api/emits-examples.txt
+
