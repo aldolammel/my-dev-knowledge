@@ -1,20 +1,28 @@
 
 
-VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
-
-    If you are working alone in a project, maybe props validation is too much, but if you're dealing
-    with third-party code or with a team, may this props validations are needed to preserve data!
+VUE USING OPTIONS-API: PROPS EXAMPLES
 
 
     >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         <template>
-            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            <h1>Contacts</h1>
+            <!-- in Options-API, for-loop DOESN'T demand a 'props.' before the props atribute (contacts): -->
+            <div
+                v-for="contact in contacts"
+                :key="contact.id"
+            >
+                <hr>
+                <h3 :class="{ fav : contact.isFav }">
+                    <span v-if="contact.isFav">★</span>
+                    {{ contact.name }}
+                </h3>
+                <p>{{ contact.country }}</p>
+            </div>
         </template>
         
         <script>
             export default {
-                
                 props: {
                     contact: {
                         name: {
@@ -43,11 +51,28 @@ VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
     >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <template>
-            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            <!-- This 'contacts' is what your child-components are waiting for: -->
+            <Person :contacts="fakeDatabase" />
         </template>
 
         <script>
-            //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            import Person from './components/ChildComponent.vue'
+
+            // Fake database:
+            const fakeDatabase = [
+                {
+                    id: 1,
+                    name: 'Joanna',
+                    country: 'Brazil',
+                    isFav: false,
+                },
+                {
+                    id: 2,
+                    name: 'Ioshy',
+                    country: 'Japan',
+                    isFav: true,
+                },
+            ];
         </script>
 
 
@@ -55,6 +80,6 @@ VUE USING OPTIONS API: PROPS VALIDATION EXAMPLES
 
 
 >> SAME EXAMPLE, BUT USING COMPOSITION-API:
-    /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-validation-example.txt
+    /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-example.txt
 
     

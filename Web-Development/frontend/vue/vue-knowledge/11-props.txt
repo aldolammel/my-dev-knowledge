@@ -3,8 +3,9 @@
 VUE: PROPS ("PROPERTIES")
 
 
-    Props in Vue.js are a way to pass data from a parent-component to a child-component (sub-app) or
-    more. They create a one-way-data-flow where the parent sends data down to its children (sub-apps).
+    Props in Vue.js are a way to pass data from a parent-component (main-app) to one child-component
+    (sub-app) or more. They create a one-way-data-flow where the parent sends data down to its
+    child-components.
 
         - Props are defined always in the child-component that's requesting data;
         - Props allow parent-components to pass data to child-components;
@@ -31,8 +32,8 @@ VUE: PROPS ("PROPERTIES")
                     
                     // Defining props for Options-API:
                     props: {
-                        title: {
-                            type: String,
+                        contacts: {
+                            type: Array,  // array of objects, for example...
                             required: true
                         }
                     }
@@ -50,8 +51,8 @@ VUE: PROPS ("PROPERTIES")
 
                 // Defining props for Composition-API:
                 const props = defineProps({
-                    title: {
-                        type: String,
+                    contacts: {
+                        type: Array,  // array of objects, for example...
                         required: true
                     }
                 })
@@ -59,17 +60,16 @@ VUE: PROPS ("PROPERTIES")
             </script>
             
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-
-    >> Full examples of Props being used, including validation:
+    >> Full examples of Props being used:
         
         >> Using Options-API:
-            /Web-Development/frontend/vue/vue-knowledge/using-options-api/props-validation-example.txt
+            /Web-Development/frontend/vue/vue-knowledge/using-options-api/props-example.txt
         
         >> Using Composition-API:
-            /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-validation-example.txt
+            /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-example.txt
 
 
     >> Once the child is NOT allow to change parent's data, child can ask its parent for a change,
@@ -77,62 +77,4 @@ VUE: PROPS ("PROPERTIES")
             /Web-Development/frontend/vue/vue-knowledge/12-emits.txt
 
     
-
-    E.g. showing parent's data in a child component:
-
-
-        STEP 1/3 - Define what data (properties) your child-component wants to receive from
-                    its parent (App.vue). Check the examples above based in Options or Composition API!
-        
-
-        STEP 2/3 - In parent's component, define which data (properties) will be sent for the
-                    child-component:
-            
-                    <!-- E.g. App.vue using Composition-API approach -->
-                    <script setup>
-                        import ChildComponent from './components/ChildComponent.vue'
-                        
-                        // Data:
-                        const contact = {
-                            userName: 'Aldo',
-                            userPhone: '99-9-9999-9999',
-                            isFavorite: '1'
-                        };
-
-                    </script>
-
-                    <template>
-                        <div>
-                            <!-- Pass data to child component via props -->
-                            <ChildComponent
-                                :name="contact.userName"
-                                :phone="contact.userPhone"
-                                :favorite="contact.isFavorite"
-                            />
-                            
-                            <!-- Second instance with different props -->
-                            <ChildComponent
-                                :name="Another name here"
-                                :phone="22-2-2222-2222"
-                            />
-                        </div>
-                    </template>
-
-
-        STEP 3/3 - Back to the child component, apply the data properties received on the template:
-
-                    <!-- E.g. ChildComponent.vue -->
-                    <template>
-                        <div>
-                            {{ name }}
-                            {{ phone }}
-                            {{ favorite }}
-                        </div>
-                    </template>
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
 
