@@ -24,6 +24,9 @@ VUE: PROPS ("PROPERTIES")
             - Error
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
     >> Props using Options-API:
 
             // In a ChildComponent.vue:
@@ -47,8 +50,6 @@ VUE: PROPS ("PROPERTIES")
 
             // In a ChildComponent.vue:
             <script setup>
-                import { defineProps } from 'vue'
-
                 // Defining props for Composition-API:
                 const props = defineProps({
                     contacts: {

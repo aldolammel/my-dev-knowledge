@@ -1,7 +1,7 @@
 <!-- 
   
   Using the "Composition API" approach:
-  More about: /33-Web-development/frontend/vue/vue-knowledge/using-composition-api/
+  More about: /Web-Development/frontend/vue/vue-knowledge/using-composition-api/
 
 -->
 
@@ -16,10 +16,12 @@
 
 -->
 
+<!-- By convention, in Composition API approach, script layer should be the first layer! -->
 <script setup>
-	// By convention, in Composition API approach, script layer should be the first layer!
+	// importing both methods to make data reactive on browsers:
 	import { ref, reactive } from 'vue'
-	// Direct code here
+	
+	// ...
 </script>
 
 <template>

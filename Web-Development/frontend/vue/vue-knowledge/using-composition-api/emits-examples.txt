@@ -50,7 +50,7 @@ VUE USING COMPOSITION API: EMITS EXAMPLES
 
         <script setup>
             import { ref } from 'vue'
-            import ChildComponent from './ChildComponent.vue'
+            import ChildComponent from './components/ChildComponent.vue'
 
             // Store event logs
             const eventLogs = ref([])

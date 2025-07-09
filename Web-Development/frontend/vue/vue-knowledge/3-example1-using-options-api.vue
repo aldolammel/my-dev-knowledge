@@ -1,7 +1,7 @@
 <!-- 
   
   Using the "Options API" approach:
-  More about: /33-Web-development/frontend/vue/vue-knowledge/using-options-api/
+  More about: /Web-Development/frontend/vue/vue-knowledge/using-options-api/
 
 -->
 
@@ -16,8 +16,8 @@
 
 -->
 
+<!-- By convention, in Options API approach, template layer should be the first layer -->
 <template>
-  <!-- By convention, in Options API approach, template layer should be the first layer -->
 </template>
 
 <script>
@@ -25,8 +25,15 @@
 	// Reserved space...
 
 	export default {
-		// Component name (optional but recommended)
-		name: 'MyComponent',
+		// This Current file/component name (optional but recommended)
+		name: 'ThisComponentName',
+
+		// This component children's registration:
+		components: {
+			//ChildComponentNameOne,
+			//MyChild: ChildComponentNameTwo,  // To use on the component a different name of file's name.
+			//ChildComponentNameThree
+		},
 
 		// Component state/data
 		data() {
@@ -52,5 +59,5 @@
 </script>
 
 <style>
-	/* All CSS of this app or component */
+	/* All CSS of this component */
 </style>

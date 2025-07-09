@@ -1,7 +1,7 @@
 <!-- 
   
   Using the "Composition API" approach:
-  More about: /33-Web-development/frontend/vue/vue-knowledge/using-composition-api/
+  More about: /Web-Development/frontend/vue/vue-knowledge/using-composition-api/
 
 -->
 
@@ -16,14 +16,14 @@
 
 -->
 
+<!-- By convention, in Composition API approach, script layer should be the first layer! -->
 <script setup>
-	// By convention, in Composition API approach, script layer should be the first layer!
 	import { ref } from 'vue'
 
 	// Reactive data using ref()
 	const message = ref('Hello World')
 
-	// Function (equivalent to methods in Options API)
+	// Methods, unlike in Options API, you can set them anywhere in the .vue's script layer:
 	const updateMessage = () => {
 		message.value = 'Updated!'
 	}
