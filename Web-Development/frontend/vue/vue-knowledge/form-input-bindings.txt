@@ -2,5 +2,8 @@
 
 FORM INPUT BINDINGS:
 
+    >> using Options-API:
+        /Web-Development/frontend/vue/vue-knowledge/using-options-api/forms/
 
-    /33-Web-development/frontend/vue/forms/
+    >> using Composition-API:
+        /Web-Development/frontend/vue/vue-knowledge/using-composition-api/forms/

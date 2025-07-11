@@ -1,12 +1,15 @@
 
 
-VUE USING COMPOSITION API: EMITS EXAMPLES
+VUE USING COMPOSITION-API: EMITS EXAMPLES
 
 
     >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         <script setup>
-            // Object with validation:
+            // Props definition:
+            // Reserved space...
+
+            // Emits definition:
             const emit = defineEmits({
                 'simple-event': null,
                 'data-event': (payload) => {
@@ -49,8 +52,10 @@ VUE USING COMPOSITION API: EMITS EXAMPLES
     >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <script setup>
-            import { ref } from 'vue'
             import ChildComponent from './components/ChildComponent.vue'
+            
+            // In Composition-API, this make a data reactive:
+            import { ref } from 'vue'
 
             // Store event logs
             const eventLogs = ref([])
@@ -80,7 +85,7 @@ VUE USING COMPOSITION API: EMITS EXAMPLES
                 <div>
                     <h3>Event Log:</h3>
                     <ul>
-                        <li v-for="(log, index) in eventLogs" :key="index">
+                        <li v-for="(log, idx) in eventLogs" :key="idx">
                             {{ log }}
                         </li>
                     </ul>
@@ -96,5 +101,9 @@ VUE USING COMPOSITION API: EMITS EXAMPLES
 
 >> SAME EXAMPLE, BUT USING OPTIONS-API:
     /Web-Development/frontend/vue/vue-knowledge/using-options-api/emits-examples.txt
+
+
+>> A FULL EMITS EXAMPLE:
+    /Web-Development/frontend/vue/vue-knowledge/using-composition-api/z-examples/contact-list-with-form-for-new-ones/
 
     

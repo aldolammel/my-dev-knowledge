@@ -26,10 +26,10 @@ DIRECTIVE: V-FOR
 
         >> forEach(), for(), find(), some() in JS (you could apply it as a function via script layer
             of a Vue component):
-                /33-Web-development/frontend/javascript/for.js
-                /33-Web-development/frontend/javascript/forEach-loop.js
-                /33-Web-development/frontend/javascript/some.js
-                /33-Web-development/frontend/javascript/find.js
+                /JavaScript/Web-development/frontend/for.js
+                /JavaScript/Web-development/frontend/forEach-loop.js
+                /JavaScript/Web-development/frontend/some.js
+                /JavaScript/Web-development/frontend/find.js
 
 
     >> HOW TO USE V-FOR WITH V-IF:

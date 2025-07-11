@@ -8,7 +8,7 @@
 
 
 // TRADITIONAL FOR() LOOP:
-// More about: /33-Web-development/frontend/javascript/for.js
+// More about: /JavaScript/Web-development/frontend/for.js
 
 // Break works to stop the loop:
 for (let i = 0; i < array.length; i++) {
@@ -20,7 +20,7 @@ for (let i = 0; i < array.length; i++) {
 
 
 // FOREACH() LOOP:
-// More about: /33-Web-development/frontend/javascript/forEach-loop.js
+// More about: /JavaScript/Web-development/frontend/forEach-loop.js
 
 // Break doesn't work with forEach:
 array.forEach((item, index) => {
@@ -32,7 +32,7 @@ array.forEach((item, index) => {
 
 
 // SOME() LOOP:
-// More about: /33-Web-development/frontend/javascript/some.js
+// More about: /JavaScript/Web-development/frontend/some.js
 
 // Use some() which stops when you return true:
 array.some((item, index) => {

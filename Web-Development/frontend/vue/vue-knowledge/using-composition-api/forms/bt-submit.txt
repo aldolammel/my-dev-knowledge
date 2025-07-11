@@ -3,7 +3,7 @@
 VUE WITH FORMS: SUBMIT BUTTON
 
     To make a real clickable button, you need to use the directive 'v-on' (@):
-        /33-Web-development/frontend/vue/vue-knowledge/v-on.txt
+        /Web-Development/frontend/vue/vue-knowledge/v-on.txt
 
     E.g.
 
@@ -12,10 +12,10 @@ VUE WITH FORMS: SUBMIT BUTTON
             <script setup>
                 import { ref } from 'vue'
 
-                // Reactive data - equivalent to data() in Options API
+                // Reactive data, equivalent to data() in Options-API:
                 const chosenAnswer = ref(undefined)  // Initialize as undefined reactive reference
 
-                // Methods - regular functions in Composition API
+                // Methods, regular functions in Composition-API:
                 const submitForm = () => {
                     // Access reactive value using .value
                     if (!chosenAnswer.value) {
@@ -27,11 +27,16 @@ VUE WITH FORMS: SUBMIT BUTTON
 
         # On <template> layer:
                        
-            <button
-                type="button"
-                @click="submitForm"
-            >
-                Submit
-            </button>
+            <form @submit.prevent="submitForm">
+                
+                <!-- ... -->
+                
+                <button
+                    type="button"
+                >
+                    Submit
+                </button>
+
+            </form>
 
             # Important: you can pass args if needed: @click="submitForm(arg1, arg2, ...)"

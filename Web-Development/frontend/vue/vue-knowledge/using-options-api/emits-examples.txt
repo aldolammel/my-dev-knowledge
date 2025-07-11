@@ -1,6 +1,6 @@
 
 
-VUE USING OPTIONS API: EMITS EXAMPLES
+VUE USING OPTIONS-API: EMITS EXAMPLES
 
 
     >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -17,18 +17,16 @@ VUE USING OPTIONS API: EMITS EXAMPLES
         <script>
             export default {
                 name: 'ChildComponent',
+
+                // Props definition:
+                // Reserved space...
                 
-                // Object with validation:
-                emits: {
-                    'simple-event': null,
-                    'data-event': (payload) => {
-                        // Validation logic - return true if valid
-                        return payload && typeof payload === 'object'
-                    },
-                    'validated-event': (value) => {
-                        return typeof value === 'string' && value.length > 0
-                    }
-                },
+                // Emits definition:
+                emits: [
+                    'simple-event',
+                    'data-event',
+                    'validated-event'
+                ],
             
                 methods: {
                     handleSimpleClick() {
@@ -37,7 +35,7 @@ VUE USING OPTIONS API: EMITS EXAMPLES
                     },
                     handleEventWithData() {
                         // Emit event with data payload
-                        this.$emit('data-event', {
+                        this.$emit('data-event', {  // or this.$emit('data-event', arg1)
                             message: 'Hello from child',
                             timestamp: Date.now()
                         })
@@ -86,6 +84,7 @@ VUE USING OPTIONS API: EMITS EXAMPLES
                 },
                 
                 // Component data using Options API
+                // Everything inside data() doesn't need ref() or reactive()!
                 data() {
                     return {
                         eventLogs: []
@@ -119,4 +118,7 @@ VUE USING OPTIONS API: EMITS EXAMPLES
 >> SAME EXAMPLE, BUT USING COMPOSITION-API:
     /Web-Development/frontend/vue/vue-knowledge/using-composition-api/emits-examples.txt
 
+
+>> A FULL EMITS EXAMPLE:
+    /Web-Development/frontend/vue/vue-knowledge/using-options-api/z-examples/contact-list-with-form-for-new-ones/
     

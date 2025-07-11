@@ -43,9 +43,12 @@ VUE: EMITS
                 export default {
                     // Declaring this component name:
                     name: 'ChildComponent',
+
+                    // Props declaration:
+                    // Reserved space...
                     
-                    // Simple array declaration:
-                    emits: ['simple-event', 'data-event', 'validated-event'],
+                    // Emits declaration:
+                    emits: ['simple-event'],
                 },
                 methods: {
                     // Function to emit a simple event without data:
@@ -61,8 +64,11 @@ VUE: EMITS
 
             // In a ChildComponent.vue:
             <script setup>
-                // Simple array declaration:
-                const emit = defineEmits(['simple-event', 'data-event', 'validated-event'])
+                // Props declaration:
+                // Reserved space...
+
+                // Emits declaration:
+                const emit = defineEmits(['simple-event'])
 
                 // Function to emit a simple event without data:
                 const handleSimpleClick = () => {

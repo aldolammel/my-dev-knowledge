@@ -13,17 +13,17 @@ DIRECTIVE: V-MODEL
         
             # On <script> layer:
                 
-                // Using the 'options api' as scripting approach:
+                // Using the 'options-api' as scripting approach:
                 export default {
                     data() {
                         return {
-                            chosen_answer: undefined,
+                            chosenAnswer: undefined,
                         }
                     },
                     //...
                 }
 
-                // Or using the 'composition api' as scripting approach:
+                // Or using the 'composition-api' as scripting approach:
                 xxxxxxxxxxx
                 xxxxxxxxxxxx
                 xxxxxxxxxxxxxxxxxxxxx
@@ -32,7 +32,7 @@ DIRECTIVE: V-MODEL
                 
                 <input
                     :id="`q${idx}`"
-                    v-model="chosen_answer"
+                    v-model="chosenAnswer"
                     type="radio"
                     name="options"
                     :value="answer"
