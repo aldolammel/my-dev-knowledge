@@ -8,13 +8,13 @@
     Use Case: ...... When you need to retrieve a specific element;
 
     Traditional For() loop method:
-        /33-Web-development/frontend/javascript/for.js
+        /JavaScript/Web-development/frontend/for.js
 
     Some() loop method:
-        /33-Web-development/frontend/javascript/some.js
+        /JavaScript/Web-development/frontend/some.js
 
     ForEach() loop method:
-        /33-Web-development/frontend/javascript/forEach-loop.js
+        /JavaScript/Web-development/frontend/forEach-loop.js
 */
 
 const users = [

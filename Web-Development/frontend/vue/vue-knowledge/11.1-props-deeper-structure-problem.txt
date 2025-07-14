@@ -1,0 +1,51 @@
+
+
+PROPS DRILLING: IN PROJECTS WITH DEEPER STRUCTURE, PROPS CAN BE VERY CONFUSING
+    
+    
+    Prop Drilling: When you need to pass data from a parent component down through multiple nested
+                    child components, you end up passing props through components that don't actually
+                    need the data - they're just middlemen.
+
+                    // Prop drilling issue:
+                    <GrandParent>
+                    <Parent :user="user">
+                        <Child :user="user">
+                        <GrandChild :user="user" />  // Finally uses the data
+                        </Child>
+                    </Parent>
+                    </GrandParent>
+    
+
+    >> HOW TO AVOID THIS:
+    
+
+        Provide and Inject create a direct communication channel between ancestor and descendant
+        components, skipping the middlemen:
+
+
+            // Ancestor component (using Composition-API):
+            <script setup>
+                import { ref, provide } from 'vue'
+
+                const user = ref({ name: 'John', role: 'admin' })
+
+                // Provide data to all descendants
+                provide('user', user)
+            </script>
+
+
+            // Deep descendant component (using Composition-API):
+            <script setup>
+                import { inject } from 'vue'
+
+                // Inject data from any ancestor
+                const user = inject('user')
+
+                // Optional: provide default value and make it required
+                const user = inject('user', { name: 'Guest', role: 'user' })
+            </script>
+
+
+        >> MORE ABOUT:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

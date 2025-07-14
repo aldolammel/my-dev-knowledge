@@ -77,9 +77,14 @@ VUE: PROPS ("PROPERTIES")
             /Web-Development/frontend/vue/vue-knowledge/using-composition-api/props-example.txt
 
 
+    >> Don't use Props without to know this:
+        /Web-Development/frontend/vue/vue-knowledge/11.1-props-deeper-structure-problem.txt
+        
+    
     >> Once the child is NOT allow to change parent's data, child can ask its parent for a change,
         using 'emits' method:
             /Web-Development/frontend/vue/vue-knowledge/12-emits.txt
+
 
     
 
