@@ -9,13 +9,18 @@ PROPS DRILLING: IN PROJECTS WITH DEEPER STRUCTURE, PROPS CAN BE VERY CONFUSING
 
                     // Prop drilling issue:
                     <GrandParent>
-                    <Parent :user="user">
-                        <Child :user="user">
-                        <GrandChild :user="user" />  // Finally uses the data
-                        </Child>
-                    </Parent>
+                        <Parent :user="user">
+                            <Child :user="user">
+                                <GrandChild :user="user" />  // Finally uses the data
+                            </Child>
+                        </Parent>
                     </GrandParent>
+
+                    
+                    >> Project example of prop drilling:
+                        /Web-Development/frontend/vue/vue-knowledge/using-composition-api/z-examples/prop-drilling-example/
     
+
 
     >> HOW TO AVOID THIS:
     
@@ -47,5 +52,11 @@ PROPS DRILLING: IN PROJECTS WITH DEEPER STRUCTURE, PROPS CAN BE VERY CONFUSING
             </script>
 
 
+
+        >> BE AWARE: 
+            Provide/Inject is NOT a feature to avoid completely the props usage!
+
+
+
         >> MORE ABOUT:
-            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            /Web-Development/frontend/vue/vue-knowledge/13-provide-injects.txt
