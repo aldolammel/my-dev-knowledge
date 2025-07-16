@@ -1,0 +1,61 @@
+
+
+NVM (NODE VERSION MANAGER): HOW TO SWITCH NODE.JS VERSION
+
+
+    >> MANUALLY:
+        If you wanna switch NodeJS activated version, use:
+            $ nvm list
+            $ nvm use <version>
+
+            # How to install more options:
+                /JavaScript/NodeJS/installation-and-basic.txt
+
+
+    >> AUTOMATICALLY:
+        But you have smarther options to automatize this process:
+
+
+        >> METHOD 1, SEMI-AUTOMATIC: 
+            Using .nvmrc file on each project folder (Most common)
+
+            1.1) Go to the project folder root:
+                            
+                # Option 1/2 - a specific installed version:
+                    $ echo "<version>" > .nvmrc      <-- E.g. you can set like "22" or exact "22.17.1" that is a LTS version.
+                
+                # Option 2/2 - the most recent LTS (Long Term Support) version already installed:
+                    # It's confusing coz it demands the LTS-code-name to works (Not recommended here)!
+
+                # To edit that file (if needed):
+                    $ nano .nvmrc
+
+            1.2) Now, always you get in the project folder, run this to automatically select the right
+                Node.JS version:
+                    $ nvm use
+            
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        >> METHOD 2, AUTOMATIC ADVANCED:
+            Editing the ~/.bashrc:
+        
+            2.1) ...
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+
+        >> METHOD 3, AUTOMATIC VIA (THIRD-PARTY):
+            Installing the AVN package:
+
+            3.1) ...
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Uninstall some Node.js version?
+        /JavaScript/NodeJS/uninstall-node.txt
+

@@ -1,0 +1,53 @@
+
+
+NODE.JS: HOW TO UNINSTALL
+
+
+    >> UBUNTU
+
+        >> Uninstall it globally:
+
+            # Check the nodejs version (not 'node' for this case):
+                $ nodejs -v
+                
+                # Double-check if the nodejs has a global folder:
+                    $ which nodejs   <-- if something is returned, the nodejs is installed globally!
+
+            # Uninstall nodejs and its package manager (if appliable):
+                $ sudo apt remove nodejs npm
+                    
+                    # Removing configuration files (optional):
+                        $ sudo apt purge nodejs npm
+                
+                # Removing the uninstalled files:
+                    $ sudo apt autoremove
+
+                # Check if nodejs still exist globally:
+                    $ nodejs -v
+                    $ which nodejs
+
+                    # (Optional) If nodejs persists globally:
+                        # Remove global npm packages directory (if it exists)
+                            $ sudo rm -rf /usr/local/lib/node_modules
+                        # Remove npm cache
+                            $ sudo rm -rf ~/.npm
+                        # Remove any remaining Node.js related files
+                            $ sudo rm -rf /etc/apt/sources.list.d/nodesource.list*
+                        # Close the current Terminal, and check everything once again!
+                        
+
+        
+        >> Uninstall it from a specific user/project:
+
+            # CRITICAL: If you are using automatize methods to switch the Node.JS versions,
+                        be aware about what method you are using for your current projects:
+                            
+                            /JavaScript/NodeJS/nvm-switch-node-version-automatically.txt
+
+            # That said, check which versions you have installed:
+                $ nvm list
+
+            # Uninstall Node.js version 23.11.0 (the one you currently have)
+                $ nvm uninstall <version>        <-- can be 23 or exact 23.11.0
+
+            

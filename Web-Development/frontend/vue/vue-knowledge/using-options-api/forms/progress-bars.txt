@@ -1,6 +1,0 @@
-
-
-PROGRESS BAR EXAMPLES:
-
-    >> Using Options API approach:
-        /Web-Development/frontend/vue/vue-knowledge/using-options-api/z-examples/progress-bar-examples/

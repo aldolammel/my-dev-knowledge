@@ -1,6 +1,0 @@
-
-
-PROGRESS BAR EXAMPLES:
-
-    >> Using Composition API approach:
-        /Web-Development/frontend/vue/vue-knowledge/using-composition-api/z-examples/progress-bar-examples/

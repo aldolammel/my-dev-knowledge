@@ -1,0 +1,109 @@
+
+
+VUE USING COMPOSITION-API: EMITS EXAMPLES
+
+
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        <script setup>
+            // Props definition:
+            // Reserved space...
+
+            // Emits definition:
+            const emit = defineEmits({
+                'simple-event': null,
+                'data-event': (payload) => {
+                    // Validation logic - return true if valid
+                    return payload && typeof payload === 'object'
+                },
+                'validated-event': (value) => {
+                    return typeof value === 'string' && value.length > 0
+                }
+            })
+            // Event handler functions
+            const handleSimpleClick = () => {
+                // Emit simple event without data
+                emit('simple-event')
+            }
+            const handleEventWithData = () => {
+                // Emit event with data payload
+                emit('data-event', {
+                    message: 'Hello from child',
+                    timestamp: Date.now()
+                })
+            }
+            const handleValidatedEvent = () => {
+                // Emit event with validation
+                emit('validated-event', 'Some string value')
+            }
+        </script>
+
+        <!-- The template layer is the same for both API approaches -->
+        <template>
+            <div>
+                <button @click="handleSimpleClick">Simple Event</button>
+                <button @click="handleEventWithData">Event with Data</button>
+                <button @click="handleValidatedEvent">Validated Event</button>
+            </div>
+        </template>
+
+
+
+    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        <script setup>
+            import ChildComponent from './components/ChildComponent.vue'
+            
+            // In Composition-API, this make a data reactive:
+            import { ref } from 'vue'
+
+            // Store event logs
+            const eventLogs = ref([])
+
+            // Event handlers
+            const onSimpleEvent = () => {
+                eventLogs.value.push('Simple event received at ' + new Date().toLocaleTimeString())
+            }
+            const onDataEvent = (payload) => {
+                eventLogs.value.push(`Data event: ${payload.message} at ${new Date(payload.timestamp).toLocaleTimeString()}`)
+            }
+            const onValidatedEvent = (value) => {
+                eventLogs.value.push(`Validated event: "${value}" at ${new Date().toLocaleTimeString()}`)
+            }
+        </script>
+
+        <!-- The template layer is the same for both API approaches -->
+        <template>
+            <div>
+                <!-- Listen to all emitted events -->
+                <ChildComponent
+                    @simple-event="onSimpleEvent"
+                    @data-event="onDataEvent"
+                    @validated-event="onValidatedEvent"
+                />
+                
+                <div>
+                    <h3>Event Log:</h3>
+                    <ul>
+                        <li v-for="(log, idx) in eventLogs" :key="idx">
+                            {{ log }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </template>
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+>> SAME EXAMPLE, BUT USING OPTIONS-API:
+    /Web-Development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
+
+
+>> A FULL EMITS EXAMPLE:
+    /Web-Development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/contact-list-with-form-for-new-ones/
+
+    

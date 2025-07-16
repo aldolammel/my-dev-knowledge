@@ -1,7 +1,0 @@
-
-
-SAVING DATA: localStorage VS cookies VS sessionStorage
-
-    /JavaScript/Web-development/frontend/localStorage.js
-    /JavaScript/Web-development/frontend/cookies.js
-    /JavaScript/Web-development/frontend/sessionStorage.js

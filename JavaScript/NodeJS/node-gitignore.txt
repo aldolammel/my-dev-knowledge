@@ -1,0 +1,18 @@
+
+
+NODE.JS ON GITIGNORE FILE:
+
+    >> Include this lines in your project gitignore file (if appliable):
+
+        .idea/
+            
+        ### Node.js ###
+        node_modules/
+        jspm_packages/
+
+
+
+
+
+>> MORE ABOUT GITIGNORE FILE:
+    /Versioning/git/gitignore-file.txt

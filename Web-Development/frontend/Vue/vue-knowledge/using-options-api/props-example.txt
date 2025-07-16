@@ -1,0 +1,85 @@
+
+
+VUE USING OPTIONS-API: PROPS EXAMPLES
+
+
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        <template>
+            <h1>Contacts</h1>
+            <!-- in Options-API, for-loop DOESN'T demand a 'props.' before the props atribute (contacts): -->
+            <div
+                v-for="contact in contacts"
+                :key="contact.id"
+            >
+                <hr>
+                <h3 :class="{ fav : contact.isFav }">
+                    <span v-if="contact.isFav">★</span>
+                    {{ contact.name }}
+                </h3>
+                <p>{{ contact.country }}</p>
+            </div>
+        </template>
+        
+        <script>
+            export default {
+                props: {
+                    contact: {
+                        name: {
+                            type: String,
+                            required: true,
+                        },
+                        phone: {
+                            type: String,
+                            required: true,
+                        },
+                        isFavorite: {
+                            type: String,
+                            required: false,
+                            default: '0',  // 0 = false / 1 = true / if no data was declared, '0'.
+                            validator: function(value) {
+                                // if the return is not a valid option, Vue console will show an error.
+                                return value === '1' || value === '0';
+                            }
+                        },
+                    }
+                };
+            }
+        </script>
+
+
+    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        <template>
+            <!-- This 'contacts' is what your child-components are waiting for: -->
+            <Person :contacts="fakeDatabase" />
+        </template>
+
+        <script>
+            import Person from './components/ChildComponent.vue'
+
+            // Fake database:
+            const fakeDatabase = [
+                {
+                    id: 1,
+                    name: 'Joanna',
+                    country: 'Brazil',
+                    isFav: false,
+                },
+                {
+                    id: 2,
+                    name: 'Ioshy',
+                    country: 'Japan',
+                    isFav: true,
+                },
+            ];
+        </script>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> SAME EXAMPLE, BUT USING COMPOSITION-API:
+    /Web-Development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt
+
+    

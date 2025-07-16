@@ -1,0 +1,90 @@
+
+
+VUE: EMITS
+
+    In Vue.js, emits are used to send events and data from child-components to their parent-components.
+    So it's correct to say emits are the way to Vue.js to send updated data to parent-components.
+
+        - Emits declare what custom events a child-component can emit to its parent;
+        - Emits declare what data a child-component wants to update in its parent;
+        - Emits enable better IDE support with autocomplete and validation;
+        - Emits support validation functions that return boolean;
+        - Emits can send data with events (Payload);
+        - Emits require explicit emit declarations;
+        - Emits are not mandatorilly related to props once you can emit an event without any props;
+
+        >> Why Emits are better than regular functions:
+
+            - Child emits event, parent decides what to do, child doesn't care any return from parent;
+            - They are reusable easily for different parents when the child is used for many of them;
+            - xxxxxxxxxxxxxxx
+
+        >> If using Options-API:
+
+            - Emits are defined using 'emits' object;
+            - Access method: this.$emit();
+            - Emit events with this.$emit('event-name', payload)
+
+        >> If using Composition-API:
+
+            - Emits are defined using 'defineEmits()' compiler macro;
+            - Access method: emit();
+            - No 'this.' context needed, but cleaner function calls;
+            - Returns an emit function that you call directly;
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Emits using Options-API:
+
+            // In a ChildComponent.vue:
+            <script>
+                export default {
+                    // Declaring this component name:
+                    name: 'ChildComponent',
+
+                    // Props declaration:
+                    // Reserved space...
+                    
+                    // Emits declaration:
+                    emits: ['simple-event'],
+                },
+                methods: {
+                    // Function to emit a simple event without data:
+                    handleSimpleClick() {
+                        this.$emit('simple-event')
+                    },
+                }
+            </script>
+
+
+
+    >> Emits using Composition-API:
+
+            // In a ChildComponent.vue:
+            <script setup>
+                // Props declaration:
+                // Reserved space...
+
+                // Emits declaration:
+                const emit = defineEmits(['simple-event'])
+
+                // Function to emit a simple event without data:
+                const handleSimpleClick = () => {
+                    emit('simple-event')
+                }
+            </script>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Full examples of Emits being used, including validation:
+
+        >> Using Options-API:
+            /Web-Development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
+        
+        >> Using Composition-API:
+            /Web-Development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.txt
+

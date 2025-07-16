@@ -1,5 +1,0 @@
-
-
-NODE.JS:
-
-    >> It's predominantly used for backend development but also plays a significant role in frontend development.

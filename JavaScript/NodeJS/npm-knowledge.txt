@@ -1,0 +1,61 @@
+
+
+
+NPM (NODE PACKAGE MANAGER) KNOWLEDGE:
+
+
+    CRITICAL: Unlike NVM, the NPM is watching the folder you are running the terminal!
+
+
+
+    >> NPM installation:
+        /JavaScript/NodeJS/installation-and-basic.txt
+
+
+
+    >> Install a Node package/component:
+
+        >> Ubuntu:
+
+            # Locally (Strongly recommended):
+                
+                # In the project folder, check the current packages are installed on this project:
+                    $ npm list
+                
+                # So, again, in the project folder, install the desired package/component:
+                    $ npm install <package_name>
+
+            
+            # Globally:
+
+                # In your user root folder, check the current packages are installed on this machine:
+                    $ npm list
+                
+                # No matter where you are, install the desired package/component globally (-g):
+                    $ npm install -g <package_name>
+
+
+
+    >> Uninstall a Node package/component:
+
+
+            # Locally:
+                
+                # In the project folder, check the current packages are installed on this project:
+                    $ npm list
+                
+                # So, again, in the project folder, uninstall the desired package/component:
+                    $ npm uninstall <package_name>
+                        e.g.
+                            $ npm uninstall naive-ui         <-- without '@' and version numbers
+
+        
+            # Globally:
+
+                # In your user root folder, check the current packages are installed on this machine:
+                    $ npm list
+                
+                # No matter where you are, uninstall the desired package/component globally (-g):
+                    $ npm uninstall -g <package_name>
+                        e.g.
+                            $ npm uninstall -g naive-ui       <-- without '@' and version numbers

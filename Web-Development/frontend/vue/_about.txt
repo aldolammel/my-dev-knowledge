@@ -1,2 +1,0 @@
-About Vue:
-    /Web-Development/frontend/vue/vue-knowledge/_about.txt
