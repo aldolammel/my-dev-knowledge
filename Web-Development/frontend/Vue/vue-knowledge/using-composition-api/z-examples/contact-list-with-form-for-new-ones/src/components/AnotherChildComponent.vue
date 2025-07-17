@@ -40,24 +40,24 @@
       Any changes to these refs will also update the input field values automatically.
     -->
     <div>
-      <label for="inputName">New person</label>
-      <input
-        id="inputName"
-        v-model="inputValueName"
-        type="text"
-        value=""
-        placeholder="First name"
-      >
+      <label>
+        New person
+        <input
+          v-model="inputValueName"
+          type="text"
+          placeholder="First name"
+        >
+      </label>
     </div>
     <div>
-      <label for="inputCountry">Country</label>
-      <input
-        id="inputCountry"
-        v-model="inputValueCountry"
-        type="text"
-        value=""
-        placeholder="Their country"
-      >
+      <label>
+        Country
+        <input
+          v-model="inputValueCountry"
+          type="text"
+          placeholder="Their country"
+        >
+      </label>
     </div>
     <button type="submit">
       Add this person
