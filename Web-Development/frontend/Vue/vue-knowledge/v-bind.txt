@@ -5,11 +5,13 @@ DIRECTIVE: V-BIND
 
     >> It's accepted for: any (with arg), obj (without arg).
 
+    >> It's shorter caller: ':' (colon)
+
         >> You can apply v-bind using 'v-bind:' or just ':' before an attribute for example:
 
             >> Calling URL:
             
-            <img :src="p.image" /> so its the same of <img src="https://somedomain.com/image.png" />
+                <img :src="p.image" /> so its the same of <img src="https://somedomain.com/image.png" />
         
 
         >> Using v-bind to deactivate a button:

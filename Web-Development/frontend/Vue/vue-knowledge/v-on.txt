@@ -5,11 +5,14 @@ DIRECTIVE: V-ON
 
     >> It's accepted for: function, inline statement, object (without arg).
 
-    >> Example 1:
+    >> It's shorter caller: '@' (at)
+
+
+    >> Example 1: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
             <div
                 ...
-                v-on: click="product.active = !product.active"
+                v-on:click="product.active = !product.active"
             >
 
         Or shorter version: 
@@ -20,7 +23,7 @@ DIRECTIVE: V-ON
             >
 
 
-    >> Example 2:
+    >> Example 2: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         # Decrease amount:
         
@@ -35,7 +38,7 @@ DIRECTIVE: V-ON
 
                 <button
                     type="button"
-                    @click="product.quantity = product.quantity - 1"
+                    v-on:click="product.quantity = product.quantity - 1"
                 >
                     -
                 </button>
@@ -58,7 +61,18 @@ DIRECTIVE: V-ON
                     +
                 </button>
 
-    
+
+    >> Example 3: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        <form @submit.prevent="myFunction">
+            ...
+            <button type="submit">
+                Send
+            </button>
+        </form>
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     >> How child components communicate with their parent components by sending custom events:
-        /33-Web-development/frontend/vue/vue-knowledge/12-emits.txt
+        /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
