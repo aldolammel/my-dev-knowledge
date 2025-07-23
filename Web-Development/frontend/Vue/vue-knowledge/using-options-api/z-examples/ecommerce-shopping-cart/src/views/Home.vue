@@ -35,56 +35,55 @@
 </template>
   
 <script>
-// Things to import:
-import { mapState } from 'vuex'
+  // Things to import:
+  import { mapState } from 'vuex'
 
-export default {
-  name: 'Home',
-  // Component state/data
-  data() {
-    return {
-      // state proprieties:
-      // Reserved space...
-    }
-  },
-  // Computed properties:
-  // /33-Web-development/frontend/vuejs/3-component-libraries/vuex/computed-properties.txt
-  // /33-Web-development/frontend/vuejs/3-component-libraries/vuex/vuex-helpers.txt
-  computed: mapState([  // Using the a 'Vuex Helper' to generate automatically the getter fncs!
-    'products',  // It's a state property (data)!
-    'cart'  // It's a state property (data)!
-  ]),
-  
-  // Lifecycle hooks:
-  // Reserved space...
-  
-  // STEP 2/4:
-  // Addressing/Dispatching actions responsable to request data updates:
-  // Methods/functions
-  methods: {
-    btCartAddProd(prod) {
-      // This function is called if a user click over the 'Add to Cart' button.
-      prod.quantity = 1;
-      this.$store.dispatch('actCartAddProd', prod);  // 'actCartAddProd' is the action to call!
+  export default {
+    name: 'Home',
+    // Component state/data
+    data() {
+      return {
+        // state proprieties:
+        // Reserved space...
+      }
     },
-    isInCart(prod) {
-      // This function checks whether the product is in shopping cart.
-      // Returns bool: If true, the product is in cart.
-      return this.cart.find(item => item.id === prod.id);
-    },
-    btCartDelProd(prodID) {
-      // This function is called if a user click over the 'Remove from Cart' button.
-      const isConfirmed = confirm("Remove the product from your cart?")
-      if (isConfirmed) {
-        this.$store.dispatch('actCartDelProd', prodID);
+    // Computed properties:
+    // /Web-Development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+    // /Web-Development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+    computed: mapState([  // Using the a 'Vuex Helper' to generate automatically the getter fncs!
+      'products',  // It's a state property (data)!
+      'cart'  // It's a state property (data)!
+    ]),
+    
+    // Lifecycle hooks:
+    // Reserved space...
+    
+    // STEP 2/4:
+    // Addressing/Dispatching actions responsable to request data updates:
+    // Methods/functions
+    methods: {
+      btCartAddProd(prod) {
+        // This function is called if a user click over the 'Add to Cart' button.
+        prod.quantity = 1;
+        this.$store.dispatch('actCartAddProd', prod);  // 'actCartAddProd' is the action to call!
+      },
+      isInCart(prod) {
+        // This function checks whether the product is in shopping cart.
+        // Returns bool: If true, the product is in cart.
+        return this.cart.find(item => item.id === prod.id);
+      },
+      btCartDelProd(prodID) {
+        // This function is called if a user click over the 'Remove from Cart' button.
+        const isConfirmed = confirm("Remove the product from your cart?")
+        if (isConfirmed) {
+          this.$store.dispatch('actCartDelProd', prodID);
+        }
       }
     }
   }
-}
 </script>
 
 <style lang="scss">
-
   .home {
 
     .products {
@@ -156,8 +155,5 @@ export default {
         }
       }
     }
-
   }
-
-
 </style>

@@ -17,15 +17,45 @@
 -->
 
 
+<!--
+    Composition-API (being coded with sintactic sugar, SMARTHER 'coz it's much more direct
+    and flexible):
+-->
 <script setup>
-import { ref, computed } from 'vue'
+    import { ref, computed } from 'vue'
 
-const firstName = ref('Aldo')
-const lastName = ref('Lammel')
+    const count = ref(0)
+    const doubleCount = computed(() => count.value * 2)
 
-const fullName = computed(() => {
-    return firstName.value + ' ' + lastName.value
-})
+    function increment() {
+        count.value++
+    }
+</script>
+
+
+<!--
+    Composition-API (using Options-API structure, but with setup() that replace all options
+    sections (data, computed, methods, lifecycle hooks, etc), making to be need the ref() usage:
+-->
+<script>
+    import { ref, computed } from 'vue'
+
+    export default {
+        setup() {
+            const count = ref(0)
+            const doubleCount = computed(() => count.value * 2)
+            
+            function increment() {
+                count.value++
+            }
+            
+            return {
+                count,
+                doubleCount,
+                increment
+            }
+        }
+    }
 </script>
 
 

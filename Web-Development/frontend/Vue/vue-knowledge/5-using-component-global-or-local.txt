@@ -1,0 +1,44 @@
+
+
+VUE.JS COMPONENT: USING IT GLOBAL OR LOCALLY?
+
+
+    >> Global component:
+        It will be loaded before the application be shown on the browser.
+        It's perfect for those components always (or almost) running/visible on the app interface.
+
+        E.g.
+
+            //In main.js:
+            import { createApp } from 'vue'
+            import App from './App.vue'
+            import MyComp from './components/MyComp.vue'
+            
+            const app = createApp(App)
+
+            app.component('MyComp', MyComp)
+
+            app.mount('#app');
+
+
+    >> Local component:
+        It will be loaded after the application be shown on the browser and the parent's component
+        is loaded too.
+
+        E.g. with Options-API:
+
+            //App.vue:
+            <script>
+                import MyComp from './components/MyComp.vue'
+                // Register child component:
+                components: {
+                    MyComp
+                },
+            </script>
+        
+        E.g. with Composition-API:
+
+            //App.vue:
+            <script setup>
+                import MyComp from './components/MyComp.vue'
+            </script>

@@ -6,18 +6,13 @@
 
 <script>
 
-export default {
-name: 'Product',
-
-methods: {
-    
-},
-
-}
+  export default {
+    name: 'Product',
+    methods: {
+        
+    },
+  }
 </script>
 
 <style lang="scss">
-
-
-
 </style>

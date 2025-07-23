@@ -18,32 +18,32 @@
 </template>
 
 <script>
-export default {
-  name: 'ChildComponent',
-  
-  // Inject the functions and data from parent
-  inject: ['counterFunctions', 'counterValue'],
-  
-  // Create computed properties or methods to use injected values
-  computed: {
-    // Access injected functions
-    functions() {
-      return this.counterFunctions
+  export default {
+    name: 'ChildComponent',
+    
+    // Inject the functions and data from parent
+    inject: ['counterFunctions', 'counterValue'],
+    
+    // Create computed properties or methods to use injected values
+    computed: {
+      // Access injected functions
+      functions() {
+        return this.counterFunctions
+      },
+      
+      // Access injected counter value
+      injectedCounter() {
+        return this.counterValue
+      }
     },
     
-    // Access injected counter value
-    injectedCounter() {
-      return this.counterValue
-    }
-  },
-  
-  // Alternative: You can also use injected functions directly in methods
-  methods: {
-    // Example of using injected functions in component methods
-    handleCustomAction() {
-      this.counterFunctions.increment()
-      // Additional logic can be added here
+    // Alternative: You can also use injected functions directly in methods
+    methods: {
+      // Example of using injected functions in component methods
+      handleCustomAction() {
+        this.counterFunctions.increment()
+        // Additional logic can be added here
+      }
     }
   }
-}
 </script>

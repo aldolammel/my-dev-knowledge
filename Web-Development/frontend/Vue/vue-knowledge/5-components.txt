@@ -14,16 +14,41 @@ VUE COMPONENTS:
     >> Parent can send data to its children, but children CANNOT send data to their parents.
         This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
             
-            /Web-Development/frontend/Vue/vue-knowledge/11-props.txt
-            /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
+        /Web-Development/frontend/Vue/vue-knowledge/11-props.txt
+        /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
+
+    
+    >> A component can be global or local, depends how often it will be shown:
+        /Web-Development/frontend/Vue/vue-knowledge/5-using-component-global-or-local.txt
 
 
-    >> Convention: components' names must be written using kebab-case, it means to use 2 or more
-                    names separated by dash. It avoids potential clashes with Vue or HTML built-in
-                    element names. A good example of component named with kebab-case:
+    >> Convention: components' names must be written using PascalCase, it means no space or special
+                    character, just first letter upper, and all first letters if it composed by two
+                    or more words. 
 
                         E.g.
-                            user-contact, hero-home, faq-section, h2-title.
+                            MyComp, UserContact, HeroHome, FaqSection, H2Title.
+
+                        E.g. importing:
+                            import MyComp from './components/MyComp.vue'
+
+                        E.g. calling it:
+                            <MyComp>...</MyComp>
+                            <!-- or -->
+                            <MyComp />
+                    
+                    
+                    Alternatively: you can use kebap-case as well. A good example of component named
+                                    with kebab-case:
+
+                                        E.g.
+                                            my-comp, user-contact, hero-home, faq-section, h2-title.
+                                        
+                                        E.g. importing:
+                                            import my-comp from './components/my-comp.vue'
+
+                                        E.g. calling it:
+                                            <my-comp>...</my-comp>  <!-- it's NOT possible to close like using only '/>'.
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

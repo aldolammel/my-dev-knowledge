@@ -26,6 +26,9 @@ export default {
         fullName() {
             return this.firstName + ' ' + this.lastName;
         }
+    },
+    methods: {
+        // /Web-Development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
     }
 }
 </script>

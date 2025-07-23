@@ -28,6 +28,9 @@ const MyProjectThing = {
             //...
         }
     },
+    computed: {
+        // /Web-Development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
+    },
     // METHODS/FUNCTIONS:
     methods: {
         // Example:

@@ -5,30 +5,30 @@
     a DOM element. They are prefixed with v- to indicate that they are Vue-specific.
 
     >> v-text
-        /33-Web-development/frontend/vue/vue-knowledge/v-text.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-text.txt
 
     >> v-html             (string)
     >> v-show             (any)
     >> v-If
-        /33-Web-development/frontend/vue/vue-knowledge/v-if.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-if.txt
 
     >> v-else
-        /33-Web-development/frontend/vue/vue-knowledge/v-else.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-else.txt
             
     >> v-else-if
-        /33-Web-development/frontend/vue/vue-knowledge/v-else-if.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-else-if.txt
 
     >> v-for
-        /33-Web-development/frontend/vue/vue-knowledge/v-for.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-for.txt
 
     >> v-on
-        /33-Web-development/frontend/vue/vue-knowledge/v-on.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-on.txt
 
     >> v-bind
-        /33-Web-development/frontend/vue/vue-knowledge/v-bind.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-bind.txt
 
     >> v-model            (varies based on value of form inputs element or output of components)
-        /33-Web-development/frontend/vue/vue-knowledge/v-model.txt
+        /Web-Development/frontend/Vue/vue-knowledge/v-model.txt
 
 
 
