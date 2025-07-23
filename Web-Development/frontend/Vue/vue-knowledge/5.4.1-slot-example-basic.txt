@@ -1,0 +1,57 @@
+
+
+VUE.JS COMPONENTS: SLOT EXAMPLE, BASIC
+
+
+    If you want to send an HTML fragment from the current component (parent) to its
+    child-component(s), just call the child-component tag and, before to close this tag, set the
+    HTML fragment that should be rendered in there.
+
+    >> BE AWARE: once the parent is compiled before to send the HTML fragment to its
+                child-component(s), no dynamic data will be dynamically available in child-component
+                without to use Props or Provide/Inject.
+
+
+    <!-- App.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <template>
+        <!-- Calling the child-component -->
+        <ChildComponent>
+            <h1>{{ title }}</h1>
+            <p>{{ desc }}</p>
+        </ChildComponent>
+    </template>
+
+    <script>
+        // ...
+    </script>
+
+    <style>
+        /* It's global for all app children once the <style> tag has no 'scoped' explicited */
+        html {
+            background-color: #F1F1F1;
+        }
+    </style>
+
+
+    <!-- /components/ChildComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <template>
+        <div>
+            <!-- When you call a SLOT you're saying some HTML fragment will be insert here -->
+            <slot />
+        </div>
+    </template>
+
+    <style scoped>
+        /* This CSS is local, so this style exclusively reflects in (child) component only */
+        div {
+            padding: 0 auto;
+            background-color: #F9F9F9;
+        }
+    </style>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+VUE.JS COMPONENTS: SLOT EXAMPLE, SMARTER:
+    /Web-Development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt

@@ -47,5 +47,5 @@ CREATING A NEW COMPONENT (DEDICATED FILES):
 
     4) If you need to call external data (from App.vue, for example), you must to use PROPS in
         your component file:
-            /Web-Development/frontend/Vue/vue-knowledge/11-props.txt
+            /Web-Development/frontend/Vue/vue-knowledge/5.1-props.txt
 

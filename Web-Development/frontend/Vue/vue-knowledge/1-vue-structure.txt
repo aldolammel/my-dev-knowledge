@@ -26,35 +26,36 @@ VUE.JS: ITS FILE AND FOLDER STRUCTURE
         2) Template
         3) Style
 
-        Important knowledge about each one:
+        Important basic knowledge about each one:
 
 
         >> <SCRIPT> layer:
             
-            >> There are 2-ways to code components, using 'Options API' or 'Component API':
-                /Web-Development/frontend/Vue/vue-knowledge/3-approaches-to-code.txt
-
-            >> xxxxxxx
-
+            >> There are 2-ways to code components, using 'Options API' or 'Component API' but both
+                use JavaScript (TypeScript is optional) to be written:
+                
+                    /Web-Development/frontend/Vue/vue-knowledge/3-approaches-to-code.txt
 
 
         >> <TEMPLATE> layer:
 
-            >> xxxxxxx
+            >> Templates is basically pure HTML, and each template can be fragmented in infinite
+                other small pieces, using Vue Component structure associated with Vue Slots:
 
-            >> xxxxxxx
-
+                    /Web-Development/frontend/Vue/vue-knowledge/5-components.txt
+                    /Web-Development/frontend/Vue/vue-knowledge/5.4-slot.txt
 
 
         >> <STYLE> layer:
 
-            >> To say to the style tag in the .vue file that that style settings
-                is just for that specific vue app, you must use 'scoped' attribute:
+            >> Each component (.vue file, for example) can have its own <style> tag where all the
+                style coded in there can be glogal (for the parent component and its child ones) or
+                local so the style tag is restricted only to the component the style tag belongs.
+
+                    <!-- if 'scoped', the style is only local for the current component -->
                     <style scoped>
                         ...
                     </style>
-
-            >> xxxxxxx
 
 
 

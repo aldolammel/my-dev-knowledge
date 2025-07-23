@@ -11,16 +11,20 @@ VUE COMPONENTS:
     >> Each component is a sub-app (child) inside an app (parent);
 
 
-    >> Parent can send data to its children, but children CANNOT send data to their parents.
-        This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
-            
-        /Web-Development/frontend/Vue/vue-knowledge/11-props.txt
-        /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
-
-    
     >> A component can be global or local, depends how often it will be shown:
         /Web-Development/frontend/Vue/vue-knowledge/5-using-component-global-or-local.txt
 
+    
+    >> Parent can send data to its children, but children CANNOT send data to their parents.
+        This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
+            
+        /Web-Development/frontend/Vue/vue-knowledge/5.1-props.txt
+        /Web-Development/frontend/Vue/vue-knowledge/5.2-emits.txt
+
+
+    >> Parent can send HTML to irs children, using slots:
+        /Web-Development/frontend/Vue/vue-knowledge/5.4-slot.txt
+    
 
     >> Convention: components' names must be written using PascalCase, it means no space or special
                     character, just first letter upper, and all first letters if it composed by two

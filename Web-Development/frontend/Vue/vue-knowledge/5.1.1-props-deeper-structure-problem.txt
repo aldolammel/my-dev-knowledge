@@ -59,4 +59,4 @@ PROPS DRILLING: IN PROJECTS WITH DEEPER STRUCTURE, PROPS CAN BE VERY CONFUSING
 
 
         >> MORE ABOUT:
-            /Web-Development/frontend/Vue/vue-knowledge/13-provide-injects.txt
+            /Web-Development/frontend/Vue/vue-knowledge/5.3-provide-injects.txt

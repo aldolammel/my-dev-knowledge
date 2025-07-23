@@ -1,0 +1,27 @@
+
+
+VUE.JS COMPONENTS: SLOT
+
+    Slot is the Vue way to send HTML fragments (previously compiled) from the parent-component to
+    its child/children.
+
+    >> Slots allow you to create generic, flexible components that can be reused with different
+        content while maintaining the same structure and styling.
+
+    >> Slots separate the component's structure/logic from its content, making components more
+        maintainable and allowing different devs to work on structure vs content independently.
+
+    >> Parent components can inject any type of content (text, HTML, other components) into
+        child components without modifying the child's internal structure.
+
+    >> Slot logic workflow:
+        /Web-Development/frontend/Vue/vue-knowledge/vue-component-slot.png
+
+    >> Examples:
+        
+        /Web-Development/frontend/Vue/vue-knowledge/5.4.1-slot-example-basic.txt
+
+        /Web-Development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt
+
+
+

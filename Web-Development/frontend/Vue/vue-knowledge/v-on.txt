@@ -75,4 +75,4 @@ DIRECTIVE: V-ON
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     >> How child components communicate with their parent components by sending custom events:
-        /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
+        /Web-Development/frontend/Vue/vue-knowledge/5.2-emits.txt

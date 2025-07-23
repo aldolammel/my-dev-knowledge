@@ -78,12 +78,12 @@ VUE: PROPS ("PROPERTIES")
 
 
     >> Don't use Props without to know this:
-        /Web-Development/frontend/Vue/vue-knowledge/11.1-props-deeper-structure-problem.txt
+        /Web-Development/frontend/Vue/vue-knowledge/5.1.1-props-deeper-structure-problem.txt
         
     
     >> Once the child is NOT allow to change parent's data, child can ask its parent for a change,
         using 'emits' method:
-            /Web-Development/frontend/Vue/vue-knowledge/12-emits.txt
+            /Web-Development/frontend/Vue/vue-knowledge/5.2-emits.txt
 
 
     
