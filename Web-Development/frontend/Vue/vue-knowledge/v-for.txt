@@ -53,3 +53,10 @@ DIRECTIVE: V-FOR
                     </template>
                 </tr>
             </tbody>
+
+
+    - - - -
+
+
+    V-FOR WITH SLOTS (SCOPED SLOTS):
+        /Web-Development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt

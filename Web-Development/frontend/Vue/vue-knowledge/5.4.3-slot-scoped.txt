@@ -1,0 +1,40 @@
+
+
+VUE.JS COMPONENTS: SCOPED SLOTS, THE WAY TO USE SLOTS WITH FOR-LOOPS
+
+    >> Basic about slots:
+        /Web-Development/frontend/Vue/vue-knowledge/5.4-slot.txt
+    
+    Slot content has access to the data scope of the parent-component, because it is defined in 
+    the parent. Slot content DONT have access to the child-component's data. Expressions in Vue
+    templates can only access the scope it's defined in, so it's correct to say:
+
+        Slot content doesn't have access to state in the child-component!
+
+    However, we can pass attributes to a slot outlet just like passing props to a component:
+
+        /Web-Development/frontend/Vue/vue-knowledge/vue-component-slot-scoped.png
+
+
+    >> Example:
+
+
+        <!-- Parent component -->
+        <CourseGoals #default="slotProps">
+            <h2>{{ slotProps.arg1 }}</h2>
+            <p>{{ slotProps.arg2 }}</p>
+        </CourseGoals>
+
+
+        <!-- Child component -->
+        <li
+            v-for="(goal, idx) in goals"
+            :key="idx"
+        >
+            <slot
+                name="default"
+                :arg1="goal"
+                arg2="xxxx"
+            />
+        </li>
+
