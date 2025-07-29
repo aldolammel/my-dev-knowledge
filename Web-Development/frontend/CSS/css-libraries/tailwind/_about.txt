@@ -1,3 +1,0 @@
-
-
-    Modern alternative (and more flexible) to Bootstrap!

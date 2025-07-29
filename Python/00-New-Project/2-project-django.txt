@@ -2,4 +2,17 @@
 
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT-END):
 
+
     /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
+        
+        
+    >> (Optional) Front-end CSS Framework:
+
+        >> Bootstrap:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+        >> Tailwind:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+        >> Bulma:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/

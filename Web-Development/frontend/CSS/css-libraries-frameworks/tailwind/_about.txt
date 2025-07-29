@@ -1,0 +1,13 @@
+
+
+WHAT IS TAILWIND:
+
+    It's a modern alternative (and more flexible) to Bootstrap!
+
+    Tailwind is a utility-first framework that provides atomic utility classes. You build components
+    by combining these utilities.
+
+    >> https://tailwindcss.com/
+        
+
+    

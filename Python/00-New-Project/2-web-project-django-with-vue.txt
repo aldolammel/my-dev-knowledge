@@ -3,11 +3,26 @@
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END VUE:
 
     
-    1) Python installation (if needed);
-        /Python/01-python-installation/
-    
-    2) Django installation (and its dependencies):
-        /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+    >> Back-end:
 
-    3) Vue installation (and its dependencies):
-        /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
+        1) Python installation (if needed);
+            /Python/01-python-installation/
+    
+        2) Django installation (and its dependencies):
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+
+    >> Front-end:
+
+        3) Vue installation (and its dependencies):
+            /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
+
+        4) (Optional) CSS Framework:
+
+            >> Bootstrap:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+            >> Tailwind:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+            >> Bulma:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/

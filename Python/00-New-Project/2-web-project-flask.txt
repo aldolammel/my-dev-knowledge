@@ -3,4 +3,16 @@
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT FLASK (BACK AND FRONT-END):
 
 
-    /Python/Web-development/flask/
+    /Python/Web-development/flask/xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+    >> (Optional) Front-end CSS Framework:
+
+        >> Bootstrap:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+        >> Tailwind:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+        >> Bulma:
+            /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/

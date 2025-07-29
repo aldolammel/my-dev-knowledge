@@ -13,11 +13,11 @@ LIBRARY: PINIA (it replaces Vuex needs)
         $ npm install pinia
 
         # Check the installation:
-        $ npm list
+            $ npm list
 
     
     >> To uninstall:
         $ npm uninstall pinia
 
         # Check removal:
-        $ npm list
+            $ npm list
