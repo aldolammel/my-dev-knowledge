@@ -5,6 +5,19 @@ VUE.JS DEEPER KNOWLEDGE
     >> What is Vue.js (basic):
         /Web-Development/frontend/Vue/vue-knowledge/_about.txt
 
+    >> Two options for the product's structure with Vue.js:
+
+        1) Multi-Page-Application (MPA);
+            Each section/matter of the app has its own page and URL, demanding the browser a reload
+            for each page visited;
+
+        2) Single-Page-Application (SPA);
+            Each section/matter of the app belongs just one page, not demanding any kind of reload
+            from the browser;
+
+        >> About both strategies, examples of their folder's structures:
+            /Web-Development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt    
+    
     >> Two main Vue-cores:
         
         1) Declarative Rendering:

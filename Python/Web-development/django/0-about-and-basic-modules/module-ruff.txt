@@ -3,7 +3,7 @@
 RUFF (Python Linter and code formatter)
 
     >> You need to use UV package to use Ruff!
-        /Python/00-New-Project/1-new-project-with-uv-package.txt
+        /Python/00-New-Project/1-new-project-managed-by-uv-package.txt
 
     >> Already in the right virtual env, installing Ruff to the project:
         $ uv add ruff

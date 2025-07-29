@@ -1,17 +1,13 @@
 
 
-UV PACKAGE
+PYTHON PACKAGE MANAGEMENT: UV PACKAGE
 
-    >> Extremely fast Python package installer and resolver designed as a drop-in replacement for
-        pip and pip-tools workflows.
+    >> Basic about UV:
+        /Python/00-New-Project/1-new-project-managed-by-uv-package.txt
 
-    >> When you ask to UV to initiate a project, a "uv.lock" file is created automatically,
-        garanteeing that all copies of this project will have the same dependencies (like a Docker).
-
-    >> If you lose your virtual environment folder, you can recreate the venv using "uv sync"
-        command to re-install the project dependencies fast and easily.
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
     >> BEFORE THE PROJECT: 
     

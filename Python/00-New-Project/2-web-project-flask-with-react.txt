@@ -1,0 +1,13 @@
+
+
+PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT-END REACT:
+
+
+    1) Python installation (if needed);
+        /Python/01-python-installation/
+    
+    2) Flask installation (and its dependencies):
+        /Python/Web-development/flask/xxxxxxxxx
+
+    3) React installation (and its dependencies):
+        /Web-Development/frontend/React/xxxxxxxxxxxxxxxxxxxxxxxxxxxx

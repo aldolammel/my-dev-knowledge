@@ -1,0 +1,3 @@
+
+
+    Use the same checklist structure logic I've done for Python New Projects ;)

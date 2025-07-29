@@ -1,6 +1,6 @@
 
 
-PYTHON INSTALLATION:
+PYTHON INSTALLATION > ONLY PYTHON PROJECT:
 
     WINDOWS:
         Make sure to check the box that says “Add python.exe to PATH” to make Python accessible
@@ -23,3 +23,11 @@ PYTHON INSTALLATION:
         >> To install if needed:
         xxxxx
         xxxxx    
+
+
+- - - 
+
+    >> INSTALLATION ROADMAP BASED ON STACK:
+
+        Use the roadmaps from here:
+        /Python/00-New-Project/1-new-project-managed-by-uv-package.txt

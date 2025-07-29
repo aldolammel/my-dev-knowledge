@@ -4,7 +4,7 @@ INSTALLING DJANGO:
 
     0) If you are RE-installing Django, skip all of this, and following only this one:
 
-        /33-Web-development/backend/python/django/1-install-and-first-steps/reinstall-new-django-copy.txt
+        /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt
 
 
     1) Create the project folder, and get it:
@@ -22,12 +22,12 @@ INSTALLING DJANGO:
     
         2A) Using UV package:
             If you want to use the UV package, follow this:
-            /33-Web-development/backend/python/django/1-install-and-first-steps/1-install-with-uv-package.txt
+            /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
         2B) Using common method (pip):
 
             2B.1) Create the virtual environment and active it:
-                /03-Virtual-Environment/
+                /Python/03-Virtual-Environment/
 
             2B.2) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and other things!
                 
@@ -36,7 +36,7 @@ INSTALLING DJANGO:
                 >> The same for Ubuntu and Windows:
 
                     >> Update pip module:
-                        /04-Basic-Modules/pip-upgrade.txt
+                        /Python/04-Basic-Modules/pip.txt
 
                     >> Install Django:
                         $ pip install django
@@ -50,7 +50,7 @@ INSTALLING DJANGO:
 
                 Only for VSCode:
                     # DjLint (html template formatter for django/jinja)
-                    $ pip install -U djlint
+                        $ pip install -U djlint
                     
                     # Install the DjLint extension for VSCode.
                     # Install the Django (by Baptiste) extension for VSCode.
@@ -60,9 +60,9 @@ INSTALLING DJANGO:
     3) Create the Django Project Structure:
 
         # make sure you're in project root folder and:
-        $ django-admin startproject core .          <-- This dot's important!
+            $ django-admin startproject core .          <-- This dot's important!
         Or
-        $ uv run django-admin startproject core .   <-- This dot's important!
+            $ uv run django-admin startproject core .   <-- This dot's important!
 
 
     4) Make sure you're in the same folder the 'manage.py' file, and then start the django
@@ -70,14 +70,14 @@ INSTALLING DJANGO:
         4.1) for testing purposes:
 
             # 1/3:
-            $ python manage.py migrate
+                $ python manage.py migrate
             or
-            $ uv run manage.py migrate
+                $ uv run manage.py migrate
 
             # 2/3:
-            $ python manage.py runserver
+                $ python manage.py runserver
             or
-            $ uv run manage.py runserver
+                $ uv run manage.py runserver
 
             # 3/3:
             http://localhost:8000/
@@ -86,7 +86,7 @@ INSTALLING DJANGO:
 
             - Create: 'pyproject.toml' in the project root;
             - Template of the file content:
-                /33-Web-development/pyproject-file-model.txt
+                /Python/Web-development/pyproject-file-model.txt
 
 
     5) Through the Config-folder (e.g. "core"), open the settings.py file:
@@ -102,7 +102,7 @@ INSTALLING DJANGO:
 
 
         x.2) Prepare a Global Context with the Essential info about the app:
-                /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/global-context.txt
+                /Python/Web-development/django/3-2-backend-views/1-building-views-context/global-context.txt
         
 
         x.3) Still in settings.py file, if you WON'T use the SQLite as database:
@@ -112,11 +112,11 @@ INSTALLING DJANGO:
 
 
         x.4) Define your database:
-            /33-Web-development/backend/python/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
+            /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
 
 
     6) Set the environment variables and create your .env file:
-        /33-Web-development/backend/python/django/1-install-and-first-steps/environment-variables-django.py
+        /Python/Web-development/django/1-install-and-first-steps/environment-variables-django.py
 
 
 
@@ -168,7 +168,7 @@ INSTALLING DJANGO:
 
 
         x.2) If you want to use a settings.py model file, now is the time!
-            /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/core/settings.py
+            /Python/Web-development/django/project-examples/proj-aldolammel-style/core/settings.py
             
             >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
                 file when you bring it to your project!
@@ -179,9 +179,8 @@ INSTALLING DJANGO:
         x.3) Adding sub-apps:
 
             
-            
             >> How to create a sub-app:
-                /33-Web-development/backend/python/django/2-creating-and-deleting-apps/creating.txt
+                /Python/Web-development/django/2-creating-and-deleting-apps/creating.txt
 
 
             >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!!)
@@ -190,7 +189,7 @@ INSTALLING DJANGO:
                 
                 g.1) Bring the basic sub-app files and templates-folder too:
                     
-                    /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/general/
+                    /Python/Web-development/django/project-examples/proj-aldolammel-style/general/
 
                 g.2) Include it in the INSTALLED_APPS in the settings.py file!
                 g.3) Makemigrations and migrate!
@@ -200,10 +199,10 @@ INSTALLING DJANGO:
             >> Do you need user management through the application front-end too?
 
                 >> If not:
-                    /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
+                    /Python/Web-development/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
 
                 >> If so:
-                    /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/2-extending-users.txt
+                    /Python/Web-development/django/3-1-backend-models-database/3-users/2-extending-users.txt
 
 
                     >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)
@@ -242,13 +241,13 @@ INSTALLING DJANGO:
                 USE_I18N = False
                 
             Otherwise:
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/starting-translation.txt
+                /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt
     
 
     13) Optionals:
 
         x.1) Will you use file upload?
-            /33-Web-development/backend/python/django/5-uploads/files/
+            /Python/Web-development/django/5-uploads/
 
-        x.2) Will you use imagem upload?
-            /33-Web-development/backend/python/django/5-uploads/images/
+        x.2) Will you use image upload?
+            /Python/Web-development/django/5-uploads/images/

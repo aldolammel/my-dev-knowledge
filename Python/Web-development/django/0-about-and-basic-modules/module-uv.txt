@@ -19,4 +19,4 @@ UV PACKAGE
     
     >> How to use UV for projects:
         
-        /00-New-Project/1-new-project-with-uv-package.txt
+        /00-New-Project/1-new-project-managed-by-uv-package.txt

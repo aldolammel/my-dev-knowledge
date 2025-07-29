@@ -5,11 +5,13 @@
 
         0) In case your project will have a back-end:
 
-            >> Django Backend headups:
-                /Web-Development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt
+            >> Django Back-end, project Folder's structure:
+                /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+
+            >> Flask Back-end, project Folder's structure:
+                /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-flask.txt
                 
-            
-            >> No backend or Vue.js will be the full solution, keep going anyway...
+            >> OR NO BACK-END or Vue.js will be the full solution, so keep going anyway...
 
 
 

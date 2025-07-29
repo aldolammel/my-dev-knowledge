@@ -1,0 +1,5 @@
+
+
+PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT-END):
+
+    /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
