@@ -1,0 +1,3 @@
+
+The same structure seen here but without Vue folders, of course:
+    /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt

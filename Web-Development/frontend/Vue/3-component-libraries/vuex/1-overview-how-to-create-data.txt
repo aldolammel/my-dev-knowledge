@@ -4,7 +4,7 @@ VUEX: HOW TO CREATE DATA
 
     STEP 0: WORKFLOW
         Overview of the VueX workflow:
-        /33-Web-development/frontend/vue/3-component-libraries/vuex/one-way-data-flow.png
+        /Web-Development/frontend/Vue/3-component-libraries/vuex/one-way-data-flow.png
 
 
     STEP 1: STATE

@@ -1,0 +1,37 @@
+
+DJANGO: WHAT IS IT?
+
+    >> Django is a free and open-source, Python-based web framework that runs on a web server.
+        It follows the model–template–views (MTV) architectural pattern. It is maintained by the
+        Django Software Foundation (DSF), an independent organization established in the US. 
+        Django's primary goal is to ease the creation of complex, database-driven websites.
+        The framework emphasizes reusability and "pluggability" of components, less code,
+        low coupling, rapid development, and the principle of don't repeat yourself (DRY).
+        
+        Python is used throughout, even for settings, files, and data models.
+        Django also provides an optional administrative create, read, update and delete interface
+        that is generated dynamically through introspection and configured via admin models.
+
+    >> Django is divided in 3 main parts: models, views, and templates.
+
+        >> Models are responsable for listing the data structure of a Django application, using
+            classes to build tables and their attributes in a database.
+
+        >> Views are responsable for manage what data the user will see through a template. 
+        
+        >> Templates are responsable for display the data to the user through a text or layout file
+            such as an HTML page.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> HOW TO INSTALL A DJANGO PROJECT:
+    /Python/Web-development/django/1-install-and-first-steps/
+
+
+>> HOW IS A FOLDER'S STRUCTURE OF A DJANGO PROJECT:
+    /
+
+
+

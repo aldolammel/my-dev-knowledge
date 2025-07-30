@@ -2,6 +2,8 @@
 
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END VUE:
 
+
+1) SETUP:
     
     >> Back-end:
 
@@ -26,3 +28,16 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
 
             >> Bulma:
                 /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+
+
+2) DEVELOPMENT:
+
+    1) Front-end:
+        >> Convert the HTML template to Vue templates/components;
+        >> Code the entire navigation;
+        
+    2) Back-end:
+        >> Build up the database of the product;
+        >> xxxxxxxxxxxxxxxxx
+
+    3) Final touches between Back and Front-end!

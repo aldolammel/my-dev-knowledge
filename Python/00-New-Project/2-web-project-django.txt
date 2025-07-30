@@ -1,0 +1,36 @@
+
+
+PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT-END):
+
+
+    >> SETUP:
+
+        >> Back-end + Front-end:
+        
+            1) Install Django:
+                /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+        
+
+            2) (Optional) Front-end CSS Framework:
+
+                >> Bootstrap:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+                >> Tailwind:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+                >> Bulma:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+
+    
+    >> DEVELOPMENT:
+
+        1) Front-end:
+            >> Convert the HTML template to Django Template;
+            >> Code the entire navigation;
+        
+        2) Back-end:
+            >> Build up the database of the product;
+            >> xxxxxxxxxxxxxxxxx
+
+        3) Final touches between Back and Front-end!

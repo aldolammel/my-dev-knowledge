@@ -98,4 +98,4 @@ VIRTUAL ENVIRONMENT:
 
     HOW TO ACTIVATE A VIRTUAL ENVIRONMENT:
 
-    /03-Virtual-Environment/activate-and-deactivate.txt
+    /02-virtual-environment/activate-and-deactivate.txt

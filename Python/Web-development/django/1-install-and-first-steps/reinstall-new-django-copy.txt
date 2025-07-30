@@ -37,7 +37,7 @@ RE-INSTALL ONLY THE DJANGO:
             2A) Using UV package:
 
                 Carefully, adapt this guide to reinstall the Django project:
-                    /33-Web-development/backend/python/django/1-install-and-first-steps/1-install-with-uv-package.txt
+                    /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
                 >> How to create a new Django project (in the current folder):
                     $ uv run django-admin startproject core .
@@ -50,21 +50,21 @@ RE-INSTALL ONLY THE DJANGO:
 
                 2B.1) Create a new virtual environment and active it:
 
-                    /03-Virtual-Environment/creating-virtual-environment.txt
+                    /Python/02-virtual-environment/creating-virtual-environment.txt
 
 
                 2B.2) Installation:
 
                     >> Using the requirements.txt file:
 
-                        /03-Virtual-Environment/creating-requirements.txt
+                        /Python/02-virtual-environment/creating-requirements.txt
 
 
                     >> (NOT RECOMMENDED) Or manually (the same for Ubuntu and Windows):
 
                             >> Update pip module:
                                 
-                                /04-Basic-Modules/pip-upgrade.txt
+                                /Python/03-libraries-packages-modules/pip.txt
 
                             >> Install Django:
 

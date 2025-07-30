@@ -2,9 +2,17 @@
 
 INSTALLING DJANGO:
 
-    0) If you are RE-installing Django, skip all of this, and following only this one:
+    BASIC I) Python installation:
+        
+        /Python/01-python-installation/
+        
+    
+    BASIC II) If you are RE-installing Django, skip all of this, and following only this one:
 
         /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     1) Create the project folder, and get it:
@@ -18,7 +26,7 @@ INSTALLING DJANGO:
         2A) Using UV package (recommended, more professional)!
         2B) Or using common method (pip).
 
-        ..........................
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
         2A) Using UV package:
             If you want to use the UV package, follow this:
@@ -27,16 +35,17 @@ INSTALLING DJANGO:
         2B) Using common method (pip):
 
             2B.1) Create the virtual environment and active it:
-                /Python/03-Virtual-Environment/
+                /Python/02-virtual-environment/
 
-            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and other things!
+            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment
+                            and other things!
                 
             2B.3) Installation:
 
                 >> The same for Ubuntu and Windows:
 
                     >> Update pip module:
-                        /Python/04-Basic-Modules/pip.txt
+                        /Python/03-libraries-packages-modules/pip.txt
 
                     >> Install Django:
                         $ pip install django
@@ -55,6 +64,8 @@ INSTALLING DJANGO:
                     # Install the DjLint extension for VSCode.
                     # Install the Django (by Baptiste) extension for VSCode.
                     # In VSCode, In Html's, change the language mode to 'Django-Html'
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     3) Create the Django Project Structure:

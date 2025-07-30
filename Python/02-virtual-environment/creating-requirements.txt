@@ -26,7 +26,7 @@ REQUIREMENTS.TXT FILE:
 
         2) Once you already got the right virtual environment activated, upgrade the pip:
 
-            /04-Basic-Modules/pip-upgrade.txt
+            /03-libraries-packages-modules/pip-upgrade.txt
 
         3) Install the packages at once:
 

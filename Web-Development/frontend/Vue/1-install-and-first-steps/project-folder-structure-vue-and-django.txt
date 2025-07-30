@@ -29,13 +29,15 @@ VUE: WITH DJANGO BACK-END
             │   ├── js/                # Your Vue components
             │   ├── css/
             │   └── dist/              # Vite build output
-            ├── frontend/              # Vue source files <------------------------------------
+            ├── frontend/              # Vue source files       <---------------
             │   ├── src/
             │   │   ├── components/
-            │   │   ├── pages/         # Vue apps for specific pages
+            │   │   ├── pages/         # Vue apps for specific pages       <---------------
+            │   │   │   ├── Home.vue
+            │   │   │   ├── About.vue
+            │   │   │   └── Contact.vue
             │   │   └── main.js
-            │   ├── package.json
-            │   └── vite.config.js
+            │   └── package.json
             └── requirements.txt
 
 
@@ -44,9 +46,31 @@ VUE: WITH DJANGO BACK-END
 
         2B) Recommendation for SPA project:
 
-            xxxxx
-            xxxxxxxx
-            xx
+            myproject/
+            ├── manage.py
+            ├── core/                  # Django core folder
+            ├── app1/
+            ├── app2/
+            ├── templates/             # Django templates
+            │   ├── base.html
+            │   ├── pages/
+            │   │   ├── home.html      # Contains Vue mount points
+            │   │   └── about.html
+            │   └── components/        # Reusable template fragments
+            ├── static/
+            │   ├── js/                # Your Vue components
+            │   ├── css/
+            │   └── dist/              # Vite build output
+            ├── frontend/              # Vue source files       <---------------
+            │   ├── src/
+            │   │   ├── components/
+            │   │   ├── views/           # Vue sub-apps for specific pages.
+            │   │   │   ├── About.vue
+            │   │   │   └── Contact.vue
+            │   │   ├── App.vue          # Vue main app.       <---------------
+            │   │   └── main.js
+            │   └── package.json
+            └── requirements.txt
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

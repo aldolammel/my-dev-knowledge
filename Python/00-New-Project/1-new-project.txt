@@ -1,33 +1,38 @@
 
 
-PYTHON INSTALLATION > ONLY PYTHON PROJECT:
-
-    WINDOWS:
-        Make sure to check the box that says “Add python.exe to PATH” to make Python accessible
-        from the command line.
+INSTALLATION ROADMAP BY PROJECT TYPE:
 
 
-    UBUNTU:
-        >> Check the python version installed:
-        $ python3 --version
+    >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        >> Option: Django as Back and Front-end:
+            /Python/00-New-Project/2-web-project-django.txt
 
-        >> To install if needed:
-        $ sudo apt update
-        $ sudo apt install python3.12 (or the current version)
+        >> Option: Back-end Django + Front-end Vue.js:
+            /Python/00-New-Project/2-web-project-django-with-vue.txt
+            
+        >> Option: Back-end Django + Front-end React:
+            /Python/00-New-Project/2-web-project-django-with-react.txt
+
+        >> Option: Flask as Back and Front-end:
+            /Python/00-New-Project/2-web-project-flask.txt
+
+        >> Option: Back-end Flask + Front-end Vue.js:
+            /Python/00-New-Project/2-web-project-flask-with-vue.txt
+
+        >> Option: Back-end Flask + Front-end React:
+            /Python/00-New-Project/2-web-project-flask-with-react.txt
 
 
-    MAC:
-        >> Check the python version installed:
-        xxxxxx
+    >> PYTHON > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+        >> Options: xxxxxxx
+            /xxxxxxxxxxxx
 
-        >> To install if needed:
-        xxxxx
-        xxxxx    
+        >> Options: xxxxxxx
+            /xxxxxxxxxxxx
+
+        >> Options: xxxxxxx
+            /xxxxxxxxxxxx
 
 
-- - - 
-
-    >> INSTALLATION ROADMAP BASED ON STACK:
-
-        Use the roadmaps from here:
-        /Python/00-New-Project/1-new-project-managed-by-uv-package.txt

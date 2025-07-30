@@ -1,1 +1,26 @@
-Soon...
+
+
+PYTHON: INSTALLATION
+
+    WINDOWS:
+        Make sure to check the box that says “Add python.exe to PATH” to make Python accessible
+        from the command line.
+
+
+    UBUNTU:
+        >> Check the python version installed:
+        $ python3 --version
+
+        >> To install if needed:
+        $ sudo apt update
+        $ sudo apt install python3.12 (or the current version)
+
+
+    MAC:
+        >> Check the python version installed:
+        xxxxxx
+
+        >> To install if needed:
+        xxxxx
+        xxxxxx
+
