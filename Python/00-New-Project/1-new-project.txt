@@ -3,36 +3,35 @@
 INSTALLATION ROADMAP BY PROJECT TYPE:
 
 
-    >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
-        >> Option: Django as Back and Front-end:
-            /Python/00-New-Project/2-web-project-django.txt
+        >> with Django:
 
-        >> Option: Back-end Django + Front-end Vue.js:
-            /Python/00-New-Project/2-web-project-django-with-vue.txt
-            
-        >> Option: Back-end Django + Front-end React:
-            /Python/00-New-Project/2-web-project-django-with-react.txt
+            >> Django as Back and Front-end: /Python/00-New-Project/2-web-project-django.txt
 
-        >> Option: Flask as Back and Front-end:
-            /Python/00-New-Project/2-web-project-flask.txt
+            >> Back-end Django + Front-end Vue.js: /Python/00-New-Project/2-web-project-django-with-vue.txt
 
-        >> Option: Back-end Flask + Front-end Vue.js:
-            /Python/00-New-Project/2-web-project-flask-with-vue.txt
+            >> Back-end Django + Front-end React: /Python/00-New-Project/2-web-project-django-with-react.txt
 
-        >> Option: Back-end Flask + Front-end React:
-            /Python/00-New-Project/2-web-project-flask-with-react.txt
+        >> with Flask:
 
+            >> Flask as Back and Front-end: /Python/00-New-Project/2-web-project-flask.txt
 
-    >> PYTHON > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            >> Back-end Flask + Front-end Vue.js: /Python/00-New-Project/2-web-project-flask-with-vue.txt
+        
+            >> Back-end Flask + Front-end React: /Python/00-New-Project/2-web-project-flask-with-react.txt    
+        
+
+    >> PYTHON > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
-        >> Options: xxxxxxx
-            /xxxxxxxxxxxx
+        >> with XXXXXX:
+        
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
 
-        >> Options: xxxxxxx
-            /xxxxxxxxxxxx
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
+            
+        >> with XXXXXX:
+        
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
 
-        >> Options: xxxxxxx
-            /xxxxxxxxxxxx
-
-
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx

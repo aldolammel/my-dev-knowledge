@@ -15,6 +15,13 @@ VIRTUAL ENVIRONMENT:
         A) by Python built-in command;
         B) by installing a module called virtualenv;
 
+    >> Some Package Managers like UV, the virtual environment for each project managed by UV is
+        automatically created:
+            /Python/03-libraries-packages-modules/uv.txt
+
+                >> But for more manual options, a good Package Manager is PIP:
+                    /Python/03-libraries-packages-modules/pip.txt
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

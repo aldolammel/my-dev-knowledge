@@ -24,7 +24,7 @@ INSTALLING DJANGO:
     2) Define the method to install Django:
 
         2A) Using UV package (recommended, more professional)!
-        2B) Or using common method (pip).
+        2B) Or using common method, more manual (pip).
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     

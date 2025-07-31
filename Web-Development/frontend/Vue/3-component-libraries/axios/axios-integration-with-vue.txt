@@ -1,0 +1,38 @@
+
+
+AXIOS: INTEGRATION WITH VUE.JS:
+
+    >> Axios installation:
+        /JavaScript/NodeJS/component-libraries/axios-api/axios.txt
+
+    >> Integration with Vue:
+
+        >> For SPA projects:
+
+            x) In Django .env file, and, then, in 'Project Settings', add this line below:
+                API_BASE_URL=http://localhost:<django's port>/  # Production: https://<project official main domain>/
+
+                    >> Need to create an .env file?
+                        /Environment-Variables/
+
+            x) In the front-end main.js file, include:
+                // After the App creation:
+                import axios from 'axios';
+
+                // After the axios importation:
+                axios.defaults.baseURL = import.meta.env.API_BASE_URL;  // Where Django's running currently!
+
+                // Xxxxxxx
+                app.use(xxxxx, axios);
+
+            x) xxxx
+
+            x) xxxx
+
+            x) xxxx
+
+        >> For MPA projects:
+            
+            x) xxxx
+            x) xxxx
+            x) xxxx

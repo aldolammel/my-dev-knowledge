@@ -12,7 +12,7 @@ PIP (BUILT-IN MODULE)
 
 
         2) Active your environment:
-            <Check the folder '03-Virtual-Environment'>
+            /Python/02-virtual-environment/
 
 
         3) Now, do it:
@@ -32,3 +32,8 @@ PIP (BUILT-IN MODULE)
                 $ python3 -m pip install --upgrade pip
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> FOR PIP ALTERNATIVE: UV (Modern Package Manager)
+    /Python/03-libraries-packages-modules/uv.txt

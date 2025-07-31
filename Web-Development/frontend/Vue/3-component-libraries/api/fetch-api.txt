@@ -2,4 +2,4 @@
 
 API SOLUTION: FETCH API (JS native solution)
     
-    /33-Web-development/frontend/javascript/api.txt
+    /JavaScript/api.txt

@@ -7,7 +7,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT
 
         >> Back-end + Front-end:
         
-            1) Install Django:
+            1) Virtual Environment and Django installation:
                 /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
         
 

@@ -8,7 +8,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT
         1) Python installation (if needed);
             /Python/01-python-installation/
         
-        2) Flask installation (and its dependencies):
+        2) Virtual Environment and Flask installation (and its dependencies):
             /Python/Web-development/flask/xxxxxxxxx
     
     >> Front-end:
