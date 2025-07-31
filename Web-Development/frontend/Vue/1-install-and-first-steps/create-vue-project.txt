@@ -3,22 +3,22 @@
 CREATING A VUE PROJECT:
 
 
-    0) If Node.js (and preferably Node-Version-Manager too) is installed, ignore this step. 
+    PRE I) If Node.js (and preferably Node-Version-Manager too) is installed, ignore this step. 
         Otherwise:
             /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
 
-    0.1) You are working in an existent Vue project? If so, about these next steps,
+    PRE II) You are working in an existent Vue project? If so, about these next steps,
         following just this one:
             /Web-Development/frontend/Vue/1.1-install-existent-project/installing-an-existent-project.txt
 
 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
     1) Define how you will implement Vue.js in your project:
 
-        1.1) Using CDN (simplest solution / NOT recommended for mid-large projects);
-        
-        OR
-        
+        1.1) Using CDN (simplest solution / NOT recommended for mid-large projects);       
         1.2) Or via Node-Package-Manager as NPM or YARN (for build setups / local installation);
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -26,7 +26,7 @@ CREATING A VUE PROJECT:
         1.1) Using CDN:
 
             CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't
-                        understand .vue files.
+                    understand .vue files.
 
             /Web-Development/frontend/Vue/1-install-and-first-steps/starting-project-using-CDN.txt
 
@@ -56,20 +56,19 @@ CREATING A VUE PROJECT:
 
     4) Start your work in the Vue project folder root:
 
-        E.g.: /vue-project-folder-root/
-                                    /node_modules/
-                                    /src/
-                                    /...
+        E.g.: /vue-project-folder-root/...
+                                        /node_modules/
+                                        /src/
 
             # Running the project:
                 
                 # CLI by Vite:
                     $ npm run dev
-                    # or
+                # or
                     $ yarn dev
 
                 # CLI by Vue-CLI:
                     $ npm run serve
-                    # or
+                # or
                     $ yarn serve
             

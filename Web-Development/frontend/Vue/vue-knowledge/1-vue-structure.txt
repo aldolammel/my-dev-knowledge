@@ -1,24 +1,11 @@
 
 
-VUE.JS: ITS FILE AND FOLDER STRUCTURE
+VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
     >> Folders structure:
-
-        > Vue Project folder
-            >> node_modules          ! stores all dependencies of the project and node.js stuff.
-            >> public                ! xxxxxxxxxxxxxxxxxxxxxx
-            >> src                   ! xxxxxxxxxxxxxxxxxxxxxx
-                >> assets            ! xxxxxxxxxxxxxxxxxxxxxx
-                >> components        ! stores small pieces of a page.
-                >> router            ! where URLS of the app is set (by Vue-Router).
-                >> store             ! unique front-end database source (by VueX/Pinia).
-                >> views             ! stores entire app pages.
-                - App.vue            ! the app itself. It's ran when you wanna see the app working.
-                - main.js            ! xxxxxxxxxxxxxxxxxxxxxx
-            - index.html             ! xxxxxxxxxxxxxxxxxxxxxx
-            - package.json           ! xxxxxxxxxxxxxxxxxxxxxx
-
+        >> Example of a Django project with Vue project folder (/frontend/) inside:
+            /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
 
 
     >> A Vue.js app file (.vue) divide itself by 3 layers:

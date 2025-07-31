@@ -25,11 +25,6 @@ AXIOS: INTEGRATION WITH VUE.JS:
                 // Xxxxxxx
                 app.use(xxxxx, axios);
 
-            x) xxxx
-
-            x) xxxx
-
-            x) xxxx
 
         >> For MPA projects:
             

@@ -9,7 +9,7 @@ LIBRARY: PINIA (it replaces Vuex needs)
     >> Pinia is a store library for Vue, it allows you to share a state across components/pages.
 
 
-    >> To install:
+    >> Installing Pinia:
         $ npm install pinia
 
         # Check the installation:
@@ -21,3 +21,34 @@ LIBRARY: PINIA (it replaces Vuex needs)
 
         # Check removal:
             $ npm list
+
+
+    >> Integration with Vue.js:
+
+        >> State hydration method:
+        
+            x) After install Pinia, go to front-end main.js file:
+
+                // Pinia:
+                import devalue from "devalue";
+                import { createPinia } from "pinia";
+
+                // After const app creation:
+                app.use(createPinia());
+
+                // After the app mount:
+                devalue(pinia.state.value);
+
+            x) xxxxxxxxxxxxxxxx
+
+            x) xxxxxxxxxxxxxxxx
+
+            x) xxxxxxxxxxxxxxxx
+
+
+        >> XxXXXX method:
+
+            x) xxxxxxxxxxxxxxxx
+
+            x) xxxxxxxxxxxxxxxx
+

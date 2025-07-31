@@ -3,6 +3,8 @@
 LIBRARY: VUE ROUTER
 
 
+
+
     >> https://router.vuejs.org/
 
 
@@ -11,9 +13,14 @@ LIBRARY: VUE ROUTER
         navigate around the app, the URL updates accordingly, but the page doesn't need to be
         reloaded from the server.
 
-        E.g. of router's index.js:
+        Different URL's without browser reloading:
 
-            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            E.g.
+                https://domain.com/
+                https://domain.com/about
+                https://domain.com/products/biketrial
+                etc
+
 
         E.g. of router's menu:
             - Each menu link must be using the <router-link> tag (open and close the tag).
@@ -30,21 +37,30 @@ LIBRARY: VUE ROUTER
 
 
 
-
-    >> To install:
-        $ npm install vue-router@<version you want>
-
+    >> Installing:
+        
+        # To install:
+            $ npm install vue-router@<version you want>
         # Check installation:
-        $ npm list
+            $ npm list
 
 
-    >> To uninstall:
-        $ npm uninstall vue-router@<version you want>
+    >> Uninstalling:
 
+        # To remove:
+            $ npm uninstall vue-router@<version you want>
         # Check removal:
-        $ npm list
+            $ npm list
 
 
 
-WHAT IS ROUTERS:
-    /33-Web-development/frontend/vue/5-router-url.txt
+
+URL ROUTERS:
+
+    
+    
+
+    
+    >> To use routers, install the Vue.js library for that:
+        /33-Web-development/frontend/vue/3-component-libraries/vue-router/vue-router.txt
+

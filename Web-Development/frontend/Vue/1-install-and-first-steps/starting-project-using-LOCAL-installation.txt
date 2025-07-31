@@ -19,10 +19,7 @@
     >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
         1.2.1) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
-
-        OR
-
-        1.2.2) Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
+        1.2.2) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
@@ -49,6 +46,8 @@
                                 - Framework = vue
                                 
                                 - Variant = JavaScript
+
+                                - Router = Vue-Router for SPA projects! (Not sure if MPA needs too)
                                 
                                 - CSS Pre-processors? Yes but later!
                                     Vite 6+ has native support for: .scss, .sass, .less, .styl, 

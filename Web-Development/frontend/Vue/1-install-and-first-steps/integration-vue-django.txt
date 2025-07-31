@@ -2,15 +2,16 @@
 
     INTEGRATING VUE WITH DJANGO:
 
-        0.1) (Dependence) Node.js installation:
+        PRE I) (Dependence) Node.js installation:
             /33-Web-development/backend/javascript/nodejs/installation-and-basic.txt
         
-        0.2) Vue.js installation:
+        PRE II) Vue.js installation:
             /33-Web-development/frontend/vue/1-install-and-first-steps/_installation.txt
 
-        0.3) Creating a Vue.js project:
+        PRE III) Creating a Vue.js project:
             /33-Web-development/frontend/vue/1-install-and-first-steps/create-vue-project.txt
 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         >> Integrating:
 
