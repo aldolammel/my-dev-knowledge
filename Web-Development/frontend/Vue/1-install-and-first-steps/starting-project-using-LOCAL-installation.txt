@@ -15,39 +15,42 @@
 
 >> For Node-Package-Manager I will use NPM (Node.js package manager standard command):
 
+    >> Keep in mind what type of Vue project you will build: SPA or MPA?
+        /Web-Development/frontend/Vue/vue-knowledge/SPA-vs-MPA.txt
             
     >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
-        1.2.1) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
-        1.2.2) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
+        1.2A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
+        1.2B) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
-        1.2.1) Using Vite:
+        1.2A) Using Vite:
                 More about in https://vite.dev/
 
             >> On terminal, go to the folder where you wanna create the Vue project folder
-                BUT don't do that yet!
+                BUT don't do that yet! If you're building a Django project, for example, go to the
+                django project folder (root).
             
             >> Install Vite locally (without -g) and start the project creation:
                 
                 # This step needs the Create-Vite package but the follow installation command should
-                    provide this for you automatically!
-
-                # This process will create the project folder, asking you the folder name soon:
-                    $ npm create vite@latest
+                    provide this for you automatically! Then this process will create the Vue project
+                    folder, asking you the folder's name soon:
+                    
+                        $ npm create vite@latest
                         
-                        # Just follow the prompt instructions/options:
+                            # Recommended Vite settings - just follow the prompt instructions/options:
 
-                            >> Recommended Vite settings:
-                                - Project name: = vue-<clientName_productType_releaseYear> or just 
-                                                    'frontend' when in the backend folder.
+                                - Project name: = by convention, type 'frontend' or just a '.' If
+                                                you already are inside the Vue Project Folder itself.
                                 
                                 - Framework = vue
                                 
                                 - Variant = JavaScript
 
-                                - Router = Vue-Router for SPA projects! (Not sure if MPA needs too)
+                                - Router? In case of SPA project, yes, but later!   (and MPA projects ??????????????)
+                                    Vite has NO standard solution, but Vue does (Vue-Router)!
                                 
                                 - CSS Pre-processors? Yes but later!
                                     Vite 6+ has native support for: .scss, .sass, .less, .styl, 
@@ -59,8 +62,8 @@
                                 - Linter/Formatter? Yes but later!
                                     Vite has NO standard solution;
 
-                            >> Get in the project folder:
-                                $ cd vue-<project_name_chosen>
+                            >> Get in the project folder (if applyable):
+                                $ cd <vue_project_folder>
 
                             >> Finishing the installation, executing a command that will install all
                                 the project's dependencies, and their other dependencies (it creates
@@ -104,6 +107,9 @@
 
             >> Extending Vite:
 
+                >> Router (Vue official solution):
+                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/vue-router.txt
+                
                 >> CSS Pre-processors (Vite built-in solutions):
                     /Web-Development/frontend/CSS/scss/vue-integration.txt
                 
@@ -118,7 +124,7 @@
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        1.2.2) Or using Vue-CLI:
+        1.2B) Or using Vue-CLI:
                 More abount in https://cli.vuejs.org/
 
             >> Install Vue-CLI globally (-g):
@@ -141,15 +147,18 @@
                                 B) Re-install the Vue-CLI!
 
             >> Start the project creation:
-                $ vue create vue-<project_name>
-                # E.g. $ vue create vue-cefalog
-                # Just follow the prompt instructions/options!
+                # If you don't got a Vue Project Folder yet:
+                    $ vue create <project_name>
+                # Otherwise, and if you already are in there:
+                    $ vue create .
+                # Just follow the prompt instruction options!
 
                 >> Recommended Vue-CLI settings:
 
                     A) Select "Manually select features"!
                     B) Select Vue version 3;
                     C) Select the options:
+                        - Router (Vue-router official solution);
                         - Babel (make your JS lines more compatible with modern browsers);
                         - CSS Pre-processors (support to scss/sass/less/stylus);
                         - Linter / Formatter (code checker);
@@ -163,7 +172,7 @@
                             select "dedicated config files";
 
                 >> Get in the project folder:
-                        $ cd vue-<project_name_chosen>
+                        $ cd <vue_project_folder>
                     # Check what is locally installed:
                         $ npm list
                 

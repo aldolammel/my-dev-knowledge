@@ -1,0 +1,45 @@
+
+
+VUE ROUTER: INSTALLATION AND INTEGRATION
+
+    Aware: if you already created your project via Vue-CLI (default), you probably already have
+                the Router once it was an Vue-CLI option during the project creation process.                
+                Make sure about, in Vue project folder:
+                    
+                    $ npm list
+                    
+                    >> If you won't see any router stuff, keep with the installation and integration
+                        processes below.
+
+
+    1) Installing:
+        
+        # To install Vue-Router:
+            $ npm install vue-router@<version you want>
+        # Check installation:
+            $ npm list
+
+        >> Uninstall (if needed):
+            /Web-Development/frontend/Vue/3-component-libraries/vue-router/router-uninstall.txt
+            
+
+    2) Integration:
+
+        2.1) Create router config file (index.js) in /frontend/src/router/ folder!
+            E.g.
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/router/index.js
+
+        2.2) Create your route components:
+            E.g.
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/views/HomeView.vue
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/views/About.vue
+
+        2.3) Configure router in main app via its JavaScript file in /frontend/src/ folder!
+            E.g.
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/main.js
+            
+
+        2.4) Add RouterView to Vue main app (e.g. App.vue):
+            E.g.
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/App.vue
+

@@ -1,28 +1,24 @@
 
 
-LIBRARY: VUE ROUTER
+VUE ROUTER: WHAT IS IT
+
+    Vue Router is the official client-side routing solution for Vue. Client-side routing is used
+    by single-page apps (SPAs) to tie the browser URL to the content seen by the user. As users
+    navigate around the app, the URL updates accordingly, but the page doesn't need to be
+    reloaded from the server.
+
+        https://router.vuejs.org/
+
+    Different URL's without browser reloading:
+
+        E.g.
+            https://domain.com/
+            https://domain.com/about
+            https://domain.com/products/biketrial
+            etc
 
 
-
-
-    >> https://router.vuejs.org/
-
-
-    >> Vue Router is the official client-side routing solution for Vue. Client-side routing is used
-        by single-page apps (SPAs) to tie the browser URL to the content seen by the user. As users
-        navigate around the app, the URL updates accordingly, but the page doesn't need to be
-        reloaded from the server.
-
-        Different URL's without browser reloading:
-
-            E.g.
-                https://domain.com/
-                https://domain.com/about
-                https://domain.com/products/biketrial
-                etc
-
-
-        E.g. of router's menu:
+        E.g. of routers on application menu:
             - Each menu link must be using the <router-link> tag (open and close the tag).
             - Right after the nav menu, call the <router-view /> tag.
 
@@ -36,31 +32,5 @@ LIBRARY: VUE ROUTER
             <router-view/>
 
 
-
     >> Installing:
-        
-        # To install:
-            $ npm install vue-router@<version you want>
-        # Check installation:
-            $ npm list
-
-
-    >> Uninstalling:
-
-        # To remove:
-            $ npm uninstall vue-router@<version you want>
-        # Check removal:
-            $ npm list
-
-
-
-
-URL ROUTERS:
-
-    
-    
-
-    
-    >> To use routers, install the Vue.js library for that:
-        /33-Web-development/frontend/vue/3-component-libraries/vue-router/vue-router.txt
-
+        /Web-Development/frontend/Vue/3-component-libraries/vue-router/router-installation.txt

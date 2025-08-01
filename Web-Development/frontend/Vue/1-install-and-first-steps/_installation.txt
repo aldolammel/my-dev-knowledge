@@ -34,8 +34,13 @@
                     xxxxxxxxxxxxxxxxxxxxxxxxxx
 
         
+        2) Define which type of Vue project you wanna create:
+
+            >> Single-Page-Application (SPA) or Multi-Page-Application (MPA):
+                /Web-Development/frontend/Vue/vue-knowledge/SPA-vs-MPA.txt
+
                 
-        2) Install the Vue build-tool and Create the Vue.js project:
+        3) Install the Vue build-tool and Create the Vue.js project:
             /Web-Development/frontend/Vue/1-install-and-first-steps/create-vue-project.txt
 
             

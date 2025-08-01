@@ -1,0 +1,14 @@
+
+
+VUE-ROUTER: UNINSTALL
+
+    # To remove:
+        $ npm uninstall vue-router@<version you want>
+    # Check removal:
+        $ npm list
+
+
+- - - - 
+
+>> INSTALLATION:
+    /Web-Development/frontend/Vue/3-component-libraries/vue-router/router-installation.txt
