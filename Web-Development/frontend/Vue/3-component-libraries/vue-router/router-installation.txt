@@ -25,21 +25,55 @@ VUE ROUTER: INSTALLATION AND INTEGRATION
 
     2) Integration:
 
-        2.1) Create router config file (index.js) in /frontend/src/router/ folder!
-            E.g.
-                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/router/index.js
+        SPA) For Single-Page-Application (SPA);
+        MPA) Or for Multi-Pages-Application (MPA);
 
-        2.2) Create your route components:
-            E.g.
-                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/views/HomeView.vue
-                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/views/About.vue
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        2.3) Configure router in main app via its JavaScript file in /frontend/src/ folder!
-            E.g.
-                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/main.js
+        SPA) For SPA project:
+
+            SPA.1) Import the router and setup the very basic in the main-app-js file:
+                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/main.js
+        
+            SPA.2) Create the router-config file and setup its options:
+                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/router/index.js
+
+            SPA.3) Make sure you already have all views ("pages") in the /frontend/src/views/ folder:
+                    E.g.
+                        HomeView.vue
+                        AboutView.vue
+                        ContactView.vue
+
+            SPA.4) Define where all views ("pages") must be rendered in your front-end template:
+
+                    >> Add this where each View must be loaded:
+                        <RouterView />
+
+                        E.g.
+                            /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/App.vue
+
+            SPA.5) Define each link option (<RouterLink>) for the main navigation menu of the app:
+                    E.g.
+                        /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/components/NavMain.vue
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            
+        MPA) For MPA project:
+
+            <MPA needs ROUTER ????????????????????????????????>
+
+            MPA.1) xxxxxxxxxxxxxxxxxxxx
+
+            MPA.2) xxxxxxxxxxxxxxxxxxxx
+
+            MPA.3) xxxxxxxxxxxxxxxxxxxx
+
+            MPA.4) xxxxxxxxxxxxxxxxxxxx
+
+            MPA.5) xxxxxxxxxxxxxxxxxxxx
+
             
 
-        2.4) Add RouterView to Vue main app (e.g. App.vue):
-            E.g.
-                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example/src/App.vue
+        
+                
 

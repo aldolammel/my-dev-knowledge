@@ -18,18 +18,31 @@ VUE ROUTER: WHAT IS IT
             etc
 
 
-        E.g. of routers on application menu:
-            - Each menu link must be using the <router-link> tag (open and close the tag).
-            - Right after the nav menu, call the <router-view /> tag.
+        E.g. of routers on app main menu:
+            - Each menu link must be using the <RouterLink> tag (open and close the tag);
+            - Define with <RouterView /> tag where the menu link's content (views) will be visualized;
 
-            <div id="nav">
-                <ul>
-                    <li><router-link to="/">A</router-link></li>
-                    <li><router-link to="/b">B</router-link></li>
-                    <li><router-link to="/c">C</router-link></li>
-                </ul>
-            </div>
-            <router-view/>
+            <!-- Navigation menu -->
+            <ul>
+                <li>
+                    <RouterLink to="/">
+                        Home (It's a View)
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/about">
+                        About (It's a View)
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/contact">
+                        Contact (It's a View)
+                    </RouterLink>
+                </li>
+            </ul>
+            
+            <!-- Where each View is rendered when its RouterLink is clicked: -->
+            <RouterView />
 
 
     >> Installing:

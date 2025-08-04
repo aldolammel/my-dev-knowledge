@@ -1,6 +1,8 @@
+// FILE: /frontend/src/main.js
+
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router' // Import your router configuration
+import router from './router' // Import your router config (/frontend/src/router/index.js)
 
 // Create Vue application instance
 const app = createApp(App)

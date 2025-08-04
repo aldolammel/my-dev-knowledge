@@ -30,14 +30,14 @@ LIBRARY: PINIA (it replaces Vuex needs)
             x) After install Pinia, go to front-end main.js file:
 
                 // Pinia:
-                import devalue from "devalue";
+                //import devalue from "devalue";  // I LOOKS LIKE FOR SECURITY BUT I DONT KNOW HOW IT WORKS.
                 import { createPinia } from "pinia";
 
                 // After const app creation:
                 app.use(createPinia());
 
                 // After the app mount:
-                devalue(pinia.state.value);
+                //devalue(pinia.state.value);  // I LOOKS LIKE FOR SECURITY BUT I DONT KNOW HOW IT WORKS.
 
             x) xxxxxxxxxxxxxxxx
 

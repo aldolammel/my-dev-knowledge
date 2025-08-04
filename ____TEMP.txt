@@ -1,0 +1,5 @@
+
+
+Arrumar essas instruções:
+       
+    /Web-Development/frontend/Vue/3-component-libraries/pinia/pinia.txt
