@@ -14,76 +14,21 @@ VUE: WITH DJANGO BACK-END
 
         2A) Recommendation for MPA project:
 
-            myproject/
-            ├── manage.py
-            ├── core/                  # Django core folder
-            ├── app1/
-            ├── app2/
-            ├── templates/             # Django templates
-            │   ├── base.html
-            │   ├── pages/
-            │   │   ├── home.html      # Contains Vue mount points
-            │   │   └── about.html
-            │   └── components/        # Reusable template fragments
-            ├── static/
-            │   ├── js/                # Your Vue components
-            │   ├── css/
-            │   └── dist/              # Vite build output
-            ├── frontend/              # Vue project folder       <---------------
-            │   ├── node_modules/      # stores all dependencies of the project and node.js stuff.
-            │   ├── public/
-            │   ├── src/
-            │   │   ├── assets/          # xxxxx
-            │   │   ├── components/
-            │   │   ├── store/           ???????????????????
-            │   │   ├── router/          ???????????????????
-            │   │   ├── store/         # unique front-end database source (by VueX/Pinia).
-            │   │   ├── pages/         # Vue apps for specific pages       <---------------
-            │   │   │   ├── Home.vue
-            │   │   │   ├── About.vue
-            │   │   │   └── Contact.vue
-            │   │   └── main.js
-            │   ├── index.html           # Run it to see the application on the browser. 
-            │   └── package.json
-            └── requirements.txt
+            my_project_name/     # /Python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/        # /Web-Development/frontend/Vue/vue-knowledge/1-vue-structure.txt
 
-
+            >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
+                folder (e.g. "my_project_name").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         2B) Recommendation for SPA project:
 
-            myproject/
-            ├── manage.py
-            ├── core/                  # Django core folder
-            ├── app1/
-            ├── app2/
-            ├── templates/             # Django templates
-            │   ├── base.html
-            │   ├── pages/
-            │   │   ├── home.html      # Contains Vue mount points
-            │   │   └── about.html
-            │   └── components/        # Reusable template fragments
-            ├── static/
-            │   ├── js/                # Your Vue components
-            │   ├── css/
-            │   └── dist/              # Vite build output
-            ├── frontend/              # Vue project folder       <---------------
-            │   ├── node_modules/      # stores all dependencies of the project and node.js stuff.
-            │   ├── public/
-            │   ├── src/
-            │   │   ├── assets/          # xxxxx
-            │   │   ├── components/      # stores small pieces of a page.
-            │   │   ├── store/           # unique front-end database source (by VueX/Pinia).
-            │   │   ├── router/          # where URLS of the app is set (by Vue-Router).
-            │   │   ├── views/           # Vue sub-apps for specific pages.
-            │   │   │   ├── About.vue
-            │   │   │   └── Contact.vue
-            │   │   ├── App.vue          # SPA App itself.  <---------------
-            │   │   └── main.js          # xxxxx
-            │   ├── index.html           # Run it to see the application on the browser. 
-            │   └── package.json
-            └── requirements.txt
+            my_project_name/     # /Python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/        # /Web-Development/frontend/Vue/vue-knowledge/1-vue-structure.txt
+
+            >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
+                folder (e.g. "my_project_name").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

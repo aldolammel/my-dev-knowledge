@@ -13,7 +13,7 @@ NODE.JS: HOW TO UNINSTALL
                 # Double-check if the nodejs has a global folder:
                     $ which nodejs   <-- if something is returned, the nodejs is installed globally!
 
-            # Uninstall nodejs and its package manager (if appliable):
+            # Uninstall nodejs and its package manager (if applicable):
                 $ sudo apt remove nodejs npm
                     
                     # Removing configuration files (optional):

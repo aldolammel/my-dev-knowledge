@@ -34,10 +34,15 @@ INSTALLING DJANGO:
 
         2B) Using common method (pip):
 
-            2B.1) Create the virtual environment and active it:
-                /Python/02-virtual-environment/
+            2B-PRE.1) Keep this in mind: Django project folder's structure!
+                    /Python/Web-development/django/django-project-folder-structure.txt
 
-            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment
+            2B-PRE.2) Create your project folder (where you will develop the product)!
+
+            2B.1) Inside the project folder, create the virtual environment and active it:
+                    /Python/02-virtual-environment/
+
+            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with: Django, environment
                             and other things!
                 
             2B.3) Installation:

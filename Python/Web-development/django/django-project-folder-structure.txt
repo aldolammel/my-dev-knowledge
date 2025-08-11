@@ -1,0 +1,44 @@
+
+
+DJANGO: ITS FILES AND FOLDER STRUCTURE
+
+
+    >> Django folder structure:
+
+        my_project_name/
+        ├── .venv/                 # Virtual environment folder.
+        │
+        ├── core/                  # Django core folder.
+        │   ├── __init__.py        # xxxxx
+        │   ├── settings.py        # xxxxx
+        │   ├── urls.py            # xxxxx
+        │   └── wsgi.py            # xxxxx
+        │
+        ├── apps/
+        │   ├── app1/              # xxxxx
+        │   │   ├── migrations/    # xxxxx
+        │   │   ├── __init__.py    # xxxxx
+        │   │   ├── admin.py       # xxxxx
+        │   │   ├── apps.py        # xxxxx
+        │   │   ├── models.py      # xxxxx 
+        │   │   ├── tests.py       # xxxxx
+        │   │   └── views.py       # xxxxx
+        │   │
+        │   └── app.../
+        │
+        ├── media/                 # xxxxx
+        │
+        ├── static/                # xxxxx
+        │   ├── js/                # Your Vue components.
+        │   ├── css/               # xxxxx
+        │   └── dist/              # xxxxx
+        │
+        ├── templates/             # Django templates.
+        │   ├── base.html          # xxxxx
+        │   ├── pages/             # xxxxx
+        │   │   ├── home.html      # Contains Vue mount points.
+        │   │   └── about.html     
+        │   └── components/        # Reusable template fragments.
+        │
+        ├── manage.py              # xxxxx
+        └── requirements.txt       # List of all Django project's (backend) dependencies.

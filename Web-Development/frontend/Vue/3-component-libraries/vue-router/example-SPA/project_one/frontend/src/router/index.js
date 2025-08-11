@@ -1,32 +1,32 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// Route Views:
-import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
-import ContactView from "../views/ContactView.vue";
+// Route Pages/Views:
+import PgHome from "../pages/Home.vue";
+import PgAbout from "../pages/About.vue";
+import PgContact from "../pages/Contact.vue";
 
 // Define your routes
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: HomeView,
+    //name: "Home",
+    component: PgHome,
   },
   {
     path: "/about",
-    name: "About",
-    component: AboutView,
+    //name: "About",
+    component: PgAbout,
   },
   {
     path: "/contact",
-    name: "Contact",
-    component: ContactView,
+    //name: "Contact",
+    component: PgContact,
   },
   {
     path: "/dashboard",
-    name: "Dashboard",
+    //name: "Dashboard",
     // Lazy-loaded route component (code splitting)
-    component: () => import("../views/DashboardView.vue"),
+    component: () => import("../pages/Dashboard.vue"),
     // Add route guards if needed
     meta: { requiresAuth: true },
   },
@@ -35,7 +35,7 @@ const routes = [
 // Create router instance
 const router = createRouter({
   // Use HTML5 history mode (removes # from URLs)
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.VITE_ROUTER_BASE),
   routes,
 });
 

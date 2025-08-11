@@ -3,8 +3,82 @@
 VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
-    >> Folders structure:
-        >> Example of a Django project with Vue project folder (/frontend/) inside:
+    Important: if you are using Vite as Built-tool, it already will manage the SCSS files 
+                compilation as well as other files compilation. So try do NOT customize
+                compilation paths, like to force the css files in /public/ folder!
+
+                More about compilation time:
+                    /Web-Development/frontend/Vue/vue-knowledge/90-go-live-compilation.txt
+
+
+    >> Vue folder structure:
+
+        frontend/
+        ├── node_modules/        # stores all dependencies of the project and node.js stuff.
+        │
+        ├── public/              # No bundling, no transformations. Use it for static assets you reference by absolute path.
+        │   ├── favicon.ico
+        │   ├── manifest.json    # for PWA configuration.
+        │   ├── robots.txt       # xxxxx.
+        │   ├── sitemap.xml      # xxxxx.
+        |   └── ...
+        │
+        ├── src/
+        │   ├── assets/                      # Those files that aren't public.
+        |   |   ├── imgs/                    # Images that need optimization or processing.
+        |   |   |   ├── logo.svg
+        |   |   |   ├── bg.jpg
+        |   |   |   └── ...
+        |   |   |
+        |   │   ├── styles/                  # Files that should be imported in components or main.js. Keep design tokens and CSS resets here.
+        │   │   │   ├── app.scss             # Everything about this project product styling.
+        │   │   │   ├── css-framework.scss   # File that imports CSS framework installed for this project.
+        │   │   │   └── ...
+        │   │   │   
+        │   │   └── ...
+        │   │
+        │   ├── components/           # Reusable components (pieces of code).
+        │   │   ├── NavMain.vue       # Example of a component.
+        │   │   ├── HeroBig.vue
+        │   │   ├── Newsletter.vue
+        │   │   ├── Footer.vue
+        │   │   └── ...
+        │   │
+        │   ├── features/             # Features that can include their own components, slices, API calls, etc.
+        |   |   ├── profile_example/  # The idea is encapsulation. If you deleted this folder, that whole feature should disappear.
+        |   |   └── ...
+        │   │
+        │   ├── hooks/                # Custom hooks. If it starts with use, it probably belongs here.
+        |   |   ├── useAuth.js
+        |   |   └── ...
+        │   │
+        │   ├── libs/                 # Where all main library files are. Anything that connects the app to the world.
+        |   |   ├── router.js
+        |   |   ├── store.js
+        |   |   ├── bootstrap.js
+        |   |   └── ...
+        │   │
+        │   ├── pages/            # Pages/Views that router points to. They compose features and components into something meaningful.
+        │   │   ├── Home.vue      # Example of a page (sub-app/page/view).
+        │   │   ├── About.vue       
+        │   │   └── ...
+        │   │
+        │   ├── router/           # Where it's define routes and lazy-load pages.
+        │   │   └── routes.js     # Router config file.
+        |   |
+        │   ├── utils/           # Tiny, pure functions that do one thing well, but not a lib.
+        │   │
+        │   ├── App.vue          # Root page/component (main-app itself).  <---------------
+        │   └── main.js          # JavaScript config file of the main-app.
+        │
+        ├── index.html           # Run it to see the app on the browser. 
+        └── package.json
+
+
+        >> Tip: Once something is reused across two or more features, promote it out to components/ or hooks/.
+
+
+        >> Example of a Django folder project with Vue:
             /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
 
 

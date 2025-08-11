@@ -21,7 +21,7 @@ VUEX: HOW TO CREATE DATA
                 actions: {}
                 mutations: {}
                 modules: {}
-            }
+            })
 
 
     STEP 2: VIEW AND DISPATCH

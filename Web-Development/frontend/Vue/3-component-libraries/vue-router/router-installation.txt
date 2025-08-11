@@ -2,14 +2,14 @@
 
 VUE ROUTER: INSTALLATION AND INTEGRATION
 
-    Aware: if you already created your project via Vue-CLI (default), you probably already have
+    Be aware: if you already created your project via Vue-CLI (default), you probably already have
                 the Router once it was an Vue-CLI option during the project creation process.                
-                Make sure about, in Vue project folder:
-                    
+                Make sure about checking it through the Vue project folder:
+                
                     $ npm list
                     
-                    >> If you won't see any router stuff, keep with the installation and integration
-                        processes below.
+                    >> If you don't see any router stuff, keep with the installation and integration
+                        processes below, otherwise skip this checklist!
 
 
     1) Installing:
@@ -33,28 +33,31 @@ VUE ROUTER: INSTALLATION AND INTEGRATION
         SPA) For SPA project:
 
             SPA.1) Import the router and setup the very basic in the main-app-js file:
-                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/main.js
-        
-            SPA.2) Create the router-config file and setup its options:
-                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/router/index.js
+                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js
+                   
+            SPA.2) In the .env file of your project, create these environment variables:
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/.env_example
 
-            SPA.3) Make sure you already have all views ("pages") in the /frontend/src/views/ folder:
+            SPA.3) Create the router-config file and setup its options:
+                /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index.js
+
+            SPA.4) Make sure you already have all views ("pages") in the /frontend/src/pages/ folder:
                     E.g.
-                        HomeView.vue
-                        AboutView.vue
-                        ContactView.vue
+                        Home.vue
+                        About.vue
+                        Contact.vue
 
-            SPA.4) Define where all views ("pages") must be rendered in your front-end template:
+            SPA.5) Define where all views ("pages") must be rendered in your front-end template:
 
                     >> Add this where each View must be loaded:
                         <RouterView />
 
                         E.g.
-                            /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/App.vue
+                            /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue
 
-            SPA.5) Define each link option (<RouterLink>) for the main navigation menu of the app:
+            SPA.6) Define each link option (<RouterLink>) for the main navigation menu of the app:
                     E.g.
-                        /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/src/components/NavMain.vue
+                        /Web-Development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             
@@ -71,6 +74,11 @@ VUE ROUTER: INSTALLATION AND INTEGRATION
             MPA.4) xxxxxxxxxxxxxxxxxxxx
 
             MPA.5) xxxxxxxxxxxxxxxxxxxx
+
+    
+    3) Testing:
+
+        $ npm run dev
 
             
 

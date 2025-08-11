@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <title>Vue Basics through CDN installation</title>
     <link
+      rel="stylesheet"   
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
-      rel="stylesheet"
     />
     <!-- Unlike LOCAL installation, CDN asks for CSS file declaration here, and NOT in main.js -->
     <link rel="stylesheet" href="./styles.css" />
     <!-- Calling the Vue CDN (2025) -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <!-- Where Vue must control -->

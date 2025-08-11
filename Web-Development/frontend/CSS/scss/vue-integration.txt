@@ -6,7 +6,7 @@ SCSS/SASS: VUE INTEGRATION
 
         >> .scss/.sass (a Vite built-in solution):
             
-            # Associating the Vite built-in solution to the project:
+            # Associating the Vite built-in solution to the project (only for dev environment):
                 $ npm add -D sass-embedded
                     # Verify your SASS dependency in package.json in the root project-folder:
                         E.g.

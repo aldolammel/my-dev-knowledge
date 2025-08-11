@@ -62,7 +62,7 @@
                                 - Linter/Formatter? Yes but later!
                                     Vite has NO standard solution;
 
-                            >> Get in the project folder (if applyable):
+                            >> Get in the project folder (if applicable):
                                 $ cd <vue_project_folder>
 
                             >> Finishing the installation, executing a command that will install all
@@ -72,7 +72,19 @@
                                     
                                 # Check what is locally installed:
                                     $ npm list
-                
+            
+            >> Force the definition of the public folder for the project:
+                # In the Vue-project-folder (/frontend, e.g.), open the vite.config.js file and add:
+
+                    export default defineConfig({
+                        plugins: [
+                            //...
+                        ],
+                        publicDir: "public",
+                        //...
+                    });
+            
+            
             >> Run the Vue service:
                 # On the vue-project-folder:
                     $ npm run dev

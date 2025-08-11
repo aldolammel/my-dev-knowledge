@@ -30,13 +30,13 @@ const AppName = {
         console.log('Here is the created() Lifecycle hook.');
     },
 
-    // Lifecycle-Hook: phase before the object's update (if appliable):
+    // Lifecycle-Hook: phase before the object's update (if applicable):
     beforeUpdate() {
         // things to happen in this phase!
         console.log('Here is the beforeUpdate() Lifecycle hook.');
     },
 
-    // Lifecycle-Hook: phase right after the object's update (if appliable):
+    // Lifecycle-Hook: phase right after the object's update (if applicable):
     updated() {
         // things to happen in this phase!
         console.log('Here is the updated() Lifecycle hook.')

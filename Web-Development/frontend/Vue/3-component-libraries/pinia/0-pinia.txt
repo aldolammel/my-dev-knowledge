@@ -1,0 +1,84 @@
+
+
+LIBRARY: PINIA (it replaces VueX needs in Vue 3)
+
+    Pinia is a (global) state management library designed specifically for Vue 3. It offers a 
+    lightweight and intuitive approach to app state management. It allows devs to create and organize
+    stores by encapsulating state and app logic in a centralized module. Additionally, it enables
+    us to share the state between elements and pages (components and views), creating a user-friendly
+    experience using the new responsive concept in Vue3.
+    Not all apps need access to a global state, but if yours need one, Pinia will make it easier.
+
+    >> What is a Store?
+
+        A store is an entity holding state and business logic that isn't bound to your 
+        Component tree. In other words, it hosts global state. It's a bit like a component that is
+        always there and that everybody can read off and write to. It has three concepts, the state, 
+        getters and actions and it's safe to assume these concepts are the equivalent of data, 
+        computed and methods in components.
+
+    >> Pinia VS Vuex:
+        
+        - There are no modules as such, but different stores that can easily communicate;
+        - There are no mutations 'coz they're not necessary to track state changes;
+        - It's much easier to import stores into any component or composable;
+        - Better (default) TypeScript support;
+        - Native support for Vue DevTools;
+        - Extremely lightweight: around 1.5kb.
+
+    >> When should I use a Store?
+
+        A store should contain data that can be accessed throughout your application. This includes 
+        data that is used in many places, e.g. User information that is displayed in the navbar, as 
+        well as data that needs to be preserved through pages, e.g. a very complicated multi-step 
+        form. 
+    
+    https://pinia.vuejs.org/  
+
+
+    1) Which Vue build-tool are you using?
+
+        1A) Using Vue-CLI;
+        1B) Using Vue-Vite;
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1A) Using Vue-CLI:
+        
+            Pinia team's recommending this unofficial plugin (2025):
+                https://github.com/wobsoriano/vue-cli-plugin-pinia
+
+                More about: https://pinia.vuejs.org/getting-started.html
+        
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1B) Using Vue-Vite:
+
+            >> Installing Pinia:
+
+                # To install:
+                    $ npm install pinia
+                # Check it:
+                    $ npm list
+
+            
+            >> To uninstall:
+
+                # To uninstall:
+                    $ npm uninstall pinia
+                # Check it:
+                    $ npm list
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+
+    2) Integration: How to create/update data using Pinia:
+
+        /Web-Development/frontend/Vue/3-component-libraries/pinia/1-overview-how-to-create-data.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> VUEX IS THE OFFICIAL SOLUTION FOR VUE 2:
+    /Web-Development/frontend/Vue/3-component-libraries/vuex/0-vuex.txt

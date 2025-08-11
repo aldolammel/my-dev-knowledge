@@ -2,7 +2,7 @@
 
 VUE.JS: GITIGNORE FILE
 
-    >> Add these lines in your .gitignore file (if appliable):
+    >> Add these lines in your .gitignore file (if applicable):
 
         ### Node.js ###
         node_modules/

@@ -31,11 +31,11 @@ const ToDoList = {
                 }
             });
             if (isDuplicate) return;
-            
+
             // If everything's right, it adds the task:
             this.tasks.push(this.newTask);
             //this.newTask.isDone = false;  // Not needed 'coz newTask is already 'isDone: false'!
-            
+
             // Reset form:
             this.newTask = {};
         },
@@ -67,21 +67,21 @@ const ToDoList = {
         this.tasks = storedTasks ? JSON.parse(storedTasks) : this.tasks; // parse converts string to object back again.
     },
 
-    // Lifecycle-Hook: phase right after the object's update (if appliable):
+    // Lifecycle-Hook: phase right after the object's update (if applicable):
     updated() {
-        
+
         // ONLY RECOMMENDED FOR SMALL APPLICATIONS!
         // Saving all current tasks locally (again):
         //localStorage.setItem("tasks", JSON.stringify(this.tasks));
         //console.log('It was updated!');
 
         // CRITICAL: this way, where you ask JS to save after an update, is too bad coz it's 
-                // running each key you type in an input for example, overloading the browser in
-                // more complex apps.
-                
-                // SOLUTION: create a method only to save throught the exactly moment you want,
-                        // calling it just when the Submit button is pressed or the task has its
-                        // status changed, or when the 'Delete all tasks' button is pressed.
+        // running each key you type in an input for example, overloading the browser in
+        // more complex apps.
+
+        // SOLUTION: create a method only to save throught the exactly moment you want,
+        // calling it just when the Submit button is pressed or the task has its
+        // status changed, or when the 'Delete all tasks' button is pressed.
     }
 };
 
