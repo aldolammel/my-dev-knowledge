@@ -4,7 +4,7 @@ PINIA: HOW TO CREATE DATA
 
     STEP 0: WORKFLOW
         Overview of the Pinia workflow:
-        /Web-Development/frontend/Vue/3-component-libraries/pinia/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (is the same of Vuex?????????)
+        /Web-Development/frontend/Vue/3-component-libraries/pinia/pinia-workflow.png
 
 
 

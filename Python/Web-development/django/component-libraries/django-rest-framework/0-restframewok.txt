@@ -1,0 +1,71 @@
+
+
+DJANGO REST FRAMEWORK:
+
+    Django REST framework is a powerful and flexible toolkit for building Web APIs.
+    Some reasons you might want to use REST framework:
+    
+        - The Web browsable API is a huge usability win for your developers.
+        - Authentication policies including packages for OAuth1a and OAuth2.
+        - Serialization that supports both ORM and non-ORM data sources.
+        - Customizable all the way down - just use regular function-based views if you don't need the more powerful features.
+        - Extensive documentation, and great community support.
+        - Used and trusted by internationally recognised companies including Mozilla, Red Hat, Heroku, and Eventbrite.
+
+
+    https://www.django-rest-framework.org/
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    1) Install:
+
+        # With PIP:
+            $ pip install djangorestframework
+        # With UV:
+            $ uv add djangorestframework
+
+    2) Integration:
+
+        2.1) Open the core settings.py in your Django project, and add this lines:
+
+            INSTALLED_APPS = [
+                ...
+                'rest_framework',
+            ]
+
+        2.2) Still in settings.py, add these lines too:
+
+            // It at first:
+            SIMPLE_JWT = {
+                //...
+            }
+
+            // After that:
+            REST_FRAMEWORK = {
+                'DEFAULT_AUTHENTICATION_CLASSES': (),
+                'DEFAULT_PERMISSION_CLASSES': (
+                    'rest_framework.permissions.IsAuthenticated',
+                ),
+            }
+
+        2.3) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        
+        
+        
+                >> If you're intending to use the browsable API you'll probably also want to add
+                    REST framework's login and logout views. Add the following to your root urls.py
+                    file:
+
+                        urlpatterns = [
+                            ...
+                            path('api-auth/', include('rest_framework.urls'))
+                        ]
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> EXPANDING DJANGo REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
+    /Python/Web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.txt

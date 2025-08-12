@@ -1,0 +1,78 @@
+
+
+DJANGO CORS HEADERS:
+
+    It's a Django app designed to handle Cross-Origin Resource Sharing (CORS) headers in responses
+    from your Django app. CORS is a security mechanism implemented by web browsers to restrict web
+    pages from making requests to a different domain than the one that served the web page.
+
+    https://github.com/adamchainz/django-cors-headers
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Install:
+
+        # With PIP:
+            $ python -m pip install django-cors-headers
+        # With UV:
+            $ uv add django-cors-headers
+
+
+    >> Integration:
+
+        1) Open the core settings.py in your Django project, and add these lines:
+
+            INSTALLED_APPS = [
+                ...,
+                "corsheaders",
+                ...,
+            ]
+
+        2) Still in settings.py, add these lines too:
+
+            MIDDLEWARE = [
+                ...,
+                "corsheaders.middleware.CorsMiddleware",
+                "django.middleware.common.CommonMiddleware",
+                ...,
+            ]
+
+            >> CRITICAL: CorsMiddleware should be placed as high as possible, especially before any
+                        middleware that can generate responses such as Django's CommonMiddleware or
+                        Whitenoise's WhiteNoiseMiddleware. 
+
+        3) Still in settings, these lines for security reasons:
+
+            // CORS > CSRF Integration:
+            // A list of origins that are authorized to make cross-site HTTP requests. The origins
+            // in this setting will be allowed, and the requesting origin will be echoed back to the
+            // client in the access-control-allow-origin header. Defaults to [].
+            CORS_ALLOWED_ORIGINS = [
+                "https://read-only.example.com",
+                "https://read-and-write.example.com",
+                "http://localhost:8000",  // Dev env for Django;
+                "http://127.0.0.1:8000",  // Dev env for Django;
+                "http://localhost:5173",  // Dev env for Vue;
+                "http://127.0.0.1:5173",  // Dev env for Vue;
+                // Other ones, depending your system...
+            ]
+            CSRF_TRUSTED_ORIGINS = [
+                "https://read-and-write.example.com",
+                "http://localhost:8000",  // Dev env for Django;
+                "http://127.0.0.1:8000",  // Dev env for Django;
+                "http://localhost:5173",  // Dev env for Vue;
+                "http://127.0.0.1:5173",  // Dev env for Vue;
+                // Other ones, depending your system...
+            ]
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> XXXXXXXX
+    /xxxxxxxxxxxxxxxxxxxx
+
+
+

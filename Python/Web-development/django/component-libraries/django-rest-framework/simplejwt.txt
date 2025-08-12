@@ -1,7 +1,0 @@
-
-
-DJANGO REST FRAMEWORK > JSON WEB TOKEN (JWT)
-
-    It's a JSON Web Token (JWT) authentication plugin designed for use with the Django REST
-    Framework. It provides a robust and extensible solution for implementing token-based
-    authentication in Django-powered APIs.

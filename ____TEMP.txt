@@ -1,4 +1,16 @@
 
+Continuar estudo e anotações:
+
+    1) https://youtu.be/NmQyX1D5hqo?si=e7YwFQ3S0Q3ch64a&t=827
+
+        Seguir anotando o passo-a-passo de uso do CORS, do RestFrameWork e JWT (tá tudo misturado no
+        vídeo). Na parte que parei (link acima) ele está começando a criar o app ACCOUNTS básico do
+        Django. Então ele vai mostrar as coisas e eu tenho de anotar o que ele falar sobre os itens
+        que listei acima.
+
+
+
+
 
 Arrumar essas instruções:
 

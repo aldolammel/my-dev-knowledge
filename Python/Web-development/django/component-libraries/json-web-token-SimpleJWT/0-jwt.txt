@@ -1,0 +1,61 @@
+
+
+JSON WEB TOKEN (JWT)
+
+    It's an authentication plugin designed for use with the Django REST Framework. It provides a
+    robust and extensible solution for implementing token-based authentication in Django-powered APIs.
+
+    https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> For Django Rest Framework:
+
+        More about Django Rest Framework:
+            /Python/Web-development/django/component-libraries/django-rest-framework/0-restframewok.txt
+
+
+        1) Install the plugin:
+            
+            # With PIP:
+                $ pip install djangorestframework-simplejwt
+            # With UV:
+                $ uv add djangorestframework-simplejwt
+
+
+        2) Integration:
+
+            2.1) Open the core settings.py in your Django project, and add these lines:
+
+                INSTALLED_APPS = [
+                    ...
+                    'rest_framework',  // mandatory for JWT plugin.
+                    'rest_framework_simplejwt',
+                ]
+
+            2.2) Still in settings.py, add these lines too:
+
+                from datetime import timedelta
+                
+                SIMPLE_JWT = {
+                    'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
+                    'REFRESH_TOKEN_LIFETIME': timedelta(days=180),
+                    'ROTATE_REFRESH_TOKENS': False,
+                }
+
+            2.3) Still in settings.py, let say to Rest Framework to work with JWT, editing it:
+
+                REST_FRAMEWORK = {
+                    'DEFAULT_AUTHENTICATION_CLASSES': (
+                        'rest_framework_simplejwt.authentication.JWTAuthentication',
+                    )
+                    //...
+                }
+
+
+            
+            2.4) Let's configurate the URLs??????
+
+                xxxxxxxxxxxxxxxx
