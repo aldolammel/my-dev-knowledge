@@ -1,0 +1,5 @@
+
+
+JWT DETAILS FOR TRANSLATIONS:
+    
+    /Python/Web-development/django/component-libraries/json-web-token-SimpleJWT/verifing-HMAC-signed-tokens.txt
