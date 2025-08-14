@@ -1,26 +1,6 @@
 """
-API CREATION:
-The logical behind to build up an API is the same logic of to build a website up with Flask.
-
-PLANNING THIS API:
-
-- API goal:
-    >> Create an API to consulting, creating, updating and deleting books.
-- Where:
-    >> Localhost
-- Endpoints:
-    >> localhost/books/add (POST to add a new book)
-    >> localhost/books (GET to return all books)
-    >> localhost/books/id (GET to return a specific book)
-    >> localhost/books/id (PUT to update a specific book)
-    >> localhost/books/id (DELETE to delete a specific book)
-- Resources:
-    >> Books list.
-
-    Tools:
-        Postman > it helps developers design, build, test and manage APIs.
-        Insomnia > Postman alternative.
-
+    API CREATION:
+    The logical behind to build up an API is the same logic of to build a website up with Flask.
 """
 
 from flask import Flask, jsonify, request

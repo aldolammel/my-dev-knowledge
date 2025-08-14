@@ -1,4 +1,0 @@
-
-
-JSON WITH PYTHON:
-    /python/23-JSON/

@@ -1,22 +1,6 @@
 """
-API (Application Programming Interface):
-An API is a set of commands, functions, protocols, and objects that programmers can use to create software or interact
-with an external system.
-
-WHAT TO RETURN:
-API can return various types of data formats, and JSON (JavaScript Object Notation) is a popular choice due to its
-simplicity and ease of use, especially for web-based APIs. Other data formats to return: XML, PlainText, Binary.
-
-WHAT IS "API ENDPOINT":
-It's the link used to request the data. For example, ISS Position API endpoint is http://api.open-notify.org/iss-now.json
-
-POPULAR MODULES TO CONSULTING AN API:
-> requests - https://pypi.org/project/requests/
-
-    Tools:
-        Postman > it helps developers design, build, test and manage APIs.
-        Insomnia > Postman alternative.
-
+    POPULAR MODULES TO CONSULTING AN API:
+    > requests - https://pypi.org/project/requests/
 """
 
 import requests
@@ -34,12 +18,8 @@ API_PARAMS = {
     "exclude": "current,minutely,daily,alerts",
     "units": "metric",
 }
-ACCOUNT_SID = "AC39e938f31b0fa3aa547925c14b8971b5"
-<<<<<<< HEAD
+ACCOUNT_SID = "xxxxxx"
 AUTH_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-=======
-AUTH_TOKEN = "cd407e23cfe6da6646b23484ed7a9143"
->>>>>>> b3f816819d0bb1edc684063f4100d8b2a50b7a4a
 
 # Calling API:
 response = requests.get(url=API_ENDPOINT, params=API_PARAMS)

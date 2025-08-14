@@ -1,0 +1,90 @@
+
+
+API: WHAT IS IT
+
+    An API (Application Programming Interface) is a set of rules, protocols, and tools that allows
+    different software applications to communicate with each other. It defines how requests and
+    responses should be structured, enabling seamless interaction between systems, services,
+    or components.
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Key Concepts:
+    
+        1. Standardized Communication:  APIs define a structured way for software to exchange data
+                                        (e.g., using HTTP requests, gRPC, or WebSockets).
+
+        2. Abstraction:                 APIs hide complex internal logic, exposing only the necessary
+                                        endpoints (e.g., a weather API provides temperature data
+                                        without revealing its backend algorithms).
+
+        3. Statelessness (Common in Web APIs):  Each request contains all the information needed to
+                                                process it (e.g., REST APIs).
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> How it works:
+    
+        1. Client Sends a Request
+                E.g: A mobile app requests weather data via GET
+                    https://api.weatherexample.com/v1.1/forecast?city=PortoAlegre
+
+        2. Server Processes the Request
+                E.g. The API validates the request, fetches data (e.g., from a database),
+                    and formats it (usually as JSON/XML).
+
+        3. Server Sends a Response
+                Json e.g.: 
+                    {
+                        "temperature": 22,
+                        "conditions": "sunny"
+                    }
+        
+        4. Client Uses the Data
+                E.g. The app displays the weather to the user.
+                    "Porto Alegre, now is sunny, 22ºC"
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Types of APIs:
+        
+        Type	             Description                            Use case e.g.
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        Web APIs ........... HTTP-based, used for web services ...... Fetching Twitter data via REST.
+        Library APIs ....... Exposed by software libraries .......... Using requests in Python.
+        OS APIs	............ Allow apps to interact with an OS ...... Windows API for file operations.
+        Hardware APIs ...... Control hardware devices ............... Raspberry Pi sensor APIs.
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Data manipulation methods:
+        
+        Sometimes you'll need to use these methods to manipulate the data from an API
+            - GET
+            - POST
+            - PUT
+            - DELETE
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> How to plan your API:
+
+        /API/how-to-plan-an-api.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> How to convert objects to a JSON, for example:
+        Read more about Serializers:
+            /API/serializers.txt

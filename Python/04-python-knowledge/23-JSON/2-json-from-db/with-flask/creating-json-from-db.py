@@ -1,14 +1,3 @@
-"""
-JSON (JavaScript Object Notation):
-
-    JavaScript Object Notation file is a lightweight data-interchange format that is easy for humans to read and write,
-    and easy for machines to parse and generate. JSON is primarily used to transmit data between a server and a
-    web application.
-
-    IMPORTANT:
-    Json always returns a dictionary.
-
-"""
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy                            # Install = Flask-SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column  # Install = SQLAlchemy

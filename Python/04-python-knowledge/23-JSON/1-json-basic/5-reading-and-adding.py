@@ -1,20 +1,6 @@
 """
-JSON (JavaScript Object Notation):
-
-    JavaScript Object Notation file is a lightweight data-interchange format that is easy for humans to read and write,
-    and easy for machines to parse and generate. JSON is primarily used to transmit data between a server and a
-    web application.
-
-    IMPORTANT:
-    Json always returns a dictionary.
-
-    Tools:
-        Postman > it helps developers design, build, test and manage APIs.
-        Insomnia > Postman alternative.
-
     This example: if the json file is empty, you'll face an error.
     Change this dictionary content, run it and check manually the json file.
-
 """
 import json
 
