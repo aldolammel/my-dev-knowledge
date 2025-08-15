@@ -1,0 +1,34 @@
+
+
+BACK AND FRONT-END INTEGRATION: USING DJANGO ONLY
+
+    x) xxxxxxxxxxxxxxx
+
+        E.g.
+            xxxx
+
+    x) xxxxxxxxxxxxxxx
+
+        E.g.
+            xxxxx
+
+    x) xxxxxxxxxxxxxxx
+
+        E.g.
+            xxxxx
+
+    x) xxxxxxxxxxxxxxx
+
+        E.g.
+            xxxxx
+    
+    
+
+
+
+
+
+
+x) Test the integration now:
+
+    /Python/Web-development/django/4-cms-admin/frontend-integration/testing-integration.txt (??????? USE IN THIS ONLY DJANGO CASE????)

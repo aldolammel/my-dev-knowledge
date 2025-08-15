@@ -2,4 +2,4 @@
 
     DJANGO TEMPLATES (FRONT-END):
 
-        \33-Web-development\backend\python\django\3-3-frontend-templates\
+        /Python/Web-development/django/3-3-frontend-templates/

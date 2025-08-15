@@ -1,8 +1,5 @@
 """
     QUERYSETS FOR ADMIN (CMS): FILTERING
-
-    
-    
 """
 
 from django.contrib import admin

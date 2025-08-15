@@ -1,0 +1,10 @@
+
+
+GITHUB
+
+    It's a web-based platform used for version control and collaboration in software development.
+    It's built on Git, a distributed version control system created by Linus Torvalds. 
+    GitHub provides a centralized place where developers can store, manage, and share their code.
+
+    >> Basic Git commands:
+        /Versioning/git/basic.txt

@@ -45,26 +45,26 @@ DJANGO CORS HEADERS:
 
         3) Still in settings, these lines for security reasons:
 
-            // CORS > CSRF Integration:
-            // A list of origins that are authorized to make cross-site HTTP requests. The origins
-            // in this setting will be allowed, and the requesting origin will be echoed back to the
-            // client in the access-control-allow-origin header. Defaults to [].
+            # CORS > CSRF Integration:
+            # A list of origins that are authorized to make cross-site HTTP requests. The origins
+            # in this setting will be allowed, and the requesting origin will be echoed back to the
+            # client in the access-control-allow-origin header. Defaults to [].
             CORS_ALLOWED_ORIGINS = [
                 "https://read-only.example.com",
                 "https://read-and-write.example.com",
-                "http://localhost:8000",  // Dev env for Django;
-                "http://127.0.0.1:8000",  // Dev env for Django;
-                "http://localhost:5173",  // Dev env for Vue;
-                "http://127.0.0.1:5173",  // Dev env for Vue;
-                // Other ones, depending your system...
+                "http://localhost:8000",  # Dev env for Django;
+                "http://127.0.0.1:8000",  # Dev env for Django;
+                "http://localhost:5173",  # Dev env for Vue/Vite;
+                "http://127.0.0.1:5173",  # Dev env for Vue/Vite;
+                # Other ones, depending your system...
             ]
             CSRF_TRUSTED_ORIGINS = [
                 "https://read-and-write.example.com",
-                "http://localhost:8000",  // Dev env for Django;
-                "http://127.0.0.1:8000",  // Dev env for Django;
-                "http://localhost:5173",  // Dev env for Vue;
-                "http://127.0.0.1:5173",  // Dev env for Vue;
-                // Other ones, depending your system...
+                "http://localhost:8000",  # Dev env for Django;
+                "http://127.0.0.1:8000",  # Dev env for Django;
+                "http://localhost:5173",  # Dev env for Vue/Vite;
+                "http://127.0.0.1:5173",  # Dev env for Vue/Vite;
+                # Other ones, depending your system...
             ]
 
 

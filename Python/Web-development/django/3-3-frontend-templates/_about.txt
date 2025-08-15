@@ -30,6 +30,8 @@ DJANGO STRUCTURE: TEMPLATES
             /Python/Web-development/django/3-1-backend-models-database/
 
 
-    EXTERNAL TEMPLATE SOLUTIONS:
+    EXTERNAL TEMPLATE/FRONT-END SOLUTIONS:
 
-        /Web-Development/frontend/
+        >> Vue.js ....... /Web-Development/frontend/Vue/
+        >> React ........ /Web-Development/frontend/React/
+        >> Angular ...... /Web-Development/frontend/Angular/

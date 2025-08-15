@@ -1,0 +1,5 @@
+
+
+BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
+
+    /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/integration.txt

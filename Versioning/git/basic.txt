@@ -1,7 +1,7 @@
 
     GIT
 
-        >> It's a version system to control project files version.
+        It's a version system to control project files version.
 
         >> Git workflow:
 
@@ -29,35 +29,38 @@
 
         >> Getting in/Cloning an existent project/respository:
 
-            $ git clone HTTPS_OF_PROJECT .         // that "." makes the clone to be installed exactly in the folder where you are, dont creating the parent folder.
-            $ git status                           // everything must be fine.
+            $ git clone HTTPS_OF_PROJECT .      // that "." makes the clone to be installed
+                                                //exactly in the folder where you are, dont
+                                                // creating the parent folder.
+
+            $ git status            // everything must be fine.
 
         
         >> Checking which branch you are
         
             # check local branch:
-            $ git branch
+                $ git branch
 
             # check all branches available, including local:
-            $ git branch -a
+                $ git branch -a
 
 
         >> Switching to another branch
         
             # If the branch exists locally:
-            $ git checkout <branch_name>
+                $ git checkout <branch_name>
 
             # If the branch exists only remotely:
-            $ git checkout -b branch_name origin/branch_name
+                $ git checkout -b branch_name origin/branch_name
 
 
         >> Creating a new local branch
         
             # creating it:
-            $ git branch <new_branch_name>
+                $ git branch <new_branch_name>
 
             # selecting it:
-            $ git checkout <new_branch_name>
+                $ git checkout <new_branch_name>
 
             >> remider: create it as remote too!
 
@@ -65,26 +68,26 @@
         >> Creating a new remote branch
         
             # After creating it locally and selecting it, do it:
-            $ git push --set-upstream origin <new_branch_name>
+                $ git push --set-upstream origin <new_branch_name>
 
 
         >> Checking if you have the last version of the main
         
             # A report with all commits:
-            $ git log
+                $ git log
 
             # Find all changes without merging these changes into your current working branch:
-            $ git fetch origin
+                $ git fetch origin
             # OR below, it fetches and merges (or rebases) changes: 
-            $ git pull
+                $ git pull
 
 
         >> Force the original branch again
         
             # Check exactly the branch name you want:
-            $ git branch -a
+                $ git branch -a
             # Download that:
-            $ git reset --hard <branch_name>
+                $ git reset --hard <branch_name>
 
 
 
