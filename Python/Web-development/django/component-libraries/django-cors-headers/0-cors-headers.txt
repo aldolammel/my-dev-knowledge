@@ -43,29 +43,61 @@ DJANGO CORS HEADERS:
                         middleware that can generate responses such as Django's CommonMiddleware or
                         Whitenoise's WhiteNoiseMiddleware. 
 
-        3) Still in settings, these lines for security reasons:
+        3) For security reasons, let's do it:
 
-            # CORS > CSRF Integration:
-            # A list of origins that are authorized to make cross-site HTTP requests. The origins
-            # in this setting will be allowed, and the requesting origin will be echoed back to the
-            # client in the access-control-allow-origin header. Defaults to [].
-            CORS_ALLOWED_ORIGINS = [
-                "https://read-only.example.com",
-                "https://read-and-write.example.com",
-                "http://localhost:8000",  # Dev env for Django;
-                "http://127.0.0.1:8000",  # Dev env for Django;
-                "http://localhost:5173",  # Dev env for Vue/Vite;
-                "http://127.0.0.1:5173",  # Dev env for Vue/Vite;
-                # Other ones, depending your system...
-            ]
-            CSRF_TRUSTED_ORIGINS = [
-                "https://read-and-write.example.com",
-                "http://localhost:8000",  # Dev env for Django;
-                "http://127.0.0.1:8000",  # Dev env for Django;
-                "http://localhost:5173",  # Dev env for Vue/Vite;
-                "http://127.0.0.1:5173",  # Dev env for Vue/Vite;
-                # Other ones, depending your system...
-            ]
+
+            3.1) Make sure you already have defined these Environment Variables in your .env:
+
+                E.g.
+                    PROD_BASE_URL=https://clients-product-main-domain.com
+                    BACK_URL1=http://localhost:8000
+                    BACK_URL2=http://127.0.0.1:8000
+                    FRONT_URL1=http://localhost:5173
+                    FRONT_URL2=http://127.0.0.1:5173
+
+                >> A model for your .env file: /Environment-Variables/
+
+
+            3.2) Confirm if your /core/settings.py are calling correctly those env vars:
+
+                >> Using 'environ' module:
+                    
+                    # Environment Variables, basic:
+                    #...
+                    # Environment Variables, callers:
+                    #...
+                    PROD_BASE_URL = env("PROD_BASE_URL")  # Main client's product domain.
+                    BACK_URL1 = env("BACK_URL1")  # Dev env for backend.
+                    BACK_URL2 = env("BACK_URL2")  # Dev env for backend.
+                    FRONT_URL1 = env("FRONT_URL1")  # Dev env for frontend.
+                    FRONT_URL2 = env("FRONT_URL2")  # Dev env for frontend.
+
+                >> Using another Python module:
+                    
+                    xxxxxxxx
+                
+
+            3.3) Still in settings.py:
+
+                # CORS > CSRF Integration:
+                # A list of origins that are authorized to make cross-site HTTP requests. The origins
+                # in this setting will be allowed, and the requesting origin will be echoed back to the
+                # client in the access-control-allow-origin header. Defaults to [].
+                CORS_ALLOW_CREDENTIALS = True
+                CORS_ALLOWED_ORIGINS = [
+                    PROD_BASE_URL,
+                    BACK_URL1,
+                    BACK_URL2,
+                    FRONT_URL1,
+                    FRONT_URL2,
+                ]
+                CSRF_TRUSTED_ORIGINS = [
+                    PROD_BASE_URL,
+                    BACK_URL1,
+                    BACK_URL2,
+                    FRONT_URL1,
+                    FRONT_URL2,
+                ]
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

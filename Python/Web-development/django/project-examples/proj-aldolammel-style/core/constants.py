@@ -13,8 +13,10 @@
             
 """
 
-# To avoid circular-import with language.py, translatable constants must stay here!
+# To avoid circular-import with language.py or settings.py, for example, translatable constants and
+# any other constants defined in other places must be defined here manually as well!
 # from django.utils.translation import gettext_lazy as _
+# from .settings import PROD_BASE_URL
 
 
 # APP ESSENTIAL INFO: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -23,10 +25,10 @@ ADMIN_EMAIL = 'xxxxx@gmail.com'
 BRAND_NAME = 'My Brand Name'
 BRAND_DESCRIPT = 'Soon...'  # TODO How do I translate this?
 BRAND_EMAIL = 'xxxxxx@gmail.com'
-BRAND_URL = 'https://xxxxxxxxx.com'
-DEV_NAME = 'ABCOO'
-DEV_URL = 'https://abcoo.com.br'
-BRAND_KEYWORDS = "Soon..."  # TODO How do I translate this?
+BRAND_URL = "https://this-product-main-domain.com"
+DEV_NAME = 'AL'
+DEV_URL = 'https://dev.aldolammel.com'
+BRAND_KEYWORDS = 'Soon...'  # TODO How do I translate this?
 
 # SUB-APP PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 NAMESPACE_0 = "admin"

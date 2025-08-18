@@ -1,6 +1,19 @@
 # FILE: /my_django_project/core/settings.py
 # ...
 
+# I'm using 'environ' to call Environment variables:
+import environ  # How to build env() function: /Python/Web-development/django/project-examples/proj-aldolammel-style/core/settings.py
+
+# Environment Variables, basic:
+#...
+# Environment Variables, callers:
+#...
+PROD_BASE_URL = env("PROD_BASE_URL")  # Main client's product domain.
+BACK_URL1 = env("BACK_URL1")  # Dev env for backend.
+BACK_URL2 = env("BACK_URL2")  # Dev env for backend.
+FRONT_URL1 = env("FRONT_URL1")  # Dev env for frontend.
+FRONT_URL2 = env("FRONT_URL2")  # Dev env for frontend.
+
 INSTALLED_APPS = [
     # DJANGO DEFAULT SUB-APPS:
     # ...
@@ -26,7 +39,7 @@ TEMPLATES = [
         "...": "...",
         "DIRS": [
             BASE_DIR / "templates",
-            BASE_DIR / "frontend/dist",
+            BASE_DIR / "frontend",  # "frontend/dist"
         ],
         "...": "...",
     },
@@ -35,18 +48,18 @@ TEMPLATES = [
 # CORS > CSRF Integration:
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://MAIN-DOMAIN-CLIENT.com",
-    "http://localhost:8000",  # Dev env for Django;
-    "http://127.0.0.1:8000",  # Dev env for Django;
-    "http://localhost:5173",  # Dev env for Vue;
-    "http://127.0.0.1:5173",  # Dev env for Vue;
+    PROD_BASE_URL,
+    BACK_URL1,
+    BACK_URL2,
+    FRONT_URL1,
+    FRONT_URL2,
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://MAIN-DOMAIN-CLIENT.com",
-    "http://localhost:8000",  # Dev env for Django;
-    "http://127.0.0.1:8000",  # Dev env for Django;
-    "http://localhost:5173",  # Dev env for Vue;
-    "http://127.0.0.1:5173",  # Dev env for Vue;
+    PROD_BASE_URL,
+    BACK_URL1,
+    BACK_URL2,
+    FRONT_URL1,
+    FRONT_URL2,
 ]
 
 REST_FRAMEWORK = {

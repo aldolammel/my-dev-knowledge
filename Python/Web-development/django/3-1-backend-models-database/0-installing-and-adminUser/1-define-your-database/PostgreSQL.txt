@@ -18,13 +18,15 @@ POSTGRESQL
             from pathlib import Path
             import environ
             
-            # App Essential Settings:
-            BASE_DIR = Path(__file__).resolve().parent.parent  # project base directory.
-            environ.Env.read_env(BASE_DIR / '.env')  # Take environment variables from .env file.
+            # Environment Variables, basic:
+            BASE_DIR = Path(__file__).resolve().parent.parent
+            environ.Env.read_env(BASE_DIR / ".env")  # Take environment variables from .env file.
             env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
-            SECRET_KEY = env('SECRET_KEY')
-            DEBUG = env('DEBUG')
-            ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+            # Environment Variables, callers:
+            SECRET_KEY = env("SECRET_KEY")
+            DEBUG = env("DEBUG")
+            ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
+            # ...
 
             if DEBUG:
                 print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))

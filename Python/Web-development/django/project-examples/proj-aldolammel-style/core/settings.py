@@ -17,15 +17,22 @@ from .constants import (
     PATTERN_3_3,
 )
 
-# App Essential Settings:
+# Environment Variables, basic:
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(BASE_DIR / ".env")  # Take environment variables from .env file.
 env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
-# TODO: uncomment after to create the 'accounts' sub-app:
-#AUTH_USER_MODEL = NAMESPACE_3 + ".User"  # Extending Django User features.
+# Environment Variables, callers:
 SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
+# PROD_BASE_URL = env("PROD_BASE_URL")  # Main client's product domain.
+# BACK_URL1 = env("BACK_URL1")  # Dev env for backend.
+# BACK_URL2 = env("BACK_URL2")  # Dev env for backend.
+# FRONT_URL1 = env("FRONT_URL1")  # Dev env for frontend.
+# FRONT_URL2 = env("FRONT_URL2")  # Dev env for frontend.
+
+# TODO: uncomment after to create the 'accounts' sub-app:
+#AUTH_USER_MODEL = NAMESPACE_3 + ".User"  # Extending Django User features.
 
 """if DEBUG:
     print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))

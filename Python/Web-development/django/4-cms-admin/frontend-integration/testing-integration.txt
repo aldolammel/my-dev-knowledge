@@ -5,13 +5,17 @@ TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION:
 
     >> DEVELOPMENT MODE:
 
-        Recommended method for development phase of the project. Here is need to run
-        both servers: Django and the external frontend solution server too.
+        Recommended method for development phase of the project. Here is need to run both servers
+        separately: Django in a terminal, and the external frontend solution in another.
 
-            # Terminal 1 to run Django backend (localhost:8000)
-                $ python manage.py runserver     or    $ uv run manage.py runserver
+            # Terminal 1 = Django backend = localhost:8000
+                $ python manage.py runserver
+                
+                or
+                
+                $ uv run manage.py runserver
 
-            # Terminal 2 to run Vue frontend (localhost:5173)
+            # Terminal 2 = Vue frontend = localhost:5173
                 $ cd frontend
                 $ npm run dev
 
