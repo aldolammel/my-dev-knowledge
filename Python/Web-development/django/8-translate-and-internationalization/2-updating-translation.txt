@@ -94,7 +94,7 @@
 
                     E.g.
 
-                        /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-models.txt
+                        /Python/Web-development/django/8-translate-and-internationalization/translate-models.txt
 
                         >> CRUCIAL: To avoid the 'migration' BUG, make sure you are following
                                     steps from the link above!
@@ -102,7 +102,7 @@
 
             5) For CMS, if some admin.py changes is needed, don't forget the 'TranslatableAdmin' inherit:
 
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-cms.txt
+                /Python/Web-development/django/8-translate-and-internationalization/translate-cms.txt
 
 
             6) Test!

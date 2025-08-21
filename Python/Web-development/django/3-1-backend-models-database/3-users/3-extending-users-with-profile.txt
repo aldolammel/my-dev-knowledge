@@ -11,8 +11,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
     1) Very basic to use Django built-in user features:
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/0-users-setup.txt
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/extending-users-basic.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/extending-users-basic.txt
 
 
 
@@ -401,7 +401,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
     3) Create the signal to create a linked UserProfile entry automatically when a new user is
         created via front-end or Django CMS:
 
-        /33-Web-development/backend/python/django/7-middlewares-and-signals/signals/signals-user-extended.txt
+        /Python/Web-development/django/7-middlewares-and-signals/signals/signals-user-extended.txt
 
 
 
@@ -954,7 +954,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
     5) Registration and Profile forms (templates):
-        /33-Web-development/backend/python/django/10-login-and-logout/1-registering-custom-form.txt
+        /Python/Web-development/django/10-login-and-logout/1-registering-custom-form.txt
 
 
     6) Adding the Change Password option:
@@ -1555,15 +1555,15 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
         X) /accounts/templates/accounts/pwd_change.html:
 
-            /33-Web-development/backend/python/django/9-forms/frontend-user-change-password.html
+            /Python/Web-development/django/9-forms/frontend-user-change-password.html
 
 
 
 
 
     XX) If you need to customize your CMS Accounts > Users (list-view and/or detail-view):
-        /33-Web-development/backend/python/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
-        /33-Web-development/backend/python/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
+        /Python/Web-development/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-detail-view.py
+        /Python/Web-development/django/4-cms-admin/data-from-elsewhere/attr-from-other-class-to-list-view.py
 
 
 
@@ -1584,4 +1584,4 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
     >> If you need the HTML models for all profile actions (reset password, change password, etc):
        
-       /home/aldolammel/Projects/Python-Studies/33-Web-development/backend/python/django/9-forms/registration/
+       /home/aldolammel/Projects/Python-Studies/Python/Web-development/django/9-forms/registration/

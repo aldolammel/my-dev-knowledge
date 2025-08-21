@@ -14,9 +14,9 @@
             INSTALLED_APPS = [
                 ...,
                 # APP ORIGINAL SUB-APPS:
-                NAMESPACE_1,
-                NAMESPACE_2,
-                NAMESPACE_3,
+                "apps." + NAMESPACE_1,
+                "apps." + NAMESPACE_2,
+                "apps." + NAMESPACE_3,
                 ...
             ]
 

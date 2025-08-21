@@ -9,7 +9,7 @@
         - xxxxxxxxxxxxxxx
 
     sessionStorage vs localStorage:
-        /33-Web-development/frontend/javascript/localStorage.js
+        /JavaScript/localStorage.js
 
 
     sessionStorage vs cookies:

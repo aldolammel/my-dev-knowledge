@@ -49,7 +49,7 @@
         >> STEP 1/2: (MANDATORY) Basic built-in solution:
         
             1.1) Make sure you are ready for next moves:
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/1-starting-translation.txt
+                /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt
 
             
             1.2) Add in settings.py:
@@ -115,13 +115,13 @@
 
             2.3) In core folder, create the file called "middlewares.py":
 
-                /33-Web-development/backend/python/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
+                /Python/Web-development/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
 
 
             2.4) In /accounts/views.py, an example of user's profile_view that's aware to the
                 change of user's language preference:
 
-                /33-Web-development/backend/python/django/3-2-backend-views/4-user-profile-view/profile-view.txt
+                /Python/Web-development/django/3-2-backend-views/4-user-profile-view/profile-view.txt
 
                     E.g.
                         # Update the session language to match the new preference:

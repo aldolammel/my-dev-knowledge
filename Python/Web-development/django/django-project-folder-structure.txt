@@ -11,7 +11,7 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-        A) Django as entire solution for back and front-end:
+        A) Django as ENTIRE solution for back and front-end:
 
             my_project_name/
             ├── .venv/                 # Virtual environment folder.
@@ -32,7 +32,9 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │   │   ├── tests.py       # xxxxx
             │   │   └── views.py       # xxxxx
             │   │
-            │   └── app.../
+            │   ├── app.../
+            │   │
+            │   └── __init__.py        # Makes Apps folder be a package of apps.
             │
             ├── media/                 # xxxxx
             │
@@ -79,7 +81,9 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │   │   ├── tests.py       # xxxxx
             │   │   └── views.py       # xxxxx
             │   │
-            │   └── app.../
+            │   ├── app.../
+            │   │
+            │   └── __init__.py        # Makes Apps folder be a package of apps.
             │
             ├── media/                 # xxxxx
             │

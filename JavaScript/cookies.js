@@ -9,11 +9,11 @@
         - xxxxxxxxxxxxxxx
 
     Cookies vs localStorage:
-        /33-Web-development/frontend/javascript/localStorage.js
+        /JavaScript/localStorage.js
 
 
     Cookies vs sessionStorage:
-        /33-Web-development/frontend/javascript/sessionStorage.js
+        /JavaScript/sessionStorage.js
         
 
 */

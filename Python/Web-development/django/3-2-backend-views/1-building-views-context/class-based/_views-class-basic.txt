@@ -24,7 +24,7 @@ VIEWS CLASSES: USING BASIC INHERIT:
 
     HOW TO USE (EXAMPLE):
     
-        /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-basic-usage.py
+        /Python/Web-development/django/3-2-backend-views/1-building-context/class-based/view-class-basic-usage.py
 
 
     WHO INHERIT VIEW CLASS:

@@ -9,7 +9,7 @@
     >> This file is the base of all urls.py files probably created into
         each sub-app folder.
         
-        /33-Web-development/backend/python/django/3-2-backend-views/2-building-urls/2-urls-from-subapp.py
+        /Python/Web-development/django/3-2-backend-views/2-building-urls/2-urls-from-subapp.py
 
 
 """

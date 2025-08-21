@@ -10,7 +10,7 @@ MODELS.PY:
     <select> ....................... models.CharField(max_length=20, choices=(('value1_db', 'Value1'), ('value2_db', 'Value2')), default='value1_db')
     <boolean> ...................... models.BooleanField() or NullBooleanField() <- when null=True
     <input type="button"> .......... 
-    <input type="checkbox"> ........ models.ManyToMany() /33-Web-development/backend/python/django/3-database-models/relation-many-to-many.txt
+    <input type="checkbox"> ........ models.ManyToMany() /Python/Web-development/django/3-database-models/relation-many-to-many.txt
     <input type="color"> ...........
     <input type="date"> ............ models.DateField(auto_now_add=True)
     <input type="datetime-local"> .. models.DateTimeField(auto_now_add=True)
@@ -34,7 +34,7 @@ MODELS.PY:
 
 
     FORM FIELDS, INCLUDING WIDGET FIELDS:
-        /33-Web-development/backend/python/django/9-forms/_forms_knowledge.txt
+        /Python/Web-development/django/9-forms/_forms_knowledge.txt
 
 
 
@@ -51,7 +51,7 @@ MODELS.PY:
     UNDERSTANDING THE MODELS FIELDS ARGUMENTS (PARAMETERS):
         
         E.g. models.CharField(arg1, arg2, ...)
-            /33-Web-development/backend/python/django/3-1-backend-models-database/_model-arguments.txt
+            /Python/Web-development/django/3-1-backend-models-database/_model-arguments.txt
         
     
     

@@ -3,7 +3,7 @@
 IMPLEMENTING PDF EXPORTATION:
 
     >> Example of this implementation:
-        /33-Web-development/backend/python/django/project-examples/proj-exporting-pdf/
+        /Python/Web-development/django/z-project-examples/proj-exporting-pdf/
     
     >> Checklist:
     

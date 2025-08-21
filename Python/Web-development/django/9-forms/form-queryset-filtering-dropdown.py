@@ -49,6 +49,6 @@ class BrandCarStoreForm(forms.ModelForm):
             Don't forget to make the filtering also in admin.py (different way) to make the feature
             usefull throught the admin area.
             
-                /33-Web-development/backend/python/django/4-cms-admin/cms-queryset-filtering.py
+                /Python/Web-development/django/4-cms-admin/cms-queryset-filtering.py
 
         """

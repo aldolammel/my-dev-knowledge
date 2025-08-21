@@ -9,4 +9,4 @@ LOGIN AND LOGOUT: USING THE CMS
 
 
         If you are in trouble, read it:
-            /33-Web-development/backend/python/django/1-install-and-first-steps/installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/installing-the-project.txt

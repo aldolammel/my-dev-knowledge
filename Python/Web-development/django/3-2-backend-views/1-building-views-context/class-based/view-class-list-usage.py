@@ -25,10 +25,10 @@ class RecipesListView(ListView):  # This 'View' in classname is a convention.
     
     # Filtering/Counting/aggregating the list:
     # def get_queryset(self):
-        # /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-filtering.py
-        # /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-counting.py
-        # /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-aggregation.py
-        # /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-other-formats.py
+        # /Python/Web-development/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-filtering.py
+        # /Python/Web-development/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-counting.py
+        # /Python/Web-development/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-aggregation.py
+        # /Python/Web-development/django/3-2-backend-views/1-building-views-context/class-based/QuerySet-other-formats.py
     
 
 

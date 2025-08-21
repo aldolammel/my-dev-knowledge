@@ -67,4 +67,4 @@
 
         3) Customizing templates when needed:
               
-            /33-Web-development/backend/python/django/3-3-frontend-templates/form-error-css-customization.txt
+            /Python/Web-development/django/3-3-frontend-templates/form-error-css-customization.txt

@@ -27,16 +27,16 @@
             It is the client-side alternative, that is, with no or almost no resources being
             required from the server.
 
-            /33-Web-development/backend/python/django/3-3-frontend-templates/form-error-messages.html
+            /Python/Web-development/django/3-3-frontend-templates/form-error-messages.html
 
 
 
         >> Error messages on base.html (template):
 
-            /33-Web-development/backend/python/django/3-3-frontend-templates/3-base.html
+            /Python/Web-development/django/3-3-frontend-templates/3-base.html
 
 
 
         >> Error messages customizations:
 
-            /33-Web-development/backend/python/django/6-validators/validation-customized.txt
+            /Python/Web-development/django/6-validators/validation-customized.txt

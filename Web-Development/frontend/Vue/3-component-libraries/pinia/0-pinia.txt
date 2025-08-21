@@ -42,7 +42,11 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
         - Real-time features requiring centralized state updates;
         - Client-side caching needs for API responses.
     
-    https://pinia.vuejs.org/  
+    https://pinia.vuejs.org/
+
+
+    >> Dataflow of a real Vue Pinia usage:
+        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/django-with-vue-integration.png
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -1,0 +1,13 @@
+
+
+DJANGO USEFULL APPS: PAGEX by @aldolammel
+
+    It's an Django app that manages all pages for a website, make the process a little bit more
+    dynamic.
+
+    Soon...
+
+
+    >> Installing:
+
+        Github link...

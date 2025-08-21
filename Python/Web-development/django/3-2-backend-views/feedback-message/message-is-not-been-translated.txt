@@ -6,7 +6,7 @@ FEEDBACK MESSAGE IS NOT BEEN TRANSLATED:
     problem is probably the session.
 
         >> How to fix it:
-            /33-Web-development/backend/python/django/3-2-backend-views/4-user-profile-view/profile-view.py
+            /Python/Web-development/django/3-2-backend-views/4-user-profile-view/profile-view.py
 
                 E.g.
                     # Update the session language to match the new preference:
@@ -23,4 +23,4 @@ FEEDBACK MESSAGE IS NOT BEEN TRANSLATED:
     
 
         >> Or the basic of Django Translation:
-            /33-Web-development/backend/python/django/8-translate-and-internationalization/1-starting-translation.txt
+            /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt

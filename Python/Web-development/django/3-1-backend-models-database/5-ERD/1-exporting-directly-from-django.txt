@@ -38,4 +38,4 @@ EXPORTING ERD DIRECTLY FROM DJANGO:
         $ python manage.py graph_models auth -o myapp_models.png
 
         # Output example:
-            /33-Web-development/backend/python/django/3-1-backend-models-database/5-ERD/myapp_models.png
+            /Python/Web-development/django/3-1-backend-models-database/5-ERD/myapp_models.png

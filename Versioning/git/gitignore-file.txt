@@ -5,7 +5,7 @@
         1) Create the .gitignore file in the repo root:
             
             >> Model for Django projects:
-                /Python/Web-development/django/project-examples/proj-aldolammel-style/.gitignore
+                /Python/Web-development/django/z-project-examples/proj-aldolammel-style/.gitignore
             
             >> xxxxxxxxxxxxxxxxxxxx
             

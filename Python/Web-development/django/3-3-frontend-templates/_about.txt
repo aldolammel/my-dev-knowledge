@@ -5,7 +5,10 @@ DJANGO STRUCTURE: TEMPLATES
 
     >> Django is divided in 3 main parts: models, views, and templates.
 
-    >> Templates are responsable for display the data to the user through a text or layout file
+    
+    >> TEMPLATES:
+
+        They are responsable for display the data to the user through a text or layout file
         such as an HTML page. All data rendered via templates came from a views.py. Unlike Models
         and Views, template is NOT a specific file but a folder structure and its content basically
         formed by HTML files. Templates are responsible for:
@@ -19,7 +22,7 @@ DJANGO STRUCTURE: TEMPLATES
 
 
 
-    MORE ABOUT DJANGO:
+    OTHER DJANGO PARTS:
 
         >> VIEWS: 
 

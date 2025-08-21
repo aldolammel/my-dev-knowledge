@@ -24,7 +24,7 @@ VIEWS CLASSES: USING DELETE INHERIT:
     
     HOW TO USAGE (EXAMPLE):
     
-    /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-delete-usage.py
+    /Python/Web-development/django/3-2-backend-views/1-building-context/class-based/view-class-delete-usage.py
 
 
     WHO INHERIT DELETE-VIEW CLASS:

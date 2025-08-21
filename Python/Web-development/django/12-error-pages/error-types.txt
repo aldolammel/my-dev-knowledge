@@ -12,7 +12,7 @@ WEB ERROR TYPES:
             field containing a challenge applicable to the requested resource. 
 
         >> Example:
-            /33-Web-development/backend/python/django/12-error-pages/401/
+            /Python/Web-development/django/12-error-pages/401/
 
 
 
@@ -44,7 +44,7 @@ WEB ERROR TYPES:
                         file in the project global 'templates' folder.
 
         >> Example:
-            /33-Web-development/backend/python/django/12-error-pages/404/
+            /Python/Web-development/django/12-error-pages/404/
 
 
 
@@ -56,4 +56,4 @@ WEB ERROR TYPES:
             Generally, this is a temporary state.
 
         >> Example:
-            /33-Web-development/backend/python/django/12-error-pages/503/
+            /Python/Web-development/django/12-error-pages/503/

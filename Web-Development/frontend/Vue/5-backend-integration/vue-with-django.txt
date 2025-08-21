@@ -2,4 +2,9 @@
 
 BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
-    /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/integration.txt
+    /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/_integration.txt
+
+
+    >> Data workflow:
+            
+        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/django-with-vue-integration.png

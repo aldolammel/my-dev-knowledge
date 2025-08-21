@@ -6,4 +6,4 @@ CMS BRANDING
 
         Create inside /root/templates/admin/base_site.html
         
-            /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/templates/admin/base_site.html
+            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/templates/admin/base_site.html

@@ -47,7 +47,7 @@ REMOVING LIST ITEM:
 
 
     >> Adding example:
-        /33-Web-development/frontend/vue/vue-knowledge/using-options-api/adding-list-item.txt
+        /Web-Development/frontend/Vue/vue-knowledge/using-options-api/adding-list-item.txt
         
     >> Project Example:
-        /33-Web-development/frontend/vue/examples-vue/adding-and-removing-things-by-form/
+        /Web-Development/frontend/Vue/examples-vue/adding-and-removing-things-by-form/

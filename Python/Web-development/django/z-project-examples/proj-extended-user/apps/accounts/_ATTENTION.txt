@@ -1,0 +1,11 @@
+
+
+  EXTENDING THE ACCOUNTS SUB-APP:
+
+    >> Use all accounts file from "proj-aldolammel-style" example:
+        
+        /Python/Web-development/django/z-project-examples/proj-aldolammel-style/accounts/
+
+    >> Except these ones you must take from this current example folder:
+        
+        - models.py

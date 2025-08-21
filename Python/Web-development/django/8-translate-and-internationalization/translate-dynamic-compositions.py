@@ -10,12 +10,12 @@
 """
 
 # E.g. in /config-folder/constants.py:
-# More about: /33-Web-development/backend/python/django/3-1-backend-models-database/_constants-map.py
+# More about: /Python/Web-development/django/3-1-backend-models-database/_constants-map.py
 VAL_PROFILE_NAME_MAXLNGH = 20
 
 
 # E.g. in /config-folder/language.py:
-# More about: /33-Web-development/backend/python/django/8-translate-and-internationalization/language-file-example.py
+# More about: /Python/Web-development/django/8-translate-and-internationalization/language-file-example.py
 LB_PROFILE_NAME = _('Profile Name')
 TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.')
 

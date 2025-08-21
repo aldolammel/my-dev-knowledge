@@ -38,12 +38,12 @@ MORE ABOUT USER:
 
     >> If you want to build the entire registering flow, including Django configs, look this:
     
-        /33-Web-development/backend/python/django/10-login-and-logout/0-registering-by-frontend.txt
+        /Python/Web-development/django/10-login-and-logout/0-registering-by-frontend.txt
     
     >> If you're looking for how to import users in your models.py classes:
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/importing-users.txt
+        /Python/Web-development/django/3-1-backend-models-database/importing-users.txt
 
     >> For customize the User Register Form:
 
-        /33-Web-development/backend/python/django/10-login-and-logout/1-registering-custom-form.txt
+        /Python/Web-development/django/10-login-and-logout/1-registering-custom-form.txt

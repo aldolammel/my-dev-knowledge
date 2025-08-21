@@ -33,4 +33,4 @@ HOW TO RE-INSTALL ONLY THE DATABASE:
 
 HOW TO RE-INSTALL ONLY THE DJANGO:
 
-    /33-Web-development/backend/python/django/1-install-and-first-steps/reinstall-new-django-copy.txt
+    /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt

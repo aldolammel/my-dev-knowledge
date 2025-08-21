@@ -1,17 +1,14 @@
-
-
-# CREATING A DATABASE TABLE WITH DJANGO
-
-
 """ 
+    CREATING A DATABASE TABLE WITH DJANGO
+    
     In Django, you define everything about your project database through
     the files called 'models.py'. Your project (also called 'main app') 
     can have one or more sub-apps that are where the all models.py are
     allocated.
 
 
-    First, make sure you already got a sub-app. If not, create one:
-    /33-Web-development/backend/python/django/2-creating-and-deleting-apps/
+    >> First, make sure you already got a sub-app. If not, create one:
+        /Python/Web-development/django/2-creating-and-deleting-apps/
 
 
     Into your sub-app folder, open the models.py file and let's create
@@ -19,6 +16,7 @@
     of the table):
 """
 
+# FILE: e.g. /project_folder/apps/movies/models.py
 
 class Movie(models.Model):
     title = models.CharField(max_length=40, unique=True, blank=False)

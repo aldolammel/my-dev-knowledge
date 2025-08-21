@@ -9,7 +9,7 @@ FORMS (SUPER BASIC INSTRUCTION)
         files called 'forms.py' that can be created once into each sub-app folder;
     
     >> Everything for forms.py:
-        /33-Web-development/backend/python/django/9-forms/
+        /Python/Web-development/django/9-forms/
 
     >> Everything for forms present on the CMS (admin.py):
-        /33-Web-development/backend/python/django/4-cms-admin/
+        /Python/Web-development/django/4-cms-admin/

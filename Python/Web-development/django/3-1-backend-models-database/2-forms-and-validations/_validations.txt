@@ -1,4 +1,4 @@
 
 
 
-/33-Web-development/backend/python/django/6-validators/_validation-knowledge.txt
+/Python/Web-development/django/6-validators/_validation-knowledge.txt

@@ -8,13 +8,13 @@
     Use Case: ...... When you need to perform an action on every element;
 
     Traditional For() loop method:
-        /33-Web-development/frontend/javascript/for.js
+        /JavaScript/for.js
 
     Some() loop method:
-        /33-Web-development/frontend/javascript/some.js
+        /JavaScript/some.js
 
     Find() method:
-        /33-Web-development/frontend/javascript/find.js
+        /JavaScript/find.js
 */
 
 const numbers = [1, 2, 3, 4, 5];
@@ -33,7 +33,7 @@ numbers.forEach((num, index) => {
 const myArray = ['apple', 'banana', 'orange'];
 
 // Basic syntax
-myArray.forEach(function(item, index, array) {
+myArray.forEach(function (item, index, array) {
     console.log(item, index);
 });
 
@@ -54,7 +54,7 @@ myArray.forEach(item => console.log(item));
 //  the concept is called "Array Destructuring":
 
 // Object
-const myObj = {name: 'John', age: 30, city: 'New York'};
+const myObj = { name: 'John', age: 30, city: 'New York' };
 
 // Using Object.entries() with destructuring assignment
 for (const [key, value] of Object.entries(myObj)) {
@@ -66,7 +66,7 @@ for (const [key, value] of Object.entries(myObj)) {
 const [first, second] = [1, 2];
 
 // Object destructuring  
-const {name, age} = {name: 'John', age: 30};
+const { name, age } = { name: 'John', age: 30 };
 
 // In function parameters
 function processEntry([key, value]) {

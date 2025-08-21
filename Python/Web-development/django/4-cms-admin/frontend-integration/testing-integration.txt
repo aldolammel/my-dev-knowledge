@@ -1,33 +1,55 @@
 
 
-TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION:
+LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
+
+    
+    PRE.1) Make sure the project's database is running correctly!
+
+        >> If Postgre:
+            /Database/PostgreSQL/postgres-starting-and-stoping.txt
+
+        >> If MySQL:
+            /Database/MySQL/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        >> Other:
+            /Database/
 
 
-    >> DEVELOPMENT MODE:
+    1) Which environment type are you using?
+    
+        1A) Development mode;
+        1B) Or Production-like mode;
 
-        Recommended method for development phase of the project. Here is need to run both servers
-        separately: Django in a terminal, and the external frontend solution in another.
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    
+        1A) DEVELOPMENT MODE:
 
-            # Terminal 1 = Django backend = localhost:8000
-                $ python manage.py runserver
-                
-                or
-                
-                $ uv run manage.py runserver
+            >> Recommended method for development phase of the project. Here is need to run both
+                servers separately: Django in a terminal, and the external frontend solution in
+                another.
 
-            # Terminal 2 = Vue frontend = localhost:5173
-                $ cd frontend
-                $ npm run dev
+                    # Terminal 1 = Django backend = localhost:8000 (default)
+                        $ python manage.py runserver
+                        
+                        # or
+                        
+                        $ uv run manage.py runserver
+
+                    # Terminal 2 = Vue frontend = localhost:5173 (default)
+                        $ cd frontend
+                        $ npm run dev
 
 
-    >> Or PRODUCTION-LIKE MODE:
 
-        In this case, it's need to compile the entire project to visualize correctly. 
-        Attention for cache issues!
+        1B) Or PRODUCTION-LIKE MODE:
 
-            # Build Vue frontend
-                $ cd frontend
-                $ npm run build
+            >> In this case, it's need to compile the entire project to visualize correctly. 
+                Attention for cache issues!
 
-            # Run Django server
-                $ python manage.py runserver
+                    # Build Vue frontend
+                        $ cd frontend
+                        $ npm run build
+
+                    # Run Django server
+                        $ python manage.py runserver

@@ -21,4 +21,4 @@ RELATION: CIRCULAR
 
     >> Is an itself relationship?
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/relation-itself.txt
+        /Python/Web-development/django/3-1-backend-models-database/relation-itself.txt

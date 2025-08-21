@@ -8,13 +8,13 @@
     Use Case: ...... When you need maximum control over iteration;
 
     ForEach() loop method:
-        /33-Web-development/frontend/javascript/forEach-loop.js
+        /JavaScript/forEach-loop.js
 
     Some() loop method:
-        /33-Web-development/frontend/javascript/some.js
+        /JavaScript/some.js
 
     Find() method:
-        /33-Web-development/frontend/javascript/find.js
+        /JavaScript/find.js
 */
 
 

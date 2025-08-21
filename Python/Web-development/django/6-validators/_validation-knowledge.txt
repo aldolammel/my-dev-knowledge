@@ -88,7 +88,7 @@ VALIDATIONS:
             (like cleaned_data from a form) where it can use the .get() method to
             retrieve form values.
 
-            /33-Web-development/backend/python/django/6-validators/validation-customized.txt
+            /Python/Web-development/django/6-validators/validation-customized.txt
 
 
 

@@ -11,4 +11,4 @@ VUE-ROUTER: UNINSTALL
 - - - - 
 
 >> INSTALLATION:
-    /Web-Development/frontend/Vue/3-component-libraries/vue-router/router-installation.txt
+    /Web-Development/frontend/Vue/3-component-libraries/vue-router/1-router-installation.txt

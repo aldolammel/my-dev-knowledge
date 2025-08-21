@@ -11,20 +11,8 @@ CREATING DJANGO APPS*:
     >> (*) Personally, I call 'app' as 'sub-app', meanwhile for me 'app' 
         (aka 'main-app' or 'project-folder') is the project itself.
 
-            E.g. Django Project Structure:
-
-                >Project-folder (it's the 'main-app' / the root folder)
-                    >core (it's the config-folder, sometimes with the same name of the project)
-                        -settings.py (where you register all sub-apps in use)
-                        ...
-                    >sub-app1-folder
-                        ...
-                    >sub-app2-folder
-                        ...
-                    >sub-app3-folder
-                        ...
-                    ...
-                    -manage.py
+            >> Sub-apps in Django folder's structure:
+                /Python/Web-development/django/django-project-folder-structure.txt
 
 
     >> Basic to know:
@@ -40,7 +28,7 @@ CREATING DJANGO APPS*:
             planned by 'makemigrations' command.
 
         
-    1) In project-folder (root), create each sub-app you need:
+    1) In /project-folder/apps/ folder, create each sub-app you need:
     
         $ python manage.py startapp <subapp_name>
         or
@@ -60,10 +48,16 @@ CREATING DJANGO APPS*:
         
             from django.urls import path
             from . import views
-            urlpatterns = [path('', views.index)]
+
+            # NAMESPACE
+            app_name = <name of the sub-app>
+
+            urlpatterns = [
+                path('', views.index),
+            ]
 
 
-    4) Go to your config-folder (often the same name of the project) and open its urls.py file
+    4) Go to your config-folder ('core' frequently) and open its urls.py file
         and include each sub-app URL references right after the admin line:
             
             from django.contrib import admin
@@ -74,21 +68,21 @@ CREATING DJANGO APPS*:
                 path('admin/', admin.site.urls),
                 # THIRD-PARTY URLS:
                 # Reserved space...
-                # PRODUCT URLS:
-                path('', include('general.urls')),
-                path("<subapp_name>/", include("<subapp_name>.urls")),
-                path("<subapp_name>/", include("<subapp_name>.urls")),
+                # APPLICATION SUB-APPS:
+                path('', include('apps.general.urls')),
+                path('<subapp_name>/', include('apps.<subapp_name>.urls')),
+                path('<subapp_name>/', include('apps.<subapp_name>.urls')),
             ]
 
 
     5) Create these folders and file into the new sub-app folder:
         
         /<subapp_name>/templates/
-        /<subapp_name>/templates/<subapp_name>(convention)/
+        /<subapp_name>/templates/<subapp_name>/   <- It's a convention to repeat the sub-app name.
         /<subapp_name>/templates/<subapp_name>/temp.html  <- only for GitHub to create the folder.
 
 
-    6) Still in config-folder, go to 'settings.py' file and add each sub-app name in
+    6) Still in core folder, go to 'settings.py' file and add each sub-app name in
         the 'INSTALLED_APPS' list.
         
             # Application definition
@@ -106,9 +100,9 @@ CREATING DJANGO APPS*:
                 # Reserved space...
                 # THIRD-PARTY SUB-APPS:
                 # Reserved space...
-                # <PRODUCT_NAME> ORIGINAL SUB-APPS:
-                '<project_subapp1_name>',
-                '<project_subapp2_name>',
+                # APP ORIGINAL SUB-APPS:
+                'apps.<project_subapp1_name>',
+                'apps.<project_subapp2_name>',
             ]
 
 
@@ -116,15 +110,17 @@ CREATING DJANGO APPS*:
             
         # Ask to Django convert the objects in models to db instructions:
         # Convert for all new sub-apps:
-        $ python manage.py makemigrations   OR    $ uv run manage.py makemigrations
+            $ python manage.py makemigrations   OR    $ uv run manage.py makemigrations
         # Or for a specific one:
-        $ python manage.py makemigrations <subapp_name>   OR    $ uv run manage.py makemigrations <subapp_name>
+            $ python manage.py makemigrations <subapp_name>   OR    $ uv run manage.py makemigrations <subapp_name>
         
         # Now, check your app migrations folder to see if the instructions are okay.
         
         # Next, if you gave a green light, ask Django to execute the instructions:
-        $ python manage.py migrate
-        or
-        $ uv run manage.py migrate
+            $ python manage.py migrate
+            or
+            $ uv run manage.py migrate
 
-        
+    
+    8) Test the application again:
+        /Python/Web-development/django/_running-app.txt

@@ -5,7 +5,7 @@ PROTECTING VIEW: NON-AUTHENTICATED USERS
 
     >> Check these examples:
     
-        /33-Web-development/backend/python/django/3-2-backend-views/1-building-views-context/views-access-only-authenticated.txt
+        /Python/Web-development/django/3-2-backend-views/1-building-views-context/views-access-only-authenticated.txt
 
 
     >> Checking whether the visitor is NOT logged-in/authenticated:
@@ -25,4 +25,4 @@ PROTECTING VIEW: NON-AUTHENTICATED USERS
 
     >> NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
 
-        /33-Web-development/backend/python/django/12-error-pages/401/
+        /Python/Web-development/django/12-error-pages/401/

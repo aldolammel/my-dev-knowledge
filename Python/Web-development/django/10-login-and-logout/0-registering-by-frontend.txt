@@ -5,7 +5,7 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
 
     1) Users setup first:
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/0-users-setup.txt
 
 
     2) In the 'accounts' folder, create the folders and file called 'register.html':
@@ -124,10 +124,10 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
 
     9) Logout:
-            /33-Web-development/backend/python/django/10-login-and-logout/3-logout-in-django.txt
+            /Python/Web-development/django/10-login-and-logout/3-logout-in-django.txt
 
 
 
     EXTENDING THE USER FEATURES:
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/extending-users-basic.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/extending-users-basic.txt

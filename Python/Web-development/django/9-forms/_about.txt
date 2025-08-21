@@ -15,17 +15,17 @@ DJANGO FORMS:
 
                     >> How works the form structure:
 
-                        /33-Web-development/backend/python/django/9-forms/form-structure.py
+                        /Python/Web-development/django/9-forms/form-structure.py
 
 
                     >> Receiving data from Model:
 
-                        /33-Web-development/backend/python/django/9-forms/form-receiving-data.py
+                        /Python/Web-development/django/9-forms/form-receiving-data.py
 
 
                     >> Receiving data from View:
 
-                        /33-Web-development/backend/python/django/9-forms/form-receiving-data.py
+                        /Python/Web-development/django/9-forms/form-receiving-data.py
 
     
     >> The forms.py file is always manually created by the developer into some sub-app folder.
@@ -44,14 +44,14 @@ DJANGO FORMS:
         1) Connecting a Model-class (models.py) to a Form-class (forms.py), making the
             Form-class inherit  the 'forms.ModelForm':
 
-                /33-Web-development/backend/python/django/9-forms/class-based/inherit-ModelForm/forms.py
+                /Python/Web-development/django/9-forms/class-based/inherit-ModelForm/forms.py
 
 
         2) Or creating a custom Form-class (forms.py), that inherit its features from 'forms.Form', 
             that doesn't impact the db and is NOT the best method to do forms if you consider the 
             'Movies' example mention before:
 
-            /33-Web-development/backend/python/django/9-forms/class-based/inherit-Form/forms.py
+            /Python/Web-development/django/9-forms/class-based/inherit-Form/forms.py
 
 
     CMS FORMS:
@@ -59,4 +59,4 @@ DJANGO FORMS:
         >> forms.py never be responsable for CMS forms. The forms specifically to CMS use
             'admin.py' file:
 
-                /33-Web-development/backend/python/django/4-cms-admin/
+                /Python/Web-development/django/4-cms-admin/

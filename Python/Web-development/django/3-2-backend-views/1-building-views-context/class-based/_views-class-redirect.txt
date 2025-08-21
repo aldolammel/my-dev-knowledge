@@ -20,7 +20,7 @@ VIEWS CLASSES: USING REDIRECT INHERIT:
 
     HOW TO USAGE (EXAMPLE):
     
-        /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-redirect-usage.py
+        /Python/Web-development/django/3-2-backend-views/1-building-context/class-based/view-class-redirect-usage.py
 
 
     WHO INHERIT REDIRECT-VIEW CLASS:

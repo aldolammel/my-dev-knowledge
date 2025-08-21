@@ -5,7 +5,7 @@ If your project needs to show User Profile on the application front-end, or even
 
 
     >> But for VERY BASIC user solution, use Django built-in user features:
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
 
 
     1) Create a sub-app called 'accounts' and add it in the core-folder settings.py
@@ -135,7 +135,7 @@ If your project needs to show User Profile on the application front-end, or even
             # Reserved space...
 
         >> Check this out too:
-            /33-Web-development/backend/python/django/10-login-and-logout/0-registering-by-frontend.txt
+            /Python/Web-development/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
     6) Customizing the CMS User list-view and detail-view:
@@ -278,5 +278,5 @@ If your project needs to show User Profile on the application front-end, or even
     
     >> USER PROFILE PAGE:
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/3-extending-users-with-profile.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/3-extending-users-with-profile.txt
 

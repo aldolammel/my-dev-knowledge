@@ -15,83 +15,83 @@ import urllib
 import urllib.request
 
 # MY COLORS
-_corT = '\033[1;32m'
-_corF = '\033[1;31m'
-_corOut = '\033[m'
+corT = '\033[1;32m'
+corF = '\033[1;31m'
+corOut = '\033[m'
 
 
 # Pre-lesson:
 
 try:
-    _a = int(input('Type an integer: '))
-    _b = float(input('Type a float: '))
-    _result = _a / _b
+    a = int(input('Type an integer: '))
+    b = float(input('Type a float: '))
+    the_result = a / b
 
 except ZeroDivisionError:                               # will be shown only if this error/exception take place.
-    print(f'{_corF}Impossible to divide a number by zero.{_corOut}')
+    print(f'{corF}Impossible to divide a number by zero.{corOut}')
 
-except Exception as _error:                             # will be shown after any error/exception not listed above.
-    print(f'Something ran wrong: {_corF}{_error}{_corOut}')
+except Exception as erro:                             # will be shown after any error/exception not listed above.
+    print(f'Something ran wrong: {corF}{erro}{corOut}')
 
 else:                                                   # will be shown when everything is alright.
-    print(f'The result is: {_result:.1f}')
+    print(f'The result is: {the_result:.1f}')
 
 finally:                                                # after all, this always will take place.
     print('Bye')
 
 
-# -------------------------------------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # LESSON 113:
 
 print('\n\nLesson 113 >> Built a program that use a handler error:\n')
 
 
 def fnc_integer_reader(_txt):
-    global _error
+    global erro
     while True:
         try:
-            _num = int(input(_txt))
+            num = int(input(_txt))
         except (ValueError, TypeError):
-            print(f'Error: {_corF}You must type an integer.{_corOut}')
+            print(f'Error: {corF}You must type an integer.{corOut}')
         except KeyboardInterrupt:
-            print(f'\n{_corF}The program was interrupted.{_corOut}')
+            print(f'\n{corF}The program was interrupted.{corOut}')
             return 0
-        except Exception as _error:
-            print(f'Error: {_corF}{_error}{_corOut}')
+        except Exception as erro:
+            print(f'Error: {corF}{erro}{corOut}')
         else:
-            return _num
+            return num
 
 
 def fnc_float_reader(_txt):
     while True:
         try:
-            _num = float(input(_txt))
+            num = float(input(_txt))
         except (ValueError, TypeError):
-            print(f'{_corF}You must type a float.{_corOut}')
+            print(f'{corF}You must type a float.{corOut}')
         except KeyboardInterrupt:
-            print(f'\n{_corF}The program was interrupted.{_corOut}')
+            print(f'\n{corF}The program was interrupted.{corOut}')
             return 0
-        except Exception as _error:
-            print(f'Error: {_corF}{_error}{_corOut}')
+        except Exception as erro:
+            print(f'Error: {corF}{erro}{corOut}')
         else:
-            return _num
+            return num
 
 
-_userInteger = fnc_integer_reader('Type an integer: ')
-_userFloat = fnc_float_reader('Type a float number: ')
-print(f'Your integer is {_corT}{_userInteger}{_corOut} and your float is {_corT}{_userFloat}{_corOut}.')
+user_int = fnc_integer_reader('Type an integer: ')
+user_float = fnc_float_reader('Type a float number: ')
+print(f'Your integer is {corT}{user_int}{corOut} and your float is {corT}{user_float}{corOut}.')
 
-# -------------------------------------------------------------------------
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # LESSON 114:
 
 print('\n\nLesson 114 >> Built a program that test the connection with any website:\n')
 
 try:
-    _url = urllib.request.urlopen('https://aldolammel.com')
+    url = urllib.request.urlopen('https://aldolammel.com')
 except urllib.error.URLError:
-    print(f'{_corF}It looks without internet signal or something like that!{_corOut}')
+    print(f'{corF}It looks without internet signal or something like that!{corOut}')
 
-except Exception as _error:
-    print(f'Error: {_corF}{_error}{_corOut}')
+except Exception as erro:
+    print(f'Error: {corF}{erro}{corOut}')
 else:
-    print(f'{_corT}The URL seems to work fine!{_corOut}')
+    print(f'{corT}The URL seems to work fine!{corOut}')

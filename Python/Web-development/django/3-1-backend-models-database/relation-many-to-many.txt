@@ -13,7 +13,7 @@ RELATION: MANY TO MANY
 
         E.g.
             
-            /33-Web-development/backend/python/django/3-1-backend-models-database/field-select-menu-multiple.txt
+            /Python/Web-development/django/3-1-backend-models-database/field-select-menu-multiple.txt
 
 
     >> ManyToMany doesn't need the on_delete argument because if some list option is deleted, 

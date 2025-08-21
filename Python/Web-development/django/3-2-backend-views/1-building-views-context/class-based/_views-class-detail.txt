@@ -26,7 +26,7 @@ VIEWS CLASSES: USING DETAIL INHERIT:
     
     HOW TO USAGE (EXAMPLE):
     
-    /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/view-class-detail-usage.py
+    /Python/Web-development/django/3-2-backend-views/1-building-context/class-based/view-class-detail-usage.py
 
 
     WHO INHERIT DETAIL-VIEW CLASS:

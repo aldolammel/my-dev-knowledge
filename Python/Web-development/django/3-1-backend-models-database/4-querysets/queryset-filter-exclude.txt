@@ -61,7 +61,7 @@
 
             >> More:
 
-                /33-Web-development/backend/python/django/9-forms/form-queryset-filtering-dropdown.py
+                /Python/Web-development/django/9-forms/form-queryset-filtering-dropdown.py
 
 
 
@@ -84,7 +84,7 @@
 
             >> More:
 
-                /33-Web-development/backend/python/django/4-cms-admin/cms-queryset-filtering.py
+                /Python/Web-development/django/4-cms-admin/cms-queryset-filtering.py
 
 
 

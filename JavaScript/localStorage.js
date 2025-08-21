@@ -14,7 +14,7 @@
         - String Only: Can only store strings (use JSON.stringify/parse for objects);
 
     localStorage vs sessionStorage vs cookies:
-        /33-Web-development/frontend/javascript/sessionStorage.js
+        /JavaScript/sessionStorage.js
 
         - localStorage: Persists until explicitly removed;
         - sessionStorage: Persists only for the browser session;
@@ -69,7 +69,7 @@ function isLocalStorageAvailable() {
         localStorage.setItem(test, test);
         localStorage.removeItem(test);
         return true;
-    } catch(e) {
+    } catch (e) {
         return false;
     }
 }

@@ -28,7 +28,7 @@ export default createStore({
     actLoadCart({ commit }) {
       // This function calls the entire cart to avoid the issue if the user to open the cart in
       // a new tab/window (losing the cart data).
-      // About JS method localStorage: /33-Web-development/frontend/javascript/localStorage.js
+      // About JS method localStorage: /JavaScript/localStorage.js
       if (localStorage.getItem("cart")) {
         commit('mutLoadCart', JSON.parse(localStorage.getItem("cart")));  // JSON.parse exchanges the data in an obj JS.
       }

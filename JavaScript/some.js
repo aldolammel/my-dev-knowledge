@@ -8,13 +8,13 @@
     Use Case: ...... When you need to check if any element meets criteria;
 
     Traditional For() loop method:
-        /33-Web-development/frontend/javascript/for.js
+        /JavaScript/for.js
 
     Find() method:
-        /33-Web-development/frontend/javascript/find.js
+        /JavaScript/find.js
 
     ForEach() loop method:
-        /33-Web-development/frontend/javascript/forEach-loop.js
+        /JavaScript/forEach-loop.js
 */
 
 

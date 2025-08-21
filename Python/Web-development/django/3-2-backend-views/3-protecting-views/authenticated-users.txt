@@ -14,4 +14,4 @@ PROTECTING VIEW: AUTHENTICATED USERS
 
     >> NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
 
-        /33-Web-development/backend/python/django/12-error-pages/401/
+        /Python/Web-development/django/12-error-pages/401/

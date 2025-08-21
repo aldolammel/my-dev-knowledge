@@ -8,12 +8,12 @@
 
         1) RECOMMENDED: create a 'constants.py' file in your core-folder:
 
-            /Python/Web-development/django/project-examples/proj-aldolammel-style/core/constants.py
+            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/constants.py
 
 
         2) In a core-folder, create a file called 'context_processors.py':
 
-            /Python/Web-development/django/project-examples/proj-aldolammel-style/core/context_processors.py
+            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/context_processors.py
 
         
         3) (Skip it if you'll use an existent settings.py model later)

@@ -29,12 +29,12 @@ TEMPLATES: CALLING A FORM
 
             >> To customize the input created by Django, use forms.py associated with 'widgets':
 
-                /33-Web-development/backend/python/django/9-forms/customizing-basic-attrs-connected-model.py
+                /Python/Web-development/django/9-forms/customizing-basic-attrs-connected-model.py
 
 
             >> Or to customize an extra field (not from connected model):
 
-                /33-Web-development/backend/python/django/9-forms/customizing-basic-attrs-extra-field.py
+                /Python/Web-development/django/9-forms/customizing-basic-attrs-extra-field.py
 
 
     >> CALLING A FORM: YOU ARE WEIRDO!
@@ -42,4 +42,4 @@ TEMPLATES: CALLING A FORM
         If you wanna literally create each input/select/checkbox by your own, reminder:
         Django is a chaos like this!
 
-            /33-Web-development/backend/python/django/9-forms/customizing-fully-on-template.txt (Not recommended at all)
+            /Python/Web-development/django/9-forms/customizing-fully-on-template.txt (Not recommended at all)

@@ -184,7 +184,7 @@ INSTALLING DJANGO:
 
 
         x.2) If you want to use a settings.py model file, now is the time!
-            /Python/Web-development/django/project-examples/proj-aldolammel-style/core/settings.py
+            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
             
             >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
                 file when you bring it to your project!
@@ -201,11 +201,11 @@ INSTALLING DJANGO:
 
             >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!!)
                 'general' sub-app:
-                About: /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/general/_readme.txt
+                About: /Python/Web-development/django/z-project-examples/proj-aldolammel-style/general/_readme.txt
                 
                 g.1) Bring the basic sub-app files and templates-folder too:
                     
-                    /Python/Web-development/django/project-examples/proj-aldolammel-style/general/
+                    /Python/Web-development/django/z-project-examples/proj-aldolammel-style/general/
 
                 g.2) Include it in the INSTALLED_APPS in the settings.py file!
                 g.3) Makemigrations and migrate!
@@ -223,11 +223,11 @@ INSTALLING DJANGO:
 
                     >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)
                     'in' sub-app:
-                    About: /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/in/_readme.txt
+                    About: /Python/Web-development/django/z-project-examples/proj-aldolammel-style/in/_readme.txt
                     
                     i.1) Bring the basic sub-app files and templates-folder too:
                         
-                        /33-Web-development/backend/python/django/project-examples/proj-aldolammel-style/in/
+                        /Python/Web-development/django/z-project-examples/proj-aldolammel-style/in/
 
                     i.2) Include it in the INSTALLED_APPS in the settings.py file!
                     i.3) Makemigrations and migrate!

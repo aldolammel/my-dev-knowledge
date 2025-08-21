@@ -32,7 +32,7 @@ FIELD: MULTI-SELECT-MENU
 
 
             >> More about ManyToMany relationship:
-                /33-Web-development/backend/python/django/3-1-backend-models-database/relation-many-to-many.txt
+                /Python/Web-development/django/3-1-backend-models-database/relation-many-to-many.txt
                 
 
 

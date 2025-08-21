@@ -2,7 +2,7 @@
 /*
     HOW TO CREATE DATA WITH VUEX IN VUE.JS
     This file is used by example in:
-        /33-Web-development/frontend/vue/3-component-libraries/vuex/1-overview-how-to-create-data.txt
+        /Web-Development/frontend/Vue/3-component-libraries/vuex/1-overview-how-to-create-data.txt
 */
 
 export default createStore({

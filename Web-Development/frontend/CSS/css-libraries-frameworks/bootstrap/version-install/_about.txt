@@ -3,4 +3,4 @@
 BOOTSTRAP: INSTALLED VERSION
 
     With Django:
-        /33-Web-development/backend/python/django/3-3-frontend-templates/template-bootstrap-installed.html
+        /Python/Web-development/django/3-3-frontend-templates/template-bootstrap-installed.html

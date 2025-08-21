@@ -7,7 +7,7 @@
         
     >> This file depends of the its relationship with 'urls.py' in core-folder (another file):
     
-        /33-Web-development/backend/python/django/3-2-backend-views/2-building-urls/1-urls-from-core-folder.py
+        /Python/Web-development/django/3-2-backend-views/2-building-urls/1-urls-from-core-folder.py
 
 
 """
@@ -51,10 +51,10 @@ urlpatterns = [
     In config-folder, you find a file called 'urls.py' as well. There, you must
     define that 'recipes/' or whatever you want.
     
-    /33-Web-development/backend/python/django/3-2-backend-views/2-building-urls/urls-from-config-folder.py
+    /Python/Web-development/django/3-2-backend-views/2-building-urls/urls-from-config-folder.py
 
     
     ABOUT PATH CONVERTERS:
-    /33-Web-development/backend/python/django/3-2-backend-views/2-building-urls/path-converters.txt
+    /Python/Web-development/django/3-2-backend-views/2-building-urls/path-converters.txt
 
 """

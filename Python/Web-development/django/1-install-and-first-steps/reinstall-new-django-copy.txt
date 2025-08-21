@@ -6,7 +6,7 @@ RE-INSTALL ONLY THE DJANGO:
     >> If you are install Django for the very first time, and it's a brand new project,
         skip here and go:
 
-            /33-Web-development/backend/python/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
 
 
     >> If you want just re-install the Django based on the existent project, you can just clone the
@@ -16,7 +16,7 @@ RE-INSTALL ONLY THE DJANGO:
                 /35-version/git/basic.txt
             
             2) Carefully, adapt this guide to reinstall the Django project:
-                /33-Web-development/backend/python/django/1-install-and-first-steps/1-install-with-uv-package.txt
+                /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
 
     >> Or if you want to re-install the Django absolutely from scratch (a new Django copy):
@@ -176,7 +176,7 @@ RE-INSTALL ONLY THE DJANGO:
 
             >> If a new cloud db:
 
-                /33-Web-development/backend/python/django/3-1-backend-models-database/1-reinstall-database/
+                /Python/Web-development/django/3-1-backend-models-database/1-reinstall-database/
 
 
             >> Recommended for all scenarios: to avoid weird behaviors from the terminal not calling
@@ -237,7 +237,7 @@ RE-INSTALL ONLY THE DJANGO:
 
                                 >> Save each file changed! If something went wrong, read it!
 
-                                    /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-models.txt
+                                    /Python/Web-development/django/8-translate-and-internationalization/translate-models.txt
 
             >> Run 'migrate':
 

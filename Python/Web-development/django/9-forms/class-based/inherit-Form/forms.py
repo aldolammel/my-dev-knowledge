@@ -27,10 +27,10 @@ class ReviewForm(forms.Form):  # That 'Form' in the classname is a convention.
 
 
 # ON THE TEMPLATE / FRONT-END:
-# /33-Web-development/backend/python/django/9-forms/based-class-Form/template.html
+# /Python/Web-development/django/9-forms/based-class-Form/template.html
 
 
 # VIEWS.PY TIP:
 # For form classes in forms.py that won't use any models.py class, it's recommended to use
 # 'FormView' inherit in its view in views.py file.
-# /33-Web-development/backend/python/django/3-2-backend-views/1-building-context/class-based/_view-class-form.txt
+# /Python/Web-development/django/3-2-backend-views/1-building-context/class-based/_view-class-form.txt

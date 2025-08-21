@@ -14,7 +14,7 @@ IMPORTING USERS
 
 
             >> More about ManyToMany relationship:
-                /33-Web-development/backend/python/django/3-1-backend-models-database/relation-many-to-many.txt
+                /Python/Web-development/django/3-1-backend-models-database/relation-many-to-many.txt
 
     
     
@@ -34,13 +34,13 @@ MORE ABOUT USER:
 
     >> Basic:
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /Python/Web-development/django/3-1-backend-models-database/3-users/0-users-setup.txt
 
         
     >> If you're looking for about register and login forms:
 
-        /33-Web-development/backend/python/django/9-forms/frontend-user-register-form.txt
-        /33-Web-development/backend/python/django/9-forms/frontend-user-login-form.txt
+        /Python/Web-development/django/9-forms/frontend-user-register-form.txt
+        /Python/Web-development/django/9-forms/frontend-user-login-form.txt
 
 
         

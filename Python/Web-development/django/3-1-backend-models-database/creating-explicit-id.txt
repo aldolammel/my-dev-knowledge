@@ -5,7 +5,7 @@ CREATING AN EXPLICIT ID/PK:
 
     >> In Django, primary keys are created automatically:
         
-        /33-Web-development/backend/python/django/3-1-backend-models-database/field-id.txt
+        /Python/Web-development/django/3-1-backend-models-database/field-id.txt
 
 
     >> But you can force it if needed:

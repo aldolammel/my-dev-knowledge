@@ -4,7 +4,7 @@
 
         >> Error messages on templates:
 
-            /33-Web-development/backend/python/django/3-3-frontend-templates/form-error-messages.html
+            /Python/Web-development/django/3-3-frontend-templates/form-error-messages.html
 
 
         >> How to use error identification (useful for CSS) helps to categorize errors:

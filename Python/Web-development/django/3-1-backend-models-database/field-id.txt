@@ -13,4 +13,4 @@ MODEL FIELD: ID
 
     >> For explicitly create a field called 'id', you can use:
         
-        /33-Web-development/backend/python/django/3-1-backend-models-database/creating-explicit-id.txt
+        /Python/Web-development/django/3-1-backend-models-database/creating-explicit-id.txt

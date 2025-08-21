@@ -72,7 +72,7 @@ VUEX: HOW TO CREATE DATA
                     }
 
                     >> More about Lifecycle-hooks:
-                        /33-Web-development/frontend/vue/lifecycle-hooks.txt
+                        /Web-Development/frontend/Vue/lifecycle-hooks.txt
 
 
             >> When the data must be loaded just after some user directly interaction,
@@ -111,7 +111,7 @@ VUEX: HOW TO CREATE DATA
         >> When the data must be loaded directly from an API/JSON:
             
             >> Using FetchAPI (native of JavaScript):
-                /33-Web-development/frontend/javascript/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
+                /JavaScript/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
 
             >> Using Axios:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

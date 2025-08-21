@@ -4,9 +4,9 @@
 
         >> How to manage error massages on templates:
 
-            /33-Web-development/backend/python/django/3-3-frontend-templates/form-error-messages.html
+            /Python/Web-development/django/3-3-frontend-templates/form-error-messages.html
 
 
         >> How to prepare error messages to CSS customization:
 
-            /33-Web-development/backend/python/django/3-3-frontend-templates/form-error-css-customization.txt
+            /Python/Web-development/django/3-3-frontend-templates/form-error-css-customization.txt

@@ -99,7 +99,7 @@ MODEL ARGUMENTS:
 
     ARGUMENT: RELATED_NAME
 
-        /33-Web-development/backend/python/django/3-1-backend-models-database/queryset-reverse.txt
+        /Python/Web-development/django/3-1-backend-models-database/queryset-reverse.txt
 
 
     ARGUMENT: DB_INDEX

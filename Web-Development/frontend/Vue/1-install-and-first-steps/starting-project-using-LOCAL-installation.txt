@@ -120,7 +120,7 @@
             >> Extending Vite:
 
                 >> Router (Vue official solution):
-                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/vue-router.txt
+                    /Web-Development/frontend/Vue/3-component-libraries/vue-router/_vue-router.txt
                 
                 >> CSS Pre-processors (Vite built-in solutions):
                     /Web-Development/frontend/CSS/scss/vue-integration.txt

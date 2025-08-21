@@ -51,6 +51,6 @@ FORM: FULL CUSTOMIZATION ON THE TEMPLATE (NOT RECOMMENDED):
 
     >> If you don't want this deep of customization, check these out:
 
-        /33-Web-development/backend/python/django/9-forms/customizing-basic-attrs-connected-model.txt
+        /Python/Web-development/django/9-forms/customizing-basic-attrs-connected-model.txt
 
-        /33-Web-development/backend/python/django/9-forms/customizing-basic-attrs-extra-field.txt
+        /Python/Web-development/django/9-forms/customizing-basic-attrs-extra-field.txt

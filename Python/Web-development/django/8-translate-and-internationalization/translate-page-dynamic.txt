@@ -19,4 +19,4 @@
 
     >> Translating static pages:
 
-        /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-page-static.txt
+        /Python/Web-development/django/8-translate-and-internationalization/translate-page-static.txt

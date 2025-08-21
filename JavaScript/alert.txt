@@ -11,4 +11,4 @@ JAVASCRIPT: ALERT()
     
     
     >> JAVASCRIPT: CONFIRM()
-        /33-Web-development/frontend/javascript/confirm.txt
+        /JavaScript/confirm.txt

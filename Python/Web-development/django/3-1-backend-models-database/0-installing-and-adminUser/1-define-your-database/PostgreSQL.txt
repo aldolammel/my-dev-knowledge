@@ -70,7 +70,7 @@ POSTGRESQL
             'django.contrib.postgres',  # Expands the postgres options.
             # THIRD-PARTY SUB-APPS:
             ...
-            # PROJECT ORIGINAL SUB-APPS:
+            # APP ORIGINAL SUB-APPS:
             ...
         ]
 

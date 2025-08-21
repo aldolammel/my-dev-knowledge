@@ -61,6 +61,6 @@ class BrandCarStoreCMS(admin.ModelAdmin):
         Don't forget to make the filtering also in forms.py (different way) to make the feature
         usefull throught the front-end as well.
         
-            /33-Web-development/backend/python/django/9-forms/form-queryset-filtering-dropdown.py
+            /Python/Web-development/django/9-forms/form-queryset-filtering-dropdown.py
     
     """

@@ -6,7 +6,7 @@
         the event. It's a shorthand way to prevent the default behavior of events.
 
         The same but in JavaScript:
-            /33-Web-development/frontend/javascript/preventDefault.js
+            /JavaScript/preventDefault.js
 
 
         E.g. in Vue.js:

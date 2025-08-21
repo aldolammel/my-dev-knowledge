@@ -2,4 +2,4 @@
 
 USER'S PROFILE VIEW EXAMPLE:
     
-        /33-Web-development/backend/python/django/project-examples/proj-extended-user/accounts/views.py
+        /Python/Web-development/django/z-project-examples/proj-extended-user/accounts/views.py

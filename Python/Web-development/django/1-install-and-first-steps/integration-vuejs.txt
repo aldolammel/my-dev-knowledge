@@ -2,4 +2,4 @@
 
 DJANGO: INTEGRATION WITH VUE.JS
 
-    /33-Web-development/frontend/vue/1-install-and-first-steps/integration-vue-django.txt
+    /Web-Development/frontend/Vue/1-install-and-first-steps/integration-vue-django.txt

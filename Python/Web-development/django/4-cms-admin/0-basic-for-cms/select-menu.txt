@@ -9,6 +9,6 @@ Let's see:
 
 
     All of them in:
-        /33-Web-development/backend/python/django/3-1-backend-models-database/field-select-menu-single.txt
-        /33-Web-development/backend/python/django/3-1-backend-models-database/field-select-menu-multiple.txt
+        /Python/Web-development/django/3-1-backend-models-database/field-select-menu-single.txt
+        /Python/Web-development/django/3-1-backend-models-database/field-select-menu-multiple.txt
         

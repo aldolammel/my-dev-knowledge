@@ -9,7 +9,7 @@
         if the related User (built-in class linked with that UserProfile entry) is deleted.
         
         >> More about the model argument 'on_delete':
-            /33-Web-development/backend/python/django/3-1-backend-models-database/_model-arguments.txt
+            /Python/Web-development/django/3-1-backend-models-database/_model-arguments.txt
 
 """
 

@@ -2,4 +2,4 @@
 
     VALIDATORS:
 
-        /33-Web-development/backend/python/django/6-validators/
+        /Python/Web-development/django/6-validators/

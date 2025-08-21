@@ -15,9 +15,12 @@ DJANGO REST FRAMEWORK:
 
     https://www.django-rest-framework.org/
 
-    More about API:
+    >> More about API:
         >> API:          /API/_about.txt
         >> Serializers:  /API/serializers.txt
+
+    >> Dataflow of a real Django REST Framework usage:
+        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/django-with-vue-integration.png
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

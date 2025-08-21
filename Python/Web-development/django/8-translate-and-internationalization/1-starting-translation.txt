@@ -121,8 +121,8 @@
 
             1.6) (Optional) Create the 'language.py' file in your config-folder:
 
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/language-file-example.py
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
+                /Python/Web-development/django/8-translate-and-internationalization/language-file-example.py
+                /Python/Web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
                 
 
       
@@ -282,17 +282,17 @@
 
             3.4) For Models:
 
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-models.txt
+                /Python/Web-development/django/8-translate-and-internationalization/translate-models.txt
 
 
             3.5) For CMS, through each sub-app admin.py file that has its models.py envolved:
 
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-cms.txt
+                /Python/Web-development/django/8-translate-and-internationalization/translate-cms.txt
 
 
             3.6) For Model Managers and Model QuerySets:
 
-                /33-Web-development/backend/python/django/8-translate-and-internationalization/translate-querysets-and-managers.txt
+                /Python/Web-development/django/8-translate-and-internationalization/translate-querysets-and-managers.txt
                     
 
 

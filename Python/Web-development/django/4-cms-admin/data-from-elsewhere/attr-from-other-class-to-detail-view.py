@@ -3,7 +3,7 @@
     
         >> What is a detail-view:
         
-            /33-development/general/django/4-cms-admin/_about.txt
+            /Python/Web-development/django/4-cms-admin/_about.txt
             
         
         >> Different approach between Custom Model and Built-in Model:
