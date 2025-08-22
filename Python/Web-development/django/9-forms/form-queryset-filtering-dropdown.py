@@ -10,6 +10,9 @@
             So, how does filter only the Ford vehicles from a database table with many other brands?
     
             Let's go!
+
+    >> What are QuerySets?
+        /Python/Web-development/django/3-1-backend-models-database/4-querysets/_what-is-queryset.txt
     
 """
 from django import forms 

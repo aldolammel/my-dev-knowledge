@@ -1,5 +1,8 @@
 """
     QUERYSETS FOR ADMIN (CMS): FILTERING
+
+    What are QuerySets:
+        /Python/Web-development/django/3-1-backend-models-database/4-querysets/_what-is-queryset.txt
 """
 
 from django.contrib import admin
