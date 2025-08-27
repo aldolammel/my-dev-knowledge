@@ -11,13 +11,13 @@ VUE USING COMPOSITION-API: PROPS EXAMPLES
     >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         <script setup>
-            // Defining 'props' as an object with the data you wanna bring from parent component:
-            const props = defineProps({
-                contacts: {
-                    type: Array,
-                    required: true
-                }
-            });
+        // Defining 'props' as an object with the data you wanna bring from parent component:
+        const props = defineProps({
+            contacts: {
+                type: Array,
+                required: true
+            }
+        });
         </script>
 
         <template>
@@ -40,23 +40,23 @@ VUE USING COMPOSITION-API: PROPS EXAMPLES
     >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <script setup>
-            import Person from './components/ChildComponent.vue'
+        import Person from './components/ChildComponent.vue'
 
-            // Fake database:
-            const fakeDatabase = [
-                {
-                    id: 1,
-                    name: 'Joanna',
-                    country: 'Brazil',
-                    isFav: false,
-                },
-                {
-                    id: 2,
-                    name: 'Ioshy',
-                    country: 'Japan',
-                    isFav: true,
-                },
-            ]
+        // Fake database:
+        const fakeDatabase = [
+            {
+                id: 1,
+                name: 'Joanna',
+                country: 'Brazil',
+                isFav: false,
+            },
+            {
+                id: 2,
+                name: 'Ioshy',
+                country: 'Japan',
+                isFav: true,
+            },
+        ]
         </script>
 
         <template>

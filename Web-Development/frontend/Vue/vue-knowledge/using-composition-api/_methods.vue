@@ -20,9 +20,9 @@
     and flexible):
 -->
 <script setup>
-    const handleClick = () => {
-        console.log('Button clicked')
-    }
+const handleClick = () => {
+    console.log('Button clicked')
+}
 </script>
 
 

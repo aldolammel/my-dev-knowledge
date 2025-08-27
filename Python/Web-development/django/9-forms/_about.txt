@@ -3,7 +3,7 @@
 
 DJANGO FORMS:
 
-    >> If you're developing a web application that accepts user input from the front-end, 
+    >> If you're developing a web app that accepts user input from the front-end, 
         you'll need to understand and use forms (forms.py). Django provides a variety of 
         tools and libraries to help you build forms to accept input from site visitors and then 
         process and respond to the input.

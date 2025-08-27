@@ -1,31 +1,31 @@
 <script setup>
-  import { ref } from 'vue'
+import { ref } from 'vue'
 
-  // Storing the inputs data (v-model in those inputs will populate these vars):
-  // They can be called as 'reactive references' once they are using ref() to work properly
-  // with v-model.
-  const inputValueName = ref('')
-  const inputValueCountry = ref('')
-  
-  // Emits, declaring:
-  const emit = defineEmits(['add-person'])
+// Storing the inputs data (v-model in those inputs will populate these vars):
+// They can be called as 'reactive references' once they are using ref() to work properly
+// with v-model.
+const inputValueName = ref('')
+const inputValueCountry = ref('')
 
-  // Function that will emit an event if the form's sent:
-  const submitForm = () => {
-    // Check the data before:
-    if (!inputValueName.value || !inputValueCountry.value) {
-      alert('All fields are mandatory!')
-      // Stop the entire function:
-      return false
-    }
-    // Emitting event change to the parent:
-    emit('add-person', inputValueName.value, inputValueCountry.value)
-    // Fields' cleaner:
-    inputValueName.value = ''
-    inputValueCountry.value = ''
-    // Debug purposes:
-    console.log('A new person was added!')
+// Emits, declaring:
+const emit = defineEmits(['add-person'])
+
+// Function that will emit an event if the form's sent:
+const submitForm = () => {
+  // Check the data before:
+  if (!inputValueName.value || !inputValueCountry.value) {
+    alert('All fields are mandatory!')
+    // Stop the entire function:
+    return false
   }
+  // Emitting event change to the parent:
+  emit('add-person', inputValueName.value, inputValueCountry.value)
+  // Fields' cleaner:
+  inputValueName.value = ''
+  inputValueCountry.value = ''
+  // Debug purposes:
+  console.log('A new person was added!')
+}
 </script>
 
 <template>

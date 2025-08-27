@@ -2,7 +2,7 @@
   FILE: /frontend/src/App.vue
 -->
 <script setup>
-  import NavMain from './components/NavMain.vue'
+import NavMain from './components/NavMain.vue'
 </script>
 
 <template>

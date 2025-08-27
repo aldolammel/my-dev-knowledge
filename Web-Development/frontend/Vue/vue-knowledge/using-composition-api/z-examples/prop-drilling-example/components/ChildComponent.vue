@@ -1,24 +1,24 @@
 <script setup>
-  import NestedChild from './NestedChildComponent.vue'
+import NestedChild from './NestedChildComponent.vue'
 
-  // Once you need some data from the parent component, the data need to be declared as 'props':
-  const props = defineProps({
-    contacts: {
-      type: Array,
-      required: true
-    }
-  });
-
-  // And once you ask for the parent component update something, it must be declared as 'emit':
-  const emit = defineEmits(['toggle-fav', 'add-person'])
-
-  // Functions that emit requests to update data to their parents:
-  function handleToggleFav(contactId) {
-    emit('toggle-fav', contactId)
+// Once you need some data from the parent component, the data need to be declared as 'props':
+const props = defineProps({
+  contacts: {
+    type: Array,
+    required: true
   }
-  function addPerson(name, country) {
-    emit('add-person', name, country)
-  }
+});
+
+// And once you ask for the parent component update something, it must be declared as 'emit':
+const emit = defineEmits(['toggle-fav', 'add-person'])
+
+// Functions that emit requests to update data to their parents:
+function handleToggleFav(contactId) {
+  emit('toggle-fav', contactId)
+}
+function addPerson(name, country) {
+  emit('add-person', name, country)
+}
 </script>
 
 <template>

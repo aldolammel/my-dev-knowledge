@@ -11,3 +11,12 @@ DJANGO USEFULL APPS: PAGEX by @aldolammel
     >> Installing:
 
         Github link...
+
+
+
+        >> Settings.py
+            add:
+            DEBUG = True
+            PAGEX_FRONT_URL = 'http://localhost:5173'
+            PAGEX_BACK_URL = 'http://localhost:8000'
+            PAGEX_PROD_URL = 'https://your-domain.com'

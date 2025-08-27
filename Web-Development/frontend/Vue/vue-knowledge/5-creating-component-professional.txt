@@ -16,7 +16,7 @@ CREATING A NEW COMPONENT (DEDICATED FILES):
 
             # Its content:
             <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
-                // code...
+            // code...
             </script>
 
             <template>
@@ -33,15 +33,15 @@ CREATING A NEW COMPONENT (DEDICATED FILES):
     3) Import the component in its parent-component (App.vue, for example):
 
         <script setup>  <!-- SETUP only in case you're using 'Composition API' approach -->
-            // Importing the child-component in its parent:
-            import MyComponentName from './components/MyComponentName.vue';
-            
-            //...
-            
-            // Applying the new child-component:
-            <MyComponentName />
+        // Importing the child-component in its parent:
+        import MyComponentName from './components/MyComponentName.vue';
+        
+        //...
+        
+        // Applying the new child-component:
+        <MyComponentName />
 
-            //...
+        //...
         </script>
 
 

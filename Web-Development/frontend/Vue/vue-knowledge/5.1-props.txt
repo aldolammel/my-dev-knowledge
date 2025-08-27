@@ -52,16 +52,16 @@ VUE: PROPS ("PROPERTIES")
 
             // In a ChildComponent.vue:
             <script setup>
-                // Props declaration for Composition-API:
-                const props = defineProps({
-                    contacts: {
-                        type: Array,  // array of objects, for example...
-                        required: true
-                    }
-                })
-                
-                // Emits declaration:
-                // Reserved space...
+            // Props declaration for Composition-API:
+            const props = defineProps({
+                contacts: {
+                    type: Array,  // array of objects, for example...
+                    required: true
+                }
+            })
+            
+            // Emits declaration:
+            // Reserved space...
             </script>
             
 

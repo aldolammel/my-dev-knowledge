@@ -60,7 +60,7 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-    x) Create/edit pages in Django admin and update each page id:
+    x) Create/edit pages in Django admin and update each page id: (NAO UTILIZO MAIS!!!!)
 
             x.1) Make sure you already have each dynamic page of the project's product created in Django admin.
 

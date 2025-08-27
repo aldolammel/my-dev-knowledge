@@ -2,9 +2,22 @@
 
 DYNAMIC CSS CLASSES IN AN HTML FILE:
 
-    >> If you want to add a new class in a html tag, you should use the 'v-bind directive':
+    If you want to make a link on a menu to change when that link is clicked/active, you can use
+    the 'v-bind directive' to call another style-class:
 
-        >> Example 1: you wanna see a div with another css class if the user to click over the div:
+        A) Using Vue-Router as a facilitator;
+        B) Or vanilla method checking boolean value (demands store/db data);
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        
+        A) Using Vue-Router as a facilitator:
+
+            xxxx
+
+
+
+        B) Vanilla method checking boolean value (demands store/db data):
             
             Static html of a selected div:
                 
@@ -24,13 +37,16 @@ DYNAMIC CSS CLASSES IN AN HTML FILE:
                 >
 
 
-            Another example, now using arg on the conditional:
+            >> Another example: using a custom function and argument on the conditional:
 
-                <div 
-                    v-for="(product, idx) in products"
-                    :key="idx"
-                    class="product"
-                    :class="{ inCart : isInCart(product) }"
-                >
+                    <div 
+                        v-for="(product, idx) in products"
+                        :key="idx"
+                        class="product"
+                        :class="{ inCart : isInCart(product) }"
+                    >
 
-                PS: this 'inCart' is the css-style-class to be added if the conditional returns true.
+                    PS: this 'inCart' is the css-style-class to be added if the conditional returns true.
+
+
+

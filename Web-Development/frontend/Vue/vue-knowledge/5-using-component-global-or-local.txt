@@ -40,5 +40,5 @@ VUE.JS COMPONENT: USING IT GLOBAL OR LOCALLY?
 
             //App.vue:
             <script setup>
-                import MyComp from './components/MyComp.vue'
+            import MyComp from './components/MyComp.vue'
             </script>

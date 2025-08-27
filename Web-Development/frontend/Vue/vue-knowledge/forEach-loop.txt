@@ -1,4 +1,13 @@
 
 
-Vue uses the JS forEach:
-    /JavaScript/forEach-loop.js
+VUE: FOREACH LOOP
+
+    >> Using 'forEach' (or 'for') for .js files:
+        
+        /JavaScript/forEach-loop.JS
+        /JavaScript/for.js
+
+
+    >> Using 'forEach' for templates of .vue files:
+
+        /Web-Development/frontend/Vue/vue-knowledge/v-for.txt

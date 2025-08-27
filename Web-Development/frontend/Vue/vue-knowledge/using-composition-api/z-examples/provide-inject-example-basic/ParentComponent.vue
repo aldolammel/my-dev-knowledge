@@ -1,9 +1,9 @@
 <script setup>
-  import Child from './components/ChildComponent.vue'
-  import { provide } from 'vue'
+import Child from './components/ChildComponent.vue'
+import { provide } from 'vue'
 
-  // Providing data to this parent's descendants without Props feature:
-  provide('message', 'hello!')
+// Providing data to this parent's descendants without Props feature:
+provide('message', 'hello!')
 </script>
 
 <template>

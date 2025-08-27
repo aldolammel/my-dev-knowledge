@@ -10,18 +10,18 @@ VUE WITH FORMS: SUBMIT BUTTON
         # On <script> layer:
 
             <script setup>
-                import { ref } from 'vue'
+            import { ref } from 'vue'
 
-                // Reactive data, equivalent to data() in Options-API:
-                const chosenAnswer = ref(undefined)  // Initialize as undefined reactive reference
+            // Reactive data, equivalent to data() in Options-API:
+            const chosenAnswer = ref(undefined)  // Initialize as undefined reactive reference
 
-                // Methods, regular functions in Composition-API:
-                const submitForm = () => {
-                    // Access reactive value using .value
-                    if (!chosenAnswer.value) {
-                        alert("Please, select an answer!")
-                    }
+            // Methods, regular functions in Composition-API:
+            const submitForm = () => {
+                // Access reactive value using .value
+                if (!chosenAnswer.value) {
+                    alert("Please, select an answer!")
                 }
+            }
             </script>
         
 

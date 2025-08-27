@@ -3,9 +3,9 @@
 -->>
 
 <script setup>
-    import { useCounterStore } from '../stores/counter';
+import { useCounterStore } from '../stores/counter';
 
-    const store = useCounterStore();
+const store = useCounterStore();
 </script>
 
 <template>

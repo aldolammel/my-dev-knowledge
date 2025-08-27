@@ -1,6 +1,6 @@
 <script setup>  // This 'setup' indicates Vue's waiting for 'Composition API' approach.
-  // Importing a child component:
-  import HelloWorld from './components/HelloWorld.vue'
+// Importing a child component:
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>

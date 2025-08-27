@@ -23,8 +23,6 @@ AXIOS: INTEGRATION WITH VUE.JS:
 
                 // App config, after the App creation:
                 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;  // Where Django's running currently!
-                app.use(axios);
-
 
         >> For MPA projects:
             

@@ -31,24 +31,24 @@ PROPS DRILLING: IN PROJECTS WITH DEEPER STRUCTURE, PROPS CAN BE VERY CONFUSING
 
             // Ancestor component (using Composition-API):
             <script setup>
-                import { ref, provide } from 'vue'
+            import { ref, provide } from 'vue'
 
-                const user = ref({ name: 'John', role: 'admin' })
+            const user = ref({ name: 'John', role: 'admin' })
 
-                // Provide data to all descendants
-                provide('user', user)
+            // Provide data to all descendants
+            provide('user', user)
             </script>
 
 
             // Deep descendant component (using Composition-API):
             <script setup>
-                import { inject } from 'vue'
+            import { inject } from 'vue'
 
-                // Inject data from any ancestor
-                const user = inject('user')
+            // Inject data from any ancestor
+            const user = inject('user')
 
-                // Optional: provide default value and make it required
-                const user = inject('user', { name: 'Guest', role: 'user' })
+            // Optional: provide default value and make it required
+            const user = inject('user', { name: 'Guest', role: 'user' })
             </script>
 
 

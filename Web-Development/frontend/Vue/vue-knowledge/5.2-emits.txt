@@ -64,16 +64,16 @@ VUE: EMITS
 
             // In a ChildComponent.vue:
             <script setup>
-                // Props declaration:
-                // Reserved space...
+            // Props declaration:
+            // Reserved space...
 
-                // Emits declaration:
-                const emit = defineEmits(['simple-event'])
+            // Emits declaration:
+            const emit = defineEmits(['simple-event'])
 
-                // Function to emit a simple event without data:
-                const handleSimpleClick = () => {
-                    emit('simple-event')
-                }
+            // Function to emit a simple event without data:
+            const handleSimpleClick = () => {
+                emit('simple-event')
+            }
             </script>
 
 

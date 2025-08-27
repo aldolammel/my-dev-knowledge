@@ -18,10 +18,10 @@
 
 <!-- By convention, in Composition API approach, script layer should be the first layer! -->
 <script setup>
-	// importing both methods to make data reactive on browsers:
-	import { ref, reactive } from 'vue'
-	
-	// ...
+// importing both methods to make data reactive on browsers:
+import { ref, reactive } from 'vue'
+
+// ...
 </script>
 
 <template>

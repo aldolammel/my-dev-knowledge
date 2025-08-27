@@ -1,14 +1,14 @@
 <script setup>
-  const emit = defineEmits(['closeAddBook', 'addBook']);
+const emit = defineEmits(['closeAddBook', 'addBook']);
 
-  let newBook = {
-    //id: 0,  // in a real case, let the database handle it. 
-    title: "",
-    isRead: false,
-    isbn: "",
-    author: "",
-    //cover: "",
-  };
+let newBook = {
+  //id: 0,  // in a real case, let the database handle it. 
+  title: "",
+  isRead: false,
+  isbn: "",
+  author: "",
+  //cover: "",
+};
 
 </script>
 

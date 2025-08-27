@@ -15,16 +15,16 @@ COMPOSITION API APPROACH: REF() AND REACTIVE()
                 
                 # .vue file:
                 <script setup>
-                    import { ref } from 'vue'
+                import { ref } from 'vue'
 
-                    // For primitive values
-                    const count = ref(0)
-                    const message = ref('Hello')
-                    const isVisible = ref(true)
+                // For primitive values
+                const count = ref(0)
+                const message = ref('Hello')
+                const isVisible = ref(true)
 
-                    // Access/modify the value using .value
-                    count.value = 10
-                    console.log(message.value) // 'Hello'
+                // Access/modify the value using .value
+                count.value = 10
+                console.log(message.value) // 'Hello'
                 </script>
 
         
@@ -36,22 +36,22 @@ COMPOSITION API APPROACH: REF() AND REACTIVE()
 
                 # .vue file:
                 <script setup>
-                    import { reactive } from 'vue'
+                import { reactive } from 'vue'
 
-                    // For objects
-                    const user = reactive({
-                        name: 'John',
-                        age: 30,
-                        preferences: {
-                            theme: 'dark'
-                        }
-                    })
+                // For objects
+                const user = reactive({
+                    name: 'John',
+                    age: 30,
+                    preferences: {
+                        theme: 'dark'
+                    }
+                })
 
-                    // For arrays
-                    const items = reactive(['apple', 'banana', 'orange'])
+                // For arrays
+                const items = reactive(['apple', 'banana', 'orange'])
 
-                    // Access/modify directly (no .value needed)
-                    user.name = 'Jane'
-                    user.age = 31
-                    items.push('grape')
+                // Access/modify directly (no .value needed)
+                user.name = 'Jane'
+                user.age = 31
+                items.push('grape')
                 </script>

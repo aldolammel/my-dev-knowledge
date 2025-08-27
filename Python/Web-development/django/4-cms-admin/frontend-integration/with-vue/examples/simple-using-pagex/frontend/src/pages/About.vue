@@ -2,19 +2,19 @@
   FILE: /my_django_project/frontend/src/pages/About.vue
 -->
 <script setup>
-  import { onMounted } from 'vue'
-  import { usePagesStore } from '../stores/pages'
-  import { pagesConstants } from './pagesConstants'
-  //...
+import { onMounted } from 'vue'
+import { usePagesStore } from '../stores/pages'
+import { pagesConstants } from './pagesConstants'
+//...
 
-  const pagesStore = usePagesStore()
-  const pageId = pagesConstants.PID_B  // Use Page ID because it barely change.
+const pagesStore = usePagesStore()
+const pageId = pagesConstants.PID_B  // Use Page ID because it barely change.
 
-  onMounted(async () => {
-    await pagesStore.fetchPage(pageId)
-  })
+onMounted(async () => {
+  await pagesStore.fetchPage(pageId)
+})
 
-  //...
+//...
 </script>
 
 <template>

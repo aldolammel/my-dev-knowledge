@@ -1,23 +1,23 @@
 <script setup>
-  import { computed } from 'vue';
+import { computed } from 'vue';
 
-  // Let's bring the fake book database to be accessed by this component too:
-  // It's a good practice to type the props variable!
-  let { books } = defineProps({
-    books: {
-      type: Array,
-      required: true,
-    }
-  });
+// Let's bring the fake book database to be accessed by this component too:
+// It's a good practice to type the props variable!
+let { books } = defineProps({
+  books: {
+    type: Array,
+    required: true,
+  }
+});
 
-  // Computed properties:
-  let booksRead = computed(() => {
-    return books.filter(book => book.isRead).length;
-  });
-  /* let percentualRead = computed(() => {
-    if (books.length === 0) return 0;
-    return (booksRead.value / books.length) * 100;  // To round the result, use Math.round(<code>)
-  }); */
+// Computed properties:
+let booksRead = computed(() => {
+  return books.filter(book => book.isRead).length;
+});
+/* let percentualRead = computed(() => {
+  if (books.length === 0) return 0;
+  return (booksRead.value / books.length) * 100;  // To round the result, use Math.round(<code>)
+}); */
 </script>
 
 <template>

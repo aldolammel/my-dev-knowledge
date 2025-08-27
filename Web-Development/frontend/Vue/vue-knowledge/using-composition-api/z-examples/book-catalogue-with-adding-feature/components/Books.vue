@@ -1,13 +1,13 @@
 <script setup>
-  // It's a good practice to define emits, and always before props:
-  const emit = defineEmits(['toggleIsRead'])
-  // It's a good practice to type the variable:
-  let { books } = defineProps({
-    books: {
-      type: Array,
-      required: true,
-    }
-  });
+// It's a good practice to define emits, and always before props:
+const emit = defineEmits(['toggleIsRead'])
+// It's a good practice to type the variable:
+let { books } = defineProps({
+  books: {
+    type: Array,
+    required: true,
+  }
+});
 </script>
 
 <template>

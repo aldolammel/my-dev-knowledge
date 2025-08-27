@@ -1,16 +1,16 @@
 <script setup>
-  const props = defineProps({
-    contacts: {
-      type: Array,
-      required: true
-    }
-  });
-
-  const emit = defineEmits(['toggle-fav'])
-
-  function handleToggleFav(contactId) {
-    emit('toggle-fav', contactId)
+const props = defineProps({
+  contacts: {
+    type: Array,
+    required: true
   }
+});
+
+const emit = defineEmits(['toggle-fav'])
+
+function handleToggleFav(contactId) {
+  emit('toggle-fav', contactId)
+}
 </script>
 
 <template>
