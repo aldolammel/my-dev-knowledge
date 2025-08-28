@@ -22,9 +22,14 @@ urlpatterns = [
     # DJANGO URLS:
     path('admin/', admin.site.urls),  # http://127.0.0.1:8000/admin/
     path("admin", RedirectView.as_view(url='/admin/')),
+    
+    # APIs:
+    # Reserved space...
+    
     # THIRD-PARTY URLS:
     # Reserved space...
-    # APP URLS:
+    
+    # SUB-APPS:
     path('', include('general.urls')),  # sub-app called 'general' example, http://127.0.0.1:8000/
     path('recipes/', include('recipes.urls')),  # http://127.0.0.1:8000/recipes/
     path('url_structure_folder/', include('sub_app_name.urls')),  # Structure example...

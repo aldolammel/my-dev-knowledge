@@ -34,9 +34,8 @@
 
         4) Including in .gitignore manually:
 
-            .venv_<client_name>
-            .env_<client_name>
-            <or_other_virtual_env_name>
+            .env
+            frontend/.env
             
             .idea/
             .idea/workspace.xml

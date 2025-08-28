@@ -54,15 +54,20 @@ JSON WEB TOKEN (JWT)
                     //...
                 }
             
-            2.4) Now, in your root Django urls.py file (or any other url config), include routes
+            2.4) Now, in your Django core urls.py file (or any other url config), include routes
                 for Simple JWT:
                     
                     from django.url import path
                     from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
                     urlpatterns = [
-                        //...
+                        # DJANGO:
+                        #...
+                        
+                        # APIs:
                         path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
                         path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-                        //...
+                        
+                        # THIRD-PARTY:
+                        #...
                     ]

@@ -10,7 +10,7 @@ keys, passwords, tokens and other information that must be unique for each envir
         # $ pip install django-environ
 
     # 2) Create a file called ".env" on the project root (same place of 'manage.py' file):
-        # model: /Environment-Variables/
+        # model: /Environment-Variables/env-for-local/in-backend/.env
 
     # 3) In the Django settings.py file, add these lines:
 

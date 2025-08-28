@@ -3,7 +3,12 @@
     VUE.JS (FULL) INSTALLATION:
 
 
-        0) In case your project will have a back-end:
+        PRE.0) In case you need install or re-install an existent Vue project:
+
+            /Web-Development/frontend/Vue/1-install-and-first-steps/reinstall-new-vue-copy.txt
+    
+        
+        PRE.1) In case your project will have a back-end:
 
             >> Django Back-end, project Folder's structure:
                 /Web-Development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt

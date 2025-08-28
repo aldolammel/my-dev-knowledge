@@ -66,12 +66,20 @@ CREATING DJANGO APPS*:
             urlpatterns = [
                 # DJANGO URLS:
                 path('admin/', admin.site.urls),
+
+                # APIs:
+                # Reserved space...
+
                 # THIRD-PARTY URLS:
                 # Reserved space...
-                # APPLICATION SUB-APPS:
+
+                # SUB-APPS:
                 path('', include('apps.general.urls')),
                 path('<subapp_name>/', include('apps.<subapp_name>.urls')),
                 path('<subapp_name>/', include('apps.<subapp_name>.urls')),
+
+                # FRONTEND:
+                # reserved space...
             ]
 
 

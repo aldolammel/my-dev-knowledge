@@ -67,6 +67,7 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
         │   │   └── routes.js     # Router config file.
         |   |
         │   ├── utils/           # Tiny, pure functions that do one thing well, but not a lib.
+        │   │   └── env.js       # Bridge to the environ vars to be used on frontend stuff.
         │   │
         │   ├── App.vue          # Root page/component (main-app itself).  <---------------
         │   └── main.js          # JavaScript config file of the main-app.

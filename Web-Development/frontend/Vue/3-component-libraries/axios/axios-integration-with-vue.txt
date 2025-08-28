@@ -9,13 +9,14 @@ AXIOS: INTEGRATION WITH VUE.JS:
 
         >> For SPA projects:
 
-            1) In Django .env file, and, then, in 'FRONTEND SETTINGS', add this line below:
-                VITE_BASE_URL=http://localhost:<django's port>  # Under Production, change it to the client PROD_BASE_URL!
+            1) In front-end .env file (DON'T in back-end .env), add these lines below:
+                VITE_PROD_BASE_URL=https://client-main-domain.com
+                VITE_BASE_URL=http://localhost:<django's port>  # Under Production, replace it by VITE_PROD_BASE_URL value!
 
                 >> CRITICAL: Vue with Vite mandatorily require env vars with 'VITE_' prefix!
 
-                >> Need to create an .env file?
-                    /Environment-Variables/
+                >> Need to create a front-end .env file?
+                    /Environment-Variables/env-for-local/in-frontend/.env
 
             2) In the front-end main-app-js file, include:
                 // After the basic importations:

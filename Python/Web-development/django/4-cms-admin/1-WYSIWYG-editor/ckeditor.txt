@@ -50,8 +50,17 @@
             )
 
             urlpatterns = [
-                ...
+                # DJANGO:
+                # ...
+
+                # APIs:
+                # ...
+                
+                # THIRD-PARTY:
                 path('ckeditor5/', include('django_ckeditor_5.urls')),
+
+                # SUB-APPS:
+                # ...
             ]
 
             if DEBUG:

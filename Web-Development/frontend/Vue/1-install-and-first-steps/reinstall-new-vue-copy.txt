@@ -1,0 +1,104 @@
+
+
+RE-INSTALL VUE:
+
+
+    >> If you are install Vue for the very first time, and it's a brand new project,
+        skip here and go:
+
+            /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
+
+
+    >> If you want just re-install the Vue based on the existent project, you can just clone the
+        project repository again:
+
+            1) Clone an existent project repo:
+                /35-version/git/basic.txt
+            
+            2) Carefully, adapt this guide to reinstall the Vue project:
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+    >> Or if you want to re-install the Vue absolutely from scratch (a new Vue copy):
+
+        1) Create a new frontend folder inside the project folder, and get it:
+
+            $ cd <project_folder>
+
+            $ mkdir frontend
+            $ cd frontend
+
+
+        2) Reinstall method:
+
+            2A) xxxxxxxxxxxxxxxxxxxxxxxx (recommended, more professional)!
+            2B) Or xxxxxxxxxxxxxxxxxxxxxxxxxx.
+        
+            ..........................
+
+            2A) xxxxxxxxxxxxxxxxxxxxxxxx:
+
+                Carefully, adapt this guide to reinstall the Vue project:
+                    /xxxxxxxxxxxxxxxxxx
+
+                >> How to create a new Vue project (in the current folder):
+                    $ cccccccccccccccccccc
+            
+                >> How to run the Vue application:
+                    $ npm run dev
+
+
+            2B) xxxxxxxxxxxxxxxxxxxxxxxxxx:
+
+
+                2B.1) Installation:
+
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    
+
+                    >> Only for VSCode:
+                        xxxxxxxxxxxxx extensions?????
+
+
+                2B.3) xxxxxxxxxxxxxxxxxxxx:
+
+                    xxxxxxxxxxxxxx
+
+
+
+
+
+        3) bring Files (??????):
+            
+            
+
+
+
+        
+
+
+        4) Stores (frontend db) matters:
+
+            xxxxxxxxxxxxxxxxxxxx???????
+
+
+    
+
+       
+        
+        5) Test it!
+
+            $ xxxxxx
+
+
+        
+        6) If the application is using more than one language, ???????
+        
+            xxxxxxxxxxxxx
+
+
+
+        7) Clean up some useless stuff:
+
+            xxxxxx??????
+

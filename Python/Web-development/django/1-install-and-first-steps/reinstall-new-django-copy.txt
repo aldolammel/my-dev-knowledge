@@ -91,28 +91,25 @@ RE-INSTALL ONLY THE DJANGO:
 
 
                 2B.3) Create the Django Project Structure:
-
-                    >> Critical: keep exactly the same original project's name to avoid many
-                        of adjustments on files!
                         
-                        $ django-admin startproject <project_name> .     <-- this install in the current folder!
+                    $ django-admin startproject core .     <-- this install in the current folder!
 
 
         3) Make sure you're in the same folder the 'manage.py' file, and then start the django
             for testing purposes:
 
                 # 1/3:
-                $ python manage.py migrate
-                or
-                $ uv run manage.py migrate
+                    $ python manage.py migrate
+                    # or
+                    $ uv run manage.py migrate
 
                 # 2/3:
-                $ python manage.py runserver
-                or
-                $ uv run manage.py runserver
+                    $ python manage.py runserver
+                    # or
+                    $ uv run manage.py runserver
 
                 # 3/3:
-                http://localhost:8000/
+                    http://localhost:8000/
 
 
 

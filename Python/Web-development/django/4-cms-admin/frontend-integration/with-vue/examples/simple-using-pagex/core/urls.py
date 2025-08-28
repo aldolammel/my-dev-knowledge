@@ -9,22 +9,20 @@ from .settings import (
     STATIC_ROOT,
 )
 
-# FRONTEND:
-# Initializing router and its viewsets:
-router = DefaultRouter()
-router.register('pages', PageViewSet)
-router.register('categories', CategoryViewSet)
-
 urlpatterns = [
     # DJANGO:
     # ...
+
+    # APIs:
+    path("api/", include("apps.pagex.urls")),
     
     # THIRD-PARTY:
     # ...
 
+    # SUB-APPS:
+    # Pagex (apps.pagex.urls) needs to be before the Vue fallback!
+
     # FRONTEND:
-    # Serve Vue.js SPA for all other routes!
-    path("api/", include(router.urls)),  # All API endpoints under /api/
     # Only under development:
     # reserved space...
     # Only in Production: this index folder is defined in settings > template > dir
@@ -33,9 +31,6 @@ urlpatterns = [
     # reserved space...
     # Only in Production: this index folder is defined in settings > template > dir
     path("<path:path>", TemplateView.as_view(template_name="index.html"), name="vue-app-paths"),
-
-    # APPLICATION SUB-APPS:
-    # ...
 ]
 
 if DEBUG:

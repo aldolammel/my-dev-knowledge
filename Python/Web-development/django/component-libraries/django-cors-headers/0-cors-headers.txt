@@ -55,7 +55,7 @@ DJANGO CORS HEADERS:
                     FRONT_URL1=http://localhost:5173
                     FRONT_URL2=http://127.0.0.1:5173
 
-                >> A model for your .env file: /Environment-Variables/
+                >> A model for your .env file: /Environment-Variables/env-for-local/in-backend/.env
 
 
             3.2) Confirm if your /core/settings.py are calling correctly those env vars:

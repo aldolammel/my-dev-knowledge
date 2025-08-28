@@ -15,17 +15,24 @@
 
 >> For Node-Package-Manager I will use NPM (Node.js package manager standard command):
 
-    >> Keep in mind what type of Vue project you will build: SPA or MPA?
+    PRE) Keep in mind what type of Vue project you will build: SPA or MPA?
         /Web-Development/frontend/Vue/vue-knowledge/SPA-vs-MPA.txt
+
+    1) Create an exclusive .env file to set the front-end environment variables:
+        /Environment-Variables/env-for-local/in-frontend/.env
+
+        1.1) Make sure this new .env is ignored by Git. This line should be there:
             
-    >> Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
+            frontend/.env
+            
+    2) Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
-        1.2A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
-        1.2B) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
+        2.2A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
+        2.2B) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
-        1.2A) Using Vite:
+        2.2A) Using Vite:
                 More about in https://vite.dev/
 
             >> On terminal, go to the folder where you wanna create the Vue project folder
@@ -136,7 +143,7 @@
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        1.2B) Or using Vue-CLI:
+        2.2B) Or using Vue-CLI:
                 More abount in https://cli.vuejs.org/
 
             >> Install Vue-CLI globally (-g):

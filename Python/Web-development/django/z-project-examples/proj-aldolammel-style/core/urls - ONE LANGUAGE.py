@@ -9,15 +9,19 @@ from .constants import (
 urlpatterns = [
     # DJANGO:
     path("admin/", admin.site.urls),
+
+    # APIs:
+    # Reserved space...
+
     # THIRD-PARTY:
     # Reserved space...
 
-    # FRONTEND:
-    # Reserved space...
-
-    # APPLICATION SUB-APPS:
+    # SUB-APPS:
     path("", include("apps." + NAMESPACE_1 + ".urls")),
     path(NAMESPACE_3 + "/", include("apps." + NAMESPACE_3 + ".urls")),
     path(NAMESPACE_2 + "/", include("apps." + NAMESPACE_2 + ".urls")),
     #path(NAMESPACE_2 + "/attacks/", include("apps." + NAMESPACE_4 + ".urls")),
+
+    # FRONTEND:
+    # Reserved space...
 ]
