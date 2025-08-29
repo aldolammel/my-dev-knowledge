@@ -16,17 +16,19 @@ RE-INSTALL VUE:
                 /35-version/git/basic.txt
             
             2) Carefully, adapt this guide to reinstall the Vue project:
-                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                /Web-Development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
 
 
     >> Or if you want to re-install the Vue absolutely from scratch (a new Vue copy):
 
+        PRE) Don't delete the old frontend folder!
+        
         1) Create a new frontend folder inside the project folder, and get it:
 
             $ cd <project_folder>
-
-            $ mkdir frontend
-            $ cd frontend
+            
+            $ mkdir frontend2
+            $ cd frontend2
 
 
         2) Reinstall method:
@@ -39,7 +41,7 @@ RE-INSTALL VUE:
             2A) xxxxxxxxxxxxxxxxxxxxxxxx:
 
                 Carefully, adapt this guide to reinstall the Vue project:
-                    /xxxxxxxxxxxxxxxxxx
+                    /Web-Development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
 
                 >> How to create a new Vue project (in the current folder):
                     $ cccccccccccccccccccc

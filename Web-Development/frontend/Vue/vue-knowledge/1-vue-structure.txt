@@ -13,6 +13,11 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
     >> Vue folder structure:
 
+
+        Structure to copy:
+            /Web-Development/frontend/Vue/z-example-structure/aldolammel-style/
+
+
         frontend/
         ├── node_modules/        # stores all dependencies of the project and node.js stuff.
         │
@@ -23,7 +28,7 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
         │   ├── sitemap.xml      # xxxxx.
         |   └── ...
         │
-        ├── src/
+        ├── src/                             # Where the entire Vue project is. For example, Vite build-tool watches this folder!
         │   ├── assets/                      # Those files that aren't public.
         |   |   ├── imgs/                    # Images that need optimization or processing.
         |   |   |   ├── logo.svg
@@ -37,46 +42,51 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
         │   │   │   
         │   │   └── ...
         │   │
-        │   ├── components/           # Reusable components (pieces of code).
-        │   │   ├── NavMain.vue       # Example of a component.
-        │   │   ├── HeroBig.vue
-        │   │   ├── Newsletter.vue
-        │   │   ├── Footer.vue
-        │   │   └── ...
+        │   ├── components/
+        |   |   ├── common/               # Reusable dumb components (Button, Modal).
+        │   │   │   ├── BestProducts.vue  
+        │   │   │   ├── Newsletter.vue       
+        │   │   │   ├── Testimonials.vue  
+        │   │   │   └── ...
+        │   │   │
+        |   |   ├── layout/               # Layout components (AppHeader, Navigation).
+        │   │   │   ├── SiteHeader.vue
+        │   │   │   ├── SiteFooter.vue
+        │   │   │   ├── NavMain.vue
+        │   │   │   └── ...
+        │   │   │
+        |   |   └── pages/                # Components specific to a page/route.
+        |   |       ├── Home.vue
+        │   │       ├── About.vue      
+        │   │       └── ...
         │   │
-        │   ├── features/             # Features that can include their own components, slices, API calls, etc.
-        |   |   ├── profile_example/  # The idea is encapsulation. If you deleted this folder, that whole feature should disappear.
-        |   |   └── ...
-        │   │
-        │   ├── hooks/                # Custom hooks. If it starts with use, it probably belongs here.
+        │   ├── hooks/                # For custom Composition API functions (hooks), conventionally its files using 'use' as prefix.
         |   |   ├── useAuth.js
         |   |   └── ...
         │   │
         │   ├── libs/                 # Where all main library files are. Anything that connects the app to the world.
-        |   |   ├── router.js
-        |   |   ├── store.js
         |   |   ├── bootstrap.js
         |   |   └── ...
         │   │
-        │   ├── pages/            # Pages/Views that router points to. They compose features and components into something meaningful.
-        │   │   ├── Home.vue      # Example of a page (sub-app/page/view).
-        │   │   ├── About.vue       
-        │   │   └── ...
-        │   │
-        │   ├── router/           # Where it's define routes and lazy-load pages.
-        │   │   └── routes.js     # Router config file.
+        │   ├── router/           # Where routes and lazy-load pages are defined.
+        |   |   ├── router.js     # Router config file.
+        │   │   └── routes.js     # Where routes are defined.
         |   |
-        │   ├── utils/           # Tiny, pure functions that do one thing well, but not a lib.
-        │   │   └── env.js       # Bridge to the environ vars to be used on frontend stuff.
+        │   ├── stores/           # Where things are caching from APIs.
+        │   │   ├── menus.js      # Caching/storing data from menus managed by back-end.
+        │   │   └── pages.js      # Caching/storing data from pages managed by back-end.
+        |   |
+        │   ├── utils/                         # Tiny, pure functions that do one thing well, but not a lib and no Vue reactivity.
+        │   │   ├── env.js                     # Calling front-end environment vars.
+        │   │   └── tinyslider-testimonial.js
         │   │
-        │   ├── App.vue          # Root page/component (main-app itself).  <---------------
-        │   └── main.js          # JavaScript config file of the main-app.
+        │   ├── App.vue          # Root component page (main-vue-app).  <---------------
+        │   └── main.js          # JavaScript config file of the main-vue-app.
         │
+        ├── .env                 # Exclusive front-end environment variables. 
         ├── index.html           # Run it to see the app on the browser. 
         └── package.json
 
-
-        >> Tip: Once something is reused across two or more features, promote it out to components/ or hooks/.
 
 
         >> Example of a Django folder project with Vue:

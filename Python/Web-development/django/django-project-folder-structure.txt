@@ -14,27 +14,31 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
         A) Django as ENTIRE solution for back and front-end:
 
             my_project_name/
-            ├── .venv/                 # Virtual environment folder.
+            ├── .venv/                 # Virtual environment folder where Django things are installed.
             │
-            ├── core/                  # Django core folder.
-            │   ├── __init__.py        # xxxxx
-            │   ├── settings.py        # xxxxx
-            │   ├── urls.py            # xxxxx
-            │   └── wsgi.py            # xxxxx
+            ├── core/                      # Django core folder.
+            │   ├── __init__.py
+            │   ├── constants.py           # Where you define global Django variables.
+            │   ├── context_processors.py  # Those data/context you wanna make available to the entire project.
+            │   ├── settings.py            # Main configuration file of the entire project.
+            │   ├── urls.py                # Main URL configuration for the entire project.
+            │   └── wsgi.py                # xxxxx
             │
             ├── apps/
-            │   ├── app1/              # xxxxx
-            │   │   ├── migrations/    # xxxxx
-            │   │   ├── __init__.py    # xxxxx
-            │   │   ├── admin.py       # xxxxx
-            │   │   ├── apps.py        # xxxxx
-            │   │   ├── models.py      # xxxxx 
+            │   ├── app1/              # Example of a 'sub-app' of the main-app (project folder).
+            │   │   ├── migrations/    # Folder where all database logic/structure changes are tracked.
+            │   │   ├── __init__.py
+            │   │   ├── admin.py       # All CMS needs of this specific app are defined here.
+            │   │   ├── apps.py        # Where this specific app's name is defined for the entire system.
+            │   │   ├── models.py      # All database schema for this specific app is defined here.
+            │   │   ├── serializers.py # Where this app builds its APIs;
             │   │   ├── tests.py       # xxxxx
-            │   │   └── views.py       # xxxxx
+            │   │   ├── urls.py        # URL configuration specific for this app.
+            │   │   └── views.py       # All data/context of this specific app wants to send to the template.
             │   │
             │   ├── app.../
             │   │
-            │   └── __init__.py        # Makes Apps folder be a package of apps.
+            │   └── __init__.py        # Makes Apps folder to be a package of apps.
             │
             ├── media/                 # xxxxx
             │
@@ -53,7 +57,9 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │       ├── home.html      
             │       └── about.html     
             │
-            ├── manage.py              # xxxxx
+            ├── .env                   # Exclusive back-end environment variables.
+            ├── .gitignore             # For Git repository untrack specific files and folders.
+            ├── manage.py              # Command-line utility for Django core.
             └── requirements.txt       # List of all Django project's (backend) dependencies.
 
 
@@ -63,35 +69,42 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
         B) Django as back-end only (for external frontend solution):
 
             my_project_name/
-            ├── .venv/                 # Virtual environment folder.
+            ├── .venv/                 
             │
-            ├── core/                  # Django core folder.
-            │   ├── __init__.py        # xxxxx
-            │   ├── settings.py        # xxxxx
-            │   ├── urls.py            # xxxxx
-            │   └── wsgi.py            # xxxxx
+            ├── core/                  
+            │   ├── __init__.py        
+            │   ├── constants.py       
+            │   ├── settings.py        
+            │   ├── urls.py            
+            │   └── wsgi.py            
+            │
+            ├── frontend/         # Where the front-end solution will be installed.
             │
             ├── apps/
-            │   ├── app1/              # xxxxx
-            │   │   ├── migrations/    # xxxxx
-            │   │   ├── __init__.py    # xxxxx
-            │   │   ├── admin.py       # xxxxx
-            │   │   ├── apps.py        # xxxxx
-            │   │   ├── models.py      # xxxxx 
-            │   │   ├── tests.py       # xxxxx
-            │   │   └── views.py       # xxxxx
+            │   ├── app1/              
+            │   │   ├── migrations/    
+            │   │   ├── __init__.py    
+            │   │   ├── admin.py       
+            │   │   ├── apps.py        
+            │   │   ├── models.py      
+            │   │   ├── serializers.py  
+            │   │   ├── tests.py       
+            │   │   ├── urls.py 
+            │   │   └── views.py       
             │   │
             │   ├── app.../
             │   │
-            │   └── __init__.py        # Makes Apps folder be a package of apps.
+            │   └── __init__.py  
             │
-            ├── media/                 # xxxxx
+            ├── media/ 
             │
             ├── static/                # keep it empty once Django needs for collectstatic's command.
             │
-            ├── templates/              # Django templates.
-            │   └── admin/              # Basic admin interface customizations.
+            ├── templates/              
+            │   └── admin/  
             │       └── base_site.html     
             │
-            ├── manage.py              # xxxxx
-            └── requirements.txt       # List of all Django project's (backend) dependencies.
+            ├── .env
+            ├── .gitignore
+            ├── manage.py
+            └── requirements.txt

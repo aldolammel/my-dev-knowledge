@@ -21,7 +21,7 @@
     1) Create an exclusive .env file to set the front-end environment variables:
         /Environment-Variables/env-for-local/in-frontend/.env
 
-        1.1) Make sure this new .env is ignored by Git. This line should be there:
+        1.1) (Optional) Make sure this new .env is ignored by Git. This line should be there:
             
             frontend/.env
             
@@ -49,8 +49,8 @@
                         
                             # Recommended Vite settings - just follow the prompt instructions/options:
 
-                                - Project name: = by convention, type 'frontend' or just a '.' If
-                                                you already are inside the Vue Project Folder itself.
+                                - Project name: = by convention, use 'frontend' or just a '.' if
+                                                you already are in the root of the 'frontend' folder.
                                 
                                 - Framework = vue
                                 
@@ -69,8 +69,8 @@
                                 - Linter/Formatter? Yes but later!
                                     Vite has NO standard solution;
 
-                            >> Get in the project folder (if applicable):
-                                $ cd <vue_project_folder>
+                            >> Get in the Vue project folder (if applicable):
+                                $ cd frontend
 
                             >> Finishing the installation, executing a command that will install all
                                 the project's dependencies, and their other dependencies (it creates
@@ -80,18 +80,33 @@
                                 # Check what is locally installed:
                                     $ npm list
             
-            >> Force the definition of the public folder for the project:
-                # In the Vue-project-folder (/frontend, e.g.), open the vite.config.js file and add:
+            
+            >> (Optional) Configure Vite to recognize its "@" in paths (Recommended):
+
+                # In /frontend/ folder, open the vite.config.js file and add these lines:
+
+                    import path from "path";
 
                     export default defineConfig({
                         plugins: [
                             //...
                         ],
+                        resolve: {
+                            alias: {
+                                "@": path.resolve(__dirname, "./src"),
+                            },
+                        },
                         publicDir: "public",
                         //...
                     });
+
+                >> "@" in Vite projects means the path starts from "./src" folder, no matter how deep
+                    is the caller file is in Vue project folder structure.
+
+                >> "publicDir" you are defining what folder the Vite will compile the project when
+                    it's ready to production environment.
             
-            
+
             >> Run the Vue service:
                 # On the vue-project-folder:
                     $ npm run dev
