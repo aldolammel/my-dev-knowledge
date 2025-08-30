@@ -15,6 +15,7 @@ class PageAdmin(admin.ModelAdmin):
         'seo_desc',
         'seo_keys',
         'is_published',
+        'is_home',
         'created_at',
         'updated_at',
     )

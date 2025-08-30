@@ -1,4 +1,4 @@
 
 
 REST: USING IT FOR PYTHON
-    /Python/04-python-knowledge/30-API/with-REST/
+    /Python/python-knowledge/30-API/with-REST/

@@ -15,20 +15,20 @@ _corOut = '\033[m'
 # Pre-lessons:
 
 
-def counter(_start=1, _end=10, _step=1):                # setting default values.
+def counter(start=1, end=10, step=1):                # setting default values.
 
     """                                                     # my first docstring.
     Just a counter that shows the result on screen.
-    :param _start: starts the counting.
-    :param _end: ends the counting.
-    :param _step: rithm of counting.
+    :param start: starts the counting.
+    :param end: ends the counting.
+    :param step: rithm of counting.
     :return: nothing.
     """
 
-    ctrl = _start
-    while ctrl <= _end:
+    ctrl = start
+    while ctrl <= end:
         print(f'{ctrl} ', end='')
-        ctrl += _step
+        ctrl += step
     print('DONE!')
 
 

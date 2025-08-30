@@ -1,30 +1,32 @@
 """
-CLASSES IN PYTHON: INTRODUCTION
-Class is like an outline/blueprint for creating a new object. Object-Oriented Programing (OOP) starts with Classes.
-An object is anything that you wish to manipulate or change while working through the code.
-Class names must be written as PascalCase.
+    CLASSES IN PYTHON: INTRODUCTION
 
-A class is built by:
+    Class is like an outline/blueprint for creating a new object. Object-Oriented Programing (OOP) 
+    starts with Classes. An object is anything that you wish to manipulate or change while working
+    through the code. 
+    
+    >> In Python, class names must be written as PascalCase!
 
->> Its attributes:
-    Things that never change: color, size, weight, for example.
+    A class is built by:
 
->> Its methods:
-    what exactly the class does. Generally, the methods name starts with verbs: "to open the link", "to give reload",
-    "to turn the app off", etc. A class can have one or more methods within.
-    Methods (function into a class) must be written in snake_case().
+        >> Its attributes:
+            Things that never change: color, size, weight, for example.
 
->> Differences between methods and functions:
-    All methods are functions, but for a function be a method, the function must call "self" in its parameters.
-    To call a function, just type the function name:
-        play()
-    To call a method, first you must call the object/class:
-        musician.play()
+        >> Its methods:
+            what exactly the class does. Generally, the methods name starts with verbs: "to open the
+            link", "to give reload", "to turn the app off", etc. A class can have one or more methods
+            within. Methods (function into a class) must be written in snake_case().
 
+        >> Differences between methods and functions:
+            All methods are functions, but for a function be a method, the function must call "self"
+            in its parameters. To call a function, just type the function name:
+                play()
+            To call a method, first you must call the object/class:
+                musician.play()
 """
 
 
-# Primitive way to build a class ---------------------------------------------------------------------------------------
+# Primitive way to build a class -------------------------------------------------------------------
 
 
 class UserClassExample1:  # declaring a class as PascalCase, never as snake_case or camelCase.
@@ -44,7 +46,7 @@ print(user_1.email)
 print()
 
 
-# Expected way to build a class ---------------------------------------------------------------------------------------
+# Expected way to build a class --------------------------------------------------------------------
 
 
 class UserClassExample2:
@@ -63,7 +65,7 @@ print(user_2.email)
 print()
 
 
-# Amplifying the class usage -------------------------------------------------------------------------------------------
+# Amplifying the class usage -----------------------------------------------------------------------
 
 
 class UserClassExample3:

@@ -5,7 +5,7 @@
     This example is a file that's reading a simple API. This API is returning just a number.
 
     CRITICAL: For this example, you need to run first this folder/example:
-        /Python/04-python-knowledge/30-API/with-REST/creating/1-creating-example.py
+        /Python/python-knowledge/30-API/with-REST/creating/1-creating-example.py
 """
 import requests
 
