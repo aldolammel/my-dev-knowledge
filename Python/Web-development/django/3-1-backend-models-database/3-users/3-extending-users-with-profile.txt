@@ -1286,9 +1286,9 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             )
             from cefalog import language as lng
             from cefalog.constants import (
-                NAMESPACE_1,  # 'general'
-                NAMESPACE_2,  # 'in'
-                NAMESPACE_3,  # 'accounts'
+                NAMEAPP_1,  # 'general'
+                NAMEAPP_2,  # 'in'
+                NAMEAPP_3,  # 'accounts'
                 PATTERN_1_1,  # 'home_one_view'
                 PATTERN_1_2,  # 'home_two_view'
                 PATTERN_2_1,  # 'home_view'
@@ -1302,7 +1302,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 # Escape if logged-in:
                 if request.user.is_authenticated:
                     # There the user will be filtered in Personal or Business:
-                    return redirect(NAMESPACE_2 + ':' + PATTERN_2_1)
+                    return redirect(NAMEAPP_2 + ':' + PATTERN_2_1)
                 # Otherwise:
                 else:
                     if request.method == 'POST':
@@ -1311,7 +1311,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                             new_user = form.save()
                             # Automatic log-in after registration:
                             login(request, new_user)
-                            return redirect(NAMESPACE_2 + ':' + PATTERN_2_1)
+                            return redirect(NAMEAPP_2 + ':' + PATTERN_2_1)
                     else:
                         form = CustomUserCreationForm()
                     # Defining what send to the template:
@@ -1327,7 +1327,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
             class CustomLoginView(LoginView):
-                template_name = NAMESPACE_3 + '/login.html'
+                template_name = NAMEAPP_3 + '/login.html'
                 form_class = CustomLoginForm
                 redirect_authenticated_user = True
                 extra_context = {
@@ -1344,7 +1344,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             class CustomPasswordResetView(PasswordResetView):
                 template_name = 'registration/password_reset.html'
                 form_class = CustomPasswordResetForm
-                success_url = reverse_lazy(NAMESPACE_3 + ':' + PATTERN_3_6)
+                success_url = reverse_lazy(NAMEAPP_3 + ':' + PATTERN_3_6)
                 email_template_name = 'registration/password_reset_email_custom.html'
                 extra_context = {
                     'page_title': lng.S_G_LOGIN_RESET_TTL,
@@ -1364,8 +1364,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                     profile_type = request.user.profile_type
                     logout(request)
                     if profile_type == '2':
-                        return redirect(NAMESPACE_1 + ':' + PATTERN_1_2)
-                return redirect(NAMESPACE_1 + ':' + PATTERN_1_1)
+                        return redirect(NAMEAPP_1 + ':' + PATTERN_1_2)
+                return redirect(NAMEAPP_1 + ':' + PATTERN_1_1)
 
 
             # It shows a success message about the email sent with the link to reset the password:
@@ -1380,7 +1380,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             class CustomPasswordResetConfirmView(PasswordResetConfirmView):
                 template_name = 'registration/password_reset_confirm_custom.html'
                 form_class = CustomPasswordResetConfirmForm
-                success_url = reverse_lazy(NAMESPACE_3 + ':' + PATTERN_3_8)
+                success_url = reverse_lazy(NAMEAPP_3 + ':' + PATTERN_3_8)
                 extra_context = {
                     'page_title': lng.S_G_LOGIN_RESET_TTL,
                     'header': lng.S_I_PROFILE_PWD_TTL,
@@ -1412,7 +1412,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                             user.set_password(form.cleaned_data['new_password1'])
                             user.save()  # save the user instance to the db.
                             messages.success(self.request, lng.TX_FDBK_PROFILE_PWD_UPDATED)
-                            return redirect(NAMESPACE_3 + ':' + PATTERN_3_2, username=user.username)
+                            return redirect(NAMEAPP_3 + ':' + PATTERN_3_2, username=user.username)
                         else:
                             form.add_error('new_password1', lng.TX_FDBK_PROFILE_PWD_EQUAL_OLD)
                     return self.form_invalid(form)
@@ -1458,9 +1458,9 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                         logout(request)
                         if is_profile_1:
                             messages.success(request, lng.TX_FDBK_PROFILE_1_DEL)
-                            return redirect(NAMESPACE_1 + ':' + PATTERN_1_1)
+                            return redirect(NAMEAPP_1 + ':' + PATTERN_1_1)
                         # messages.success(request, TX_FDBK_PROFILE_2_DEL)
-                        return redirect(NAMESPACE_1 + ':' + PATTERN_1_2)
+                        return redirect(NAMEAPP_1 + ':' + PATTERN_1_2)
                     # Defining the object of the current form, passing also the user object:
                     if is_profile_1:
                         form = UserProfileOneForm(request.POST, instance=instance, user=user)
@@ -1481,7 +1481,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                         profile_user.save()
                         form.save(user=user)
                         messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
-                        return redirect(NAMESPACE_3 + ':' + PATTERN_3_2, username=username)
+                        return redirect(NAMEAPP_3 + ':' + PATTERN_3_2, username=username)
 
                 # Defining what send to the template:
                 context = {
@@ -1496,8 +1496,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 }
                 # Load template:
                 if is_profile_1:
-                    return render(request, NAMESPACE_3 + '/profile_1.html', context)
-                return render(request, NAMESPACE_3 + '/profile_2.html', context)
+                    return render(request, NAMEAPP_3 + '/profile_1.html', context)
+                return render(request, NAMEAPP_3 + '/profile_2.html', context)
 
 
         X) /accounts/urls.py:
@@ -1505,7 +1505,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             from django.urls import path
             from . import views
             from cefalog.constants import (
-                NAMESPACE_3,
+                NAMEAPP_3,
                 PATTERN_3_1,
                 PATTERN_3_2,
                 PATTERN_3_3,
@@ -1518,7 +1518,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             )
 
             # Namespace:
-            app_name = NAMESPACE_3  # 'accounts'
+            app_name = NAMEAPP_3  # 'accounts'
 
             urlpatterns = [
                 # http://127.0.0.1:8000/ap_name/...

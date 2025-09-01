@@ -3,7 +3,7 @@
 
 import environ  # How to build env() function: /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
 from .constants import (
-    NAMESPACE_1,
+    NAMEAPP_1,
     #...
 )
 
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # ...
     # APP ORIGINAL SUB-APPS:
-    'apps.' + NAMESPACE_1 , # 'apps.pagex'
+    'apps.' + NAMEAPP_1 , # 'apps.pagex'
 ]
 
 MIDDLEWARE = [

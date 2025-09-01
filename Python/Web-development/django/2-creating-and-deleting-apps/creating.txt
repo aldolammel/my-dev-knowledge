@@ -43,8 +43,7 @@ CREATING DJANGO APPS*:
                 return HttpResponse('<name of the sub-app>')
 
 
-    3) Create the urls.py file into each new sub-app, and add the 'urlpatterns' list in each
-        new urls.py files:
+    3) Create the /sub-app/urls.py file, and add the 'urlpatterns' list in each sub-app path/endpoint:
         
             from django.urls import path
             from . import views
@@ -57,8 +56,7 @@ CREATING DJANGO APPS*:
             ]
 
 
-    4) Go to your config-folder ('core' frequently) and open its urls.py file
-        and include each sub-app URL references right after the admin line:
+    4) Go to the core folder and open the main urls.py file to include each sub-app URL references:
             
             from django.contrib import admin
             from django.urls import path, include
@@ -83,18 +81,19 @@ CREATING DJANGO APPS*:
             ]
 
 
-    5) Create these folders and file into the new sub-app folder:
+    5) (Optional) If your front-end solution will be Django, create these folders and file into the
+        new sub-app folder:
         
         /<subapp_name>/templates/
         /<subapp_name>/templates/<subapp_name>/   <- It's a convention to repeat the sub-app name.
         /<subapp_name>/templates/<subapp_name>/temp.html  <- only for GitHub to create the folder.
 
 
-    6) Still in core folder, go to 'settings.py' file and add each sub-app name in
-        the 'INSTALLED_APPS' list.
+    6) Again in core folder, go to 'settings.py' file and add each sub-app name in
+        the 'INSTALLED_APPS' list:
         
             # Application definition
-            # About each Installed Apps here: 
+            # ABCOO - About each Installed Apps: 
             # <Engineering Data document hyperlink here!!!>
             INSTALLED_APPS = [
                 # DJANGO DEFAULT SUB-APPS:
@@ -130,5 +129,15 @@ CREATING DJANGO APPS*:
             $ uv run manage.py migrate
 
     
-    8) Test the application again:
+    8) (Optional) If you need a file for custom functions, create in sub-app folder the file
+        'utils.py', and you can call it everywhere as:
+            
+            # Inside the sama sub-app:
+            from .utils import <function_name>
+
+            # Another Django sub-apps:
+            from <subapp_name_where_utils_is>.utils import <function_name>
+        
+    
+    9) Test the application again:
         /Python/Web-development/django/_running-app.txt

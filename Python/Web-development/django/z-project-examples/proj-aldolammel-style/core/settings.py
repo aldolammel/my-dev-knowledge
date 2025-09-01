@@ -8,10 +8,10 @@
 from pathlib import Path
 import environ
 from .constants import (
-    NAMESPACE_1,
-    NAMESPACE_2,
-    NAMESPACE_3,
-    NAMESPACE_4,
+    NAMEAPP_1,
+    NAMEAPP_2,
+    NAMEAPP_3,
+    NAMEAPP_4,
     PATTERN_1_1,
     PATTERN_2_1,
     PATTERN_3_3,
@@ -32,7 +32,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 # FRONT_URL2 = env("FRONT_URL2")  # Dev env for frontend.
 
 # TODO: uncomment after to create the 'accounts' sub-app:
-#AUTH_USER_MODEL = NAMESPACE_3 + ".User"  # Extending Django User features.
+#AUTH_USER_MODEL = NAMEAPP_3 + ".User"  # Extending Django User features.
 
 """if DEBUG:
     print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))
@@ -57,10 +57,10 @@ INSTALLED_APPS = [
     #"rosetta",  # TODO: uncomment if multilingual!
     #"parler",  # TODO: uncomment if multilingual!
     # APP ORIGINAL SUB-APPS:
-    #"apps." + NAMESPACE_1,  # TODO: uncomment after to create the sub-app!
-    #"apps." + NAMESPACE_2,  # TODO: uncomment after to create the sub-app!
-    #"apps." + NAMESPACE_3,  # TODO: uncomment after to create the sub-app!
-    #"apps." + NAMESPACE_4,  # TODO: uncomment after to create the sub-app!
+    #"apps." + NAMEAPP_1,  # TODO: uncomment after to create the sub-app!
+    #"apps." + NAMEAPP_2,  # TODO: uncomment after to create the sub-app!
+    #"apps." + NAMEAPP_3,  # TODO: uncomment after to create the sub-app!
+    #"apps." + NAMEAPP_4,  # TODO: uncomment after to create the sub-app!
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,7 @@ DATABASES = {
 }
 
 # Default primary key field type
-# For models that don’t have a field with primary_key=True:
+# For models of all sub-apps that don’t have a field with primary_key=True:
 # DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Password validation
@@ -226,9 +226,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # Authentification
 SESSION_COOKIE_AGE = 2419200  # a month
-LOGIN_URL = NAMESPACE_3 + ":" + PATTERN_3_3
-LOGIN_REDIRECT_URL = NAMESPACE_2 + ":" + PATTERN_2_1
-LOGOUT_REDIRECT_URL = NAMESPACE_1 + ":" + PATTERN_1_1
+LOGIN_URL = NAMEAPP_3 + ":" + PATTERN_3_3
+LOGIN_REDIRECT_URL = NAMEAPP_2 + ":" + PATTERN_2_1
+LOGOUT_REDIRECT_URL = NAMEAPP_1 + ":" + PATTERN_1_1
 
 # Email settings
 EMAIL_BACKEND = env(

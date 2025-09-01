@@ -1,6 +1,6 @@
 from django.views.generic.base import TemplateView
 from core.constants import (
-    NAMESPACE_1,
+    NAMEAPP_1,
 )
 from core.language import (
     S_G_HOME_1_TTL,
@@ -14,7 +14,7 @@ from core.language import (
 
 
 class HomeProfileOneView(TemplateView):
-    template_name = NAMESPACE_1 + "/home_one.html"
+    template_name = NAMEAPP_1 + "/home_one.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -24,7 +24,7 @@ class HomeProfileOneView(TemplateView):
 
 
 # class HomeProfileTwoView(TemplateView):
-#     template_name = NAMESPACE_1 + "/home_two.html"
+#     template_name = NAMEAPP_1 + "/home_two.html"
 
 #     def get_context_data(self, **kwargs):
 #         context = super().get_context_data(**kwargs)
@@ -34,7 +34,7 @@ class HomeProfileOneView(TemplateView):
 
 
 class HelpView(TemplateView):
-    template_name = NAMESPACE_1 + "/help.html"
+    template_name = NAMEAPP_1 + "/help.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -43,7 +43,7 @@ class HelpView(TemplateView):
 
 
 class AboutView(TemplateView):
-    template_name = NAMESPACE_1 + "/about.html"
+    template_name = NAMEAPP_1 + "/about.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -52,7 +52,7 @@ class AboutView(TemplateView):
 
 
 class PrivacyPolicyView(TemplateView):
-    template_name = NAMESPACE_1 + "/privacy_policy.html"
+    template_name = NAMEAPP_1 + "/privacy_policy.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

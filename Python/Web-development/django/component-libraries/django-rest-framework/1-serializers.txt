@@ -1,0 +1,9 @@
+
+
+DRF: DJANGO REST FRAMEWORK
+
+    >> When you build up the serializers.py file in a sub-app, each Serializer Class can be an API.
+
+    >> Check out a serializers.py file example with some power-ups:
+    
+        /Python/Web-development/django/component-libraries/django-rest-framework/example/apps/myapp/serializers.py

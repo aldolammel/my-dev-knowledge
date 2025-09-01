@@ -3,7 +3,7 @@
 
     NAMESPACE: WHERE TO USE SAFELY
 
-    A few examples how to use the namespaces as constants.
+    A few examples how to use the app name as constants.
 
 
 
@@ -14,9 +14,9 @@
             INSTALLED_APPS = [
                 ...,
                 # APP ORIGINAL SUB-APPS:
-                "apps." + NAMESPACE_1,
-                "apps." + NAMESPACE_2,
-                "apps." + NAMESPACE_3,
+                "apps." + NAMEAPP_1,
+                "apps." + NAMEAPP_2,
+                "apps." + NAMEAPP_3,
                 ...
             ]
 
@@ -27,12 +27,12 @@
         E.g.
 
             from django.apps import AppConfig
-            from cefalog.constants import NAMESPACE_3
+            from cefalog.constants import NAMEAPP_3
 
 
             class AccountsConfig(AppConfig):  <----------------------- NEVER CHANGE THIS CLASS NAME!
                 default_auto_field = 'django.db.models.BigAutoField'
-                name = NAMESPACE_3
+                name = "apps." + NAMEAPP_3
 
                 def ready(self):
                     import accounts.signals   <----------------------- NEITHER!
@@ -46,7 +46,7 @@
             if request.method == 'POST':
                 if 'del_account' in request.POST:
                     instance.delete_instance()
-                    return redirect(NAMESPACE_1 + ':' + PATTERN_1_1)
+                    return redirect(NAMEAPP_1 + ':' + PATTERN_1_1)
 
 
 

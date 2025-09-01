@@ -23,9 +23,9 @@ from .forms import (
 )
 from core import language as lng
 from core.constants import (
-    NAMESPACE_1,
-    NAMESPACE_2,
-    NAMESPACE_3,
+    NAMEAPP_1,
+    NAMEAPP_2,
+    NAMEAPP_3,
     PATTERN_1_1,
     PATTERN_1_2,
     PATTERN_2_1,
@@ -39,7 +39,7 @@ def register(request):
     # Escape if logged-in:
     if request.user.is_authenticated:
         # There the user will be filtered in Personal or Business:
-        return redirect(NAMESPACE_2 + ":" + PATTERN_2_1)
+        return redirect(NAMEAPP_2 + ":" + PATTERN_2_1)
     # Otherwise:
     else:
         if request.method == "POST":
@@ -48,7 +48,7 @@ def register(request):
                 new_user = form.save()
                 # Automatic log-in after registration:
                 login(request, new_user)
-                return redirect(NAMESPACE_2 + ":" + PATTERN_2_1)
+                return redirect(NAMEAPP_2 + ":" + PATTERN_2_1)
         else:
             form = CustomUserCreationForm()
         # Defining what send to the template:
@@ -64,7 +64,7 @@ def register(request):
 
 
 class CustomLoginView(LoginView):
-    template_name = NAMESPACE_3 + "/login.html"
+    template_name = NAMEAPP_3 + "/login.html"
     form_class = CustomLoginForm
     redirect_authenticated_user = True
     extra_context = {
@@ -74,14 +74,14 @@ class CustomLoginView(LoginView):
         "bt_pwd_forgot": lng.BT_LOGIN_RESET,
         "bt_new_account": lng.BT_REG_NEW_ACCOUNT,
     }
-    success_url = NAMESPACE_2 + ":" + PATTERN_2_1
+    success_url = NAMEAPP_2 + ":" + PATTERN_2_1
 
 
 # It sends the mail:
 class CustomPasswordResetView(PasswordResetView):
     template_name = "registration/password_reset.html"
     form_class = CustomPasswordResetForm
-    success_url = reverse_lazy(NAMESPACE_3 + ":" + PATTERN_3_6)
+    success_url = reverse_lazy(NAMEAPP_3 + ":" + PATTERN_3_6)
     email_template_name = "registration/password_reset_email_custom.html"
     extra_context = {
         "page_title": lng.S_G_LOGIN_RESET_TTL,
@@ -107,7 +107,7 @@ class CustomPasswordResetDoneView(PasswordResetDoneView):
 class CustomPasswordResetConfirmView(PasswordResetConfirmView):
     template_name = "registration/password_reset_confirm_custom.html"
     form_class = CustomPasswordResetConfirmForm
-    success_url = reverse_lazy(NAMESPACE_3 + ":" + PATTERN_3_8)
+    success_url = reverse_lazy(NAMEAPP_3 + ":" + PATTERN_3_8)
     extra_context = {
         "page_title": lng.S_G_LOGIN_RESET_TTL,
         "header": lng.S_I_PROFILE_PWD_TTL,
@@ -139,7 +139,7 @@ class CustomPasswordChangeView(PasswordChangeView):
                 user.set_password(form.cleaned_data["new_password1"])
                 user.save()  # save the user instance to the db.
                 messages.success(self.request, lng.TX_FDBK_PROFILE_PWD_UPDATED)
-                return redirect(NAMESPACE_3 + ":" + PATTERN_3_2, username=user.username)
+                return redirect(NAMEAPP_3 + ":" + PATTERN_3_2, username=user.username)
             else:
                 form.add_error("new_password1", lng.TX_FDBK_PROFILE_PWD_EQUAL_OLD)
         return self.form_invalid(form)
@@ -168,8 +168,8 @@ def custom_logout_view(request):
         # profile_type = request.user.profile_type
         logout(request)
         # if profile_type == "2":
-        #     return redirect(NAMESPACE_1 + ":" + PATTERN_1_2)
-    return redirect(NAMESPACE_1 + ":" + PATTERN_1_1)
+        #     return redirect(NAMEAPP_1 + ":" + PATTERN_1_2)
+    return redirect(NAMEAPP_1 + ":" + PATTERN_1_1)
 
 
 @login_required
@@ -200,9 +200,9 @@ def profile_view(request, username):
             logout(request)
             if is_profile_1:
                 messages.success(request, lng.TX_FDBK_PROFILE_1_DEL)
-                return redirect(NAMESPACE_1 + ":" + PATTERN_1_1)
+                return redirect(NAMEAPP_1 + ":" + PATTERN_1_1)
             # messages.success(request, TX_FDBK_PROFILE_2_DEL)
-            return redirect(NAMESPACE_1 + ":" + PATTERN_1_2)
+            return redirect(NAMEAPP_1 + ":" + PATTERN_1_2)
         # Defining the object of the current form, passing also the user object:
         if is_profile_1:
             form = UserProfileOneForm(request.POST, instance=instance, user=user)
@@ -231,7 +231,7 @@ def profile_view(request, username):
             # Feedback message:
             messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
             # Refresh the profile page:
-            return redirect(NAMESPACE_3 + ":" + PATTERN_3_2, username=username)
+            return redirect(NAMEAPP_3 + ":" + PATTERN_3_2, username=username)
 
     # Defining what send to the template:
     context = {
@@ -246,6 +246,6 @@ def profile_view(request, username):
     }
     # Load template:
     # if is_profile_2:
-    #     return render(request, NAMESPACE_3 + "/profile_2.html", context)
-    return render(request, NAMESPACE_3 + "/profile_1.html", context)
+    #     return render(request, NAMEAPP_3 + "/profile_2.html", context)
+    return render(request, NAMEAPP_3 + "/profile_1.html", context)
     

@@ -4,8 +4,8 @@ from django.shortcuts import render, redirect
 
 # from django.utils.translation import gettext_lazy as _
 from core.constants import (
-    NAMESPACE_2,
-    NAMESPACE_3,
+    NAMEAPP_2,
+    NAMEAPP_3,
     PATTERN_2_2,
     PATTERN_3_3,
 )
@@ -23,11 +23,11 @@ def home_selector_view(request):
     if user.is_authenticated:
         # Go to Personal or Business home page:
         if user.profile_type == "1":
-            return redirect(reverse(NAMESPACE_2 + ":" + PATTERN_2_2))
+            return redirect(reverse(NAMEAPP_2 + ":" + PATTERN_2_2))
         # else:
-        #     return redirect(reverse(NAMESPACE_2 + ":" + PATTERN_2_3))
+        #     return redirect(reverse(NAMEAPP_2 + ":" + PATTERN_2_3))
     # Send the visitor to login form:
-    return redirect(reverse(NAMESPACE_3 + ":" + PATTERN_3_3))
+    return redirect(reverse(NAMEAPP_3 + ":" + PATTERN_3_3))
 
 
 @login_required
@@ -38,7 +38,7 @@ def home_profile_one_view(request):
         "profile_type": f"{LB_PROFILE_TYPE}: {TX_PROFILE_1}",
     }
     # Return the data to be rendered with the template when a key of the context dict is called:
-    return render(request, NAMESPACE_2 + "/home_one.html", context)
+    return render(request, NAMEAPP_2 + "/home_one.html", context)
 
 
 # @login_required
@@ -49,4 +49,4 @@ def home_profile_one_view(request):
 #         "profile_type": f"{LB_PROFILE_TYPE}: {TX_PROFILE_2}",
 #     }
 #     # Return the data to be rendered with the template when a key of the context dict is called:
-#     return render(request, NAMESPACE_2 + "/home_two.html", context)
+#     return render(request, NAMEAPP_2 + "/home_two.html", context)

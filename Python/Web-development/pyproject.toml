@@ -1,5 +1,3 @@
-# PYPROJECT.TOML FILE:
-
 [project]
 name = "xxxxxxxxxxxxxxxxxx"
 version = "0.1.0"
@@ -20,8 +18,12 @@ classifiers = [
 dependencies = []
 [dependency-groups]
 dev = []
+
 [project.urls]
 "Homepage" = "https://xxxxxxxxxxxxxxxxxxx"
 "Repository" = "https://github.com/xxxxxxxxxxx/"
 "Documentation" = "https://github.com/xxxxxxxxxxxxxxx/README.md"
 "Bug Tracker" = "https://not-applied"
+
+# Python Linter and Formatter:
+# Reserved space...

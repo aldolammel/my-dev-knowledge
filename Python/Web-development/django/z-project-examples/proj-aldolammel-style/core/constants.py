@@ -31,24 +31,24 @@ DEV_URL = 'https://dev.aldolammel.com'
 BRAND_KEYWORDS = 'Soon...'  # TODO How do I translate this?
 
 # SUB-APP PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-NAMESPACE_0 = "admin"
-NAMESPACE_1 = "general"
-NAMESPACE_2 = "in"
-NAMESPACE_3 = "accounts"
-NAMESPACE_4 = "sub_app_name"
-# Pattern names from NAMESPACE_1:
+NAMEAPP_0 = "admin"
+NAMEAPP_1 = "general"
+NAMEAPP_2 = "in"
+NAMEAPP_3 = "accounts"
+NAMEAPP_4 = "sub_app_name"
+# Pattern names from NAMEAPP_1:
 PATTERN_1_1 = 'home_view'
 PATTERN_1_2 = 'xxxxxx_view'
 PATTERN_1_3 = 'xxxxxx_view'
 PATTERN_1_4 = 'xxxxxx_view'
 PATTERN_1_5 = 'privacy_view'
 PATTERN_1_6 = 'logout_view'
-# Pattern names from NAMESPACE_2:
+# Pattern names from NAMEAPP_2:
 PATTERN_2_1 = 'home_view'
 PATTERN_2_2 = 'xxxx_view'
 PATTERN_2_3 = 'xxxx_view'
 PATTERN_2_4 = 'xxxx_view'
-# Pattern names from NAMESPACE_3:
+# Pattern names from NAMEAPP_3:
 PATTERN_3_1 = "register_view"
 PATTERN_3_2 = "profile_view"
 PATTERN_3_3 = "login"
@@ -58,7 +58,7 @@ PATTERN_3_6 = "password_reset_done"
 PATTERN_3_7 = "password_reset_confirm"
 PATTERN_3_8 = "password_reset_complete"
 PATTERN_3_9 = "logout"
-# Pattern names from NAMESPACE_4:
+# Pattern names from NAMEAPP_4:
 PATTERN_4_1 = 'xxxxxx_view'
 PATTERN_4_2 = 'xxxxxx_view'
 PATTERN_4_3 = 'xxxxxx_view'
@@ -69,7 +69,7 @@ PATTERN_4_7 = 'xxxxxx_view'
 PATTERN_4_8 = 'xxxxxx_view'
 
 # PATHS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-PATH_NAMESPACE_0_USERS = "/" + NAMESPACE_0 + "/" + NAMESPACE_3 + "/user/"  # '/admin/auth/user/'
+PATH_NAMEAPP_0_USERS = "/" + NAMEAPP_0 + "/" + NAMEAPP_3 + "/user/"  # '/admin/auth/user/'
 #PATH_XXXXX_XXXXX_XXXX = 'icons/events/attack/'
 
 # DATA FOR DATABASE (WARNING!): - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -110,7 +110,7 @@ REL_PROFILE_1 = "profile_1"
 
 
 """
-    WHERE TO USE THE NAMESPACES:
+    WHERE TO USE NAMESPACES:
     
         /Python/Web-development/django/3-1-backend-models-database/namespaces-where-to-use.txt
 

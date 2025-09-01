@@ -102,7 +102,7 @@ INSTALLING DJANGO:
 
             - Create: 'pyproject.toml' in the project root;
             - Template of the file content:
-                /Python/Web-development/pyproject-file-model.txt
+                /Python/Web-development/pyproject.toml
 
 
     5) Through the Config-folder (e.g. "core"), open the settings.py file:

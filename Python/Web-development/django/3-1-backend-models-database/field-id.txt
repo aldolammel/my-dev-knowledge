@@ -1,16 +1,45 @@
 
 
-MODEL FIELD: ID
+DEFINING THE FIELD ID:
 
 
-    >> by default, Django will create a field called 'id' for you (so when you create a model class, you don't need to declare it), which is the primary key.
+    >> For the entire Django project: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        >> In settings.py, you can define the default auto field:
+        In /core/settings.py:
             
-            # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
             DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-    >> For explicitly create a field called 'id', you can use:
+            >> Your options:
+
+                # For new projects:
+                'django.db.models.BigAutoField' .... Storage: 64-bit integer (8 bytes)
+                                                     Range:   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+                # For legacy compatibility:  
+                'django.db.models.AutoField' ....... Storage: 32-bit integer (4 bytes)
+                                                     Range:   -2,147,483,648 to 2,147,483,647
+                
+                
         
+
+
+    >> For each sub-app: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        In /youapp/apps.py:
+
+            E.g.
+                class YourAppConfig(AppConfig):
+                    default_auto_field = 'django.db.models.BigAutoField'
+
+            
+            >> Your options:
+
+                    Same as above!
+
+
+
+    >> For each Model Class of a sub-app: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
         /Python/Web-development/django/3-1-backend-models-database/creating-explicit-id.txt
+

@@ -1,6 +1,6 @@
 
 
-DJANGO REST FRAMEWORK:
+DRF: DJANGO REST FRAMEWORK
 
     Django REST framework is a powerful and flexible toolkit for building Web APIs.
     Some reasons you might want to use REST framework:
@@ -81,11 +81,13 @@ DJANGO REST FRAMEWORK:
                     Note that the URL path can be whatever you want!
 
                 >> Example:
-                    /Python/Web-development/django/component-libraries/django-rest-framework/example/core/urls.py
+                    /Python/Web-development/django/component-libraries/django-rest-framework/example/core/
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+>> DRF POWER-UPS: CREATING APIs
+    /Python/Web-development/django/component-libraries/django-rest-framework/1-serializers.txt
 
->> EXPANDING DJANGo REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
+>> EXPANDING DJANGO REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
     /Python/Web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.txt

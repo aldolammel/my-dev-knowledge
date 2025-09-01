@@ -1,0 +1,24 @@
+
+
+BOOLEAN FIELD:
+
+    
+
+    >> Traditional:
+
+        E.g.
+            
+            # /myapp/models.py:
+            class PagexSettings(models.Model):
+                ...
+                is_urls_relative = models.BooleanField(
+                    default=True,
+                    verbose_name='Usar URLs Relativas',
+                    help_text='some help text.',
+                )
+
+
+
+    >> NullBooleanField() <- when null=True
+
+        xxxxxxxxxxxxxxxxxxxxxxxxx

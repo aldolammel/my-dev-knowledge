@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from core.constants import (
-    NAMESPACE_1,
+    NAMEAPP_1,
     PATTERN_1_1,
     PATTERN_1_3,
     PATTERN_1_4,
@@ -9,7 +9,7 @@ from core.constants import (
 )
 
 # Namespace:
-app_name = NAMESPACE_1
+app_name = NAMEAPP_1
 
 urlpatterns = [
     # http://127.0.0.1:8000/

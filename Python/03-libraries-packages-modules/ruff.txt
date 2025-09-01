@@ -13,15 +13,29 @@ RUFF (Python Linter and code formatter)
         ### Python Linter/Formatter ###
         .ruff_cache/
 
-    >> Create a list of error exceptions in the pyproject.toml file:
-        
-        >> If you don't have the file yet, create it:
-            /Python/Web-development/pyproject-file-model.txt
+    >> Create/Edit the Open the project pyproject.toml file:
 
-        >> Apply the error exceptions section:
+        >> model file:
+            /Python/Web-development/pyproject.toml
+    
+        >> Python Linter and formatter config:
+
+            [tool.ruff]
+            line-length = 100
+            [tool.ruff.format]
+            quote-style = "single"
+            indent-style = "tab"
+            docstring-code-format = true
         
-            [tool.ruff.lint]
-            ignore = []  # add an error-type like "F401" (with quotes!) to create exceptions.
+        >> Create a list of error exceptions: 
+            
+            >> If you don't have the file yet, create it:
+                /Python/Web-development/pyproject.toml
+
+            >> Apply the error exceptions section:
+            
+                [tool.ruff.lint]
+                ignore = []  # add an error-type like "F401" (with quotes!) to create exceptions.
 
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -36,4 +50,8 @@ RUFF (Python Linter and code formatter)
 
 
     >> HOW TO FIX CODE FORMATTING:
-        $ uv run ruff format
+        $ uv run ruff format                      # Format all files in Django-project-folder **.
+        $ uv run ruff format path/to/code/        # Format all files in `path/to/code` (and any subdirectories).
+        $ uv run ruff format path/to/file.py      # Format a single file.
+
+        (**) Except those files in folders like .venv/, dist/, build/, .vscode/, .git/, etc...

@@ -76,7 +76,10 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
                     
                     >> In pyproject.toml file, check is the Python version is right!
 
-                        >> If not:
+                        >> If needed, model file:
+                            /Python/Web-development/pyproject.toml
+
+                        >> If Python version is NOT okay:
                             >> Change it, typing the minimul right python version!
                             >> On terminal, define with version this project will use:
                                 $ uv python pin <python-version>
