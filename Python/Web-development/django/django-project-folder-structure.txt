@@ -60,7 +60,7 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             ├── .env                   # Exclusive back-end environment variables.
             ├── .gitignore             # For Git repository untrack specific files and folders.
             ├── manage.py              # Command-line utility for Django core.
-            └── requirements.txt       # List of all Django project's (backend) dependencies.
+            └── pyproject.toml         # List of all Django project's (backend) dependencies.
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -107,4 +107,4 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             ├── .env
             ├── .gitignore
             ├── manage.py
-            └── requirements.txt
+            └── pyproject.toml         # List of all Django project's (backend) dependencies.

@@ -55,16 +55,20 @@ RE-INSTALL ONLY THE DJANGO:
 
                 2B.2) Installation:
 
-                    >> Using the requirements.txt file:
-
-                        /Python/02-virtual-environment/creating-requirements.txt
+                    >> Using a file as guide:
+                    
+                        >> Smart method: pyproject.toml
+                            /Python/Package-manager/uv/creating-requirements-of-project.txt
+                        
+                        >> Old method: requirements.txt
+                            /Python/Package-manager/pip/creating-requirements-of-project.txt
 
 
                     >> (NOT RECOMMENDED) Or manually (the same for Ubuntu and Windows):
 
                             >> Update pip module:
                                 
-                                /Python/03-libraries-packages-modules/pip.txt
+                                /Python/Package-manager/pip.txt
 
                             >> Install Django:
 

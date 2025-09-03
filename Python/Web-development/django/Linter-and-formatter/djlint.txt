@@ -1,0 +1,39 @@
+
+
+DJANGO > TEMPLATE LINTER AND FORMATER: DJLINT
+
+    As an additional tool for any Python linter/formatter and any Django code linter/formatter,
+    DjLint is a django template linter and a django template formatter.
+
+    Checks: Template syntax errors, formatting, HTML structure, template-specific best practices
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    >> INSTALLING:
+
+        PRE) Assuming you already got a virtual environment for the project, active it:
+            /Python/02-virtual-environment/
+
+        1) Install the djlint as development dependency:
+            
+            >> Using UV:
+                $ uv add --optional dev djlint
+                # Check if everything's right on the project's pyproject.toml file!
+            
+            >> Or using PIP:
+                # Install it:
+                    $ pip install -U djlint
+                # And add this module as dev dependency in pyproject.toml (e.g.):
+                    ...
+                    [project.optional-dependencies]
+                    dev = [
+                        ...
+                        "djlint>=1.36.4",
+                    ]
+
+        2) Still in pyproject.toml file, add these lines:
+            # Django template Linter and Formatter:
+            [tool.djlint]
+            profile="django"
+        
+        3) And manually install the DjLint extension for your Code IDE.

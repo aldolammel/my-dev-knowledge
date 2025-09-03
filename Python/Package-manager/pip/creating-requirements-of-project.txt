@@ -1,0 +1,58 @@
+
+
+PIP: CREATING THE REQUIREMENTS OF A PROJECT
+
+
+    ATTENTION!
+
+        This method (of install requirements via requirements.txt) is old nowadays, fragile, fakely
+        "automatic" and error-prone, where there is no differencies between what is mandatory, what
+        is just for development, once it ignores the pyproject.toml file.
+
+        Use the UV method that is based on pyproject.toml file instructions:
+            /Python/Package-manager/uv/creating-requirements-of-project.txt
+
+
+
+
+    That said, let's go:
+
+    The 'requirements.txt' file is a legacy way (old) to install the entire project's dependencies
+    in a row. This file ignores completely the pyproject.toml if the requirements file was generated
+    automatically by 'pip freeze'. This method also ignores other packages that didn't was installed
+    through pip command. 
+
+        
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> How to create it:
+
+        1) In your app folder, with the virtual environment activated, do it:
+
+            Win:
+                $ 
+
+            Linux/Ubuntu:
+                $ pip freeze > requirements.txt
+
+            Mac:
+                $
+
+
+    >> How to use it:
+
+        1) Move the requirements.txt file to the project root;
+
+        2) Once you already got the right virtual environment activated, upgrade the pip:
+
+            /Python/Package-manager/pip.txt
+
+        3) Install the packages at once:
+
+            $ pip install -r requirements.txt
+
+        4) Check if everything is fine:
+
+            $ pip list

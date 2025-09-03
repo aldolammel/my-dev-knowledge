@@ -1,0 +1,105 @@
+
+
+UV: CREATING THE REQUIREMENTS OF A PROJECT
+
+
+    Install requirements with UV is much more powerful and managable than requirements.txt file that
+    is important to get to know some concepts and what is the pyproject.toml file:
+
+
+    >> What are 'dependencies':
+        Packages required to run the app in any environment (production, staging, development).
+
+        >> What are 'optional-dependencies':
+            Packages not required to run the app, but make some tasks easier:
+                
+                >> Sub-group 'dev':
+                    Contains everything needed for development: testing frameworks, linters,
+                    formatters, debuggers, doc builders, etc.
+
+                >> Sub-group 'test':
+                    Often a subset of dev focused purely on testing.
+                
+                >> Sub-group 'docs':
+                    Tools for building documentation.
+
+
+    >> The file 'pyproject.toml' (PEP 621) manages all dependencies (including the optional ones) of
+        a specific project.
+                    
+            E.g.
+                /Python/Web-development/pyproject.toml
+
+
+    >> How to install UV:
+        /Python/Package-manager/uv.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+
+    >> What do you need?
+
+        A) I am the new developer in an existent project;
+        B) Or I am building a new project;
+        C) Or someone ask me for the requirements.txt file from the project I'm working on;
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    A) I am the new developer in an existent project:
+
+        A.1) After you clone the project's repo, the pyproject.toml should be in the project's root;
+
+        A.2) Once you are in the project's folder, create the virtual environment for it BUT NEVER
+            use the 'uv init' in this case because it would replace by new ones important files like
+            the pyproject.toml!!!!
+
+                # The next step using 'sync' already will create the environment!
+
+        A.3) Make sure the the pyproject.toml file in on the project's root, so then install the
+            project requirements, creating also the virtual environment for them:
+
+                # Option 1/3, Only the mandatories:
+                    $ uv sync
+                    
+                # Option 2/3, Or all mandatories, and including optionals:
+                    $ uv sync --extra all
+
+                # Option 3/3, Or all mandatories, but including just specific  optional sub-groups:
+                    $ uv sync --extra dev --extra test
+
+
+    
+    B) I am building a new project;
+
+        B.1) Once in the project root, use the 'init' command to create the virtual environment and
+            important files like the pyproject.toml:
+
+            $ uv init
+
+        B.2) To add new packages with UV:
+
+            # Mandatory package:
+                $ uv add <package_name>
+
+            # Optional package for dev:
+                $ uv add --optional <sub-group> <package_name>
+                # E.g. $ uv add --optional dev ruff
+
+
+
+    C) Someone ask me for the requirements.txt file from the project I'm working on;
+
+        C.1) Ask them to clone the project's repository if (recommended) the pyproject.toml is there!
+
+        
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> HOW TO ADD NEW PACKAGES WITH UV:
+    /Python/Package-manager/uv.txt
+
+>> HOW TO REMOVE PACKAGES WITH UV:
+    /Python/Package-manager/uv.TXT
+

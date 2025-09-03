@@ -17,10 +17,10 @@ VIRTUAL ENVIRONMENT:
 
     >> Some Package Managers like UV, the virtual environment for each project managed by UV is
         automatically created:
-            /Python/03-libraries-packages-modules/uv.txt
+            /Python/Package-manager/uv.txt
 
                 >> But for more manual options, a good Package Manager is PIP:
-                    /Python/03-libraries-packages-modules/pip.txt
+                    /Python/Package-manager/pip.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

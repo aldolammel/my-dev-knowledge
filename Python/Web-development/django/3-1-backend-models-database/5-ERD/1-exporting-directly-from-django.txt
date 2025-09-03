@@ -14,18 +14,27 @@ EXPORTING ERD DIRECTLY FROM DJANGO:
     1) With the virtual env activated:
         
         >> Install django-extensions:
-            $ pip install django-extensions
-            or
-            $ uv add --dev django-extensions
+            
+            # Using UV:
+                $ uv add --optional dev django-extensions
+
+            # or use pip:
+                $ pip install django-extensions
+                # And then add manually this to the dev sub-group in pyproject.toml file!
+            
 
         >> And include the app to INSTALLED_APPS on Django settings!
             "django_extensions"
 
 
     2) Now, install the PyDotPlus for graph generation:
-        $ pip install pydotplus
-        or
-        $ uv add --dev pydotplus
+        
+        # Using UV:
+            $ uv add --optional dev pydotplus
+        
+        # Or use pip:
+            $ pip install pydotplus
+            # And then add manually this to the dev sub-group in pyproject.toml file!
 
 
     3) Generate ERD:

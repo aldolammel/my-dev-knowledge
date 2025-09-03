@@ -47,26 +47,45 @@ INSTALLING DJANGO:
                 
             2B.3) Installation:
 
-                >> The same for Ubuntu and Windows:
+                >> Based on SO:
 
-                    >> Update pip module:
-                        /Python/03-libraries-packages-modules/pip.txt
+                    >> For Ubuntu/Windows:
 
-                    >> Install Django:
-                        $ pip install django
+                        >> Update pip module:
+                            /Python/Package-manager/pip.txt
 
-                    >> Check the current django installed:
-                        $ python -m django --version
+                        >> Install Django:
+                            $ pip install django
 
-                    >> upgrade django if needed;
-                        $ python -m pip install --upgrade pip
+                        >> Check the current django installed:
+                            $ python -m django --version
+
+                        >> upgrade django if needed;
+                            $ python -m pip install --upgrade pip
+
+                    >> For Mac:
+
+                        xxxxxxxxxxxxxx
                 
 
-                Only for VSCode:
-                    # DjLint (html template formatter for django/jinja)
-                        $ pip install -U djlint
+                >> Linters and formatters:
+
+                    >> Python linter/formatter:
+                        
+                        >> Using Ruff:
+                            $ pip install ruff
+                            # And manually install the Ruff extension for your Code IDE.
+
+                        >> Or using XXX:
+                            xxxxxx
+                            xxx
                     
-                    # Install the DjLint extension for VSCode.
+                    >> Django linter/formatter:
+
+                        /Python/Web-development/django/Linter-and-formatter/djlint.txt
+                        
+                        
+
                     # Install the Django (by Baptiste) extension for VSCode.
                     # In VSCode, In Html's, change the language mode to 'Django-Html'
 

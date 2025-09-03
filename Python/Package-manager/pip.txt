@@ -1,6 +1,14 @@
 
 
-PIP (BUILT-IN MODULE)
+PYTHON PACKAGE MANAGEMENT: PIP (PYTHON BUILT-IN MODULE)
+
+
+    ATTENTION: Uv is much more efficient and modern than pip:
+                /Python/Package-manager/uv.txt
+
+
+    That said, let's go:
+
 
     >> It's a package manager for Python packages, or modules if you like. 
         Note: If you have Python version 3.4 or later, PIP is included by default.
@@ -36,4 +44,4 @@ PIP (BUILT-IN MODULE)
 
 
 >> FOR PIP ALTERNATIVE: UV (Modern Package Manager)
-    /Python/03-libraries-packages-modules/uv.txt
+    /Python/Package-manager/uv.txt
