@@ -1,0 +1,17 @@
+
+
+
+>> Using VSCode:
+
+    1) Install the Prettier extension!
+
+    2)  Edit your VSCode profile that you are using JavaScript and:
+
+        // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.tabSize": 2,
+            "editor.indentSize": "tabSize",
+            "editor.insertSpaces": true,
+            "editor.formatOnSave": true,
+        },

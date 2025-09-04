@@ -17,7 +17,7 @@ class RecipeAView(CreateView):  # This 'View' in classname is a convention.
     # Linking a model-class to the view:
     model = Recipe
 
-    fields = '__all__'
+    fields = '__all__'  # Avoid to use '__all__', so prefer to use ['field1', 'field2', ...]!
     template_name = 'recipes/detail.html'
     success_url = '/recipe-list'
 

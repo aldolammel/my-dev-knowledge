@@ -35,5 +35,18 @@ DJANGO > TEMPLATE LINTER AND FORMATER: DJLINT
             # Django template Linter and Formatter:
             [tool.djlint]
             profile="django"
+            max_line_length = 100
+            preserve_blank_lines = true
+            close_void_tags = true
+            format_css = true
+            format_js = false  # Prittier should take care of it!
         
         3) And manually install the DjLint extension for your Code IDE.
+
+        4) (Case VSCode) Check your Profile (Ctrl+Shift+P, and then 'Open User Settings (JSON)) and:
+
+            // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
+            "[javascript]": {
+                //"editor.defaultFormatter": "esbenp.prettier-vscode",  // DjLint should be set via /a_project/pyproject.toml
+                ...
+            },

@@ -1,0 +1,21 @@
+
+
+VSCODE: CONFIGURING PROFILES
+
+    Each profile has its preferences in a JSON file that can be accessed via VSCode interface using
+    the shortcut Ctrl+Shift+P, and then 'Open User Settings'.
+
+
+    Example of Profile flexibility:
+        /Code-editor-ide/vscode/1-install-and-first-steps/2025-vscode-aldo-profiles.png
+
+
+    >> Tip: make your default profile strong to be automatically used as base for other profiles.
+
+
+    >> My profile backups:
+        /Drive/Hardwares and Softwares/Coding-Tools/IDE-vscode/Profiles/
+
+
+
+    

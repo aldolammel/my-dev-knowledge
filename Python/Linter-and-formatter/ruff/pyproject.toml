@@ -1,0 +1,62 @@
+# This file is a model of Ruff configuration in pyproject.toml
+
+# [dependency-groups]
+# Don't use it 'coz it's not compactible with many tools!
+# That said, keep using [project.optional-dependencies].
+
+[project.optional-dependencies]
+dev = [
+    ...
+    "ruff>=0.12.11",
+]
+
+# Python Linter and Formatter:
+[tool.ruff]
+line-length = 100
+indent-width = 4
+target-version = "py312"  # Python version for better analysis
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false  # e.g. that comma right after the last element of an array.
+line-ending = "auto"  # automatically detect the appropriate line ending.
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`) codes by default. Unlike Flake8, Ruff
+# doesn't enable pycodestyle warnings (`W`) or McCabe complexity (`C901`) by default:
+select = [
+    "DJ",  # Django-specific rules
+    "E4",  # pycodestyle errors
+    "E7",
+    "E9",
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "Q",  # flake8-quotes.
+    #"UP",  # pyupgrade - automatically upgrade syntax for newer Python versions
+    "B",  # flake8-bugbear - find likely bugs and design problems
+    "C4",  # flake8-comprehensions - better list/set/dict comprehensions
+    "SIM",  # flake8-simplify - simplify code
+]
+ignore = [
+    "DJ001",  # Avoid using null=True on string-based fields
+    "DJ007",  # Avoid to use fields = "__all__", prefering to list array with fileds.
+    "E501",  # Line too long (handled by formatter)
+    "B904",  # Within an `except` clause, raise exceptions with `raise ... from err`
+]
+fixable = ["ALL"]  # Allow fix for all enabled rules (when `--fix`) is provided.
+unfixable = [
+    "B",  # Avoid trying to fix flake8-bugbear (`B`) violations.
+]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"  # Allow unused variables when underscore-prefixed.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["E402"]
+"**/migrations/*" = ["E501", "DJ001"]  # Migrations can have long lines and null=True
+"**/settings/*" = ["F405"]  # Allow star imports in settings
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"

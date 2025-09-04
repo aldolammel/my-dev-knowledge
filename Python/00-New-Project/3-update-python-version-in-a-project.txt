@@ -1,0 +1,29 @@
+
+
+PYTHON: KEY POINTS FOR UPDATE THE PYTHON VERSION IN AN EXISTENT PROJECT
+
+    >> Check the virtual environment variables!
+        Probably exist some with the old python version explicited. 
+
+    >> Check the pyproject.toml file!
+        There are settings there specifying the Python version at least for dev dependencies!
+
+    >> xxxxxxxxxxxxxxxxxxxx
+
+    >> xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    >> How to update:
+
+        x) xxxxxxxxxxxxxxxxx
+
+        x) xxxxxxxxxxxxxxxxx
+        
+        x) xxxxxxxxxxxxxxxxx
+        
+        x) xxxxxxxxxxxxxxxxx
+        
+        x) xxxxxxxxxxxxxxxxx
+        
+        x) xxxxxxxxxxxxxxxxx
+        
+

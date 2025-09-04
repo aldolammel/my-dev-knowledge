@@ -1,0 +1,14 @@
+
+
+LINTER TOOL: WHAT IS IT
+
+    Linting is a form of static code analysis that identifies potential issues in code, including
+    stylistic problems, potential bugs, and suspicious constructs.
+
+    >> Linters for Python:
+        /Python/Linter-and-formatter/
+
+    >> Linters for JavaScript:
+        /JavaScript/Linter-and-formatter/
+
+    >> xxxxxx

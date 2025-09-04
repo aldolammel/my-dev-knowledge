@@ -14,7 +14,7 @@ class ReviewForm(forms.ModelForm):  # That 'Form' in the classname is a conventi
         # Defining with models.py class will be the model for this forms.py class:
         model = Review()
         # To show all fields declared in Review models.py class:
-        fields = '__all__'
+        fields = '__all__'  # Avoid to use '__all__', so prefer to use ['field1', 'field2', ...]!
         # If you want to select with fields should be shown:
         # fields = ['review_text', 'rating']
         # If you want to show all, except one or other field:

@@ -8,7 +8,7 @@ class MovieForm(forms.ModelForm):
         # Connecting the form with the model/table it will populate:
         model = Movie
         # Bring all class attributes/database columns that will be worked by form:
-        fields = '__all__'
+        fields = '__all__'  # Avoid to use '__all__', so prefer to use ['field1', 'field2', ...]!
 
 
 """

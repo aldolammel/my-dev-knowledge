@@ -1,0 +1,15 @@
+
+
+CSS LINTER/FORMATTER: PRETTIER
+
+    1) ??? Install any extension for Vscode?
+
+    2) Add to your profile on VScode:
+
+        "[css]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.tabSize": 2,
+            "editor.formatOnSave": true,
+        },
+        "css.autoValidation": "Save",
+

@@ -3,6 +3,11 @@
 INSTALLATION ROADMAP BY PROJECT TYPE:
 
 
+    >> PYTHON BASIC: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> Update Python version in an existent product: /Python/00-New-Project/3-update-python-version-in-a-project.txt
+
+
     >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
         >> with Django:

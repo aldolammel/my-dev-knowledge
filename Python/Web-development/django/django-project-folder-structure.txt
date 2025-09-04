@@ -30,6 +30,7 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │   │   ├── __init__.py
             │   │   ├── admin.py       # All CMS needs of this specific app are defined here.
             │   │   ├── apps.py        # Where this specific app's name is defined for the entire system.
+            │   │   ├── forms.py       # Form classes linked with some models.py or receiving data from some views.py.
             │   │   ├── models.py      # All database schema for this specific app is defined here.
             │   │   ├── serializers.py # Where this app builds its APIs;
             │   │   ├── tests.py       # xxxxx
@@ -86,6 +87,7 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │   │   ├── __init__.py    
             │   │   ├── admin.py       
             │   │   ├── apps.py        
+            │   │   ├── forms.py
             │   │   ├── models.py      
             │   │   ├── serializers.py  
             │   │   ├── tests.py       

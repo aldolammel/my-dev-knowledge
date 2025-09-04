@@ -3,10 +3,10 @@
 
 DJANGO FORMS:
 
-    >> If you're developing a web app that accepts user input from the front-end, 
-        you'll need to understand and use forms (forms.py). Django provides a variety of 
-        tools and libraries to help you build forms to accept input from site visitors and then 
-        process and respond to the input.
+    >> If you're developing a web app that accepts user input from the front-end, or even to custom
+        CMS/Admin forms, you'll need to understand and use forms (forms.py). Django provides a 
+        variety of tools and libraries to help you build forms to accept input from site visitors
+        and then process and respond to the input.
         
         That said: a forms.py file by itself DOESN'T input anything into the database.
                     If a Form class apparently is inputting data, it's because that
