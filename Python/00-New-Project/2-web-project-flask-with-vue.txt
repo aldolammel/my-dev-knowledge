@@ -5,18 +5,30 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT
 
     >> Back-end:
 
-        1) Python installation (if needed);
+        1) IDE, language setup:
+            >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
+            >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+
+        2) IDE, framework setup:
+            >> VSCode:  /xxxxxxxxxxxxxxxxxx_flask.txt
+            >> PyCharm: /xxxxxxxxxxxxxxxxxxxxxxxx_flask.txt
+        
+        3) Python installation (if needed);
             /Python/01-python-installation/
         
-        2) Virtual Environment and Flask installation (and its dependencies):
+        4) Virtual Environment and Flask installation (and its dependencies):
             /Python/Web-development/flask/xxxxxxxxx
 
     >> Front-end:
 
-        3) Vue installation (and its dependencies):
+        5) IDE, framework setup:
+            >> VSCode:  /Web-Development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
+            >> PyCharm: /Web-Development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
+
+        6) Vue installation (and its dependencies):
             /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
-        4) (Optional) CSS Framework:
+        7) (Optional) CSS Framework:
 
             >> Bootstrap:
                 /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/

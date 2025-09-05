@@ -1,0 +1,15 @@
+
+
+VUE > TEMPLATE LINTER: ESLINT
+
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+    Checks: xxxxxxxxxxxxxxxxxxxxx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    >> INSTALLING AND INTEGRATION:
+
+        /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/eslint-plugin-vue/installation.txt
+
+        

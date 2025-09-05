@@ -1,0 +1,14 @@
+
+
+TYPE-CHECKER FOR DJANGO: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-typechecker.txt
+
+    >> Options:
+
+        >> django-stubs:
+            /Python/Web-development/django/Linter-and-formatter-and-typechecker/django-stubs.txt
+
+        >> xxxxxxxxx:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

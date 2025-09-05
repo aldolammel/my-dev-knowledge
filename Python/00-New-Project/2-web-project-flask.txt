@@ -6,12 +6,20 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT FLASK (BACK AND FRONT-
     >> SETUP:
 
         >> Back-end + Front-end:
+
+            1) IDE, language setup:
+                >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
+                >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+
+            2) IDE, framework setup:
+                >> VSCode:  /xxxxxxxxxxxxxxxxxx_flask.txt
+                >> PyCharm: /xxxxxxxxxxxxxxxxxxxxxxxx_flask.txt
     
-            1) Virtual Environment and Flask installation:
+            3) Virtual Environment and Flask installation:
                 /Python/Web-development/flask/xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-            2) (Optional) Front-end CSS Framework:
+            4) (Optional) Front-end CSS Framework:
 
                 >> Bootstrap:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/

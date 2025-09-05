@@ -1,0 +1,37 @@
+
+
+PYTHON LANGUAGE > LINTER AND FORMATER: RUFF
+
+
+    Ruff is a high-performance linter and code formatter for Python, developed by Astral. It's 
+    notable for its exceptional speed, largely attributed to being written in Rust. 
+
+    Checks: Python syntax errors, import sorting, code style (PEP 8), bugs, complexity, etc.
+
+    Tip: Ruff is developed by the same company of the UV Package manager, so both are completely
+        integrated.
+            /Python/Package-manager/uv.txt
+
+
+
+    >> INSTALLING AND INTEGRATION:
+        /Python/Linter-and-formatter-and-typechecker/ruff/installation.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+
+    
+    >> HOW TO CHECK CODE ERRORS:
+        $ uv run ruff check
+
+
+    >> HOW TO FIX CODE ERRORS AUTOMATICALLY:
+        $ uv run ruff check --fix
+
+
+    >> HOW TO FIX CODE FORMATTING:
+        $ uv run ruff format                      # Format all files in Django-project-folder **.
+        $ uv run ruff format path/to/code/        # Format all files in `path/to/code` (and any subdirectories).
+        $ uv run ruff format path/to/file.py      # Format a single file.
+
+        (**) Except those files in folders like .venv/, dist/, build/, .vscode/, .git/, etc...

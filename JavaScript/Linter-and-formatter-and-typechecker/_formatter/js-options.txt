@@ -1,0 +1,14 @@
+
+
+FORMATTER FOR JAVASCRIPT: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> Prettier:
+            /JavaScript/Linter-and-formatter-and-typechecker/prettier.txt
+
+        >> xxxxx:
+            /xxxxx

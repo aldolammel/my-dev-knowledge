@@ -1,0 +1,17 @@
+
+
+TYPE-CHECKER FOR PYTHON: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-typechecker.txt
+
+    >> Options:
+
+        >> MyPy:
+            /Python/Linter-and-formatter-and-typechecker/mypy/
+
+        >> PyRight:
+            /Python/Linter-and-formatter-and-typechecker/PyRight/
+
+        >> Pyre:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

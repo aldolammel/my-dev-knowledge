@@ -1,0 +1,39 @@
+
+
+VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
+
+    PRE.1) Assuming you already got a virtual environment for the project, active it:
+        /Python/02-virtual-environment/
+
+    PRE.2) Assuming you already installed the ESLint for JavaScript/TypeScript:
+        /JavaScript/Linter-and-formatter-and-typechecker/eslint.txt
+
+    1) Install the eslint-plugin-vue as development???? dependency:
+        
+        >> Using UV:
+            $ uv add --optional dev???? xxxxxxxxxxxxxxxxxxx
+            # Check if everything's right on the project's pyproject.toml file!
+        
+        >> Or using PIP:
+            # Install it:
+                $ pip install xxxxxxxxx
+            # And add this module as dev dependency in pyproject.toml (e.g.):
+                ...
+                [project.optional-dependencies]
+                ????dev = [
+                    ...
+                    "xxxxxxxxxxx",
+                ]
+
+    2) Still in pyproject.toml file, add these lines:
+        ???????
+    
+    3) And manually install the ESLint extension (by Microsoft) for your Code IDE.
+
+    4) (Case VSCode) Check your Profile (Ctrl+Shift+P, and then 'Open User Settings (JSON)) and:
+
+        // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
+        "[javascript]": {
+            "editor.defaultFormatter": "????????????????????????",
+            ...
+        },

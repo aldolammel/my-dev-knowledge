@@ -1,0 +1,15 @@
+
+
+Prettier (Frontend files):
+
+.js, .vue, .css files (your frontend code)
+JavaScript in Django templates (<script> tags)
+
+
+
+
+
+
+>> INTEGRATION:
+    
+    /JavaScript/Linter-and-formatter-and-typechecker/prettier/integration.txt

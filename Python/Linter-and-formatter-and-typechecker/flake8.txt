@@ -1,0 +1,10 @@
+
+
+    Attention:
+        Ruff already replace the flake8 tasks!
+
+
+    That said, let's go:
+
+
+    /Python/Linter-and-formatter-and-typechecker/flake8/

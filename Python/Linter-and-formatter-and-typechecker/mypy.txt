@@ -1,0 +1,28 @@
+
+
+PYTHON LANGUAGE > TYPE CHECKER: MYPY
+
+
+    By Microsoft, it's an optional static type checker for Python that aims to combine the benefits 
+    of dynamic (or "duck") typing and static typing. Mypy combines the expressive power and
+    convenience of Python with a powerful type system and compile-time type checking.
+
+    https://mypy-lang.org/
+
+
+    >> Installing:
+        
+        1) In your IDE, install the MyPy Type Checker extension (by Microsoft);
+
+        2) (Optional) Install the django-stubs for better Django type hints:
+            /Python/Linter-and-formatter-and-typechecker/django-stubs.txt
+    
+
+    >> Integration:
+
+        PRE) You already got the pyproject.toml in your project:
+            /Python/Web-development/pyproject.toml
+
+
+        1) Include these lines in your pyproject.toml:
+            /Python/Linter-and-formatter-and-typechecker/mypy/pyproject.toml

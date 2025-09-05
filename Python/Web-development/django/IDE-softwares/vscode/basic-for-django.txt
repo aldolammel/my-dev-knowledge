@@ -1,0 +1,43 @@
+
+
+IDE FOR DJANGO PROJECT: VSCODE
+
+
+    >> Basic for run Django:
+
+
+        PRE.1) Already have the basic for Django language, Python:
+
+            /Python/IDE-softwares/vscode/basic-for-python.txt
+
+
+        PRE.2) Django framework:
+
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+
+
+
+        1) xxxxxxx (xxxxx):
+
+            xxxxxxx.
+
+            Download the extension!
+        
+
+        2) xxxxx
+
+        
+        5) Type-Checker (MyPy by Microsoft + django-stubs plugin):
+
+            /Python/Web-development/django/Linter-and-formatter-and-typechecker/django-stubs.txt
+
+        
+        6) Linter (xxxxxxxxx):
+
+            /xxxxx
+
+
+        7) Formatter (xxxxx):
+
+            /Pxxxxxxxx
+            

@@ -1,0 +1,37 @@
+
+
+TYPE-CHECKER TOOL: WHAT IS IT
+
+    Correctness & Reliability!
+
+    It analyzes your code to ensure you are not performing invalid operations, like adding a string 
+    to a number or calling a method that doesn't exist on an object. This happens before the code
+    runs (at compile time or during editing).
+
+    >> Primary Purpose: 
+        To verify that the values and data structures in your program are used in a consistent and
+        valid way according to their defined types.
+
+    >> Output:
+        Reports errors (blocks execution)!
+
+    >> Tool's rules examples:
+        - Argument of type 'string' is not assignable to parameter of type 'number';
+        - Property 'toUpperCase' does not exist on type 'number';
+        - Object is possibly 'null';
+
+    >> Type-checker for Python:
+        /Python/Linter-and-formatter-and-typechecker/
+
+    >> Type-checker for JavaScript:
+        /JavaScript/Linter-and-formatter-and-typechecker/
+
+    >> xxxxxx
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> More about:
+
+    Formatter tools: /Programming-Concepts/tool-formatter.txt
+    Linter tools:    /Programming-Concepts/tool-linter.txt

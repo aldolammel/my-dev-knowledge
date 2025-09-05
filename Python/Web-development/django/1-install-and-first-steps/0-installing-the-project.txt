@@ -82,7 +82,7 @@ INSTALLING DJANGO:
                     
                     >> Django linter/formatter:
 
-                        /Python/Web-development/django/Linter-and-formatter/djlint.txt
+                        /Python/Web-development/django/Linter-and-formatter-and-typechecker/djlint.txt
                         
                         
 

@@ -1,0 +1,5 @@
+
+
+
+
+copy the logic of /Python/IDE-softwares/vscode/basic-for-python.txt

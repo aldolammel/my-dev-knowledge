@@ -1,0 +1,71 @@
+
+
+IDE FOR PYTHON PROJECT: VSCODE
+
+
+    >> Basic for run Python:
+
+
+        PRE.1) Python interpreter:
+
+            /Python/00-New-Project/1-new-project.txt
+
+
+        PRE.2) IDE VSCode:
+            
+            Download the IDE:
+            https://code.visualstudio.com
+
+
+        1) Language support (Python by Microsoft):
+
+            Make VSCode to support Python language, providing access points and integrations for
+            other extensions, offering support for intellisense, debugging, formatting, linting,
+            code navigation, refactoring, variable explorer, test explorer, and more.
+
+            Download the extension!
+        
+
+        2) Language server (Pylance by Microsoft):
+            
+            Language Server for Python that provides a deep Python language intelligence in VSCode:
+            - Code Autocompletion (IntelliSense)
+            - Function signature help
+            - Go-to-Definition
+            - Find all References
+            - Real-time error highlighting directly in the editor
+
+            Download the extension!
+
+
+        3) Python Debugger (by Microsoft):
+
+            Python Debugger provides a seamless debugging experience by allowing you to set
+            breakpoints, step through code, inspect variables, and perform other essential debugging
+            tasks.
+
+            Download the extension!
+
+
+        4) Python Environments (by Microsoft):
+
+            This extension provides unique support for specifying environments for specific files,
+            entire Python folders, or projects, including multi-root and mono-repo scenarios.
+
+            Download the extension!
+
+        
+        5) Type-Checker (MyPy by Microsoft):
+
+            /Python/Linter-and-formatter-and-typechecker/mypy.txt
+
+        
+        6) Linter (Ruff by Astral):
+
+            /Python/Linter-and-formatter-and-typechecker/ruff.txt
+
+
+        7) Formatter (Ruff by Astral):
+
+            /Python/Linter-and-formatter-and-typechecker/ruff.txt
+            
