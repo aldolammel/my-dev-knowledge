@@ -147,13 +147,16 @@
                 >> CSS Pre-processors (Vite built-in solutions):
                     /Web-Development/frontend/CSS/scss/vue-integration.txt
                 
-                >> Linter (Vite needs plugins to run one):
+                >> Linter, Formatter, and Type-checker:
                     
-                    >> ESLint:
-                        /Web-Development/frontend/Vue/3-plugins/eslint/installing-with-vite.txt
+                    >> Linter for Vue:
+                        /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/_linter/vue-options.txt
 
-                        >> How to use execute the linter / How to check code with it:
-                            /Web-Development/frontend/Vue/3-plugins/eslint/using-eslint.txt
+                    >> Formatter for Vue: 
+                        /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/_formatter/vue-options.txt
+
+                    >> Type-checker for Vue:
+                        /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -210,6 +213,11 @@
                     # Check what is locally installed:
                         $ npm list
                 
+                
+            >> Type-checker for Vue:
+                /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
+            
+
             >> Run the Vue service:
                 # On the vue-project-folder:
                     $ npm run serve

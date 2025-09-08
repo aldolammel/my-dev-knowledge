@@ -1,0 +1,44 @@
+
+
+INSTALLATION ROADMAP BY PROJECT TYPE:
+
+
+    >> UPDATE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> Update JS version in an existent product: /xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        >> Update Vue version in an existent product: /Web-Development/frontend/Vue/0-new-project/update-vue-version.txt
+
+        >> Update XXxxxX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    >> JS > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        >> with Vue:
+
+            >> Vue as Front-end: /Web-Development/frontend/Vue/0-new-project/web-project-vue-only-front.txt
+
+            >> Vue as Fullstack: /Web-Development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.txt
+
+            >> Back-end <SOME_JS_FRAMEWORK> + Front-end Vue.js: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            >> Back-end <ANOTHER_JS_FRAMEWORK> + Front-end Vue: /xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> with Xxxxx:
+
+            >> xxxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt
+
+            >> xxxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt
+
+            >> xxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt  
+        
+
+    >> JS > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+        >> with Xxxxx:
+
+            >> xxxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt
+            
+        >> with Xxxxx:
+
+            >> xxxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt

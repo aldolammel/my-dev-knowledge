@@ -1,1 +1,28 @@
-/Python/00-New-Project/2-web-project-django-with-react.txt
+
+
+PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END REACT:
+
+
+    >> Back-end:
+
+        1) Python installation (if needed);
+            /Python/01-python-installation/
+        
+        2) Virtual Environment and Django installation (and its dependencies):
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+
+    >> Front-end:
+        
+        3) React installation (and its dependencies):
+            /Web-Development/frontend/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        4) (Optional) CSS Framework:
+
+            >> Bootstrap:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+            >> Tailwind:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+            >> Bulma:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/

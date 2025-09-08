@@ -90,7 +90,7 @@
 
 
 
-            1.4) Still in the config-folder, edit the main urls.py file:
+            1.4) Still in the core folder, edit the main urls.py file:
 
                 from django.conf.urls.i18n import i18n_patterns
                 from django.contrib import admin
@@ -123,8 +123,18 @@
 
                 /Python/Web-development/django/8-translate-and-internationalization/language-file-example.py
                 /Python/Web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
-                
 
+
+            1.7) (Optional????) IDE configs:
+
+                >> If VSCode:
+
+                    >> In .vscode/settings.json, add these lines:
+
+                        // DJANGO-SPECIFIC CONFIGURATIONS:
+                        "django.i18n": true, // Activates the i18n features for snippets (eg.: _(""))
+                
+                
       
         2) Defining which text-contents are translatable: - - - - - - - - - - - - - - - - - - - - - 
 

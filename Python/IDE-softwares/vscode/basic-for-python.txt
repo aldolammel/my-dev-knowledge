@@ -17,7 +17,21 @@ IDE FOR PYTHON PROJECT: VSCODE
             https://code.visualstudio.com
 
 
-        1) Language support (Python by Microsoft):
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        
+        1) VSCode project settings:
+
+            1.1) In the project folder, create the .vscode folder;
+            1.2) In .vscode folder, create the file 'settings.json';
+            1.3) In that file, apply these lines:
+                /Python/IDE-softwares/vscode/examples/settings.json
+
+            # Make sure your .gitignore file is not blocking the .vscode folder and its content
+                in project repository!
+
+        
+        2) Language support (Python by Microsoft):
 
             Make VSCode to support Python language, providing access points and integrations for
             other extensions, offering support for intellisense, debugging, formatting, linting,
@@ -26,7 +40,7 @@ IDE FOR PYTHON PROJECT: VSCODE
             Download the extension!
         
 
-        2) Language server (Pylance by Microsoft):
+        3) Language server (Pylance by Microsoft):
             
             Language Server for Python that provides a deep Python language intelligence in VSCode:
             - Code Autocompletion (IntelliSense)
@@ -38,7 +52,7 @@ IDE FOR PYTHON PROJECT: VSCODE
             Download the extension!
 
 
-        3) Python Debugger (by Microsoft):
+        4) Python Debugger (by Microsoft):
 
             Python Debugger provides a seamless debugging experience by allowing you to set
             breakpoints, step through code, inspect variables, and perform other essential debugging
@@ -47,7 +61,7 @@ IDE FOR PYTHON PROJECT: VSCODE
             Download the extension!
 
 
-        4) Python Environments (by Microsoft):
+        5) Python Environments (by Microsoft):
 
             This extension provides unique support for specifying environments for specific files,
             entire Python folders, or projects, including multi-root and mono-repo scenarios.
@@ -55,17 +69,21 @@ IDE FOR PYTHON PROJECT: VSCODE
             Download the extension!
 
         
-        5) Type-Checker (MyPy by Microsoft):
+        6) Type-Checker (MyPy by Microsoft):
 
             /Python/Linter-and-formatter-and-typechecker/mypy.txt
 
         
-        6) Linter (Ruff by Astral):
+        7) Linter (Ruff by Astral):
 
             /Python/Linter-and-formatter-and-typechecker/ruff.txt
 
 
-        7) Formatter (Ruff by Astral):
+        8) Formatter (Ruff by Astral):
 
             /Python/Linter-and-formatter-and-typechecker/ruff.txt
+
+
+        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
+                            Python linter/formatter/type-checker the project must use!
             

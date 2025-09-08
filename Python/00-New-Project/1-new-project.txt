@@ -3,29 +3,33 @@
 INSTALLATION ROADMAP BY PROJECT TYPE:
 
 
-    >> PYTHON BASIC: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >> UPDATE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> Update Python version in an existent product: /Python/00-New-Project/3-update-python-version-in-a-project.txt
+
+        >> Update Django version in an existent product: /Python/Web-development/django/0-new-project/update-django-version.txt
+
+        >> Update XXX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
     >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
         >> with Django:
 
-            >> Django as Back and Front-end: /Python/00-New-Project/2-web-project-django.txt
+            >> Django as Back and Front-end: /Python/Web-development/django/0-new-project/web-project-django-only.txt
 
-            >> Back-end Django + Front-end Vue.js: /Python/00-New-Project/2-web-project-django-with-vue.txt
+            >> Back-end Django + Front-end Vue.js: /Python/Web-development/django/0-new-project/web-project-django-with-vue.txt
 
-            >> Back-end Django + Front-end React: /Python/00-New-Project/2-web-project-django-with-react.txt
+            >> Back-end Django + Front-end React: /Python/Web-development/django/0-new-project/web-project-django-with-react.txt
 
         >> with Flask:
 
-            >> Flask as Back and Front-end: /Python/00-New-Project/2-web-project-flask.txt
+            >> Flask as Back and Front-end: /Python/Web-development/flask/0-new-project/web-project-flask-only.txt
 
-            >> Back-end Flask + Front-end Vue.js: /Python/00-New-Project/2-web-project-flask-with-vue.txt
+            >> Back-end Flask + Front-end Vue.js: /Python/Web-development/flask/0-new-project/web-project-flask-with-vue.txt
         
-            >> Back-end Flask + Front-end React: /Python/00-New-Project/2-web-project-flask-with-react.txt    
-        
+            >> Back-end Flask + Front-end React: /Python/Web-development/flask/0-new-project/web-project-flask-with-react.txt 
+
 
     >> PYTHON > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     

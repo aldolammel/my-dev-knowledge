@@ -1,0 +1,26 @@
+
+
+ESLINT PLUGIN VUE > INTEGRATION WITH THE IDE: VSCODE
+
+    PRE) Assuming you have done first the basic ESLint configs on .vscode/settings.json:
+        /JavaScript/Linter-and-formatter-and-typechecker/eslint/for-vscode-configs.txt
+
+    1) In .vscode/settings.json file, include Vue as ESLint valid language:
+
+        // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
+        "eslint.validate": [
+            "javascript",
+            "vue"
+        ],
+
+        // CUSTOM CODING BEHAVIORS > VUE:
+        "[vue]": {
+            "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+            "editor.formatOnSave": true
+        },
+
+        // CUSTOM FILES:
+        "files.associations": {
+            ...
+            "*.vue": "vue"
+        },

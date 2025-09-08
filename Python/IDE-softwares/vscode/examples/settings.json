@@ -1,0 +1,35 @@
+{
+    /*
+        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+    */
+    // PROJECT SETTINGS:
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "[python]": {
+        "editor.rulers": [
+            100
+        ],
+    },
+    // PYTHON SETTINGS:
+    "python.defaultInterpreterPath": "./.venv/bin/python3",
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.completeFunctionParens": true,
+    // FILE ASSOCIATIONS:
+    "files.associations": {
+        "*.json": "jsonc",
+    },
+    // FILE EXCLUSIONS:
+    "files.exclude": {
+        "**/__pycache__": false,
+        "**/*.pyc": false,
+        "**/.pytest_cache": false,
+        "**/venv": false,
+        "**/.venv": false,
+    },
+    // SEARCH EXCLUSIONS:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+}

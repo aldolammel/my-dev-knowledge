@@ -1,1 +1,1 @@
-/JavaScript/00-New-Project/new-project.txt
+/JavaScript/00-New-Project/

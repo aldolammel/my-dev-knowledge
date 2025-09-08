@@ -42,7 +42,7 @@
             .idea/tasks.xml
 
             Find .vscode manually and:
-            .vscode/*
+            #.vscode/*  # For projects using the vscode settings.json!
             #!.vscode/settings.json
             #!.vscode/tasks.json
             #!.vscode/launch.json

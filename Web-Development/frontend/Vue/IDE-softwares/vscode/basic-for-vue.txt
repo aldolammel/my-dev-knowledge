@@ -1,5 +1,93 @@
 
 
+IDE FOR VUE PROJECT: VSCODE
 
 
-copy the logic of /Python/IDE-softwares/vscode/basic-for-python.txt
+    >> Basic for run Vue:
+
+
+        PRE.1) Assuming you have done this VSCode basic roadmap for the project language:
+            
+            >> If JavaScript:
+                >> Or with vanilla JavaScript:
+                    /JavaScript/IDE-softwares/vscode/basic-for-javascript.txt
+                >> Or with TypeScript:
+                    /JavaScript/IDE-softwares/vscode/basic-for-typescript.txt
+
+            >> If Python:
+                /Python/IDE-softwares/vscode/basic-for-python.txt
+
+        
+        PRE.2) Assuming the Backend framework basic project setup is done:
+
+            >> If no back-end or Vue is the back-end, skip it!
+
+            >> If Django:
+                /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        1) VSCode project settings:
+
+            1.1) In the project folder, open this file: .vscode/settings.json;
+            1.2) In that file, apply these lines:
+                /Web-Development/frontend/Vue/IDE-softwares/vscode/examples/settings.json
+
+            # Make sure your .gitignore file is not blocking the .vscode folder and its content
+                in project repository!
+
+
+        2)  Language support (Vue Official by Vue):
+
+            Make VSCode to support the JavaScript framework Vue.
+        
+            Download the extension!
+
+        
+        x) Type-Checker:
+
+            /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
+
+        
+        x) Linter:
+
+            >> For projects Single-File-Components (eslint-plugin-vue):
+                /Web-Development/frontend/Vue/Linter-and-formatter-typechecker/eslint-plugin-vue/installation.txt
+
+            >> For NOT SFC projects (<solution_name>):
+                /xxxxxxxxxxxxxx
+
+
+        x) Formatter (Prettier):
+
+            /JavaScript/Linter-and-formatter-and-typechecker/prettier.txt
+
+        
+        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
+                            Vue and (JS or TS) linter/formatter/type-checker the project must use!
+            
+
+- - - 
+
+
+>> Keep in mind which CSS Framework you wanna use:
+
+    >> Or Bootstrap:
+        /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+    >> Or Tailwind:
+        /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+    >> Or Bulma:
+        /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+
+
+>> Keep in mind which CSS Language you wanna use:
+
+    >> Or SCSS/SASS:
+        /Web-Development/frontend/CSS/scss/
+
+    >> Or Less:
+        /Web-Development/frontend/CSS/less/

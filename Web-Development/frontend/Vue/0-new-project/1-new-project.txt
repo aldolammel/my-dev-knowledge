@@ -1,0 +1,9 @@
+
+
+VUE PROJECTS: ROADMAPS
+    
+    >> Strong JavaScript projects:
+        /JavaScript/00-New-Project/1-new-project.txt
+
+    >> Strong Python projects:
+        /Python/00-New-Project/1-new-project.txt

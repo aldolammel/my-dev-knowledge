@@ -6,22 +6,25 @@ IDE FOR DJANGO PROJECT: VSCODE
     >> Basic for run Django:
 
 
-        PRE.1) Already have the basic for Django language, Python:
-
-            /Python/IDE-softwares/vscode/basic-for-python.txt
-
-
-        PRE.2) Django framework:
-
-            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+        PRE.1) Assuming you have done this VSCode basic roadmap for Python:
+                /Python/IDE-softwares/vscode/basic-for-python.txt
 
 
+        PRE.2) Assuming the Django basic project setup is done:
+                /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
 
-        1) xxxxxxx (xxxxx):
 
-            xxxxxxx.
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            Download the extension!
+
+        1) VSCode project settings:
+
+            1.1) In the project folder, open this file: .vscode/settings.json;
+            1.2) In that file, apply these lines:
+                /Python/Web-development/django/IDE-softwares/vscode/examples/settings.json
+
+            # Make sure your .gitignore file is not blocking the .vscode folder and its content
+                in project repository!
         
 
         2) xxxxx
@@ -40,4 +43,8 @@ IDE FOR DJANGO PROJECT: VSCODE
         7) Formatter (xxxxx):
 
             /Pxxxxxxxx
+
+
+        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
+                            Django linter/formatter/type-checker the project must use!
             

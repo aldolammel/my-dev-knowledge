@@ -1,9 +1,8 @@
 
 
-PYTHON: KEY POINTS FOR UPDATE THE PYTHON VERSION IN AN EXISTENT PRODUCT
+DJANGO: KEY POINTS FOR UPDATE THE DJANGO VERSION IN AN EXISTENT PRODUCT
 
-    >> Check the virtual environment variables!
-        Probably exist some with the old python version explicited. 
+    >> xxxxx
 
     >> Check the pyproject.toml file!
         There are settings there specifying the Python version at least for dev dependencies!

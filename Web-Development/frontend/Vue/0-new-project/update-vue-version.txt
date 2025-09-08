@@ -1,9 +1,8 @@
 
 
-PYTHON: KEY POINTS FOR UPDATE THE PYTHON VERSION IN AN EXISTENT PRODUCT
+VUE: KEY POINTS FOR UPDATE THE VUE VERSION IN AN EXISTENT PRODUCT
 
-    >> Check the virtual environment variables!
-        Probably exist some with the old python version explicited. 
+    >> xxxxx
 
     >> Check the pyproject.toml file!
         There are settings there specifying the Python version at least for dev dependencies!
