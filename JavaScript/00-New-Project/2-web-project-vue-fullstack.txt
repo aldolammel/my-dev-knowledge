@@ -1,1 +1,1 @@
-/Web-Development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.txt
+/JavaScript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.txt

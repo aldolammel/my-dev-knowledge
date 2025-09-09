@@ -1,4 +1,0 @@
-
-
-Look it here:
-    /Web-Development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/menu-dynamic/

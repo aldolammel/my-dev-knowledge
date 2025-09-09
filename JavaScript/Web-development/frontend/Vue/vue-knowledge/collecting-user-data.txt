@@ -1,0 +1,4 @@
+
+
+HOW TO COLLECT USER DATA:
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-model.txt

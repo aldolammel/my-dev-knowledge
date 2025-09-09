@@ -1,4 +1,0 @@
-
-
-LABEL CLICKABLE:
-    /Web-Development/frontend/Vue/vue-knowledge/label-clickable.html

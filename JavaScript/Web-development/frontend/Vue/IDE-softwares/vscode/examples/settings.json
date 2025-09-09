@@ -1,0 +1,33 @@
+{
+    /*
+        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+    */
+    // PROJECT SETTINGS:
+    //...
+    // BACKEND SETTINGS:
+    //...
+    // VUE SETTINGS:
+    "[vue]": {
+        //"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+    },
+    // FILE ASSOCIATIONS:
+    "files.associations": { // Tell VSCode how to treat files based on patterns.
+        //...
+        "*.vue": "vue",
+    },
+    // FILE EXCLUSIONS:
+    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+        //...
+        // "**/node_modules": true,
+        // "**/dist": true,
+    },
+    // SEARCH EXCLUSIONS:
+    "search.exclude": { // Files/folders to hide from the VSCode searchings.
+        //...
+        "**/node_modules": true,
+        "**/dist": true,
+    },
+}

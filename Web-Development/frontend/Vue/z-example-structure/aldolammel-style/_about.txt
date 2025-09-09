@@ -1,4 +1,0 @@
-
-
-VUE PROJECT FOLDER STRUCTURE:
-    /Web-Development/frontend/Vue/vue-knowledge/1-vue-structure.txt

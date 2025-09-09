@@ -53,7 +53,7 @@ API SOLUTION: AXIOS
         >> Integrations:
 
             >> For Vue.js:
-                /Web-Development/frontend/Vue/3-component-libraries/axios/axios-integration-with-vue.txt
+                /JavaScript/Web-development/frontend/Vue/3-component-libraries/axios/axios-integration-with-vue.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

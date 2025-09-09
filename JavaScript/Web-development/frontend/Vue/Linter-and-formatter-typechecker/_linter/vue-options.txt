@@ -1,0 +1,17 @@
+
+
+LINTER FOR VUE: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-linter.txt
+
+    >> Options:
+
+        >> ESLint Vue plugin:
+            /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/eslint-plugin-vue.txt
+
+        >> xxxxx:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        >> xxxxx:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

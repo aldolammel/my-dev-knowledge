@@ -1,0 +1,32 @@
+
+
+BUILT-TOOLS FOR VUE.JS:
+
+    
+    >> Vite (New standard, faster, modern, same creator of Vue.js)
+
+        - It's NOT a framework, but a CLI (command line interface);
+        - Since 2024, Vue.js is replacing Vue-CLI by Vite;
+
+
+    >> Vue-CLI (Old standard)
+
+        - It uses Webpack under the hood (slower);
+        - 2025, it still works but no longer recommended for new projects;
+
+
+    >> Nuxt.js (for SSR/SSG)
+
+        - Uses Vite (or webpack) depending on configuration.
+        - A meta-framework for Vue with built-in routing, state management, and SSR.
+
+
+
+
+
+>> GET TO KNOW HOW THE VUE STRUCTURE WORKDS:
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue_structure.png
+
+
+>> INSTALL A VUE PROJECT:
+    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt

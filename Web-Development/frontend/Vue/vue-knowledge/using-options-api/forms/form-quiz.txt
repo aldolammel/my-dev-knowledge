@@ -1,4 +1,0 @@
-
-
-QUIZ FORM EXAMPLE:
-    /Web-Development/frontend/Vue/vue-knowledge/using-options-api/z-examples/quiz/

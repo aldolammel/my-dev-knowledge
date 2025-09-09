@@ -35,6 +35,6 @@ DJANGO STRUCTURE: TEMPLATES
 
     EXTERNAL TEMPLATE/FRONT-END SOLUTIONS:
 
-        >> Vue.js ....... /Web-Development/frontend/Vue/
+        >> Vue.js ....... /JavaScript/Web-development/frontend/Vue/
         >> React ........ /Web-Development/frontend/React/
         >> Angular ...... /Web-Development/frontend/Angular/

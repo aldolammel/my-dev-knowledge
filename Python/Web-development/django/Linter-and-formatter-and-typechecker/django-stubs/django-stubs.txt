@@ -1,0 +1,55 @@
+
+
+DJANGO > TYPE CHECKER: DJANGO STUBS
+
+
+    It's a package contains type stubs and a custom mypy plugin to provide more precise static types
+    and type inference for Django framework. Django uses some Python "magic" that makes having
+    precise types for some code patterns problematic. This is why we need this project. The final
+    goal is to be able to get precise types for most common patterns.
+
+    https://github.com/typeddjango/django-stubs
+
+
+    >> Installing:
+
+        PRE) Your Python Type-Checker is one of them:
+            
+            /Python/Linter-and-formatter-and-typechecker/mypy.txt
+            /Python/Linter-and-formatter-and-typechecker/pyright.txt
+
+        1) Install:
+        
+            >> For MyPy compatibility:
+                $ uv add --optional dev 'django-stubs[compatible-mypy]'
+
+                # Or using PIP:
+                    $ xxxxxxxxxxxx
+                    # Include this in the pyproject.toml dev dependencies:
+                        xxxxxxxxxxx
+
+            >> For PyRight compatibility:
+                $ uv add --optional dev 'django-stubs[compatible-pyright]'
+
+                # Or using PIP:
+                    $ xxxxxxxxxxxx
+                    # Include this in the pyproject.toml dev dependencies:
+                        xxxxxxxxxxx
+
+
+    >> Integration:
+
+        PRE) You already got the pyproject.toml in your project:
+            /Python/Web-development/pyproject.toml
+
+        1) Include these lines in your pyproject.toml:
+
+            >> For MyPy:
+                /Python/Web-development/django/Linter-and-formatter-and-typechecker/django-stubs/pyproject-for-mypy.toml
+            
+            >> Or for PyRight:
+                /Python/Web-development/django/Linter-and-formatter-and-typechecker/django-stubs/pyproject-for-pyright.toml
+
+
+
+

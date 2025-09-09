@@ -7,22 +7,22 @@
     // PYTHON SETTINGS:
     //...
     // DJANGO SETTINGS:
-    "python.analysis.extraPaths": [
+    "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.
         "./apps", // Django apps folder
         "./core" // Settings folder
     ],
-    "terminal.integrated.env.linux": {
-        "DJANGO_SETTINGS_MODULE": "core.settings"
+    "terminal.integrated.env.linux": { // Environment vars for Linux terminal sessions.
+        "DJANGO_SETTINGS_MODULE": "core.settings" // Set default Django settings module for manage.py and shell.
     },
     "[django-html]": {
         //"editor.defaultFormatter": "monosans.djlint",
         "editor.tabSize": 2,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
+        "editor.quickSuggestions": { // Configure IntelliSense suggestions inside Django HTML.
+            "other": true, // Suggestions for general code.
+            "comments": false, // Suggestions in comments.
+            "strings": true // Suggestions inside strings.
         }
     },
     // CSS SETTINGS:
@@ -31,34 +31,23 @@
         "editor.tabSize": 2,
     },
     // TRANSLATION SETTINGS:
-    "django.i18n": false, // Activates the i18n features for snippets (eg.: _(""))
+    "django.i18n": false, // Django internationalization features in VSCode extensions.
     // FILE ASSOCIATIONS:
-    "files.associations": {
+    "files.associations": { // Tell VSCode how to treat files based on patterns.
         "**/*.html": "django-html",
         "**/templates/**/*.html": "django-html",
         "**/templates/**/*.css": "css",
         "*.css": "css",
-        "*.json": "jsonc",
+        //...
         // For a better Python support in Django:
         "**/apps/**/*.py": "python",
         "**/core/**/*.py": "python"
     },
     // FILE EXCLUSIONS:
-    "files.exclude": {
-        "**/__pycache__": false,
-        "**/*.pyc": false,
-        "**/node_modules": false,
-        "**/dist": false,
-        "**/.pytest_cache": false,
-        "**/venv": false,
-        "**/.venv": false,
-        "**/migrations": false
+    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+        //...
+        // "**/migrations": true
     },
     // SEARCH EXCLUSIONS:
-    "search.exclude": {
-        "**/venv": true,
-        "**/.venv": true,
-        "**/__pycache__": true,
-        "**/*.pyc": true
-    },
+    //...
 }

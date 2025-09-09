@@ -1,5 +1,0 @@
-
-
-API SOLUTION: AXIOS
-    
-    /Web-Development/frontend/Vue/3-component-libraries/axios/

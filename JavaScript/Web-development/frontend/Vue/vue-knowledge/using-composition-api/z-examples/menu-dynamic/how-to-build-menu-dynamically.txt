@@ -1,0 +1,21 @@
+
+
+VUE: HOW TO BUILD A DYNAMIC MENU
+
+
+    x) 
+
+    x) 
+
+    x) 
+
+    x) Based on all pages recorded in the db, make them be shown in the menu:
+
+        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-for.txt
+    
+    x) Make the selected section highlighted on menu:
+        
+        /JavaScript/Web-development/frontend/Vue/vue-knowledge/dynamic-classes.txt
+
+    x) 
+ 

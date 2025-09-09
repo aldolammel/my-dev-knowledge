@@ -1,0 +1,5 @@
+
+
+VUEX: MAP STATE
+
+    /JavaScript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt

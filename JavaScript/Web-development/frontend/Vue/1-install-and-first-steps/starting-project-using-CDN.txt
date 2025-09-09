@@ -1,0 +1,75 @@
+
+
+CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't understand 
+        .vue files. Use CDN 'installation' only for very simple Vue solutions.
+
+            >> For professional solutions, use the local installation:
+                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
+
+
+
+    1) In your index HTML file, add the CDN script before you call the main script file URL, as well
+        as you define which element (with correct ID) Vue must inject/mount your Vue front-end:
+                    
+        <!-- Index HTML file -->
+        <html>
+            ...
+            <body>
+            
+                ...
+
+                <!-- Vue app will be mounted here -->
+                <div id="app"></div>
+
+                ...
+
+                <!-- Vue CDN -->
+                <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+                
+                <!-- Main JS file -->
+                <script src="./main.js"></script>
+            </body>
+        </html>
+
+
+    2) Create the JS file where you will write the Vue logic - main.js:
+
+        Vue.createApp({
+            // Here you can set HTML and Vue logic between double "`":
+            template: `
+                <h1>{{ title }}</h1>
+                {{ subtitle }}
+            `,
+            // Sending to the front-end the entire data you wanna use:
+            data() {
+                // Always need to return as JS object:
+                return {
+                    title: 'Hello, world!',
+                    subtitle: "I'm using Vue CDN and not a local installation.",
+                };
+            }
+        }).mount('#app');
+
+
+    3) Back to Index HTML file, make sure you already set the element where Vue must mount its code!
+            E.g.    <div id="app"></div>
+
+
+    4) (INFO ONLY) This same example above but using the LOCAL installation:
+        /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/hello-world/ 
+
+
+    5) To test and run the Vue using the CDN solution, you'll use:
+
+        >> For IDE VSCode: Live Server extension
+            https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+        >> For IDE PyCharm: xxxxxxxxxxxxxxxxxxx
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+    >> Back to the installation instructions:
+
+        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/create-vue-project.txt
+

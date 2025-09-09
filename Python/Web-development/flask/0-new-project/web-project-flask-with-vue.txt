@@ -22,11 +22,11 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT
     >> Front-end:
 
         5) IDE, framework setup:
-            >> VSCode:  /Web-Development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
-            >> PyCharm: /Web-Development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
+            >> VSCode:  /JavaScript/Web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
+            >> PyCharm: /JavaScript/Web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
         6) Vue installation (and its dependencies):
-            /Web-Development/frontend/Vue/1-install-and-first-steps/_installation.txt
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
         7) (Optional) CSS Framework:
 

@@ -1,0 +1,70 @@
+
+
+VUE.JS COMPONENTS: SLOT EXAMPLE, SMARTER
+
+
+    If you want to brake an HTML fragment in smaller pieces, you can use multiple named slots to
+    address each HTML fragment's piece. 
+
+
+    If you declare a v-slot directive (setting a name for it) in a HTML tag, you're saying to
+    this component (the parent one) that it's sending a named piece of HTML fragment to
+    its child-component(s).
+
+
+
+    <!-- App.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <template>
+        <!-- Calling the child-component -->
+        <ChildComponent>
+            <!-- Once you named a template tag, you can call it in its child-component's slot -->
+            <template v-slot:title>
+                {{ pageTitle }}
+            </template>
+
+            <template v-slot:body>
+                {{ pageDescription }}
+            </template>
+        </ChildComponent>
+    </template>
+
+    <script>
+        // ...
+    </script>
+
+    <style>
+        /* It's global for all app children once the <style> tag has no 'scoped' explicited */
+        html {
+            background-color: #F1F1F1;
+        }
+    </style>
+
+
+    <!-- /components/ChildComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <template>
+        <div>
+            <h1>
+                <!-- It's waiting a HTML fragment's piece named 'title' from its parent component -->
+                <slot name="title" />
+            </h1>
+            
+            <p>
+                <slot name="body" />
+            </p>
+        </div>
+    </template>
+
+    <style scoped>
+        /* This CSS is local, so this style exclusively reflects in (child) component only */
+        div {
+            padding: 0 auto;
+            background-color: #F9F9F9;
+        }
+    </style>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+VUE.JS COMPONENTS: SLOT EXAMPLE, BASIC:
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4.1-slot-example-basic.txt

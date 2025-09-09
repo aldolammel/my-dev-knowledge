@@ -3,30 +3,30 @@
         VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS:
-    "terminal.integrated.cwd": "${workspaceFolder}",
+    //"terminal.integrated.cwd": "${workspaceFolder}",  // The project folder where the terminal initially opens.
     "[python]": {
         "editor.rulers": [
-            100
+            100 // Draw ruler at column XXX.
         ],
     },
     // PYTHON SETTINGS:
-    "python.defaultInterpreterPath": "./.venv/bin/python3",
-    "python.analysis.autoImportCompletions": false,
-    "python.analysis.completeFunctionParens": true,
+    "python.defaultInterpreterPath": "./.venv/bin/python3", // Use the project's virtual env Python interpreter.
+    "python.analysis.autoImportCompletions": false, // Disable auto-import suggestions in IntelliSense.
+    "python.analysis.completeFunctionParens": true, // Automatically add parentheses after function completions.
     // FILE ASSOCIATIONS:
-    "files.associations": {
+    "files.associations": { // Tell VSCode how to treat files based on patterns.
         "*.json": "jsonc",
     },
     // FILE EXCLUSIONS:
-    "files.exclude": {
-        "**/__pycache__": false,
-        "**/*.pyc": false,
-        "**/.pytest_cache": false,
-        "**/venv": false,
-        "**/.venv": false,
+    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+        //"**/__pycache__": true,
+        //"**/*.pyc": true,
+        //"**/.pytest_cache": true,
+        //"**/venv": true,
+        //"**/.venv": true,
     },
     // SEARCH EXCLUSIONS:
-    "search.exclude": {
+    "search.exclude": { // Files/folders to hide from the VSCode searchings.
         "**/venv": true,
         "**/.venv": true,
         "**/__pycache__": true,

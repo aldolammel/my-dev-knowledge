@@ -14,7 +14,7 @@ Continuar estudo e anotações:
 
 Arrumar essas instruções:
 
-    /Web-Development/frontend/Vue/3-component-libraries/pinia/1-overview-how-to-create-data.txt
+    /JavaScript/Web-development/frontend/Vue/3-component-libraries/pinia/1-overview-how-to-create-data.txt
         Fazer com Pinia (os dados-base aí sao do VueX)
 
 
@@ -22,15 +22,15 @@ Arrumar essas instruções:
         Tem descrições sobre Vue na própria estrutura do django que nao sei se seriam factuais.
         
     
-    /Web-Development/frontend/Vue/vue-knowledge/vue-vite-pinia-structure.png
-    /Web-Development/frontend/Vue/vue-knowledge/1-vue-structure.txt
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue-vite-pinia-structure.png
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/1-vue-structure.txt
         Talvez essa proposta de struture seja mais interessante pra Vue...
 
 
-    /Web-Development/frontend/Vue/3-component-libraries/pinia/pinia.txt
+    /JavaScript/Web-development/frontend/Vue/3-component-libraries/pinia/pinia.txt
 
 
 
 
-    /Web-Development/frontend/Vue/1-install-and-first-steps/integration-vue-django.txt
+    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/integration-vue-django.txt
         Esse arquivo tá estranho. Olhá-lo com calma uma vez que tem coisa lá pra baixo...

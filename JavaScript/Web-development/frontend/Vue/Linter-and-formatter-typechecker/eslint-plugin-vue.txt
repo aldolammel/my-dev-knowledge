@@ -1,0 +1,40 @@
+
+
+VUE > TEMPLATE LINTER: ESLINT PLUGIN VUE
+
+    
+    
+    ATTENTION!
+        It's only add value for Vue projects that uses Single-Files-Components (SFC, .vue files).
+        Otherwise, this lint won't do nothing.
+
+
+
+    ESLint is a static code analysis tool for JavaScript (and by extension, Vue.js). Its primary
+    purpose is to find and fix problems in your code. It doesn't run your code; instead, it scans
+    your source files and flags issues based on a set of predefined rules.
+
+    Checks: finds errors and enforces style rules.
+
+    >> Template linting:
+        - Vue directive syntax validation (v-if, v-for, etc.);
+        - Template expression checking;
+        - Component prop validation;
+        - Event handler verification;
+
+    >> SFC structure validation:
+        - Script setup syntax (if you use it);
+        - Component lifecycle and structure;
+        - Vue 3 specific patterns and best practices;
+
+
+    >> INSTALLING AND INTEGRATION:
+        /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/eslint-plugin-vue/installation.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    
+
+        

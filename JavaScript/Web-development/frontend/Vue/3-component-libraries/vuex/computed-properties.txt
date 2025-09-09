@@ -1,0 +1,48 @@
+
+
+VUEX: COMPUTED PROPERTIES
+
+    While computed properties aren't a Vuex feature, they're commonly used with Vuex to
+    access store state in a reactive way:
+
+
+        >> I forget, what is Vue.js Computed Properties:
+            
+            >> Using Options API approach:
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/option-computed.txt
+            
+            >> Using Composition API approach:
+                /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> Using computed properties to access Vuex Store:
+
+            >> Using Options API approach:
+
+                // In a Vue component file:
+                export default {
+                    // Computed Properties:
+                    computed: {
+                        // Accessing Vuex state through computed property
+                        currentUser() {
+                            return this.$store.state.user.currentUser;
+                        },
+                        
+                        // Accessing Vuex getters through computed property
+                        isLoggedIn() {
+                            return this.$store.getters.isAuthenticated;
+                        }
+                    },
+                    // Lifecycle hooks:
+                    // ...
+                }
+
+
+            >> Using Composition API approach:
+
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> Using Vuex Helpers to make this above easier:
+            /JavaScript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+

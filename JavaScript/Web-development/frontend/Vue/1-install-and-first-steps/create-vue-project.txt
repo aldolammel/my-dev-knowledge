@@ -1,0 +1,74 @@
+
+
+CREATING A VUE PROJECT:
+
+
+    PRE I) If Node.js (and preferably Node-Version-Manager too) is installed, ignore this step. 
+        Otherwise:
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+
+
+    PRE II) You are working in an existent Vue project? If so, about these next steps,
+        following just this one:
+            /JavaScript/Web-development/frontend/Vue/1.1-install-existent-project/installing-an-existent-project.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    1) Define how you will implement Vue.js in your project:
+
+        1A) Using CDN (simplest solution / NOT recommended for mid-large projects);       
+        1B) Or via Node-Package-Manager as NPM or YARN (for build setups / local installation);
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1A) Using CDN:
+
+            CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't
+                    understand .vue files.
+
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/starting-project-using-CDN.txt
+
+            >> Project example using CDN solution:
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1B) Installing a Vue Frontend-Build-Tool to create a Vue project (RECOMMENDED):
+            
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
+
+            >> Project example using LOCAL solution:
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/hello-world/ 
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+
+    2) Open the vue-project folder in an IDE;
+
+
+    3) (Optional) Make sure you got the .gitignore updated:
+        /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue-gitignore.txt
+
+
+    4) Start your work in the Vue project folder root:
+
+        E.g.: /vue-project-folder-root/...
+                                        /node_modules/
+                                        /src/
+
+            # Running the project:
+                
+                # CLI by Vite:
+                    $ npm run dev
+                # or
+                    $ yarn dev
+
+                # CLI by Vue-CLI:
+                    $ npm run serve
+                # or
+                    $ yarn serve
+            

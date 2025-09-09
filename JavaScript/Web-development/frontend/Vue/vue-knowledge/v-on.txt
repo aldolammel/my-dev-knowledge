@@ -1,0 +1,78 @@
+
+
+DIRECTIVE: V-ON
+
+
+    >> It's accepted for: function, inline statement, object (without arg).
+
+    >> It's shorter caller: '@' (at)
+
+
+    >> Example 1: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            <div
+                ...
+                v-on:click="product.active = !product.active"
+            >
+
+        Or shorter version: 
+
+            <div
+                ...
+                @click="product.active = !product.active"
+            >
+
+
+    >> Example 2: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        # Decrease amount:
+        
+                <button
+                    type="button"
+                    @click="product.quantity--"
+                >
+                    -
+                </button>
+
+            or
+
+                <button
+                    type="button"
+                    v-on:click="product.quantity = product.quantity - 1"
+                >
+                    -
+                </button>
+
+        # Increase amount:
+        
+                <button
+                    type="button"
+                    @click="product.quantity++"
+                >
+                    +
+                </button>
+
+            or
+
+                <button
+                    type="button"
+                    @click="product.quantity = product.quantity + 1"
+                >
+                    +
+                </button>
+
+
+    >> Example 3: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        <form @submit.prevent="myFunction">
+            ...
+            <button type="submit">
+                Send
+            </button>
+        </form>
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    >> How child components communicate with their parent components by sending custom events:
+        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.2-emits.txt

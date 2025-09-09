@@ -1,5 +1,0 @@
-
-
-VUEX: MAP STATE
-
-    /Web-Development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
