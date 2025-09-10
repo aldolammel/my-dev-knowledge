@@ -1,4 +1,0 @@
-
-
-NPM (NODE PACKAGE MANAGER) KNOWLEDGE:
-/JavaScript/NodeJS/npm-knowledge.txt

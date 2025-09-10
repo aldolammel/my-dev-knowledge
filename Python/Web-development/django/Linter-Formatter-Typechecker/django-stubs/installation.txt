@@ -1,0 +1,50 @@
+
+
+TYPE CHECKER DJANGO STUBS: INSTALLATION AND INTEGRATION
+
+
+    >> WHAT IS IT:
+        /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/_about.txt
+
+
+    >> INSTALLING:
+
+        PRE) Your Python Type-Checker is one of them:
+            
+            /Python/Linter-Formatter-Typechecker/mypy.txt
+            /Python/Linter-Formatter-Typechecker/pyright.txt
+
+        1) Install:
+        
+            >> For MyPy compatibility:
+                $ uv add --optional dev 'django-stubs[compatible-mypy]'
+
+                # Or using PIP:
+                    $ xxxxxxxxxxxx
+                    # Include this in the pyproject.toml dev dependencies:
+                        xxxxxxxxxxx
+
+            >> For PyRight compatibility:
+                $ uv add --optional dev 'django-stubs[compatible-pyright]'
+
+                # Or using PIP:
+                    $ xxxxxxxxxxxx
+                    # Include this in the pyproject.toml dev dependencies:
+                        xxxxxxxxxxx
+
+
+
+    >> INTEGRATING:
+
+        PRE) You already got the pyproject.toml in your project:
+            /Python/Web-development/pyproject.toml
+
+        1) Include these lines in your pyproject.toml:
+
+            >> For MyPy:
+                /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml
+            
+            >> Or for PyRight:
+                /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-pyright.toml
+
+

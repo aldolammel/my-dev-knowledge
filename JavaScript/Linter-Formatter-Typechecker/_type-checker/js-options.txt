@@ -1,0 +1,26 @@
+
+
+TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+
+
+
+        Aware: There is no "type checker for vanilla JS" because vanilla JS has no types to check!
+                These options below are how you add a type layer on top of JS!
+
+
+
+
+    >> Need this but for TypeScript?
+        /JavaScript/Linter-Formatter-Typechecker/_type-checker/ts-options.txt
+
+
+    >> Options:
+
+        >> JSDoc with @typescript-eslint/parser - Types without a Build Step:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+      

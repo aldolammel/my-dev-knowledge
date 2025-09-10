@@ -1,0 +1,13 @@
+
+
+PYRIGHT:
+
+    Often used with Pylance, Pyright is a high-performance type checker created by Microsoft. It's
+    known for being very fast and providing excellent performance for editor integrations, offering
+    fantastic autocompletion and error highlighting as you type.
+
+
+
+
+
+    /Python/Linter-Formatter-Typechecker/PyRight/

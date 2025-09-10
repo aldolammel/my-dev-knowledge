@@ -1,0 +1,55 @@
+
+
+ESLINT: INSTALL AND INTEGRATION
+
+
+    >> INSTALLATION:
+
+        1) Installing ESLint core and its configuration package only as dev dependencies:
+
+            # Using NPM:
+                $ npm install -D eslint @eslint/js
+            
+            # Or using xxx:
+                $ xxxxxxx
+
+            # Check if everything's right on the front-end folder's package.json file!
+
+
+    >> INTEGRATION:
+
+        1) Install the ESLint extension (by Microsoft) in your IDE;
+
+        2) In the frontend folder root, check if you already have the ESLint config file:
+            /JavaScript/Linter-Formatter-Typechecker/eslint/examples/eslint.config.js
+
+        3) (If applicable) In case the project is demanding Prettier (Formatter), make the ESLint
+                            doesn't conflict with that:
+
+            3.1) Install Prettier and the critical integration packages:
+                    
+                $ npm install -D eslint-config-prettier eslint-plugin-prettier
+
+                # Check if everything's right on the front-end folder's package.json file!
+
+            3.2) Tweak the eslint.config.js file:
+                /JavaScript/Linter-Formatter-Typechecker/eslint/eslint-and-prettier-working-together.txt
+
+
+        4) (Optional) Add the ESLint as a script in package.json file also in the frontend folder 
+                    root to make ESLint terminal commands available:
+                    /JavaScript/Linter-Formatter-Typechecker/eslint/examples/package.json
+
+        5) (Optional) In case of Git versioning, add it in your .gitignore file:
+            ### NODE.JS ###
+            ...
+            # Optional eslint cache
+            .eslintcache
+            
+        6) IDE configs:
+
+            >> For VSCode:
+                /JavaScript/Linter-Formatter-Typechecker/eslint/for-vscode-configs.txt
+
+            >> For xxxxx:
+                /xxxxxxxxxxxxxxxxx

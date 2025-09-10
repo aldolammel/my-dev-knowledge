@@ -20,7 +20,7 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
 
     >> Tip: UV is developed by the same company of the Ruff Linter/Formatter, so both are completely
             integrated.
-                /Python/Linter-and-formatter-and-typechecker/ruff.txt
+                /Python/Linter-Formatter-Typechecker/ruff.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

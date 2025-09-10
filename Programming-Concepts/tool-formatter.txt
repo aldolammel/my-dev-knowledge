@@ -22,10 +22,10 @@ FORMATTER TOOL: WHAT IS IT
         - Placement of braces and parentheses;
 
     >> Formatter for Python:
-        /Python/Linter-and-formatter-and-typechecker/
+        /Python/Linter-Formatter-Typechecker/
 
     >> Formatter for JavaScript:
-        /JavaScript/Linter-and-formatter-and-typechecker/
+        /JavaScript/Linter-Formatter-Typechecker/
 
     >> xxxxxx
 

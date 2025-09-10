@@ -1,0 +1,17 @@
+
+
+DJANGO > TEMPLATE LINTER AND FORMATER: DJLINT
+
+    As an additional tool for any Python linter/formatter and any Django code linter/formatter,
+    DjLint is a django template linter and a django template formatter.
+
+    Checks: Template syntax errors, formatting, HTML structure, template-specific best practices
+
+
+    >> Installation and Integration:
+        /Python/Web-development/django/Linter-Formatter-Typechecker/djint/installation.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    

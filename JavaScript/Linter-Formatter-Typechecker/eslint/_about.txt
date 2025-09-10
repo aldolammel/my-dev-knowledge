@@ -1,0 +1,43 @@
+
+
+LINTER: ESLINT
+
+    ESLint is a static code analysis tool for JavaScript. Its primary purpose is to find and fix
+    problems in your code. It doesn't run your code; instead, it scans your source files and flags
+    issues based on a set of predefined rules.
+
+    Checks: finds errors and enforces style rules.
+
+    >> It's a linter natively to:
+        - JavaScript
+        - JSON
+    
+    >> It can be a linter (via plugins) to:
+        - TypeScript
+        - Vue
+        - React
+        - Angular
+        - HTML (inline <scripts>)
+
+    >> Installation and Integration:
+        /JavaScript/Linter-Formatter-Typechecker/eslint/installation.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> Just run your app normally that ESLint checks your files:
+    
+    >> Using NPM + VITE:
+        $ npm run dev
+    
+    >> Or using NPM + Vue-CLI:
+        $ npm run serve
+
+
+>> Check for warnings and errors manually:
+
+    # Just list issues:
+        $ npm run lint:check
+    # List and fix them:
+        $ npm run lint

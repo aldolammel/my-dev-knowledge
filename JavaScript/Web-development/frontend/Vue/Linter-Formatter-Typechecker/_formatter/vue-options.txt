@@ -1,0 +1,16 @@
+
+
+FORMATTER FOR VUE: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> Prettier:
+            (also formatter to Vue, JS, CSS/SCSS/LESS, HTML, JSON):
+            /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/prettier.txt
+
+        >> xxxxx:
+            /xxxxx
+

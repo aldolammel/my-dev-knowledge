@@ -79,7 +79,7 @@ API: WHAT IS IT
 
     >> How to plan your API:
 
-        /API/how-to-plan-an-api.txt
+        /API/_how-to-plan-an-api.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

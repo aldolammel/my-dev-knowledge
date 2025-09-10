@@ -1,4 +1,0 @@
-
-
-Ruff is for Python + Django Linter and Formatter:
-    /Python/Linter-and-formatter-and-typechecker/ruff.txt

@@ -1,7 +1,0 @@
-
-
-
-/Python/Web-development/django/Linter-and-formatter-and-typechecker/pylint-django/installation.txt
-
-
-

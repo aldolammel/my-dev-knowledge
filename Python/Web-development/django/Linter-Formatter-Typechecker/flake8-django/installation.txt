@@ -1,0 +1,14 @@
+
+
+
+pre) Python linter:
+    /Python/Linter-Formatter-Typechecker/flake8.txt
+
+
+
+install
+    flake8-django
+
+
+
+Integration > pyproject.toml

@@ -1,0 +1,7 @@
+
+
+xxxx
+
+
+    >> Installation and Integration:
+        /JavaScript/Web-development/frontend/React/Linter-Formatter-Typechecker/eslint-plugin-react/installation.txt

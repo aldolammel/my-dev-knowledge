@@ -1,0 +1,20 @@
+
+
+FORMATTER FOR PYTHON: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> Ruff (Yes, it's a formatter too)
+            /Python/Linter-Formatter-Typechecker/ruff/
+
+        >> Black:
+            /Python/Linter-Formatter-Typechecker/black/
+
+        >> autopep8:
+            /Python/Linter-Formatter-Typechecker/autopep8/
+
+        >> yapf:
+            /xxxxxxxxxxxxxxxxxxxx

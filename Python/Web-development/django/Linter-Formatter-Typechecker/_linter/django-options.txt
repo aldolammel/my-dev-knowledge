@@ -1,0 +1,17 @@
+
+
+LINTER FOR DJANGO: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-linter.txt
+
+    >> Options:
+
+        >> Ruff (also for Python):
+            /Python/Linter-Formatter-Typechecker/ruff.txt
+
+        >> flake8-django:
+            /Python/Web-development/django/Linter-Formatter-Typechecker/flake8-django.txt
+
+        >> pylint-django:
+            /Python/Web-development/django/Linter-Formatter-Typechecker/pylint-django.txt

@@ -1,0 +1,13 @@
+
+
+LANGUAGE: PYTHON
+
+    Python is a high-level, general-purpose programming language known for its readability and 
+    versatility. It is widely used in various domains, including web development, data science, 
+    machine learning, artificial intelligence, automation, and software development.
+
+    >> MORE ABOUT:
+        /Python/python-knowledge/
+
+    >> CREATE A PYTHON PROJECT:
+        /Python/00-New-Project/

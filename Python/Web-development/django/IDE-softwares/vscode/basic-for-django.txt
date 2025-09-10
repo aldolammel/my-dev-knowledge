@@ -19,32 +19,27 @@ IDE FOR DJANGO PROJECT: VSCODE
 
         1) VSCode project settings:
 
-            1.1) In the project folder, open this file: .vscode/settings.json;
+            1.1) In the project folder, open this file: /.vscode/settings.json;
             1.2) In that file, apply these lines:
                 /Python/Web-development/django/IDE-softwares/vscode/examples/settings.json
 
-            # Make sure your .gitignore file is not blocking the .vscode folder and its content
+            # Make sure your .gitignore file is NOT blocking the .vscode folder and its content
                 in project repository!
         
+        
+        2) Type-Checker (MyPy by Microsoft + django-stubs plugin):
 
-        2) xxxxx
+            /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/_about.txt
 
         
-        5) Type-Checker (MyPy by Microsoft + django-stubs plugin):
+        3) Linter (DjLint by Astral):
 
-            /Python/Web-development/django/Linter-and-formatter-and-typechecker/django-stubs.txt
-
-        
-        6) Linter (xxxxxxxxx):
-
-            /xxxxx
+            /Python/Web-development/django/Linter-Formatter-Typechecker/djint/_about.txt
 
 
-        7) Formatter (xxxxx):
+        4) Formatter (DjLint by Astral):
 
-            /Pxxxxxxxx
+            # Not need to install anything additional 'coz DjLint is also a formatter.
 
 
-        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
-                            Django linter/formatter/type-checker the project must use!
             

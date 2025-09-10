@@ -1,0 +1,15 @@
+
+
+FORMATTER FOR JAVASCRIPT: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> Prettier:
+            (also formatter to Vue, JS, CSS/SCSS/LESS, HTML, JSON):
+            /JavaScript/Linter-Formatter-Typechecker/prettier/_about.txt
+
+        >> xxxxx:
+            /xxxxx

@@ -150,13 +150,13 @@
                 >> Linter, Formatter, and Type-checker:
                     
                     >> Linter for Vue:
-                        /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/_linter/vue-options.txt
+                        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_linter/vue-options.txt
 
                     >> Formatter for Vue: 
-                        /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/_formatter/vue-options.txt
+                        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_formatter/vue-options.txt
 
                     >> Type-checker for Vue:
-                        /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
+                        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -215,7 +215,7 @@
                 
                 
             >> Type-checker for Vue:
-                /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
+                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
             
 
             >> Run the Vue service:

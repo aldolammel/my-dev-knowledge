@@ -48,13 +48,13 @@ IDE FOR VUE PROJECT: VSCODE
         
         x) Type-Checker:
 
-            /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/_type-checker/vue-options.txt
+            /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
 
         
         x) Linter:
 
             >> For projects Single-File-Components (eslint-plugin-vue):
-                /JavaScript/Web-development/frontend/Vue/Linter-and-formatter-typechecker/eslint-plugin-vue/installation.txt
+                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/installation.txt
 
             >> For NOT SFC projects (<solution_name>):
                 /xxxxxxxxxxxxxx
@@ -62,7 +62,7 @@ IDE FOR VUE PROJECT: VSCODE
 
         x) Formatter (Prettier):
 
-            /JavaScript/Linter-and-formatter-and-typechecker/prettier.txt
+            /JavaScript/Linter-Formatter-Typechecker/prettier.txt
 
         
         9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each

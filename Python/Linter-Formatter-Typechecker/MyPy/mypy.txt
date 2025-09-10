@@ -1,0 +1,52 @@
+
+
+PYTHON LANGUAGE > TYPE CHECKER: MYPY
+
+
+    By Microsoft, it's an optional static type checker for Python that aims to combine the benefits 
+    of dynamic (or "duck") typing and static typing. Mypy combines the expressive power and
+    convenience of Python with a powerful type system and compile-time type checking.
+
+    https://mypy-lang.org/
+
+
+    >> Installing:
+        
+        1) In the project folder (back-end), install the MyPy as development dependency:
+
+            # Using UV:
+                $ uv add --optional dev mypy
+            # Using PIP:
+                $ pip install mypy
+                # Include manually the dev dependency in the project pyproject.toml file:
+                    [project.optional-dependencies]
+                    dev = [
+                        ...
+                        "mypy>=1.17.1",
+                    ]
+
+        2) In your IDE, install the 'MyPy Type Checker' extension (by Microsoft);
+
+        3) (If applicable / Optional) Install the django-stubs for better Django type hints:
+            /Python/Linter-Formatter-Typechecker/django-stubs.txt
+    
+
+    >> Integration:
+
+        PRE) You already got the pyproject.toml in your project:
+            /Python/Web-development/pyproject.toml
+
+
+        1) Include these lines in your pyproject.toml:
+            /Python/Linter-Formatter-Typechecker/mypy/pyproject.toml
+
+
+        2) (If applicable / Optional) In the project .vscode/settings.json, turn off The
+                        Pylance Type Checking, leaving this task only to MyPy:
+
+                        PRE) Assuming you have this file in the project:
+                            /Python/IDE-softwares/vscode/examples/settings.json
+
+                        2.1) Add lines:
+                            // PYTHON SETTINGS
+                            "python.analysis.typeCheckingMode": "off", // This project is using MyPy for Type Checking.

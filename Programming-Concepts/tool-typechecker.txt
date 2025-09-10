@@ -21,10 +21,10 @@ TYPE-CHECKER TOOL: WHAT IS IT
         - Object is possibly 'null';
 
     >> Type-checker for Python:
-        /Python/Linter-and-formatter-and-typechecker/
+        /Python/Linter-Formatter-Typechecker/
 
     >> Type-checker for JavaScript:
-        /JavaScript/Linter-and-formatter-and-typechecker/
+        /JavaScript/Linter-Formatter-Typechecker/
 
     >> xxxxxx
 

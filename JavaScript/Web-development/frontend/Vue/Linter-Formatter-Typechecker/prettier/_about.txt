@@ -1,0 +1,17 @@
+
+
+PRIETTER FOR VUE:
+
+
+    !ATTENTION:
+        For TYPESCRIPT Vue projects, Vue-Volar is more recommended to use with Vue:
+            /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/vue-volar.txt
+
+
+
+    About:
+        /JavaScript/Linter-Formatter-Typechecker/prettier/_about.txt
+
+
+    For Vue integration:
+        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/prettier/for-vue-integration.txt

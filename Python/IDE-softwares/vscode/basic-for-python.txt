@@ -71,17 +71,17 @@ IDE FOR PYTHON PROJECT: VSCODE
         
         6) Type-Checker (MyPy by Microsoft):
 
-            /Python/Linter-and-formatter-and-typechecker/mypy.txt
+            /Python/Linter-Formatter-Typechecker/mypy.txt
 
         
         7) Linter (Ruff by Astral):
 
-            /Python/Linter-and-formatter-and-typechecker/ruff.txt
+            /Python/Linter-Formatter-Typechecker/ruff.txt
 
 
         8) Formatter (Ruff by Astral):
 
-            /Python/Linter-and-formatter-and-typechecker/ruff.txt
+            /Python/Linter-Formatter-Typechecker/ruff.txt
 
 
         9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each

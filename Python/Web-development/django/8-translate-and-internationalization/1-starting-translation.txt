@@ -131,7 +131,7 @@
 
                     >> In .vscode/settings.json, add these lines:
 
-                        // DJANGO-SPECIFIC CONFIGURATIONS:
+                        // DJANGO SETTINGS
                         "django.i18n": true, // Activates the i18n features for snippets (eg.: _(""))
                 
                 

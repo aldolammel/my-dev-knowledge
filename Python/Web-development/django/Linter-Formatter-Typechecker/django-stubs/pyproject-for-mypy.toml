@@ -1,0 +1,13 @@
+# This file is a model of Django-Stubs configuration in pyproject.toml
+
+# Django static type checker:
+[tool.mypy]
+...
+plugins = ["mypy_django_plugin.main"]
+disable_error_code = [
+    "var-annotated",  # Stop MyPy to demand Type Annotations for, e.g., model fields w/ M2M relationships.
+]
+
+# Django-stubs plugin configuration
+[tool.django-stubs]
+django_settings_module = "core.settings"

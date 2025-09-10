@@ -1,0 +1,9 @@
+
+
+VUE LINTER/FORMATTER: VUE.VOLAR
+
+    Soon...
+
+
+    For Vue integration:
+        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/prettier/for-vue-integration.txt

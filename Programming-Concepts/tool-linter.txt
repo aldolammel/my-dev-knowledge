@@ -22,10 +22,10 @@ LINTER TOOL: WHAT IS IT
         - "This if statement is always true."
 
     >> Linters for Python:
-        /Python/Linter-and-formatter-and-typechecker/
+        /Python/Linter-Formatter-Typechecker/
 
     >> Linters for JavaScript:
-        /JavaScript/Linter-and-formatter-and-typechecker/
+        /JavaScript/Linter-Formatter-Typechecker/
 
     >> xxxxxx
 

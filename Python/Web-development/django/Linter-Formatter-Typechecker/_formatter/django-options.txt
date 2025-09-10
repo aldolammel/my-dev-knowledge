@@ -1,0 +1,14 @@
+
+
+FORMATTER FOR DJANGO: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> Ruff (also for Python):
+            /Python/Linter-Formatter-Typechecker/ruff.txt
+
+        >> Black (also for Python):
+            /Python/Linter-Formatter-Typechecker/black.txt

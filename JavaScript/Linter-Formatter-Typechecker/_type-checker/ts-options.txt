@@ -1,0 +1,19 @@
+
+
+TYPE-CHECKER FOR TYPESCRIPT: OPTIONS
+
+    >> What is it:
+        /Programming-Concepts/tool-formatter.txt
+
+    >> Need this but for vanilla JS?
+        /JavaScript/Linter-Formatter-Typechecker/_type-checker/js-options.txt
+
+
+    >> Options:
+
+        >> Flow (by Facebook)
+            /JavaScript/Linter-Formatter-Typechecker/flow/_about.txt
+
+        >> xxxx
+
+        >> xxxxx
