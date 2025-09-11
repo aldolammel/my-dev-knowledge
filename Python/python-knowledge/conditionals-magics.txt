@@ -4,5 +4,5 @@ CONDITIONAL MAGICS BY PYTHON:
 
 
     >> List Comprehension:
-        /16-List-Tuple-Dictionary-Set/List/list-comprehension.py
+        /Python/python-knowledge/list-comprehension.py
         

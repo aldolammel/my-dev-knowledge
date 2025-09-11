@@ -1,13 +1,14 @@
 
 
->> ATTENTION 1: assuming you already got Node.js:
-                Otherwise, do it:
-                    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+>> ATTENTION 1: 
+    Assuming you already got Node.js. Otherwise, do it:
+        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
 
->> ATTENTION 2: regardless anything, don't install Vue in these paths to avoid conflicts:
-                >> If your project is using Django as backend:
-                    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt
+>> ATTENTION 2:
+    Regardless anything, don't install Vue in these paths to avoid conflicts:
+        >> If your project is using Django as backend:
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -21,9 +22,10 @@
     1) Create an exclusive .env file to set the front-end environment variables:
         /Environment-Variables/env-for-local/in-frontend/.env
 
-        1.1) (Optional) Make sure this new .env is ignored by Git. This line should be there:
+        1.1) (Optional)
+            Make sure this new .env is ignored by Git. This line should be there:
             
-            frontend/.env
+                /frontend/.env
             
     2) Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
     
@@ -81,7 +83,8 @@
                                     $ npm list
             
             
-            >> (Optional) Configure Vite to recognize its "@" in paths (Recommended):
+            >> (Optional)
+                Configure Vite to recognize its "@" in paths (Recommended):
 
                 # In /frontend/ folder, open the vite.config.js file and add these lines:
 
@@ -93,7 +96,7 @@
                         ],
                         resolve: {
                             alias: {
-                                "@": path.resolve(__dirname, "./src"),
+                                "@": path.resolve(path.dirname(new URL(import.meta.url).pathname), "./src"),
                             },
                         },
                         publicDir: "public",
@@ -105,6 +108,11 @@
 
                 >> "publicDir" you are defining what folder the Vite will compile the project when
                     it's ready to production environment.
+
+
+            >> (If applicable / Optional)
+                In case the SCSS/SASS on the project, make Vite to recognize SCSS global vars importable:
+                    /Web-Development/frontend/CSS/scss/variables-global.txt
             
 
             >> Run the Vue service:
@@ -112,31 +120,33 @@
                     $ npm run dev
                 
 
-            >> (optional) Update Vite:
+            >> (optional)
+                Update Vite:
 
-                # Checking the current Vite version:
-                # if Vite is global, anywhere, otherwise, in the project folder!
-                    $ npm list
-                # Updating to the latest version:
-                    $ npm update vite
-                # Or updating to a specific version:
-                    $ npm install vite@6.3.5
+                    # Checking the current Vite version:
+                    # if Vite is global, anywhere, otherwise, in the project folder!
+                        $ npm list
+                    # Updating to the latest version:
+                        $ npm update vite
+                    # Or updating to a specific version:
+                        $ npm install vite@6.3.5
 
-                # Checking again the current Vite version:
-                    $ npm list
+                    # Checking again the current Vite version:
+                        $ npm list
 
 
-            >> (optional) Uninstall Vite:
+            >> (optional)
+                Uninstall Vite:
 
-                # Locally:
-                    $ npm uninstall vite
-                # Or globally:
-                    $ npm uninstall -g vite
-                # Check if uninstalled:
-                # Locally:
-                    $ npm list
-                # Globally:
-                    $ npm list -g
+                    # Locally:
+                        $ npm uninstall vite
+                    # Or globally:
+                        $ npm uninstall -g vite
+                    # Check if uninstalled:
+                    # Locally:
+                        $ npm list
+                    # Globally:
+                        $ npm list -g
 
 
             >> Extending Vite:

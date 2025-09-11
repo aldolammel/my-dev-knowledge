@@ -1,11 +1,11 @@
 """
-HANDLING THE INTEGER NUMBERS:
-Integer numbers are all numbers (including the negative ones) with no dots or commas.
+    HANDLING THE INTEGER NUMBERS:
+    Integer numbers are all numbers (including the negative ones) with no dots or commas.
 
-3 = integer number
-'3' = string number (because the '')
-3.1 = float number.
-int('3') = integer number (because I am converting the string to int.
+    3 = integer number
+    '3' = string number (because the '')
+    3.1 = float number.
+    int('3') = integer number (because I am converting the string to int.
 
 """
 

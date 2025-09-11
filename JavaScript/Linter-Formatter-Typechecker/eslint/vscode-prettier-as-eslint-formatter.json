@@ -1,0 +1,31 @@
+// PRETTIER AS ESLINT FORMATTER (VSCODE)
+// FILE: /project/.vscode/settings.json:
+{
+    // PROJECT SETTINGS
+    "editor.codeActionsOnSave": { // ESLint
+        // This will automatically correct all fixable ESLint errors, including the ones from the Prettier plugin:
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        //"javascriptreact", // Add this only if the project is using React!
+        //"vue", // Add this only if the project is using Vue!
+    ],
+    "editor.formatOnSave": true,
+    // JAVASCRIPT SETTINGS
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+    },
+    // JSON SETTINGS
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+    },
+    // CSS SETTINGS
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+    },
+    // VUE SETTINGS
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+    },
+}

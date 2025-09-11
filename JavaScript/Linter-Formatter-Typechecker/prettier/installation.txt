@@ -6,7 +6,8 @@ PRETTIER FORMATTER: INTEGRATION
 
         1) Install the Prettier extension for the IDE!
 
-        2) Make sure your VSCode user profile is working properly with JS:
+        2) Make sure your VSCode user profile is working properly with JS 
+            (Ctrl+Shift+p > User Preferences):
 
             // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
             "[javascript]": {
@@ -19,20 +20,30 @@ PRETTIER FORMATTER: INTEGRATION
 
         3) Add the next lines in the /project/.vscode/settings.json:
 
-            ATTENTION: if you're integrating ESLint to the Prettier, and the ESLint is already
-                        as the JS default formatter, just skip the JS settings here, leaving it
-                        to ESLint!
+            ATTENTION:
+                if you're integrating ESLint to the Prettier, and the ESLint is already as the JS
+                default formatter, just skip the JS settings here, leaving it to ESLint!
 
+            // PROJECT SETTINGS
+            "prettier.printWidth": 100, // Prettier
 
             // JAVASCRIPT SETTINGS
             "[javascript]": {
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                ...
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+            },
+
+            // JSON SETTINGS
+            "[json]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
             },
 
             // CSS SETTINGS
             "[css]": {
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                ...
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
             },
+
+        4) (If applicable) 
+            For Python projects, make sure the pyproject.toml has Prettier basic settings:
+                /JavaScript/Linter-Formatter-Typechecker/prettier/pyproject.toml
+                            
             

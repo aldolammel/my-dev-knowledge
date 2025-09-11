@@ -1,6 +1,6 @@
 # This file is a model of MyPy configuration in pyproject.toml
 
-# Django static type checker:
+# Python static type checker:
 [tool.mypy]
 python_version = "3.12"
 check_untyped_defs = true

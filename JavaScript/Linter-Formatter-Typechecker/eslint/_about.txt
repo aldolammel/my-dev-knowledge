@@ -20,7 +20,7 @@ LINTER: ESLINT
         - HTML (inline <scripts>)
 
     >> Installation and Integration:
-        /JavaScript/Linter-Formatter-Typechecker/eslint/installation.txt
+        /JavaScript/Linter-Formatter-Typechecker/eslint/_installation.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

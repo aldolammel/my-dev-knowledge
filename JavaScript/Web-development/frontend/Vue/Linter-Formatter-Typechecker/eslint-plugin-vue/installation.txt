@@ -26,7 +26,7 @@ VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
         # Check if everything's right on the front-end folder's package.json file!
 
     2) Edit the ESLint configuration file on the Vue project root ('frontend', e.g.):
-        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/examples/eslint.config.js
+        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/eslint.config.js
 
     3) In vite.config.js file:
         <...>
@@ -46,12 +46,10 @@ VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
     
         >> For VSCode:
 
-            1) Check your Profile (Ctrl+Shift+P, and then 'Open User Settings (JSON)) and:
+            1) In /project/.vscode/settings.json file:
 
-                // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
-                "[javascript]": {
-                    "editor.defaultFormatter": "????????????????????????",
+                // VUE SETTINGS
+                "[vue]": {
+                    "editor.defaultFormatter": "dbaeumer.vscode-eslint", // ESLint
                     ...
                 },
-
-        >> For xxxxxx:

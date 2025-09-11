@@ -1,0 +1,15 @@
+
+
+CONTAINERS:
+
+    >> Lists / Arrays:
+        /Python/python-knowledge/list-array-basic.py
+
+    >> Tuples:
+        /Python/python-knowledge/tuple-basic.py
+
+    >> Dictionaries:
+        /Python/python-knowledge/dictionary.py
+
+    >> Sets:
+        /Python/python-knowledge/set.py

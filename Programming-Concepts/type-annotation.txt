@@ -12,7 +12,7 @@ TYPE ANNOTATION:
 
 
     >> IN PYTHON:
-        /Python/python-knowledge/21-Data-Declarations/data-hint-declarations.py
+        /Python/python-knowledge/type-annotation.py
 
     >> IN JAVASCRIPT (Using JSDoc):
         /JavaScript/js-knowledge/type-annotation.js

@@ -1,0 +1,16 @@
+// ESLINT AS FORMATTER (VSCODE)
+// FILE: /project/.vscode/settings.json:
+{
+    // PROJECT SETTINGS
+    "editor.codeActionsOnSave": { // ESLint
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        //"javascriptreact", // Add this only if the project is using React!
+        //"vue", // Add this only if the project is using Vue!
+    ],
+    "eslint.workingDirectories": [
+        "frontend" // ESLint working directories (if it's in a subfolder)
+    ],
+}

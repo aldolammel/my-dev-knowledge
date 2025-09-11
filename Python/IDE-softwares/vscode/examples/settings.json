@@ -7,6 +7,8 @@
     "editor.rulers": [
         100 // Draw ruler at column XXX.
     ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "python.defaultInterpreterPath": "./.venv/bin/python3", // Use the project's virtual env Python interpreter.
     "python.analysis.autoImportCompletions": false, // Disable auto-import suggestions in IntelliSense.
@@ -22,13 +24,15 @@
         //"**/.pytest_cache": true,
         //"**/venv": true,
         //"**/.venv": true,
+        //"**/.git": true,
     },
     // SEARCH EXCLUSIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "search.exclude": { // Files/folders to hide from the VSCode searchings.
         "**/venv": true,
         "**/.venv": true,
         "**/__pycache__": true,
-        "**/*.pyc": true
+        "**/*.pyc": true,
+        "**/.git": true,
     },
     // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     // Never in project, always in the developer profiles!
