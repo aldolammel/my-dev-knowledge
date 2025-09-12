@@ -8,10 +8,10 @@ TYPE-CHECKER FOR PYTHON: OPTIONS
     >> Options:
 
         >> MyPy:
-            /Python/Linter-Formatter-Typechecker/mypy/
+            /Python/Linter-Formatter-Typechecker/MyPy/_about.txt
 
         >> PyRight:
-            /Python/Linter-Formatter-Typechecker/PyRight/
+            /Python/Linter-Formatter-Typechecker/PyRight/_about.txt
 
         >> Pyre:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -18,7 +18,7 @@ IDE FOR VUE PROJECT: VSCODE
                 /Python/IDE-softwares/vscode/basic-for-python.txt
 
         
-        PRE.2) Assuming the Backend framework basic project setup is done:
+        PRE.2) Assuming the Back-end framework basic project setup is done:
 
             >> If no back-end or Vue is the back-end, skip it!
 
@@ -46,12 +46,11 @@ IDE FOR VUE PROJECT: VSCODE
             Download the extension!
 
         
-        x) Type-Checker:
-
+        3) Type-Checker:
             /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
 
         
-        x) Linter:
+        4) Linter:
 
             >> For projects Single-File-Components (eslint-plugin-vue):
                 /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/installation.txt
@@ -60,13 +59,13 @@ IDE FOR VUE PROJECT: VSCODE
                 /xxxxxxxxxxxxxx
 
 
-        x) Formatter (Prettier):
-
+        5) Formatter (Recommended: Prettier):
             /JavaScript/Linter-Formatter-Typechecker/prettier.txt
 
         
-        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
-                            Vue and (JS or TS) linter/formatter/type-checker the project must use!
+        6) (If applicable)
+            For VSCode, re-open the .vscode/settings.json, and set for each Vue and (JS or TS)
+            linter/formatter/type-checker the project must use!
             
 
 - - - 

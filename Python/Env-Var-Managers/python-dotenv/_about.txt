@@ -1,0 +1,16 @@
+
+
+PYTHON ENVIRONMENT VARIABLE MANAGER: PYTHON-DOTENV
+
+    This is the most common and straightforward environment variable manager. It reads key-value
+    pairs from a .env file and loads them into your environment variables, making them accessible
+    via os.getenv().
+
+    Examples (Do not use then):
+        /Python/Env-Var-Managers/python-dotenv/examples/.env
+        /Python/Env-Var-Managers/python-dotenv/examples/example.py
+
+    >> Installing:
+
+        $
+

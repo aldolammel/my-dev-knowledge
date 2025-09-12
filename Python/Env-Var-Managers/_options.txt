@@ -1,0 +1,23 @@
+
+
+PYTHON: ENVIRONMENT VARIABLE MANAGERS
+
+    
+    
+    ATTENTION!
+        Django project? Skip it directly to:
+            /Python/Web-development/django/Env-Var-Managers/_options.txt
+
+
+    >> Options:
+
+        >> Python-Dotenv:
+            /Python/Env-Var-Managers/python-dotenv/_about.txt
+
+        >> xxxx
+            /xxxxxx
+
+        >> xxxx
+            /xxxxxx
+
+    

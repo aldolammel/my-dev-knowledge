@@ -1,0 +1,11 @@
+
+
+DJANGO: ENVIRONMENT VARIABLE MANAGERS
+
+    xxxxxx
+
+    >> Djanto-Environ:
+        /Python/Web-development/django/Env-Var-Managers/django-environ/_about.txt
+
+    >> xxxxxx:
+        /xxxxxxx

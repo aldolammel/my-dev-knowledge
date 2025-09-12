@@ -22,10 +22,13 @@ RUFF: INSTALLATION AND INTEGRATION
 
             1B) Using PIP:
 
-                1B.PRE) Basic about PIP:
-                    /Python/Package-manager/pip.txt
+                PRE) Basic about PIP:
+                    /Python/Package-manager/pip/_about.txt
 
                 1B.1) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                1B.2) Add manually the xxxxxx in the pyproject optional dependencies:
+                    xxxxxxxxxxxxxxxxxxxxxxx
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -33,7 +36,8 @@ RUFF: INSTALLATION AND INTEGRATION
     
     >> INTEGRATION:
 
-        1) (Optional) If using .gitignore file, add these lines:
+        1) (Optional)
+            If using .gitignore file, add these lines:
                 ### Python Linter/Formatter ###
                 .ruff_cache/
 
@@ -44,7 +48,21 @@ RUFF: INSTALLATION AND INTEGRATION
             # Apply these configs in your project pyproject.toml file:
                 /Python/Linter-Formatter-Typechecker/ruff/pyproject.toml
 
-        3) (Optional) Install the Ruff extension for your favorite code IDE!
+        3) (Optional)
+            Install the Ruff extension for your favorite code IDE!
+
+        4) (Optional)
+            In .vscode/settings.json, add this:
+
+                // FILE EXCLUSIONS
+                "files.exclude": {
+                    "**/.ruff_cache": true,
+                },
+
+                // SEARCH EXCLUSIONS
+                "search.exclude": {
+                    "**/.ruff_cache": true,
+                }
 
 
 

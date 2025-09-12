@@ -23,6 +23,7 @@ AXIOS: INTEGRATION WITH VUE.JS:
                 import axios from 'axios';
 
                 // App config, after the App creation:
+                // Vite automatically searches for VITE_ prefix env vars, and it's accessible via import.meta.env:
                 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;  // Where Django's running currently!
 
         >> For MPA projects:

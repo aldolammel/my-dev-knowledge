@@ -1,5 +1,29 @@
 
 
+IDE FOR JS PROJECT: VSCODE
 
 
-copy the logic of /Python/IDE-softwares/vscode/basic-for-python.txt
+    >> Basic for run JS:
+
+
+        1) VSCode project settings:
+
+            1.1) In the project folder, open this file: .vscode/settings.json;
+            1.2) In that file, apply these lines:
+                /JavaScript/IDE-softwares/vscode/examples/settings.json
+
+            # Make sure your .gitignore file is not blocking the .vscode folder and its content
+                in project repository!
+
+        
+        2) Type-Checker:
+            /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+
+        
+        3) Linter (Recommended: ESLint):
+            /JavaScript/Linter-Formatter-Typechecker/_linter/js-options.txt
+
+
+        4) Formatter (Recommended: Prettier):
+            /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+

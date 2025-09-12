@@ -1,0 +1,67 @@
+
+
+IDE: VSCode
+
+    VS Code, or Visual Studio Code, is a free, powerful, and lightweight code editor from Microsoft
+    for Windows, macOS, and Linux. It's a versatile tool for software development that supports 
+    hundreds of programming languages and is highly customizable through a vast ecosystem of over 
+    25,000 extensions. VS Code combines a fast, extensible editor with developer tooling like 
+    IntelliSense code completion, debugging, and integrated Git support to create a frictionless 
+    development cycle.
+
+    You can customize the whole thing through two main layers:
+
+
+        >> BY (PROFILE) USER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            The first layer of configuration. Here you set the most basic settings for your work,
+            splitting them out in two types: what is default for all profiles, and specific other
+            profiles.
+
+
+                PRE) Where to manage profiles:
+                    /IDE/vscode/2025-vscode-aldo-profiles.png
+
+
+                >> Default profile:
+                    What is global for all your other profiles.
+                    
+                    To access: open a new VSCode window and CTRL+SHIF+P and then click over
+                                "Open User Settings (JSON)".
+
+                        E.g.
+                            /IDE/vscode/examples/default-profile.json
+
+
+                >> Other profiles:
+                    What is need for specific situations (specific extensions, themes, etc),
+                    basically bringing the default settings and override them (if needed) with
+                    this profile specificities.
+
+                    To access: through VSCode interface, create a new profile and, then, CTRL+SHIF+P
+                                and click over "Open User Settings (JSON)".
+
+                        E.g.
+                            /IDE/vscode/examples/my-python-django-vue-profile.json
+
+
+        >> BY (WORKSPACE) PROJECT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            Its configuration file is called settings.json that belongs the /.vscode/ folder in
+            the project folder. This settings file override other previously settings.
+
+            To access: through VSCode interface, open the project folder, and then go to the
+                        .vscode folder inside the project and open the settings.json file.
+
+                        E.g.
+                            /IDE/vscode/examples/.vscode/settings.json
+
+            Tip: make this .vscode folder available in your project repository to rule this features
+                for all developers involved on the project.
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    
+    >> Installation:
+        https://code.visualstudio.com/

@@ -1,18 +1,23 @@
 {
     /*
-        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    //"terminal.integrated.cwd": "${workspaceFolder}",  // The project folder where the terminal initially opens.
+    //"terminal.integrated.cwd": "${workspaceFolder}",  // Project folder for terminal initializ.
+    "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
     "editor.rulers": [
         100 // Draw ruler at column XXX.
     ],
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
     "editor.wordWrapColumn": 100,
+    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    "python.defaultInterpreterPath": "./.venv/bin/python3", // Use the project's virtual env Python interpreter.
-    "python.analysis.autoImportCompletions": false, // Disable auto-import suggestions in IntelliSense.
-    "python.analysis.completeFunctionParens": true, // Automatically add parentheses after function completions.
+    // Where's Python interpreter on project:
+    "python.defaultInterpreterPath": "/bin/python3", // It knows the '.venv' or 'venv' in path.
+    "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
+    "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
+    "[python]": {},
     // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": { // Tell VSCode how to treat files based on patterns.
         "*.json": "jsonc",

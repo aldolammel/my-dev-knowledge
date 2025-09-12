@@ -2,11 +2,15 @@
 
 SCSS/SASS: VUE INTEGRATION
 
-    >> CSS Pre-processors using Vue.js + Vite:
+    >> CSS Pre-processors using Vue:
+
+        xxxxxxx
+    
+    >> CSS Pre-processors using Vue + Vite:
 
         >> .scss/.sass (a Vite built-in solution):
             
-            # Associating the Vite built-in solution to the project (only for dev environment):
+            1) Associating the Vite built-in solution to the project (only for dev environment):
                 $ npm add -D sass-embedded
                     # Verify your SASS dependency in package.json in the root project-folder:
                         E.g.
@@ -15,12 +19,43 @@ SCSS/SASS: VUE INTEGRATION
                                     "sass-embedded": "^1.89.1",
                                 }
                             }
+
+            2) In front-end folder, open the vite.config.js file:
+
+                export default defineConfig({
+                    //...
+                    build: {
+                        //...
+                    },
+                    plugins: [
+                        //...
+                    ],
+                    resolve: {
+                        //...
+                    },
+                    publicDir: "public",
+                    css: {
+                        preprocessorOptions: {
+                            scss: {
+                                //...
+                                quietDeps: true, // Handling deprecation warnings!
+                                sassOptions: {
+                                    quietDeps: true, // Belt and suspenders approach!
+                                },
+                            },
+                        },
+                    },
+                    server: {
+                        //...
+                    },
+                });
         
-            # In all Vue components using CSS, include the language in Style tag:
+            3) In all Vue components (.vue) using CSS, include the language in Style tag:
                 
                 E.g.:
                     # .scss/.sass
                     <style lang="scss" scoped>
+
 
             >> More about Vite:
                 https://vite.dev/

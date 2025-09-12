@@ -1,6 +1,10 @@
 // FILE: /my_django_project/frontend/vite.config.js
 
 //...
+import { config } from "dotenv";
+
+// Load front-end environment variables:
+const frontEnvVars = config({ path: "./.env" }).parsed || {};
 
 export default defineConfig({
   base: process.env.NODE_ENV === "production" ? "/static/" : "/",
@@ -25,11 +29,11 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:8000",
+        target: frontEnvVars.VITE_BASE_URL, // Cannot use the import.meta.env.VITE_BASE_URL here!
         changeOrigin: true
       },
       "/media": {
-        target: "http://localhost:8000",
+        target: frontEnvVars.VITE_BASE_URL, // Cannot use the import.meta.env.VITE_BASE_URL here!
         changeOrigin: true
       }
     }

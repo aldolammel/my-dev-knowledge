@@ -1,0 +1,140 @@
+{
+    /*
+        DEFAULT PROFILE
+        When this list is updated in Default Profile, all other profiles are updated too.
+    */
+    // IDE UI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "window.newWindowProfile": "Default",
+    "window.newWindowDimensions": "inherit",
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0.1,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        100
+    ],
+    "workbench.editor.tabActionCloseVisibility": false, // Removes close button from each tab.
+    "editor.lineHeight": 1.8,
+    "workbench.startupEditor": "none",
+    "zenMode.hideLineNumbers": false,
+    // THEME - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true, // if font characters will look together or separated.
+    // LINTER, FORMATTER, TYPE-CHECKER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Defined by each project .vscode/settings.json!
+    // TERMINAL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "terminal.integrated.stickyScroll.enabled": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // SECURITY - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "security.workspace.trust.untrustedFiles": "open",
+    // CODING BEHAVIORS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "explorer.confirmPasteNative": false,
+    "editor.quickSuggestionsDelay": 1000, // default 10
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000, // default 1000
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // COMMON LANGUAGES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "html.format.wrapLineLength": 100,
+    "html.format.maxPreserveNewLines": 2,
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "files.associations": {},
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {},
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.git": true,
+    },
+    // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "cSpell.language": "en,pt,pt_BR", // Code Spell Checker extension!
+    "cSpell.userWords": [
+        "ABCOO",
+        "adminsortable",
+        "aldolammel",
+        "Axio",
+        "ckeditor",
+        "django",
+        "djangorestframework",
+        "djlint",
+        "Ermano",
+        "Furni",
+        "IBCPA",
+        "isort",
+        "Lammel",
+        "linkedin",
+        "mypy",
+        "navbars",
+        "pagex",
+        "Pagex",
+        "Pinia",
+        "popperjs",
+        "psycopg",
+        "pycodestyle",
+        "pydotplus",
+        "Pyflakes",
+        "pyupgrade",
+        "simplejwt",
+        "stgs",
+        "strvar",
+        "stylesheet",
+        "unpub",
+        "venv",
+        "viewsets"
+    ],
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    /*
+        DEFINING ALL SETTINGS ABOVE AS DEFAULT FOR OTHER PROFILES
+    */
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "workbench.settings.applyToAllProfiles": [
+        // IDE UI:
+        "window.newWindowProfile",
+        "window.newWindowDimensions",
+        "window.menuBarVisibility",
+        "window.titleBarStyle",
+        "window.zoomLevel",
+        "editor.minimap.enabled",
+        "editor.rulers",
+        "workbench.editor.tabActionCloseVisibility",
+        "editor.lineHeight",
+        "workbench.startupEditor",
+        "zenMode.hideLineNumbers",
+        // THEME:
+        "workbench.colorTheme",
+        "workbench.iconTheme",
+        "editor.fontFamily",
+        "editor.fontLigatures",
+        // LINTER, FORMATTER, TYPE-CHECKER:
+        // No one default.
+        // TERMINAL:
+        "terminal.integrated.stickyScroll.enabled",
+        "terminal.integrated.defaultProfile.windows",
+        "terminal.integrated.defaultProfile.linux",
+        // SECURITY:
+        "security.workspace.trust.untrustedFiles",
+        // CODING BEHAVIORS:
+        "editor.inlineSuggest.suppressSuggestions",
+        "explorer.confirmPasteNative",
+        "editor.quickSuggestionsDelay",
+        "files.autoSave",
+        "files.autoSaveDelay",
+        "explorer.confirmDragAndDrop",
+        "explorer.confirmDelete",
+        // COMMON LANGUAGES:
+        "html.format.wrapLineLength",
+        "html.format.maxPreserveNewLines",
+        // FILES:
+        "files.associations",
+        "files.exclude",
+        "search.exclude",
+        // LANGUAGE, DICTIONARY STUFF:
+        "cSpell.language", // Code Spell Checker extension!
+        "cSpell.userWords", // Code Spell Checker extension!
+    ],
+}

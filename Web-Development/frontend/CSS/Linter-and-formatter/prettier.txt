@@ -1,1 +1,0 @@
-/JavaScript/Linter-Formatter-Typechecker/prettier.txt

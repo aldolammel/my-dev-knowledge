@@ -1,0 +1,17 @@
+
+
+ENVIRONMENT VARIABLE MANAGER: DJANGO-ENVIRON
+
+    To seamlessly integrate environment-based configuration with the Django framework. It builds
+    upon the ideas of python-dotenv but adds Django-specific features, type casting, and URL
+    parsing that are indispensable for Django projects.
+
+
+    Examples (Do not use then):
+        /Python/Web-development/django/Env-Var-Managers/django-environ/examples/.env
+        /Python/Web-development/django/Env-Var-Managers/django-environ/examples/settings.py
+
+
+    >> Installation:
+        
+        $ xxxxx

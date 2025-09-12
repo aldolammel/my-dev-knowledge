@@ -1,15 +1,21 @@
 
 
-CSS LINTER/FORMATTER: PRETTIER
+CSS FORMATTER: PRETTIER
 
-    1) ??? Install any extension for Vscode?
+    PRE) Assuming you know this CSS formatter:
+        /JavaScript/Linter-Formatter-Typechecker/prettier/_about.txt
 
-    2) Add to your profile on VScode:
+    1) Make sure you already have the "Prettier Code Formatter" extension in your IDE;
 
-        "[css]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.tabSize": 2,
-            "editor.formatOnSave": true,
-        },
-        "css.autoValidation": "Save",
+    2) IDE configuration:
+    
+        >> For VSCode:
+            In the project's .vscode/settings.json, add this:
 
+                // CSS SETTINGS
+                "[css]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+                    "editor.tabSize": 2,
+                    "editor.indentSize": "tabSize",
+                    "editor.insertSpaces": true,
+                },

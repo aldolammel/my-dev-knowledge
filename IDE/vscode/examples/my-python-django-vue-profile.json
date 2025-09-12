@@ -1,0 +1,78 @@
+{
+    /*
+        FROM DEFAULT PROFILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    */
+    // If you need to include something to all profiles automatically, edit the Default Profile.
+    /*
+        SPECIFIC FOR THIS PROFILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    */
+    // CUSTOM IDE UI:
+    "breadcrumbs.enabled": true,
+    "workbench.statusBar.visible": true,
+    "editor.wordWrap": "on",
+    "editor.hover.delay": 2000, // default 300
+    // CUSTOM THEME:
+    "editor.tokenColorCustomizations": { // Color of the comments like docstring.
+        "textMateRules": [
+            {
+                "scope": "string.quoted.docstring.multi.python",
+                "settings": {
+                    "foreground": "#535353"
+                }
+            }
+        ]
+    },
+    // LINTER, FORMATTER, TYPE-CHECKER - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Defined by each .vscode/settings.json!
+    // CUSTOM TERMINAL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    //"python.defaultInterpreterPath": "/bin/python3", // Defined by each .vscode/settings.json!
+    // CUSTOM SECURITY - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Reserved space...
+    // CUSTOM PROJECTS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "editor.formatOnSave": true,
+    "github.copilot.enable": {
+        "*": false, // Avoid code suggestion during the coding with autocompletetion!
+    },
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
+    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
+    // CUSTOM PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "python.languageServer": "Pylance", // Python language server.
+    "python.analysis.typeCheckingMode": "standard", // Python Type-checker.
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff", // Ruff Linter/Formatter
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always", // Ruff Linter/Formatter
+            "source.organizeImports.ruff": "always", // Ruff Linter/Formatter
+        }
+    },
+    // CUSTOM DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "python.analysis.extraPaths": [ // Add extra folders to Python analysis for imports resolution.
+        "./apps", // Django apps folder.
+        "./core" // Settings folder.
+    ],
+    "terminal.integrated.env.linux": { // Environment vars for Linux terminal sessions.
+        "DJANGO_SETTINGS_MODULE": "core.settings" // Set default Django settings module for shell.
+    },
+    // CUSTOM JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
+    // CUSTOM JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features", // VSCode
+    },
+    // CUSTOM HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
+    // CUSTOM CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Reserved space...
+    // CUSTOM VUE SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Reserved space...
+    // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "files.associations": {},
+    // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "cSpell.userWords": [],
+    // CUSTOM OTHERS:
+}

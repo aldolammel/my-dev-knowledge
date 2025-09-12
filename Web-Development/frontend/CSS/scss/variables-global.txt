@@ -16,7 +16,7 @@ SCSS VARIABLES: GLOBAL VARIABLES:
                 css: {
                     preprocessorOptions: {
                         scss: {
-                            additionalData: `@import "@/assets/styles/vars.scss";`,
+                            additionalData: `@use "@/assets/styles/vars" as *;`,
                         }
                     }
                 },

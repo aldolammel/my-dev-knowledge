@@ -1,4 +1,67 @@
 {
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
+    "editor.rulers": [
+        100
+    ],
+    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
+    "editor.wordWrapColumn": 100,
+    "prettier.printWidth": 100, // Prettier
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[plaintext]": {
+        "editor.defaultFormatter": null, // xxx
+        "editor.lineNumbers": "off",
+        "editor.renderWhitespace": "none",
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.trimAutoWhitespace": true,
+        "editor.renderLineHighlight": "line",
+        "editor.guides.indentation": false,
+        //"editor.wordWrap": "on",
+    },
+    // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+    },
+    // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+    },
+    // HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "html.format.wrapLineLength": 100,
+    "html.format.indentInnerHtml": true,
+    "html.format.templating": true,
+    "html.format.maxPreserveNewLines": 2,
+    // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+    },
+    // VUE SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+    },
+    // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "files.associations": {
+        "*.css": "css",
+        "*.vue": "vue",
+        "*.json": "jsonc",
+        "*.txt": "plaintext",
+        "*.text": "plaintext",
+        "README": "plaintext",
+        "CHANGELOG": "plaintext",
+        "LICENSE": "plaintext",
+        "*.log": "plaintext"
+    },
     // LANGUAGE, DICTIONARY STUFF:
     // Never in project, always in the developer profiles!
 }

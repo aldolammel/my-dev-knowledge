@@ -1,0 +1,9 @@
+
+
+ENVIRONMENT VARIABLE MANAGERS BY LANGUAGE: PYTHON
+
+    >> For pure Python project:
+        /Python/Env-Var-Managers/_options.txt
+
+    >> For Django project:
+        /Python/Web-development/django/Env-Var-Managers/_options.txt
