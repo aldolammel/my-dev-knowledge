@@ -18,12 +18,12 @@
     "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
     "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
     "[python]": {},
-    // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": { // Tell VSCode how to treat files based on patterns.
         "*.json": "jsonc",
     },
-    // FILE EXCLUSIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
         //"**/__pycache__": true,
         //"**/*.pyc": true,
         //"**/.pytest_cache": true,
@@ -31,8 +31,8 @@
         //"**/.venv": true,
         //"**/.git": true,
     },
-    // SEARCH EXCLUSIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    "search.exclude": { // Files/folders to hide from the VSCode searchings.
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
         "**/venv": true,
         "**/.venv": true,
         "**/__pycache__": true,

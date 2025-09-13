@@ -1,4 +1,7 @@
 {
+    /*
+        VSCODE SETTINGS FOR PROJECT: MY-DEV-KNOWLEDGE
+    */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
     "editor.rulers": [
@@ -50,7 +53,7 @@
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },
-    // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": {
         "*.css": "css",
         "*.vue": "vue",
@@ -61,6 +64,19 @@
         "CHANGELOG": "plaintext",
         "LICENSE": "plaintext",
         "*.log": "plaintext"
+    },
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.venv_studies": true,
+    },
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.venv_studies": true,
+        "**/.git": true,
     },
     // LANGUAGE, DICTIONARY STUFF:
     // Never in project, always in the developer profiles!

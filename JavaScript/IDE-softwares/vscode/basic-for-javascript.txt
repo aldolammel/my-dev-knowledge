@@ -10,7 +10,7 @@ IDE FOR JS PROJECT: VSCODE
 
             1.1) In the project folder, open this file: .vscode/settings.json;
             1.2) In that file, apply these lines:
-                /JavaScript/IDE-softwares/vscode/examples/settings.json
+                /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
 
             # Make sure your .gitignore file is not blocking the .vscode folder and its content
                 in project repository!

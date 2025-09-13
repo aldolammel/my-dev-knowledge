@@ -19,14 +19,14 @@ IDE: VSCode
             profiles.
 
 
-                PRE) Where to manage profiles:
+                PRE) Where to manage profiles in VSCode interface:
                     /IDE/vscode/2025-vscode-aldo-profiles.png
 
 
                 >> Default profile:
                     What is global for all your other profiles.
                     
-                    To access: open a new VSCode window and CTRL+SHIF+P and then click over
+                    To access: open a new VSCode window and CTRL+SHIFT+P and then click over
                                 "Open User Settings (JSON)".
 
                         E.g.
@@ -38,8 +38,9 @@ IDE: VSCode
                     basically bringing the default settings and override them (if needed) with
                     this profile specificities.
 
-                    To access: through VSCode interface, create a new profile and, then, CTRL+SHIF+P
-                                and click over "Open User Settings (JSON)".
+                    To access:
+                        Through VSCode interface, create a new profile and, then, CTRL+SHIFT+P
+                        and click over "Open User Settings (JSON)".
 
                         E.g.
                             /IDE/vscode/examples/my-python-django-vue-profile.json
@@ -50,13 +51,14 @@ IDE: VSCode
             Its configuration file is called settings.json that belongs the /.vscode/ folder in
             the project folder. This settings file override other previously settings.
 
-            To access: through VSCode interface, open the project folder, and then go to the
-                        .vscode folder inside the project and open the settings.json file.
+            To access:
+                Through VSCode interface, open the project folder, and then go to the .vscode folder inside the project and open the settings.json file.
 
                         E.g.
                             /IDE/vscode/examples/.vscode/settings.json
 
-            Tip: make this .vscode folder available in your project repository to rule this features
+            Tip:
+                Make this .vscode folder available in your project repository to rule this features
                 for all developers involved on the project.
 
 
