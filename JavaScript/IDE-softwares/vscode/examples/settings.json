@@ -17,7 +17,7 @@
     "[json]": {
         "editor.defaultFormatter": ""
     },
-    // FILE ASSOCIATIONS
+    // FILES
     "files.associations": { // Tell VSCode how to treat files based on patterns.
         "*.json": "jsonc",
     },

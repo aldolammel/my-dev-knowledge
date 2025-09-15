@@ -50,7 +50,7 @@
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },
-    // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": {
         "*.css": "css",
         "*.vue": "vue",
@@ -61,6 +61,21 @@
         "CHANGELOG": "plaintext",
         "LICENSE": "plaintext",
         "*.log": "plaintext"
+    },
+    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+        //"**/__pycache__": true,
+        //"**/*.pyc": true,
+        //"**/.pytest_cache": true,
+        "**/venv_studies": true,
+        "**/.venv_studies": true,
+        //"**/.git": true,
+    },
+    "search.exclude": { // Files/folders to hide from the VSCode searchings.
+        "**/venv_studies": true,
+        "**/.venv_studies": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.git": true,
     },
     // LANGUAGE, DICTIONARY STUFF:
     // Never in project, always in the developer profiles!
