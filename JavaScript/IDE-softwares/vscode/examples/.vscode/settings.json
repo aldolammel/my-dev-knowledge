@@ -3,30 +3,29 @@
         VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    //"terminal.integrated.cwd": "${workspaceFolder}",  // Project folder for terminal initializ.
     "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
     "editor.rulers": [
         100 // Draw ruler at column XXX.
     ],
     "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
     "editor.wordWrapColumn": 100,
-    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // Reserved space...
-    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // Where's Python interpreter on project:
-    "python.defaultInterpreterPath": "/bin/python3", // It knows the '.venv' or 'venv' in path.
-    "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
-    "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
-    "[python]": {},
+    // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "[javascript]": {
+        "editor.defaultFormatter": "",
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+    },
+    // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "[json]": {
+        "editor.defaultFormatter": ""
+    },
     // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": { // Tell VSCode how to treat files based on patterns.
         "*.json": "jsonc",
     },
     // Files/folders to hide from the VSCode explorer:
     "files.exclude": {
-        //"**/__pycache__": true,
-        //"**/*.pyc": true,
-        //"**/.pytest_cache": true,
         //"**/venv": true,
         //"**/.venv": true,
         //"**/.git": true,
@@ -35,10 +34,6 @@
     "search.exclude": {
         "**/venv": true,
         "**/.venv": true,
-        "**/__pycache__": true,
-        "**/*.pyc": true,
         "**/.git": true,
     },
-    // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // Never in project, always in the developer profiles!
 }

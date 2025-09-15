@@ -1,4 +1,7 @@
 {
+    /*
+        VSCODE SETTINGS FOR PROJECT: MY-DEV-KNOWLEDGE
+    */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
     "editor.rulers": [
@@ -62,6 +65,7 @@
         "LICENSE": "plaintext",
         "*.log": "plaintext"
     },
+<<<<<<< HEAD
     "files.exclude": { // Files/folders to hide from the VSCode explorer.
         //"**/__pycache__": true,
         //"**/*.pyc": true,
@@ -75,6 +79,19 @@
         "**/.venv_studies": true,
         "**/__pycache__": true,
         "**/*.pyc": true,
+=======
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.venv_studies": true,
+    },
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.venv_studies": true,
+>>>>>>> dde91f4dbb3ca92e53e6ac91ee0a50cf7132a6fd
         "**/.git": true,
     },
     // LANGUAGE, DICTIONARY STUFF:
