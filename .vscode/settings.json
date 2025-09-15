@@ -65,33 +65,19 @@
         "LICENSE": "plaintext",
         "*.log": "plaintext"
     },
-<<<<<<< HEAD
-    "files.exclude": { // Files/folders to hide from the VSCode explorer.
-        //"**/__pycache__": true,
-        //"**/*.pyc": true,
-        //"**/.pytest_cache": true,
-        "**/venv_studies": true,
-        "**/.venv_studies": true,
-        //"**/.git": true,
-    },
-    "search.exclude": { // Files/folders to hide from the VSCode searchings.
-        "**/venv_studies": true,
-        "**/.venv_studies": true,
-        "**/__pycache__": true,
-        "**/*.pyc": true,
-=======
     // Files/folders to hide from the VSCode explorer:
     "files.exclude": {
         "**/venv": true,
         "**/.venv": true,
+        "**/venv_studies": true,
         "**/.venv_studies": true,
     },
     // Files/folders to hide from the VSCode searchings:
     "search.exclude": {
         "**/venv": true,
+        "**/venv_studies": true,
         "**/.venv": true,
         "**/.venv_studies": true,
->>>>>>> dde91f4dbb3ca92e53e6ac91ee0a50cf7132a6fd
         "**/.git": true,
     },
     // LANGUAGE, DICTIONARY STUFF:

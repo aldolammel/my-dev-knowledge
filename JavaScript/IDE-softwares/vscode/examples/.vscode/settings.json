@@ -21,7 +21,8 @@
         "editor.defaultFormatter": ""
     },
     // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    "files.associations": { // Tell VSCode how to treat files based on patterns.
+    // Tell VSCode how to treat files based on patterns:
+    "files.associations": {
         "*.json": "jsonc",
     },
     // Files/folders to hide from the VSCode explorer:
