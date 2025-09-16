@@ -1,1 +1,1 @@
-/Python/00-New-Project/2-web-project-django-with-vue.txt
+/Python/Web-development/django/0-new-project/web-project-django-with-vue.txt

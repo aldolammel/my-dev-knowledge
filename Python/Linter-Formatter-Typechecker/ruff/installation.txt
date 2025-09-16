@@ -3,38 +3,45 @@
 RUFF: INSTALLATION AND INTEGRATION
 
 
-    >> INSTALLING:
+    PRE) What is it:
+        /Python/Linter-Formatter-Typechecker/ruff/_about.txt
 
-        1) Define with Package manager you will use for:
 
-            1A) Using UV;
-            1B) Or using PIP;
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    1) INSTALLING:
+
+        1.1) Define with Package manager you will use for:
+
+            1.1A) Using UV;
+            1.1B) Or using PIP;
 
             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            1A) Using UV:
+            1.1A) Using UV:
 
-                1A.PRE) UV already installed:
+                PRE) UV already installed:
                     /Python/Package-manager/uv.txt
 
-                1A.1) Already in the right virtual env, add it as dev dependency only:
+                >> Already in the right virtual env, add it as dev dependency only:
                     $ uv add --optional dev ruff
 
-            1B) Using PIP:
+            1.1B) Using PIP:
 
                 PRE) Basic about PIP:
                     /Python/Package-manager/pip/_about.txt
 
-                1B.1) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                >> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-                1B.2) Add manually the xxxxxx in the pyproject optional dependencies:
+                >> Add manually the xxxxxx in the pyproject optional dependencies:
                     xxxxxxxxxxxxxxxxxxxxxxx
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     
-    >> INTEGRATION:
+    2) INTEGRATION:
 
         1) (Optional)
             If using .gitignore file, add these lines:

@@ -18,7 +18,7 @@ PYTHON LANGUAGE > LINTER AND FORMATTER: RUFF
         /Python/Linter-Formatter-Typechecker/ruff/installation.txt
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     
     >> HOW TO CHECK CODE ERRORS:

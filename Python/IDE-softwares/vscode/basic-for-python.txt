@@ -6,8 +6,7 @@ IDE FOR PYTHON PROJECT: VSCODE
     >> Basic for run Python:
 
 
-        PRE.1) Python interpreter:
-
+        PRE.1) Python project:
             /Python/00-New-Project/1-new-project.txt
 
 
@@ -71,19 +70,20 @@ IDE FOR PYTHON PROJECT: VSCODE
         
         6) Type-Checker (MyPy by Microsoft):
 
-            /Python/Linter-Formatter-Typechecker/mypy.txt
+            /Python/Linter-Formatter-Typechecker/mypy/installation.txt
 
         
         7) Linter (Ruff by Astral):
 
-            /Python/Linter-Formatter-Typechecker/ruff.txt
+            /Python/Linter-Formatter-Typechecker/ruff/installation.txt
 
 
         8) Formatter (Ruff by Astral):
 
-            /Python/Linter-Formatter-Typechecker/ruff.txt
+            /Python/Linter-Formatter-Typechecker/ruff/installation.txt
 
 
-        9) (If applicable) For VSCode, re-open the .vscode/settings.json, and set for each
-                            Python linter/formatter/type-checker the project must use!
+        9) (If applicable)
+            For VSCode, re-open the /project/.vscode/settings.json, and set for each Python
+            linter/formatter/type-checker the project must use!
             

@@ -7,4 +7,4 @@ GITHUB
     GitHub provides a centralized place where developers can store, manage, and share their code.
 
     >> Basic Git commands:
-        /Versioning/git/basic.txt
+        /Versioning/git/basic-commands.txt

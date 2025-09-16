@@ -1,0 +1,40 @@
+
+
+DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
+
+
+    >> Using django-environ lib: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        PRE) Lib installation:
+            /Python/Web-development/django/Env-Var-Managers/django-environ/_about.txt
+
+        E.g. of Django /core/settings.py:
+
+            from pathlib import Path
+            import environ
+
+            # Environment Variables, basic:
+            BASE_DIR = Path(__file__).resolve().parent.parent
+            environ.Env.read_env(BASE_DIR / ".env")  # Take environment variables from .env file.
+            env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
+            # Environment Variables, callers:
+            DEBUG = env("DEBUG")
+            SECRET_KEY = env("SECRET_KEY")
+
+
+    >> Using XXXXXXXXXXXXXX lib: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        PRE) Lib installation:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        E.g. of Django /core/settings.py:
+
+            xxxxxxx
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> SETTINGS.PY MODEL WITH REAL ENV VARS BEEN CALLED:
+    /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py

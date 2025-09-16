@@ -34,7 +34,7 @@ ACTIVING SESSION IN THE PROJECT:
         'django.contrib.sessions',
 
 
-    4) Still in settings file, add with '# Authentification' group:
+    4) Still in settings file, add with '# Authentication' group:
 
         # How long the session cookie must survive, in secs:
         # Default = 1209600 = 2 weeks

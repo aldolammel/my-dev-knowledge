@@ -13,7 +13,7 @@ RE-INSTALL ONLY THE DJANGO:
         project repository again:
 
             1) Clone an existent project repo:
-                /35-version/git/basic.txt
+                /Versioning/git/basic-commands.txt
             
             2) Carefully, adapt this guide to reinstall the Django project:
                 /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
@@ -29,77 +29,52 @@ RE-INSTALL ONLY THE DJANGO:
 
         2) Reinstall method:
 
-            2A) Using UV package (recommended, more professional)!
-            2B) Or using common method.
+            2A) Using UV (recommended, more professional)!
+            2B) Or using PIP (Django built-in solution).
         
-            ..........................
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            2A) Using UV package:
-
+            2A) Using UV:
                 Carefully, adapt this guide to reinstall the Django project:
                     /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
-                >> How to create a new Django project (in the current folder):
-                    $ uv run django-admin startproject core .
-            
-                >> How to run the Django application:
-                    $ uv run manage.py runserver
+
+            2B) Using PIP:
+                Carefully, adapt this guide to reinstall the Django project:
+                    /Python/Web-development/django/1-install-and-first-steps/1-install-with-pip-package.txt
 
 
-            2B) Or using common method:
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-                2B.1) Create a new virtual environment and active it:
+        
+        1) Re-installing:
 
-                    /Python/02-virtual-environment/creating-virtual-environment.txt
+            1.1) Create the Django Project Structure:
+                
+                $ django-admin startproject core .     <-- this install in the current folder!
 
 
-                2B.2) Installation:
+            1.2) Installing all project dependencies:
 
-                    >> Using a file as guide:
+                >> Using a file as guide:
+                
+                    >> Smart method: pyproject.toml
+                        /Python/Package-manager/uv/auto-installation-from-pyproject-file.txt
                     
-                        >> Smart method: pyproject.toml
-                            /Python/Package-manager/uv/creating-requirements-of-project.txt
-                        
-                        >> Old method: requirements.txt
-                            /Python/Package-manager/pip/creating-requirements-of-project.txt
+                    >> Old method: requirements.txt
+                        /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
 
 
-                    >> (NOT RECOMMENDED) Or manually (the same for Ubuntu and Windows):
+                >> (NOT RECOMMENDED) Or manually:
 
-                            >> Update pip module:
-                                
-                                /Python/Package-manager/pip.txt
+                    >> Using UV:
+                        xxxxx
 
-                            >> Install Django:
-
-                                $ pip install django
-
-                            >> Check the current django installed:
-
-                                $ python -m django --version
-                                or 
-                                $ pip show django
-
-                            >> upgrade django if needed:
-
-                                $ python -m pip install --upgrade django
-                    
-
-                    >> Only for VSCode:
-                        # DjLint (html template formatter for django/jinja)
-                        $ pip install -U djlint
-                        
-                        # Install the DjLint extension for VSCode.
-                        # Install the Django (by Baptiste) extension for VSCode.
-                        # In VSCode, In Html's, change the language mode to 'Django-Html'
+                    >> Using PIP:
+                        xxxxx
 
 
-                2B.3) Create the Django Project Structure:
-                        
-                    $ django-admin startproject core .     <-- this install in the current folder!
-
-
-        3) Make sure you're in the same folder the 'manage.py' file, and then start the django
+        2) Make sure you're in the same folder the 'manage.py' file, and then start the django
             for testing purposes:
 
                 # 1/3:
@@ -117,7 +92,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
 
-        4) Files (1/3):
+        3) Files (1/3):
             
             >> First of 3 steps to bring files: from old project folder to the new one, copy these:
 
@@ -143,7 +118,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
 
-        5) Re-create each sub-app needed:
+        4) Re-create each sub-app needed:
 
             >> Critical: keep exactly the same original subapp's name to avoid many
                 of adjustments on files!
@@ -154,7 +129,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
 
-        6) Database matters:
+        5) Database matters:
 
             >> At first: no settings.py adjustments are need for now! Next step will handle it;
 
@@ -187,7 +162,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
 
-        7) Files (2/3):
+        6) Files (2/3):
 
             >> SETTINGS.PY: the second step is to bring line by line from the old project settings to
                             the new settings.py. DON'T just copy the file! Bring carefully line by line
@@ -202,7 +177,7 @@ RE-INSTALL ONLY THE DJANGO:
                                         from . import signals
 
 
-        8) Files (3/3):
+        7) Files (3/3):
         
             >> Third/last step to bring original Django project files: from the old project folder
                 to the new one, copy the list below from each sub-app already created:
@@ -221,7 +196,7 @@ RE-INSTALL ONLY THE DJANGO:
                         /sub-app/templates/
 
 
-        9) Finally, let's build up the original project as a new Django copy:
+        8) Finally, let's build up the original project as a new Django copy:
 
             >> Run 'makemigrations' in the new Django project!
 
@@ -255,7 +230,7 @@ RE-INSTALL ONLY THE DJANGO:
                         $ uv run manage.py createsuperuser
             
         
-        10) Test it!
+        9) Test it!
 
             $ python manage.py runserver
             Or
@@ -263,7 +238,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
         
-        11) If the application is using more than one language, test if the site is changing
+        10) If the application is using more than one language, test if the site is changing
             the language. If not, just compile the translation again:
 
             >> Using Gettext/Rosetta/Parler:
@@ -275,7 +250,7 @@ RE-INSTALL ONLY THE DJANGO:
 
 
 
-        12) Clean up some useless stuff:
+        11) Clean up some useless stuff:
 
             /requirements.txt
             /db.sqlite3

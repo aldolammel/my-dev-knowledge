@@ -1,0 +1,44 @@
+
+
+DATABASE ON DJANGO: POSTGRESQL
+
+
+    1) Install the PostgreSQL Python module:
+        https://www.psycopg.org/
+
+
+    2) If the database won't be in the cloud, install the PostgreSQL locally:
+        /Database/PostgreSQL/0-installing-and-updating/postgres-installing.txt
+
+    
+    3) In core folder, open the settings.py file:
+
+        >> Option 1:
+            Only lines for db configuration, specificaly for POSTGRESQL:
+                /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/PostgreSQL/settings.py
+        
+        >> Option 2:
+            An entire settings.py template:
+                /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
+
+    
+    4) Make a copy of '.env' file to the project root folder:
+        
+        /Environment-Variables/
+
+
+    5) If you see the file sqlite.db in the project root folder, delete it, once you are using PostgreSQL;
+
+
+    6) If you are installing a new Django project or re-installing a new database, return to the previously installation checklist because other steps are needed before to migrate command. 
+    
+    Otherwise, if it's not the case, in a new Terminal window, select the virtual environment again and give the order to build the database, finally:
+        
+        $ python manage.py makemigrations
+        $ python manage.py migrate
+        
+        or
+
+        $ uv run manage.py makemigrations
+        $ uv run manage.py migrate
+    

@@ -11,6 +11,5 @@ ENVIRONMENT VARIABLES:
             
             >> For those projects that back-end and front-end have different solutions, each one
                 has its own environment. That said, for that cases expect 2 environment files for
-                the same project. Each file with its environment variables: sometimes with duplicated
-                vars, sometimes with unique vars.
+                the same project. Each file with its environment variables: sometimes with duplicated vars, sometimes with unique vars.
 

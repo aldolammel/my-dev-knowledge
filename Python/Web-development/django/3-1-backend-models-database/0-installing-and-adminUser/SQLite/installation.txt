@@ -1,5 +1,7 @@
 
-SQLITE
+DATABASE ON DJANGO: SQLITE
+
+    Is it the Django db by default???????
 
     1) xxxxxxxxxx
 

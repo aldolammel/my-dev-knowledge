@@ -1,0 +1,1 @@
+/Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/PostgreSQL/installation.txt

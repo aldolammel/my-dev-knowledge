@@ -1,0 +1,142 @@
+
+
+DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
+
+    >> Basic about PIP:
+        /Python/Package-manager/pip/_about.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> BEFORE THE PROJECT: 
+    
+        1) Make sure you are in the MAIN python environment, not in a virtual one!
+
+        2) Now, update the PIP:
+
+            /Python/Package-manager/pip/_about.txt
+
+    
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> PROJECT SETUP:
+
+        1) Local project folder:
+            
+            >> Create the project folder, keeping this in mind:
+                /Python/Web-development/django/django-project-folder-structure.txt
+
+            >> Or, if it already exists, next step!
+        
+        
+        2) Open the Project folder through the IDE;
+
+
+        3) Project versioning:
+
+            >> Create a repository or use an existing one:
+                /Versioning/
+
+
+        4) Creating the virtual environment:
+                    
+            >> Create it:
+                /Python/02-virtual-environment/creating-virtual-environment.txt
+
+            >> Active it:
+                /xxxxxx
+        
+        
+        5) Choosing the way to create the Django project:
+
+            5A) CREATING A NEW PROJECT:
+            5B) OR I'M GETTING AN EXISTING PROJECT:
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+            5A) CREATING A NEW PROJECT:
+
+                >> Installing Django:
+
+                    >> Make sure you're in the project virtual environment!
+                        
+                        >> On Ubuntu/Windows:
+
+                            >> Update pip module:
+                                /Python/Package-manager/pip.txt
+
+                            >> Install Django:
+                                $ pip install django
+
+                            >> Check the current django installed:
+                                $ python -m django --version
+
+                            >> upgrade django if needed;
+                                $ python -m pip install --upgrade pip
+
+                        >> On Mac:
+
+                            xxxxxxxxxxxxxx
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            5B) OR I'M GETTING AN EXISTING PROJECT:
+
+                PRE.1) Make sure you're in the project virtual environment!
+
+                PRE.2) Project is already in your local machine!
+                        /Versioning/git/basic-commands.txt
+                
+                >> Project requirements/dependencies:
+
+                    A) Using requirements.txt file;
+                    B) Or using pyproject.toml;
+                    
+                    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                    
+                    A) Using requirements.txt file:
+
+                        /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
+                    
+                    B) Using pyproject.toml file:
+
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+                    >> Local project database:
+
+                        >> You already have the local database created:
+                            
+                            >> Run the makemigrations command:
+                                $ xxxxxxxxx manage.py makemigrations
+
+                            >> Even if no migrations in previously command, run the migrate command:
+                                $ xxxxxxxxx manage.py migrate
+
+                        >> OR if you don't have a local database created yet:
+                        
+                            xxxxxxxxxxxxxxxxxxxx
+
+       
+                    >> (OPTIONAL)
+                        If you have multilingual support in your project:
+
+                        >> With Gettext module installed:
+                            
+                            $ xxxxxxxxx manage.py makemessages --all
+                            $ xxxxxxxxx manage.py compilemessages
+        
+        
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+
+        6) (Optional)
+            Make sure you got your .gitignore updated with Django, environment and other things:
+                /Versioning/git/gitignore-file.txt
+
+
+        >> Return to Django project installation roadmap:
+            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt

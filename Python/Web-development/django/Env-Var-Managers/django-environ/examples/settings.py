@@ -1,31 +1,21 @@
 # DONT USE THIS. THIS IS JUST AN EXAMPLE FILE.
+# FILE: /core/settings.py
 
-# settings.py
+# Django Env Var Manager:
 import environ
 
-# Initialize the library
-env = environ.Env(
-    # Set casting and default values
-    DEBUG=(bool, False),
-)
+# Environment Variables, basic:
+BASE_DIR = Path(__file__).resolve().parent.parent
+environ.Env.read_env(BASE_DIR / ".env")  # Take environment variables from .env file.
+env = environ.Env(DEBUG=(bool, False))  # Initialize environment variables.
 
-# Read the .env file
-environ.Env.read_env()
+# Environment Variables, callers:
+DEBUG = env("DEBUG")
+SECRET_KEY = env("SECRET_KEY")
+...
 
-# False if DEBUG not found in .env or not 'on'
-DEBUG = env('DEBUG')
-
-# Raises an error if SECRET_KEY not found
-SECRET_KEY = env('SECRET_KEY')
-
-# Parse a complex URL into a Django config dictionary
+# In case the db is running on a cloud service:
 DATABASES = {
-    # The 'default' key is parsed from the DATABASE_URL environment variable.
-    # If the URL doesn't exist, it raises an error.
-    'default': env.db(),
-}
-
-# Parse a cache URL (e.g., for Redis)
-CACHES = {
-    'default': env.cache_url(),
+    # The db() method is an alias for db_url().
+    'default': env.db_url('DATABASE_URL'),
 }

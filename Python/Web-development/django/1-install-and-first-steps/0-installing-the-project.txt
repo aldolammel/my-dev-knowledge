@@ -2,17 +2,28 @@
 
 INSTALLING DJANGO:
 
-    BASIC I) Python installation:
-        
-        /Python/01-python-installation/
-        
-    
-    BASIC II) If you are RE-installing Django, skip all of this, and following only this one:
-
-        /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt
+    ATTENTION:
+        If you are RE-installing Django, skip all of this, and following only this one:
+            /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    PRE.1) Python interpreter (if needed);
+            /Python/01-python-installation/
+
+    PRE.2) IDE, language setup:
+            >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
+            >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    0) IDE, framework setup:
+        >> VSCode:  /Python/Web-development/django/IDE-softwares/vscode/basic-for-django.txt
+        >> PyCharm: /Python/Web-development/django/IDE-softwares/pycharm/basic-for-django.txt
 
 
     1) Create the project folder, and get it:
@@ -21,86 +32,34 @@ INSTALLING DJANGO:
         $ cd <project_folder>
 
 
-    2) Define the method to install Django:
+    2) Define the Package Manager for Django project:
 
-        2A) Using UV package (recommended, more professional)!
-        2B) Or using common method, more manual (pip).
+        2A) Using UV (recommended, more professional)!
+        2B) Or using PIP (Django built-in solution).
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
-        2A) Using UV package:
-            If you want to use the UV package, follow this:
+        2A) Using UV:
+
             /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
-        2B) Using common method (pip):
 
-            2B-PRE.1) Keep this in mind: Django project folder's structure!
-                    /Python/Web-development/django/django-project-folder-structure.txt
+        2B) Using PIP:
 
-            2B-PRE.2) Create your project folder (where you will develop the product)!
-
-            2B.1) Inside the project folder, create the virtual environment and active it:
-                    /Python/02-virtual-environment/
-
-            2B.2) (OPTIONAL) Make sure you got your .gitignore updated with: Django, environment
-                            and other things!
-                
-            2B.3) Installation:
-
-                >> Based on SO:
-
-                    >> For Ubuntu/Windows:
-
-                        >> Update pip module:
-                            /Python/Package-manager/pip.txt
-
-                        >> Install Django:
-                            $ pip install django
-
-                        >> Check the current django installed:
-                            $ python -m django --version
-
-                        >> upgrade django if needed;
-                            $ python -m pip install --upgrade pip
-
-                    >> For Mac:
-
-                        xxxxxxxxxxxxxx
-                
-
-                >> Linters and formatters:
-
-                    >> Python linter/formatter:
-                        
-                        >> Using Ruff:
-                            $ pip install ruff
-                            # And manually install the Ruff extension for your Code IDE.
-
-                        >> Or using XXX:
-                            xxxxxx
-                            xxx
-                    
-                    >> Django linter/formatter:
-
-                        /Python/Web-development/django/Linter-Formatter-Typechecker/djlint.txt
-                        
-                        
-
-                    # Install the Django (by Baptiste) extension for VSCode.
-                    # In VSCode, In Html's, change the language mode to 'Django-Html'
+            /Python/Web-development/django/1-install-and-first-steps/1-install-with-pip-package.txt
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
+    
     3) Create the Django Project Structure:
 
-        # make sure you're in project root folder and:
+        # Make sure you're in project root folder and:
             $ django-admin startproject core .          <-- This dot's important!
-        Or
+        # Or
             $ uv run django-admin startproject core .   <-- This dot's important!
 
 
-    4) Make sure you're in the same folder the 'manage.py' file, and then start the django
+    4) Make sure you're in the same folder the 'manage.py' file, and then start the django:
         
         4.1) for testing purposes:
 
@@ -147,50 +106,46 @@ INSTALLING DJANGO:
 
 
         x.4) Define your database:
-            /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/1-define-your-database/
+            /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/_define-the-database.txt
 
 
-    6) Set the environment variables and create your .env file:
-        /Python/Web-development/django/1-install-and-first-steps/environment-variables-django.py
+    6) Defining the back-end environment-variables, and configure Django to read it:
+        
+        6.1) Create the .env file in the Django project-folder (don't mistake with the core-folder):
+        
+            >> A) Environment-variables are managed locally;
+                    /Environment-Variables/env-for-local/in-backend/.env
+
+            >> B) Or environment-variables are managed by a cloud service;
+                    /Environment-Variables/env-for-cloud/in-backend/.env
+
+        6.2) Configure Django to read properly those basic env vars:
+            
+            /Python/Web-development/django/3-1-backend-models-database/environment-variables-on-django.txt
 
 
+    7) Linters and formatters:
 
-    7) Create the main 'templates' folder in the project-folder (Don't mistake with the core-folder):
+        PRE) Python linter/formatter/type-checker:
+            /Python/IDE-softwares/vscode/basic-for-python.txt
+        
+        7.1) Django linter/formatter:
 
-        E.g. Django Project Structure:
+            >> Using Djlint (recommended):
+                /Python/Web-development/django/Linter-Formatter-Typechecker/djlint.txt
 
-            >Project-folder (it's the 'main-app' / the root folder)
-                >.venv
-                >core (it's the config-folder, sometimes with the same name of the project)
-                    -settings.py (where you register each sub-app in use)
-                    ...
-                >sub-app1-folder
-                    ...
-                >sub-app2-folder
-                    ...
-                >sub-app3-folder
-                    ...
-                >media-folder
-                    ...
-                >static-folder
-                    ...
-                -manage.py
-                ...
+            >> Other options:
+                /Python/Web-development/django/Linter-Formatter-Typechecker/_formatter/django-options.txt
+                /Python/Web-development/django/Linter-Formatter-Typechecker/_linter/django-options.txt
 
+        7.2) Django type-checker:
 
-    8) Create the 'static' folder in the project-folder too!
+            >> Options:
+                /Python/Web-development/django/Linter-Formatter-Typechecker/_type-checker/django-options.txt
+    
+    
 
-        >> In static-folder, create a 'css' folder and a 'js' folder.
-        >> in css-folder, create a 'main.css' file.
-        >> in js-folder, create a 'main.js' file.
-
-
-    9) Create the 'media' folder in the project-folder too!
-
-        >> Keep it empty for now.
-
-
-    10) Create basic sub-apps in the project's application:
+    8) Create basic sub-apps in the project's application:
 
         x.1) (Skip it if you'll use an existent settings.py model later) 
             Show to Django where will be each template folder in your sub-apps, going to the
@@ -231,7 +186,7 @@ INSTALLING DJANGO:
                 g.4) Test it!
 
 
-            >> Do you need user management through the application front-end too?
+            >> Do you need user management through the app front-end too?
 
                 >> If not:
                     /Python/Web-development/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
@@ -253,7 +208,7 @@ INSTALLING DJANGO:
                     i.4) Test it!
 
 
-    11) Creating the admin user:
+    9) Creating the admin user:
         
         $ python manage.py createsuperuser
         or
@@ -269,7 +224,7 @@ INSTALLING DJANGO:
 
 
 
-    12) (Skip it if you'll use an existent settings.py model later)
+    10) (Skip it if you'll use an existent settings.py model later)
         Will this project have more than one language?
 
             If not, add in your settings.py:
@@ -277,12 +232,40 @@ INSTALLING DJANGO:
                 
             Otherwise:
                 /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt
-    
 
-    13) Optionals:
+
+    11) Optionals:
 
         x.1) Will you use file upload?
             /Python/Web-development/django/5-uploads/
 
         x.2) Will you use image upload?
             /Python/Web-development/django/5-uploads/images/
+
+
+    12) Install the front-end solution:
+    
+        X.A) Django template solution;
+        X.B) Or Vue;
+        X.C) Or React;
+        X.D) Or Angular;
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        X.A) Django template solution:
+            /Python/Web-development/django/0-new-project/web-project-django-only.txt
+
+
+        X.B) Vue:
+            /Python/Web-development/django/0-new-project/web-project-django-with-vue.txt
+
+
+        X.C) React:
+            /Python/Web-development/django/0-new-project/web-project-django-with-react.txt
+
+
+        X.D) Angular:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+

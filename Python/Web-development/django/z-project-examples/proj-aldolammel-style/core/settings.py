@@ -34,14 +34,15 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 # TODO: uncomment after to create the 'accounts' sub-app:
 #AUTH_USER_MODEL = NAMEAPP_3 + ".User"  # Extending Django User features.
 
-"""if DEBUG:
-    print("SECRET_KEY:", env('SECRET_KEY', default='Not Set'))
-    print("ALLOWED_HOSTS:", env('ALLOWED_HOSTS', default='Not Set'))
-    print("DATABASE_URL:", env('DATABASE_URL', default='Not Set'))"""
+# ONLY IN CASE DB IS LOCAL!!!
+# Environments custom settings:
+DB_CONN_TIMEOUT = 600  # 600 = 10min / 3600 = 1h
+if DEBUG:
+    DB_CONN_TIMEOUT = 0  # It always reuses the same connection.
 
-# Application definition
-# About each Installed Apps here:
-# https://docs.google.com/document/d/1Xx9pGqPyUBmRg9ybJ8AZ1sh4UgtIH0DRzF62pQJukiI/edit#heading=h.ea7glk45xbxu
+# Application definition:
+# ABCOO - Engineering Data document about this project:
+# TODO: <Product Engineering Data Document link here (not public access)!>
 INSTALLED_APPS = [
     # DJANGO DEFAULT SUB-APPS:
     "django.contrib.admin",
@@ -122,6 +123,8 @@ DATABASES = {
         "PASSWORD": env("DATABASE_PASSWORD"),
         "HOST": env("DATABASE_HOST"),
         "PORT": env("DATABASE_PORT"),
+        "CONN_MAX_AGE": DB_CONN_TIMEOUT,
+        "CONN_HEALTH_CHECKS": True,  # Ensure the connection's still alive before reusing it.
     }
 }
 
@@ -224,7 +227,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# Authentification
+# Authentication
 SESSION_COOKIE_AGE = 2419200  # a month
 LOGIN_URL = NAMEAPP_3 + ":" + PATTERN_3_3
 LOGIN_REDIRECT_URL = NAMEAPP_2 + ":" + PATTERN_2_1

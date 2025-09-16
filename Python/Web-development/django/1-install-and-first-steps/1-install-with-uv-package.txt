@@ -1,6 +1,6 @@
 
 
-PYTHON PACKAGE MANAGEMENT: UV PACKAGE
+DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
 
     >> Basic about UV:
         /Python/Package-manager/uv.txt
@@ -13,11 +13,10 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
     
         1) Make sure you are in the MAIN python environment, not in a virtual one!
 
-        3) Now, install the UV package:
-
+        2) Now, install the UV package:
             /Python/Package-manager/uv.txt
 
-        4) Install all Python versions you will need:
+        3) Install all Python versions you will need:
 
             >> Check which Python versions you got installed:
                 $ uv python list
@@ -103,16 +102,6 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
                                 $ uv run main.py
 
 
-                >> Installing a new project's dependency:
-
-                    >> Make sure you are in the project environment!
-                    
-                    >> Adding a new dependency:
-                        
-                        >> Using UV for mandatory or dev dependencies:
-                            /Python/Package-manager/uv.txt
-
-
             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
@@ -149,7 +138,7 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
                         # Windows:
                             $ .venv\Scripts\activate
 
-                    >> Install the dependencies based on the project pyproject.toml file:
+                    >> Install dependencies based on the project pyproject.toml file:
                         $ uv sync
 
                     >> Local project database:
@@ -167,44 +156,21 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
                             xxxxxxxxxxxxxxxxxxxx
 
        
-                    >> (OPTIONAL) If you have multilingual support in your project:
+                    >> (Optional)
+                        If you have multilingual support in your project:
 
                         >> With Gettext module installed:
                             
                             $ uv run manage.py makemessages --all
                             $ uv run manage.py compilemessages
-        
-        
-        5) (OPTIONAL) Make sure you got your .gitignore updated with Django, environment and
-                other things:
-                            
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        5) (Optional)
+            Make sure you got your .gitignore updated with Django, environment and other things:
                 /Versioning/git/gitignore-file.txt
 
 
-        6) (OPTIONAL) FOR MORE POWER: USING RUFF AS Python linter and code formatter:
-                        
-                /Python/Linter-Formatter-Typechecker/ruff.txt
-
-
-        >> Continuing the Django configuration after the UV installation section:
+        >> Return to Django project installation roadmap:
             /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
-
-
-     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
-
-
-    >> IF YOU LOSE YOUR VIRTUAL ENVIRONMENT, HOW TO RECREATE IT WITH THE DEPENDENCIES:
-
-        1) Create a new venv;
-            $ uv venv
-        2) Make sure it's activated;
-            $ . .venv/bin/activate
-        3) Ask UV to reinstall the dependencies based on the pyproject.toml file:
-            $ uv sync
-
-
-    >> DJANGO EXAMPLES:
-
-        >> How to create a new Django project (in the current folder):
-            $ uv run django-admin startproject core .
-        

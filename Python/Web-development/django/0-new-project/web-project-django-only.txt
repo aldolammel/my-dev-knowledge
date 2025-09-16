@@ -5,42 +5,54 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT
 
 1) SETUP:
 
-    >> Back-end + Front-end:
+    >> Back-end:
 
-        1) IDE, language setup:
-            >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
-            >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
-
-        2) IDE, framework setup:
-            >> VSCode:  /Python/Web-development/django/IDE-softwares/vscode/basic-for-django.txt
-            >> PyCharm: /Python/Web-development/django/IDE-softwares/pycharm/basic-for-django.txt
-
-        3) Python installation (if needed);
-            /Python/01-python-installation/
-
-        4) Virtual Environment and Django installation:
+        1.1) Basic installations:
             /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+        
+    >> Front-end:
     
-        5) (Optional) Front-end CSS Framework:
+        1.2) Front-end solution (Django):
+            Use it as reference:
+                /Python/Web-development/django/django-project-folder-structure.txt
 
-            >> Bootstrap:
-                /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                >> In Django project-folder:
+                    - Create the main 'templates' folder;
+                    - Create the 'media' folder;
+                    - Create the 'static' folder;
 
-            >> Tailwind:
-                /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+                    >> In static-folder:
+                        - Create a 'css' folder;
+                        - Create a 'js' folder;
 
-            >> Bulma:
-                /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+                        >> In css-folder:
+                            - Create a 'main.css' file;
+
+                        >> In js-folder:
+                            - Create a 'main.js' file;
+
+
+        1.3) (Optional)
+            Front-end CSS Framework:
+
+                >> Bootstrap:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+                >> Or Tailwind:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
+
+                >> Or Bulma:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
 
 
 2) DEVELOPMENT:
 
-    1) Front-end:
+    2.1) Front-end:
         >> Convert the HTML template to Django Template;
         >> Code the entire navigation;
     
-    2) Back-end:
+    2.2) Back-end:
         >> Build up the database of the product;
         >> xxxxxxxxxxxxxxxxx
 
-    3) Final touches between Back and Front-end!
+    2.3) Final touches between Back and Front-end!

@@ -22,7 +22,7 @@ ERROR 404 INFORMATION:
     >> Debug Mode can be customized through Django core-folder file called 'settings.py' or
         in '.env' file. More about in:
 
-            /31-Environment-Variables/
+            /Environment-Variables/
 
 
     >> If you need to call 404 error in a view, use:

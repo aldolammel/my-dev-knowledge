@@ -180,12 +180,12 @@ POSTGRESQL: INSTALLATION
             
             4) Define if PostgreSQL shouldn't run at the OS starts:
                 
-                /34-database/PostgreSQL/postgres-starting-and-stoping.txt
+                /Database/PostgreSQL/postgres-starting-and-stoping.txt
 
 
             
             5) After to install the desired database, don't forget your environment variables:
                 
-                /31-Environment-Variables/
+                /Environment-Variables/
 
 

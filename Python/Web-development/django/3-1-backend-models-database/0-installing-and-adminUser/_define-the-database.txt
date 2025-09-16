@@ -1,0 +1,15 @@
+
+
+DJANGO PROJECT: WHAT DATABASE TO USE
+
+    >> PostgreSQL:
+        /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/PostgreSQL/installation.txt
+
+    >> MySQL:
+        /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/MySQL/installation.txt
+
+    >> MariaDB:
+        /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/MariaDB/installation.txt
+
+    >> SQLite:
+        /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/SQLite/installation.txt
