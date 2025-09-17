@@ -683,14 +683,14 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 return actions
 
             def has_delete_permission(self, request, obj=None):
-                '''This built-in method should return True if deleting obj is permitted.'''
+                """This built-in method should return True if deleting obj's allowed."""
                 # Prevent deletion of profile from the CMS, except when User is deleted:
                 if request.path.startswith(PATH_CMS_USERS):
                     return request.user.is_superuser  # True if superuser!
                 return False
 
             def has_add_permission(self, request):
-                '''This built-in method should return True if adding an object is permitted.'''
+                """This built-in method should return True if adding obj's allowed."""
                 # Prevent the addition of a lone profile accidentally:
                 return False
 

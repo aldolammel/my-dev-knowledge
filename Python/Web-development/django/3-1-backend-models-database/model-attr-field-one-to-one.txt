@@ -1,0 +1,30 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: ONE-TO-ONE FIELD
+
+    Common Usage:
+        Defining a one-to-one relationship between two models. This is often used for model inheritance or extending a model with additional information.
+
+    Field look-like on front-end:
+        xxxxxxx
+
+    Example:
+        
+        home_page = models.OneToOneField(
+            "PagexPage",
+            on_delete=models.SET_NULL,
+            null=True,
+            blank=True,
+            related_name="is_home_for",
+        )
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Foreign Key:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-foreignKey.txt
+    
+    >> Many-To-Many Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-many-to-many.txt
+

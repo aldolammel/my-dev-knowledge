@@ -1,0 +1,62 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: SLUG FIELD
+
+    Common Usage:
+        A specialized CharField for storing URL-friendly slugs. A slug typically contains only letters, numbers, underscores, or hyphens. It's primarily used for creating clean, readable URLs for objects. It enforces this format with a default validator and is often used with prepopulate_from in the admin to auto-generate from another field (like a title). 
+
+    Field look-like on front-end:
+        Generating URLs for blog posts: /blog/my-awesome-post-title/ where my-awesome-post-title is the slug.
+
+    Example:
+        
+        class Movie(models.Model):
+            title = models.CharField(
+                max_length=40, 
+                blank=False, 
+                unique=True,
+            )
+            slug = models.SlugField(
+                unique=True, 
+                max_length=200, 
+                default='', 
+                blank=True, 
+                null=False, 
+                db_index=True,
+            )
+
+
+        CRUCIAL:
+            Avoid to use in the slugify(self.title) method, otherwise one the instance is created, the slug attribute would be overriden.
+
+        
+        In admin.py:
+
+            E.g. 
+                class MovieCMS(admin.MovelAdmin):
+                    prepopulated_fields = {'slug': ('title',)}
+
+                admin.site.register(Movie, MovieCMS)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Char Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-char.txt
+
+
+
+
+
+    1) In models.py:
+
+        E.g.
+
+            
+
+
+
+    2) 
+

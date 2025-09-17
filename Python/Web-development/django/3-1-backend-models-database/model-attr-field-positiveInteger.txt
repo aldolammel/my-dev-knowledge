@@ -1,0 +1,26 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: POSITIVE INTEGER FIELD
+
+    Typical Size:
+        4 bytes (32-bit)
+
+    Signed Range:
+        0 to 2,147,483,647 (It's "unsigned" in practice, enforced by Django, not the database)
+
+    Common usage:
+        Any integer value that should never be negative. Examples: stock quantities, a count of items, or any other number where a negative value would be invalid or nonsensical.
+
+    Example:
+        xxxxxxxxxxxxxxxxxx
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+
+    >> Positive Big Integer Field
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-positiveBigInteger.txt
+    
+    >> Positive Small Integer Field
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-positiveSmallInteger.txt

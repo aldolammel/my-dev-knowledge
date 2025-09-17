@@ -1,0 +1,2 @@
+use the vue integration roadmap to design this one too!
+    /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/_integration.txt

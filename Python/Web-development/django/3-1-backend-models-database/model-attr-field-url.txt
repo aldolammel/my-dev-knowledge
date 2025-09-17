@@ -1,0 +1,25 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: URL FIELD
+
+    Common Usage:
+        A specialized CharField for storing URLs. It includes URL format validation in Django forms.
+
+    Field look-like on front-end:
+        - Single field with simple URL validation.
+
+    Example:
+        
+        url = models.URLField(
+            max_length=255,
+            blank=False,
+            # validators=[URLValidator()],  # Not need when using URLField!
+        )
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Char Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-char.txt
+

@@ -16,7 +16,7 @@ from .models import UserProfile  # type: ignore
 class UserProfileCMS(admin.ModelAdmin):
 
     def has_add_permission(self, request):
-        '''This built-in method should return True if adding an object is permitted.'''
+        """This built-in method should return True if adding obj's allowed."""
         # Prevent the addition of a lone profile accidentally:
         return False
 

@@ -34,3 +34,21 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
 
                 >> Bulma:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+
+
+2) DEVELOPMENT:
+
+    2.1) Front-end:
+
+        >> xxxxxxxxxxxxxxxxxxxxx
+        
+        >> Integrate back-end with front-end:
+            /Python/Web-development/django/4-cms-admin/frontend-integration/with-react/_integration.txt
+        
+        >> Code the entire navigation;
+        
+    2.2) Back-end:
+        >> xxxxxxxxxxxxxxxxxx
+        >> xxxxxxxxxxxxxxxxx
+
+    2.3) Final touches between Back and Front-end!

@@ -1,0 +1,27 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: DURATION FIELD
+
+    Common Usage:
+        Storing periods of time, represented in Python as a datetime.timedelta object. The underlying database storage is different for each database (e.g., an INTERVAL in PostgreSQL, a BIGINT of microseconds in SQLite). Perfect for the length of a video or audio track; the total time spent on a task or project; the time difference between two events.
+
+    Field look-like on front-end:
+        - Single field with a time value (originally in microseconds)*
+        - Only the value
+
+    Example:
+        
+        duration = models.DurationField()  # *
+
+        (*) datetime.timedelta object is powerfull. It represents the duration value can be easily extracted and formated into any unit you want (days, hours, seconds).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Date Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-date.txt
+
+    >> Date Time Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-dateTime.txt
+

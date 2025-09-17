@@ -1,0 +1,33 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: BIG INTEGER FIELD
+
+    Typical Size:
+        8 bytes (64-bit)
+    
+    Signed Range:
+        -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
+    Common Usage:
+        Storing very large numbers that exceed the IntegerField range. Examples: large counts (e.g., YouTube view counts), scientific data, monetary values in the smallest unit (e.g., storing dollars as cents to avoid floating-point issues), or legacy database IDs from other systems.
+
+    Example:
+    
+        legacy_id = models.BigIntegerField(
+            unique=True,
+        )
+            
+        massive_view_count = models.BigIntegerField(
+            default=0,
+        )
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Integer Field:
+        /Python/Web-development/django/3-1-backend-models-database/model-attr-field-integer.txt
+
+
+    
