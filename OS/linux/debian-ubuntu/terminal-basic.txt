@@ -1,0 +1,56 @@
+
+
+DEBIAN/UBUNTU: TERMINAL BASIC COMMANDS
+
+    >> Terminal
+
+        List the directories:
+            $ ls
+            $ ls -a     # shows the hidden files and folders too.
+        
+        Check the current path:
+            $ pwd
+        
+        Create a folder:
+            $ mkdir <folder name>
+
+        Create a file:
+            $ nano <filename.extension>
+
+        Rename a folder:
+            $ mv <current> <new>
+
+        Delete a file:
+            $ rm <filename.extension>
+
+        Delete a folder:
+            # Check if you can see the folder in the list:
+            $ ls
+            # or
+            $ ls -a
+
+            # If so, delete the folder:
+            $ rm -r <folder_name>
+
+        Move a folder/file:
+            # if the directory doesn't exist, create it as instructed above.
+            # move the file/fpçder:
+            $ mv <folder_name_or_file_name_with_extension> <directory_destination>
+
+        Get in a folder:
+            $ cd <folder name>
+
+        Step back from the current folder:
+            $ cd ..    # notice there's space in between.
+
+    >> Helpers
+
+        How to start, stop, and check a service. Let's use the 'postgres' as an example:
+            $ sudo systemctl status postgres
+            $ sudo systemctl start postgres
+            $ sudo systemctl stop postgres
+            $ sudo systemctl restart postgres
+
+        How to learn more about a command:
+            $ man <command you are trying to understand>
+            $ man postgres

@@ -1,0 +1,7 @@
+
+
+DEBIAN/UBUNTU: UPDATING THE SYSTEM
+
+    $ sudo apt update        ← update the repositories list
+    $ sudo apt upgrade       ← install the available updates
+    $ sudo apt autoremove    ← removes what’s not needed anymore.

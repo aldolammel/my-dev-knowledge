@@ -1,10 +1,11 @@
 
 """
     PREVENTING 'USERNAME' FIELD EDITION
-    
-        >> If you need to prevent CMS users to change ONLY user's username field through 
-            the detail-view:
-
+        
+        >> Prevent CMS users to change a specific field through the detail-view:
+            /Python/Web-development/django/4-cms-admin/customizing-cms/detailview-preventing-changes.py
+        
+        >> Prevent CMS users to change username fields through the detail-view:
 """
 
 
@@ -43,20 +44,20 @@ class UserCMS(UserAdmin):
         # Reserved space...
     ]
     readonly_fields = (
-        # 'username',  # DONT DO THAT! It'd make even the 'CMS Add User' form block the field!
-        'date_joined',
-        'last_login',
+        # "username",  # DONT DO THAT! It'd make even the 'CMS Add User' form block the field!
+        "date_joined",
+        "last_login",
         # Readonly_fields only accept imported method, never with prefix:
-        # Reserved space...
+        # Reserved space for imported methods...
     )
 
     def get_readonly_fields(self, request, obj=None):
         """Built-in method to extend the 'readonly_fields' power."""
 
         if obj:
-            # If the user exists (obj), make the 'username' field read-only just on detail-view,
-            # but still editable on the CMS Add User form:
-            return self.readonly_fields + ('username',)  # type: ignore
+            # For Editing an existing object:
+            return self.readonly_fields + ('username',)
+        # For Adding a new object:
         return self.readonly_fields
         
 

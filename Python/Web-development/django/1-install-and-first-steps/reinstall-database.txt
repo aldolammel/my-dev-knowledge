@@ -1,5 +1,0 @@
-
-
-REINSTALL THE DATABASE:
-
-    /Python/Web-development/django/3-1-backend-models-database/1-reinstall-database/    

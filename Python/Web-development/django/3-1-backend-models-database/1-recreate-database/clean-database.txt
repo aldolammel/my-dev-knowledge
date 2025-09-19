@@ -24,5 +24,5 @@ CLEAN THE ENTIRE DATABASE:
 
     >> Recreate the database from zero:
 
-        /Python/Web-development/django/3-1-backend-models-database/1-reinstall-database/_about.txt
+        /Python/Web-development/django/3-1-backend-models-database/1-recreate-database/_recreating-db.txt
 

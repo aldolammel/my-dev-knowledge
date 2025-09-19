@@ -38,7 +38,7 @@ class PageAdmin(admin.ModelAdmin):
     
     # Those fields that are not editable if you try edit or add the object:
     # Important, if you need to lock a field just, for example, in adding page, you must use the 'get_readonly_fields()' method:
-    # /Python/Web-development/django/4-cms-admin/customizing-cms/preventing-username-changes.py
+    # /Python/Web-development/django/4-cms-admin/customizing-cms/detailview-preventing-username-changes.py
     readonly_fields = (
         'created_at',
         'updated_at',

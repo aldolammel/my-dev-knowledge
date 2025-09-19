@@ -1,0 +1,6 @@
+
+
+It's kind of an audit field:
+    /Python/Web-development/django/4-cms-admin/customizing-cms/adding-audit-fields.py
+
+    

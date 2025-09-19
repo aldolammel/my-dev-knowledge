@@ -152,7 +152,7 @@ RE-INSTALL ONLY THE DJANGO:
 
             >> If a new cloud db:
 
-                /Python/Web-development/django/3-1-backend-models-database/1-reinstall-database/
+                /Python/Web-development/django/3-1-backend-models-database/1-recreate-database/
 
 
             >> Recommended for all scenarios: to avoid weird behaviors from the terminal not calling

@@ -3,189 +3,107 @@
 POSTGRESQL: INSTALLATION
 
 
-    >> Reminder: for updating:
-
-        /34-dababase/PostreSQL/0-installing-and-updating/postgres-updating.txt
-
-
-    >> For installation:
-
-            0) Make sure you got the postgresql repository installed:
-
-                >> Windows:
-                    xxxxxx
-
-                >> Linux/Ubuntu:
-                    $ sudo apt install -y postgresql-common
-                    $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-
-                >> Mac:
-                    xxxxxx
+    >> Reminder: for updating
+        /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
 
 
-            1) Check if there's the postgresql in the current machine:
+    >> Installing (It's NOT a db creation):
 
-                WINDOWS:
-                        
-                    X) With no virtual environment activated, type:
-                    
-                        $ psql --version
+        PRE) Make sure you got the postgresql repository installed:
 
-                    X) If the command is not recognized, open the Task Manager > Services;
+            UBUNTO:
+                $ sudo apt install -y postgresql-common
+                $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 
-                    X) Look for 'postgres'. If nothing, let's install, skipping the next step;
 
-                    X) If you have it, forget this checklist and let's updating it with another:
+        1) Check if there's the postgresql in the current machine:
 
-                        /34-dababase/PostreSQL/0-installing-and-updating/postgres-updating.txt
+            UBUNTU:
+                1.1) With no virtual environment activated, type:
+                    $ psql --version
 
+            WINDOWS:
+                1.1) With no virtual environment activated, type:
+                    $ psql --version
+                1.2) If the command is not recognized, open the Task Manager > Services;
+                1.3) Look for 'postgres'. If nothing, let's install, skipping the next step;
+                1.4) If you have it, forget this roadmap and let's updating it with another:
+                    /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
+
+
+        2) Check if you must download some installer first: 
+            https://www.postgresql.org/
+
+            UBUNTU:
+                2.1) Execute that config script available on the official webpage;
+                2.2) Install the module CURL if needed: 
+                    $ sudo apt install curl
+                2.3) Go to https://www.pgadmin.org/
+                2.4) Execute those lines before the installation of pgAdmin itself;
+                2.5) Install the pgadmin-desktop ONLY to prevent to user apache to run the web
+                    version;
+                2.6) After that, run your application PGADMIN via your apps list;
+            
+            WINDOWS:
+                2.1) Download the file;
+                2.2) After app installation, go to start and search by 'pgAdmin';
+                2.3) Make sure the Windows Terminal and main environment will recognize the Postgres commands:
+                        # Test it:    
+                            $ psql --version
+                        # If not recognized, do it but changing the version and path based on your current postgres version:
+                            $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+                        >> Test it again!
+            
+
+        3) Connect the PgAdmin to the postgreSQL now. In pgAdmin app:
+            3.1) Add a new server, clicking in Register;
+            3.2) In General tab, in Name set it as (convention):
+    
+                >> In development:
+                    e.g.: Localhost_Ubuntu_Aldo
+
+                >> In Production:
+                    e.g.: ClientA_Server  or  ClientB_Server
+
+                    >> Tip: If your clients' databases are hosted on different servers
+                        (e.g., local, cloud, or remote), add each server connection
+                        separately in pgAdmin.
+
+            3.3) In Connection tab, in host set it as 'localhost';
+            3.4) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
+                
+                UBUNTU:
+                    $ systemctl status postgresql
+                    # if not:
+                    $ sudo systemctl start postgresql
+
+            3.5) Let's use the root user (postgres) now: 
 
                 UBUNTU:
-                    
-                    X) With no virtual environment activated, type:
+                    $ sudo -u postgres psql
 
-                        $ psql --version
-                        
-                    
-                MAC:
-                    $ xxxx
+            3.6) Already using the PostgreSQL user, if the Postgres warns you about
+                database version, do it:
+                $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
 
-
-
-            2) Check if you must download some installer first: check in https://www.postgresql.org/
-
-                WINDOWS:
-
-                    X) Download the file;
-
-                    X) After the installation, go to start and search by 'pgAdmin';
-
-                    X) xxxxxx
-
-                    X) xxxxxxx
-
-                    X) After the installation, make sure the Windows Terminal and main environment
-                        will recognize the Postgres commands:
-
-                            >> Test it:
-                                
-                                $ psql --version
-
-                            
-                            >> If not recognized, do it but changing the version and path based on
-                                your current postgres version:
-
-                                    $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
-
-
-                            >> Test it again!
-                
-
-                UBUNTU:
-
-                    1) Execute that config script available on the official webpage;
-
-                    2) Install the module CURL if needed: 
-                        $ sudo apt install curl
-                    
-                    3) Go to https://www.pgadmin.org/
-
-                    4) Execute those lines before the installation of pgAdmin itself;
-
-                    5) Install the pgadmin-desktop ONLY to prevent to user apache to run the web
-                        version;
-                    
-                    6) After that, run your application PGADMIN via your apps list;
-
-                    
-                MAC:
-
-                    X) xxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-
-            3) Connect the pgadmin to the postgreSQL now. In pgAdmin app:
-
-                x.1) Add a new server, clicking in Register;
-
-                x.2) In General tab, in Name set it as (convention):
-                        
-                        >> In development:
-                            e.g.: Localhost_Ubuntu_Aldo
-
-                        >> In Production:
-                            e.g.: ClientA_Server  or  ClientB_Server
-
-                            >> Tip: If your clients' databases are hosted on different servers
-                                (e.g., local, cloud, or remote), add each server connection
-                                separately in pgAdmin.
-
-                x.3) In Connection tab, in host set it as 'localhost';
-
-                x.4) Dont save anything yet, and go to terminal. Make sure PostgreSQL is running:
-                    
-                    >> Windows:
-                        $ xxxxxxx
-
-                    >> Linux/Ubuntu:
-                        $ systemctl status postgresql
-                        # if not:
-                        $ sudo systemctl start postgresql
-
-                    >> Mac:
-                        $ xxxxxxx
-                
-                x.5) Let's use the root user (postgres) now: 
-
-                    >> Windows:
-                        $ xxxxxxx
-                    
-                    >> Linux/Ubuntu:
-                        $ sudo -u postgres psql
-
-                    >> Mac:
-                        $ xxxxxxx
-
-                x.6) Already using the PostgreSQL user, if the Postgres warns you about
-                    database version, do it:
-                    
-                    $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
-
-                x.7) Already using the PostgreSQL user, do it:
-                    
-                    $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';  <--- type that ; too!
-                    $ exit
-                
-                x.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to
-                    remember the password;
-
-                x.9) Save the changes finally! You're connected.
-
-                x.10) Important: still in pgAdmin, inside your server tree, also open the
-                    'Databases' tree and check how much databases you have. If you have
-                    just "postgres" database, you need to create a new one coz this default
-                    one you cannot delete, for example.
-
-                    >> Right-click on "Databases" and select "Create" > "Database...";
-                    >> In the "Database" field, enter the name (convention):
-                        
-                        <Cliente>_<Product_type>_<Release_year>
-                        
-                            e.g.:
-                                Abcoo_b2b_2025
-                                Abican_portal_2023
-                                Ammana_b2b_2019
-                                Aldolammel_ecommerce_2020
+            3.7) Already using the PostgreSQL user, do it:
+                $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';  <--- type that ; too!
+                $ exit
             
-            
-            4) Define if PostgreSQL shouldn't run at the OS starts:
-                
-                /Database/PostgreSQL/postgres-starting-and-stoping.txt
+            3.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to
+                remember the password;
+            3.9) Save the changes finally! You're connected.
+        
+        
+        4) Define if PostgreSQL shouldn't run at the OS starts:
+            /Database/PostgreSQL/postgres-starting-and-stoping.txt
 
 
-            
-            5) After to install the desired database, don't forget your environment variables:
-                
-                /Environment-Variables/
+        5) After to install the desired database, don't forget your environment variables:
+            /Environment-Variables/
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Database creation:
+    /Database/PostgreSQL/postgres-creating-db-locally.txt

@@ -1,0 +1,80 @@
+
+
+POSTGRESQL: CREATING A DATABASE LOCALLY
+
+    PRE.1) Assuming you got already the PostgreSQL installed locally:
+        /Database/PostgreSQL/0-installing-and-updating/postgres-installing.txt
+
+    PRE.2) Make sure the database is running:
+        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+
+        
+    >> Using PgAdmin:
+
+        1) Open your local PgAdmin;
+        
+        2) In the server tree (sidebar-left), also open the 'Databases';
+        
+            ATTENTION:
+                Never use the "postgres" database. This is the default db and it cannot be delete!
+
+        3) Create the new database:
+            >> Right-click on "Databases" and select "Create" > "Database...";
+            >> In the "Database" field, enter the name:
+                    
+                By convention:
+                    
+                    <Cliente>_<Product_type>_<Release_year>
+                
+                    e.g.:
+                        Abcoo_b2b_2030
+                        Abican_portal_2023
+                        Aldolammel_ecommerce_2020
+                        Ammana_b2b_2019
+
+            >> And then save it! If no error, it's done!
+
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+            ATTENTION:
+                If an error message says "Collation version mismatch" it's because your O.S. has been updated but PostgreSQL db cluster hasn't! Solution:
+
+                    e1) Close the PgAdmin, and stop the Postgres service:
+                        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+
+                    e2) Update and upgrade your Postgre and O.S;
+
+                        UBUNTU:
+                            e2.1) Add the Postgre repo locally:
+                                /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
+                            e2.2) Update the entire system
+                                /OS/linux/debian-ubuntu/update.txt
+                        WINDOWS:
+                            e2.1) xxxxxxxxxxxxxxx
+                            e2.2) xxxxxxxxxxxxxxx
+                    
+                    e3) Start the Postgres again:
+                        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+
+                    e4) Go to the Postgres prompt and do this:
+                        
+                        $ sudo -u postgres psql -d postgres
+                        
+                        # List all databases:
+                        $ \l
+
+                    e5) Still in Postgres prompt, execute this for all databases:
+                        ALTER DATABASE template1 REFRESH COLLATION VERSION;
+                        ALTER DATABASE template0 REFRESH COLLATION VERSION;
+                        ALTER DATABASE postgres REFRESH COLLATION VERSION;
+
+                        >> It's ok is some of them say "version has not changed". 
+
+                    e6) Open again the PgAdmin, and now you should be able to create a new db!
+                    
+
+
+        
+
