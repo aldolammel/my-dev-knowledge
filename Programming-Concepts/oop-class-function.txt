@@ -1,0 +1,33 @@
+
+
+OOP: CLASS FUNCTIONS (METHODS)
+
+    FUNCTION:
+        It's a block of code that is defined independently. It is called by its name and can accept data (arguments) to operate on. It is not associated with any specific object or class.
+
+            # A standalone function:
+            def add_numbers(a, b):
+                return a + b
+
+    METHOD:
+        A method is a function that is defined inside a class and is associated with an object created from that class. Its purpose is to define the behaviors or actions that an object can perform.
+
+            # Inside this class, you see a method 'coz it's defined inside a class and has 'self':
+            class Dog:
+                ...
+                def barking(self):
+                    return "Woof, woof, woof!"
+
+
+    >> Basic:
+        /Programming-Concepts/oop-class.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Directly related:
+
+        >> Arguments:
+            /Programming-Concepts/oop-class-attribute-argument.txt
+

@@ -1,0 +1,4 @@
+
+
+Method is a Function, but a Function is not necessarily a Method:
+    /Programming-Concepts/oop-class-function.txt

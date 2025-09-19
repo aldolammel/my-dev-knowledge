@@ -1,0 +1,39 @@
+
+
+OOP: CLASS ATTRIBUTES
+
+    An attribute is a variable that belongs to an object (or a class). It represents the state or data of the object. Attributes are defined inside the class.
+
+
+    >> Basic:
+        /Programming-Concepts/oop-class.txt
+
+
+    >> Example:
+        class Dog:
+            species = "Canis familiaris"                        <-- A CLASS attribute with its value
+
+            def __init__(self, name, age, color):
+                self.name = name                    <-- An INSTANCE attribute with its default value
+                self.age = age                      <-- An INSTANCE attribute with its default value
+                self.color = color                  <-- An INSTANCE attribute with its default value
+
+            def barking(self):
+                return "Woof, woof, woof!"
+
+            def description(self):
+                return f"{self.name}'s {self.age} years old."
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> Directly related:
+
+        >> Arguments (Parameters):
+            /Programming-Concepts/oop-class-attribute-argument.txt
+
+

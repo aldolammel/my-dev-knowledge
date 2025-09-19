@@ -1,0 +1,35 @@
+
+
+OBJECT-ORIENTED-PROGRAMMING (OOP):
+
+    It's a programming paradigm (a style of programming) centered around the concept of "objects." It's one of the most popular and powerful ways to structure and organize code, especially for large, complex applications.
+
+
+    >> The Core Idea: Modeling with Objects
+
+        Imagine you want to build a program to manage a school. OOP approach: "What are the real-world things (objects) in this system?" You'd have Student objects, Teacher objects, Course objects, etc. Each object contains all the data and the functionality related to it.
+
+
+    >> The Four Main Pillars of OOP
+
+        1. Encapsulation
+            
+            This is the idea of bundling data (attributes) and the methods (functions) that operate on that data into a single unit (the object), and restricting direct access to some of the object's components.
+
+        2. Abstraction
+
+            This is an extension of encapsulation. Abstraction means hiding the complex internal implementation details and showing only the essential features to the user.
+
+        3. Inheritance
+
+            This allows a new class (child class) to inherit properties and methods from an existing class (parent class).
+
+        4. Polymorphism
+
+            It means "many forms." It allows objects of different classes to be treated as objects of a common parent class, and it allows a method to do different things based on the object it's acting upon.
+
+
+        Class example:
+
+            /Programming-Concepts/oop-class.txt
+            
