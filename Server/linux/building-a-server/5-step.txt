@@ -1,0 +1,149 @@
+Building a new server > 5) Web server configurations
+Creating the WSGI Entry Point
+# in the project folder:
+$nano wsgi.py
+The file:
+from <main_python_file_name> import <calleble_application_name_in_use>
+
+if __name__ == "__main__":
+        <calleble_application_name_in_use>.run()
+Example:
+from main import app                # calls the main.py file.
+
+if __name__ == "__main__":
+        app.run()
+
+# OR -------------------------------------------------------------------------------------
+
+from main import app, db            # calls the main.py file, including the db.
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run()
+
+Save (ctrl+s) and exit (ctrl+x)
+Pass the name of entry point:
+# Make sure you keep into the right virtual environment:
+$ . <venv_name>/bin/activate
+
+$ sudo gunicorn --bind 0.0.0.0:5000 wsgi:app
+Example of output:
+
+Attention: it's not frozen! It looks like, but it's not! Just go to the next step (or for some reason, in order to abort, do ctrl+c). 
+Getting explicit error when you try to connect with 0.0.0.0:5000?
+Probably something is already using that special IP and/or port. So kill them:
+$ fuser -k 5000/tcp
+Check the result on the browser:
+http://<server_ip_or_domain>:5000
+After you perform the test, return to your Terminal and close the WSGI connection:
+# ctrl+c
+Since now you’re done with your virtual environment, deactivate it:
+$ deactivate      # Any Python commands will now use the system’s Python environment again.
+
+Automating the WSGI startup
+Important: to this only into an admin home-folder, never into the root home-folder (/root/) or the www-folder (/var/www/). This can avoid some advanced necessities.
+
+Creating the file:
+$ nano /etc/systemd/system/<project_name>.service
+Its content:
+[Unit]
+Description=Gunicorn instance to serve <project_name>
+After=network.target
+
+[Service]
+User=<user_name>
+Group=www-data
+WorkingDirectory=<path_to_the>/<project_folder_name>
+Environment="PATH=<path_to_the>/<project_folder_name>/<venv_name>/bin"
+ExecStart=<path_to_the>/<project_folder_name>/<venv_name>/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
+Example:
+[Unit]
+Description=Gunicorn instance to serve Portfolio project.
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/admin/portfolio
+Environment="PATH=/home/admin/portfolio/venv_p/bin"
+ExecStart=/home/admin/portfolio/venv_p/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
+Start the service:
+$ systemctl daemon-reload
+$ systemctl restart <project_name_without_.service>
+Check the status:
+$ systemctl status <project_name_without_.service>
+You should see this output:
+
+Need to change something from <your_project>.service file?
+Do the changes and then:
+$ systemctl daemon-reload
+$ systemctl restart <project_name_without_.service>
+$ systemctl status <project_name_without_.service>
+Configuring Nginx to Proxy Requests
+Create a fundamental configuration file for your website:
+$ sudo nano /etc/nginx/sites-available/<project_name>
+Through Nano interface:
+server {
+        listen 80;
+        server_name <domain_without_www> <domain_with_www>;        # never include protocols (http / https)
+
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/var/www/<project_name>/gunicorn.sock;
+        }
+}
+Examples:
+Regular domain and root user...
+server {
+        listen 80;
+        server_name aldolammel.com www.aldolammel.com;
+
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
+        }
+}
+Subdomain and other user usage...
+server {
+        listen 80;
+        server_name loja.aldolammel.com;
+
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
+        }
+}
+Important: no worries about the SSL (HTTPS) now!
+Back to Terminal, though:
+To enable the Nginx server block configuration you’ve created, link the file to the sites-enabled directory. You can do this by running the ln command and the -s flag to create a symbolic or soft link, as opposed to a hard link:
+$ sudo ln -s /etc/nginx/sites-available/<project_name> /etc/nginx/sites-enabled
+$ sudo nginx -t
+$ sudo systemctl restart nginx
+
+# check the Nginx status:
+$ sudo systemctl status nginx
+Expected output:
+
+Nginx debug needed?
+$ sudo nano /etc/nginx/nginx.conf
+for debug necessities, find the line "error_log /var/log/nginx/error.log", comment the line, and add the following line over there:
+error_log /var/log/ngninx/error.log debug;
+Finally, adjust the firewall again. Since you no longer need access through port "500", remove that rule:
+$ sudo ufw delete allow 5000
+# Then allow full access to the Nginx server:
+$ sudo ufw allow "Nginx Full"     # You probably already did it, but make sure.
+You should now be able to navigate to your server's domain name online:
+# Test your domain in your favorite browser ;)
+# Make sure you got no cache result!!!
+If you encounter any errors, try checking the following:
+sudo less /var/log/nginx/error.log: checks the Nginx error logs.
+sudo less /var/log/nginx/access.log: checks the Nginx access logs.
+sudo journalctl -u nginx: checks the Nginx process logs.
+sudo journalctl -u myproject: checks your Flask app’s Gunicorn logs.

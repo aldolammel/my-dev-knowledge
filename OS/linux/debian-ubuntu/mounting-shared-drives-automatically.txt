@@ -1,0 +1,54 @@
+
+
+DEBIAN/UBUNTU: MOUNTING SHARED DRIVES AUTOMATICALLY
+
+
+    1. Find your SSD's UUID:
+        $ sudo blkid
+
+
+        E.g. what to extract from there:
+
+            Device: /dev/sdb3
+            Label: Ubuntu SSD
+            UUID: 6A1A27711A273989
+            Type: ntfs
+        
+        
+    2. Create a mount point:
+        $ sudo mkdir -p /media/shared-ssd
+        
+    3. Backup your fstab file:
+        $ sudo cp /etc/fstab /etc/fstab.backup
+        
+    4. Edit the fstab file:
+        $ sudo nano /etc/fstab
+
+    5. Add this line at the end of the file, and, after that, return to terminal:
+
+        # Shared SSD for dual-boot files
+        UUID=6A1A27711A273989 /media/shared-ssd ntfs-3g defaults,uid=1000,gid=1000,umask=022,nofail,x-gvfs-show 0 0
+        
+        # Explanation of the options:
+        # UUID=6A1A27711A273989: Your drive's unique identifier
+        # /media/shared-ssd: Mount point we created
+        # ntfs-3g: Driver for NTFS filesystems
+        # uid=1000,gid=1000: Sets ownership to your user (first user created is usually 1000)
+        # umask=022: Sets file permissions (read/write for owner, read for others)
+        # nofail: Prevents boot errors if drive isn't available
+        # x-gvfs-show: Makes it visible in file manager
+        
+    6. Refresh the fstab loaded by its new version:
+        $ sudo systemctl daemon-reload
+        
+    7. Test the configuration:
+        $ sudo mount -a
+        $ ls -la /media/shared-ssd
+
+    8. Set proper permissions (if needed):
+        $ sudo chown -R $USER:$USER /media/shared-ssd
+
+    9. After setup, reboot the Ubuntu!
+        After reboot, your shared SSD should be automatically available to all applications,
+        including your audio player, without needing manual access first. The drive will 
+        appear in your file manager and be accessible to all your media applications.

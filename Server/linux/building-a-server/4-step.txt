@@ -1,0 +1,30 @@
+Building a new server > 4) Deploy the Database
+Exception: nowadays, in my portfolio repo, it's included the database (not recommended but in my case it's ok), the this step must be skipped.
+
+For sure it's not the correct way to perform a db deployment, but me, Aldo, it works:
+Local > put the DB in the root of the application, without changing its paths in the .py file (because it's a temporary approach);
+Local > add it to the repository on git and push it:
+$ git add --all
+$ git commit -a -m "some message"
+$ git push
+Server > create the correct folder to deploy the db:
+# check if you're into your web application folder:
+$pwd
+
+# if so, create a new folder called "instance":
+$ mkdir instance 
+
+# Move the db to its right place:
+$ mv <db_name> instance
+Local > return the db to "instance" folder;
+Local > update the repo:
+$ git add --all
+$ git commit -a -m "some message"
+$ git push
+Server > update the repo:
+$ git pull
+Server > list the project folder content to check if it's ok (with instance folder too, with its db inside, and no db in the project root):
+$ ls
+$ cd instance
+$ ls
+$ cd ..

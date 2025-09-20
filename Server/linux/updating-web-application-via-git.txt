@@ -1,33 +1,39 @@
 
-UPDATING A WEB APPLICATION USING GIT:
 
-    1) First of all, you need to know:
+DEBIAN/UBUNTU > VPS: UPDATING A WEB APPLICATION
 
-        Current Web App on Prod:
+
+    PRE) Keep in mind: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        Current application files:
+            Keep your application GIT repo accessible on the browser. e.g.:
+                https://github.com/xxxxxxxxxx/tree/main
+
+        Current application main domain:
             E.g.
-                http://vps51935.publiccloud.com.br/
+                http://vpsXXXXX.publiccloud.com
         
-        Current application files on Git:
-            E.g. 
-                https://github.com/abcoo-ideias/portfolio/tree/main
-
         Current app path on server:
-            E.g. 
+            E.g.
                 $ cd /home/admin/portfolio
+                
+        Updating database:
+            For example, I'm currently using the portfolio repo to store the DB ("instance" folder).
 
-    2) Updating files:
+
+    1) Updating files: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
-        1) Connect to the server:
-            $ ssh -p 4928 root@186.202.57.118  
+        1.1) Connect to the server:
+            $ ssh -p 4928 root@<server-ip>
 
-        2) Update the application repository:
+        1.2) Update the application repository:
             $ sudo git pull
 
-        3) Refresh the communication between the web server and the application, restarting the Gunicorn (WSGI):
+        1.3) Refresh the communication between the web server and the app, restarting the Gunicorn (WSGI):
             $ systemctl restart <your_application_name>   # e.g. portfolio
             $ systemctl status <your_application_name>
 
-    3) Something wrong? Try it:
+    2) Something wrong? Try it:
         # Restart the web server:
         $ systemctl restart nginx
         $ systemctl status nginx
@@ -39,7 +45,7 @@ UPDATING A WEB APPLICATION USING GIT:
         # Nothing yet? Restart the server and repeat this entire step:
         $ reboot
 
-    4) Updating database:
+    3) Updating database:
         
         I'm currently using the portfolio repo to store the DB ("instance" folder).
 

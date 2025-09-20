@@ -1,0 +1,134 @@
+Building a new server > 3) Deploy the Web Application:
+Install Python
+Before you install Python on Linux VPS, you should check whether it's already installed by default (probably yes):
+$ python3 --version
+If you want to update the Python version, it's advised to remove the old one to avoid two or more Python version running:
+$ sudo apt-get -y purge python3.8   # or the version you wanna remove!
+$ sudo apt-get -y autoremove
+Preparing for Python new version:
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt update
+$ apt list | grep python3.12
+If the output is similar to this below, everything is fine:
+
+Install that Python version:
+$ sudo apt install python3.12
+$ python3.12 --version    # to confirm that it's installed
+Install pip:
+$ sudo apt install python3-pip -y
+
+$ pip --version
+
+Installing a database
+For SQLite3
+This option already comes with Ubuntu, but check if everything is ok:
+$ sqlite3 --version
+If no SQLite is installed:
+$ sudo apt install sqlite3 -y
+
+Installing a web application
+
+Bring it from the repository
+In the terminal, check where you are (path):
+$ pwd
+Go to "/home/<your_non_root_user>/" and create the project folder. Example:
+/home/admin/
+Create the application folder:
+$ mkdir <project_name_folder>
+$ cd <project_name_folder>
+In the new folder, clone your project repo from GitHub here:
+$ git clone <ssh_project_link> .        # This '.' means the repo files will be installed in the current folder.
+GitHub will ask for the Public Key password. It's here:   as "SSH Public Key" pass.
+
+Temporary replacement of your main.py for the simplest version for testing purposes
+For Flask web application:
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def go_start():
+    return "<h1>Hello world!</h1>"
+
+
+if __name__ == "__main__":
+    # app.run(debug=True)
+    app.run(host="0.0.0.0")  # This IP is a special that forces Flask to run in all machines with app access.
+
+
+Create a virtual environment
+In the current project directory, create a new venv (to my portfolio = venv_p). 
+# From anywhere, install the virtualenv on the server:
+$ sudo pip install virtualenv
+
+# Go again to the application folder:
+$ cd <project_name_folder>
+# Check if right:
+$ pwd
+
+# create the venv in the current path you are (/var/www/<project_name_folder>):
+$ sudo virtualenv <venv_name_project>
+Example of output after that:
+
+# Active the environment:
+$ . <venv_name_project>/bin/activate
+#or
+$ source <venv_name_project>/bin/activate
+
+# Confirm the venv is successfully selected:
+$ which python3
+# You should see the virtual environment path pointing right in your web application folder.
+
+Are you having any trouble installing the modules in the right venv?
+Try to do that with the root user.
+
+Installing VPS-side modules
+Still in the root project folder and on the right virtualenv selected, install the vps-side modules:
+# Check if the modules are present on the virtual environment modules installed list:
+$ pip list
+
+# install:
+$ sudo pip install wheel        # probably already installed.
+$ sudo pip install gunicorn     # WSGI
+
+# Check again:
+$ pip list
+Installing all application modules
+After that, run the web application requirements.txt file:
+$ sudo pip install -r requirements.txt
+
+# Check if the modules are present on the virtual environment modules installed list:
+$ pip list
+Firewall update
+Python running on the web uses port 5000
+$ sudo ufw allow 5000
+Environment Variables (system-wide global variables)
+If you're using it, let's edit this file:
+$ sudo nano /etc/environment
+
+# Add all your environment variables like the example:
+YOUR_VAR_NAME_1="VALUE_1_HERE"
+YOUR_VAR_NAME_2="VALUE_2_HERE"
+It should be like this:
+
+Save it (ctrl+s) and exit (ctrl+x).
+Logout and reconnect to initiate the new config:
+$ exit
+$ ssh -p <port_number> <user>@<server_ip>
+Check whether environment variables are listed on the system correctly:
+$ printenv
+Test it (without WSGI yet): [ If it's a complex file with db, it doesn't work in this stage of configuration. Recommended to test first with a simple .py file] 
+# in the root of project folder, make sure you are in the correct virtual environment:
+$ . <venv_name>/bin/activate
+$ python <project_main_file>.py
+# if no environ variable error, check your web browser: http://<server_ip>:5000
+The port is already in use?
+If so, do it:
+$ ps -fA | grep python
+Example: 
+root       10445   10351  0 19:20 pts/1    00:00:00 /var/www/portfolio/venv_portf/bin/python /var/www/portfolio/venv_portf/bin/flask run
+The process id (pid) is the second number (10351). So if you want to use the default port (5000), stop the process that is using it:
+$ kill 10351

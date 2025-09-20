@@ -1,0 +1,22 @@
+
+
+DEBIAN/UBUNTU: INSTALL AND UNINSTALL APPS
+
+    
+    >> Installing (common):
+        $ sudo apt install <package_name>
+
+
+    >> Installing .sh files:
+        1. Copy the entire file name;
+        2. Open terminal
+        3. type and enter: bash <file name>
+
+
+    >> Finding a package name installed:
+        /OS/linux/debian-ubuntu/finding-installed-apps.txt
+
+
+    >> Removing:
+        $ sudo apt remove <package_name>
+

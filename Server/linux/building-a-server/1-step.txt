@@ -1,0 +1,36 @@
+
+
+DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: OS
+
+Building a new server:
+Connect to the server
+You bought a VPS at your favorite provider; the first thing to do is log into it. Usually, you receive an email with the credentials required to connect. 
+Open your local terminal and:
+    
+    $ ssh -p <port> <user>@<server_ip_address>
+
+# Example:
+    $ ssh -p 22 root@43.206.85.179
+Say yes, and congratulations, you're inside the server. Let's continue with the next step.
+Public Key error?
+If you have no other servers to worry about deleting the "known_hosts" file, delete it:
+Windows OS:
+<WINDOWS_DRIVE>:\Users\<your_user>\.ssh\known_hosts
+Ubuntu OS:
+xxxxxxxxxxxxxx
+OS version
+If the server has a Ubuntu installed, check its current version:
+$ lsb_release -a
+If it needed to be upgraded:
+Crucial: do all processes directly on the server terminal (available by hosting panel), and not remote ssh from a local machine. 
+Update the repo list and the current OS version:
+$ apt update
+
+$ apt upgrade -y        # this "-y" say yes when the user is asked to keep the upgrading.
+Install the Update Manager and, after that, reboot the server:
+$ apt install update-manager-core
+
+$ reboot
+Start the Ubuntu upgrade:
+$ do-release-upgrade
+When the upgrade has been finished, reboot again.

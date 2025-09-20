@@ -1,0 +1,150 @@
+Building a new server > 2) The basic
+
+Contrary to shared hosting, which is already configured with many applications and ready to serve your application to the Internet, a VPS comes with only the operating system. It is your responsibility to configure it to serve your app.
+Custom the ssh timeout
+Client-side:
+Go to the ssh_config file:
+$ nano /etc/ssh/ssh_config
+
+# Into the file:
+ConnectTimeout 1200        # 1200 = 20 minutes. Default value is 0.
+Save (ctrl+s) and exit (ctrl+x);
+Server-side:
+Go to the sshd_config file:
+$ nano /etc/ssh/sshd_config
+
+# find (ctrl+W) "ClientAliveCountMax"
+ClientAliveInterval 1200    # 20 minutes timeout
+ClientAliveCountMax 3
+TCPKeepAlive yes            # this feat. enables the periodic transmission of KeepAlive msgs to detect if a connection is still active
+Save (ctrl+s) and exit (ctrl+x);
+To finish:
+Restart the service, and reconnect:
+$ systemctl restart ssh
+$ exit
+$ ssh -p <port> <user>@<server_ip>
+Install a firewall
+A firewall is software placed between our system and the external network. It filters incoming and outgoing requests based on rules written by the system administrator. You can deny incoming traffic from a specific port or IP address. The most famous in the Ubuntu world is UFW.
+Run the command below to install and wait for the installation to complete.
+$ apt-get install ufw
+The firewall is all installed, and by default, all incoming connections to our server are denied, even the SSH connection on port 22. If we log out to the server, we can't connect anymore.
+Let's allow SSH connection on port 22 with the command below:
+# Allow ssh connection
+$ ufw allow ssh
+
+# Activate UFW
+$ ufw enable               # View all rules defined
+$ ufw status verbose
+
+Note: We don't add sudo because we are connected with the root user. If it is not your case, consider adding the "sudo" keyword before the command.
+Log out, then log in again to ensure you can still connect to the server.
+Change SSH Port
+By default, the SSH port is 22. Changing this to make your server a little more secure is a good idea. Here is the process to change the port to 4928.
+Open the SSH config's file:
+$ nano /etc/ssh/sshd_config
+Locate line #Port 22
+Remove the hashtag in front of and replace 22 by 4928
+Save the file and exit
+Restart the SSH service: 
+$ /etc/init.d/ssh restart
+Now, we need to update the firewall rule to:
+Allow SSH connection on port 4928:
+$ ufw allow 4928/tcp
+Delete rule for SSH connection on port 22:
+This is achieved in two steps where the first is to list the rule with a number assigned to each rule:
+$ ufw status numbered
+Locate the number of the rule you want to delete, then type: 
+$ ufw delete <rule_number>       # e.g: ufw delete 3
+Repeat the same for "22/tcp (v6)" too!
+Create a user with a sudo privilege
+Since then, we have used the root user to perform restricted actions. It is not a good decision because a bad manipulation can cause significant damage. It is better to create a user with lower privileges on the system and keep the user performing actions requiring the root user.
+The command below creates a user "admin" with sudo privilege:
+# create user admin with his home directory
+$ useradd -m -d /home/<new_user> <new_user>
+
+# Start the process to set a password for the new user
+$ passwd <new_user>
+# now it will ask you for a new password ;)
+
+# add the user in the sudo users list:
+$ echo 'sadmin ALL=(ALL) ALL' >> /etc/sudoers
+
+# list of users to verify the user created:
+$ cat /etc/passwd
+
+Now log out, then connect with the new user created and provide the password you have registered in the step above:
+$ ssh -p <port_number> admin@<ip_vps>
+Deactivating the root user access:
+But first, ask yourself: if you will create a public key for your root, through the hosting iframe you won't be able to ctrl+c things, so you're not able to take the public key to register in GitHub, making you need to connect via your local terminal with root user just to take that key with ctrl+c. 
+
+For security, and only after to create an admin user, do it:
+# Logging with non-root-user:
+$ ssh -p <port> <non_root_user>@<server_ip>
+
+$ sudo nano /etc/ssh/sshd_config
+Change the text "PermitRootLogin yes" to "PermitRootLogin no". Save it (ctrl+s) and exit (ctrl+x).
+Restart the ssh service:
+$ sudo systemctl restart ssh
+Logout and test to get in with the root user:
+$ exit
+$ ssh -p <port> root@<server_ip>
+You must see a message like "Access denied".
+Reconnect with your non-root-user and have fun.
+Install a Web server
+Our goal is to host our web application and make it accessible through the Internet, but a server is just a computer like ours but without a GUI and up every time. By default, the server doesn't have this capability, and we need to install a Web server to make this possible. The most popular web servers are Apache, Nginx, and Microsoft IIS.
+We are going to install Nginx, but first:
+Check if you have Apache running on the server. If so, stop it to avoid Nginx headaches!
+$ apache2 -v
+# if nothing was found, this is good!
+# if there's Apache installed, remove it!
+$ sudo apt autoremove
+$ sudo apt remove apache2.*
+After that, keep going:
+$ sudo apt install nginx -y
+$ sudo ufw allow 'Nginx Full'
+$ sudo systemctl status nginx
+The command sudo ufw allow 'Nginx Full' open ports 80 and 443 for HTTP and HTTPS, respectively, to allow incoming traffic from the web. So it's not necessary to have allowed "Nginx HTTP" and "Nginx HTTPS". Only "Nginx Full" must be allowed.
+
+Connect to the server with a private key  
+Important: keys are exclusively used by each system user. If you are the admin user, maybe in the future you will need to create one for the root user. 
+
+We connect to our server with a username and password, but connecting with an RSA private key is also possible. Let's see how to create that key and connect to the server using that:
+
+RSA – an SSH RSA key is considered highly secure as it has typically larger key sizes, often 2048 or 4096 bits. It is also more compatible with older operating systems.
+Ed25519 – a more modern algorithm with a smaller standard key size of 256 bits. It is just as secure and efficient as an RSA key due to its strong cryptographic properties. The compatibility is lower, but newer operating systems support it.
+
+Once connected to the server with the admin user created earlier, do these actions:
+Generate an RSA key pair (recommended):
+$ ssh-keygen -t rsa
+# or this one:
+$ ssh-keygen -t ed25519
+The SSH command will display the following message "Generating public/private RSA key pair." 
+After that, the key generator should ask you to choose a location to store the keys:
+Enter file in which to save the key (/home/local_username/.ssh/id_rsa):
+Press Enter to save them in the default location, which is the /user-root-folder/.ssh.
+  # root:
+  /root/.ssh
+  # <non-root-user>:
+  /home/<non-root-user>/.ssh
+Next, the key generator window will ask you to create an SSH key passphrase to access your private key. 
+Set one as strong as possible;
+Log out of the server and re-connect normally:
+$ exit
+$ ssh -p <port> <user>@<ip_server>
+PS: it's advised to create a Public Key for the root user in cases where only they can set a repo in places where the admin has no write permission (as "/var/www/" for example).
+
+Prepare the Server to receive clones of GitHub repositories
+Back again logged, find your user root-folder:
+# If you are ROOT, the folder is /root/
+# If you are ADMIN, the folder is /home/admin/
+# In your user folder, get in the hidden folder 'ssh':
+$ cd .ssh
+Over there, let's copy our user Public Key:
+$ ls           # list the current folder to check if you can see your public key (e.g. id_rsa.pub).
+$ cat id_rsa.pub
+Copy the entire code on the terminal and let's go to GitHub;
+
+On GitHub, go to Settings >> SSH and GPG Keys >> New SSH Key
+Title example = <Hosting name>_<server_OS>_<username>
+e.g. locaweb_ubuntu_admin
+Now you are prepared to clone private GitHub repos into the server.

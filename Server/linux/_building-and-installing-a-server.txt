@@ -1,0 +1,19 @@
+
+
+https://app.clickup.com/9017148560/v/dc/8cqdh4g-4137/8cqdh4g-9297
+
+
+DEBIAN/UBUNTU: BUILDING UP A WEB-SERVER
+
+
+    Summary:
+        1. OS:                                        /Server/linux/building-a-server/1-step.txt
+        2. The basic;                                 /Server/linux/building-a-server/2-step.txt
+        3. Deploy the Web Application;                /Server/linux/building-a-server/3-step.txt
+        4. Deploy the Database;                       /Server/linux/building-a-server/4-step.txt
+        5. Web server configurations;                 /Server/linux/building-a-server/5-step.txt
+        6. SSL certificate creation (if needed);      /Server/ssl-certification.txt
+
+        Prerequisites:
+            This tutorial assumes you have a VPS running on Ubuntu 20.04 or higher.
+
