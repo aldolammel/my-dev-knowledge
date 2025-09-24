@@ -45,7 +45,7 @@ const fetchQuizData = async () => {
     isLoading.value = false;
   }
 };
-// Fetch data when the component is mounted
+// Fetch data when the component is mounted:
 onMounted(() => {
   fetchQuizData();
 });

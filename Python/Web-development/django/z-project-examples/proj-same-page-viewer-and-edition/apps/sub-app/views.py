@@ -78,6 +78,6 @@ def movie_delete(request, id):
 
 """
     MORE OPTIONS:
-    /Python/Web-development/django/3-2-backend-views/
+    /Python/Web-development/django/3-2-backend-views-and-API/
 
 """

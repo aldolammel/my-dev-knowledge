@@ -3,3 +3,8 @@
 API: WITH PYTHON
 
     /Python/python-knowledge/30-API/
+
+
+API: WITH PYTHON + DJANGO:
+
+    /Python/Web-development/django/3-2-backend-views-and-API/serializer.txt

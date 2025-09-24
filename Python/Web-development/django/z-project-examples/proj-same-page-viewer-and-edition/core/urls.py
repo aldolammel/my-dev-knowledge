@@ -10,6 +10,6 @@ urlpatterns = [
 
 """
     MORE OPTIONS:
-    /Python/Web-development/django/3-2-backend-views/2-building-urls/urls-from-config-folder.py
+    /Python/Web-development/django/3-2-backend-views-and-API/2-building-urls/urls-from-config-folder.py
 
 """

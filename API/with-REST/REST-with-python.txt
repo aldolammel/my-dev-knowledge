@@ -1,1 +1,12 @@
-/python/30-API/with-REST/
+
+
+API WITH REST:
+
+    What is it:
+        /Programming-Concepts/principles-REST.txt
+
+    REST in Python:
+        /python/30-API/with-REST/
+
+    REST in Python + Django:
+        /Python/Web-development/django/component-libraries/django-rest-framework/

@@ -96,7 +96,7 @@ INSTALLING DJANGO:
 
 
         x.2) Prepare a Global Context with the Essential info about the app:
-                /Python/Web-development/django/3-2-backend-views/1-building-views-context/global-context.txt
+                /Python/Web-development/django/3-2-backend-views-and-API/1-building-views-context/global-context.txt
         
 
         x.3) Still in settings.py file, if you WON'T use the SQLite as database:

@@ -24,13 +24,13 @@ FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
     3) In the sub-app views.py, create views.py function or class responsable for your
         form to be used in a template:
 
-        /Python/Web-development/django/3-2-backend-views/
+        /Python/Web-development/django/3-2-backend-views-and-API/
 
 
     4) In the sub-app urls.py file, add the URL of your new view 
         (responsable for your front-end form):
 
-        /Python/Web-development/django/3-2-backend-views/2-building-urls/
+        /Python/Web-development/django/3-2-backend-views-and-API/2-building-urls/
 
 
     5) If your sub-app folder there is NO 'templates' folder, create it;

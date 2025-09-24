@@ -1,0 +1,5 @@
+
+
+PRINCIPLES: REST
+
+    REST principles (GET, POST, PUT, DELETE)

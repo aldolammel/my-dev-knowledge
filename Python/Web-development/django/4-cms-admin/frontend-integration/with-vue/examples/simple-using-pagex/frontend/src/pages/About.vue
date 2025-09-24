@@ -10,6 +10,7 @@ import { pagesConstants } from './pagesConstants'
 const pagesStore = usePagesStore()
 const pageId = pagesConstants.PID_B  // Use Page ID because it barely change.
 
+// Fetch data when the component is mounted:
 onMounted(async () => {
   await pagesStore.fetchPage(pageId)
 })

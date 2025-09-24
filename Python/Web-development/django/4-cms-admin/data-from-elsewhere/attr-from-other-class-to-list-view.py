@@ -19,11 +19,11 @@
             list_display = (
                 'id',
                 'user',
-                'first_name',  # Custom method from other class
+                'first_name',  # Custom method field from other class
                 'age',
                 'sex',
                 'country',
-                'last_login',  # Custom method from other class
+                'last_login',  # Custom method field from other class
             )
 
             # Declaring a existent method from another class:

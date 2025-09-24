@@ -121,7 +121,7 @@
             2.4) In /accounts/views.py, an example of user's profile_view that's aware to the
                 change of user's language preference:
 
-                /Python/Web-development/django/3-2-backend-views/4-user-profile-view/profile-view.txt
+                /Python/Web-development/django/3-2-backend-views-and-API/4-user-profile-view/profile-view.txt
 
                     E.g.
                         # Update the session language to match the new preference:

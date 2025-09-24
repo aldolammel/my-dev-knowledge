@@ -1,0 +1,8 @@
+
+
+DJANGO MODEL CLASS: CUSTOM SAVING
+
+    xxxxx
+
+    def save(self, *args, **kwargs):
+        """Built-in method that's executed when the entry saving runs."""

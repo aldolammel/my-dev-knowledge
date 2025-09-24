@@ -1,0 +1,60 @@
+
+
+PROGRAMMING CONCEPTS: SERIALIZATION
+
+    Serialization is the process of converting an object's state or a data structure into a format that can be stored or transmitted and then reconstructed later.
+
+    Serializers are components that convert complex data structures (like objects, dictionaries, or
+    database records) into a format that can be easily stored, transmitted, or reconstructed later. 
+    The reverse process (converting serialized data back into its original form) is called
+    deserialization.
+
+
+    >> What is API:
+        /API/_about.txt
+
+
+    >> Popular Serialization Formats:
+
+        Format                Use Case                                    Example Libraries
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        JSON ................ Web APIs, config files .................... json (Python), serde (Rust)
+        XML	................. Legacy systems, SOAP APIs ................. lxml, ElementTree
+        Protocol Buffers .... High-performance binary serialization ..... protobuf (Google)
+        YAML ................ Human-readable configs .................... PyYAML, ruamel.yaml
+        MessagePack	......... Compact binary alternative to JSON ......... msgpack
+
+
+    >> When to use:
+
+        - When building APIs (e.g., REST/gRPC);
+        - When saving/loading application state;
+        - When communicating between different programming languages.
+
+
+    >> Use cases:
+
+        >> API Development:
+
+            - Convert database models (e.g., Python objects) to JSON/XML for HTTP responses.
+            - Parse incoming JSON/XML data into Python objects for processing.
+
+            E.g. with Python + Django:
+                /Python/Web-development/django/3-2-backend-views-and-API/serializer.txt
+
+
+        >> Data Storage
+
+            - Save objects to files (e.g., as JSON, YAML, or binary formats like Protocol Buffers).
+
+            E.g. xxxxxxxxx:
+                    /xxxxxxxxxxxxxxx
+
+
+        >> Inter-Process Communication
+
+            - Send data between services (e.g., microservices) over networks (often as JSON or binary).
+
+            E.g. xxxxxxxxx:
+                    /xxxxxxxxxxxxxxx
+

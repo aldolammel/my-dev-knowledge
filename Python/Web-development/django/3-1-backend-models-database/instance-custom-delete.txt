@@ -1,0 +1,8 @@
+
+
+DJANGO MODEL CLASS: CUSTOM DELETING
+
+    xxxxx
+
+    def delete(self, *args, **kwargs):
+        """Built-in method that's executed when the entry deleting runs."""

@@ -26,7 +26,7 @@ DJANGO STRUCTURE: TEMPLATES
 
         >> VIEWS: 
 
-            /Python/Web-development/django/3-2-backend-views/
+            /Python/Web-development/django/3-2-backend-views-and-API/
 
         >> MODELS:
 
