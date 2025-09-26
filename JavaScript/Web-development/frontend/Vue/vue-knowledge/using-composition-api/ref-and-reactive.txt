@@ -2,29 +2,27 @@
 
 COMPOSITION API APPROACH: REF() AND REACTIVE()
 
-    In Vue.js Composition API, ref() and reactive() are both used to create reactive data, but
-    they serve different purposes:
+    In Vue.js Composition API, ref() and reactive() are both used to create reactive data, but they serve different purposes:
 
         
         >> REF()
             
-            For primitive values (strings, numbers, booleans) and when you need a single
-            reactive value:
+            For primitive values (strings, numbers, booleans) and when you need a single reactive value:
 
             E.g.
                 
                 # .vue file:
                 <script setup>
-                import { ref } from 'vue'
+                import { ref } from "vue"
 
                 // For primitive values
                 const count = ref(0)
-                const message = ref('Hello')
+                const message = ref("Hello")
                 const isVisible = ref(true)
 
                 // Access/modify the value using .value
                 count.value = 10
-                console.log(message.value) // 'Hello'
+                console.log(message.value) // "Hello"
                 </script>
 
         

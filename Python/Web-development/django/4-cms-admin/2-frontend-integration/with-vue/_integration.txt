@@ -9,7 +9,7 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
     PRE.2) Data workflow between Django and Vue:
             
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/django-with-vue-integration.png
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -18,37 +18,37 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
     x) Create serializers in a new file /pagex/serializers.py to ensure your Django backend serves
         content through the REST API:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/serializers.py
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/serializers.py
     
     
     x) Set up API endpoints in Views of Aldo Lammel's Pages-app to expose what the serialization brings from Vue:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/views.py
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/views.py
 
 
     x) In /core/urls.py, initialize the Router and its Viewsets, and then add API endpoints:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/core/urls.py
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/core/urls.py
 
 
     x) Remove from Django the Aldo Lammel's Pages-app URLs/API endpoints handling. Vue-Router will handle them instead:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/urls.py
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/apps/pagex/urls.py
         
 
     x) Create a Pinia store to manage page content:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/frontend/src/stores/pages.js
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/frontend/src/stores/pages.js
 
 
     x) Update your Vue components to use the store data. For example in About.vue:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/frontend/src/pages/About.vue
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/frontend/src/pages/About.vue
             
 
     x) Add CORS settings to allow Vue.js to access the Django API, and update settings.py:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/core/settings.py
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/core/settings.py
 
 
     x) Configure the front-end JS build-tool:
@@ -79,7 +79,7 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
                         Vite can handle front-end env vars, but not in your own configuration file!
 
                 x.1A.2) Vite configure file (in front-end folder root):
-                    /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/examples/simple-using-pagex/frontend/vite.config.js
+                    /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/examples/simple-using-pagex/frontend/vite.config.js
 
             x.1B) Using Webpack:
             
@@ -94,7 +94,7 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
     x) Test the integration now:
 
-        /Python/Web-development/django/4-cms-admin/frontend-integration/testing-integration.txt
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/testing-integration.txt
             
 
 

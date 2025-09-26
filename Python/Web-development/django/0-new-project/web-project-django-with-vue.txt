@@ -45,7 +45,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
         >> Code the entire navigation;
 
         >> Integrate back-end with front-end:
-            /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/_integration.txt
+            /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration.txt
         
     2.2) Back-end:
         >> Build up the database of the product;

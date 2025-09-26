@@ -1,0 +1,36 @@
+
+
+VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
+
+
+    >> onMounted():
+
+        It's a composition function that runs only once, right after the component is inserted into the DOM. If you put your store.fetchPage(props.slug) inside onMounted, it will fetch the page just for the initial slug value. If later the slug prop changes (e.g., via Vue Router navigation), the fetch won’t run again automatically. That means your component would not reactively update when the route changes.
+        Use onMounted when you only want something once per component lifecycle.
+
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-onMounted.vue
+
+
+    >> watchEffect():
+
+        It's a composition function that runs immediately when the component is set up and then again every time a reactive dependency changes. Let's say you got the dependency props.slug. So when slug changes (e.g., user navigates to a different page via router), watchEffect will detect it and call store.fetchPage(props.slug) again.
+        Use watchEffect when you want your logic to reactively respond to changing reactive values like props, state, or route params.
+
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-watchEffect.vue
+
+
+    >> watch():
+
+        Pretty similar to watchEffect() but here it demands explicitness: you declare what you want to observe (e.g., props.slug). Gives you access to new and old values (newSlug, oldSlug). More control (e.g., conditionally skip fetches if nothing meaningful changed).
+
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-watch.vue
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+This in Options-API:
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/watch.txt

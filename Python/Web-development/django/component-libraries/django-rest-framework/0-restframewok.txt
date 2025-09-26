@@ -20,7 +20,7 @@ DRF: DJANGO REST FRAMEWORK
         >> Serializers:  /API/serializers.txt
 
     >> Dataflow of a real Django REST Framework usage:
-        /Python/Web-development/django/4-cms-admin/frontend-integration/with-vue/django-with-vue-integration.png
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

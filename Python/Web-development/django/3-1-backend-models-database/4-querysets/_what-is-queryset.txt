@@ -103,7 +103,7 @@ DJANGO: WHAT ARE QUERYSETS
 
 
     
-    Usign QuerySets with Foreigner Keys: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    Usign QuerySets with Foreigner Keys: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         /Python/Web-development/django/3-1-backend-models-database/4-querysets/qs-with-foreigner-keys.txt
 
@@ -118,5 +118,5 @@ DJANGO: WHAT ARE QUERYSETS
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-    >> XXXXXX
-        /xxxxxxxxxxxxxxxxxxxxxx
+    >> QuerySets on ADMIN/CMS:
+        /Python/Web-development/django/4-cms-admin/1-customizing/cms-queryset-filtering.py

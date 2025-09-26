@@ -18,11 +18,12 @@
 
 
 <!--
-    Composition-API (being coded with sintactic sugar, SMARTHER 'coz it's much more direct
+    RECOMMENDED APPROACH!
+    Composition-API (being coded with syntactic sugar, SMARTHER 'coz it's much more direct
     and flexible):
 -->
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 
 const count = ref(0)
 const doubleCount = computed(() => count.value * 2)

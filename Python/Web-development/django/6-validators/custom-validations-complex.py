@@ -3,18 +3,14 @@
 # CUSTOM VALIDATIONS: COMPLEX WITH CLASSES
 
 '''
-    >> Validators with classes work better when you got complex validations to build,
-        otherwise use validations only with functions;
+    >> Validators with classes work better when you got complex validations to build, otherwise use validations only with functions;
     
-    >> All validations (created and build-in) work not only on CMS layer, but also on front-end
-        and wherever the save() is used by python.
+    >> All validations (created and build-in) work not only on CMS layer, but also on front-end and wherever the save() is used by python.
         
     >> Important: What is Celery in Django?
-        It's a distributed task queue system that can be used with Django to perform asynchronous
-        tasks such as sending emails, processing background jobs, and more. 
+    It's a distributed task queue system that can be used with Django to perform asynchronous tasks such as sending emails, processing background jobs, and more. 
         
-    >> At 'A' example, we're building a validation checks if the user number is divisible by
-        the system number.
+    >> At 'A' example, we're building a validation checks if the user number is divisible by the system number.
     
 '''
 

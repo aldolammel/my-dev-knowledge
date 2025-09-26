@@ -14,36 +14,34 @@
 
 -->
 
-
 <!--
+    RECOMMENDED APPROACH!
     Composition-API (being coded with sintactic sugar, SMARTHER 'coz it's much more direct
     and flexible):
 -->
 <script setup>
 const handleClick = () => {
-    console.log('Button clicked')
-}
+  console.log("Button clicked");
+};
 </script>
-
 
 <!--
     Composition-API (using Options-API structure, but with setup() that replace all options
     sections (data, computed, methods, lifecycle hooks, etc), making to be need the ref() usage:
 -->
 <script>
-    export default {
-        setup() {
-            function handleClick() {
-                console.log('Button clicked')
-            }
-            
-            return {
-                handleClick
-            }
-        }
+export default {
+  setup() {
+    function handleClick() {
+      console.log("Button clicked");
     }
-</script>
 
+    return {
+      handleClick,
+    };
+  },
+};
+</script>
 
 <!--
 

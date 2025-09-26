@@ -1,0 +1,8 @@
+
+
+Look this amazing solution in Django Template that can be easily adapt to Vue template:
+    /Python/Web-development/django/3-3-frontend-templates/form-error-css-customization.txt
+
+
+And this:
+    /Python/Web-development/django/6-validators/error-identification-codes.txt

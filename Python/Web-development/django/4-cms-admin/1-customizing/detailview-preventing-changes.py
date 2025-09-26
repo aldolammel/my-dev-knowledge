@@ -3,7 +3,7 @@
     PREVENTING A FIELD EDITION
     
         >> Prevent CMS users to change username fields through the detail-view:
-            /Python/Web-development/django/4-cms-admin/customizing-cms/detailview-preventing-username-changes.py
+            /Python/Web-development/django/4-cms-admin/customizing/detailview-preventing-username-changes.py
         
         >> Prevent CMS users to change a specific field through the detail-view:
 """

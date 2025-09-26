@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+x) Test the integration now:
+
+    /Python/Web-development/django/4-cms-admin/2-frontend-integration/testing-integration.txt

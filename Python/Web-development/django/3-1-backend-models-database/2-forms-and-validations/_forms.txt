@@ -2,11 +2,9 @@
 
 FORMS (SUPER BASIC INSTRUCTION)
 
-    >> For Django, forms are specific formularies used ONLY through front-end, and that
-        not include CMS forms at all;
+    >> For Django, forms are specific formularies used ONLY through front-end, and that not include CMS forms at all;
 
-    >> If you want to build or improve a front-end form, keep in mind you must work with 
-        files called 'forms.py' that can be created once into each sub-app folder;
+    >> If you want to build or improve a front-end form, keep in mind you must work with files called 'forms.py' that can be created once into each sub-app folder;
     
     >> Everything for forms.py:
         /Python/Web-development/django/9-forms/

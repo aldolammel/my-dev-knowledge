@@ -1,7 +1,7 @@
 
 
 DJANGO: USING AN EXTERNAL FRONT-END SOLUTION
-    /Python/Web-development/django/4-cms-admin/frontend-integration/
+    /Python/Web-development/django/4-cms-admin/2-frontend-integration/
 
         >> Vue.js
         >> React.js

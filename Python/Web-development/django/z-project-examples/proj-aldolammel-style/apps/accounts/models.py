@@ -135,7 +135,7 @@ class User(AbstractUser):
             self.save(update_fields=["password", "last_pwd_update"])
 
     def clean(self):
-        """It's a built-in method for adding custom validation logic before saving data to the db."""
+        """Built-in method for adding custom validation logic before full_clean() or save()."""
         validate_user_agreement(self)
 
     def save(self, *args, **kwargs):
@@ -231,7 +231,7 @@ class UserProfileOne(models.Model):
         return lng.CMS_ERRO_PROFILE
 
     def clean(self):
-        """It's a built-in method for adding custom validation logic before saving data to the db."""
+        """Built-in method for adding custom validation logic before full_clean() or save()."""
         validate_birth(self.birthdate)
 
     def save(self, *args, **kwargs):
