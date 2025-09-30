@@ -1,0 +1,40 @@
+
+
+DJANGO FORM VALIDATIONS > DB CONSTRAINTS > DATE: PROTECTING DATE LOGIC
+
+
+    >> Start-Date must be before or, at least, equal to End-Date - - - - - - - - - - - - - - - - - -
+    
+        # FILE: /apps/my_app/models.py
+        from django.db import models
+        from django.db.models import Q
+
+        class Event(models.Model):
+            ...
+            start_date = models.DateTimeField()
+            end_date = models.DateTimeField()
+
+            class Meta:
+                constraints = [
+                    models.CheckConstraint(
+                        check=Q(start_date__lte=models.F("end_date")),
+                        name="start_before_end"
+                    )
+                ]
+
+
+        WHAT WILL TAKE PLACE IN DB:
+        
+            ALTER TABLE "event"
+            ADD CONSTRAINT "start_before_end"
+            CHECK ("start_date" <= "end_date");
+
+
+
+    >> Other date example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        xxxxxx
+
+        WHAT WILL TAKE PLACE IN DB:
+
+            xxxxxxxxx

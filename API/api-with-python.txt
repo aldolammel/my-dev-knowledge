@@ -7,4 +7,4 @@ API: WITH PYTHON
 
 API: WITH PYTHON + DJANGO:
 
-    /Python/Web-development/django/3-2-backend-views-and-API/serializer.txt
+    /Python/Web-development/django/3-2-views-and-API/serializer.txt

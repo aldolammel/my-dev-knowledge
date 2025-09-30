@@ -1,0 +1,18 @@
+
+
+QUERYSETS: WITH MANY-TO-MANY
+
+    Use prefetch_related() for Many-to-Many:
+
+        E.g.
+            # Prefetch related objects
+            articles = Article.objects.prefetch_related('tags')[:10]
+            for article in articles:
+                print(article.tags.all())  # No additional queries
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> For Foreigner Keys:
+    /Python/Web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.txt

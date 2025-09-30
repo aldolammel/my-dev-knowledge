@@ -4,7 +4,7 @@
 FRONT-END: USER LOGIN FORM
 
     >> Make sure you already have done:
-        /Python/Web-development/django/3-1-backend-models-database/3-users/0-users-setup.txt
+        /Python/Web-development/django/3-1-models-database/3-users/0-users-setup.txt
         /Python/Web-development/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
@@ -47,4 +47,4 @@ MORE ABOUT USER:
 
     >> If you're looking for how to import users in your models.py classes:
 
-        /Python/Web-development/django/3-1-backend-models-database/importing-users.txt
+        /Python/Web-development/django/3-1-models-database/importing-users.txt

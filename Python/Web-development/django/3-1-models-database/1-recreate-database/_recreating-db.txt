@@ -1,0 +1,52 @@
+
+
+
+DJANGO: RE-CREATING THE PROJECT DATABASE
+
+    >> A db flush is not enough?
+        /Python/Web-development/django/3-1-models-database/1-recreate-database/clean-database.txt
+    
+    >> If you need to re-create your database from the beginning, do it:
+
+        ATTENTION MULTILINGUAL:
+            If your app is multilingual and are using prefix_language mandatory, your new db must be created and, right after, you must include on language table at least one language for you be able to use the CMS! So be aware of this!
+        
+        1) Delete the current database;
+
+        2) Create the new database:
+
+            >> PostgreSQL:
+                /Database/PostgreSQL/postgres-creating-db-locally.txt
+
+            >> MySQL:
+                /xxxxxxxxx
+
+            >> MariaDB:
+                /xxxxxxxxx
+
+            >> SQLite:
+                /xxxxxxxxx
+
+        3) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too;
+
+        4) Edit your .env file as needed (the new db name, for example);
+
+        5) CRITICAL: close all Terminals/Prompts you ran with the old .env before (it avoids
+            issues with old environment variables)!
+
+        6) Run 'makemigrations' for each sub-app, and then run 'migrate';
+        
+        7) (If applicable)
+            If you'll use the CMS, run createsuperuser;
+
+        8) (If applicable) 
+            For multilingual apps, and have prefix_language mandatory, add manually at least one language in the language table for you are allowed to use the CMS;
+
+        9) Run 'runserver' to test Django!
+
+
+
+
+HOW TO RE-INSTALL ONLY THE DJANGO:
+
+    /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt

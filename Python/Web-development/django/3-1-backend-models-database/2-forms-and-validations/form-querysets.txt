@@ -1,3 +1,0 @@
-
-
-    /Python/Web-development/django/3-1-backend-models-database/4-querysets/qs-filter-exclude.txt

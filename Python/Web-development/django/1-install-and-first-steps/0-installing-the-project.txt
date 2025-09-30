@@ -96,7 +96,7 @@ INSTALLING DJANGO:
 
 
         x.2) Prepare a Global Context with the Essential info about the app:
-                /Python/Web-development/django/3-2-backend-views-and-API/1-building-views-context/global-context.txt
+                /Python/Web-development/django/3-2-views-and-API/1-building-views-context/global-context.txt
         
 
         x.3) Still in settings.py file, if you WON'T use the SQLite as database:
@@ -106,7 +106,7 @@ INSTALLING DJANGO:
 
 
         x.4) Define your database:
-            /Python/Web-development/django/3-1-backend-models-database/0-installing-and-adminUser/_define-the-database.txt
+            /Python/Web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
 
 
     6) Defining the back-end environment-variables, and configure Django to read it:
@@ -121,7 +121,7 @@ INSTALLING DJANGO:
 
         6.2) Configure Django to read properly those basic env vars:
             
-            /Python/Web-development/django/3-1-backend-models-database/environment-variables-on-django.txt
+            /Python/Web-development/django/3-1-models-database/environment-variables-on-django.txt
 
 
     7) Linters and formatters:
@@ -189,10 +189,10 @@ INSTALLING DJANGO:
             >> Do you need user management through the app front-end too?
 
                 >> If not:
-                    /Python/Web-development/django/3-1-backend-models-database/3-users/1-basic-users-only-for-cms.txt
+                    /Python/Web-development/django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
 
                 >> If so:
-                    /Python/Web-development/django/3-1-backend-models-database/3-users/2-extending-users.txt
+                    /Python/Web-development/django/3-1-models-database/3-users/2-extending-users.txt
 
 
                     >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)

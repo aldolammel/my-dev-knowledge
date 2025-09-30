@@ -112,7 +112,7 @@ REL_PROFILE_1 = "profile_1"
 """
     WHERE TO USE NAMESPACES:
     
-        /Python/Web-development/django/3-1-backend-models-database/namespaces-where-to-use.txt
+        /Python/Web-development/django/3-1-models-database/namespaces-where-to-use.txt
 
 
 """

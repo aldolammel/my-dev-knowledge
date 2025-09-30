@@ -22,10 +22,10 @@
             It's a great way to validate fields without consuming server resources.
 
                 >> Using Django Model built-in validators to create front-end validations:
-                    /Python/Web-development/django/6-validators/models-builtin-validators.txt
+                    /Python/Web-development/django/6-validations/validation-1-for-database.txt
 
                 >> Using custom Django validators to create front-end validations:
-                    /Python/Web-development/django/6-validators/models-custom-validator.py
+                    /Python/Web-development/django/6-validations/models-validators-customized.py
 
                 >> Error messages manage by FRONT-END solutions:
 

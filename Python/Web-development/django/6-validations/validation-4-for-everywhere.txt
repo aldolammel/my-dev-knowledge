@@ -1,0 +1,11 @@
+
+
+DJANGO FORM VALIDATIONS: FOR ALL LEVELS (MIXING SOLUTIONS)
+
+    There is no just one solution to validate all Django forms in a system. You need to mix them.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    LEVELS TO MIX:
+        /Python/Web-development/django/6-validations/1-validation-basic.txt

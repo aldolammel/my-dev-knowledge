@@ -1,0 +1,53 @@
+
+
+DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
+    
+    
+    >> Number greater or equal to another number - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+        # FILE: /apps/my_app/models.py
+        from django.db import models
+        from django.db.models import Q
+
+        class Product(models.Model):
+            ...
+            stock = models.IntegerField()
+
+            class Meta:
+                constraints = [
+                    models.CheckConstraint(
+                        check=Q(stock__gte=0),             # gt = 'greater than' / e = 'or equal to'
+                        name="stock_non_negative"
+                    )
+                ]
+
+
+        WHAT WILL TAKE PLACE IN DB:
+        
+            ALTER TABLE "product"
+            ADD CONSTRAINT "stock_non_negative"
+            CHECK ("stock" >= 0);
+
+
+
+    >> Number must be inside a specific range - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        class Employee(models.Model):
+            ...
+            salary = models.DecimalField(max_digits=10, decimal_places=2)
+
+            class Meta:
+                constraints = [
+                    models.CheckConstraint(
+                        check=Q(salary__gte=30000) & Q(salary__lte=200000),       # lt = 'less than'
+                        name="salary_range"
+                    )
+                ]
+
+
+        WHAT WILL TAKE PLACE IN DB:
+
+            ALTER TABLE "employee"
+            ADD CONSTRAINT "salary_range"
+            CHECK ("salary" >= 30000 AND "salary" <= 200000);
+

@@ -1,0 +1,55 @@
+
+
+DATABASE ON DJANGO: POSTGRESQL
+
+    Summary:
+        1) Installing the database;
+        2) Integrating database and back-end;
+        3) Creating the database;
+
+    Let's go:
+
+    
+    1) Installing the database: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> If the database won't be in the cloud, install the PostgreSQL locally:
+            /Database/PostgreSQL/0-installing-and-updating/postgres-installing.txt
+        
+
+    2) Integrating database and back-end: - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        2.1) Install a Python lib for PostgreSQL:
+            https://www.psycopg.org
+        
+        2.2) In core folder, open the settings.py file:
+
+            >> Option 1:
+                Only lines for db configuration, specifically for POSTGRESQL:
+                    /Python/Web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/settings.py
+            
+            >> Option 2:
+                An entire settings.py template:
+                    /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
+        
+        2.3) (If applicable)
+            Make a copy of the '.env' file to your project root folder:
+                /Environment-Variables/
+
+        2.4) If you see the file sqlite.db in the project root folder, delete it once you are using PostgreSQL and you have no data from this project in that SQLite.
+
+
+    3) Creating the database: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        ATTENTION:
+            If you are installing a new Django project, return to the previously installation roadmap because other steps are needed before to migrate command.
+        
+        Otherwise, if you have already a Django project built, in a new Terminal window, select the virtual environment again and give the order to build the database, finally:
+            
+            $ python manage.py makemigrations
+            $ python manage.py migrate
+            
+            or
+
+            $ uv run manage.py makemigrations
+            $ uv run manage.py migrate
+        

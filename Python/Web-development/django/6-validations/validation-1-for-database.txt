@@ -1,0 +1,52 @@
+
+
+DJANGO FORM VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
+
+    When a form field needs a basic validation as well as 'maximum length' or 'it cannot be empty', you need database level validation, also called 'database constraints'. As we are talking about validations direct for database (via Django), we are restrict a not complex options, and NONE of them will force Django to propagate that rules for other levels/layers of your app.
+    
+    So, you must have it in mind that's just the first, basic and deepest validation level you will dive in your project. DB constraints are set via /apps/my_app/models.py file:
+
+        E.g. very basic constraints:
+
+            class ExampleModel(models.Model):
+                attribute_example = models.CharField(
+                    ...
+                    max_length=100,            # db level validation.
+                    blank=False,               # db level validation.
+                    unique=True,               # db level validation.
+                    null=False,                # db level validation.
+                    
+                    validators=[...]           # More options, but only for APP level.
+                )
+
+
+        E.g. Using db constraints to be more specific (e.g., supported by Postgres, MySQL):
+
+            class Product(models.Model):
+                stock = models.PositiveIntegerField()
+                ...
+
+                class Meta:
+                    constraints = [
+                        models.CheckConstraint(         # Ensures values satisfy a condition.
+                            check=Q(stock__gte=0),      # If value great than zero, it's ok!
+                            name="stock_non_negative"
+                        )
+                    ]
+                ...
+
+
+    >> Exploring more database constraint possibilities (make sure your DB supports):
+
+        /Python/Web-development/django/6-validations/validation-constraint-numerical-logics.txt
+        /Python/Web-development/django/6-validations/validation-constraint-date-logics.txt
+        /Python/Web-development/django/6-validations/validation-constraint-conditionals.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    OTHER VALIDATION LEVELS:
+        /Python/Web-development/django/6-validations/1-validation-basic.txt
+    
+    HOW WORKS BUILT-IN VALIDATORS IN MODELS (but not db level validation):
+        /Python/Web-development/django/6-validations/models-validators-built-in.txt

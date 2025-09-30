@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import User, Movie
 
-
+# file: forms.py
 class MovieForm(forms.ModelForm):
     """
     Example of a Model-Form-class, perfect to build a form that will be connected with an existent
@@ -39,17 +39,15 @@ class MovieForm(forms.ModelForm):
                 
         
         """
-        
             HOW DOES UPDATE THE DATABASE FROM A FORM:
             
             In order to update the db with the form data, define in your CBV or FBV which
             fields are responsable for the data of each model(s) attributes:
             
-                /Python/Web-development/django/3-2-backend-views-and-API/1-building-views-context/
-                
+                /Python/Web-development/django/3-2-views-and-API/1-building-views-context/
         """
             
-
+# file: forms.py
 class CustomUserCreationForm(UserCreationForm):
     """
     Example of a Form-class that inherit its features from a model-form class (UserCreationForm).
@@ -74,7 +72,7 @@ class CustomUserCreationForm(UserCreationForm):
         
         
         
-        
+# file: admin.py
 class UserProfileTwoCMS(admin.ModelAdmin):
     '''Defining how the UserProfileTwo Model class (business) will exclusivily be shown on the CMS.'''
 

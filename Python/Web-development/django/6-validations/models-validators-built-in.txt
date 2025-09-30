@@ -1,0 +1,62 @@
+/Python/Web-development/django/6-validations/validation-1-for-database.txt
+
+DJANGO > MODELS: BUILT-IN VALIDATORS
+
+    Django Forms fields support use of utility functions and classes known as validators (built-in and customized ones). A validator is a callable object or function that takes a value and returns nothing if the value is valid or raises a ValidationError if not.
+
+
+    >> In /apps/my_app/models.py file, example:
+        
+        class ExampleModel(models.Model):
+            attribute_example = models.CharField(
+                ...
+                validators=[                  # Built-in validators (impact ONLY app level)!
+                    MinLengthValidator(3),
+                    MaxLengthValidator(100),
+                ],
+            )
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    Current options (until set/2025):
+
+        RegexValidator
+        EmailValidator
+        DomainNameValidator
+        URLValidator
+        validate_email
+        validate_domain_name
+        validate_slug
+        validate_unicode_slug
+        validate_ipv4_address
+        validate_ipv6_address
+        validate_ipv46_address
+        validate_comma_separated_integer_list
+        int_list_validator
+
+        MaxValueValidator(10)    or    MaxValueValidator(10, "Some message")
+        MinValueValidator(0)     or    MinValueValidator(0, "Some message")
+
+        MaxLengthValidator(100)    or    MaxLengthValidator(100, "Some message")
+        MinLengthValidator(10)     or    MinLengthValidator(10, "Some message")
+
+        DecimalValidator(max_digits, decimal_places)
+        - 'max_digits' if the number of digits is larger than max_digits.
+        - 'max_decimal_places' if the number of decimals is larger than decimal_places.
+        - 'max_whole_digits' if the number of whole digits is larger than the difference between max_digits and decimal_places.
+
+        FileExtensionValidator
+        validate_image_file_extension
+        ProhibitNullCharactersValidator
+        StepValueValidator
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> CREATE YOUR OWN MODEL VALIDATOR:
+    /Python/Web-development/django/6-validations/models-validators-customized.py
+
+
+>> OTHER VALIDATION LEVELS:
+    /Python/Web-development/django/6-validations/1-validation-basic.txt

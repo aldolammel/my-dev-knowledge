@@ -1,0 +1,12 @@
+
+
+DJANGO FORMS
+    
+    >> Everything for forms.py:
+        /Python/Web-development/django/9-forms/
+
+    >> Everything for forms present on the CMS (admin.py):
+        /Python/Web-development/django/4-cms-admin/
+
+    >> Everything about forms validation:
+        /Python/Web-development/django/3-1-models-database/2-forms-and-validations/_validations.txt

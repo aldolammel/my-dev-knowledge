@@ -1,4 +1,0 @@
-
-
-
-/Python/Web-development/django/6-validators/_validation-knowledge.txt

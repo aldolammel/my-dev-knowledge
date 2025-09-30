@@ -33,4 +33,4 @@ class ReviewForm(forms.Form):  # That 'Form' in the classname is a convention.
 # VIEWS.PY TIP:
 # For form classes in forms.py that won't use any models.py class, it's recommended to use
 # 'FormView' inherit in its view in views.py file.
-# /Python/Web-development/django/3-2-backend-views-and-API/1-building-context/class-based/_view-class-form.txt
+# /Python/Web-development/django/3-2-views-and-API/1-building-context/class-based/_view-class-form.txt

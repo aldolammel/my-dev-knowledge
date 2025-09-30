@@ -1,0 +1,59 @@
+
+
+DJANGO FORM VALIDATIONS > DB CONSTRAINTS: CONDITIONALS
+    
+    
+    >> Email must be unique only if the user is active - - - - - - - - - - - - - - - - - - - - - - -
+    
+        # FILE: /apps/my_app/models.py
+        from django.db import models
+        from django.db.models import Q
+
+        class UserProfile(models.Model):
+            email = models.EmailField()
+            is_active = models.BooleanField(default=True)
+
+            class Meta:
+                constraints = [
+                    models.UniqueConstraint(
+                        fields=["email"],
+                        condition=Q(is_active=True),
+                        name="unique_active_email"
+                    )
+                ]
+
+
+        WHAT WILL TAKE PLACE IN DB:
+        
+            CREATE UNIQUE INDEX "unique_active_email"
+            ON "userprofile" ("email")
+            WHERE "is_active";
+
+
+    >> Among multiple options, the user can select just one of them at time - - - - - - - - - - - - 
+
+        # FILE: /apps/my_app/models.py
+        from django.db import models
+        from django.db.models import Q
+
+        class Subscription(models.Model):
+            user = models.ForeignKey("auth.User", on_delete=models.CASCADE)
+            plan = models.CharField(max_length=50)
+            start_date = models.DateField()
+
+            class Meta:
+                constraints = [
+                    models.UniqueConstraint(
+                        fields=["user", "plan"],
+                        name="unique_user_plan"
+                    )
+                ]
+
+
+        WHAT WILL TAKE PLACE IN DB:
+        
+            ALTER TABLE "subscription"
+            ADD CONSTRAINT "unique_user_plan"
+            UNIQUE ("user_id", "plan");
+
+

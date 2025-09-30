@@ -2,4 +2,4 @@
 
 PROTECTING ACCESS FROM NOT LOGGED USER:
     
-    /Python/Web-development/django/3-2-backend-views-and-API/views-access-only-authenticated.txt
+    /Python/Web-development/django/3-2-views-and-API/views-access-only-authenticated.txt

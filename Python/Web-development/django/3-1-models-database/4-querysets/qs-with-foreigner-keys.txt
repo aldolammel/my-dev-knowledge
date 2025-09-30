@@ -1,0 +1,18 @@
+
+
+QUERYSETS: WITH FOREIGNER KEYS
+
+    Use select_related() for Foreign Keys:
+
+        E.g.
+            # Avoids N+1 queries
+            users = User.objects.select_related('profile')[:10]
+            for user in users:
+                print(user.profile.bio)  # No additional queries
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> For Many-to-Many:
+    /Python/Web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.txt

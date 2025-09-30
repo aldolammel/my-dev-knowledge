@@ -1,0 +1,76 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
+
+    Common Usage:
+        Storing raw binary data (e.g., bytes, bytearray, memoryview). It's important to note that storing large binary data in the database is generally not recommended for performance reasons; the standard practice is to store the file in a storage system (e.g., S3, filesystem) and store its path in a CharField or FileField. Use BinaryField for very small amounts of data. Good for encrypted secret or token, storing a user's picture as a byte stream (not recommended for large images), very specific use cases where the data must be in the database and is not a separate file.
+
+    Field look-like on front-end:
+        xxxxxxx
+
+    Example:
+        
+        from cryptography.fernet import Fernet
+        import base64
+
+        class UserAPIProfile(models.Model):
+            user = models.OneToOneField(
+                stgs.AUTH_USER_MODEL,
+                on_delete=models.CASCADE,
+                related_name='api_profile'
+            )
+            # Encrypted token stored as bytes:
+            encrypted_token = models.BinaryField(
+                null=True,
+                blank=True,
+            )
+            # We'll also store the "initialization vector" for the encryption, which is also binary data, specific to each token:
+            encryption_iv = models.BinaryField(
+                null=True,
+                blank=True,
+            )
+            ...
+            def set_token(self, token_string):
+                """Encrypts a plain-text token string and saves it to the encrypted_token field."""
+                # Generate a key (In production, use a secure key from settings, not this!)
+                # key = Fernet.generate_key()
+                # cipher_suite = Fernet(key)
+                
+                # Use a pre-configured key from settings
+                cipher_suite = Fernet(stgs.ENCRYPTION_KEY)
+                # Encrypt the token string (requires bytes input)
+                encrypted_data = cipher_suite.encrypt(token_string.encode('utf-8'))
+                # Store the encrypted bytes in the BinaryField
+                self.encrypted_token = encrypted_data
+                self.save()
+
+            def get_token(self):
+                """Decrypts and returns the plain-text token string."""
+                if not self.encrypted_token:
+                    return None
+                try:
+                    cipher_suite = Fernet(stgs.ENCRYPTION_KEY)
+                    decrypted_data = cipher_suite.decrypt(bytes(self.encrypted_token))
+                    return decrypted_data.decode('utf-8')
+                except Exception:
+                    # Handle decryption errors (e.g., wrong key, corrupted data)
+                    return None
+
+            def api_token(self):
+                return self.get_token()
+
+            @api_token.setter
+            def api_token(self, value):
+                self.set_token(value)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Char Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-char.txt
+
+    >> File Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-file.txt
+

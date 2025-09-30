@@ -1,0 +1,23 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE FIELD
+
+    Common Usage:
+        Storing dates like a person's date of birth, the date an order was placed, an event's start date, etc.
+
+    Field look-like on front-end:
+        - A date field (simple calendar)
+
+    Example:
+        xxxxxxxxxxxx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Date Time Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-dateTime.txt
+    
+    >> Duration Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-duration.txt
+

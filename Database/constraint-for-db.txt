@@ -1,0 +1,35 @@
+
+
+DATABASE: CONSTRAINTS
+
+    A constraint in a database is a rule that restricts what kind of values can be stored in a column or across multiple columns.
+    
+    It’s the database’s way of saying: “I will only accept data that follows this rule, otherwise I reject it.”
+
+    Constraints are essential because they:
+
+    - Protect data integrity (no invalid/illogical data sneaks in)
+    - Enforce business rules at the lowest level (DB, not just in your app)
+    - Save you from bugs caused by bad data entered outside Django (via raw SQL, external tools, etc.)
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    PRIMARY KEY:
+        /Database/constraint-type-primary-key.txt
+
+    FOREIGN KEY:
+        /Database/constraint-type-foreign-key.txt
+
+    NOT NULL:
+        /Database/constraint-type-not-null.txt
+
+    UNIQUE:
+        /Database/constraint-type-unique.txt
+
+    CHECK:
+        /Database/constraint-type-check.txt
+
+    DEFAULT:
+        /Database/constraint-type-default.txt

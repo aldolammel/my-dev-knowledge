@@ -53,6 +53,6 @@ class Movie(models.Model):
 
 """
     MORE OPTIONS:
-    /Python/Web-development/django/3-1-backend-models-database/
+    /Python/Web-development/django/3-1-models-database/
 
 """

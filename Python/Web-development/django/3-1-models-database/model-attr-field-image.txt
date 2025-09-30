@@ -1,0 +1,27 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: IMAGE FIELD
+
+    Common Usage:
+        Handling file uploads. ImageField inherits from FileField and adds image-specific validation (e.g., checking if the upload is a valid image) and properties (like height and width).
+
+    Field look-like on front-end:
+        - Single upload field.
+
+    Example:
+        
+        img_highlight = models.ImageField(
+            upload_to=consts.PATH_IMG,
+            blank=True,
+        )
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> File Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-file.txt
+
+
+
+    

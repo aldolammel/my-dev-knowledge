@@ -1,0 +1,61 @@
+
+
+DJANGO FORM VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
+
+    xxxxxxxxxxxxxxxxx
+
+        E.g. /apps/my_app/forms.py file:
+
+        xxxxxxxxxx
+
+
+
+
+    Method A) By django.core.validators (modal built-in solution - simple things);
+Method B) By Clean() a model with external file (more complex stuff);
+
+- - - - - - - - - -
+
+A) By django.core.validators (built-in solution):
+
+        # FILE: /my_app/models.py
+        from django.core.validators import MinLengthValidator, MaxLengthValidator
+        
+        class Page(models.Model):
+            title = models.CharField(
+                ...
+                max_length=100,           # Database level checking.
+                validators=[              # App form level checking.
+                    MinLengthValidator(3),
+                    MaxLengthValidator(100),
+                ],
+            )
+
+        # All built-in validators:
+        # /Python/Web-development/django/6-validations/validation-1-for-database.txt
+
+
+B) By Clean() a model with external file:
+    /Python/Web-development/django/6-validations/models-validators-customized.py
+
+    
+>> For Forms (client-side validation):
+
+The clean method for Forms we need to pass a dictionary-like object (like cleaned_data from a form) where it can use the .get() method to retrieve form values.
+
+/Python/Web-development/django/6-validations/validation-customized.txt
+
+
+
+CLEAN() METHOD
+
+    It's a built-in method for adding custom validation logic before a Model or Form saving
+    data to the db. This method works little different for each one:
+        /Python/Web-development/django/6-validations/clean-differences-between-model-and-form.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    OTHER VALIDATION LEVELS:
+        /Python/Web-development/django/6-validations/1-validation-basic.txt

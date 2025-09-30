@@ -1,0 +1,11 @@
+
+
+
+DJANGO DATABASE MANAGEMENT: VALIDATIONS (DB CONSTRAINTS)
+
+    To create a solid database validation level, use Django Constraints:
+        /Python/Web-development/django/6-validations/1-validation-basic.txt
+        /Python/Web-development/django/6-validations/validation-1-for-database.txt
+
+    What is it:
+        /Database/constraint-for-db.txt

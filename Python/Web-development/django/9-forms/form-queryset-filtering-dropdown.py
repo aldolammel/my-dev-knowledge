@@ -12,7 +12,7 @@
             Let's go!
 
     >> What are QuerySets?
-        /Python/Web-development/django/3-1-backend-models-database/4-querysets/_what-is-queryset.txt
+        /Python/Web-development/django/3-1-models-database/4-querysets/_what-is-queryset.txt
     
 """
 from django import forms 

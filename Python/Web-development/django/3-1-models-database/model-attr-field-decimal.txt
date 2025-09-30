@@ -1,0 +1,31 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
+
+    For storing numbers with decimal points, like Float Field, but wiht differences!!!
+    Fixed-point numbers.
+
+    Typical Size:
+        Variable (configurable)
+
+    Signed Range:
+        Configurable, with exact precision.
+
+    Common usage:
+        Financial data, monetary values, or any number where exact decimal representation is required. You must define max_digits (the total number of digits) and decimal_places (the digits after the decimal point).
+
+    Example:
+        
+        # Can store up to 99,999,999.99.
+        models.DecimalField(
+            max_digits=10,
+            decimal_places=2,
+        )
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+
+    >> Float Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-float.txt

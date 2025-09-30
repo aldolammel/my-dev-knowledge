@@ -8,7 +8,7 @@
         /django_project/apps/your_app/models.py
 
     >> Step 1/2 (models.py):
-        /Python/Web-development/django/3-1-backend-models-database/singleton.py
+        /Python/Web-development/django/3-1-models-database/singleton.py
 
     >> Step 2/2 (admin.py)
         This file!

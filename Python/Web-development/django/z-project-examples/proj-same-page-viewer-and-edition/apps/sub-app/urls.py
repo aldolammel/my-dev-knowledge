@@ -20,6 +20,6 @@ urlpatterns = [
 
 """
     MORE OPTIONS:
-    /Python/Web-development/django/3-2-backend-views-and-API/2-building-urls/urls-from-subapp.py
+    /Python/Web-development/django/3-2-views-and-API/2-building-urls/urls-from-subapp.py
 
 """

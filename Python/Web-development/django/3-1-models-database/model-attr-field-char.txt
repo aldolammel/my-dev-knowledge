@@ -1,0 +1,48 @@
+
+
+DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
+
+    Common Usage:
+        Requiring the max_length parameter to define the maximum number of characters, this field is for storing short-to-medium-length strings like a person's first or last name, a city name, country code, category name, an ISBN number, product code, or other short identifier.
+
+    Field look-like on front-end:
+        - Single line field.
+
+    Example:
+        
+        first_name = models.CharField(
+            max_length=25,
+            blank=True,
+            null=True,
+            default=None,
+        )
+        
+        # dropdown field example:
+        front_type = models.CharField(
+            max_length=35,  # Database level checking.
+            choices=consts.CHOICES_FRONTEND,
+            default=consts.VAL_FRONT_TOOL_DEFAULT,
+        )
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Other related options:
+    
+    >> Text Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-text.txt
+
+    >> Email Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-email.txt
+
+    >> URL Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-url.txt
+
+    >> Slug Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-slug.txt
+
+    >> Binary Field:
+        /Python/Web-development/django/3-1-models-database/model-attr-field-binary.txt
+
+
+
+    

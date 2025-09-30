@@ -1,0 +1,46 @@
+
+
+DJANGO FORMS: VALIDATIONS
+    
+    Just to be clear, the expression 'Django Forms' mean Python classes (from django.forms) that handle rendering and validating user input. So 'Django Forms' represent:
+        
+    - Forms in the Django CMS (yes, these use Django Forms);
+    - Forms in app's front-end (only if you're using Django's templating as front-end solution);
+    - API forms/serializers (not including 'Django REST Framework' that uses Serializers instead).
+
+    You can set form validations through 3 ways:
+
+        >> Via MODELS.PY:
+
+            Put validation in the Model if it’s a universal data integrity rule once it operates in database level, for example, "name cannot be empty", “price must be positive”, "start date is always equal or before the end date", etc.
+
+        >> Via ADMIN.PY:
+
+            Put validation in Admin if it’s about CMS-only restrictions (not including the app-user via front-end form), for example, “only staff can set discount”, "only admin can exceed the max-days available between start-date and end-date", etc.
+
+        >> Via FORMS.PY:
+        
+            Put validation in Form if it’s about how the app-user data is input (UI-specific), for example, “price must not exceed user’s budget (visitor/depending on logged-in user)”, etc.
+
+            Important: Form can be attached by an Admin Class (see this futher).
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    EXAMPLES:
+
+        >> Creating the basic and deepest validation directly in db (impact also CMS level):
+            /Python/Web-development/django/6-validations/validation-1-for-database.txt
+        
+        >> Creating validation for CMS level:
+            /Python/Web-development/django/6-validations/validation-3-for-CMS-forms.txt
+
+        >> Creating validation for APP level:
+            /Python/Web-development/django/6-validations/validation-2-for-app-forms.txt
+
+        >> Creating validation for all levels (Database + CMS + APP);
+            /Python/Web-development/django/6-validations/validation-4-for-everywhere.txt
+        
+

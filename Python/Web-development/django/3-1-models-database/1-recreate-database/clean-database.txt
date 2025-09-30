@@ -1,0 +1,28 @@
+
+
+CLEAN THE ENTIRE DATABASE:
+
+
+    >> Reset the database:
+    
+        This command clears all data from all tables in our Django database, preserving the tables
+        and columns only:
+
+            Before: if your application is multilingual and are using prefix_language mandatory,
+                your new db must be created and, right after, you must include on language table
+                at least one language for you be able to use the CMS! So be aware of this!
+
+            $ python manage.py flush
+            or
+            $ uv run manage.py flush
+
+            $ python manage.py createsuperuser
+            or
+            $ uv run manage.py createsuperuser
+
+
+
+    >> Recreate the database from zero:
+
+        /Python/Web-development/django/3-1-models-database/1-recreate-database/_recreating-db.txt
+
