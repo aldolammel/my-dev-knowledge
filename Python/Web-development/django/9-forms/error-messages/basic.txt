@@ -3,12 +3,11 @@
     DJANGO > PLANNED ERROR MESSAGES: BASIC
 
 
-        >> Django default error messages (for forms.py and models.py fields):
-        
-            If a Model-class has no 'blank=True' or has declared 'blank=False', Django will automatically set as REQUIRED field not just in db level but also in CMS form field, including the error message 'This field is required'.
+        >> Basic:
+            /Python/Web-development/django/6-validations/1-validation-basic.txt
 
 
-        >> Model argument 'error_messages={}' (server-side checking):
+        >> (WIP !!!!!!!!!) Model argument 'error_messages={}' (server-side checking):
 
             It's the most reliable and solid way to ensure that anything that causes an infraction 
             for a given attribute will generate the planned error message. However, this method is 
@@ -17,19 +16,17 @@
                 <example here> xxxxxxxxxxxxxxxx
 
 
-        >> Error messages on front-end (client-side checking):
+        >> Error messages on App and CMS front-end (client-side checking):
 
             It's a great way to validate fields without consuming server resources.
 
-                >> Using Django Model built-in validators to create front-end validations:
-                    /Python/Web-development/django/6-validations/validation-1-for-database.txt
+                >> Basic when Django is the back-end:
+                    /Python/Web-development/django/6-validations/validation-2-for-app-forms.txt
+                    /Python/Web-development/django/6-validations/validation-3-for-CMS-forms.txt
 
-                >> Using custom Django validators to create front-end validations:
-                    /Python/Web-development/django/6-validations/models-validators-customized.py
+                >> Knowledge regarding error message feedbacks via final user app's front-end:
 
-                >> Error messages manage by FRONT-END solutions:
-
-                    >> Using Django Template as front-end solution:
+                    >> Using Django Template:
                         /Python/Web-development/django/3-3-frontend-templates/form-error-messages.html
 
                     >> Using Vue:

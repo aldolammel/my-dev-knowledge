@@ -2,11 +2,11 @@
 
 DJANGO FORMS: VALIDATIONS
     
-    Just to be clear, the expression 'Django Forms' mean Python classes (from django.forms) that handle rendering and validating user input. So 'Django Forms' represent:
+    The expression "Django Forms" refers to the form classes Django uses, including those in the admin (e.g., a new post form) and those used in the app’s front-end (e.g., a contact form). So, just to be clear, "Django Forms" mean Python classes (from django.forms) that handle rendering and validating user input. Django Forms represent:
         
     - Forms in the Django CMS (yes, these use Django Forms);
-    - Forms in app's front-end (only if you're using Django's templating as front-end solution);
-    - API forms/serializers (not including 'Django REST Framework' that uses Serializers instead).
+    - Forms in app's front-end (only if you're using Django's templating to create them);
+    - API forms/serializers (but not including "Django REST Framework", it uses serializers).
 
     You can set form validations through 3 ways:
 
@@ -32,15 +32,15 @@ DJANGO FORMS: VALIDATIONS
     EXAMPLES:
 
         >> Creating the basic and deepest validation directly in db (impact also CMS level):
-            /Python/Web-development/django/6-validations/validation-1-for-database.txt
+            ./validation-1-for-database.txt
         
         >> Creating validation for CMS level:
-            /Python/Web-development/django/6-validations/validation-3-for-CMS-forms.txt
+            ./validation-3-for-CMS-forms.txt
 
         >> Creating validation for APP level:
-            /Python/Web-development/django/6-validations/validation-2-for-app-forms.txt
+            ./validation-2-for-app-forms.txt
 
         >> Creating validation for all levels (Database + CMS + APP);
-            /Python/Web-development/django/6-validations/validation-4-for-everywhere.txt
+            ./validation-4-for-everywhere.txt
         
 

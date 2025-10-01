@@ -1,23 +1,30 @@
 
 
-DJANGO FORM VALIDATIONS: FOR CMS LEVEL
+DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
 
     IMPORTANT:
-        All database validation level written through the models.py file, Django manages to bring them to CMS validation level, automatically. So it's correct to say db validation level impacts directly in CMS validations, but NEVER the opposite.
+        All database validation level written through the models.py file, Django manages to bring them to CMS validation level (admin.py), automatically. So it's correct to say db validation level impacts directly in CMS validations, but NEVER to the opposite.
 
     xxxxxxxxxxxxxxxxxxxxxxxx
 
-        E.g. /apps/my_app/admin.py file:
+        E.g.
+            # admin.py
 
-        xxxxxxxxxx
+            class xxxxxxxxxxxxxxxx
 
 
 
 
+
+        E.g.
+            # forms.py
+
+            class xxxxxxxxxxxxxxxxxxxxxxxxx
+        
 
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     OTHER VALIDATION LEVELS:
-        /Python/Web-development/django/6-validations/1-validation-basic.txt
+        ./1-validation-basic.txt

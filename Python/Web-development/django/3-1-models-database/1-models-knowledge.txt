@@ -34,8 +34,8 @@ MODELS FIELDS                                                                 WH
 
 models.CharField(max_length=40) ................................................ <input type="text">
 models.TextField() ...................................................................... <textarea>
-models.CharField(choices=(('v1', 'V 1'), ('v2', 'V 2')), default='v1') .................... <select>
-models.CharField(choices=(('v1', 'V 1'), ('v2', 'V 2')), default='v1') ........ <input type="radio">
+models.CharField(..., choices=(('v1', 'V 1'),('v2', 'V 2')), default='v1') ................ <select>
+models.CharField(..., choices=(('v1', 'V 1'),('v2', 'V 2')), default='v1') .... <input type="radio">
 models.BooleanField() or NullBooleanField() <- when null=True ............................ <boolean>
 xxxxxxxxxxxxxxxxxxxxxxxxx .................................................... <input type="button">
 models.ManyToMany() ........................................................ <input type="checkbox">

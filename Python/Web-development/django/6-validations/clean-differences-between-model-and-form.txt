@@ -1,12 +1,13 @@
 
 
-    VALIDATION: CUSTOMIZING WITH CLEAN() METHOD
+DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR MODELS AND FORMS
 
 
-        clean() is a built-in method that's used in forms and models for customize validations. When a form is submitted or model is saved, clean() takes each data field first to execute an expected and customized validation!
+        clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When a form is submitted or model is saved, clean() takes each data field first to execute a customized validation!
 
 
         BASIC KNOWLEDGE:
+            ./validation-2-for-app-forms.txt
             /Python/Web-development/django/9-forms/error-messages/basic.txt
 
 

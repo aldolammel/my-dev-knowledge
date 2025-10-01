@@ -1,61 +1,81 @@
 
 
-DJANGO FORM VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
-
-    xxxxxxxxxxxxxxxxx
-
-        E.g. /apps/my_app/forms.py file:
-
-        xxxxxxxxxx
+DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
 
 
+    There are 2 main places where you put validation logic:
+
+    1. Field-level validation (using "validators" functions);
+    2. Model-level validation (using a "clean()" method);
+
+    That said, keep in mind:
 
 
-    Method A) By django.core.validators (modal built-in solution - simple things);
-Method B) By Clean() a model with external file (more complex stuff);
+    1. FIELD-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-- - - - - - - - - -
+    - You use validators as argument of model fields or form fields;
+    - You can use built-in validators or customized ones;
+    - Validators run when the full_clean() is called automatically on the model or form;
+    - Validators NEVER validate in database-level;
+    - Validators impact also in Django CMS forms (admin);
+    - Good for rules tied to a single field (format, value range, forbidden chars, etc).
 
-A) By django.core.validators (built-in solution):
-
-        # FILE: /my_app/models.py
-        from django.core.validators import MinLengthValidator, MaxLengthValidator
-        
-        class Page(models.Model):
-            title = models.CharField(
+        E.g.
+            # models.py (similar for forms.py):
+            django.core.validators
+            class Product(models.Model):
                 ...
-                max_length=100,           # Database level checking.
-                validators=[              # App form level checking.
-                    MinLengthValidator(3),
-                    MaxLengthValidator(100),
-                ],
-            )
-
-        # All built-in validators:
-        # /Python/Web-development/django/6-validations/validation-1-for-database.txt
+                stock = models.PositiveIntegerField(
+                    validators=[
+                        MinValueValidator(0),
+                    ]
+                )
 
 
-B) By Clean() a model with external file:
-    /Python/Web-development/django/6-validations/models-validators-customized.py
+        >> Be aware:
+            If you bypass forms usage (e.g., calling Product.objects.create() directly), validators WON'T run automatically.
+        
+        
+        >> Built-in options:
+            ./models-validators-built-in.txt
 
+
+
+    2. MODEL-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    - You use clean() method as a method of a model class or form class;
+    - You can use clean() only for customized validations;
+    - clean() runs when the full_clean() is called automatically on the model or form;
+    - clean() method NEVER validates in database-level;
+    - clean() impacts also in Django CMS forms (admin) because they use ModelForms;
+    - Good for complex or cross-field validations for consistency between fields.
     
->> For Forms (client-side validation):
+        E.g.
+            # models.py (similar for forms.py):
+            class Product(models.Model):
+                ...
+                price = ...
+                stock = ...
 
-The clean method for Forms we need to pass a dictionary-like object (like cleaned_data from a form) where it can use the .get() method to retrieve form values.
+                def clean(self):
+                    # Cross-field validation:
+                    if self.stock == 0 and self.price > 0:
+                        raise Validation(
+                            "Out-of-stock products have no price.",
+                            code="invalid",  # Options: ./error-identification-codes.txt
+                        )
 
-/Python/Web-development/django/6-validations/validation-customized.txt
+
+        >> Be aware:
+            If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.
 
 
-
-CLEAN() METHOD
-
-    It's a built-in method for adding custom validation logic before a Model or Form saving
-    data to the db. This method works little different for each one:
-        /Python/Web-development/django/6-validations/clean-differences-between-model-and-form.txt
+        >> Clean() differences between Model and Form classes:
+            ./clean-differences-between-model-and-form.txt
 
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     OTHER VALIDATION LEVELS:
-        /Python/Web-development/django/6-validations/1-validation-basic.txt
+        ./1-validation-basic.txt

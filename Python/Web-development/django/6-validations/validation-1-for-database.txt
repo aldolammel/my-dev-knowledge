@@ -1,6 +1,6 @@
 
 
-DJANGO FORM VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
+DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 
     When a form field needs a basic validation as well as 'maximum length' or 'it cannot be empty', you need database level validation, also called 'database constraints'. As we are talking about validations direct for database (via Django), we are restrict a not complex options, and NONE of them will force Django to propagate that rules for other levels/layers of your app.
     
@@ -46,7 +46,4 @@ DJANGO FORM VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     OTHER VALIDATION LEVELS:
-        /Python/Web-development/django/6-validations/1-validation-basic.txt
-    
-    HOW WORKS BUILT-IN VALIDATORS IN MODELS (but not db level validation):
-        /Python/Web-development/django/6-validations/models-validators-built-in.txt
+        ./1-validation-basic.txt

@@ -1,18 +1,21 @@
 
 """
-    DJANGO > VALIDATIONS: CUSTOM MODEL VALIDATOR
+    DJANGO FORMS > VALIDATIONS > CUSTOM VALIDATORS
 
-    Be aware what you wanna validate indeed does NOT exist as a built-in validator:
-        /Python/Web-development/django/6-validations/validation-1-for-database.txt
+    CRUCIAL:
+        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
     
-    There are 2 approaches for custom validators:
-        1. Work with validate function that can be called multiple times for other fields;
-        2. Or work in something do specific, directly in model methods;
+    Check the built-in validators list:
+        /Python/Web-development/django/6-validations/models-validators-built-in.txt
+    
+    To validate something in a model-class or form-class, you got 2 approaches:
+        1. Code the validation directly in the model-class/form-class as a method;
+        2. Or create a validator to be used multiple times in different fields or even classes;
 
-        That said, examples below is using only the approach 1, once the approach 2 is easy to understand.
+        That said, all examples below are using the approach 2, once the first is the same but applied directly in the class.
 
     Remember:
-        Function validators always return 'None' or raise a ValidationError message!
+        Validator functions always return none if successful, or raise a ValidationError message!
 """
 
 
@@ -30,6 +33,14 @@ def validate_something(value):  # this 'validate_' is a convention!
             code="xxxxxxxxxx",
         )
 
+import re  # for this case!
+def validate_product_name(value):
+    if not re.match(r'^[A-Za-z0-9 ]+$', value):
+        raise ValidationError(
+            "Product name can only contain letters, numbers, and spaces.",
+            code="invalid",
+        )
+
 def validate_goals(p, s):
     """Validates primary and secondary goal fields logic before to save them on the db."""
     if not p and s:
@@ -43,32 +54,46 @@ def validate_goals(p, s):
             code="overlap",
         )
 
+from django.utils.translation import gettext_lazy as _  # for this case!
+def validate_even(value):
+    """Validates for even numbers only."""
+    if value % 2 != 0:
+        raise ValidationError(
+            _("%(value)s is not an even number"),
+            params={"value": value},
+            code="invalid_choice",
+        )
+
 
 # FILE: /apps/my_app/models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+from django.db import models
 from .validators import validate_something
 
 class ExampleModel(models.Model):
-    # ...existing code...
+    ...
     
     my_field = models.CharField(
         ...
-        validators=[validate_something],
+        #param=[arg],
+        validators=[validate_something],  # Passing the custom via field's 'validators' argument.
     )
 
-    def clean(self):
-        """Built-in method for adding custom validation logic before full_clean() or save()."""
-        super().clean()
-        validate_something(self.my_field, "element")
 
+# You can use the same custom validator in forms.py too!
+# FILE: /apps/my_app/forms.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+from django import forms
+from .validators import validate_something
 
+class ExampleForm(forms.Form):
+    ...
+    
+    my_field = forms.CharField(
+        ...
+        validators=[validate_something],
+    )
 
 
 """
     CUSTOM VALIDATOR FOR M2M FIELDS (SPECIAL CASE):
         /Python/Web-development/django/6-validations/models-validators-customized-for-m2m.py
-
-
-    CLEAN() USAGE DIFFERENCES BETWEEN MODELS.PY AND FORMS.PY:
-        /Python/Web-development/django/6-validations/clean-differences-between-model-and-form.txt
 """

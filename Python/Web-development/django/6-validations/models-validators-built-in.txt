@@ -1,8 +1,11 @@
-/Python/Web-development/django/6-validations/validation-1-for-database.txt
 
-DJANGO > MODELS: BUILT-IN VALIDATORS
+
+DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
 
     Django Forms fields support use of utility functions and classes known as validators (built-in and customized ones). A validator is a callable object or function that takes a value and returns nothing if the value is valid or raises a ValidationError if not.
+
+    CRUCIAL:
+        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
 
 
     >> In /apps/my_app/models.py file, example:
@@ -14,6 +17,18 @@ DJANGO > MODELS: BUILT-IN VALIDATORS
                     MinLengthValidator(3),
                     MaxLengthValidator(100),
                 ],
+            )
+
+    
+    >> In /apps/my_app/forms.py file, the same validator example:
+
+        class ExampleForm(forms.Form):
+            attribute_example = forms.CharField(
+                ...
+                validators=[                  # Built-in validators (impact ONLY app level)!
+                    MinLengthValidator(3),
+                    MaxLengthValidator(100),
+                ]
             )
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -51,7 +66,7 @@ DJANGO > MODELS: BUILT-IN VALIDATORS
         StepValueValidator
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 >> CREATE YOUR OWN MODEL VALIDATOR:
