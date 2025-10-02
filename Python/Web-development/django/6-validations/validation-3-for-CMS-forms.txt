@@ -2,25 +2,96 @@
 
 DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
 
+    Put validation in Admin if it’s about CMS-only restrictions (not including the app's front-end), for example, “only staff can set discount”, "only admin can exceed the max-days available between start-date and end-date", etc.
+
     IMPORTANT:
-        All database validation level written through the models.py file, Django manages to bring them to CMS validation level (admin.py), automatically. So it's correct to say db validation level impacts directly in CMS validations, but NEVER to the opposite.
+        All validation for db-level (only written through the models.py file) Django manages to propagate them to CMS-level (admin.py), automatically. So it's correct to say database validation's level propagates directly into the CMS, but NEVER to the opposite (if you create validations on admin.py that won't be propagate to db-level).
 
-    xxxxxxxxxxxxxxxxxxxxxxxx
+    Considering "Field-level" means any field from a Model-class or Admin-class, and "Model-level" means any class from models.py and admin.py, for CMS validations, there are these approaches to set each validation logic:
 
-        E.g.
-            # admin.py
-
-            class xxxxxxxxxxxxxxxx
-
-
-
-
-
-        E.g.
-            # forms.py
-
-            class xxxxxxxxxxxxxxxxxxxxxxxxx
+        1. In models.py, model-field-level validation (using "validators");
+        2. In models.py, model-level validation (using "clean()");
+        3. In admin.py, admin-model-field-level validation (using "validators") (NOT COMMON);
+        4. Admin-model-level validation (using "clean()" ONLY VIA FORMS.PY)
         
+    All that said, keep in mind:
+
+
+    FIELD-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    - You use validators as argument of model fields or form fields;
+    - You can use built-in validators or customized ones;
+    - Validators run when the full_clean() is called automatically on the model or form;
+    - Validators NEVER validate in database-level;
+    - Validators impact also in Django Template forms (forms.py) even if project's using external front-end framework like Vue, React, Angular;
+    - Good for rules tied to a single field (format, value range, forbidden chars, etc).
+
+        E.g. in models.py:
+            # BEST place to set validators for CMS!
+
+            django.core.validators
+            class Product(models.Model):
+                ...
+                stock = models.PositiveIntegerField(
+                    validators=[
+                        MinValueValidator(0),
+                    ]
+                )
+        
+        E.g. in admin.py:
+            # NOT RECOMMENDED to set validators here 'coz models.py propagates its validators!
+            # NEVER set validators here if the admin-class is tied to a form from forms.py!
+            # Otherwise, to apply validators in admin.py is similar the example before...
+        
+        E.g. in forms.py (for those tied to an admin-model):
+            # NOT RECOMMENDED to set validators here 'coz models.py propagate its validators!
+            # Otherwise, to apply validators in forms.py, it's similar the example before...
+
+        >> Be aware:
+            If you bypass forms usage (e.g., calling Product.objects.create() directly), validators WON'T run automatically.
+        
+        >> Built-in options:
+            ./models-validators-built-in.txt
+
+
+
+    MODEL-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    - You use clean() as a method of a model class or form class;
+    - You can use clean() only for customized validations;
+    - clean() runs when the full_clean() is called automatically on the model or form;
+    - clean() NEVER validates in database-level;
+    - clean() impacts also in Django Template forms (forms.py) even if project's using external front-end framework like Vue, React, Angular;
+    - Good for complex or cross-field validations for consistency between fields.
+    
+        E.g. in models.py:
+            # BEST place to set clean() if validation must propagate to CMS and APP!
+
+            class Product(models.Model):
+                ...
+                price = ...
+                stock = ...
+
+                def clean(self):
+                    # Cross-field validation:
+                    if self.stock == 0 and self.price > 0:
+                        raise Validation(
+                            "Out-of-stock products have no price.",
+                            code="invalid",  # Options: ./error-identification-codes.txt
+                        )
+
+        E.g. in admin.py:
+            # IMPOSSIBLE to apply clean() directly. You should use clean() via forms.py!
+
+        E.g. in forms.py:
+            # NOT RECOMMENDED to set clean() here 'coz models.py propagate its clean()!
+            # Otherwise, if you wanna force for any reason a custom clean() in an admin-class, you should apply clean() in a form from forms.py and, finally, tied that to the admin-class...
+
+        >> Be aware:
+            If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.
+
+        >> Clean() semantic differences between Model and Form classes:
+            ./clean-differences-between-model-and-form.txt
 
 
 

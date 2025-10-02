@@ -1,6 +1,6 @@
 
 
-FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
+DJANGO FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 
 
     0) Make sure you already have a models.py class created that will create the model to 

@@ -2,6 +2,8 @@
 
 DJANGO ADMIN (CMS)
 
+    The admin.py is an empty file automatically created by Django. It customize the logic to be used on CMS through its list-views and detail-views.
+
     >> The CMS is divided by this areas:
 
         1) Home: 

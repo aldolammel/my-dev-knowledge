@@ -1,0 +1,12 @@
+
+
+PROGRAMMING CONCEPTS: SEMANTIC
+
+    Semantics refers to the meaning and behavior of the code; what the code actually does when it runs.
+
+        E.g. with Python:
+            # Calculate average of two numbers!
+                a = 10
+                b = 20
+                average = a + b / 2    # Right syntax, bad semantic! Shoulb be average = (a + b) / 2
+                print(average)         # Output: 20.0 (should be 15.0)

@@ -6,19 +6,48 @@ DJANGO FORMS: VALIDATIONS
         
     - Forms in the Django CMS (yes, these use Django Forms);
     - Forms in app's front-end (only if you're using Django's templating to create them);
-    - API forms/serializers (but not including "Django REST Framework", it uses serializers).
 
-    You can set form validations through 3 ways:
 
-        >> Via MODELS.PY:
+    Files you'll use:
+    
+    - models.py:
+        Empty file automatically created, it defines data models and database-level validation. Any validation here applies everywhere (CMS, front-end forms [if Django is the template solution too], APIs), since it enforces business rules at the data layer. NOT ANY validation approach configured here will protect data in db-level. Be aware of it!
+    
+    - admin.py: 
+        Empty file automatically created, it customize the logic to be used on CMS through its list-views and detail-views. All validation created here, by overriding ModelAdmin methods (e.g. save_model, get_queryset, etc), will impact only forms used by the CMS.
+        That said, you also can attached a customized form (from forms.py) to replace the original CMS form (detail-view) for a specific admin-class, extending the forms.py usage not only for app's front-end, but for the CMS as well.
+    
+    - forms.py:
+        Once you create this file, here is where you define forms that will be used through the app's front-end, and/or, if needed, used as custom CMS form.
+        There are 2 cases of using forms from forms.py:
+            1) Using '.ModelForm' based class: directly tied to a models.Model (common case);
+            2) Using '.Form' based class: not tied to a model, useful for search bars, contact forms, filters, etc ('Django Template' as front-end solution is expected).
+        For projects where Django Templates is not the front-end solution used, forms.py are restrict only to be used attached with admin-classes (CMS, via admin.py) or some API request, once the front-end forms are built/provided by another template framework (e.g. Vue, React, Angular, etc).
 
-            Put validation in the Model if it’s a universal data integrity rule once it operates in database level, for example, "name cannot be empty", “price must be positive”, "start date is always equal or before the end date", etc.
 
-        >> Via ADMIN.PY:
+    So, yes, you should set form validations through those 3 files but for different purposes your project demands:
 
-            Put validation in Admin if it’s about CMS-only restrictions (not including the app-user via front-end form), for example, “only staff can set discount”, "only admin can exceed the max-days available between start-date and end-date", etc.
 
-        >> Via FORMS.PY:
+        >> Creating basic and deepest validations directly in db (auto-propagates to CMS & APP too):
+            ./validation-1-for-database.txt
+        
+        >> Creating customized validations for CMS level:
+            ./validation-3-for-CMS-forms.txt
+
+        >> Creating customized validation for APP level:
+            ./validation-2-for-app-forms.txt
+
+        >> Creating validation for all levels (Database + CMS + APP);
+            ./validation-4-for-everywhere.txt
+        
+
+
+
+        >> Validations via ADMIN.PY:
+
+            
+
+        >> Validations via FORMS.PY:
         
             Put validation in Form if it’s about how the app-user data is input (UI-specific), for example, “price must not exceed user’s budget (visitor/depending on logged-in user)”, etc.
 
@@ -31,16 +60,5 @@ DJANGO FORMS: VALIDATIONS
 
     EXAMPLES:
 
-        >> Creating the basic and deepest validation directly in db (impact also CMS level):
-            ./validation-1-for-database.txt
-        
-        >> Creating validation for CMS level:
-            ./validation-3-for-CMS-forms.txt
-
-        >> Creating validation for APP level:
-            ./validation-2-for-app-forms.txt
-
-        >> Creating validation for all levels (Database + CMS + APP);
-            ./validation-4-for-everywhere.txt
         
 

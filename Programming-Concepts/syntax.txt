@@ -1,0 +1,14 @@
+
+
+PROGRAMMING CONCEPTS: SYNTAX
+
+    Syntax refers to the grammar and structure of the code - the set of rules that define how to write valid code in a language.
+
+        E.g. with Python:
+            if x > 5:
+                print("Hello")
+
+        Correct syntax because:
+            - Proper colon after condition;
+            - Proper indentation;
+            - Parentheses for function call.

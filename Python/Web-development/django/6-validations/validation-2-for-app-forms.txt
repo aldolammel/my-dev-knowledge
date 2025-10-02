@@ -2,16 +2,26 @@
 
 DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
 
+    IMPORTANT:
+        All validation for db-level (only written through the models.py file) Django manages to bring them to app-level (customizable by forms.py), automatically, even if the project is not using Django Template as front-end solution. If you’re not using Django Template in your front-end stack, you may need to manually replicate validations in your chosen front-end framework (e.g., React, Vue). However, back-end validations in models.py always applies.
 
-    There are 2 main places where you put validation logic:
+    Considering "Field-level" means any field from a Model-class or ModelForm-class, and "Model-level" means any class from models.py and forms.py, for app validations, there are these approaches to set each validation logic:
 
-    1. Field-level validation (using "validators" functions);
-    2. Model-level validation (using a "clean()" method);
+        >> For app using native Django Template solution:
 
-    That said, keep in mind:
+            1. In models.py, model-field-level validation (using "validators");
+            2. In models.py, model-level validation (using "clean()");
+            3. In forms.py, model-form-field-level validation (using "validators") (NOT COMMON);
+            4. In forms.py, model-form-level validation (using "clean()");
+            
+        >> For app that's NOT using native Django Template solution:
+            - Cases 1 and 2 certainly 'coz you still need validations for CMS-level once you wanna protect the data coming through admin inputs. So, validator functions and clean() method defined directly in models.py classes are propagated also to CMS-level, automatically.
+            - Cases 3 and 4 you may need if you're customizing CMS forms (detail-views) tied with ModelForms from forms.py.
+    
+    All that said, keep in mind:
 
 
-    1. FIELD-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    FIELD-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     - You use validators as argument of model fields or form fields;
     - You can use built-in validators or customized ones;
@@ -20,8 +30,9 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
     - Validators impact also in Django CMS forms (admin);
     - Good for rules tied to a single field (format, value range, forbidden chars, etc).
 
-        E.g.
-            # models.py (similar for forms.py):
+        E.g. in models.py:
+            # BEST place to set validators for app's front-end!
+
             django.core.validators
             class Product(models.Model):
                 ...
@@ -31,27 +42,30 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
                     ]
                 )
 
+        E.g. in forms.py:
+            # NOT RECOMMENDED to set validators here 'coz models.py propagates its validators!
+            # Otherwise, to apply validators in forms.py, it's similar the example before...
 
         >> Be aware:
             If you bypass forms usage (e.g., calling Product.objects.create() directly), validators WON'T run automatically.
-        
         
         >> Built-in options:
             ./models-validators-built-in.txt
 
 
 
-    2. MODEL-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    MODEL-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    - You use clean() method as a method of a model class or form class;
+    - You use clean() as a method of a model class or form class;
     - You can use clean() only for customized validations;
     - clean() runs when the full_clean() is called automatically on the model or form;
-    - clean() method NEVER validates in database-level;
+    - clean() NEVER validates in database-level;
     - clean() impacts also in Django CMS forms (admin) because they use ModelForms;
     - Good for complex or cross-field validations for consistency between fields.
     
-        E.g.
-            # models.py (similar for forms.py):
+        E.g. in models.py:
+            # BEST place to set clean() if validation must propagate to APP and CMS!
+
             class Product(models.Model):
                 ...
                 price = ...
@@ -65,12 +79,14 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
                             code="invalid",  # Options: ./error-identification-codes.txt
                         )
 
+        E.g. in forms.py:
+            # NOT RECOMMENDED to set clean() here 'coz models.py propagates its clean()!
+            # Otherwise, to apply clean() in forms.py, it's similar the example before...
 
         >> Be aware:
             If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.
 
-
-        >> Clean() differences between Model and Form classes:
+        >> Clean() semantic differences between Model and Form classes:
             ./clean-differences-between-model-and-form.txt
 
 

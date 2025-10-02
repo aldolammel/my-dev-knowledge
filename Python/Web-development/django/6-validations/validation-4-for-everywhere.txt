@@ -1,11 +1,15 @@
 
 
-DJANGO FORM VALIDATIONS: FOR ALL LEVELS (MIXING SOLUTIONS)
+DJANGO FORMS VALIDATIONS: FOR ALL LEVELS (MIXING SOLUTIONS)
 
-    There is no just one solution to validate all Django forms in a system. You need to mix them.
+    >> I'm using Django also as template solution:
+        In this case, the best place to set the maximum of universal validations (that should impact DB, CMS, and APP) is models.py, using the DB constraints, validators, and clean() when needed.
+        
+    >> I'm NOT using Django as template solution:
+        In this case, you must be the same commented above but keep in mind, when you use external template solution (like Vue, React, Angular) you PROBABLY need to replicate some APP-level validations in that front-end framework too.
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     LEVELS TO MIX:
-        /Python/Web-development/django/6-validations/1-validation-basic.txt
+        ./1-validation-basic.txt
