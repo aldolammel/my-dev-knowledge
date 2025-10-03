@@ -8,22 +8,27 @@
     Check the built-in validators list:
         /Python/Web-development/django/6-validations/models-validators-built-in.txt
     
-    To validate something in a model-class or form-class, you got 2 approaches:
-        1. Code the validation directly in the model-class/form-class as a method;
-        2. Or create a validator to be used multiple times in different fields or even classes;
+    To validate something in a model-class or form-class, you got 3 approaches:
 
-        That said, all examples below are using the approach 2, once the first is the same but applied directly in the class.
+        1. Code the validation directly in the model-class/form-class as a method:
+            ./validation-2-for-app-forms.txt
+            ./validation-3-for-CMS-forms.txt
+
+        2. Or create a validator to be used multiple times in different fields or even classes;
+            THIS SAME FILE!
+
+        3. Or create a sub-version "specialized" of an existent validator:
+            ./models-validators-customized-specialized.py
 
     Remember:
         Validator functions always return none if successful, or raise a ValidationError message!
 """
 
-
 # FILE: /apps/my_app/validators.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from django.core.exceptions import ValidationError
 
-def validate_something(value):  # this 'validate_' is a convention!
+def validate_something(value):  # this 'validate_' is a convention for validators!
     """Validates xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
     if <SOMETHING_COMPLEX_THAT_IS_NOT_VALID>:
         raise ValidationError(
@@ -33,13 +38,8 @@ def validate_something(value):  # this 'validate_' is a convention!
             code="xxxxxxxxxx",
         )
 
-import re  # for this case!
-def validate_product_name(value):
-    if not re.match(r'^[A-Za-z0-9 ]+$', value):
-        raise ValidationError(
-            "Product name can only contain letters, numbers, and spaces.",
-            code="invalid",
-        )
+def validate_valid_chars(...):
+    # ./validation-custom-only-valid-chars.py
 
 def validate_goals(p, s):
     """Validates primary and secondary goal fields logic before to save them on the db."""
@@ -74,7 +74,7 @@ class ExampleModel(models.Model):
     
     my_field = models.CharField(
         ...
-        #param=[arg],
+        #param=[arg1, arg2, arg3],
         validators=[validate_something],  # Passing the custom via field's 'validators' argument.
     )
 

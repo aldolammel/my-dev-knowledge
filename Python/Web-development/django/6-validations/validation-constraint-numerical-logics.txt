@@ -37,6 +37,7 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
             salary = models.DecimalField(max_digits=10, decimal_places=2)
 
             class Meta:
+                ...
                 constraints = [
                     models.CheckConstraint(
                         check=Q(salary__gte=30000) & Q(salary__lte=200000),       # lt = 'less than'

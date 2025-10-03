@@ -38,9 +38,10 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 
     >> Exploring more database constraint possibilities (make sure your DB supports):
 
-        /Python/Web-development/django/6-validations/validation-constraint-numerical-logics.txt
-        /Python/Web-development/django/6-validations/validation-constraint-date-logics.txt
-        /Python/Web-development/django/6-validations/validation-constraint-conditionals.txt
+        ./validation-constraint-text-length.txt
+        ./validation-constraint-numerical-logics.txt
+        ./validation-constraint-date-logics.txt
+        ./validation-constraint-conditionals.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
