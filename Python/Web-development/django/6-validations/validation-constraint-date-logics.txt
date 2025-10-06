@@ -7,7 +7,6 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS > DATE: PROTECTING DATE LOGIC
     
         # FILE: /apps/my_app/models.py
         from django.db import models
-        from django.db.models import Q
 
         class Event(models.Model):
             ...
@@ -17,8 +16,8 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS > DATE: PROTECTING DATE LOGIC
             class Meta:
                 constraints = [
                     models.CheckConstraint(
-                        check=Q(start_date__lte=models.F("end_date")),
-                        name="start_before_end"
+                        condition=models.Q(start_date__lte=models.F("end_date")),
+                        name="start_before_end",
                     )
                 ]
 

@@ -10,7 +10,7 @@ def validate_chars_no_spaces(value, can_space: bool = False) -> None:
     if not value:
         return None
     # Defining:
-    chars = r"^[A-Za-z0-9 ]+$" if can_space else r"^[A-Za-z0-9]+$"
+    chars = r"^[A-Za-z0-9À-ÿ ]+$" if can_space else r"^[A-Za-z0-9À-ÿ]+$"
     msg = "Use only characters from A to Z"
     msg_add1 = "using one or more forbidden characters"
     msg_add2 = f"{msg}, space and numbers" if can_space else f"{msg}, numbers, and NO spaces"

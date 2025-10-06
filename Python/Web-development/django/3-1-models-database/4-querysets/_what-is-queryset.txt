@@ -21,7 +21,7 @@ DJANGO: WHAT ARE QUERYSETS
                         print(user.username)
 
                 >> For partial data:
-                    /Python/Web-development/django/3-1-models-database/4-querysets/qs-partial-data.txt
+                    ./qs-partial-data.txt
 
         >> Chainable:
             You can chain multiple methods together.
@@ -59,7 +59,7 @@ DJANGO: WHAT ARE QUERYSETS
                 users_named_john = User.objects.filter(username__startswith='john')
 
             >> More filtering examples:
-                /Python/Web-development/django/3-1-models-database/4-querysets/qs-filtering.py
+                ./qs-filtering.py
 
         >> Excluding:
 
@@ -99,19 +99,19 @@ DJANGO: WHAT ARE QUERYSETS
 
 
             >> More aggretation examples:
-                /Python/Web-development/django/3-1-models-database/4-querysets/qs-aggregation.py
+                ./qs-aggregation.py
 
 
     
     Usign QuerySets with Foreigner Keys: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        /Python/Web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.txt
+        ./qs-with-foreigner-keys.txt
 
 
 
     Usign QuerySets with Many-to-Many: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        /Python/Web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.txt
+        ./qs-with-many-to-many.txt
 
 
 

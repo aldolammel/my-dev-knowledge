@@ -1,15 +1,15 @@
-"""
 
+
+"""
 FUNCTIONS: *ARGS ARGUMENTS
 (Funções: Argumentos não-nomeados):
 
-Unpacking in Python refers to an operation that consists of assigning an iterable of values to a tuple (or list) of
-variables in a single assignment statement. As a complement, the term packing can be used when we collect several
-values in a single variable using the iterable unpacking operator, *.
+Unpacking in Python refers to an operation that consists of assigning an iterable of values to a tuple (or list) of variables in a single assignment statement. As a complement, the term packing can be used when we collect several values in a single variable using the iterable unpacking operator, *.
 
 By convention, it is called "*args".
 
-The type of args always is a tuple.
+- args = returns always a TUPLE.
+- Kwargs = returns always a DICTIONARY (more about: ./kwargs.py)
 
 MORE IN THIS SECTION OF DRA. ANGELA LEE'S COURSE:
 https://www.udemy.com/course/100-days-of-code/learn/lecture/20804136#overview
@@ -20,9 +20,9 @@ from time import sleep
 from random import randint
 
 # MY COLORS
-_corT = '\033[1;32m'
-_corF = '\033[1;31m'
-_corOut = '\033[m'
+c_succ = '\033[1;32m'
+c_fail = '\033[1;31m'
+c_end = '\033[m'
 
 # Pre-lessons:
 
@@ -38,11 +38,11 @@ fnc_counter(10, 12, 20, 22, 1, 1, 1, 10, 1)
 print('\n - - - \n')
 
 
-def fnc_double(_array):                   # function that duplicate each value into an array/list.
-    _pos = 0
-    while _pos < len(_array):
-        _array[_pos] *= 2
-        _pos += 1
+def fnc_double(array):                   # function that duplicate each value into an array/list.
+    pos = 0
+    while pos < len(array):
+        array[pos] *= 2
+        pos += 1
 
 
 _arrayValues = [6, 3, 9, 1, 0, 2]
@@ -71,7 +71,7 @@ print('\n\nLesson 096 >> Build a program able to tell a rectangle area when you 
 
 def fnc_area(_width, _length):
     _area = _width * _length
-    print(f'The rectangle area (width {_width:.2f} X {_length:.2f} length) = {_corT}{_area:.2f}m²{_corOut}.')
+    print(f'The rectangle area (width {_width:.2f} X {_length:.2f} length) = {c_succ}{_area:.2f}m²{c_end}.')
 
 
 print('- - - - - Terrain control - - - - -')
@@ -87,15 +87,15 @@ print('\n\nLesson 097 >> Build a program where you type a phrase and the functio
       'of your phrase. The lines must fit with the phrase length:\n')
 
 
-def fnc_headerTitle(_txt):
-    _size = len(_txt)
-    print('-' * _size)
-    print(_txt)
-    print('-' * _size)
+def fnc_headerTitle(txt):
+    size = len(txt)
+    print('-' * size)
+    print(txt)
+    print('-' * size)
 
 
-_userPhrase = str(input('Type any phrase: ')).strip()
-fnc_headerTitle(_userPhrase)
+user_sentence = str(input('Type any phrase: ')).strip()
+fnc_headerTitle(user_sentence)
 
 # ----------------------------------------
 # LESSON 098:
@@ -107,7 +107,7 @@ def fnc_counter(_start, _end, _step):
     for i in range(_start, _end + 1, _step):
         print(i, end=' ')
         sleep(0.25)
-    print(f'\n{_corT}The counting has been finished!{_corOut}')
+    print(f'\n{c_succ}The counting has been finished!{c_end}')
 
 
 _userStarts = int(input('Start integer (e.g. 1): '))
@@ -136,11 +136,11 @@ def fnc_biggest(* _numbers):                  # '* variable' = unpacking paramet
         elif _i > _biggest:
             _biggest = _i
         sleep(0.25)
-        print(f'{_corT}{_i}{_corOut}', end=' ')
+        print(f'{c_succ}{_i}{c_end}', end=' ')
 
     print(
         f'| Done!'
-        f'\nThe biggest number of those is {_corT}{_biggest}{_corOut}.'
+        f'\nThe biggest number of those is {c_succ}{_biggest}{c_end}.'
         f'\n{"- " * 30}\n'
     )
 
@@ -156,23 +156,23 @@ fnc_biggest()
 print('\n\nLesson 100 >> Build a program xxxxxxxxxxxxxx:\n')
 
 
-def fnc_drawNumbers(_array):
+def fnc_drawNumbers(array):
     for _i in range(5):
         _numb = randint(0, 100)
-        _array.append(_numb)
-    print(f'{_corT}{_array}{_corOut}')
+        array.append(_numb)
+    print(f'{c_succ}{array}{c_end}')
 
 
-def fnc_sumOnlyEven(_array):
+def fnc_sumOnlyEven(array):
     _evenNumbers = list()
-    for _i in _array:
+    for _i in array:
         if _i % 2 == 0:
             _evenNumbers.append(_i)
     _sumOnlyEven = sum(_evenNumbers)
-    print(f'Only even numbers from _numbers array: {_corT}{_evenNumbers}{_corOut}')
-    print(f'Sum of even numbers: {_corT}{_sumOnlyEven}{_corOut}')
+    print(f'Only even numbers from _numbers array: {c_succ}{_evenNumbers}{c_end}')
+    print(f'Sum of even numbers: {c_succ}{_sumOnlyEven}{c_end}')
 
 
-_myNumbers = list()
-fnc_drawNumbers(_myNumbers)
-fnc_sumOnlyEven(_myNumbers)
+my_numbers = list()
+fnc_drawNumbers(my_numbers)
+fnc_sumOnlyEven(my_numbers)

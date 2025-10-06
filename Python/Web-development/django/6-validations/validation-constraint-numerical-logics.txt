@@ -7,7 +7,6 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
     
         # FILE: /apps/my_app/models.py
         from django.db import models
-        from django.db.models import Q
 
         class Product(models.Model):
             ...
@@ -16,7 +15,7 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
             class Meta:
                 constraints = [
                     models.CheckConstraint(
-                        check=Q(stock__gte=0),             # gt = 'greater than' / e = 'or equal to'
+                        condition=models.Q(stock__gte=0),                            # greater equal
                         name="stock_non_negative"
                     )
                 ]
@@ -40,7 +39,7 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
                 ...
                 constraints = [
                     models.CheckConstraint(
-                        check=Q(salary__gte=30000) & Q(salary__lte=200000),       # lt = 'less than'
+                        condition=models.Q(salary__gte=3000) & Q(salary__lte=9000),     # less equal
                         name="salary_range"
                     )
                 ]
@@ -50,5 +49,5 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
 
             ALTER TABLE "employee"
             ADD CONSTRAINT "salary_range"
-            CHECK ("salary" >= 30000 AND "salary" <= 200000);
+            CHECK ("salary" >= 3000 AND "salary" <= 9000);
 
