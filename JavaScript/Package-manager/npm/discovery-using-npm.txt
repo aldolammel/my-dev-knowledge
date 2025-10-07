@@ -1,0 +1,9 @@
+
+
+NPM PACKAGE MANAGER: DOING A DISCOVERY USING NPM
+
+    >> JavaScript discovery:
+        /JavaScript/00-New-Project/discovery-js.txt
+
+    >> Vue discovery:
+        /JavaScript/Web-development/frontend/Vue/0-new-project/discovery-vue.txt

@@ -59,14 +59,7 @@ UV: CREATING THE REQUIREMENTS OF A PROJECT
         A.3) Make sure the the pyproject.toml file in on the project's root, so then install the
             project requirements, creating also the virtual environment for them:
 
-                # Option 1/3, Only the mandatories:
-                    $ uv sync
-                    
-                # Option 2/3, Or all mandatories, and including optionals:
-                    $ uv sync --extra all
-
-                # Option 3/3, Or all mandatories, but including just specific  optional sub-groups:
-                    $ uv sync --extra dev --extra test
+                /Python/Package-manager/uv/auto-installation-with-sync.txt
 
 
     

@@ -59,7 +59,7 @@ RE-INSTALL ONLY THE DJANGO:
                 >> Using a file as guide:
                 
                     >> Smart method: pyproject.toml
-                        /Python/Package-manager/uv/auto-installation-from-pyproject-file.txt
+                        /Python/Package-manager/uv/auto-installation-with-sync.txt
                     
                     >> Old method: requirements.txt
                         /Python/Package-manager/pip/auto-installation-from-requirements-file.txt

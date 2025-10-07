@@ -1,0 +1,9 @@
+
+
+PYTHON > UV PACKAGE MANAGER: UNINSTALL A SPECIFIC PYTHON VERSION
+
+    # Remove Python 3.13.3 if you're not using it anymore
+        $ uv python uninstall 3.13.3
+
+    # Verify only 3.13.7 remains
+        $ uv python list

@@ -1,29 +1,65 @@
 
 
-PYTHON: KEY POINTS FOR UPDATE THE PYTHON VERSION IN AN EXISTENT PRODUCT
+PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
 
-    >> Check the virtual environment variables!
-        Probably exist some with the old python version explicited. 
+    >> Which tool are you using:
 
-    >> Check the pyproject.toml file!
-        There are settings there specifying the Python version at least for dev dependencies!
+        A) Vanilla Python;
+        B) UV package manager;
 
-    >> xxxxxxxxxxxxxxxxxxxx
+        - - - - -
 
-    >> xxxxxxxxxxxxxxxxxxxxxxxxxx
+        A) Vanilla Python - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    >> How to update:
+            A.PRE) xxxxxxx
+            
+            A.1) xxxxxxxxxxxx
 
-        x) xxxxxxxxxxxxxxxxx
+            A.2) xxxxxxxxxxxx
 
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
 
+        B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            B.PRE) What is it:
+                /Python/Package-manager/uv/_about.txt
+
+            B.1) Check the current Python versions installed and install that you need:
+                
+                # In your global local environment, check it:
+                    $ uv python list
+
+                # Add the new one, e.g.:
+                    $ uv python install 3.13.3
+
+
+            B.2) In your project folder/environment, set up:
+
+                # Defining to UV which Python version the project must run, e.g.:
+                    $ uv python pin 3.13.3
+                    # It will auto-update the .python-version file!
+
+                # Sync the environment (UV will recreate venv with new Python):
+                    /Python/Package-manager/uv/auto-installation-with-sync.txt
+
+                # Deactive and active the project environment:
+                    /Python/02-virtual-environment/activate-and-deactivate.txt
+                
+                # Verify the Python version in the environment
+                    $ uv run python --version
+
+
+            B.3) (Optional)
+                Uninstall unwanted Python versions:
+                    /Python/Package-manager/uv/uninstall-python-old-version.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> CONSIDERING BACK AND FRONT-END FRAMEWORK UPDATES TOO:
+
+        >> Django:
+            /Python/Web-development/django/0-new-project/update-django-version.txt
+
+        >> Vue:
+            /JavaScript/Web-development/frontend/Vue/0-new-project/update-vue-version.txt

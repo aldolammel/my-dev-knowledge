@@ -1,26 +1,16 @@
 
 
-PYTHON PACKAGE MANAGEMENT: UV PACKAGE
+PYTHON PACKAGE MANAGEMENT: UV
 
 
-    >> Extremely fast Python package installer and resolver designed as a drop-in replacement for
-        pip and pip-tools workflows.
+    Extremely fast Python package installer and resolver designed as a drop-in replacement for pip and pip-tools workflows.
 
         https://docs.astral.sh/uv/getting-started/installation/
 
+    When you ask to UV to initiate a project, a "uv.lock" file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a Docker);
 
-    >> When you ask to UV to initiate a project, a "uv.lock" file is created automatically,
-        guaranteeing that all copies of this project will have the same dependencies (like a Docker);
-
-
-    >> If you lose your virtual environment folder, you can recreate the venv using sync command to
-        re-install the project dependencies fast and easily:
-            $ uv sync
-
-
-    >> Tip: UV is developed by the same company of the Ruff Linter/Formatter, so both are completely
-            integrated.
-                /Python/Linter-Formatter-Typechecker/ruff.txt
+    Tip: UV is developed by the same company of the Ruff Linter/Formatter, so both are completely integrated.
+        /Python/Linter-Formatter-Typechecker/ruff.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -45,27 +35,19 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
 
         >> Create / Recreate the virtual environment in the current folder:
             $ uv init
-            # P.s.: this will create automatically some files like pyproject.toml!
+            # Ps: It'll create automatically some files like pyproject.toml!
+
+
+        >> Updating or restoring Python, and project dependencies:
+            ./auto-installation-with-sync.txt
 
 
         >> Install package (only in the active virtual environment):
-        
-            # Mandatory one:
-                $ uv add <package_name>
-            
-            # Optional one:
-                $ uv add --optional <sub-group> <package_name>
-                # E.g. $ uv add --optional dev ruff
+            ./install-dependency.txt
         
 
         >> Uninstall package (only in the active virtual environment):
-
-            # Remove the package from everywhere, regardless it's mandatory or optional:
-                $ uv remove <package_name>
-
-            # Remove the package from a specific group of optionals:
-                $ uv remove --optional <sub-group> <package_name>
-                # E.g. $ uv remove --optional dev ruff
+            ./uninstall-dependency.txt
 
 
 
@@ -73,12 +55,10 @@ PYTHON PACKAGE MANAGEMENT: UV PACKAGE
 
 
 >> DJANGO PROJECT WITH UV MANAGEMENT:
-    
     /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
 
 
 >> HOW TO CREATE A REQUIREMENTS OF PROJECT WITH UV:
-    
     /Python/Package-manager/uv/creating-requirements-of-project.txt
 
 

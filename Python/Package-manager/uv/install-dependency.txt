@@ -1,0 +1,13 @@
+
+
+PYTHON > UV PACKAGE MANAGER: INSTALLING DEPENDENCIES
+
+    PRE) What is it:
+        ./_about.txt
+
+    # Mandatory one:
+        $ uv add <package_name>
+    
+    # Optional one:
+        $ uv add --optional <sub-group> <package_name>
+        # E.g. $ uv add --optional dev ruff

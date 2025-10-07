@@ -1,0 +1,58 @@
+
+
+PYTHON: DISCOVERY
+
+    Group of action to figure out a Python project settings and features:
+
+        x) Current Python version installed:
+
+            >> xxxx
+            
+            >> Using UV
+                
+                # All python version installed:
+                    $ uv python list
+                
+                # Checking which Python version the project must use:
+                    $ uv pin
+                    # take a note!
+
+        x) Check if project main requirement file has the same python version declared:
+
+            >> Using vanilla python / pip
+                - .python-version
+                - requirements.txt!
+                # Take a note!
+
+            >> Using UV:
+                - .python-version
+                - pyproject.toml
+                - uv.lock
+                # Take a note!
+
+
+        x) Check the project dependencies:
+
+            # The installed ones:
+                
+                # Using xxxxxxxxxxxxxx
+                    $ xxxxxxxxxxxxxxxx
+                    # Take a note!
+
+                # Using UV:
+                    $ uv pip list
+                    # Take a note!
+
+            # Those define by requirement files!
+                # Take a note!
+
+        x) xxxxxx
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+DISCOVERY OF PYTHON FRAMEWORKS:
+
+    >> Django:
+        /Python/Web-development/django/0-new-project/discovery-django.txt

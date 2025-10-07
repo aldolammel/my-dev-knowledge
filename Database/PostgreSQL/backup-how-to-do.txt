@@ -1,0 +1,72 @@
+
+
+DATABASE > POSTGRESQL: HOW TO MAKE BACKUPS
+    
+    PRE) Make sure the db service is running!
+        ./postgres-starting-and-stoping.txt 
+
+    >> What you wanna do:
+
+        A) Backup of a specific db;
+            A1) In a local machine;
+            A2) In a VPS (via your local terminal);
+            A3) In a VPS using its terminal (online);
+        B) Backup of all databases on the server;
+            B1) In a local machine;
+            B2) In a VPS (via your local terminal);
+            B3) In a VPS using its terminal (online);
+
+    - - - - - 
+
+    A) Backup of a specific db - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        A1) In local machine:
+
+            PRE) Keep the db name in mind. You can find it easily in .env file, for example.
+
+            A1.1) On the terminal, go until the folder where the backup must be:
+
+                UBUNTU:
+                    # sudo -u <postgres_user> pg_dump <current_db> > bkp_<name_date>.sql
+                        $ sudo -u postgres pg_dump ibcpa_website_2025 > bkp_ibcpa_2025107.sql
+
+            A1.2) The backup is in the same path where the command above executaded!
+
+
+        A2) In a VPS (via your local terminal):
+
+            PRE) Keep the db name in mind. 
+
+            A2.1) xxxxxxxxxxxxxxxxxxxxx
+
+
+        A3) In a VPS using its terminal (online):
+
+            PRE) Keep the db name in mind. 
+
+            A3.1) xxxxxxxxxxxxxxxxxxxxx
+
+
+    
+    B) Backup of all db in the server (and roles) - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        B1) In local machine:
+        
+            B1.1) On the terminal, go until the folder where the backup must be:
+
+                UBUNTU:
+                    # sudo -u <postgres_user> pg_dumpall > bkp_full_<date>.sql
+                        $ sudo -u postgres pg_dumpall > bkp_full_postgres_20251007.sql
+
+
+        B2) In a VPS (via your local terminal):
+
+            B2.1) On the terminal:
+                # Maybe demands sudo????
+                # pg_dumpall -h <hostname> -p <port> -U <username> -W > full_bkp_<date>.sql
+                    $ 
+
+
+        B3) In a VPS using its terminal (online):
+
+            B3.1) xxxxxxxxxxxxxxxxxxxxx

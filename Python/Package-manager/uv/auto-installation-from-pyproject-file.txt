@@ -1,3 +1,0 @@
->> If you lose your virtual environment folder, you can recreate the venv using sync command to
-        re-install the project dependencies fast and easily:
-            $ uv sync

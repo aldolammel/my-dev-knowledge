@@ -1,0 +1,45 @@
+
+
+PYTHON > UV PACKAGE MANAGER: USING SYNC
+
+
+    >> Context: I'm updating Python in a project - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        # In your project folder/environment, it deletes the current venv folder and recreate it:
+            
+            PRE.1) Assuming you already execute 'uv pin' to set the new Python version (that also updates the project .python-version file!
+            
+            PRE.2) Assuming the Python version's manually updated in the pyproject.toml file!
+                /Python/Web-development/pyproject.toml
+                
+            1) Syncing:
+
+                # Option 1: Only the mandatory dependencies:
+                    $ uv sync
+                
+                # Option 2: Mandatory ones and all dependencies from development sub-group:
+                    $ uv sync --extra dev
+
+                # Option 3: Mandatory ones, including multiples sub-groups of dependencies:
+                    $ uv sync --extra dev --extra test
+
+
+
+    >> Context: I lost the virtual environment folder in a project - - - - - - - - - - - - - - - - -
+        
+        # In your project folder/environment, recreate the venv folder, using one of those options in 'Syncing' step above!
+
+
+
+    >> Context: Something wrong with my project dependencies - - - - - - - - - - - - - - - - - - - -
+        
+        # In your project folder/environment, reinstall dependencies, using one of those options in 'Syncing' step above!
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    HOW UV SYNC KNOWS WHAT TO INSTALL?
+
+        The command looks for project files that listing the configurations and dependencies (like pyproject.toml, requirements.txt). Once UV read, for example, the pyproject.toml file, it automatically updates uv.lock file! UV makes it comparing the desired state (your project files) with the current state (what's already installed) and calculates the difference. 
+        The most import file for UV SYNC is 'uv.lock' (in project folder root) that is dynamically managed.

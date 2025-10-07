@@ -1,0 +1,13 @@
+
+
+PYTHON > UV PACKAGE MANAGER: UNINSTALLING DEPENDENCIES
+
+    PRE) What is it:
+        ./_about.txt
+
+    # Remove the package from everywhere, regardless it's mandatory or optional:
+        $ uv remove <package_name>
+
+    # Remove the package from a specific group of optionals:
+        $ uv remove --optional <sub-group> <package_name>
+        # E.g. $ uv remove --optional dev ruff

@@ -1,28 +1,103 @@
 
 
-DJANGO: KEY POINTS FOR UPDATE THE DJANGO VERSION IN AN EXISTENT PRODUCT
+DJANGO: UPDATING THE DJANGO VERSION IN AN EXISTENT PROJECT
 
-    >> xxxxx
+    >> Considering a Python update too:
+        /Python/00-New-Project/3-update-python-version-in-a-project.txt
 
-    >> Check the pyproject.toml file!
-        There are settings there specifying the Python version at least for dev dependencies!
+    >> Which tool are you using:
 
-    >> xxxxxxxxxxxxxxxxxxxx
+        A) Vanilla Python;
+        B) UV package manager;
 
-    >> xxxxxxxxxxxxxxxxxxxxxxxxxx
+        - - - - -
 
-    >> How to update:
+        A) Vanilla Python - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        x) xxxxxxxxxxxxxxxxx
+            PRE-A.1) In case you've just updated Python in the project:
 
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
+                I. xxxxxxxxxxx
+                II. xxxxxxxxxxxxxx
+                III. xxxxxxxxxxxxxxxxxxx
+                IV. Update Python version in the project config files:
+                    
+                    >> If using requirements.txt:
+                            xxxxxxxxxxxxxxxxx
+                    
+                    >> If using pyproject.toml:
 
+                        # In pyproject.toml file, do it like this example:
+                            requires-python = ">=3.13.3"
+                            # Or if you want to allow 3.13.3 and above but below 3.14:
+                            # requires-python = ">=3.13.3, <3.14"
+
+            A.1) xxxxxxxxxxxxxxxxxxxx
+
+            A.x) xxxxxxxxxxxxxxxxxxxx
+
+            A.x) xxxxxxxxxxxxxxxxxxxx
+
+
+        B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            PRE-B.1) What is it:
+                /Python/Package-manager/uv/_about.txt
+
+            PRE-B.2) In case you've just updated Python in the project:
+                
+                I. Test Django:
+                    $ uv run manage.py check
+
+                II. Run migrations check:
+                    $ uv run manage.py makemigrations --check --dry-run
+
+                III. Test the dev server:
+                    $ uv run manage.py runserver
+
+                IV. Update Python version in the project config files:
+                
+                    >> If using requirements.txt:
+                        xxxxxxxxxxxxxxxxx
+                    
+                    >> If using pyproject.toml:
+
+                        # In pyproject.toml file, do it like this example:
+                            requires-python = ">=3.13.3"
+                            # Or if you want to allow 3.13.3 and above but below 3.14:
+                            # requires-python = ">=3.13.3, <3.14"
+
+                        # Now, let's update the uv.lock and .python-version dynamically, running again the UV sync:
+                            /Python/Package-manager/uv/auto-installation-with-sync.txt
+
+                        # Check those files to confirm changes!
+
+
+            B.1) Make a project's db backup!
+                /Database/PostgreSQL/backup-how-to-do.txt
+                /Database/MySQL/backup-how-to-do.txt
+                /Database/MariaDB/backup-how-to-do.txt
+                /Database/SQLite/backup-how-to-do.txt
+
+            B.2) Update the Django, going to the project folder and, e.g.:
+                $ uv add "django>=5.2.7,<5.3"
+                    # Check the pyproject.toml file if the new version was correctly declared!
+
+            B.3) Update all dependencies to ensure compatibility with new Django version:
+                /Python/Package-manager/uv/upgrade-dependencies.txt
+                
+            B.4) Test Django:
+
+                # Core Django check:
+                    $ uv run manage.py check
+                # Make sure migrations won't conflict:
+                    $ uv run manage.py makemigrations --check --dry-run
+                # (If needed) Execute the migration:
+                    $ uv run manage.py migrate
+                # Run Django:
+                    $ uv run manage.py runserver
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> XXXXXXXXXXXX
