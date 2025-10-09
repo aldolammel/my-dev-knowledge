@@ -3,7 +3,13 @@
 DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR MODELS AND FORMS
 
 
-        clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When a form is submitted or model is saved, clean() takes each data field first to execute a customized validation!
+        clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When exactly the clean() method is executaded is different between models and forms cases:
+
+            MODELS CLEAN() METHOD:
+                It's used to provide custom model-level validation logic, and is called by full_clean() before saving the object.
+
+            FORMS CLEAN() METHOD:
+                On a form, it provides custom validation logic that runs after field-level validation but before cleaned data is returned.
 
 
         BASIC KNOWLEDGE:
@@ -12,7 +18,8 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
 
 
         IMPORTANT:
-            All clean() in models will automatically impact on CMS validations, not needed to add something into 'admin.py' files.
+            All clean() validations written through 'models.py' will automatically propagate on CMS, not mandatorially demanding to add clean() in forms.py (once it's NOT ALLOWED to set clean() method directly in admin.py files). This logic you can read more:
+                ./validation-3-for-CMS-forms.txt
 
 
         DIFFERENCES BETWEEN CLEAN() FOR MODELS.PY AND FORMS.PY:
@@ -24,8 +31,7 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                         ...
 
                         def clean(self):
-                            """Built-in method for adding custom validation logic before full_clean() or save()."""
-
+                            """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
                             # Access model fields data directly:
                             p = self.goal_primary
                             s = self.goal_secondary
@@ -43,8 +49,7 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                             fields = "__all__"
 
                         def clean(self):
-                            """Built-in method for adding custom validation logic before full_clean() or save()."""
-
+                            """Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return."""
                             # Always starts like this:
                             cleaned_data = super().clean()
 

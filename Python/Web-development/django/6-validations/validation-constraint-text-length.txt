@@ -2,6 +2,12 @@
 
 DJANGO FORM VALIDATIONS > DB CONSTRAINTS: TEXT WITH LENGTH CHECK
 
+    INFO:
+        In case Django prints out a "Unsupported lookup" for "length" or "length_range" error message during the migrate command, just register that lookup on models.py:
+
+            from django.db.models.functions import Length
+            models.CharField.register_lookup(Length)
+
 
     >> Ensure a txt field has minimum X characters amount - - - - - - - - - - - - - - - - - - - - - 
 

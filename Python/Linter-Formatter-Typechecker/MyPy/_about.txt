@@ -11,4 +11,7 @@ PYTHON LANGUAGE > TYPE CHECKER: MYPY
 
 
     >> Installation and Integration:
-        /Python/Linter-Formatter-Typechecker/MyPy/installation.txt
+        ./installation.txt
+
+    >> How to ignore false-positive errors:
+        ./ignoring-false-positive-errors.txt

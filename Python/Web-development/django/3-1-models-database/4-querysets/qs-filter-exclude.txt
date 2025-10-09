@@ -48,7 +48,7 @@
                         )
 
                         def __init__(self, *args, **kwargs):
-                            '''Built-in method that's called when the form is instantiated.'''
+                            '''Built-in method called 'Constructor', designed to initialize the instance.'''
                             super().__init__(*args, **kwargs)
                             
                             # Connected fields (from connected model), customizations:

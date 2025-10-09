@@ -21,7 +21,7 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
         B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
             B.PRE) What is it:
-                /Python/Package-manager/uv/_about.txt
+                /Python/Package-manager/uv/_about-install-and-update.txt
 
             B.1) Check the current Python versions installed and install that you need:
                 

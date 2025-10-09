@@ -50,7 +50,8 @@ print()
 
 
 class UserClassExample2:
-    def __init__(self, uid, username, email):  # "__init__" means "initializing the class attributes".
+    def __init__(self, uid, username, email):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.uid = uid
         self.username = username
         self.email = email
@@ -70,6 +71,7 @@ print()
 
 class UserClassExample3:
     def __init__(self, uid, user, email):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.uid = uid
         self.user = user
         self.email = email

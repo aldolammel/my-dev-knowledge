@@ -15,6 +15,7 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
             E.g.
                 class Person:
                     def __init__(self, name, age):
+                        """Built-in method called 'Constructor', designed to initialize the instance."""
                         self.name = name  # Assign the 'name' attribute
                         self.age = age    # Assign the 'age' attribute
 
@@ -41,6 +42,7 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
             E.g.
                 class Person:
                     def __init__(self, name, age):
+                        """Built-in method called 'Constructor', designed to initialize the instance."""
                         self.name = name
                         self.age = age
 
@@ -65,6 +67,7 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
             E.g.
                 class Adder:
                     def __init__(self, initial_value=0):
+                        """Built-in method called 'Constructor', designed to initialize the instance."""
                         self.value = initial_value
 
                     def __call__(self, x):

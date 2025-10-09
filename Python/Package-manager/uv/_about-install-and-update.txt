@@ -18,16 +18,25 @@ PYTHON PACKAGE MANAGEMENT: UV
     
     >> INSTALLING:
 
-        >> Linux and MacOS:
+        LINUX/MAC:
             # Using CURL:
                 $ curl -LsSf https://astral.sh/uv/install.sh | sh
             # or using WGET:
                 $ wget -qO- https://astral.sh/uv/install.sh | sh
         
-        >> Windows:
+        WINDOWS
             $ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
             $ winget install --id=astral-sh.uv  -e
 
+
+    >> UPDATING UV:
+        
+        LINUX
+            # Download and install a specific version (X.X.X):
+                $ curl -LsSf https://astral.sh/uv/X.X.X/install.sh | sh
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     >> USING THE UV: 

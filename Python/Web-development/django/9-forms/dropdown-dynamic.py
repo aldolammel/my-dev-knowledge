@@ -2,6 +2,8 @@
 
     FORMS: DYNAMIC DROPDOWN
 
+    # FILE: /apps/my_app/forms.py
+
     
 """
 
@@ -42,6 +44,7 @@ class MovieForm(forms.ModelForm):
 
     # Customizing the form initialization built-in method: 
     def __init__(self, *args, **kwargs):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         movie = kwargs.pop('movie', None)  # Get the current movie (from view)!
         super().__init__(*args, **kwargs)
         

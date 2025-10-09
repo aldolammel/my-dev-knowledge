@@ -41,7 +41,7 @@ DJANGO: UPDATING THE DJANGO VERSION IN AN EXISTENT PROJECT
         B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
             PRE-B.1) What is it:
-                /Python/Package-manager/uv/_about.txt
+                /Python/Package-manager/uv/_about-install-and-update.txt
 
             PRE-B.2) In case you've just updated Python in the project:
                 
@@ -73,10 +73,10 @@ DJANGO: UPDATING THE DJANGO VERSION IN AN EXISTENT PROJECT
 
 
             B.1) Make a project's db backup!
-                /Database/PostgreSQL/backup-how-to-do.txt
-                /Database/MySQL/backup-how-to-do.txt
-                /Database/MariaDB/backup-how-to-do.txt
-                /Database/SQLite/backup-how-to-do.txt
+                /Database/PostgreSQL/postgres-backup.txt
+                /Database/MySQL/mysql-backup.txt
+                /Database/MariaDB/mariadb-backup.txt
+                /Database/SQLite/sqlite-backup.txt
 
             B.2) Update the Django, going to the project folder and, e.g.:
                 $ uv add "django>=5.2.7,<5.3"

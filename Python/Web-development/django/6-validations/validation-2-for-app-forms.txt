@@ -72,6 +72,7 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
                 stock = ...
 
                 def clean(self):
+                    """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
                     # Cross-field validation:
                     if self.stock == 0 and self.price > 0:
                         raise Validation(

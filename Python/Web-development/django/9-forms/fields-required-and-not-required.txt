@@ -12,6 +12,7 @@ HOW TO DEFINE WHICH FORM FIELDS ARE REQUIRED AND WHICH OF THEM ARE NOT:
             ...
 
         def __init__(self, *args, **kwargs):
+            """Built-in method called 'Constructor', designed to initialize the instance."""
             super().__init__(*args, **kwargs)
             
             # These fields MUST be required:

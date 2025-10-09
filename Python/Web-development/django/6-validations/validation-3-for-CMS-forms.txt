@@ -73,6 +73,7 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
                 stock = ...
 
                 def clean(self):
+                    """Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return."""
                     # Cross-field validation:
                     if self.stock == 0 and self.price > 0:
                         raise Validation(

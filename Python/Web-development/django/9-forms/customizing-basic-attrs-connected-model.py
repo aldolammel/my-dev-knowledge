@@ -99,7 +99,7 @@ class MyModelForm(forms.ModelForm):
     class Meta: ...
 
     def __init__(self, *args, **kwargs):
-        '''Built-in method that's called when the form is initializated.'''
+        '''Built-in method called 'Constructor', designed to initialize the instance.'''
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:
@@ -128,7 +128,7 @@ class MyModelForm(forms.ModelForm):
     class Meta: ...
 
     def __init__(self, *args, **kwargs):
-        '''Built-in method that's called when the form is initializated.'''
+        '''Built-in method called 'Constructor', designed to initialize the instance.'''
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:
@@ -151,7 +151,7 @@ class MyModelForm(forms.ModelForm):
     class Meta: ...
 
     def __init__(self, *args, **kwargs):
-        '''Built-in method that's called when the form is initializated.'''
+        '''Built-in method called 'Constructor', designed to initialize the instance.'''
         super().__init__(*args, **kwargs)
 
         # More complex or dynamic tweaks for connected model's fields:

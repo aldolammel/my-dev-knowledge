@@ -54,6 +54,7 @@ def debug_user_authenticated(user, user_lang) -> None:
 
 class UserLanguageMiddleware:
     def __init__(self, get_response):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.get_response = get_response
 
     def __call__(self, request):

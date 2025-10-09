@@ -1,8 +1,11 @@
 
-
+    DJANGO ABOUT DEPLOYMENT:
+        # Check the documentation version after get into:
+        https://docs.djangoproject.com/en/5.2/howto/deployment/
+    
+    
     UDEMY:
-
-    https://www.udemy.com/course/python-django-the-practical-guide/learn/lecture/26399466
+        https://www.udemy.com/course/python-django-the-practical-guide/learn/lecture/26399466
 
 
 

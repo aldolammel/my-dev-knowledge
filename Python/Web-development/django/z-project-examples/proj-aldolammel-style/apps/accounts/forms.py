@@ -199,7 +199,7 @@ class UserProfileOneForm(forms.ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
-        """Built-in method that's called when the form is initializated."""
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         user = kwargs.pop("user", None)  # Get the current user (from view)!
         super().__init__(*args, **kwargs)
         if user:

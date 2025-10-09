@@ -1,7 +1,8 @@
 
 
-DATABASE > POSTGRESQL: HOW TO MAKE BACKUPS
-    
+POSTGRESQL: HOW TO BACKUP A DATABASE
+
+
     PRE) Make sure the db service is running!
         ./postgres-starting-and-stoping.txt 
 

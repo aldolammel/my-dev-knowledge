@@ -7,6 +7,7 @@ IMG_EXT = "png"
 
 class Car:
     def __init__(self, x=400, y=400, color="red", skin=""):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.pos = x, y
         self.color = color
         self.skin = skin
@@ -36,6 +37,7 @@ class Car:
 
 class Truck(Car):
     def __init__(self, x, y, skin=""):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         super().__init__()
         self.pos = x, y
         self.color = ""

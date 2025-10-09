@@ -44,7 +44,7 @@ class ExampleModel(models.Model):
     )
 
     def clean(self):
-        """Built-in method for adding custom validation logic before full_clean() or save()."""
+        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
         super().clean()
         # M2M fields demands an ID so it's impossible to validate if no instance id involved:
         if self.pk:

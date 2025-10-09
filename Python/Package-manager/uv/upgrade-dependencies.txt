@@ -31,15 +31,15 @@ PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
         1) Update dependencies:
 
             # It removes all dependencies,
-            # and then install upgraded versions of mandatory dependencies and dev ones as well:
+            # and then install latest version of mandatory dependencies and dev ones as well:
                 $ uv sync --extra dev --upgrade
 
             # It removes all dependencies,
-            # and then install upgraded versions of mandatory dependencies w/ multiple sub-grous:
+            # and then install latest version of mandatory dependencies w/ multiple sub-grous:
                 $ uv sync --extra dev --extra test --upgrade
             
             # It removes all dependencies, 
-            # and then install upgraded versions of mandatory dependencies only (CAUTION):
+            # and then install latest version of mandatory dependencies only (WARNING):
                 $ uv sync --upgrade
 
 

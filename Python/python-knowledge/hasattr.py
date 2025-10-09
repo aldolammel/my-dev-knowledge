@@ -5,6 +5,7 @@
 
 class MyClass:
     def __init__(self):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.existing_attr = 922
 
 obj = MyClass()

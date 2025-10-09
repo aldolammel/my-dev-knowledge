@@ -79,7 +79,7 @@ class MyModelForm(forms.ModelForm):
 
         
     def __init__(self, *args, **kwargs):
-        '''Built-in method that's called when the form is initializated.'''
+        '''Built-in method called 'Constructor', designed to initialize the instance.'''
         user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
 

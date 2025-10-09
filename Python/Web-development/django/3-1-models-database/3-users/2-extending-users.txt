@@ -85,7 +85,7 @@ If your project needs to show User Profile on the application front-end, or even
                         return self.username
 
                     def clean(self):
-                        """Built-in method for adding custom validation logic before full_clean() or save()."""
+                        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
                         validate_user_agreement(self)
 
 

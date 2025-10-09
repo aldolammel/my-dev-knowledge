@@ -53,7 +53,7 @@ class MovieForm(forms.ModelForm):
     # Reserved space...
 
     def __init__(self, *args, **kwargs):
-        '''Built-in method that's called when the form is initializated.'''
+        """Built-in method called 'Constructor', designed to initialize the instance."""
 
         # Extracting the 'user' from the instance param/arg that view has sent:
         user = kwargs.pop('user', None)  # If no user, it'll be 'None'.

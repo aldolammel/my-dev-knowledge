@@ -10,6 +10,7 @@ CLASS INHERENT: SUPER()
 class Guitar:
     # "Guitar" is our PARENT class, where its attributes and methods could be called by other classes.
     def __init__(self):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         # Example of an attribute:
         self.n_strings = 6
         self.color = "Black"
@@ -24,6 +25,7 @@ class Guitar:
 class ElectricGuitar(Guitar):
     # "ElectricGuitar" is a CHILD class of "Guitar" one, where its attribute can or not be overridden.
     def __init__(self):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         super().__init__()
         self.n_strings = 8  # This is overridden the original attribute from "Guitar" class exclusively for this class.
 

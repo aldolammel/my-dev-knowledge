@@ -12,6 +12,7 @@ class Car:
 
     # Initial (and mandatory) method of the class, better known as Constructor:
     def __init__(self, brand: str, engine_power: float, tires_brand: str, model: str, year: int):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         # these below inside the __init__ are the common class attributes that the class
         # methods can call without set parameters, using only "self." to call them:
         self.brand = brand

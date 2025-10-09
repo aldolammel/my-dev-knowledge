@@ -26,8 +26,8 @@ class MovieForm(forms.ModelForm):
         # Extra form fields the connected model doesn't have:
         included_by = forms.CharField(...)
         
-        # Built-in method for form initialization:
         def __init__(self, *args, **kwargs):
+            """Built-in method called 'Constructor', designed to initialize the instance."""
             movie = kwargs.pop('movie', None)  # Get it from the View!
             super().__init__(*args, **kwargs)
             

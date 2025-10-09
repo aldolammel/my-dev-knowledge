@@ -14,6 +14,7 @@ class Clients:
     # A class always has a init for their attributes.
     # In init is where we create all the variables that will be used in this class.
     def __init__(self, name, email, plan):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.name = name
         self.email = email
         self.plan_list = ['basic', 'family']

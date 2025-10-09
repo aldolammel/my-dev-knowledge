@@ -45,6 +45,7 @@ For example:
 
 class MyGarage:
     def __init__(self, city):
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.city = city
         self.cars = []
 

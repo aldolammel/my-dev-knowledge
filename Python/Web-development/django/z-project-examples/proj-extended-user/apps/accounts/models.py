@@ -456,7 +456,7 @@ class User(AbstractUser):
             self.save(update_fields=["password", "last_pwd_update"])
 
     def clean(self):
-        """Built-in method for adding custom validation logic before full_clean() or save()."""
+        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
         validate_user_agreement(self)
 
     def save(self, *args, **kwargs):
@@ -617,7 +617,7 @@ class UserProfileOne(models.Model):
         return lng.CMS_ERRO_PROFILE
 
     def clean(self):
-        """Built-in method for adding custom validation logic before full_clean() or save()."""
+        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
         validate_birth(self.birthdate)
         validate_goals(self.goal_primary, self.goal_secondary)
 
@@ -818,7 +818,7 @@ class UserProfileTwo(models.Model):
         return lng.CMS_ERRO_PROFILE
 
     def clean(self):
-        """Built-in method for adding custom validation logic before full_clean() or save()."""
+        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
         validate_goals(self.goal_primary, self.goal_secondary)
 
     def save(self, *args, **kwargs):

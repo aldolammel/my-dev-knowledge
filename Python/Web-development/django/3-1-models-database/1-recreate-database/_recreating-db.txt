@@ -4,7 +4,7 @@
 DJANGO: RE-CREATING THE PROJECT DATABASE
 
     >> A db flush is not enough?
-        /Python/Web-development/django/3-1-models-database/1-recreate-database/clean-database.txt
+        ./clean-database.txt
     
     >> If you need to re-create your database from the beginning, do it:
 
@@ -12,6 +12,18 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
             If your app is multilingual and are using prefix_language mandatory, your new db must be created and, right after, you must include on language table at least one language for you be able to use the CMS! So be aware of this!
         
         1) Delete the current database;
+
+            >> PostgreSQL:
+                /Database/PostgreSQL/postgres-deleting-db.txt
+
+            >> MySQL:
+                /xxxxxxxxx
+
+            >> MariaDB:
+                /xxxxxxxxx
+
+            >> SQLite:
+                /xxxxxxxxx
 
         2) Create the new database:
 
@@ -31,8 +43,8 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
 
         4) Edit your .env file as needed (the new db name, for example);
 
-        5) CRITICAL: close all Terminals/Prompts you ran with the old .env before (it avoids
-            issues with old environment variables)!
+        5) CRITICAL:
+            close all Terminals/Prompts you ran with the old .env before (it avoids issues with old environment variables)!
 
         6) Run 'makemigrations' for each sub-app, and then run 'migrate';
         
@@ -46,7 +58,8 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
 
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 
 HOW TO RE-INSTALL ONLY THE DJANGO:
-
     /Python/Web-development/django/1-install-and-first-steps/reinstall-new-django-copy.txt

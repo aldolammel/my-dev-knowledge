@@ -38,6 +38,7 @@
         @deconstructible
         class ValidateDiv:
             def __init__(self, user_num):
+                """Built-in method called 'Constructor', designed to initialize the instance."""
                 self.user_num = user_num
                 
             def __call__(self, system_num):

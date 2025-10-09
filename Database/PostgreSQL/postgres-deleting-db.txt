@@ -1,0 +1,26 @@
+
+
+POSTGRESQL: DELETING A DATABASE LOCALLY
+
+
+    PRE) CRITICAL, if backup is needed:
+        ./postgres-backup.txt
+
+    >> Method:
+
+        A) By pgAdmin application;
+        B) By terminal;
+
+        - - - - - 
+
+        A) By pgAdmin:
+
+            1) Open the pgAdmin;
+            2) Select the workspace > servers > Databases;
+            3) Select the db you wanna delete, and DELETE.
+
+        B) By Terminal:
+
+            xxxxxxxxxxxxxx
+
+            xxxxxxxxxxxxxxxx

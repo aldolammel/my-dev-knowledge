@@ -1,5 +1,6 @@
 class MyOwnPlanet:
     def __init__(self, name):  # 'name' here is an argument/parameter.
+        """Built-in method called 'Constructor', designed to initialize the instance."""
         self.name = name  # this is an attribute.
 
     def rename(self, new_name):

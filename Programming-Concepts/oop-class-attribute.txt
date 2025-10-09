@@ -14,6 +14,7 @@ OOP: CLASS ATTRIBUTES
             species = "Canis familiaris"                        <-- A CLASS attribute with its value
 
             def __init__(self, name, age, color):
+                """Built-in method called 'Constructor', designed to initialize the instance."""
                 self.name = name                    <-- An INSTANCE attribute with its default value
                 self.age = age                      <-- An INSTANCE attribute with its default value
                 self.color = color                  <-- An INSTANCE attribute with its default value
