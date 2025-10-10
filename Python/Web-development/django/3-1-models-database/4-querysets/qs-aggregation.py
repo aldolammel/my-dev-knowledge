@@ -1,4 +1,13 @@
-# AGGREGATION:
+
+"""
+    DJANGO MODELS > QUERYSETS: CREATING AGGREGATION
+
+        >> What is it:
+            ./_what-is-queryset.txt
+
+        In these examples, consider each queryset is asking data to a model called 'Recipe':
+"""
+
 
 # Counting how many items/entries we got in 'Recipe' table:
 count_the_entries = Recipe.objects.aggregate(Count('id'))
@@ -10,7 +19,10 @@ price_average = Recipe.objects.aggregate(Avg('price'))
 price_sum = Recipe.objects.aggregate(Sum('price'))
 
 # Conditional result, using Local Operator 'OR' through Q class:
-one_or_another = Recipe.objects.filter(Q(name__istartswith='a') | Q(description__icontains='salt'))
+one_or_another = Recipe.objects.filter(
+    models.Q(name__istartswith='a')
+    or models.Q(description__icontains='salt')
+)
 
 # Counting how many items/entries we got (using Count Class):
 total_class = Recipe.objects.aggregate(Count('id'))

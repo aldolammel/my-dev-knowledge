@@ -1,1 +1,1 @@
-./2-forms-and-validations/_validations.txt
+/Python/Web-development/django/6-validations/validation-1-for-database.txt

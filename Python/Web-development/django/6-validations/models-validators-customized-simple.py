@@ -1,17 +1,21 @@
 
+"""
+    DJANGO FORMS > VALIDATIONS > CUSTOM VALIDATORS
 
-# CUSTOM VALIDATIONS: SIMPLE WITH FUNCTIONS
-
-'''
+    CRUCIAL:
+        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
+    
+    Check the built-in validators list:
+        /Python/Web-development/django/6-validations/models-validators-built-in.txt
+    
     >> Validators only with functions work better when you got simple validations to build,
         otherwise use validations with classes;
     
     >> All validations (created and build-in) work not only on CMS layer, but also on front-end
         and wherever the save() is used by python.
         
-    >> At 'A' example, we're building an 'even validator' for a integer field;
-    
-'''
+    >> At 'A' example, we're building an 'even validator' for a integer field; 
+"""
 
 
 

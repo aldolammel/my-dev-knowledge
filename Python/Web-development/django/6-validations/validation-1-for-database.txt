@@ -44,6 +44,11 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
         ./validation-constraint-conditionals.txt
 
 
+    >> About Model clean() method:
+    
+        If you are thinking to use Model clean() method to validate database, remember: clean() method is used just to custom validates in Django-level, never in db-level.
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     OTHER VALIDATION LEVELS:

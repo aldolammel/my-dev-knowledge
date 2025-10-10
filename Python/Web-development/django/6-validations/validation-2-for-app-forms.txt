@@ -64,7 +64,7 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
     - Good for complex or cross-field validations for consistency between fields.
     
         E.g. in models.py:
-            # BEST place to set clean() if validation must propagate to APP and CMS!
+            BEST place to set clean() if validation must propagate to APP and CMS!
 
             class Product(models.Model):
                 ...
@@ -80,9 +80,13 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
                             code="invalid",  # Options: ./error-identification-codes.txt
                         )
 
+                >> How to get data for custom validations in Model clean() method:
+                    ./validation-clean-getting-data.py
+
+
         E.g. in forms.py:
-            # NOT RECOMMENDED to set clean() here 'coz models.py propagates its clean()!
-            # Otherwise, to apply clean() in forms.py, it's similar the example before...
+            TRY TO AVOID to set clean() in forms.py if you've already done that in models.py once it propagates its clean() to forms.py file! Otherwise, if you need to know what the user's doing, for example, in a form field before they save something on db, you definitely need to apply clean() in forms.py:
+                /Python/Web-development/django/9-forms/form-validation-getting-data.py
 
         >> Be aware:
             If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.

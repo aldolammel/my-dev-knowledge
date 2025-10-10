@@ -1,4 +1,12 @@
-# FILTERING:
+
+"""
+    DJANGO MODELS > QUERYSETS: CREATING FILTERS
+
+        >> What is it:
+            ./_what-is-queryset.txt
+
+        In these examples, consider each queryset is asking data to a model called 'Recipe':
+"""
 
 # Showing the first entry on this model/table (Recipe):
 r_first = Recipe.objects.first()

@@ -1,0 +1,16 @@
+
+
+DJANGO > CUSTOM VALIDATIONS: USING CLEAN() TO GET DATA AND THEN VALIDATE IT
+    
+
+    You got two clean() method approaches:
+
+        >> Using clean() method in models.py:
+            Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance.
+
+                /Python/Web-development/django/3-1-models-database/model-validation-clean-getting-data.py
+
+        >> Using clean() method in forms.py:
+            Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return.
+
+                /Python/Web-development/django/9-forms/form-validation-clean-getting-data.py

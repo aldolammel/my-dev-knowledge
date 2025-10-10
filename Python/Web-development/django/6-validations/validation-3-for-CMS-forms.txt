@@ -73,7 +73,7 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
                 stock = ...
 
                 def clean(self):
-                    """Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return."""
+                    """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
                     # Cross-field validation:
                     if self.stock == 0 and self.price > 0:
                         raise Validation(
@@ -81,12 +81,17 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
                             code="invalid",  # Options: ./error-identification-codes.txt
                         )
 
+                >> How to get data for custom validations in Model clean() method:
+                    ./validation-clean-getting-data.py
+
+
         E.g. in admin.py:
-            # IMPOSSIBLE to apply clean() directly. You should use clean() via forms.py!
+            IMPOSSIBLE to apply clean() directly. You should use clean() via forms.py!
 
         E.g. in forms.py:
-            # NOT RECOMMENDED to set clean() here 'coz models.py propagate its clean()!
-            # Otherwise, if you wanna force for any reason a custom clean() in an admin-class, you should apply clean() in a form from forms.py and, finally, tied that to the admin-class...
+            TRY TO AVOID to set clean() in forms.py if you've already done that in models.py once it propagates its clean() to forms.py file! Otherwise, if you wanna force a custom clean() in an admin-class for any reason, you MUST apply clean() in a form from forms.py and, finally, tie that to the admin-class.
+            That said, here is how validation works with forms:
+                /Python/Web-development/django/9-forms/form-validation-getting-data.py
 
         >> Be aware:
             If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.

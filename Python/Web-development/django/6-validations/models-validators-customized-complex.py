@@ -1,8 +1,13 @@
 
+"""
+    DJANGO FORMS > VALIDATIONS > CUSTOM VALIDATORS (WITH CLASSES)
 
-# CUSTOM VALIDATIONS: COMPLEX WITH CLASSES
+    CRUCIAL:
+        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
+    
+    Check the built-in validators list:
+        /Python/Web-development/django/6-validations/models-validators-built-in.txt
 
-'''
     >> Validators with classes work better when you got complex validations to build, otherwise use validations only with functions;
     
     >> All validations (created and build-in) work not only on CMS layer, but also on front-end and wherever the save() is used by python.
@@ -11,8 +16,7 @@
     It's a distributed task queue system that can be used with Django to perform asynchronous tasks such as sending emails, processing background jobs, and more. 
         
     >> At 'A' example, we're building a validation checks if the user number is divisible by the system number.
-    
-'''
+"""
 
 
 
