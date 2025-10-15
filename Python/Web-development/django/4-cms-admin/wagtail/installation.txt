@@ -1,0 +1,33 @@
+
+
+DJANGO > CMS: WAGTAIL
+
+
+    1) Once the very basic Django is installed, in the same virtual environment:
+        # Using UV:
+            $ uv add wagtail
+        # Using PIP:
+            $ pip install wagtail
+
+    2) In the project root folder:
+        $ wagtail start <my_wagtail_folder_name>
+
+    3) Install all project dependencies;
+
+    4) Update the database changes after Wagtail installation:
+        # Using UV:
+            $ uv run manage.py migrate
+        # Using Python:
+            $ python manage.py migrate
+
+    5) Case you didn't create the superuser:
+        # Using UV:
+            $ uv run manage.py createsuperuser
+        # Using Python:
+            $ python manage.py createsuperuser
+
+    6) Test it:
+        # Using UV:
+            $ uv run manage.py runserver
+        # Using Python:
+            $ python manage.py runserver

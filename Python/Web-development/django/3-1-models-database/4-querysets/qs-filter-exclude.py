@@ -78,7 +78,7 @@ class MovieCMS(admin.ModelAdmin):
 
 
 # More:
-# /Python/Web-development/django/4-cms-admin/customizing/cms-queryset-filtering.py
+# /Python/Web-development/django/4-cms-admin/customizing/detailview-filtering-any-data.py
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

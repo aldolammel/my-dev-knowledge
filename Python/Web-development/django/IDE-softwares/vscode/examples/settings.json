@@ -2,11 +2,13 @@
     /*
         VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
-    // PROJECT SETTINGS:
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     //...
-    // PYTHON SETTINGS:
+    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "django.i18n": false, // Django internationalization features in VSCode extensions.
+    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     //...
-    // DJANGO SETTINGS:
+    // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.
         "./apps", // Django apps folder
         "./core" // Settings folder
@@ -25,15 +27,14 @@
             "strings": true // Suggestions inside strings.
         }
     },
-    // CSS SETTINGS:
+    // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[css]": {
         //"editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
     },
-    // TRANSLATION SETTINGS:
-    "django.i18n": false, // Django internationalization features in VSCode extensions.
-    // FILE ASSOCIATIONS:
-    "files.associations": { // Tell VSCode how to treat files based on patterns.
+    // FILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tell VSCode how to treat files based on patterns:
+    "files.associations": {
         "**/*.html": "django-html",
         "**/templates/**/*.html": "django-html",
         "**/templates/**/*.css": "css",
@@ -43,11 +44,15 @@
         "**/apps/**/*.py": "python",
         "**/core/**/*.py": "python"
     },
-    // FILE EXCLUSIONS:
-    "files.exclude": { // Files/folders to hide from the VSCode explorer.
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
         //...
         // "**/migrations": true
     },
-    // SEARCH EXCLUSIONS:
-    //...
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
+        //...
+    },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // ...
 }

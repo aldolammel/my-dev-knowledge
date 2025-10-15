@@ -2,52 +2,57 @@
 
 PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
 
-    The command 'uv --upgrade' automatically check if the dependency envolved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
+    >> Upgrade UV itself:
+        ./upgrade-uv.txt
 
+    >> Upgrade project dependencies with UV:
     
-    >> Individual updates - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        The command 'uv --upgrade' automatically check if the dependency envolved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
 
-        PRE) Open the project pyproject.toml and check what you want to update next!
         
-        1) Update the desired dependency, e.g.:
+        >> Individual updates - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            >> Mandatory ones:
-                $ uv add "django-admin-sortable2>=2.2.7" --upgrade
+            PRE) Open the project pyproject.toml and check what you want to update next!
             
-            >> Dev dependency ones:
-                $ uv add "django-stubs[compatible-mypy]>=5.2.3" --upgrade --dev
+            1) Update the desired dependency, e.g.:
 
-            >> A dependency from other sub-group:
-                $ uv add "something>=3.0" --upgrade --subgrouphere
-    
-    
-    >> Update everything listed in pyproject.toml - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-        PRE) (Only for LINUX)
-            Update and Upgrade your system!
-                /OS/linux/debian-ubuntu/update.txt
+                >> Mandatory ones:
+                    $ uv add "django-admin-sortable2>=2.2.7" --upgrade
+                
+                >> Dev dependency ones:
+                    $ uv add "django-stubs[compatible-mypy]>=5.2.3" --upgrade --dev
 
-
-        1) Update dependencies:
-
-            # It removes all dependencies,
-            # and then install latest version of mandatory dependencies and dev ones as well:
-                $ uv sync --extra dev --upgrade
-
-            # It removes all dependencies,
-            # and then install latest version of mandatory dependencies w/ multiple sub-grous:
-                $ uv sync --extra dev --extra test --upgrade
-            
-            # It removes all dependencies, 
-            # and then install latest version of mandatory dependencies only (WARNING):
-                $ uv sync --upgrade
-
-
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-                    
-
-    2) Check the pyproject.toml if it looks fine!
+                >> A dependency from other sub-group:
+                    $ uv add "something>=3.0" --upgrade --subgrouphere
         
-    
-    3) Test your Python project to check if everything is going well.
+        
+        >> Update everything listed in pyproject.toml - - - - - - - - - - - - - - - - - - - - - - - 
+        
+            PRE) (Only for LINUX)
+                Update and Upgrade your system!
+                    /OS/linux/debian-ubuntu/update.txt
+
+
+            1) Update dependencies:
+
+                # It removes all dependencies,
+                # and then install latest version of mandatory dependencies and dev ones as well:
+                    $ uv sync --extra dev --upgrade
+
+                # It removes all dependencies,
+                # and then install latest version of mandatory dependencies w/ multiple sub-grous:
+                    $ uv sync --extra dev --extra test --upgrade
+                
+                # It removes all dependencies, 
+                # and then install latest version of mandatory dependencies only (WARNING):
+                    $ uv sync --upgrade
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                        
+
+        2) Check the pyproject.toml if it looks fine!
+            
+        
+        3) Test your Python project to check if everything is going well.
 

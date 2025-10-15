@@ -23,7 +23,7 @@ IDE FOR VUE PROJECT: VSCODE
             >> If no back-end or Vue is the back-end, skip it!
 
             >> If Django:
-                /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+                /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

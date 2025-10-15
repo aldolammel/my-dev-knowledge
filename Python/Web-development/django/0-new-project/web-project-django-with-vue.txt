@@ -3,12 +3,12 @@
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END VUE:
 
 
-1) SETUP: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
     >> Back-end:
 
         1.1) Basic installations:
-            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
     >> Front-end:
 
@@ -36,7 +36,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
                 /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
 
 
-2) DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     2.1) Front-end:
 

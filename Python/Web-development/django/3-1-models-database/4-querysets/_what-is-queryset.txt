@@ -119,4 +119,4 @@ DJANGO: WHAT ARE QUERYSETS
 
 
     >> QuerySets on ADMIN/CMS:
-        /Python/Web-development/django/4-cms-admin/1-customizing/cms-queryset-filtering.py
+        /Python/Web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py

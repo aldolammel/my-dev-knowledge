@@ -12,7 +12,7 @@ class MovieForm(forms.ModelForm):
     # Django built-in Meta-class:
     class Meta:
         
-        # Connecting this form-class (MovieForm) to a model-class (Movie), allowing the form
+        # Connecting/Tying this form-class (MovieForm) to a model-class (Movie), allowing the form
         # to bring automatically model fields/attributes:
         model = Movie
         
@@ -23,7 +23,7 @@ class MovieForm(forms.ModelForm):
             'included_by',
         ]
         
-        # Extra form fields the connected model doesn't have:
+        # Extra form fields (Not tied to the model):
         included_by = forms.CharField(...)
         
         def __init__(self, *args, **kwargs):

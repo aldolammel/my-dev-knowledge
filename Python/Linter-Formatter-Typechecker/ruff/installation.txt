@@ -58,16 +58,26 @@ RUFF: INSTALLATION AND INTEGRATION
         3) (Optional)
             Install the Ruff extension for your favorite code IDE!
 
-        4) (Optional)
+        4) (If applicable)
             In .vscode/settings.json, add this:
 
-                // FILE EXCLUSIONS
-                "files.exclude": {
-                    "**/.ruff_cache": true,
+                // PYTHON SETTINGS
+                ...
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff", // Ruff Linter/Formatter
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll.ruff": "always", // Ruff Linter/Formatter
+                        "source.organizeImports.ruff": "always", // Ruff Linter/Formatter
+                    }
                 },
 
-                // SEARCH EXCLUSIONS
+                // FILES
+                "files.exclude": {
+                    ...,
+                    "**/.ruff_cache": true,
+                },
                 "search.exclude": {
+                    ...,
                     "**/.ruff_cache": true,
                 }
 

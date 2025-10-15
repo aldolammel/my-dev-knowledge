@@ -6,7 +6,7 @@ RE-INSTALL ONLY THE DJANGO:
     >> If you are install Django for the very first time, and it's a brand new project,
         skip here and go:
 
-            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
 
     >> If you want just re-install the Django based on the existent project, you can just clone the
@@ -16,7 +16,7 @@ RE-INSTALL ONLY THE DJANGO:
                 /Versioning/git/basic-commands.txt
             
             2) Carefully, adapt this guide to reinstall the Django project:
-                /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
+                /Python/Web-development/django/1-install-and-first-steps/1-with-uv-manager.txt
 
 
     >> Or if you want to re-install the Django absolutely from scratch (a new Django copy):
@@ -36,12 +36,12 @@ RE-INSTALL ONLY THE DJANGO:
 
             2A) Using UV:
                 Carefully, adapt this guide to reinstall the Django project:
-                    /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
+                    /Python/Web-development/django/1-install-and-first-steps/1-with-uv-manager.txt
 
 
             2B) Using PIP:
                 Carefully, adapt this guide to reinstall the Django project:
-                    /Python/Web-development/django/1-install-and-first-steps/1-install-with-pip-package.txt
+                    /Python/Web-development/django/1-install-and-first-steps/1-with-pip-manager.txt
 
 
             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

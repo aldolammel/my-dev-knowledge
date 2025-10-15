@@ -4,15 +4,15 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
 
 
     >> WHAT IS IT:
-        /Python/Web-development/django/Linter-Formatter-Typechecker/djint/_about.txt
+        ./_about.txt
 
 
-    >> INSTALLING:
+    1) INSTALLING:
 
-        PRE) Assuming you already got a virtual environment for the project, active it:
+        1.PRE) Assuming you already got a virtual environment for the project, active it:
             /Python/02-virtual-environment/
 
-        1) Install the djlint as development dependency:
+        1.1) Install the djlint as development dependency:
             
             >> Using UV:
                 $ uv add --optional dev djlint
@@ -29,7 +29,9 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
                         "djlint>=1.36.4",
                     ]
 
-        2) Still in pyproject.toml file, add these lines:
+    2) INTEGRATION:
+
+        2.1) Still in pyproject.toml file, add these lines:
             # Django template Linter and Formatter:
             [tool.djlint]
             profile="django"
@@ -41,13 +43,10 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
                 format_css = false  # Prettier should take care of it!
                 format_js = false  # Prettier should take care of it!
 
-            # If DjLint must be the CSS/JS formatter too:
-                format_css = true
-                format_js = true
         
-        3) And manually install the DjLint extension for your Code IDE.
+        2.2) And manually install the DjLint extension for your Code IDE.
 
-        4) DjLint configuration on IDE:
+        2.3) DjLint configuration on IDE:
         
             >> Using VSCode:
 
@@ -56,8 +55,10 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
                 
                 >> In /project/.vscode/settings.json, add the lines:
 
-                    // DJANGO SETTINGS
+                    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                    ...
+                    // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                     "[django-html]": {
                         "editor.defaultFormatter": "monosans.djlint", // DjLint
                         ...
-                    }
+                    },

@@ -8,7 +8,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT
     >> Back-end:
 
         1.1) Basic installations:
-            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
         
     >> Front-end:
     

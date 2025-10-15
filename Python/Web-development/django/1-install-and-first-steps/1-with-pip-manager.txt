@@ -139,4 +139,4 @@ DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
 
 
         >> Return to Django project installation roadmap:
-            /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt

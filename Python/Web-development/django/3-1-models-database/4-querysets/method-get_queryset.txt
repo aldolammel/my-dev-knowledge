@@ -1,0 +1,51 @@
+
+
+DJANGO > QUERYSETS: THE BUILT-IN GET_QUERYSET METHOD
+
+
+    >> You can use get_queryset() in:
+
+        - Admin classes (admin.py);
+        - Class-Based Views (views.py);
+        - Custom Managers (models.py);
+        - Django REST Framework (DRF) ViewSets or APIViews;
+
+
+
+    >> E.g.
+        
+        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-filtering.py
+        
+        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-aggregation.py
+
+        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-counting.py
+
+        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-other-formats.py
+    
+
+    
+    >> Avoid redundancies:
+
+        For example, if you're working in an Admin class, you could set the ordering through the Meta class and via get_queryset as well, but this approach is absolutely a bad practice:
+
+        BAD:
+            class Meta:
+                ordering = ["order"]
+
+            # Doing exactly the same as in Meta ordering:
+            def get_queryset(self, request):
+                qs = super().get_queryset(request)
+                return qs.order_by("order")
+
+        GOOD:
+            class Meta:
+                ordering = ["order"]
+
+            
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+QUERYSETS IN FORMS.PY:
+    /Python/Web-development/django/9-forms/form-queryset-filtering-dropdown.py
+
+

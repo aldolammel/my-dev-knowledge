@@ -10,8 +10,8 @@ IDE FOR DJANGO PROJECT: VSCODE
                 /Python/IDE-softwares/vscode/basic-for-python.txt
 
 
-        PRE.2) Assuming the Django basic project setup is done:
-                /Python/Web-development/django/1-install-and-first-steps/0-installing-the-project.txt
+        PRE.2) Assuming you already activated the project's virtual environment:
+                /Python/02-virtual-environment/activate-and-deactivate.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -19,26 +19,23 @@ IDE FOR DJANGO PROJECT: VSCODE
 
         1) VSCode project settings:
 
-            1.1) In the project folder, open this file: /.vscode/settings.json;
-            1.2) In that file, apply these lines:
-                /Python/Web-development/django/IDE-softwares/vscode/examples/settings.json
+            1.1) In the project folder, open this file: 
+                /.vscode/settings.json;
+            1.2) In that file, apply these new lines specific for Django projects:
+                ./examples/settings.json
 
-            # Make sure your .gitignore file is NOT blocking the .vscode folder and its content
-                in project repository!
+            # (If applicable) Make sure your .gitignore file is NOT blocking the .vscode folder and its content in project repository!
         
         
-        2) Type-Checker (MyPy by Microsoft + django-stubs plugin):
-
-            /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/_about.txt
+        2) Type-Checker django-stubs plugin (Compactible for MyPy and PyRight):
+            /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.txt
 
         
         3) Linter (DjLint by Astral):
-
-            /Python/Web-development/django/Linter-Formatter-Typechecker/djint/_about.txt
+            /Python/Web-development/django/Linter-Formatter-Typechecker/djint/installation.txt
 
 
         4) Formatter (DjLint by Astral):
-
             # Not need to install anything additional 'coz DjLint is also a formatter.
 
 

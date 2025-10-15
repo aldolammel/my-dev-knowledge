@@ -46,13 +46,12 @@ UV: CREATING THE REQUIREMENTS OF A PROJECT
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
-    A) I am the new developer in an existent project:
+    A) I am the new developer in an existing project:
 
         A.1) After you clone the project's repo, the pyproject.toml should be in the project's root;
 
         A.2) Once you are in the project's folder, create the virtual environment for it BUT NEVER
-            use the 'uv init' in this case because it would replace by new ones important files like
-            the pyproject.toml!!!!
+            use the 'uv init' in this case 'coz it would replace important files like the pyproject.toml. You also shouldn't use the 'uv venv' command eather!
 
                 # The next step using 'sync' already will create the environment!
 
@@ -65,12 +64,18 @@ UV: CREATING THE REQUIREMENTS OF A PROJECT
     
     B) I am building a new project;
 
-        B.1) Once in the project root, use the 'init' command to create the virtual environment and
-            important files like the pyproject.toml:
+        B.1) Once in the project root, ask UV to create the virtual environment folder:
+            ./create-or-find-current-venv.txt
+        
+        B.2) Still in the project root folder, ask UV to install the minimal Python project scaffolding files:
+            
+            ATTENTION:
+                If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overriden files in project folder is not empty!
 
-            $ uv init
+            # That said, do it:
+                $ uv init
 
-        B.2) To add new packages with UV:
+        B.3) To add new packages with UV:
 
             # Mandatory package:
                 $ uv add <package_name>

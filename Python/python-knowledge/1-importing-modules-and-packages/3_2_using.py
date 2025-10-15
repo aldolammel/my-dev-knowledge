@@ -5,7 +5,7 @@ Packages on Python is the same of libraries in other languages.
 
 """
 
-import module_example  # importing functions. Name should be snake_case.
+import 3_1_custom_module  # importing functions from my custom module.
 
 # MY COLORS
 _corT = '\033[1;32m'

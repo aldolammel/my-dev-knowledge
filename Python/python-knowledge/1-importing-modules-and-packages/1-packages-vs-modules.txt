@@ -1,0 +1,54 @@
+
+
+PYTHON: WHAT ARE PACKAGES AND MODULES AND HOW TO USE THEM
+
+
+    PACKAGE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+        Package is a collection of multiple modules organized in a directory. So 'Packages' on Python is the same of 'libraries' in other languages!
+
+            - Must contain a special file called __init__.py (can be empty);
+            - Creates a namespace for related modules;
+
+        >> Structure, e.g.:
+
+            my_package/             # <- This is the package
+            ├── __init__.py         # <- Makes it a package
+            ├── module1.py          # <- Module within the package
+            ├── module2.py          # <- Another module
+            └── subpackage/         # <- Sub-package
+                ├── __init__.py
+                └── module3.py
+
+        >> Real world examples:
+            
+            import numpy            # Numerical computing package
+            import pandas           # Data analysis package  
+            import django           # Web framework package
+            import requests         # HTTP library package
+
+        >> How to use packages:
+            ./2-importing-packages-and-modules.py
+        
+
+
+    MODULE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        A module is a single Python file (.py) that contains code - variables, functions, and classes that you can reuse.
+
+        >> Structure, e.g.:
+
+            module4.py              # Simple like this
+
+        >> Real world examples:
+            
+            import math             # Mathematical functions
+            import random           # Random number generation
+            import datetime         # Date and time utilities
+
+        >> How to use packages:
+            ./2-importing-packages-and-modules.py
+
+        
+
+           

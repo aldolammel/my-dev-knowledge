@@ -72,7 +72,7 @@
     // Reserved space...
     // FILE ASSOCIATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "files.associations": {},
-    // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "cSpell.userWords": [],
     // CUSTOM OTHERS:
 }

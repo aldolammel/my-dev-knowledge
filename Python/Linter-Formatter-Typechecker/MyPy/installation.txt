@@ -20,8 +20,8 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
         2) In your IDE, install the 'MyPy Type Checker' extension (by Microsoft);
 
         3) (If applicable / Optional)
-            Install the django-stubs for better Django type hints:
-                /Python/Linter-Formatter-Typechecker/django-stubs.txt
+            For Django projects, install the django-stubs for better Django type hints!
+            (We will see this in Integration steps!)
     
 
     >> Integration:
@@ -33,6 +33,11 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
         1) Include these lines in your pyproject.toml:
             /Python/Linter-Formatter-Typechecker/mypy/pyproject.toml
 
+        
+            1.1) (If applicable / Optional)
+                For Django projects, install the django-stubs for better Django type hints:
+                    /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.txt
+
 
         2) (If applicable / Optional)
             In the project .vscode/settings.json, do it:
@@ -43,17 +48,18 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
                 2.1) Turn off the Pylance Type Checking, leaving this task only to MyPy:
                     
                     // PYTHON SETTINGS
+                    ...
                     "python.analysis.typeCheckingMode": "off", // This project is using MyPy for Type Checking.
 
                 2.2) (Optional)
                     Still in .vscode/settings.json, add this:
 
-                        // FILE EXCLUSIONS
+                        // FILES
                         "files.exclude": {
+                            ...
                             "**/.mypy_cache": true,
                         },
-
-                        // SEARCH EXCLUSIONS
                         "search.exclude": {
+                            ...
                             "**/.mypy_cache": true,
                         }

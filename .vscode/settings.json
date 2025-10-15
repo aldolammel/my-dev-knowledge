@@ -80,6 +80,6 @@
         "**/.venv_studies": true,
         "**/.git": true,
     },
-    // LANGUAGE, DICTIONARY STUFF:
+    // HUMAN LANGUAGE, DICTIONARY STUFF:
     // Never in project, always in the developer profiles!
 }

@@ -42,10 +42,14 @@ PYTHON PACKAGE MANAGEMENT: UV
     >> USING THE UV: 
 
 
-        >> Create / Recreate the virtual environment in the current folder:
-            $ uv init
-            # Ps: It'll create automatically some files like pyproject.toml!
-
+        >> Create / Recreate (or find the current) the virtual environment in the current folder:
+            ./create-or-find-current-venv.txt
+            
+            
+        >> Create the minimal Python project scaffolding:
+            # It creates automatically some files like pyproject.toml!
+                $ uv init
+                
 
         >> Updating or restoring Python, and project dependencies:
             ./auto-installation-with-sync.txt
@@ -64,7 +68,7 @@ PYTHON PACKAGE MANAGEMENT: UV
 
 
 >> DJANGO PROJECT WITH UV MANAGEMENT:
-    /Python/Web-development/django/1-install-and-first-steps/1-install-with-uv-package.txt
+    /Python/Web-development/django/1-install-and-first-steps/1-with-uv-manager.txt
 
 
 >> HOW TO CREATE A REQUIREMENTS OF PROJECT WITH UV:

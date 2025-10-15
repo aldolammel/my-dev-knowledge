@@ -21,16 +21,14 @@
             PyCharm
             VisualStudioCode
             Python
-            Django or Flask
+            Django or Flask or FashAPI or nothing...
             VirtualEnv
             Git
             Node.js
-            Vue.js
+            Vue.js or React or Angular or nothing...
             css
-            SCSS
+            SCSS or Stylus or less or nothing
             SASS
-            Stylus
-            less
 
         4) Including in .gitignore manually:
 
@@ -42,12 +40,12 @@
             .idea/tasks.xml
 
             Find .vscode manually and:
-            #.vscode/*  # For projects using the vscode settings.json!
-            #!.vscode/settings.json
-            #!.vscode/tasks.json
-            #!.vscode/launch.json
-            #!.vscode/extensions.json
-            #!.vscode/*.code-snippets
+                #.vscode/*  # For projects using the vscode settings.json!
+                #!.vscode/settings.json
+                #!.vscode/tasks.json
+                #!.vscode/launch.json
+                #!.vscode/extensions.json
+                #!.vscode/*.code-snippets
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

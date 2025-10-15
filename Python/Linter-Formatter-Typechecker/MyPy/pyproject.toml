@@ -2,7 +2,7 @@
 
 # Python static type checker:
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.13"  # IS THIS RIGHT???????????????????????????
 check_untyped_defs = true
 ignore_missing_imports = true
 warn_unused_ignores = true
@@ -16,6 +16,11 @@ exclude = [
     "migrations/",
     "venv/",
     ".venv/",
+    ".vscode",
+    "frontend/",
+    "templates/",
+    "static",
+    "media",
 ]
 [[tool.mypy.overrides]]  # Django-specific mypy settings
 module = "*.migrations.*"

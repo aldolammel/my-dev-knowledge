@@ -1,0 +1,10 @@
+
+
+PYTHON > UV PACKAGE MANAGER: UPDATING UV ITSELF
+
+    $ uv self update
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+UPGRADE PROJECT DEPENDENCIES WITH UV:
+    ./upgrade-dependencies.txt

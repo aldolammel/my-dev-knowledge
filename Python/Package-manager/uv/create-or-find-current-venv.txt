@@ -1,0 +1,19 @@
+
+
+PYTHON > UV PACKAGE MANAGER: CREATING A VENV OR FINDING THE EXISTING ONE
+
+
+    1) Once you are in the project folder:
+        $ uv venv
+
+        # This command will search for existing venv folders for the current folder project, and, if none is found, UV will create a clean '.venv' folder automatically!
+
+        # For specific venv folder name:
+            $ uv venv <venv_folder_name>
+
+
+    2) Still in the project root folder, active the virtual environment:
+        /Python/02-virtual-environment/activate-and-deactivate.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

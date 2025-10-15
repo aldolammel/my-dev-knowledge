@@ -5,7 +5,11 @@ ACTIVATING OR DEACTIVATING A VIRTUAL ENVIRONMENT:
 
     >> Activating:
 
-        Windows:
+        UBUNTU:
+            $ . <venv_name>/bin/activate
+
+
+        WINDOWS:
             $ <venv_name>\Scripts\activate
 
             # Execute this command below if you're not allow to activate an env via Terminal:
@@ -14,11 +18,9 @@ ACTIVATING OR DEACTIVATING A VIRTUAL ENVIRONMENT:
                 $ Set-ExecutionPolicy Unrestricted -Scope LocalMachine
                 # or:
                 $ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-
-        Debian/Ubuntu:
-            $ . <venv_name>/bin/activate
-
-        Mac:
+        
+        
+        MAC:
             $ source <venv_name>/bin/activate
 
         Important: the feedback that you're using the right environment is the environment name

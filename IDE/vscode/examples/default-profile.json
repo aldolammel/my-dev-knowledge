@@ -51,7 +51,7 @@
         "**/.venv": true,
         "**/.git": true,
     },
-    // LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "cSpell.language": "en,pt,pt_BR", // Code Spell Checker extension!
     "cSpell.userWords": [
         "ABCOO",
@@ -133,7 +133,7 @@
         "files.associations",
         "files.exclude",
         "search.exclude",
-        // LANGUAGE, DICTIONARY STUFF:
+        // HUMAN LANGUAGE, DICTIONARY STUFF:
         "cSpell.language", // Code Spell Checker extension!
         "cSpell.userWords", // Code Spell Checker extension!
     ],
