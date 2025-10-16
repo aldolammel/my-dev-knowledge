@@ -39,7 +39,7 @@ TYPE CHECKER DJANGO STUBS: INSTALLATION AND INTEGRATION
         PRE) You already got the pyproject.toml in your project:
             /Python/Web-development/pyproject.toml
 
-        1) Include these lines in your pyproject.toml:
+        1) Include/edit these lines in your pyproject.toml:
 
             >> For MyPy:
                 /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml

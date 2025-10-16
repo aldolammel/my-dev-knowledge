@@ -11,10 +11,16 @@
     // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.
         "./apps", // Django apps folder
-        "./core" // Settings folder
+        //"./apps/<another_app>",
+        "./core", // Settings folder
+        //"./my_wagtail_test", // For Wagtail projects
+        //"./my_wagtail_test/home", // For Wagtail projects
+        //"./my_wagtail_test/<another_app>", // For Wagtail projects
     ],
     "terminal.integrated.env.linux": { // Environment vars for Linux terminal sessions.
         "DJANGO_SETTINGS_MODULE": "core.settings" // Set default Django settings module for manage.py and shell.
+        // For Wagtail projects, use DJANGO_SETTINGS_MODULE like this:
+        // "DJANGO_SETTINGS_MODULE": "<wagtail_config_folder_name>.settings.base"
     },
     "[django-html]": {
         //"editor.defaultFormatter": "monosans.djlint",

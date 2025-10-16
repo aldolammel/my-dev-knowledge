@@ -1,6 +1,6 @@
 
 
-PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
+PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
 
     >> Which tool are you using:
 
@@ -11,7 +11,7 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
 
         A) Vanilla Python - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            A.PRE) xxxxxxx
+            PRE) xxxxxxx
             
             A.1) xxxxxxxxxxxx
 
@@ -20,8 +20,9 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
 
         B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            B.PRE) What is it:
+            PRE) What is it:
                 /Python/Package-manager/uv/_about-install-and-update.txt
+
 
             B.1) Check the current Python versions installed and install that you need:
                 
@@ -36,7 +37,12 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTENT PROJECT
 
                 # Defining to UV which Python version the project must run, e.g.:
                     $ uv python pin 3.13.3
-                    # It will auto-update the .python-version file!
+                        # It will auto-update the .python-version file!
+
+                # (If applicable) For projects using RUFF:
+                    [tool.ruff]
+                    ...
+                    target-version = "py313"  # Update here too!
 
                 # Sync the environment (UV will recreate venv with new Python):
                     /Python/Package-manager/uv/auto-installation-with-sync.txt

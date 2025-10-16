@@ -18,16 +18,13 @@ IDE FOR PYTHON PROJECT: VSCODE
         PRE.3) Assuming you already have the project's virtual environment to work:
             /Python/02-virtual-environment/creating-virtual-environment.txt
 
-            TIP FOR UV ONLY:
-                # If you wanna check if the venv exists or create one if it doesn't exist yet:
-                    /Python/Package-manager/uv/create-or-find-current-venv.txt
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         
         1) VSCode project settings:
 
-            PRE) (Optional) Select your Profile more specific for this kind of project;
+            PRE) Select your Profile more specific for this kind of project;
             1.1) In the project folder, create the .vscode folder;
             1.2) In .vscode folder, create the file 'settings.json';
             1.3) In that file, apply these lines:
@@ -36,7 +33,7 @@ IDE FOR PYTHON PROJECT: VSCODE
             # (If applicable) Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository!
 
         
-        2) In case your VSCode profile is not well-configured yet for this kind of project:
+        2) Configuring your VSCode profile with the project needs:
         
 
             2.1) Language support (Python by Microsoft):
@@ -92,11 +89,8 @@ IDE FOR PYTHON PROJECT: VSCODE
 
 
             2.7) Formatter (Ruff by Astral):
-                (It's possible you already got this installed on project, so skip it)
-                /Python/Linter-Formatter-Typechecker/ruff/installation.txt
+                # Ruff works as formatter too!
 
 
-        3) (If applicable)
-            For VSCode, re-open the /project/.vscode/settings.json, and set for each Python
-            linter/formatter/type-checker the project must use!
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             

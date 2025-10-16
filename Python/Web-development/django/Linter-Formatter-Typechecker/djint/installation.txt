@@ -9,14 +9,14 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
 
     1) INSTALLING:
 
-        1.PRE) Assuming you already got a virtual environment for the project, active it:
-            /Python/02-virtual-environment/
+        PRE) Assuming you already got a virtual environment for the project, active it:
+            /Python/02-virtual-environment/activate-and-deactivate.txt
 
         1.1) Install the djlint as development dependency:
             
             >> Using UV:
                 $ uv add --optional dev djlint
-                # Check if everything's right on the project's pyproject.toml file!
+                    # Check if everything's right on the project's pyproject.toml file!
             
             >> Or using PIP:
                 # Install it:
@@ -40,8 +40,8 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
             close_void_tags = true
 
             # If Prettier or other CSS/JS formatter is ON in this project:
-                format_css = false  # Prettier should take care of it!
-                format_js = false  # Prettier should take care of it!
+            format_css = false  # false = Prettier should take care of it!
+            format_js = false  # false = Prettier should take care of it!
 
         
         2.2) And manually install the DjLint extension for your Code IDE.
@@ -58,6 +58,7 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
                     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                     ...
                     // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                    ...
                     "[django-html]": {
                         "editor.defaultFormatter": "monosans.djlint", // DjLint
                         ...

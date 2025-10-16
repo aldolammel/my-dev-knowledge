@@ -39,20 +39,13 @@ DJANGO: INSTALLING AND SETUP
     
     1) Define the Package Manager to setup project for Django:
 
-        1A) Installing Django, using UV (recommended, more professional)!
-        1B) Or installing Django, using PIP (Django built-in solution).
-
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-        1A) Installing Django, using UV:
+        1A) Installing Django, using UV (recommended, more professional):
             ./1-with-uv-manager.txt
 
-
-        1B) Installing Django, using PIP:
+        1B) Or installing Django, using PIP (Django built-in solution).
             ./1-with-pip-manager.txt
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+    
     
     2) Creating Django Project Structure:
         
@@ -88,8 +81,8 @@ DJANGO: INSTALLING AND SETUP
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        Since this point, you might do basic tests without the follow steps once your goal is
-                            just test something basic on Django.
+        Since this point, you might execute basic tests without the follow steps once your goal
+                            would be to test something basic on Django.
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 

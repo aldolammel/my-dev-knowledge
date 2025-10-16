@@ -17,9 +17,9 @@ RUFF: INSTALLATION AND INTEGRATION
             1.1A) Using UV;
             1.1B) Or using PIP;
 
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            - - - - - - - 
 
-            1.1A) Using UV:
+            1.1A) Using UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                 PRE) UV already installed:
                     /Python/Package-manager/uv.txt
@@ -27,7 +27,7 @@ RUFF: INSTALLATION AND INTEGRATION
                 >> Already in the right virtual env, add it as dev dependency only:
                     $ uv add --optional dev ruff
 
-            1.1B) Using PIP:
+            1.1B) Using PIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
                 PRE) Basic about PIP:
                     /Python/Package-manager/pip/_about.txt
@@ -80,7 +80,6 @@ RUFF: INSTALLATION AND INTEGRATION
                     ...,
                     "**/.ruff_cache": true,
                 }
-
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

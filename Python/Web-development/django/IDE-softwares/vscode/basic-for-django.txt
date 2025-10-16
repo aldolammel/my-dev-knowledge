@@ -21,13 +21,15 @@ IDE FOR DJANGO PROJECT: VSCODE
 
             1.1) In the project folder, open this file: 
                 /.vscode/settings.json;
+
             1.2) In that file, apply these new lines specific for Django projects:
                 ./examples/settings.json
 
             # (If applicable) Make sure your .gitignore file is NOT blocking the .vscode folder and its content in project repository!
         
         
-        2) Type-Checker django-stubs plugin (Compactible for MyPy and PyRight):
+        2) (If applicable, probably you already installed this during MyPy/PyRight installation)
+            Type-Checker django-stubs plugin (Compactible for MyPy and PyRight):
             /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.txt
 
         

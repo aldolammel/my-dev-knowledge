@@ -14,7 +14,7 @@
     // Reserved space...
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Where's Python interpreter on project:
-    "python.defaultInterpreterPath": "/bin/python3", // It knows the '.venv' or 'venv' in path.
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
     "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
     "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
     "[python]": {},
@@ -40,6 +40,6 @@
         "**/*.pyc": true,
         "**/.git": true,
     },
-    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     // Never in project, always in the developer profiles!
 }

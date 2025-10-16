@@ -13,3 +13,5 @@ disable_error_code = [
 # Django-stubs plugin configuration
 [tool.django-stubs]
 django_settings_module = "core.settings"
+# For Wagtail projects, replace the django_settings_module above by this one below:
+# django_settings_module = "<name_of_wagtail_config_folder>.settings.base"

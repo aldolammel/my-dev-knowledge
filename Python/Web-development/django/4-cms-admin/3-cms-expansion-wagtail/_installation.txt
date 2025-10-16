@@ -1,0 +1,35 @@
+
+
+DJANGO CUSTOM CMS: WAGTAIL INSTALLATION ROADMAPS
+
+
+    >> What is it:
+        ./_about.txt
+
+
+    >> What kind of Wagtail installation do you need:
+
+        A) For a new Wagtail stand-alone installation;
+            ./1-installation-wagtail-A.txt
+
+        B) For a new independent Django project with a new Wagtail installation;
+            ./1-installation-wagtail-B.txt
+
+        C) For a new independent Django project with an existing Wagtail installation;
+            ./1-installation-wagtail-C.txt
+            
+        D) For an existing Wagtail stand-alone installation;
+            ./1-installation-wagtail-D.txt
+            
+        E) For an existing independent Django project with a new Wagtail installation;
+            ./1-installation-wagtail-E.txt
+            
+        F) For an existing independent Django project with an existing Wagtail installation;
+            ./1-installation-wagtail-F.txt
+            
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> BUT IF YOU JUST WANNA A WAGTAIL DEMO:
+    ./demo.txt

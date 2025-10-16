@@ -7,14 +7,14 @@
 [project.optional-dependencies]
 dev = [
     ...
-    "ruff>=0.12.11",
+    "ruff>=0.14.1",
 ]
 
 # Python Linter and Formatter:
 [tool.ruff]
 line-length = 100
 indent-width = 4
-target-version = "py312"  # Python version for better analysis
+target-version = "py313"  # Python version for better analysis <-------- <---------- <--------------
 
 [tool.ruff.format]
 quote-style = "double"
@@ -44,7 +44,7 @@ select = [
 ]
 ignore = [
     "DJ001",  # Avoid using null=True on string-based fields
-    "DJ007",  # Avoid to use fields = "__all__", prefering to list array with fileds.
+    "DJ007",  # Avoid to use fields = "__all__", preferring to list array with fields.
     "E501",  # Line too long (handled by formatter)
     "B904",  # Within an `except` clause, raise exceptions with `raise ... from err`
 ]
