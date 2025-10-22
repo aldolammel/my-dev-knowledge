@@ -1,11 +1,15 @@
-"""
-
-DICTIONARY:
-A set of key-value pairs. All keys must be unique.
-
-Syntax: _myDict = { 'Name': 'Aldo', 'Age': 38, 'Location': 'Brazil' }
 
 """
+    DICTIONARY:
+        A set of key-value pairs. All keys must be unique.
+
+        >> Syntax:
+            _myDict = { 'Name': 'Aldo', 'Age': 38, 'Location': 'Brazil' }
+
+        >> Dictionary Comprehension:
+            ./dict-comprehension.py
+"""
+
 from random import randint
 from time import sleep
 from operator import itemgetter

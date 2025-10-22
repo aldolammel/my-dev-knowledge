@@ -3,10 +3,10 @@
 VUE.JS DEEPER KNOWLEDGE
 
     >> What is Vue.js (basic):
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/_about.txt
+        ./_about.txt
 
     >> Two options for the product's structure with Vue.js: SPA vs MPA:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/SPA-vs-MPA.txt
+        ./SPA-vs-MPA.txt
 
         >> About both strategies, examples of their folder's structures:
             /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt    
@@ -40,7 +40,7 @@ VUE.JS DEEPER KNOWLEDGE
     
 
     >> Vue logic structure:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/1-vue-structure.txt
+        ./1-vue-structure.txt
 
     
     >> With Vue.js, part of the work is done in JavaScript file, and another part
@@ -48,7 +48,7 @@ VUE.JS DEEPER KNOWLEDGE
 
 
     >> To create a Vue.js project, you need a Build-Tool. Here is some options:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/1-build-tools.txt
+        ./1-build-tools.txt
 
 
     >> DECLARATIVE RENDERING
@@ -93,8 +93,7 @@ VUE.JS DEEPER KNOWLEDGE
 
     
     >> VUE APPs AND THEIR COMPONENTS
-
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-components.txt
+            ./5-components.txt
 
 
     

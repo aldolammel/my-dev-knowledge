@@ -32,15 +32,14 @@ VUE: PROPS ("PROPERTIES")
             // In a ChildComponent.vue:
             <script>
                 export default {
-                    
                     // Props declaration for Options-API:
+                    // Receiving Props from Parent:
                     props: {
                         contacts: {
                             type: Array,  // array of objects, for example...
                             required: true
                         }
                     },
-
                     // Emits declaration:
                     // Reserved space...
                 }
@@ -53,13 +52,13 @@ VUE: PROPS ("PROPERTIES")
             // In a ChildComponent.vue:
             <script setup>
             // Props declaration for Composition-API:
+            // Receiving Props from Parent:
             const props = defineProps({
                 contacts: {
                     type: Array,  // array of objects, for example...
                     required: true
                 }
             })
-            
             // Emits declaration:
             // Reserved space...
             </script>
@@ -71,19 +70,19 @@ VUE: PROPS ("PROPERTIES")
     >> Full examples of Props being used:
         
         >> Using Options-API:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/props-example.txt
+            ./using-options-api/props-example.txt
         
         >> Using Composition-API:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt
+            ./using-composition-api/props-example.txt
 
 
     >> Don't use Props without to know this:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.1.1-props-deeper-structure-problem.txt
+        ./5.1.1-props-deeper-structure-problem.txt
         
     
     >> Once the child is NOT allow to change parent's data, child can ask its parent for a change,
         using 'emits' method:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.2-emits.txt
+            ./5.2-emits.txt
 
 
     

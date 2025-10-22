@@ -7,7 +7,7 @@ DJANGO: SERIALIZERS
         /Programming-Concepts/serialization.txt
 
 
-    CREATING THE API: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    CREATING THE API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
         PRE.1) Database structure:
@@ -23,14 +23,14 @@ DJANGO: SERIALIZERS
         1) Data conversion:
             Creating a Serializer-class (API) attached with the Model-class where the data belongs.
             
-                /Python/Web-development/django/3-2-views-and-API/serializer-creating-class.py
+                ./serializer-creating-class.py
 
 
         2) API logic:
             
             >> Sending data:
                 Declaring which serialized data must be released externally.
-                    /Python/Web-development/django/3-2-views-and-API/serializer-view-sending-data.py
+                    ./serializer-view-sending-data.py
 
             >> Or Sending/Receiving data:
                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -40,7 +40,7 @@ DJANGO: SERIALIZERS
         3) URL routing:
             Direct the incoming web requests, pointing them to the right Views.py class.
                 
-                /Python/Web-development/django/3-2-views-and-API/serializer-urls.py
+                ./serializer-urls.py
 
 
         4) Test it!

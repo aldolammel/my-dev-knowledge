@@ -40,11 +40,11 @@ EXPORTING ERD DIRECTLY FROM DJANGO:
     3) Generate ERD:
         
         # For all your DB tables:
-        $ python manage.py graph_models -a -o myapp_models.png
+            $ python manage.py graph_models -a -o myapp_models.png
         
         # For specific apps:
         # python manage.py graph_models <app_name_1> <app_name_2> -o myapp_models.png
-        $ python manage.py graph_models auth -o myapp_models.png
+            $ python manage.py graph_models auth -o myapp_models.png
 
         # Output example:
             /Python/Web-development/django/3-1-models-database/5-ERD/myapp_models.png

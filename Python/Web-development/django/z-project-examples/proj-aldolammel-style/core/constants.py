@@ -105,6 +105,7 @@ VAL_PROFILE_1_DEL_SCHEDULE = 30  # in days!
 # VAL_PROFILE_2_LEGAL_MAXLNGH = 100
 # VAL_PROFILE_2_CITY_MAXLNGH = 40
 # VAL_PROFILE_2_DESC_MAXLNGH = 400
+# VAL_SLUG_ADD_LIMIT = 5  # It considering the additional separator characters.
 REL_PROFILE_1 = "profile_1"
 # REL_PROFILE_2 = "profile_2"
 

@@ -5,33 +5,36 @@
     a DOM element. They are prefixed with v- to indicate that they are Vue-specific.
 
     >> v-text
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-text.txt
+        ./v-text.txt
 
-    >> v-html             (string)
+    >> v-html
+        ./v-html.txt
+
     >> v-show             (any)
+
     >> v-If
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-if.txt
+        ./v-if.txt
 
     >> v-else
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-else.txt
+        ./v-else.txt
             
     >> v-else-if
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-else-if.txt
+        ./v-else-if.txt
 
     >> v-for
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-for.txt
+        ./v-for.txt
 
     >> v-on
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-on.txt
+        ./v-on.txt
 
     >> v-bind
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-bind.txt
+        ./v-bind.txt
 
     >> v-model
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-model.txt
+        ./v-model.txt
 
     >> v-slot
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/v-slot.txt
+        ./v-slot.txt
 
     >> v-pre              (don't expect expression)
     >> v-once             (don't expect expression)

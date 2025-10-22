@@ -2,13 +2,13 @@
 
 VUE USING COMPOSITION-API: PROPS EXAMPLES
 
-    Context: I have an agenda with my contacts but I want to build using components, preparing this
-            to scalate with my business.
+    Context:
+        I have an agenda with my contacts but I want to build using components, preparing this to scalate with my business.
 
     >> index.html, style.css, and main.js are abstractions here...
 
 
-    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> In a ChildComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <script setup>
         // Defining 'props' as an object with the data you wanna bring from parent component:
@@ -37,7 +37,7 @@ VUE USING COMPOSITION-API: PROPS EXAMPLES
         </template>
 
 
-    >> In a ParentComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >> In a ParentComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         <script setup>
         import Person from './components/ChildComponent.vue'

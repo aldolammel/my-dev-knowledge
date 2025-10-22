@@ -1,0 +1,19 @@
+
+
+PYTHON: COMPREHENSIONS
+
+    They are concise syntactic constructs for creating collections (lists, dictionaries, sets) from existing iterables in a single, readable line of code. Comprehensions are a powerful Python feature that makes code more expressive and Pythonic!
+
+    Use comprehensions when:
+    - The logic is simple and fits on one line.
+    - You're creating a new collection from an existing one.
+    - Readability is improved.
+
+    >> List Comprehension:
+        ./list-comprehension.py
+
+    >> Dict Comprehension:
+        ./dict-comprehension.py
+
+    >> Set Comprehension:
+        ./set-comprehension.py

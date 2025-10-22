@@ -4,11 +4,16 @@ CREATING A NEW COMPONENT (DEDICATED FILES):
 
 
     0) Basic about it:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-components.txt
+        ./5-components.txt
 
 
     1) Make sure you got the folder:
         /vue_project_root/src/components/
+
+        >> Organizing even more:
+            /components/pages/  = those comps that you consider main pages of Vue, like Home.vue;
+            /components/layout/ = those comps used basically through all pages like NavMainMenu.vue;
+            /components/common/ = those comps that compose a page but is not a layout component.
 
 
     2) In /components/ create the component file:
@@ -47,5 +52,5 @@ CREATING A NEW COMPONENT (DEDICATED FILES):
 
     4) If you need to call external data (from App.vue, for example), you must to use PROPS in
         your component file:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.1-props.txt
+            ./5.1-props.txt
 

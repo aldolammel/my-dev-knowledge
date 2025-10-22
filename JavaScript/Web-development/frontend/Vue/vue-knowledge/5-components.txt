@@ -4,55 +4,53 @@ VUE COMPONENTS:
 
 
     >> A component in Vue.js is a reusable, self-contained piece of code that encapsulates HTML
-        template, JavaScript logic, and CSS styling into a single unit. Think of it as a custom
-        HTML element that you can use throughout your app.
+        template, JS logic, and CSS styling into a single unit. Think of it as a custom HTML element that you can use throughout your app.
 
 
     >> Each component is a sub-app (child) inside an app (parent);
 
 
     >> A component can be global or local, depends how often it will be shown:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-using-component-global-or-local.txt
+        ./5-using-component-global-or-local.txt
 
     
     >> Parent can send data to its children, but children CANNOT send data to their parents.
         This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
             
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.1-props.txt
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.2-emits.txt
+        ./5.1-props.txt
+        ./5.2-emits.txt
 
 
-    >> Parent can send HTML to irs children, using slots:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4-slot.txt
+    >> Parent can send HTML to its children, using slots:
+        ./5.4-slot.txt
     
 
-    >> Convention: components' names must be written using PascalCase, it means no space or special
-                    character, just first letter upper, and all first letters if it composed by two
-                    or more words. 
+    >> Convention:
+        Components' names must be written using PascalCase, it means no space or special character, just first letter upper, and all first letters if it composed by two or more words. 
 
-                        E.g.
-                            MyComp, UserContact, HeroHome, FaqSection, H2Title.
+            E.g.
+                MyComp, UserContact, HeroHome, FaqSection, H2Title.
 
-                        E.g. importing:
-                            import MyComp from './components/MyComp.vue'
+            E.g. importing:
+                import MyComp from './components/MyComp.vue'
 
-                        E.g. calling it:
-                            <MyComp>...</MyComp>
-                            <!-- or -->
-                            <MyComp />
-                    
-                    
-                    Alternatively: you can use kebap-case as well. A good example of component named
-                                    with kebab-case:
+            E.g. calling it:
+                <MyComp>...</MyComp>
+                <!-- or -->
+                <MyComp />
+        
+        
+        Alternatively:
+            You can use kebap-case as well. A good example of component named with kebab-case:
 
-                                        E.g.
-                                            my-comp, user-contact, hero-home, faq-section, h2-title.
-                                        
-                                        E.g. importing:
-                                            import my-comp from './components/my-comp.vue'
+                E.g.
+                    my-comp, user-contact, hero-home, faq-section, h2-title.
+                
+                E.g. importing:
+                    import my-comp from './components/my-comp.vue'
 
-                                        E.g. calling it:
-                                            <my-comp>...</my-comp>  <!-- it's NOT possible to close like using only '/>'.
+                E.g. calling it:
+                    <my-comp>...</my-comp>  <!-- it's NOT possible to close like using only '/>'.
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -60,9 +58,9 @@ VUE COMPONENTS:
 >> HOW TO CREATE A COMPONENT:
 
     >> With dedicated files approach (Recommended):
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-creating-component-professional.txt
+        ./5-creating-component-professional.txt
     
     >> Single file approach (NOT recommended, for your information only):
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-creating-component-simplified.txt
+        ./5-creating-component-simplified.txt
 
     

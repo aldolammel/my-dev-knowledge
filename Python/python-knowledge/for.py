@@ -1,13 +1,14 @@
 """
--FOR-, A LIMITED LOOPING STRUCTURE:
-(LAÇO DE REPETIÇÃO: FOR)
-FOR is a looping structure that it allows us to execute a command over and over again
-until it's met a defined number of times.
+    -FOR-, A LIMITED LOOPING STRUCTURE:
+    (LAÇO DE REPETIÇÃO: FOR)
+        FOR is a looping structure that it allows us to execute a command over and over again until it's met a defined number of times.
 
-Syntax:
-for _each in _myList:
-    <consulting-with-params or condition>
+        >> Syntax:
+            for _each in _myList:
+                <consulting-with-params or condition>
 
+        >> List comprehension:
+            ./list-comprehension.py
 """
 
 

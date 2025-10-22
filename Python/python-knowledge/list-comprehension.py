@@ -1,12 +1,25 @@
+
 """
-LIST COMPREHENSION
-Another way to work with -for- (repetition) and lists, using fewer lines.
+    PYTHON > COMPREHENSIONS: LIST COMPREHENRION
 
-Syntax with no conditional: _newList = [ <code to create the _newList> for _eachItem in _originalList ]
-Systax with conditional:    _newList = [ <code to create the _newList> for _eachItem in _originalList if <conditional> ]
+    >> What is list:
+        ./list-array-basic.py
 
-PS: the _newList variable is not needed if your set that into a print, as print([...]), for example.
+    >> What is Python Comprehension:
+        ./comprehension.txt
 
+    Syntax with no conditional:
+        my_lst = [ <code to create my_lst> for i in a_container ]
+    Systax with conditional:
+        my_lst = [ <code to create my_lst> for i in a_container if <conditional> ]
+    
+    - - - 
+
+    >> Set Comprehension:
+        ./set-comprehension.py
+
+    >> Dict Comprehension:
+        ./dict-comprehension.py
 """
 
 print("LIST COMPREHENSION (BEGINNER) SOLUTION:")

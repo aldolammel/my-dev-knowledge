@@ -44,6 +44,11 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
                     ...
                     target-version = "py313"  # Update here too!
 
+                # (If applicable) For projects using MyPy:
+                    [tool.mypy]
+                    ...
+                    python_version = "3.13"  # Update here too!
+
                 # Sync the environment (UV will recreate venv with new Python):
                     /Python/Package-manager/uv/auto-installation-with-sync.txt
 

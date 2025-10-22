@@ -7,33 +7,26 @@ VUE.JS: WHAT IS IT
     interactive and reactive web front-ends. It's a progressive and open-source way to build
     client-side web apps.
 
-
         >> Vue uses the benefits of JavaScript available in the user browser to create actions and
             interations without to download HTML pages and more from a the server/host;
 
-
         >> With Vue, the developer doesn't need to recreate the wheel, nor to create a
             code-philosophy for each new project if they would use only raw JavaScript;
-
 
         >> Vue core library is focused on the view layer only. Advanced features required for
             complex apps such as routing, state management and build tooling are offered via
             officially maintained supporting libraries and packages;
 
-
         >> Vue varnames and function names should respect the JS convention: to use camelCase.
 
-
         >> Deep knowledge about Vue:
-
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/0-overview-deep-knowledge.txt
+            ./0-overview-deep-knowledge.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 >> HOW TO INSTALL VUE:
-
     /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
 

@@ -38,6 +38,7 @@ VAL_MENU_MIN = VAL_CAT_MIN
 VAL_MENU_MAX = VAL_CAT_MAX
 VAL_FRONT_TITLE_MAX = 10
 VAL_LINK_TYPE_MAX = 20
+VAL_SLUG_ADD_LIMIT = 5  # It considering the additional separator characters.
 
 # DEBUG: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 COLOR_STARTS_GREEN = "\033[1;32m"
