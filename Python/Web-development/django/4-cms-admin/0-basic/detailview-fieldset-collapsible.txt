@@ -1,0 +1,49 @@
+
+
+DJANGO CMS > DETAIL-VIEW: MAKE FIELDSET BE COLLAPSIBLE
+
+    # admin.py:
+    @admin.register(models.PagexPage)
+    class PagexPageAdmin(admin.ModelAdmin):
+
+        add_fieldsets = (
+            (None, {"fields": ("title",)}),
+            (
+                "Conteúdo",
+                {
+                    "classes": ("collapse",),                    # <----------------- Starts closed!
+                    "fields": (
+                        "xxxx",
+                        "xxxxxxxxxx",
+                    )
+                },
+            ),
+        )
+
+        fieldsets = (
+            (
+                "Conteúdo",
+                {
+                    "classes": ("collapse-open",),               # <----------------- Starts opened!
+                    "fields": (
+                        "xxxx",
+                        "xxxxxxxxxx",
+                    )
+                },
+            ),
+        )
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    
+    >> Other options and mixes:
+
+        "collapse"	     Makes the fieldset collapsible (starts closed by default).
+        "collapse-open"	 Makes the fieldset collapsible but starts opened.
+        "wide"	         Makes input fields wider.
+        "extrapretty"	 Adds extra styling (depends on admin CSS)	Cosmetic.
+        "tab"	         Used by django-tabbed-admin or other tab-based UIs (Requires admin plugin).
+        "grp-collapse"   For django-grappelli UI (alternative admin theme). Use Grappelli.
+        "grp-open"	     For django-grappelli UI (alternative admin theme). Use Grappelli.
+        "module"	     Used in some CMS custom UIs, similar to collapse but with styling tweaks.
