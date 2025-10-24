@@ -1,0 +1,18 @@
+// Just to ilustrate what a db is sending to Vue:
+{
+    "slug": "pagina-inicial",
+    "vue_component": "Home",
+    "seo_title": "Página Inicial",
+    "seo_desc": "",
+    "is_home": true,
+    "category_names": [],
+    "seo_keyword_names": [],
+    "content": {
+        "9065_titulo": {
+            "v": "Suspendisse laoreet enim id dignissim rutrum"
+        },
+        "4390_subtitulo": {
+            "v": "Nam tempus vestibulum blandit fusce iaculis"
+        }
+    }
+}

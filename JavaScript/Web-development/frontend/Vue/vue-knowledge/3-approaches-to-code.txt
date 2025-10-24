@@ -17,11 +17,11 @@ COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
                 - Component layers follow the order: template, script, style;
 
             Examples:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example1-using-options-api.vue
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example2-using-options-api.vue
+                ./3-example1-using-options-api.vue
+                ./3-example2-using-options-api.vue
 
             More about:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/
+                ./using-options-api/
 
 
         >> COMPOSITION API:
@@ -38,8 +38,8 @@ COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
                 - ref() only for primitives, reactive() only for objects;
 
             Examples:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example1-using-composition-api.vue
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example2-using-composition-api.vue
+                ./3-example1-using-composition-api.vue
+                ./3-example2-using-composition-api.vue
             
             More about:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/
+                ./using-composition-api/

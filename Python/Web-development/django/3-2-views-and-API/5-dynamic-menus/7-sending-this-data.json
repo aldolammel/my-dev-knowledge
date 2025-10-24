@@ -1,0 +1,20 @@
+{
+    "identifier": "menu_principal",
+    "is_urls_relative": true,
+    "links": [
+        {
+            "link_type": "page",
+            "url": "/pagina-inicial",
+            "url_target": "_self",
+            "is_home": true,
+            "title": "Página Inicial"
+        },
+        {
+            "link_type": "page",
+            "url": "/sobre",
+            "url_target": "_self",
+            "is_home": false,
+            "title": "Sobre"
+        }
+    ]
+}

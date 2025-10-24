@@ -1,7 +1,7 @@
 <!-- 
   
   Using the "Composition API" approach:
-  More about: /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/
+  More about: ./using-composition-api/
 
 -->
 
@@ -9,10 +9,10 @@
 <!--
 	
 	Vue app starts when index.html calls the Vue init file:
-		/JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example-main-html.html
+		./3-example-main-html.html
 
 	Vue init file:
-		/JavaScript/Web-development/frontend/Vue/vue-knowledge/3-example-vue-init.js
+		./3-example-vue-init.js
 
 -->
 

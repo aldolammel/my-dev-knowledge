@@ -1,0 +1,35 @@
+
+
+DJANGO: CREATING MENU DYNAMICALLY
+
+    >> Back-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        1. Create models;
+            ./1-models.py
+
+        2. Create utils;
+            ./2-utils.py
+
+        3. Create forms;
+            ./3-forms.py
+
+        4. Create admin models;
+            ./4-admin.py
+
+        5. Create serializers;
+            ./5-serializers.py
+
+        6. Create views;
+            ./6-views.py
+
+        7. How the Menus API will look-like:
+            ./7-sending-this-data.json
+
+
+    >> Front-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> Using Vue:
+            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/dynamic-menus/_creating-menu-system.txt
+
+        >> Using xxxx:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -1,4 +1,4 @@
 
 
 Look it here:
-    /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/menu-dynamic/
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/dynamic-menus/

@@ -16,7 +16,7 @@ VUE.JS COMPONENTS: SLOT
 
 
     >> Slot logic workflow:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue-component-slot.png
+        ./vue-component-slot.png
 
 
     >> You can use interpolation in the HTML fragment that will be sent to the child-component by
@@ -32,14 +32,14 @@ VUE.JS COMPONENTS: SLOT
 
     >> Slot examples:
         
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4.1-slot-example-basic.txt
+        ./5.4.1-slot-example-basic.txt
 
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt
+        ./5.4.2-slot-example-smart.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     >> Scoped Slot, using Slot with v-for:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt
+        ./5.4.3-slot-scoped.txt
 

@@ -25,7 +25,7 @@ BUILT-TOOLS FOR VUE.JS:
 
 
 >> GET TO KNOW HOW THE VUE STRUCTURE WORKDS:
-    /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue_structure.png
+    ./vue_structure.png
 
 
 >> INSTALL A VUE PROJECT:

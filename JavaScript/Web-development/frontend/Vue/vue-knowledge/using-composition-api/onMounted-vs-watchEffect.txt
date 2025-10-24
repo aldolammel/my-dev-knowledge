@@ -9,7 +9,7 @@ VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
         Use onMounted when you only want something once per component lifecycle.
 
             E.g.
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-onMounted.vue
+                ./function-onMounted.vue
 
 
     >> watchEffect():
@@ -18,7 +18,7 @@ VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
         Use watchEffect when you want your logic to reactively respond to changing reactive values like props, state, or route params.
 
             E.g.
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-watchEffect.vue
+                ./function-watchEffect.vue
 
 
     >> watch():
@@ -26,7 +26,7 @@ VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
         Pretty similar to watchEffect() but here it demands explicitness: you declare what you want to observe (e.g., props.slug). Gives you access to new and old values (newSlug, oldSlug). More control (e.g., conditionally skip fetches if nothing meaningful changed).
 
             E.g.
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/function-watch.vue
+                ./function-watch.vue
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
