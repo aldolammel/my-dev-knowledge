@@ -3,16 +3,21 @@
 PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END REACT:
 
 
-1) SETUP:
+1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> Database:
+
+        1.1) What db should be used:
+            /Database/00-new-project/
 
     >> Back-end:
 
-        1.1) Basic installations:
+        1.2) Basic installations:
             /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
     >> Front-end:
 
-        1.2) IDE, framework setup:
+        1.3) IDE, framework setup:
 
             >> VSCode:
                 /JavaScript/Web-development/frontend/React/IDE-softwares/vscode/xxxxxxxxxxxxxxx
@@ -20,10 +25,10 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
             >> Or PyCharm:
                 /JavaScript/Web-development/frontend/React/IDE-softwares/pycharm/xxxxxxxxxxxxxxx
         
-        1.3) React installation (and its dependencies):
+        1.4) React installation (and its dependencies):
             /JavaScript/Web-development/frontend/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-        1.4) (Optional)
+        1.5) (Optional)
             CSS Framework:
 
                 >> Bootstrap:
@@ -36,7 +41,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
                     /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
 
 
-2) DEVELOPMENT:
+2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     2.1) Front-end:
 

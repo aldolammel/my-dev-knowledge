@@ -22,16 +22,24 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 
         E.g. Using db constraints to be more specific (e.g., supported by Postgres, MySQL):
 
+            from django.db.models.functions import Length
+            models.CharField.register_lookup(Length)
+
             class Product(models.Model):
-                stock = models.PositiveIntegerField()
+                name = models.CharField(...)
                 ...
 
                 class Meta:
                     constraints = [
-                        models.CheckConstraint(         # Ensures values satisfy a condition.
-                            check=Q(stock__gte=0),      # If value great than zero, it's ok!
-                            name="stock_non_negative"
-                        )
+                        models.CheckConstraint(
+                            condition=models.Q(
+                                name__length__range=(
+                                    consts.VAL_TITLE_MIN,
+                                    consts.VAL_TITLE_MAX
+                                )
+                            ),
+                            name="product_name_length",
+                        ),
                     ]
                 ...
 

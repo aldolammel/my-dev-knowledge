@@ -32,7 +32,6 @@ VUE: PROPS ("PROPERTIES")
             // In a ChildComponent.vue:
             <script>
                 export default {
-                    // Props declaration for Options-API:
                     // Receiving Props from Parent:
                     props: {
                         contacts: {
@@ -40,8 +39,6 @@ VUE: PROPS ("PROPERTIES")
                             required: true
                         }
                     },
-                    // Emits declaration:
-                    // Reserved space...
                 }
             </script>
 
@@ -51,7 +48,6 @@ VUE: PROPS ("PROPERTIES")
 
             // In a ChildComponent.vue:
             <script setup>
-            // Props declaration for Composition-API:
             // Receiving Props from Parent:
             const props = defineProps({
                 contacts: {
@@ -59,8 +55,6 @@ VUE: PROPS ("PROPERTIES")
                     required: true
                 }
             })
-            // Emits declaration:
-            // Reserved space...
             </script>
             
 

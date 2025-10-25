@@ -7,7 +7,7 @@ COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
         and 'Composition API':
 
 
-        >> OPTIONS API:
+        >> OPTIONS API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             It's a way to define Vue components using an object with predefined option properties.
             The code is organized by options (data, methods, computed, etc.). It's the best way for
@@ -24,7 +24,7 @@ COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
                 ./using-options-api/
 
 
-        >> COMPOSITION API:
+        >> COMPOSITION API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             The modern script syntax that is more concise and recommended approach for Vue 3,
             bringing flexibility for mid and large projects. It's much more close to the JS;

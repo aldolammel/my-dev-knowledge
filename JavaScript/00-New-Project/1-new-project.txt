@@ -10,8 +10,15 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
         >> Update Vue version in an existent product: /JavaScript/Web-development/frontend/Vue/0-new-project/update-vue-version.txt
 
         >> Update XXxxxX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    
-    >> JS > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> DATABASE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> What db should be used:
+            /Database/00-new-project/
+
+
+    >> JS > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
         >> with Vue:
 
@@ -33,7 +40,7 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
             >> xxxxx: /JavaScript/00-New-Project/xxxxxxxxxx.txt  
         
 
-    >> JS > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> JS > SOFTWARE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
         >> with Xxxxx:
 

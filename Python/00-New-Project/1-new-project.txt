@@ -15,7 +15,13 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-    >> PYTHON > WEB-DEVELOPMENT: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >> DATABASE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> What db should be used:
+            /Database/00-new-project/
+
+
+    >> PYTHON > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
         >> with Django:
 
@@ -40,7 +46,7 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
                 /Python/Web-development/flask/0-new-project/web-project-flask-with-react.txt 
 
 
-    >> PYTHON > SOFTWARE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> PYTHON > SOFTWARE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
         >> with XXXXXX:
         

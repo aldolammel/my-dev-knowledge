@@ -2,45 +2,66 @@
 
 VUE.JS: 'PROVIDE' AND 'INJECT'
 
-    provide and inject are a pair of complementary options in Vue.js that enable parent components
-    to provide data and child components to inject and access that data. Unlike Vue's props and
-    events, which can pass data only 1 level up or down the component tree, provide and inject
-    allows providing data and/or functions to deeply nested components. This can be incredibly
+    Provide and inject are a pair of complementary options in Vue.js that enable parent components
+    to provide data and child components to inject and access that data. Unlike Vue's PROPS and
+    EVENTS, which can pass data only 1 level up or down the component tree, PROVIDE/INJECT allows providing data and/or functions to deeply nested components. This can be incredibly
     useful when you have deeply nested components that need to share data without passing it
     through a series of intermediate components.
 
-    >> PROPS VS PROVIDE/INJECT WORKFLOW:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/vue-props-vs-provide.png
-    
-    >> COULD I AVOID PROPS COMPLETELY TO USE JUST PROVIDE?
 
-        You technically can use Provide/Inject instead of Props for most component communication, 
+        >> Props VS Provide/Inject Workflow:
+            ./vue-props-vs-provide.png
+
+
+        >> Ancestor component (using Composition-API):
+
+            <script setup>
+            import { ref, provide } from 'vue'
+            const user = ref({ name: 'John', role: 'admin' })
+            provide('user', user) // Provides data to all descendants!
+            </script>
+
+
+        >> Deep descendant component (using Composition-API):
+            <script setup>
+            import { inject } from 'vue'
+            const user = inject('user') // Inject data from any ancestor!
+
+            // Optional: provide default value and make it required:
+            const user = inject('user', { name: 'Guest', role: 'user' })
+            </script>
+
+
+    >> COULD PROPS BE AVOIDED COMPLETELY TO USE PROVIDE/INJECT? - - - - - - - - - - - - - - - - - - 
+
+        You technically could use Provide/Inject instead of Props for most component communication, 
         but it's NOT recommended as a complete replacement. Check this out:
         
             Provide/Inject is perfect to:
 
-                - Theme configuration
-                - User authentication state
-                - Global app configuration
-                - Shared services/utilities
+                - Theme configuration.
+                - User authentication state.
+                - Global app configuration.
+                - Shared services/utilities.
+
+                Also Provide/Inject could be a good choice when your app's components are needing data 4+ levels deep through other components. More about Props Drilling issue:
+                    ./5.1.1-props-deeper-structure-problem.txt
 
 
             Why Props shouldn't be completely avoided:
 
                 1. Component Clarity & Predictability
 
-                    // With Props - Clear interface
-                    <UserCard :user="userData" :showEmail="true" />
+                    // With Props the child-component needs is clear:
+                        <UserCard :user="userData" :showEmail="true" />
 
-                    // With Provide/Inject - Hidden dependencies
-                    <UserCard />  // What data does this need? Unclear.
-
+                    // With Provide/Inject you've no clue if child-components are demanding data:
+                        <UserCard />  // What data does this need? Unclear.
 
                 2. Reusability
 
                     Props make components more reusable since their dependencies are explicit. With
                     Provide/Inject, components become tightly coupled to specific providers.
-
 
                 3. Type Safety & Debugging
 
@@ -48,28 +69,24 @@ VUE.JS: 'PROVIDE' AND 'INJECT'
                     is missing.
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-    >> PROVIDE/INJECT EXAMPLES:
+    >> PROVIDE/INJECT EXAMPLES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
-
         >> Basic:
 
             >> Using Options-API:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/provide-inject-example-basic/
+                ./using-options-api/z-examples/provide-inject-example-basic/
         
             >> Using Composition-API:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/provide-inject-example-basic/
+                ./using-composition-api/z-examples/provide-inject-example-basic/example.vue
 
 
         >> Inject for fuctions:
 
             >> Using Options-API:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/provide-intect-functions-example/
+                ./using-options-api/z-examples/provide-inject-functions-example/
 
             >> Using Composition-API:
-                /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/provide-intect-functions-example/
+                ./using-composition-api/z-examples/provide-inject-functions-example/
 
         
         

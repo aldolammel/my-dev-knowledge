@@ -20,6 +20,7 @@
 
 class ArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
+        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
         # custom save code...
         super().save_model(request, obj, form, change)
 
@@ -28,6 +29,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
+        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
         if not obj.pk:  # New object
             obj.created_by = request.user
         obj.last_modified_by = request.user
@@ -36,6 +38,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class OrderAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
+        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
         # Pre-save logic
         if obj.status == 'completed' and not obj.completed_at:
             obj.completed_at = timezone.now()

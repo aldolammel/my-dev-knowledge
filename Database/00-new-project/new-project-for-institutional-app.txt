@@ -1,0 +1,10 @@
+
+DATABASE > NEW PROJECT: FOR INSTITUTIONAL APP
+
+    xxxxxx
+    
+    >> PACELC DESIGN RECOMMENDATION
+        What is it:
+            ./principles-PACELC.txt
+        
+        For Institutional App, xxxxxxxxxxxxxxxxxxxxxxxxx

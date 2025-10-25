@@ -13,19 +13,7 @@ DJANGO STRUCTURE: MODELS.PY
 
     >> Django Model-class example that is used to create database structure - - - - - - - - - - - - 
 
-        class ExampleModel(models.Model):
-            name = models.CharField(            # Defining the atribute 'name' as a CharField field.
-                nax_length=100,
-                unique=True,
-            )
-            ...
-
-            class Meta:
-                db_table = "example_only"
-                ...
-
-            def _str_(self):
-                return self.name
+        
 
 
     >> Most commom attribute-types you will use to build up each database field - - - - - - - - - - 

@@ -5,14 +5,19 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
+    >> Database:
+
+        1.1) What db should be used:
+            /Database/00-new-project/
+
     >> Back-end:
 
-        1.1) Basic installations:
+        1.2) Basic installations:
             /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
     >> Front-end:
 
-        1.2) IDE, framework setup:
+        1.3) IDE, framework setup:
             
             >> VSCode:
                 /JavaScript/Web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
@@ -20,10 +25,10 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
             >> Or PyCharm:
                 /JavaScript/Web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
-        1.3) Vue installation (and its dependencies):
+        1.4) Vue installation (and its dependencies):
             /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
 
-        1.4) (Optional)
+        1.5) (Optional)
             CSS Framework:
 
             >> Bootstrap:

@@ -1,0 +1,10 @@
+
+DATABASE > NEW PROJECT: FOR SOCIAL MEDIA APP
+
+    xxxxxx
+    
+    >> PACELC DESIGN RECOMMENDATION
+        What is it:
+            ./principles-PACELC.txt
+        
+        For Social Media App, xxxxxxxxxxxxxxxxxxxxxxxxx
