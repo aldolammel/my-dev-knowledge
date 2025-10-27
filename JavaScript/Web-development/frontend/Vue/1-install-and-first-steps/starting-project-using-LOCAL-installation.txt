@@ -2,13 +2,13 @@
 
 >> ATTENTION 1: 
     Assuming you already got Node.js. Otherwise, do it:
-        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+        ./_vue-installation.txt
 
 
 >> ATTENTION 2:
     Regardless anything, don't install Vue in these paths to avoid conflicts:
         >> If your project is using Django as backend:
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt
+            ./backend-python-django.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

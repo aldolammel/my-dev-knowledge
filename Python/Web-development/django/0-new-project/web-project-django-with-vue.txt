@@ -26,7 +26,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
                 /JavaScript/Web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
         1.4) Vue installation (and its dependencies):
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
 
         1.5) (Optional)
             CSS Framework:
@@ -50,7 +50,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
         >> Code the entire navigation;
 
         >> Integrate back-end with front-end:
-            /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration.txt
+            /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
         
     2.2) Back-end:
         >> Build up the database of the product;

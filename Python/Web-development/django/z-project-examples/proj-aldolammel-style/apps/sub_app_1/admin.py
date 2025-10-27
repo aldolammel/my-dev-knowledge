@@ -31,6 +31,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
     # If you have 'created_by' or 'updated_by' you definitely need this method:
     def save_model(self, request, obj, form, change):
+        '''Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface.'''
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
 """

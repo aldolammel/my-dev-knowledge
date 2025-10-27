@@ -140,6 +140,7 @@ class UserCMS(UserAdmin):
         return self.readonly_fields
 
     def save_model(self, request, obj, form, change):
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Checks to save the current user as updated_by:
         cms_user = request.user
         if change and cms_user != obj.updated_by:

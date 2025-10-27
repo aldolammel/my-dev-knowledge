@@ -26,7 +26,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT
             >> PyCharm: /JavaScript/Web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
         6) Vue installation (and its dependencies):
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
 
         7) (Optional) CSS Framework:
 

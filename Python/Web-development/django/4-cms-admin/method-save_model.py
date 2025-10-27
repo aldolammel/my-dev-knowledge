@@ -2,7 +2,11 @@
 """
     DJANGO CMS > METHODS: SAVE_MODEL()
 
-    xxxxx. So it does:
+    The save_model() method is a model instance saving hook that lets you customize what happens when a model is saved through the Django admin interface. So it does:
+
+    - It's called when saving objects in the Django admin.
+    - It receives the model instance, the current request, and a boolean indicating if this is a new object or an update.
+    - It allows you to modify the object before saving or perform additional actions.
 
     >> Keep in mind:
     - Use save_model() for admin-specific logic that needs request context.
@@ -20,7 +24,7 @@
 
 class ArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
-        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # custom save code...
         super().save_model(request, obj, form, change)
 
@@ -29,7 +33,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
-        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         if not obj.pk:  # New object
             obj.created_by = request.user
         obj.last_modified_by = request.user
@@ -38,7 +42,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class OrderAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
-        """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."""
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Pre-save logic
         if obj.status == 'completed' and not obj.completed_at:
             obj.completed_at = timezone.now()

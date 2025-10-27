@@ -20,9 +20,9 @@ COMPUTED PROPERTIES VS METHODS:
     EXAMPLES:
         
         >> Composition API:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/_computed.vue
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/_methods.vue
+            ./using-composition-api/_computed.vue
+            ./using-composition-api/_methods.vue
         
         >> Options API:
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
-            /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
+            ./using-options-api/_option-computed.vue
+            ./using-options-api/_option-methods.vue

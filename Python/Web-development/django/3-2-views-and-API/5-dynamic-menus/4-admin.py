@@ -159,8 +159,7 @@ class PagexPageAdmin(admin.ModelAdmin):
     #...
 
     def save_model(self, request, obj, form, change):
-        """It's a key part of Django's admin customization that allows you to control what happens
-        when a model instance (models.py) is created/updated through the CMS."""
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Then process the keywords if provided:
         if "txt_to_kw" in form.cleaned_data and form.cleaned_data["txt_to_kw"]:
             obj.keyword_converter(form.cleaned_data["txt_to_kw"])

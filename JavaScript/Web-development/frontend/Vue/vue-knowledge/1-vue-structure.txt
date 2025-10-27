@@ -136,4 +136,4 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
 >> INSTALL A VUE PROJECT:
-    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt

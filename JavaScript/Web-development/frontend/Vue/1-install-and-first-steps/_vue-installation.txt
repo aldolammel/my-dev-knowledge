@@ -5,16 +5,16 @@
 
         PRE.0) In case you need install or re-install an existent Vue project:
 
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/reinstall-new-vue-copy.txt
+            ./reinstall-new-vue-copy.txt
     
         
         PRE.1) In case your project will have a back-end:
 
             >> Django Back-end, project Folder's structure:
-                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+                ./project-folder-structure-vue-and-django.txt
 
             >> Flask Back-end, project Folder's structure:
-                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-flask.txt
+                ./project-folder-structure-vue-and-flask.txt
                 
             >> OR NO BACK-END or Vue.js will be the full solution, so keep going anyway...
 
@@ -46,6 +46,6 @@
 
                 
         3) Install the Vue build-tool and Create the Vue.js project:
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/create-vue-project.txt
+            ./create-vue-project.txt
 
             

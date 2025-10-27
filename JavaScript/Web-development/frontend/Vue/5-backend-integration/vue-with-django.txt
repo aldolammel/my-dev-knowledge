@@ -2,9 +2,15 @@
 
 BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
-    /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration.txt
+
+    >> Using Pagex to manage the content:    
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
+
+    >> Using xxxxx:
+        /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-    >> Data workflow:
-            
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+    >> DJANGO/VUE DATA WORKFLOW:            
         /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png

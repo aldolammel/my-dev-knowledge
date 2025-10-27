@@ -56,7 +56,6 @@ class PageModelAdmin(admin.ModelAdmin):
     )
 
     def save_model(self, request, obj, form, change):
-        """It's a key part of Django's admin customization that allows you to control what happens
-        when a model instance (models.py) is created/updated through the CMS."""
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)

@@ -18,6 +18,7 @@ class MovieAdmin(admin.ModelAdmin):
     )
 
     def save_model(self, request, obj, form, change):
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         if not obj.pk:  # New movie
             obj.created_by = request.user
         obj.updated_by = request.user

@@ -6,7 +6,7 @@ RE-INSTALL VUE:
     >> If you are install Vue for the very first time, and it's a brand new project,
         skip here and go:
 
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
 
 
     >> If you want just re-install the Vue based on the existent project, you can just clone the

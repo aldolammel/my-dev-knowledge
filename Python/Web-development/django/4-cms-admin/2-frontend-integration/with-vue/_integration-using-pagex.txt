@@ -1,0 +1,90 @@
+
+
+BACK AND FRONT-END INTEGRATION: DJANGO (WITH PAGEX) AND VUE
+
+
+    PRE.1) Setup Python + Django + Vue done;
+            /Python/Web-development/django/0-new-project/web-project-django-with-vue.txt
+
+    PRE.2) It's crucial 'Pagex' module (sub-app by @aldolammel) be installed in the back-end.
+            /Python/Web-development/django/usefull-sub-apps/pagex/pagex.txt
+
+    PRE.3) Remember - data workflow between Django and Vue:
+            ./django-with-vue-integration.png
+
+    PRE.4) Make sure you already got the front-end .env file:
+            /Environment-Variables/env-for-local/in-frontend/.env
+
+    
+    >> Back-end steps > Django with Pagex - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        x) Make sure your /core/settings.py has REST_FRAMEWORK and CORS already configured;
+
+        x) The /pagex/utils.py file has all custom functions needed to Pagex works;
+    
+        x) Check if /pagex/models.py are ready to receive all data you need;
+
+        x) Now, via /pagex/serializers.py, make sure you're converting all desired data to the JSON format in order to use DJANGO REST FRAMEWORK correctly;
+
+        x) (If applicable)
+            If you didn't include any new Pagex model, just skip the next aware points;
+
+            x.x) Check if you don't need to update pagex/views.py;
+
+            x.x) Check if you don't need to update pagex/urls.py;
+
+        x) (CRUCIAL)
+            In your app /core/urls.py, initialize the Router and its ViewSets, and then add API endpoints:
+                ./examples/using-pagex/in-your-core-urls.py
+
+
+    >> Front-end steps > Vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        PRE) Probably you need to install DotEnv to call front-end Environment variables:
+                $ npm install -D dotenv
+
+        x) (If applicable)
+            If you're usign VITE, check the Vite configure file (in front-end folder root):
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/vite.config.js
+        
+        x) Create a Pinia store to manage content sent by Django Pagex (Menus, Page content, and Structure content):
+            
+            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/menus.js
+            
+            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/pages.js
+
+            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/structures.js
+
+        X) Create the Vue Router and its routes:
+
+            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router.js
+
+            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/routes.js
+
+        X) Integrate the Pagex menus, calling each dynamic menu in the right .vue component file:
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/App.vue
+
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/AppHeader.vue
+
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/NavMain.vue
+        
+        X) Integrate the Pagex Page contents, calling each dynamic content through the app's front-end:
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/Home.vue
+
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/HeroBig.vue
+
+        X) Integrate the Pagex Structure contents, calling each global content through the app's front-end:
+            E.g.
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/AppFooter.vue
+
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/NavFooter.vue
+
+     
+    >> Test the integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        /Python/Web-development/django/4-cms-admin/2-frontend-integration/testing-integration.txt
+            
+
+

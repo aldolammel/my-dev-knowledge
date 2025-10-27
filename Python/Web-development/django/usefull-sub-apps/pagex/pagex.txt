@@ -12,6 +12,11 @@ DJANGO USEFULL APPS: PAGEX by @aldolammel
 
         Github link...
 
+        >> Dependencies:
+            - django 5.2+
+            - adminsortable2
+            - rest_framework
+            - corsheaders
 
 
         >> Settings.py

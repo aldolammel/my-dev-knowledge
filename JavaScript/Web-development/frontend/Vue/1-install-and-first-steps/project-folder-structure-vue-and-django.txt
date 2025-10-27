@@ -34,4 +34,4 @@ VUE: WITH DJANGO BACK-END
 
 
     3) Once you have decided with structure to follow, return to the main guide for Vue installation:
-        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_installation.txt
+        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
