@@ -32,24 +32,30 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
                     $ uv python list
 
                 # Add the new one, e.g.:
-                    $ uv python install 3.13.3
+                    $ uv python install 3.13.9
 
 
             B.2) In your project folder/environment, set up:
 
                 # Defining to UV which Python version the project must run, e.g.:
-                    $ uv python pin 3.13.3
+                    $ uv python pin 3.13.9
                         # It will auto-update the .python-version file!
 
-                # (If applicable) For projects using RUFF:
+                
+                # (If applicable) In pyproject.toms file, update Python version:
+                    [project]
+                    ...
+                    requires-python = "==3.13.9"  # Or ">=3.13.7,<3.14"
+                
+                # (If applicable) In pyproject.toml file, if using RUFF:
                     [tool.ruff]
                     ...
-                    target-version = "py313"  # Update here too!
+                    target-version = "py313"  # Python (py313 means newest of 3.13 = 3.13.9) <------
 
-                # (If applicable) For projects using MyPy:
+                # (If applicable) In pyproject.toml file, if using MyPy:
                     [tool.mypy]
                     ...
-                    python_version = "3.13"  # Update here too!
+                    python_version = "3.13"  # 3.13 means newest of 3.13 = 3.13.9  <----------------
 
                 # Sync the environment (UV will recreate venv with new Python):
                     /Python/Package-manager/uv/auto-installation-with-sync.txt

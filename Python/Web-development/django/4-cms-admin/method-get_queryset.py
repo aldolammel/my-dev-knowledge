@@ -1,12 +1,12 @@
 
 """
-    DJANGO > CMS CUSTOMIZATIONS > BUILT-IN METHODS: GET_QUERYSET()
+    DJANGO CMS > METHODS: GET_QUERYSET()
 
     >> More about:
         /Python/Web-development/django/3-1-models-database/4-querysets/method-get_queryset.txt
 
     >> Some alternatives to get_queryset():
-        ./detailview-filtering-any-data.py
+        ./1-customizing/detailview-filtering-any-data.py
 """
 
 

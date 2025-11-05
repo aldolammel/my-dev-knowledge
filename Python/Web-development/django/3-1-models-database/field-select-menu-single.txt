@@ -18,14 +18,16 @@ A) FIELD: SELECT MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
         artists you want as option. In the sub-app 'models.py' file, do it:
         
         
-        A.1) Create both classes:
+        A.1) In models.py file, create both model classes:
 
                 class Artist(models.Model):
                     name = ...
+                    is_listed = ...
 
                 class ArtistOfWeek(models.Model):
                     week = ...
                     artist_selected = ...
+                    is_published = ...
 
 
         A.2) In the same code snippet, lets create a releationship between both classes through
@@ -33,27 +35,43 @@ A) FIELD: SELECT MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
 
                 class ArtistOfWeek(models.Model):
                     week = ...
-                    artist_selected = models.ForeignKey(Artist, on_delete=models.CASCADE)
+                    artist_selected = models.ForeignKey(
+                        Artist,  # or "Artist" for self-reference
+                        on_delete=models.CASCADE,
+                    )
+                    is_published = ...
 
-
+        
         A.3) In admin.py file:
             
-                from .models import Artist, ArtistOfWeek
+                from . import models
 
 
-                class ArtistCMS(admin.ModelAdmin):
+                @admin.register(models.Artist)
+                class ArtistAdmin(admin.ModelAdmin):
                     list_display = ('name', )
 
 
-                class ArtistOfWeekCMS(admin.ModelAdmin):
+                @admin.register(models.ArtistOfWeek)
+                class ArtistOfWeekAdmin(admin.ModelAdmin):
                     list_display = ('week', 'artist_selected',)
 
+                    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+                        """Built-in method that allows to override the default formfield for a foreignkeys field."""
+                        if db_field.name == 'artist_selected':
+                            # Filter queryset:
+                            kwargs['queryset'] = models.Artist.objects.filter(is_listed=True)
+                        return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
-                admin.site.register(Artist, ArtistCMS)
-                admin.site.register(ArtistOfWeek, ArtistOfWeekCMS)
 
+        A.4) (Optional)
+            Remove the adding and deleting buttons of Artists ForeignKey field in ArtisOfWeekAdmin:
 
-        A.4) Only to make sure everything will be ready to test, execute the migration:
+                /Python/Web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.txt
+        
+        
+        
+        A.5) Only to make sure everything will be ready to test, execute the migration:
                 
                 $ python manage.py makemigrations <subapp_name>
                 $ python manage.py migrate

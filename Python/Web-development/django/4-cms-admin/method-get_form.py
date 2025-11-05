@@ -29,3 +29,24 @@ class MyModelAdmin(admin.ModelAdmin):
 
 
 # Common example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+from django import forms as f
+
+class PagexPostAdmin(admin.ModelAdmin):
+    def get_form(self, request, obj=None, change=False, **kwargs):
+        """Built-in method to customize the form that's displayed in the interface."""
+        form = super().get_form(request, obj, change, **kwargs)
+        ...
+        # Customizing the drop-down-menu "blog" foreignkey field:
+        if "blog" in form.base_fields:
+            # Removing default add/remove buttons, applying the simple ModelChoiceField:
+            form.base_fields["blog"] = f.ModelChoiceField(
+                queryset=models.PagexPage.objects.filter(
+                    is_blog=True,
+                    # is_published=True,  # Important: let the unpublished blogs be listed too!
+                ),
+                required=False,
+                label="Página de publicação",
+                help_text="Selecione a página que esta publicação pertence.",
+            )
+        return form

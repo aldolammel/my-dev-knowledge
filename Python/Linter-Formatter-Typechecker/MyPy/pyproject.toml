@@ -2,7 +2,7 @@
 
 # Python static type checker:
 [tool.mypy]
-python_version = "3.13"  # <-------- <---------- <--------------
+python_version = "3.13"  # 3.13 means newest of 3.13 = 3.13.9  <----------------
 check_untyped_defs = true
 ignore_missing_imports = true
 warn_unused_ignores = true

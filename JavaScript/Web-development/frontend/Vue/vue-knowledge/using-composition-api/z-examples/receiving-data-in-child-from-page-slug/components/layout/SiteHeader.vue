@@ -26,7 +26,7 @@ const pg = computed(() => store.pages[props.page] || null);
               {{ pg.seo_title }}
             </h1>
             <p class="mb-4">
-              {{ pg.content["9065_titulo"].v }}
+              {{ pg.content["9065_titulo"]?.v }}
             </p>
             <p>
               <a href="" class="btn btn-secondary me-2">Sabia mais</a

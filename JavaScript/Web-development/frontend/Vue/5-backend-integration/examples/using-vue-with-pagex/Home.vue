@@ -41,11 +41,11 @@ watch(slug, async (newSlug) => {
 
 <template>
   <HeroBig
-    :title="pg.content['7990_titulo'].v"
-    :subtitle="pg.content['915_subtitulo'].v"
+    :title="pg.content['7990_titulo']?.v"
+    :subtitle="pg.content['915_subtitulo']?.v"
     bt-text="Saiba mais"
-    :bt-link="pg.content['3651_hyperlink'].v"
-    :img="pg.content['7022_imagem'].v"
+    :bt-link="pg.content['3651_hyperlink']?.v"
+    :img="pg.content['7022_imagem']?.v"
   />
   <p>...</p>
 </template>

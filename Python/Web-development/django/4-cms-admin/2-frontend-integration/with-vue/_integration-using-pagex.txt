@@ -57,7 +57,22 @@ BACK AND FRONT-END INTEGRATION: DJANGO (WITH PAGEX) AND VUE
 
         X) Create the Vue Router and its routes:
 
-            /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router.js
+            x.A) Each page of the app has its own .vue component;
+            x.B) Each page of the app is dynamic created, using a generic .vue component;
+            x.C) Project hybrid.......
+
+            - - - - - -
+
+            x.A) Each page of the app has its own .vue component:
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-props/router.js
+
+            x.B) Each page of the app is dynamic created, using a generic .vue component:
+                /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-parameters/router.js
+
+            x.C) Project hybrid.......:
+                /xxxxxxxxxxxxxxx
+
+            
 
             /JavaScript/Web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/routes.js
 

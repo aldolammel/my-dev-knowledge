@@ -10,7 +10,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
 
     # FILTERING OBJECTS FROM CMS (NOT RECOMMENDED) - - - - - - - - - - - - - - - - - - - - - - - - -
-    # ./method-get_queryset.py
+    # /Python/Web-development/django/4-cms-admin/method-get_queryset.py
 
 
     # FILTERING FROM A FIELD/ATTRIBUTE (DROPDOWN) - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -27,10 +27,10 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: SMALL AUTO FIELD
 >> Other related options:
 
     >> Auto Field:
-        /Python/Web-development/django/3-1-models-database/model-attr-field-auto.txt
+        ./model-attr-field-auto.txt
 
     >> Big Auto Field:
-        /Python/Web-development/django/3-1-models-database/model-attr-field-bigAuto.txt
+        ./model-attr-field-bigAuto.txt
 
 
 

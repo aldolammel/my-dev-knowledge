@@ -16,7 +16,7 @@ export async function initDynamicRoutes() {
   const store = usePagesStore();
   const pages = await store.fetchAllPages();
 
-  // Fetch each page and add them as a new route:
+  // Fetch each page and add their slug as a new route, storing them as Props, not as parameters:
   pages.forEach((page) => {
     const componentLoader = componentRegistry[page.vue_component];
     if (componentLoader) {

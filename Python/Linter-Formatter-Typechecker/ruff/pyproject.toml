@@ -14,7 +14,7 @@ dev = [
 [tool.ruff]
 line-length = 100
 indent-width = 4
-target-version = "py313"  # Python version for better analysis <-------- <---------- <--------------
+target-version = "py313"  # Python version (py313 means newest of 3.13 = 3.13.9) <------------------
 
 [tool.ruff.format]
 quote-style = "double"

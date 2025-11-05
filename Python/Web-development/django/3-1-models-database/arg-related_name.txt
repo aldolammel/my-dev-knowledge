@@ -1,0 +1,12 @@
+
+
+DJANGO MODEL CLASS > ARGUMENT: RELATED_NAME
+
+    xxxx
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DJANGO QUERYSETS:
+    ./4-querysets/

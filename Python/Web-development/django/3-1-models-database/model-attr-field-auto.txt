@@ -14,7 +14,11 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: AUTO FIELD
         Automatically incrementing primary keys. You don't define the value; Django automatically assigns the next available number upon object creation. BigAutoField is the default in modern Django to avoid the table size limit of AutoField.
 
     Example:
-        xxxxxxxxxxxxxxxxxx
+        id = models.AutoField(
+            primary_key=True,
+            unique=True,
+            editable=False,
+        )
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
