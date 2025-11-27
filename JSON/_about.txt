@@ -2,9 +2,13 @@
 
 JSON (JavaScript Object Notation):
 
+    It's the way to send objects among systems.
+    
     JSON file is a lightweight data-interchange format that is easy for humans to read and write,
     and easy for machines to parse and generate. JSON is primarily used to transmit data between a
     server and a web application.
+
+    JSON born as a simplification of the XML.
 
     IMPORTANT:
         Json always returns a dictionary.
