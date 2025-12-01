@@ -1,0 +1,33 @@
+
+
+HTML > FORM: ENCTYPE ATTRIBUTE
+
+    The enctype attribute specifies how the form-data should be encoded when submitting it to the server. The enctype attribute can be used only if method="post".
+
+    >> Values:
+
+        application/x-www-form-urlencoded
+            Default. All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)
+
+        multipart/form-data
+             This value is necessary if the user will upload a file through the form
+
+        text/plain
+            Sends data without any encoding at all. Not recommended
+
+
+    E.g.
+        <form action="/action_page_binary.asp" method="post" enctype="multipart/form-data">
+            <input type="file" />
+            ...
+        </form>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> FORM METHOD ATTRIBUTE:
+    /HTML/form/attr-method.txt
+
+>> FORM ENCTYPE ATTRIBUTE:
+    /HTML/form/attr-enctype.txt

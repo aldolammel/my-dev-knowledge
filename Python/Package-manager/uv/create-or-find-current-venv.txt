@@ -8,7 +8,7 @@ PYTHON > UV PACKAGE MANAGER: CREATING A VENV OR FINDING THE EXISTING ONE
 
         # This command will search for existing venv folders for the current folder project, and, if none is found, UV will create a clean '.venv' folder automatically!
 
-        # For specific venv folder name:
+        # For specific venv folder name (not recommended):
             $ uv venv <venv_folder_name>
 
 

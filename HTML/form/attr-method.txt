@@ -1,0 +1,21 @@
+
+
+HTML > FORM: METHOD ATTRIBUTE
+
+    xxxxxx
+
+
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> FORM ACTION ATTRIBUTE:
+    /HTML/form/attr-action.txt
+
+>> FORM ENCTYPE ATTRIBUTE:
+    /HTML/form/attr-enctype.txt

@@ -1,7 +1,0 @@
-
-To organize:
-    /Python/27-Files-basics/
-
-
-UDEMY:
-https://www.udemy.com/course/python-django-the-practical-guide/learn/lecture/26399306

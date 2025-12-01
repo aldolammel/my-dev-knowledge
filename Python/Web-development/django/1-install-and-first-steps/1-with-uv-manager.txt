@@ -78,7 +78,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
                         PRE.1) Make sure you has active the project's virtual environment!
                             /Python/02-virtual-environment/activate-and-deactivate.txt
 
-                        PRE.2) If needed, model file:
+                        PRE.2) If needed, model files:
                             >> With Python basics:
                                 /Python/Web-development/pyproject.toml
                             >> With Django basics:

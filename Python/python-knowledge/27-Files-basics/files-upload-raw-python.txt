@@ -1,0 +1,12 @@
+
+
+PYTHON: HOW TO UPLAOD FILES USING ONLY PYTHON
+
+    xxx
+
+
+
+- - - 
+
+OTHER PYTHON OPTIONS (USING FRAMEWORKS):
+    ./files-upload-options.txt

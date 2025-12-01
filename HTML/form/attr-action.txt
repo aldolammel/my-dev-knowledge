@@ -1,0 +1,27 @@
+
+
+HTML > FORM: ACTION ATTRIBUTE
+
+    The action attribute specifies where to send the form-data when a form is submitted.
+
+    <form action="URL">
+
+    URL values:
+        - Can be relative = /thankyou.php
+        - Or absolute = https://www.aldolammel.com/thankyou.php
+
+
+    E.g.
+        <form action="/action_page.php" method="get">
+            ...
+        </form>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> FORM METHOD ATTRIBUTE:
+    /HTML/form/attr-method.txt
+
+>> FORM ENCTYPE ATTRIBUTE:
+    /HTML/form/attr-enctype.txt

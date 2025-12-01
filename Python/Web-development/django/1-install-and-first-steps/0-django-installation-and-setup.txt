@@ -21,7 +21,7 @@ DJANGO: INSTALLING AND SETUP
             /Python/02-virtual-environment/creating-virtual-environment.txt
 
     PRE.4) Did you already active project's virtual environment?! I hope so!
-            /Python/02-virtual-environment/activate-and-deactivate.txt
+            /Python/02-virtual-environment/
 
     PRE.5) IDE, language setup:
             >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
@@ -37,7 +37,7 @@ DJANGO: INSTALLING AND SETUP
 
 
     
-    1) Define the Package Manager to setup project for Django:
+    1) Installing Django through the right Package Manager:
 
         1A) Installing Django, using UV (recommended, more professional):
             ./1-with-uv-manager.txt
@@ -47,7 +47,7 @@ DJANGO: INSTALLING AND SETUP
 
     
     
-    2) Creating Django Project Structure:
+    2) After Django installation, create the Django Project Structure:
         
         # Go to the project root folder and ask the package manager to create the 'core' folder:
             # Using UV:
@@ -70,12 +70,12 @@ DJANGO: INSTALLING AND SETUP
             $ uv run manage.py migrate
 
         3.3) Run Django to check if it's accessable by your local browsers:
-                # Starting Django server:
-                    $ python manage.py runserver
-                    or
-                    $ uv run manage.py runserver
-                # On browser:
-                    http://localhost:8000/
+            # Starting Django server:
+                $ python manage.py runserver
+                or
+                $ uv run manage.py runserver
+            # On browser:
+                http://localhost:8000/
 
     
 

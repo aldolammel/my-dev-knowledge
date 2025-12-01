@@ -1,0 +1,61 @@
+
+
+HTML > FORM: UPLOADING FILES
+
+    You need a programming language first:
+
+        PRE) Solution using:
+
+            >> Python:
+                /Python/python-knowledge/27-Files-basics/files-upload-options.txt
+
+            >> JavaScript:
+                /xxxxxxxxxxxxx
+
+            >> PHP:
+                /xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+    In a HTML form:
+        
+        1) In the form tag, and through action attribute, set the url where the form will perform its service;
+
+            E.g.
+                <form action="/my_subapp_done_page/" ...>
+                    ...
+                </form>
+
+                More about it:
+                    /HTML/form/attr-action.txt
+
+
+        2) Define that as post method;
+
+            E.g.
+                <form ... method="post" ...>
+                    ...
+                </form>
+
+                More about it:
+                    /HTML/form/attr-method.txt
+        
+
+        3) Set the 'enctype' attribute as 'multipart/form-data' that means you are telling to the browser you're sending one or more files;
+
+            E.g.
+                <form ... enctype="multipart/form-data">
+                    ...
+                </form>
+
+                More about it:
+                    /HTML/form/attr-enctype.txt
+
+
+        4) Now, give a name to the file input that should describe with kind of file the field deals:
+        
+            E.g.
+                <form ...>
+                    <inpuy type="file" name="image" /> <!-- name helps to find this data -->
+                    ...
+                    <button>Upload</button>
+                </form>

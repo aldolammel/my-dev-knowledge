@@ -1,0 +1,28 @@
+
+
+PYTHON: HOW TO UPLOAD A FILE
+
+    1) Throught the HTML, do it:
+        /HTML/form/files-upload.txt
+
+    2) Which Web development framework are you using:
+
+        >> Only Python:
+            ./files-upload-raw-python.txt
+        
+        >> Django:
+            /Python/Web-development/django/5-uploads/files-upload-with-django.txt
+
+        >> FastAPI:
+            /Python/Web-development/fast-api/5-uploads/files-upload-with-fastapi.txt
+        
+        >> Flask:
+            /Python/Web-development/flask/uploads/files-upload-with-flask.txt
+
+        >> React:
+            /xxxxxxxxxxxxx
+        
+        >> Angular:
+            /xxxxxxxxxxxxxxxxxxx
+
+        

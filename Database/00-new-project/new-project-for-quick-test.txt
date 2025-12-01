@@ -1,0 +1,19 @@
+
+DATABASE > NEW PROJECT: FOR A QUICK TEST APP
+
+    >> For Python/Django project:
+
+        Django uses SQLite as default solution, so just create the django app that the system will create the db automatically.
+
+
+    >> For xxxxxxxxxxxxxxxxxxxx:
+
+        xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        
+    
+    >> PACELC DESIGN RECOMMENDATION
+        What is it:
+            ./principles-PACELC.txt
+        
+        For Institutional App, xxxxxxxxxxxxxxxxxxxxxxxxx

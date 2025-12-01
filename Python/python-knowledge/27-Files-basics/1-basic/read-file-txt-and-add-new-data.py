@@ -1,5 +1,5 @@
 """
-HOW TO READ AND. AFTER THAT. WRITE IN THE SAME FILE:
+HOW TO READ AND, AFTER THAT, WRITE IN THE SAME FILE:
 
 Tip: run this file and, after that, open manually the "db.txt" file to check the new line added.
 

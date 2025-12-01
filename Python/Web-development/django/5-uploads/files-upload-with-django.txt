@@ -1,0 +1,66 @@
+
+
+DJANGO: HOW TO UPLOAD FILES
+
+
+    PRE) Make sure you already did it:
+        /Python/python-knowledge/27-Files-basics/files-upload.txt
+
+
+    1) What way you wanna take for your app file uploading?
+
+        1A) Using basic Django solution;
+        1B) xxxxxxxxxxxxxx
+
+        - - - - - - 
+
+        1A) Using basic Django solution:
+
+            PRE) Once the HTML form is available and targeting in your Django app via form action attribute, make sure the first line after the opening <form> tag is:
+                
+                {% csrf_token %}
+
+            1A.1) Go to the app views.py file and:
+
+                E.g.
+
+                    from django.http import HttpResponseRedirect
+                    from django.shortcuts import render
+                    from django.views import View
+
+                    class CreateProfileView(View):
+                        def get(self, request):
+                            return render(request, "profiles/create_profile.html")
+
+                        def post(self, request):
+                            request.FILES  
+                                # This 'request' object has properties like: 
+                                # .POST: access to all sent non-file data from form;
+                                # .FILES: access to uploaded file (dictionary) from form;
+                            return HttpResponseRedirect('/my_subapp_done_page')
+
+            1A.2) Assuming your input file through the form has a name, tell Django which dictionary key it should work with the app uploaded files:
+                
+                E.g. 
+                    request.FILES['image']  # Assuming the input file is named as 'image'!
+
+            1A.3) Still in your_app/views.py file, create a function to handle the uploaded files. So before the view class, choose one way:
+
+                1A3.1) Using Python only;
+                1A3.2) Or using Django basic solution;
+
+                - - - - - 
+
+                1A3.1) Using Python only:
+                    /Python/python-knowledge/27-Files-basics/1-basic/write-file-img.py
+                
+                1A3.2) Using Django basic solution:
+                    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        
+
+
+
+- - - - 
+
+FOR ANOTHER PYTHON FRAMEWORK:
+    /Python/python-knowledge/27-Files-basics/files-upload.txt
