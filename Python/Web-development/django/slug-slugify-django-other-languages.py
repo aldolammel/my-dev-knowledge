@@ -18,7 +18,7 @@
 
 
 # FOR MORE OPTIONS:
-# $ pip install python-slugify
+# $ python3 -m pip install python-slugify
 # Or $ uv add python-slugify       <---------
 from slugify import slugify
 text = "Ação, Reação & Emoção!"

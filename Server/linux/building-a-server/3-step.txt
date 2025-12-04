@@ -19,7 +19,7 @@ $ python3.12 --version    # to confirm that it's installed
 Install pip:
 $ sudo apt install python3-pip -y
 
-$ pip --version
+$ python3 -m pip --version
 
 Installing a database
 For SQLite3
@@ -88,20 +88,20 @@ Try to do that with the root user.
 Installing VPS-side modules
 Still in the root project folder and on the right virtualenv selected, install the vps-side modules:
 # Check if the modules are present on the virtual environment modules installed list:
-$ pip list
+$ python3 -m pip list
 
 # install:
 $ sudo pip install wheel        # probably already installed.
 $ sudo pip install gunicorn     # WSGI
 
 # Check again:
-$ pip list
+$ python3 -m pip list
 Installing all application modules
 After that, run the web application requirements.txt file:
 $ sudo pip install -r requirements.txt
 
 # Check if the modules are present on the virtual environment modules installed list:
-$ pip list
+$ python3 -m pip list
 Firewall update
 Python running on the web uses port 5000
 $ sudo ufw allow 5000

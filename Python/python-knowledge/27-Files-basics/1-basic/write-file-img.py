@@ -1,10 +1,13 @@
 
-# CRUCIAL: make sure you have create the file folder before!
+
+# CRUCIAL: make sure you have create the file folder before! E.g. "uploads" folder
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 # Write (save/upload) an image file (with no additional features):
-# ATTENTION 1: No encoding parameter: Binary data doesn't need text encoding.
-# ATTENTION 2: this file path below starts from the Python root folder always!
+# ATTENTION: this file path below starts from the Python root folder always!
 with open("uploads/temp_image.jpg", mode="wb") as file:  # wb = write binary
     file.write(image_data)  # image_data must be bytes
 
@@ -12,15 +15,14 @@ with open("uploads/temp_image.jpg", mode="wb") as file:  # wb = write binary
 
 # Write image in chunks (memory-efficient for large files) througt a function:
 def store_file(file):
-    # ATTENTION 1: No encoding parameter: Binary data doesn't need text encoding.
-    # ATTENTION 2: this file path below starts from the Python root folder always!
+    # ATTENTION: this file path below starts from the Python root folder always!
     with open("uploads/temp_image.jpg", "wb+") as dest:  # wb+ = write binary and read it
         for chunk in file.chunks():
             dest.write(chunk)
 
 
 
-# The same function as above but with file quality control:
+# The same function as above but with a few upload validations:
 import os
 from datetime import datetime
 
@@ -36,8 +38,8 @@ def store_file(file):
     """
     # Define allowed extensions and max size
     ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif'}
-    MAX_MB = 10  # Always in MB
-    MAX_FILE_SIZE = MAX_MB * 1024 * 1024  # Converted from Bites to MB in bytes
+    MAX_MB = 10  # Maximum upload file size in megabytes (MB).
+    MAX_FILE_SIZE = MAX_MB * 1024 * 1024  # Converting to bytes! 1MB=1024KB×1024bytes=1,048,576bytes
     
     # Extract original filename and extension
     original_filename = getattr(file, 'name', 'unknown')
@@ -67,6 +69,7 @@ def store_file(file):
     
     # Build new filename with prefix
     new_filename = f"{datetime_prefix}_{filename}{extension}"
+    # ATTENTION: this file path below starts from the Python root folder always!
     file_path = os.path.join("uploads", new_filename)
     
     # Ensure uploads directory exists

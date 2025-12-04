@@ -59,7 +59,7 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
         # Using UV:
             $ uv add wagtail
         # Using PIP:
-            $ pip install wagtail
+            $ python3 -m pip install wagtail
 
 
     3) In the project root folder:

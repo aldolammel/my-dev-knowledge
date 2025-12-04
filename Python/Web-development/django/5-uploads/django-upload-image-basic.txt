@@ -1,0 +1,32 @@
+
+
+DJANGO: HOW TO UPLOAD IMAGE FILES (BASIC STEPS)
+
+
+    1) If not ready yet, create the 'uploads' folder (or another name up to you), for example, in the Django project's root folder;
+            
+
+    2) In your Django core settings (settings.py), define the MEDIA_ROOT constant path based on your choice in the previous step:
+
+        E.g.
+            MEDIA_ROOT = BASE_DIR / 'uploads'
+
+
+    3) Install the Pillow (needed to use Django models.ImageField):
+            
+        $ python3 -m pip install Pillow
+        or:
+        $ uv add pillow
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+WHAT DJANGO IMAGE UPLOAD SOLUTION DO YOU WANT:
+
+    >> As simple as possible:
+        ./django-upload-image-simplest.txt
+
+    >> For fancy forms with Django:
+        ./django-upload-image-p1.txt

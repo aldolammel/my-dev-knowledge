@@ -1,0 +1,91 @@
+
+
+DJANGO: HOW TO UPLOAD IMAGE FILES (PART 2/2)
+
+
+    PRE) Make sure you already prepared your Django:
+        /Python/Web-development/django/5-uploads/django-upload-image-p1.txt
+    
+
+    1) If not ready yet, creating the folder to store the uploaded files:
+
+        1.1) Create the 'uploads' folder (or another name up to you), for example, in the Django project's root folder;
+        
+        1.2) In your Django core settings (settings.py), define the MEDIA_ROOT constant path based on your choice in the previous step:
+
+            E.g.
+                MEDIA_ROOT = BASE_DIR / 'uploads'
+
+
+    2) To simplify and even expand the form upload possibilities, let's create a Django model (but without to store images in the db [aweful for db performance]):
+
+        2.1) Install the Pillow (needed to use Django models.ImageField):
+            
+            $ python3 -m pip install Pillow
+            or:
+            $ uv add Pillow
+        
+        2.2) Go to your app models.py file and:
+
+            E.g.
+                class UserProfile(models.Model):
+                    #...
+                    avatar = models.ImageField(upload_to='avatars')  # avatars is the folder in uploads folder!
+                        # Other model options for upload files:
+                        # models.FileField() - It won't be stored in the db, but in server disk;
+                        # models.ImageField()
+
+        2.3) Run makemigrations and migrate!
+        
+    
+    3) Creating the custom form using Django:
+
+        3.1) In your sub-app folder, create the 'forms.py' file if it doesn't exist yet:
+
+            E.g.
+                from django import forms
+                class ProfileForm(forms.Form):
+                    user_image = forms.ImageField()  # It forces browser to accept only images here.
+
+
+        3.2) After that, go in the form template itself (html), and replace all form inputs by the form template-variable (double curly-braces {{ }}):
+
+            {% csrf_token %}
+            {{ form }} <!-- You'll define 'form' var in views.py in the next step! -->
+            <button>Upload</button>
+
+
+    4) Based on the previous roadmap for Django upload (PRE step), let's convert the view manual logic to dynamic Django one. So in views.py, instanciate the form in the get method, and set the new post method configuration:
+
+        E.g.
+            #...
+            from .forms import ProfileForm
+            from .models import UserProfile
+
+            class CreateProfileView(View):
+                def get(self, request):
+                    form = ProfileForm()
+                    return render(
+                        request, "profiles/create_profile.html",
+                        { "form": form }
+                    )
+
+                def post(self, request):
+                    submitted_form = ProfileForm(request.POST, request.FILES)
+                                    # This 'request' object has properties like: 
+                                    # .POST: access to all sent non-file data from form;
+                                    # .FILES: access to uploaded file (dictionary) from form;
+                    # If everything alright, save the image and return to sub-app home:
+                    if submitted_form.is_valid():
+                        # Accessing 'avatar' named file from incoming form files:
+                        profile = UserProfile(avatar=request.FILES["user_image"])
+                        # Saving the file path only (not the file itself) in the db:
+                        profile.save()
+                        return HttpResponseRedirect("/profiles")
+
+                    # Otherwise, load the form page again w/ the same data used in the previous go:
+                    return render(request, "profiles/create_profile.html", {"form": submitted_form})
+
+
+    
+  

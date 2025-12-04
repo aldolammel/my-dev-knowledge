@@ -1,6 +1,6 @@
 
 
-VIEWS CLASSES: USING BASIC INHERIT:
+VIEWS CLASSES: USING BASIC INHERIT
 
     >> With a basic view inherit, you are able to create your own view-class-based with all the
         potential offered by classes in views.py. You'll write more code!

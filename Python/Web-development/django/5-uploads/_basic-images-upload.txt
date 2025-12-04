@@ -4,7 +4,7 @@
 
 
         1) Install the Pillow module:
-            $ pip install pillow
+            $ python3 -m pip install pillow
 
         2) In the project folder, open the settings.py, find the 'Static files' section
             and do this (it's no needed to create any folder):

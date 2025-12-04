@@ -35,7 +35,7 @@ PIP: CREATING THE REQUIREMENTS OF A PROJECT
                 $ 
 
             Linux/Ubuntu:
-                $ pip freeze > requirements.txt
+                $ python3 -m pip freeze > requirements.txt
 
             Mac:
                 $
@@ -51,8 +51,8 @@ PIP: CREATING THE REQUIREMENTS OF A PROJECT
 
         3) Install the packages at once:
 
-            $ pip install -r requirements.txt
+            $ python3 -m pip install -r requirements.txt
 
         4) Check if everything is fine:
 
-            $ pip list
+            $ python3 -m pip list

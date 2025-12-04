@@ -15,7 +15,7 @@
                 >> Rosseta app (include an admin sub-app to manage translations):
 
                     $ python3 -m apt install --upgrade pip
-                    $ pip install apt install django-rosetta
+                    $ python3 -m pip install apt install django-rosetta
             
             
             1.2) In settings.py, add the LocaleMiddleware between 'Session' and 'Common'
@@ -263,7 +263,7 @@
 
             3.1) Install the Parler Module:
 
-                $ pip install django-parler
+                $ python3 -m pip install django-parler
 
 
             3.2) Going back to settings.py, in 'Installed Apps', add:

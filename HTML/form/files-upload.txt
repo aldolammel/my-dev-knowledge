@@ -55,7 +55,10 @@ HTML > FORM: UPLOADING FILES
         
             E.g.
                 <form ...>
-                    <inpuy type="file" name="image" /> <!-- name helps to find this data -->
+                    <inpuy type="file" name="user_image" /> <!-- name helps to find this data -->
                     ...
                     <button>Upload</button>
                 </form>
+
+
+        5) Done. Check if the programming side is ready to test!

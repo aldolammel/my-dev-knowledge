@@ -30,6 +30,10 @@ VIEWS CLASSES: USING CREATE INHERIT:
         /Python/Web-development/django/3-2-views-and-API/1-building-context/class-based/view-class-create-usage.py
 
 
+    ROADMAP TO APPLY THIS SOLUTION IN A PROJECT:
+        /Python/Web-development/django/5-uploads/django-upload-image-simplest.txt
+
+
     WHO INHERIT CREATE-VIEW CLASS:
     
         >> No one!

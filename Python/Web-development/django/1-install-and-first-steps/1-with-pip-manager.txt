@@ -67,7 +67,7 @@ DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
                                 /Python/Package-manager/pip.txt
 
                             >> Install Django:
-                                $ pip install django
+                                $ python3 -m pip install django
 
                             >> Check the current django installed:
                                 $ python -m django --version

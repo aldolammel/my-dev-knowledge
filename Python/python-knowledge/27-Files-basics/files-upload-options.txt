@@ -2,16 +2,22 @@
 
 PYTHON: HOW TO UPLOAD A FILE
 
-    1) Throught the HTML, do it:
-        /HTML/form/files-upload.txt
+    1) Which way you wanna create the HTML form:
+        
+        1A) Building that manually with form tag and its input fields;
+            /HTML/form/files-upload.txt
+        
+        1B) Or building that dynamically using a framework:
+            Just skip this, going to the next step!
+        
 
     2) Which Web development framework are you using:
 
-        >> Only Python:
+        >> Only Python (if you take this way, the 1A step is mandatory):
             ./files-upload-raw-python.txt
         
         >> Django:
-            /Python/Web-development/django/5-uploads/files-upload-with-django.txt
+            /Python/Web-development/django/5-uploads/django-upload-image-p1.txt
 
         >> FastAPI:
             /Python/Web-development/fast-api/5-uploads/files-upload-with-fastapi.txt

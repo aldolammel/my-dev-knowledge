@@ -29,7 +29,7 @@ DRF: DJANGO REST FRAMEWORK
     1) Install:
 
         # With PIP:
-            $ pip install djangorestframework
+            $ python3 -m pip install djangorestframework
         # With UV:
             $ uv add djangorestframework
 

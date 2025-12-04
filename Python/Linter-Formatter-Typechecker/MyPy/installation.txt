@@ -9,7 +9,7 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
             # Using UV:
                 $ uv add --optional dev mypy
             # Using PIP:
-                $ pip install mypy
+                $ python3 -m pip install mypy
                 # Include manually the dev dependency in the project pyproject.toml file:
                     [project.optional-dependencies]
                     dev = [

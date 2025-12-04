@@ -19,7 +19,7 @@ EXPORTING ERD DIRECTLY FROM DJANGO:
                 $ uv add --optional dev django-extensions
 
             # or use pip:
-                $ pip install django-extensions
+                $ python3 -m pip install django-extensions
                 # And then add manually this to the dev sub-group in pyproject.toml file!
             
 
@@ -33,7 +33,7 @@ EXPORTING ERD DIRECTLY FROM DJANGO:
             $ uv add --optional dev pydotplus
         
         # Or use pip:
-            $ pip install pydotplus
+            $ python3 -m pip install pydotplus
             # And then add manually this to the dev sub-group in pyproject.toml file!
 
 

@@ -20,7 +20,7 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
             
             >> Or using PIP:
                 # Install it:
-                    $ pip install -U djlint
+                    $ python3 -m pip install -U djlint
                 # And add this module as dev dependency in pyproject.toml (e.g.):
                     ...
                     [project.optional-dependencies]

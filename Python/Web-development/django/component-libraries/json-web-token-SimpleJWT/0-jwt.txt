@@ -20,7 +20,7 @@ JSON WEB TOKEN (JWT)
         1) Install the plugin:
             
             # With PIP:
-                $ pip install djangorestframework-simplejwt
+                $ python3 -m pip install djangorestframework-simplejwt
             # With UV:
                 $ uv add djangorestframework-simplejwt
 

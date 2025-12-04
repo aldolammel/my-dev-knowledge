@@ -64,7 +64,7 @@ VIRTUAL ENVIRONMENT:
             
                 If the command wasn't recognized, install the virtualenv module: 
                 
-                $ pip install virtualenv
+                $ python3 -m pip install virtualenv
 
 
         >> Deleting (if needed):

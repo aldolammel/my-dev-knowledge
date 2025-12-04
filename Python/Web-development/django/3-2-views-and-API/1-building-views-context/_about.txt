@@ -1,6 +1,6 @@
 
 
-BUILDING THE CONTEXT:
+DJANGO > VIEWS.PY: BUILDING THE CONTEXT
 
     
     >> Here 'Context' is the package of data that a sub-app-view (back-end) sends to
