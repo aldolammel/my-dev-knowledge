@@ -19,9 +19,11 @@
 
             
             # Static files (CSS, JavaScript, Images)
-            MEDIA_URL = "media/"
+            # Where the files are 'physically' stored on server:
             MEDIA_ROOT = BASE_DIR / "media"
-
+            # Address that Django must use to show files to browser/world (for security reasons):
+            MEDIA_URL = "media/"
+            
 
             # CKEditor 5 configuration
             CKEDITOR_5_CONFIGS = {
@@ -42,12 +44,8 @@
 
         3) Core URLS.py:
 
+            from django.conf import settings
             from django.conf.urls.static import static
-            from .settings import (
-                DEBUG,
-                MEDIA_URL,
-                MEDIA_ROOT,
-            )
 
             urlpatterns = [
                 # DJANGO:
@@ -63,8 +61,8 @@
                 # ...
             ]
 
-            if DEBUG:
-                urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+            # Telling to browsers the media path already protected for security reasons:
+            urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
         4) models.py:

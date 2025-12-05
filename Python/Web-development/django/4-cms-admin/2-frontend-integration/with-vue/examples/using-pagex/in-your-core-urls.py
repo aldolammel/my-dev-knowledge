@@ -1,17 +1,10 @@
 # THIS FILE IS YOUR /PROJECT_DJANGO/CORE/URLS.PY:
 
+from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path
 from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
-
-from .settings import (
-    DEBUG,
-    MEDIA_ROOT,
-    MEDIA_URL,
-    STATIC_ROOT,
-    STATIC_URL,
-)
 
 urlpatterns = [
     # DJANGO:
@@ -33,6 +26,6 @@ urlpatterns = [
     ),
 ]
 
-if DEBUG:
-    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
-    urlpatterns += static(STATIC_URL, document_root=STATIC_ROOT)
+# Telling to browsers the media path already protected for security reasons:
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

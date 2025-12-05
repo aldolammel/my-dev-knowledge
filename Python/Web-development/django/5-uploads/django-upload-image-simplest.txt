@@ -6,11 +6,9 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
     PRE.1) Make sure you already got the HTML form ready:
         /Python/python-knowledge/27-Files-basics/files-upload-options.txt
 
+
     PRE.2) Prepare the very basic Django config for image upload:
         ./django-upload-image-basic.txt
-
-        TO EDIT: maybe you can delete this old file: 
-            /Python/Web-development/django/5-uploads/_basic-images-upload.txt
 
 
     1) In the HTML where is or should be the form, replace entirely the current <form> tag content to:
@@ -38,6 +36,22 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
             # IMPORTANT: in this way, you don't need any Django custom form in forms.py!
 
 
+        3) Go to the app urls.py and add:
 
-- - - - 
+            E.g.
+                from django.urls import path
+                from . import views
 
+                urlpatterns = [
+                    path("", views.CreateProfileView.as_view())
+                ]
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+EXTRA INFO: CONTEXT PROCESSORS
+
+    If you want to use {{ MEDIA_URL }} in your templates, add 'django.template.context_processors.media' in the 'context_processors' option of TEMPLATES.

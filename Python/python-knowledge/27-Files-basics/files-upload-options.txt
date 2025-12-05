@@ -17,7 +17,7 @@ PYTHON: HOW TO UPLOAD A FILE
             ./files-upload-raw-python.txt
         
         >> Django:
-            /Python/Web-development/django/5-uploads/django-upload-image-p1.txt
+            /Python/Web-development/django/5-uploads/_files-upload-with-django.txt
 
         >> FastAPI:
             /Python/Web-development/fast-api/5-uploads/files-upload-with-fastapi.txt

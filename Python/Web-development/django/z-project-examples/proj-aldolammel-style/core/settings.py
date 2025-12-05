@@ -224,8 +224,11 @@ FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [BASE_DIR / "static"]
-MEDIA_URL = "media/"
+# Where the files are 'physically' stored on server:
 MEDIA_ROOT = BASE_DIR / "media"
+# Address that Django must use to show files to browser/world (for security reasons):
+MEDIA_URL = "media/"
+
 
 # Authentication
 SESSION_COOKIE_AGE = 2419200  # a month

@@ -1,41 +1,25 @@
 
 
-DJANGO: HOW TO UPLOAD IMAGE FILES (PART 2/2)
+DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
 
 
     PRE) Make sure you already prepared your Django:
         /Python/Web-development/django/5-uploads/django-upload-image-p1.txt
-    
-
-    1) If not ready yet, creating the folder to store the uploaded files:
-
-        1.1) Create the 'uploads' folder (or another name up to you), for example, in the Django project's root folder;
-        
-        1.2) In your Django core settings (settings.py), define the MEDIA_ROOT constant path based on your choice in the previous step:
-
-            E.g.
-                MEDIA_ROOT = BASE_DIR / 'uploads'
 
 
-    2) To simplify and even expand the form upload possibilities, let's create a Django model (but without to store images in the db [aweful for db performance]):
+    1) To simplify and even expand the form upload possibilities, let's create a Django model (but without to store images in the db [aweful for db performance]):
 
-        2.1) Install the Pillow (needed to use Django models.ImageField):
-            
-            $ python3 -m pip install Pillow
-            or:
-            $ uv add Pillow
-        
-        2.2) Go to your app models.py file and:
+        1.1) Go to your app models.py file and:
 
             E.g.
                 class UserProfile(models.Model):
                     #...
-                    avatar = models.ImageField(upload_to='avatars')  # avatars is the folder in uploads folder!
-                        # Other model options for upload files:
-                        # models.FileField() - It won't be stored in the db, but in server disk;
-                        # models.ImageField()
+                    avatar = models.ImageField(upload_to='avatars')  # avatars is the folder in media folder!
+                        # Other model options for media files:
+                            # models.FileField(), automatic rename the file if duplicated upload;
+                            # models.ImageField(), same of FileField but with basic image checks;
 
-        2.3) Run makemigrations and migrate!
+        1.2) Run makemigrations and migrate!
         
     
     3) Creating the custom form using Django:
@@ -52,7 +36,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (PART 2/2)
 
             {% csrf_token %}
             {{ form }} <!-- You'll define 'form' var in views.py in the next step! -->
-            <button>Upload</button>
+            <button>Save</button>
 
 
     4) Based on the previous roadmap for Django upload (PRE step), let's convert the view manual logic to dynamic Django one. So in views.py, instanciate the form in the get method, and set the new post method configuration:
@@ -88,4 +72,9 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (PART 2/2)
 
 
     
-  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+EXTRA INFO: CONTEXT PROCESSORS
+
+    If you want to use {{ MEDIA_URL }} in your templates, add 'django.template.context_processors.media' in the 'context_processors' option of TEMPLATES.

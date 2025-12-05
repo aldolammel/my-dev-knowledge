@@ -11,6 +11,9 @@ from core.constants import (
 from core import language as lng
 
 
+# If you want to use {{ MEDIA_URL }} in your templates, add 'django.template.context_processors.media' in the 'context_processors' option of TEMPLATES.
+
+
 def app_info(request):
     """Information about the app."""
     context = {
