@@ -70,6 +70,11 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
                     # Otherwise, load the form page again w/ the same data used in the previous go:
                     return render(request, "profiles/create_profile.html", {"form": submitted_form})
 
+        
+        5) (Optional)
+            For image validations (like allowed image extensions, maximum size file, etc):
+
+                ./django-upload-image-custom-validations.txt
 
     
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

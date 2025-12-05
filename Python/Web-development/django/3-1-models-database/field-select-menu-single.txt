@@ -83,10 +83,25 @@ A) FIELD: SELECT MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
 
 B) FIELD: SELECT MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
 
+
     >> You want to show in your CMS a select menu with only with the same options, e.g. a
         select menu called 'status' where the two options always will be 'active' and 'archived':
 
-        B.1) In the sub-app constants.py (or in the models.py if you prefer), define them:
+
+        B.1) In sub-app models.py, into the class you want apply the select-menu 'status' as attribute:
+
+                class Example(models.Model):
+                    status = models.CharField(
+                        max_length=10, 
+                        choices=CHOICES_STATUS, 
+                        default=VALUE_ACTIVE,
+                    )
+
+                # More about:
+                    ./model-attr-field-char.txt
+
+
+        B.2) In the sub-app constants.py (or in the models.py if you prefer), define them:
 
                 # CONSTANTS:
                 VALUE_ACTIVE = 'on'       # In postgreSQL 'on' and 'off' are 1/true and 0/false too;
@@ -95,16 +110,6 @@ B) FIELD: SELECT MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
                     (VALUE_ACTIVE, 'Active'), 
                     (VALUE_ARCHIVED, 'Archived')
                 )
-
-
-        B.2) In models.py, into the class you want apply the select-menu 'status' as attribute:
-
-                class Example(models.Model):
-                    status = models.CharField(
-                        max_length=10, 
-                        choices=CHOICES_STATUS, 
-                        default=VALUE_ACTIVE,
-                    )
 
 
         B.3) Only to make sure everything will be ready to test, execute the migration:

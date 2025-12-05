@@ -10,14 +10,6 @@
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-def get_fieldsets(self, request, obj=None):
-    """Built-in method to retrieve a list of tuples, in which each tuple represents a fieldset on the admin form page."""
-    # Defines which fieldsets to work from:
-    #   'add_fieldsets' are fieldsets of adding new objects;
-    #   'fieldsets' are fieldsets of existing objects
-    base_fieldsets = self.add_fieldsets if not obj else self.fieldsets
-    # Logic here...
-    return base_fieldsets
 
 # It can return two lists of tuples where each tuple represents a fieldset:
 add_fieldsets = [
@@ -41,10 +33,20 @@ fieldsets = [
     }),
 ]
 
+# This method is mandatory when we are using add_fieldsets and/or fieldsets benefits:
+def get_fieldsets(self, request, obj=None):
+    """Brings all data from fieldsets of the admin class."""
+    # Defines which fieldsets to work from:
+    #   'add_fieldsets' are fieldsets of adding new objects;
+    #   'fieldsets' are fieldsets of existing objects
+    base_fieldsets = self.add_fieldsets if not obj else self.fieldsets
+    # Logic here...
+    return base_fieldsets
+
 # Example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 def get_fieldsets(self, request, obj=None):
-    """Built-in method to retrieve a list of tuples, in which each tuple represents a fieldset on the admin form page."""
+    """Brings all data from fieldsets of the admin class."""
     # # If it's a page updating, inject page_link_with_help into readonly_fields:
     if obj and "page_link_with_help" not in self.readonly_fields:
         self.readonly_fields += ("page_link_with_help",)  # type: ignore[assignment, misc]

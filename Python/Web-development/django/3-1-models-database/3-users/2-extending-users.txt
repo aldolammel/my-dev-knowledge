@@ -244,6 +244,7 @@ If your project needs to show User Profile on the application front-end, or even
 
             # Use this in case error trying to include or editing the object:
             """def get_fieldsets(self, request, obj=None):
+                '''Brings all data from fieldsets of the admin class.'''
                 if not obj:  # Adding a new object
                     return self.add_fieldsets
                 return self.fieldsets  # Editing an existing object"""
