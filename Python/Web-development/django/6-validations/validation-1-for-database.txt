@@ -9,13 +9,20 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
         E.g. very basic constraints:
 
             class ExampleModel(models.Model):
-                attribute_example = models.CharField(
+                attribute_example_1 = models.CharField(
                     ...
                     max_length=100,            # db level validation.
                     blank=False,               # db level validation.
                     unique=True,               # db level validation.
                     null=False,                # db level validation.
                     
+                    validators=[...]           # More options, but only for APP level.
+                )
+                attribute_example_2 = models.DecimalField(
+                    ...
+                    max_digits=5,  # 999.99    # db level validation.
+                    decimal_places=2,  # .99   # db level validation.
+                    ...
                     validators=[...]           # More options, but only for APP level.
                 )
 

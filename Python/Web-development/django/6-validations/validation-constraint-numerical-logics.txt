@@ -15,7 +15,7 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
             class Meta:
                 constraints = [
                     models.CheckConstraint(
-                        condition=models.Q(stock__gte=0),                            # greater equal
+                        condition=models.Q(stock__gte=0),                         # greater or equal
                         name="stock_non_negative"
                     )
                 ]

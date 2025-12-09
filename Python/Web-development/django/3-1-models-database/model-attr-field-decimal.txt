@@ -2,7 +2,7 @@
 
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
 
-    For storing numbers with decimal points, like Float Field, but wiht differences!!!
+    For storing numbers with decimal points, like Float Field, but with differences!!!
     Fixed-point numbers.
 
     Typical Size:
@@ -15,11 +15,18 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
         Financial data, monetary values, or any number where exact decimal representation is required. You must define max_digits (the total number of digits) and decimal_places (the digits after the decimal point).
 
     Example:
+
+        from decimal import Decimal
+        from django.core.validators import MinValueValidator
         
-        # Can store up to 99,999,999.99.
+        # Can store up to 999.999.
         models.DecimalField(
-            max_digits=10,
-            decimal_places=2,
+            max_digits=6,      # 000.000
+            decimal_places=3,  # .000
+            validators=[
+                MinValueValidator(Decimal('0.001'))
+                    # Using Decimal('0.001') instead of 0.001 (float) ensures proper decimal precision matching and allows 0.001 to pass validation correctly!!!
+            ]
         )
 
 

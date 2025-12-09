@@ -2,7 +2,7 @@
 
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: FLOAT FIELD
 
-    For storing numbers with decimal points, like Decimal Field, but wiht differences!!!
+    For storing numbers with decimal points, like Decimal Field, but with differences!!!
     Double-precision floating-point.
 
     Typical Size:
