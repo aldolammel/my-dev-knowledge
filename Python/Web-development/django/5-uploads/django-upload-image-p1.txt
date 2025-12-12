@@ -3,7 +3,7 @@
 DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 1/2)
 
 
-    PRE.1) Make sure you already got the HTML form ready:
+    PRE.1) Make sure you already define the HTML approach:
         /Python/python-knowledge/27-Files-basics/files-upload-options.txt
 
 

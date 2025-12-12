@@ -7,25 +7,31 @@ INHERITING COMMON ATTRIBUTES:
         like 'created_at', 'updated_at' and 'created_by'. Check this out:
 
 
-        class Common(models.Model):
+        class CommonBase(models.Model):  # This 'Base' in the name is convension!
             created_at = ...
             created_by = ...
             updated_at = ...
             updated_by = ...
 
             class Meta:
-                # It will flag the database to don't create this table:
-                abstract = True
+                abstract = True  # Flags the db to don't create this table!
 
         
-        class Post(Common):
+        class Post(CommonBase):
             title = ...
             content = ...
 
 
-        class Comment(Common):
+        class Comment(CommonBase):
             message = ...
 
     
     >> CRITICAL: to avoid errors, remove any foreign key or many-to-many attribute 
         from your abstracted/inherited class!
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+MORE ABOUT CLASS META > ABSTRACT:
+    ./meta-abstract.txt

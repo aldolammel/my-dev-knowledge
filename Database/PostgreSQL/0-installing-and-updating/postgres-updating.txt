@@ -3,7 +3,20 @@
 POSTGRESQL: UPDATING
 
 
-    WINDOWS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        X) Make sure you got the postgresql repository installed:
+
+            $ sudo apt install -y postgresql-common
+            $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+        X) Update the repository and upgrade the postgresql if new version is available:
+
+            $ sudo apt update
+            $ sudo apt upgrade
+
+            
+    WINDOWS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         X) First, figure out the number of the Postgres version FOR WINDOWS you want to install:
             >> Test it out of any virtual environment:
@@ -43,14 +56,4 @@ POSTGRESQL: UPDATING
             /Database/PostgreSQL/0-installing-and-updating/postgres-starting-and-stoping.txt
 
 
-    UBUNTU: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-        X) Make sure you got the postgresql repository installed:
-
-            $ sudo apt install -y postgresql-common
-            $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-
-        X) Update the repository and upgrade the postgresql if new version is available:
-
-            $ sudo apt update
-            $ sudo apt upgrade
+    

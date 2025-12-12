@@ -3,10 +3,10 @@
 POSTGRESQL: CREATING A DATABASE LOCALLY
 
     PRE.1) Assuming you got already the PostgreSQL installed locally:
-        /Database/PostgreSQL/0-installing-and-updating/postgres-installing.txt
+        ./0-installing-and-updating/postgres-installing.txt
 
     PRE.2) Make sure the database is running:
-        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+        ./postgres-starting-and-stoping.txt
 
     >> Method to create a database:
 
@@ -50,37 +50,51 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
                             UBUNTU:
                                 A3.2.1) Add the Postgre repo locally:
-                                    /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
-                                A3.2.2) Update the entire system
+                                    ./0-installing-and-updating/postgres-updating.txt
+
+                                A3.2.2) Update the entire system:
                                     /OS/linux/debian-ubuntu/update.txt
+
                             WINDOWS:
                                 A3.2.1) xxxxxxxxxxxxxxx
+
                                 A3.2.2) xxxxxxxxxxxxxxx
                         
                         A3.3) Start the Postgres again:
-                            /Database/PostgreSQL/postgres-starting-and-stoping.txt
+                            ./postgres-starting-and-stoping.txt
 
-                        A3.4) Go to the Postgres prompt and do this:
-                            
-                            $ sudo -u postgres psql -d postgres
-                            
-                            # List all databases:
-                            $ \l
+                        A3.4) Update the collation version:
+                            ./postgres-collation-updating.txt
 
-                        A3.5) Still in Postgres prompt, execute this for all databases:
-                            ALTER DATABASE template1 REFRESH COLLATION VERSION;
-                            ALTER DATABASE template0 REFRESH COLLATION VERSION;
-                            ALTER DATABASE postgres REFRESH COLLATION VERSION;
-
-                            >> It's ok is some of them say "version has not changed". 
-
-                        A3.6) Open again the PgAdmin, and now you should be able to create a new db!
+                        A3.5) Open again the PgAdmin, and now you should be able to create a new db!
 
 
 
         B) Using Terminal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-                    
-            xxxxxxxxxx
+
+            PRE) Update the collation version:
+                ./postgres-collation-updating.txt
+
+            B.1) Define with encoding for your project db (root user = postgres):
+
+                F) English language based;
+                G) Or Brazilian Portuguese language based;
+
+                - - - - 
+
+                F) English language based:
+                    $ CREATE DATABASE your_project_db_name OWNER your_django_db_user ENCODING UTF8 LC_COLLATE 'en_US.UTF-8' LC_CTYPE 'en_US.UTF-8' TEMPLATE template0;
+
+                G) Brazilian Portuguese language based:
+                    $ CREATE DATABASE your_project_db_name OWNER your_django_db_user ENCODING UTF8 LC_COLLATE 'pt_BR.UTF-8' LC_CTYPE 'pt_BR.UTF-8' TEMPLATE template0;
+
+                >> Facing collation error:
+                    ./postgres-collation-updating.txt
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            B.2) Exit Postgres shell:
+                $ \q
 
         
 

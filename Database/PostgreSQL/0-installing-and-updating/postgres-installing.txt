@@ -4,7 +4,7 @@ POSTGRESQL: INSTALLATION
 
 
     >> Reminder: for updating
-        /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
+        ./postgres-updating.txt
 
 
     >> Installing (It's NOT a db creation):
@@ -28,7 +28,7 @@ POSTGRESQL: INSTALLATION
                 1.2) If the command is not recognized, open the Task Manager > Services;
                 1.3) Look for 'postgres'. If nothing, let's install, skipping the next step;
                 1.4) If you have it, forget this roadmap and let's updating it with another:
-                    /Database/PostgreSQL/0-installing-and-updating/postgres-updating.txt
+                    ./postgres-updating.txt
 
 
         2) Check if you must download some installer first: 

@@ -6,21 +6,37 @@ POSTGRESQL: DELETING A DATABASE LOCALLY
     PRE) CRITICAL, if backup is needed:
         ./postgres-backup.txt
 
-    >> Method:
+    
+    1) Deleting method:
 
         A) By pgAdmin application;
         B) By terminal;
 
         - - - - - 
 
-        A) By pgAdmin:
+        A) By pgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
             1) Open the pgAdmin;
             2) Select the workspace > servers > Databases;
             3) Select the db you wanna delete, and DELETE.
 
-        B) By Terminal:
 
-            xxxxxxxxxxxxxx
+        B) By Terminal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            xxxxxxxxxxxxxxxx
+            # Connect as the postgres superuser
+                $ sudo -u postgres psql
+
+            # Find the name of the target db:
+                $ \l
+
+            # Inside psql, delete the specific db:
+                $ DROP DATABASE your_project_db_name;                        <-- keep the semicolon!
+                
+            
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+NEED TO CREATE A NEW ONE?
+    ./postgres-creating-db-locally.txt
+

@@ -1,0 +1,55 @@
+
+
+DJANGO MODEL > META CLASS: ABSTRACT
+
+    Marks a model as a base class for inheritance, not a database table.
+
+        >> When to use:
+            - To create reusable model components/mixins;
+            - For shared fields or methods across multiple models;
+            - To implement design patterns (like BaseModel with common fields);
+            - The abstract model itself doesn't get a database table.
+
+        E.g.
+            class AuditBase(models.Model):
+                """Stores who and when things were changed."""
+
+                created_at = models.DateTimeField(
+                    auto_now_add=True,
+                    verbose_name="Instalado em",
+                )
+                updated_at = models.DateTimeField(
+                    auto_now=True,
+                    verbose_name="Atualizado em",
+                )
+                updated_by = models.ForeignKey(
+                    User,
+                    related_name="%(app_label)s_%(class)s_updated_by",
+                    on_delete=models.SET_NULL,
+                    null=True,
+                    verbose_name="Atualizado por",
+                )
+
+                class Meta:
+                    abstract = True  # Flags the db to don't create this table!
+
+                # AWARE!
+                # In this example above, those classes that inherited this class must send the user via admin.py save_model() method!
+
+        
+        >> When you CANNOT use abstract:
+
+            You cannot use an abstract model directly in a ForeignKey or ManyToManyField, even with a 'through=' model. Django's ORM simply doesn't allow it 'cause abstract models are not installed in the database, so there's no concrete table to point to.
+
+                >> Possible solution > Concrete Model:
+                    ./model-type-concrete.py
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+MODEL'S INHERITANCE IN DJANGO:
+    ./Inheriting-common-attributes.txt
+
+WHAT IS MODEL META:
+    ./meta.txt

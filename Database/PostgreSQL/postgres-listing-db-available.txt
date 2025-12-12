@@ -6,11 +6,11 @@
         >> Windows:
 
             # Getting-in the PosgreSQL prompt:
-            $ psql -U postgres
+                $ psql -U postgres
 
             #In the PosgreSQL prompt:
-            $ psql
-            $ \l
+                $ psql
+                $ \l
 
             >> To show the database port:
 

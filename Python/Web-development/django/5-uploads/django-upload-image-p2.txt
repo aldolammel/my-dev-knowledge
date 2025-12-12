@@ -14,7 +14,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
             E.g.
                 class UserProfile(models.Model):
                     #...
-                    avatar = models.ImageField(upload_to='avatars')  # avatars is the folder in media folder!
+                    avatar = models.ImageField(upload_to='<subapp_name>/avatars')  # avatars is the folder in media folder!
                         # Other model options for media files:
                             # models.FileField(), automatic rename the file if duplicated upload;
                             # models.ImageField(), same of FileField but with basic image checks;

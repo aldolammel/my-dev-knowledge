@@ -23,10 +23,12 @@ QUERYSET: CREATING AND READING
         1) Ask to Django import a table content:
         
             >>> from <subapp_name>.models import <ClassModelName>
+            or 
+            >>> from apps.<subapp_name>.models import <ClassModelName>
 
                 E.g. 
                     
-                    >>> from event_attack.models import EventAttack
+                    >>> from apps.event_attack.models import EventAttack
 
 
         2) Define the content imported to a variable:

@@ -39,7 +39,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
             >> SQLite:
                 /xxxxxxxxx
 
-        3) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too;
+        3) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too, but the project settings could be hidden them!
 
         4) Edit your .env file as needed (the new db name, for example);
 
@@ -49,7 +49,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
         6) Run 'makemigrations' for each sub-app, and then run 'migrate';
         
         7) (If applicable)
-            If you'll use the CMS, run createsuperuser;
+            If you'll use the CMS, run 'createsuperuser' command;
 
         8) (If applicable) 
             For multilingual apps, and have prefix_language mandatory, add manually at least one language in the language table for you are allowed to use the CMS;
