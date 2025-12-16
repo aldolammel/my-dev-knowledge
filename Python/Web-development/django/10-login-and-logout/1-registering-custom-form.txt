@@ -10,9 +10,9 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
 
     1) Create or open the forms.py file in 'accounts' sub-app:
 
+        from django.conf import settings as stgs
         from django import forms
         from django.contrib.auth.forms import UserCreationForm
-        from django.contrib.auth.models import User
         from .models import UserProfile
 
 
@@ -35,7 +35,7 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
             )
 
             class Meta:
-                model = User
+                model = stgs.AUTH_USER_MODEL
                 # Specify the fields to include in the form, in the order you want:
                 fields = [
                     'profile_type',  # additional field!
@@ -138,7 +138,7 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
 
     4) views.py in account sub-app too:
 
-        from django.contrib.auth.models import User
+        from django.conf import settings as stgs
         from django.contrib.auth.decorators import login_required
         from django.contrib.auth import login
         from django.shortcuts import render, redirect, get_object_or_404
@@ -172,7 +172,7 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
         @login_required
         def user_profile(request, username):
             # Fetch the UserProfile by the User's username:
-            user = get_object_or_404(User, username=username)
+            user = get_object_or_404(stgs.AUTH_USER_MODEL, username=username)
             instance = get_object_or_404(UserProfile, user=user)
 
             if request.user != instance.user:

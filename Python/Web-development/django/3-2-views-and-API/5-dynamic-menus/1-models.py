@@ -2,6 +2,8 @@ from django.core.validators import MaxLengthValidator, MinLengthValidator
 from django.db import models
 from django.db.models.functions import Length
 
+from django.conf import settings as stgs
+
 from . import constants as consts
 from . import validators
 from .utils_models import pagex_slugifier
@@ -252,7 +254,8 @@ class PagexPage(models.Model):
         verbose_name="Criada em",
     )
     created_by = models.ForeignKey(
-        User,
+        stgs.AUTH_USER_MODEL,
+        editable=False,
         related_name="pages",
         on_delete=models.SET_NULL,
         null=True,
@@ -263,7 +266,8 @@ class PagexPage(models.Model):
         verbose_name="Atualizada em",
     )
     updated_by = models.ForeignKey(
-        User,
+        stgs.AUTH_USER_MODEL,
+        editable=False,
         related_name="updated_pages",
         on_delete=models.SET_NULL,
         null=True,
@@ -303,10 +307,11 @@ class PagexPage(models.Model):
             self.slug = pagex_slugifier(self.seo_title)
             # Handle user tracking:
             user = kwargs.pop("user", None)  # Retrieve user from kwargs, default=None if not passed
-            if not self.pk:
-                self.created_by = user
-            elif user and user.is_authenticated and user != self.updated_by:
-                self.updated_by = user
+            if user:
+                if not self.pk:
+                    self.created_by = user
+                elif user.is_authenticated:
+                    self.updated_by = user
             # LOG:
             self._log(user)
             # Save instance first to get ID for many-to-many relationships know the instance ID/PK:

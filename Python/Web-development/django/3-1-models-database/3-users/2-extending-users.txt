@@ -1,11 +1,22 @@
 
 
+
+
+- -------------- I NEED TO REVIEW THIS ----- TO OLD APPROACH FROM MY INITIAL STUDIES ------------- -
+
+
+
+
+
+
+
 EXTENDING THE USER FEATURES:
-If your project needs to show User Profile on the application front-end, or even a simple user creation form also on the application front-end, you must use these settings!
+    
+    If your project needs to show User Profile on the application front-end, or even a simple user creation form also on the application front-end, you must use these settings!
 
 
     >> But for VERY BASIC user solution, use Django built-in user features:
-        /Python/Web-development/django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
+        ./1-basic-users-only-for-cms.txt
 
 
     1) Create a sub-app called 'accounts' and add it in the core-folder settings.py

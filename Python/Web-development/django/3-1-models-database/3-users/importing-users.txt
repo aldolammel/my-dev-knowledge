@@ -6,11 +6,11 @@ IMPORTING USERS
     1) In app models.py, import the django User table, and build up the new table
         with the attribute that connect with your users:
             
-            from django.contrib.auth.models import User
+            from django.conf import settings as stgs
             
             Class Team(models.Model):
                 name = models.CharField(max_length=40)
-                users = models.ManyToMany(User)
+                users = models.ManyToMany(stgs.AUTH_USER_MODEL)
 
 
             >> More about ManyToMany relationship:
@@ -34,7 +34,7 @@ MORE ABOUT USER:
 
     >> Basic:
 
-        /Python/Web-development/django/3-1-models-database/3-users/0-users-setup.txt
+        ./0-users-setup.txt
 
         
     >> If you're looking for about register and login forms:

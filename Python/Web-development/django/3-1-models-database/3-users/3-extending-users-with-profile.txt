@@ -1,5 +1,14 @@
 
 
+
+
+- -------------- I NEED TO REVIEW THIS ----- TO OLD APPROACH FROM MY INITIAL STUDIES ------------- -
+
+
+
+
+
+
 EXTENDING THE USER FEATURES WITH PROFILE:
 
     >> Let's create another model/table in order to isolate extra data associate with each user,
@@ -11,13 +20,14 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
     1) Very basic to use Django built-in user features:
-        /Python/Web-development/django/3-1-models-database/3-users/0-users-setup.txt
-        /Python/Web-development/django/3-1-models-database/3-users/extending-users-basic.txt
+        ./0-users-setup.txt
+        ./extending-users-basic.txt
 
 
 
     2) In 'accounts' sub-app, open the 'models.py' file:
 
+        from django.conf import settings as stgs
         from django.db import models
         from django.contrib.auth.models import AbstractUser
 
@@ -33,7 +43,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 editable=False,
             )
             user = models.OneToOneField(
-                User,
+                stgs.AUTH_USER_MODEL,
                 on_delete=models.CASCADE,  # Tells Django to del the UserProfileOne if the User is deleted.
                 related_name=REL_PROFILE_1,
                 verbose_name=lng.LB_PROFILES_USER,
@@ -149,7 +159,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 verbose_name=lng.LB_UPDATED_AT,
             )
             updated_by = models.ForeignKey(
-                User,
+                stgs.AUTH_USER_MODEL,
+                editable=False,
                 related_name='updated_profiles_1',
                 on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
                 null=True,
@@ -191,7 +202,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 # Checking the updated_by:
                 # Important: this need to be checked in admin.py and views.py as well!
                 user = kwargs.pop('user', None)
-                if user and user.is_authenticated and self.updated_by != user:
+                if user and user.is_authenticated:
                     self.updated_by = user
                 super().save(*args, **kwargs)
 
@@ -203,7 +214,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 editable=False,
             )
             user = models.OneToOneField(
-                User,
+                stgs.AUTH_USER_MODEL,
                 on_delete=models.CASCADE,  # Tells Django to del the UserProfileTwo if the User is deleted.
                 related_name=REL_PROFILE_2,
                 verbose_name=lng.LB_PROFILES_USER,
@@ -350,7 +361,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 verbose_name=lng.LB_UPDATED_AT,
             )
             updated_by = models.ForeignKey(
-                User,
+                stgs.AUTH_USER_MODEL,
+                editable=False,
                 related_name='updated_profiles_2',
                 on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
                 null=True,
@@ -392,7 +404,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 # Checking the updated_by:
                 # Important: this need to be checked in admin.py and views.py as well!
                 user = kwargs.pop('user', None)
-                if user and user.is_authenticated and self.updated_by != user:
+                if user and user.is_authenticated:
                     self.updated_by = user
                 super().save(*args, **kwargs)
 
@@ -420,7 +432,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
             PATH_CMS_USERS,
         )
         from .models import (
-            User,
+            stgs.AUTH_USER_MODEL,
             UserProfileOne,
             UserProfileTwo,
             Language,
@@ -435,7 +447,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
         )
 
 
-        @admin.register(User)
+        @admin.register(stgs.AUTH_USER_MODEL)
         class UserCMS(UserAdmin):
             '''Defining how the User Model class will exclusivily be shown on the CMS.'''
 

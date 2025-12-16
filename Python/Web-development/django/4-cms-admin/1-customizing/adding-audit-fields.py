@@ -4,28 +4,52 @@
                 
         >> If you wanna add audit fields (auto-fill) to control content changes through CMS:
 """
-# FILE: /apps/my_app/models.py
 
-class PageModel(models.Model):
-    ...
+
+# FILE: /core/settings.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    # /Python/Web-development/django/3-1-models-database/3-users/0-users-setup.txt
+
+
+# FILE: /apps/my_app/models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+from django.conf import settings as stgs
+
+class AuditBase(models.Model):
+    """Stores who and when things were changed."""
+
     created_at = models.DateTimeField(
         auto_now_add=True,
+        verbose_name="Instalado em",
     )
     created_by = models.ForeignKey(
-        User,
+        stgs.AUTH_USER_MODEL,
+        editable=False,
         related_name="pages",
         on_delete=models.SET_NULL,
         null=True,
     )
     updated_at = models.DateTimeField(
         auto_now=True,
+        verbose_name="Atualizado em",
     )
     updated_by = models.ForeignKey(
-        User,
-        related_name="updated_pages",
+        stgs.AUTH_USER_MODEL,
+        related_name="%(app_label)s_%(class)s_updated_by",
         on_delete=models.SET_NULL,
         null=True,
+        verbose_name="Atualizado por",
     )
+
+    class Meta:
+        abstract = True  # Flags the db to don't create this table!
+
+class PageModel(AuditBase):
+    attr_1 = ...
+    attr_2 = ...
+
+    # How model inheritance works:
+    # /Python/Web-development/django/3-1-models-database/Inheriting-common-attributes.txt
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
@@ -34,12 +58,13 @@ class PageModel(models.Model):
         user = kwargs.pop("user", None)
         if self.something_exist_an_important_field:
             ...
-            # Set created_by if this is a new object:
-            if not self.pk and user:
-                self.created_by = user
-            # Otherwise, set updated_by:
-            elif user and user.is_authenticated and user != self.updated_by:
-                self.updated_by = user
+            # Audit records:
+            if user:
+                if not self.pk:
+                    self.created_by = user
+                # Otherwise, set updated_by:
+                elif user.is_authenticated:
+                    self.updated_by = user
             # Save instance:
             super().save(*args, **kwargs)
 

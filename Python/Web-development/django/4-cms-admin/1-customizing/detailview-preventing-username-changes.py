@@ -12,7 +12,7 @@
 # /accounts/admin.py:
 
 
-from django.contrib.auth.models import User
+from django.conf import settings as stgs
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
@@ -64,6 +64,6 @@ class UserCMS(UserAdmin):
 
 
 # Registering Django CMS customizations:
-admin.site.register(User, UserCMS)
+admin.site.register(stgs.AUTH_USER_MODEL, UserCMS)
 # Registering App CMS features:
 # ...

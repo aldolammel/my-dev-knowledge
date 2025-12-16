@@ -593,6 +593,7 @@ class UserProfileOne(models.Model):
     )
     updated_by = models.ForeignKey(
         User,
+        editable=False,
         related_name="updated_profiles_1",
         on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
         null=True,
@@ -634,7 +635,7 @@ class UserProfileOne(models.Model):
         # Checking the updated_by:
         # Important: this need to be checked in admin.py and views.py as well!
         user = kwargs.pop("user", None)
-        if user and user.is_authenticated and self.updated_by != user:
+        if user and user.is_authenticated:
             self.updated_by = user
         super().save(*args, **kwargs)
 
@@ -794,6 +795,7 @@ class UserProfileTwo(models.Model):
     )
     updated_by = models.ForeignKey(
         User,
+        editable=False,
         related_name="updated_profiles_2",
         on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
         null=True,

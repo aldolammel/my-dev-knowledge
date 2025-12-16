@@ -50,7 +50,7 @@
 
     from django.contrib import admin
     from django.contrib.auth.admin import UserAdmin
-    from django.contrib.auth.models import User
+    from django.conf import settings as stgs
     from django.utils.html import format_html
     from django.urls import reverse
 
@@ -92,7 +92,7 @@
 
 
     # Django CMS customs:
-    admin.site.unregister(User)
-    admin.site.register(User, CustomUserAdmin)
+    admin.site.unregister(stgs.AUTH_USER_MODEL)
+    admin.site.register(stgs.AUTH_USER_MODEL, CustomUserAdmin)
     # Product CMS features:
     # ...

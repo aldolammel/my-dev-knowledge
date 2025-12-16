@@ -26,6 +26,7 @@ class ExampleModel(models.Model):
     )
     updated_by = models.ForeignKey(
         User,
+        editable=False,
         related_name="updated_layouts",
         on_delete=models.SET_NULL,
         null=True,

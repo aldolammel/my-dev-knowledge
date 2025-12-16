@@ -1,27 +1,52 @@
 
 
 VERY BASIC USER SOLUTION:
-If you need user registration through CMS/ADMIN only, without the necessity of creating or updating users from application front-end, so use this simplest default solution:
+
+    If you need user registration through CMS/ADMIN only, without the necessity of creating or updating users from app front-end, so use this simplest default solution:
 
 
-    >> Calling the User to use as ForeignKey in Model Classes:
+    PRE) Make sure you understand this:
+        ./0-users-setup.txt
 
-        E.g. 
-        
-            >> in models.py:
-                
-                from django.contrib.auth import get_user_model
 
-                User = get_user_model()
+    1) Let's explicity define who is the AUTH_USER_MODEL for the app through Core settings.py file:
 
-                # Now, you can call User in your models, like:
+        # Authentication
+        AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
+        # OR if you have a custom user model in apps/accounts/models.py:
+        # AUTH_USER_MODEL = 'accounts.CustomUser'  # Format: 'app_label.ModelName'
+    
+    
+    2) Calling the AUTH_USER_MODEL wherever you want, e.g. apps/your_app/models.py:
+
+        E.g.    
+            from django.conf import settings as stgs
+
+            class AuditBase(models.Model):
+                """Stores who and when things were changed."""
+
+                created_at = models.DateTimeField(
+                    auto_now_add=True,
+                    verbose_name="Instalado em",
+                )
+                updated_at = models.DateTimeField(
+                    auto_now=True,
+                    verbose_name="Atualizado em",
+                )
                 updated_by = models.ForeignKey(
-                    User,
-                    ...
+                    stgs.AUTH_USER_MODEL,
+                    editable=False,
+                    related_name="%(app_label)s_%(class)s_updated_by",
+                    on_delete=models.SET_NULL,
+                    null=True,
+                    verbose_name="Atualizado por",
                 )
 
+                class Meta:
+                    abstract = True  # Flags the db to don't create this table!
 
-    >> Making CMS record who has created and/or updated something in CMS:
+
+    3) Making CMS record who has created and/or updated something in CMS:
 
         E.g.
 

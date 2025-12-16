@@ -1,0 +1,47 @@
+
+DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
+
+    PRE) What kind of CMS UX do you need: 
+        /Python/Web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.txt
+
+    For new objects, through the adding detail-view, select an option first (using a radio or dropdown menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
+
+
+        B1) Install the dependency 'PolymorphicModel';
+        
+        B2) Add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS;
+            E.g.
+                class CommonForPeople(PolymorphicModel, models.Model):  # type: ignore[django-manager-missing]  # If MyPy warning it!
+                    name = ...
+                class OnlyForMale(CommonForPeople):  # CMS reads it as a specific form for men.
+                    balls_amount = ...
+                class OnlyForFemale(CommonForPeople):  # Same logic here.
+                    pms_cases_by_year = ...
+        
+        B3) On the CMS sidebar menu, let's make visible just the "People list-view" link;
+
+            E.g.
+                from polymorphic.admin import (
+                    PolymorphicParentModelAdmin,
+                    PolymorphicChildModelAdmin,
+                )
+
+                @admin.register(models.CommonForPeople)
+                class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
+                    base_model = models.CommonForPeople
+                    child_models = (
+                        models.OnlyForMale,    # First on this tuple's treated as the default!
+                        models.OnlyForFemale,
+                    )
+                    list_display = ("name", "slug", "polymorphic_ctype")
+                    list_filter = ("polymorphic_ctype",)
+                
+                @admin.register(models.OnlyForMale)
+                class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
+                    base_model = models.CommonForPeople
+                    show_in_index = False  # If exists in CMS sidebar menu.
+
+                # And so on for all form options...
+
+        B4) xxxxx
+        B5) xxxx

@@ -23,7 +23,8 @@ DJANGO MODEL > META CLASS: ABSTRACT
                     verbose_name="Atualizado em",
                 )
                 updated_by = models.ForeignKey(
-                    User,
+                    stgs.AUTH_USER_MODEL,
+                    editable=False,
                     related_name="%(app_label)s_%(class)s_updated_by",
                     on_delete=models.SET_NULL,
                     null=True,

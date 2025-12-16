@@ -18,6 +18,7 @@ RELATION: ITSELF
             ...
             updated_by = models.ForeignKey(
                 'self',  # Itself relationship!
+                editable=False,
                 related_name='updated_users',
                 on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
                 null=True,

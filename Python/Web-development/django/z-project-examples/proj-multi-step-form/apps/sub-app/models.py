@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings as stgs
+
 
 # CONSTANTS
 RATING = (
@@ -27,7 +28,8 @@ class Movie(models.Model):
         editable=False,
     )
     created_by = models.ForeignKey(
-        User,
+        stgs.AUTH_USER_MODEL,
+        editable=False,
         related_name='created_movies',
         on_delete=models.SET_NULL,
         null=True,

@@ -9,10 +9,13 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: FOREIGN KEY (NOT-FIELD)
         xxxxxxx
 
     Example:
+
+        from django.conf import settings as stgs
         
         # BlogPost model where many blog posts can be written by one user:
         created_by = models.ForeignKey(
-            User,  # Other model that this BlogPost will be linked by IDs.
+            stgs.AUTH_USER_MODEL,
+            editable=False,
             related_name="posts",
             on_delete=models.SET_NULL,
             null=True,
