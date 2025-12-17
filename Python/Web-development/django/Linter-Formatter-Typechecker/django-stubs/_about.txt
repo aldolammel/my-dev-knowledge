@@ -12,7 +12,7 @@ DJANGO > TYPE CHECKER: DJANGO STUBS
 
 
     >> Installation and Integration:
-        /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.txt
+        ./installation.txt
 
 
 

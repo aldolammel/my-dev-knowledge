@@ -7,9 +7,13 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
     For new objects, through the adding detail-view, select an option first (using a radio or dropdown menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
 
 
-        B1) Install the dependency 'PolymorphicModel';
+        B1) Install the dependency 'PolymorphicModel':
+
+            /Python/Web-development/django/3-1-models-database/Polymorphic-solutions/django-polymorphic/installation.txt
         
-        B2) Add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS;
+
+        B2) In models.py, add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS:
+
             E.g.
                 class CommonForPeople(PolymorphicModel, models.Model):  # type: ignore[django-manager-missing]  # If MyPy warning it!
                     name = ...
@@ -18,13 +22,33 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
                 class OnlyForFemale(CommonForPeople):  # Same logic here.
                     pms_cases_by_year = ...
         
-        B3) On the CMS sidebar menu, let's make visible just the "People list-view" link;
+
+        B3) In admin.py:
 
             E.g.
                 from polymorphic.admin import (
                     PolymorphicParentModelAdmin,
                     PolymorphicChildModelAdmin,
                 )
+
+
+
+                # CHILDREN:
+
+                @admin.register(models.OnlyForMale)
+                class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
+                    base_model = models.OnlyForMale
+                    show_in_index = False  # hide link from CMS home (sidebar menu still shown)
+
+                    # Cause you need CMS audit:
+                    def save_model(self, request, obj, form, change):
+                        obj.save(user=request.user)
+
+                # And so on for all form options...
+
+
+
+                # PARENT:
 
                 @admin.register(models.CommonForPeople)
                 class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
@@ -35,13 +59,8 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
                     )
                     list_display = ("name", "slug", "polymorphic_ctype")
                     list_filter = ("polymorphic_ctype",)
+
+                    # Cause you need CMS audit:
+                    def save_model(self, request, obj, form, change):
+                        obj.save(user=request.user)
                 
-                @admin.register(models.OnlyForMale)
-                class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
-                    base_model = models.CommonForPeople
-                    show_in_index = False  # If exists in CMS sidebar menu.
-
-                # And so on for all form options...
-
-        B4) xxxxx
-        B5) xxxx

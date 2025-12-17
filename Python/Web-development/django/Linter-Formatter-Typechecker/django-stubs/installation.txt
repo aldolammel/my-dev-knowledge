@@ -4,7 +4,7 @@ TYPE CHECKER DJANGO STUBS: INSTALLATION AND INTEGRATION
 
 
     >> WHAT IS IT:
-        /Python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/_about.txt
+        ./_about.txt
 
 
     >> INSTALLING:

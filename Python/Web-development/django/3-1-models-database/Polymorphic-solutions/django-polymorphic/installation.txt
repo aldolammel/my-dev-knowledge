@@ -1,0 +1,42 @@
+
+
+DJANGO-POLYMORPHIC: INSTALLATION AND INTEGRATION
+
+
+    >> WHAT IS IT:
+        ./_about.txt
+
+
+    >> INSTALLING:
+
+        PRE) In your project environment on Terminal!
+
+        1) Install as a project dependency:
+            
+            LINUX:
+                # PIP:
+                    $ pip install django-polymorphic
+                # Or UV:
+                    $ uv add django-polymorphic
+
+            WINDOWS:
+                $ xxxxxxxxxxxxxxxxxxxxx
+
+
+    >> INTEGRATING:
+
+        1) In your Django core settings:
+
+            INSTALLED_APPS = [
+                # DJANGO DEFAULT SUB-APPS:
+                'django.contrib.contenttypes',
+                # THIRD-PARTY SUB-APPS:
+                'polymorphic',
+            ]
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    EXAMPLES:
+        ./examples.py

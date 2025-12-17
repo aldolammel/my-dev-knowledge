@@ -2,7 +2,9 @@
 
 PYTHON > UV PACKAGE MANAGER: UPDATING UV ITSELF
 
-    $ uv self update
+    # On global terminal (once UV is NOT installed into the project environ itself):
+        $ uv self update
+            # It should update the UV for use in all local projects!
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

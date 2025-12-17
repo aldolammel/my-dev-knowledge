@@ -11,3 +11,14 @@ PYTHON > UV PACKAGE MANAGER: UNINSTALLING DEPENDENCIES
     # Remove the package from a specific group of optionals:
         $ uv remove --optional <sub-group> <package_name>
         # E.g. $ uv remove --optional dev ruff
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    INSTALL DEPENDENCY:
+        ./install-dependency.txt
+
+
+    UPDATE DEPENDENCY:
+        ./upgrade-dependencies.txt

@@ -1,6 +1,5 @@
 
 
-
 DJANGO DATABASE MANAGEMENT: VALIDATIONS (DB CONSTRAINTS)
 
     To create a solid database validation level, use Django Constraints:

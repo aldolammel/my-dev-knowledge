@@ -56,3 +56,17 @@ PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
         
         3) Test your Python project to check if everything is going well.
 
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    INSTALL DEPENDENCY:
+        ./install-dependency.txt
+
+
+    UNINSTALL DEPENDENCY:
+        ./uninstall-dependencies.txt

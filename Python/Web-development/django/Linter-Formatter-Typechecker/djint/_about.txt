@@ -9,7 +9,7 @@ DJANGO > TEMPLATE LINTER AND FORMATER: DJLINT
 
 
     >> Installation and Integration:
-        /Python/Web-development/django/Linter-Formatter-Typechecker/djint/installation.txt
+        ./installation.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

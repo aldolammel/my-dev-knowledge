@@ -11,3 +11,15 @@ PYTHON > UV PACKAGE MANAGER: INSTALLING DEPENDENCIES
     # Optional one:
         $ uv add --optional <sub-group> <package_name>
         # E.g. $ uv add --optional dev ruff
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    UNINSTALL DEPENDENCY:
+        ./uninstall-dependency.txt
+
+
+    UPDATE DEPENDENCY:
+        ./upgrade-dependencies.txt
