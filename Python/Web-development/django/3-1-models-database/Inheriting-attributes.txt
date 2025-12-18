@@ -1,6 +1,9 @@
 
 
-INHERITING COMMON ATTRIBUTES:
+DJANGO > MODELS: INHERITING ATTRIBUTES
+
+    >> What is attribute:
+        /Programming-Concepts/oop-class-attribute.txt
 
 
     >> Imagine you re-using common attributes almost are used in all your tables
@@ -35,3 +38,6 @@ INHERITING COMMON ATTRIBUTES:
 
 MORE ABOUT CLASS META > ABSTRACT:
     ./meta-abstract.txt
+
+MORE ABOUT INHERITANCE FOR METHODS:
+    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

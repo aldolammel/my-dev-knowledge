@@ -10,27 +10,54 @@
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+# If you are using add_fieldsets tuple and/or fieldsets tuple, in readonly_fields tuple you MUST include all NON-editable attributes of your model, othetwise Django prints out an error:
+readonly_fields = (
+    "slug",
+    "created_at",
+    "updated_at",
+    "updated_by",
+)
 
 # It can return two lists of tuples where each tuple represents a fieldset:
 add_fieldsets = [
-    ('Section Title 1', {
-        'fields': ['field1'],
-        'description': 'Help text for this section'
-    }),
-    ('Section Title 2', {
-        'fields': ['field1'],
-        'description': 'Help text for this section'
-    }),
+    (
+        None, {
+            'fields': [
+                'field1',
+                'field2',
+            ],
+            'description': 'Help text for this section'
+        }
+    ),
+    (
+        'Section Title 2', {
+            'fields': [
+                'field1',
+                'field2',
+            ],
+            'description': 'Help text for this section'
+        }
+    ),
 ]
 fieldsets = [
-    ('Section Title 1', {
-        'fields': ['field1', 'field2'],
-        'description': 'Help text for this section'
-    }),
-    ('Section Title 2', {
-        'fields': ['field1', 'field2', 'field3'],
-        'description': 'Help text for this section'
-    }),
+    (
+        None, {
+            'fields': [
+                'field1',
+                'field2',
+            ],
+            'description': 'Help text for this section'
+        }
+    ),
+    (
+        'Section Title 2', {
+            'fields': [
+                'field1',
+                'field2',
+            ],
+            'description': 'Help text for this section'
+        }
+    ),
 ]
 
 # This method is mandatory when we are using add_fieldsets and/or fieldsets benefits:
@@ -43,7 +70,7 @@ def get_fieldsets(self, request, obj=None):
     # Logic here...
     return base_fieldsets
 
-# Example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Example with even more customizations - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 def get_fieldsets(self, request, obj=None):
     """Brings all data from fieldsets of the admin class."""

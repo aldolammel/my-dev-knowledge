@@ -1,5 +1,5 @@
 """
-    DJANGO: ALDO'S SOLUTION
+    DJANGO > VALIDATIONS: ALDO'S SOLUTION
 
     Set this function in your app's validators.py:
 """

@@ -9,7 +9,8 @@ DJANGO > POLYMORPHIC SOLUTION: DJANGO-POLYMORPHIC
     
 
     >> Examples:
-        ./examples.py
+        ./example/basic.py
+        ./example/real-case.py
         
     
     >> Installation and Integration:

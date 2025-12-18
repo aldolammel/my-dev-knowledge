@@ -113,6 +113,9 @@ class Language(models.Model):
         return f"{self.name} ({self.iso_code})"
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+
         self.name = self.name.capitalize()
         self.iso_code = self.iso_code.lower()
         # Checking the updated_by:
@@ -191,6 +194,9 @@ class Country(models.Model):
         return f"{self.name} ({self.abbreviation})"
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+        
         self.name = self.name.title()
         self.abbreviation = self.abbreviation.upper()
         # Checking the updated_by:
@@ -250,6 +256,8 @@ class Phone(models.Model):
         return f"+{self.country_code} ({self.region_code}) {self.number}"
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
         # Build the phone_id by concatenating the fields:
         self.phone_id = int(f"{self.country_code}{self.region_code}{self.number}")
         super().save(*args, **kwargs)
@@ -330,6 +338,9 @@ class Goal(TranslatableModel):
         return self.goal
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+        
         self.goal = self.goal.capitalize()
         super().save(*args, **kwargs)
 
@@ -461,6 +472,9 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
+        # Runs full validation before saving:
+        self.full_clean()
+        
         # Checking the updated_by:
         # Important: this need to be checked in admin.py and views.py as well!
         user = kwargs.pop("user", None)  # Retrieve the user from kwargs!
@@ -623,6 +637,9 @@ class UserProfileOne(models.Model):
         validate_goals(self.goal_primary, self.goal_secondary)
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+        
         # if self.first_name:
         #     self.first_name = self.first_name.title()  # Let the user choose their way!
         # if self.last_name:
@@ -824,6 +841,9 @@ class UserProfileTwo(models.Model):
         validate_goals(self.goal_primary, self.goal_secondary)
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+        
         if self.business_name:
             self.business_name = self.business_name.title()
         if self.legal_name:

@@ -141,6 +141,8 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
+        # Runs full validation before saving:
+        self.full_clean()
         # Checking the updated_by:
         # Important: this need to be checked in admin.py and views.py as well!
         user = kwargs.pop("user", None)  # Retrieve the user from kwargs!
@@ -237,6 +239,8 @@ class UserProfileOne(models.Model):
         validate_birth(self.birthdate)
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
         # if self.first_name:
         #     self.first_name = self.first_name.title()  # Let the user choose their way!
         # if self.last_name:

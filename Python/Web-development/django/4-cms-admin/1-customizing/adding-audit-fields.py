@@ -49,11 +49,13 @@ class PageModel(AuditBase):
     attr_2 = ...
 
     # How model inheritance works:
-    # /Python/Web-development/django/3-1-models-database/Inheriting-common-attributes.txt
+    # /Python/Web-development/django/3-1-models-database/Inheriting-attributes.txt
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
         
+        # Runs full validation before saving:
+        self.full_clean()
         # Retrieve the user from kwargs, default to None if not passed:
         user = kwargs.pop("user", None)
         if self.something_exist_an_important_field:
@@ -84,3 +86,6 @@ class PageModelAdmin(admin.ModelAdmin):
         """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
+
+    # If you expect to use audit in more than two admin classes, it's recommended to use Mixin class to simplify maintanance:
+    #   /Python/Web-development/django/4-cms-admin/model-type-mixin.py

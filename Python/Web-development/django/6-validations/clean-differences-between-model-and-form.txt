@@ -40,6 +40,7 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                             my_custom_validator(p, s)
 
 
+
             >> For FORM classes:
 
                     class ExampleModelForm(forms.ModelForm):
@@ -49,7 +50,7 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                             fields = "__all__"
 
                         def clean(self):
-                            """Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return."""
+                            """Form-level validation that runs after individual field validations if available."""
                             # Always starts like this:
                             cleaned_data = super().clean()
 
@@ -61,8 +62,17 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                             # And ends, returning that dictionary:
                             return cleaned_data
 
+                            
 
 
-        >> HOW TO BUILD A VALIDATORS.PY:
-            /Python/Web-development/django/6-validations/models-validators-customized.py
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+
+HOW TO BUILD A VALIDATORS.PY:
+    /Python/Web-development/django/6-validations/models-validators-customized.py
+
+CLEAN() FOR MODELS:
+    /Python/Web-development/django/3-1-models-database/method-clean.py
+
+CLEAN() FOR FORMS:
+    /Python/Web-development/django/9-forms/method-clean.py

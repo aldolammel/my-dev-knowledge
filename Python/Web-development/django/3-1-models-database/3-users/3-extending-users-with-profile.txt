@@ -190,6 +190,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 validate_goals(self.goal_primary, self.goal_secondary)
 
             def save(self, *args, **kwargs):
+                # Runs full validation before saving:
+                self.full_clean()
                 # if self.first_name:
                 #     self.first_name = self.first_name.title()  # Let the user choose their way!
                 # if self.last_name:
@@ -391,6 +393,8 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 validate_goals(self.goal_primary, self.goal_secondary)
 
             def save(self, *args, **kwargs):
+                # Runs full validation before saving:
+                self.full_clean()
                 if self.business_name:
                     self.business_name = self.business_name.title()
                 if self.legal_name:

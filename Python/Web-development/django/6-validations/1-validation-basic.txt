@@ -4,7 +4,7 @@ DJANGO FORMS: VALIDATIONS
     
     The expression "Django Forms" refers to the form classes Django uses, including those in the admin (e.g., a new post form) and those used in the app’s front-end (e.g., a contact form). So, just to be clear, "Django Forms" mean Python classes (from django.forms) that handle rendering and validating user input. Django Forms represent:
         
-    - Forms in the Django CMS (yes, these use Django Forms);
+    - Forms in the Django CMS (yes, they use Django Forms);
     - Forms in app's front-end (only if you're using Django's templating to create them);
 
 

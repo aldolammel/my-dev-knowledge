@@ -68,6 +68,8 @@ VERY BASIC USER SOLUTION:
 
                         def save(self, *args, **kwargs):
                             '''Built-in method that's executed when the entry saving runs.'''
+                            # Runs full validation before saving:
+                            self.full_clean()
                             # Retrieve the user from kwargs, default to None if not passed:
                             user = kwargs.pop("user", None)
                             # Set created_by if this is a new object:

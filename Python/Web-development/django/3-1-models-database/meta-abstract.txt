@@ -50,7 +50,7 @@ DJANGO MODEL > META CLASS: ABSTRACT
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 MODEL'S INHERITANCE IN DJANGO:
-    ./Inheriting-common-attributes.txt
+    ./Inheriting-attributes.txt
 
 WHAT IS MODEL META:
     ./meta.txt

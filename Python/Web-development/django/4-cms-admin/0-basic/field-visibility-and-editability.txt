@@ -109,6 +109,8 @@ FIELD VISIBILITY AND EDITABILITY:
 
                 E.g.
                     def save(self, *args, **kwargs):
+                        # Runs full validation before saving:
+                        self.full_clean()
                         # Reset <field_to_clean_and_lock> if <reason>:
                         if self.<another_field> condition:
                             self.<field_to_clean_and_lock> = None

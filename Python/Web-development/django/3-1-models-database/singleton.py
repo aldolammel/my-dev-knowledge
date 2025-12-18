@@ -34,6 +34,8 @@ class PagexSettings(models.Model):
         return "Configurações do Pagex"
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
         # Ensure there's only one settings instance (Singleton):
         if not self.pk and PagexSettings.objects.exists():
             return PagexSettings.objects.first()

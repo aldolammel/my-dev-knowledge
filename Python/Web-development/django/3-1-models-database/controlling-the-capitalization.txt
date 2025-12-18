@@ -11,6 +11,8 @@ CONTROLLING THE CAPITALIZATION:
                 name = ...
                 
                 def save(self, *args, **kwargs):
+                    # Runs full validation before saving:
+                    self.full_clean()
                     # Forcing the name to be lowercase on db:
                     self.name = self.name.lower()  
                     super().save(*args, **kwargs)

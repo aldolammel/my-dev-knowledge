@@ -49,6 +49,8 @@ class Movie(models.Model):
         self.delete()
 
     # def save(self, *args, **kwargs):
+    # Runs full validation before saving:
+    # self.full_clean()  
     # ...
     # super().save(*args, **kwargs)
 

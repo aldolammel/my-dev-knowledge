@@ -4,7 +4,7 @@ DJANGO-POLYMORPHIC: INSTALLATION AND INTEGRATION
 
 
     >> WHAT IS IT:
-        ./_about.txt
+        ./0-djangopolymorphic.txt
 
 
     >> INSTALLING:
@@ -39,4 +39,5 @@ DJANGO-POLYMORPHIC: INSTALLATION AND INTEGRATION
 
 
     EXAMPLES:
-        ./examples.py
+        ./example/basic.py
+        ./example/real-case.py

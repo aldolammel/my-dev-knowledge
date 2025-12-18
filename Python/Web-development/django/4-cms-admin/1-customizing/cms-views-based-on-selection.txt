@@ -9,7 +9,7 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
 
         B1) Install the dependency 'PolymorphicModel':
 
-            /Python/Web-development/django/3-1-models-database/Polymorphic-solutions/django-polymorphic/installation.txt
+            /Python/Web-development/django/component-libraries/django-polymorphic/installation.txt
         
 
         B2) In models.py, add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS:

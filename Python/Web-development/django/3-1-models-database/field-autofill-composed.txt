@@ -22,6 +22,8 @@ AUTOFILL FIELD: COMPOSED FIELD
         to save all data to the database:
 
             def save(self, *args, **kwargs):
+                # Runs full validation before saving:
+                self.full_clean()
                 self.full_name = f'{self.fname} {self.lname}'
                 super().save(*args, **kwargs)
 

@@ -32,15 +32,18 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ['name', 'email']
 
-    # Django automatically provides this save() method:
-    # def save(self, commit=True):
-    #     """Built-in Form method persists form data to the db."""
-    #     instance = super().save(commit=False)
-    #     if commit:
-    #         instance.save()
-    #     return instance
+    
+    def save(self, commit=True):
+        """Built-in Form method persists form data to the db."""
+        instance = super().save(commit=False)
+        if commit:
+            instance.save()
+        return instance  # In forms, the save() always MUST return the instance/obj!
+
 
 # Common example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Django automatically provides this save() method, but you can customized it:
 
 class UserForm(forms.ModelForm):
     class Meta:
@@ -50,24 +53,25 @@ class UserForm(forms.ModelForm):
     # Custom save method
     def save(self, commit=True):
         """Built-in Form method persists form data to the db."""
-        # Get the instance but don't save to DB yet
+
+        # Get the instance but don't save to DB yet:
         user = super().save(commit=False)
         
-        # Custom logic
+        # Custom logic:
         user.name = user.name.title()  # Capitalize name
         user.set_password('default123')  # Set default password
         
         if commit:
-            user.save()  # Now save to database
+            user.save()  # Now save to database. This 'user.save()' calls automatically the full_clean() on models.
         
-        return user
+        return user  # In forms, the save() always MUST return the instance/obj!
 
     
 # Save method in a View - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-def create_user(request):
+# METHOD IN A VIEW <------
+def blabla_view(request):  #  <---- Exactly, for VIEWS we use only '.save()' through other methods!
     if request.method == 'POST':
         form = UserForm(request.POST)
-        if form.is_valid():
-            user = form.save()  # Calls either default or custom save()
-            # user is now saved to database
+        if form.is_valid():  # To run a form clean(), its MANDATORY to call the VIEW '.is_valid()' method that will run the FORM clean() only, never running the clean() in models. There is NO full_clean() for forms!
+            user = form.save()  # Using '.save()' now it calls MODEL clean() and save() where the full_clean() must be automatically called, validating the model attributes/constraints, and finally saving the user in the db!

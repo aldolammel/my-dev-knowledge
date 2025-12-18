@@ -1,5 +1,5 @@
 
-# DJANGO-POLYMORPHIC EXAMPLES
+# DJANGO-POLYMORPHIC: BASIC EXAMPLES
 # This is basically all you need to know, as django-polymorphic mostly works fully automatic and just delivers the expected results.
 
 
@@ -17,6 +17,10 @@ class ArtProject(Project):
 class ResearchProject(Project):
     supervisor = models.CharField(max_length=30)
 
+
+
+# IN ADMIN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Check this example: ./real-case.py
 
 
 

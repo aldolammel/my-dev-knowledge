@@ -30,10 +30,12 @@ AUTOFILL FIELD:
                 age = models.PositiveSmallIntegerField(editable=False, blank=True)
 
                 def save(self, *args, **kwargs):
+                    # Runs full validation before saving:
+                    self.full_clean()
                     # Calculate the user's age based on their existent birthdate:
                     if self.birthdate:
                         today = date.today()
                         born = self.birthdate
                         self.age = today.year - born.year - ((today.month, today.day) < (born.month, born.day))
-                    #
+                    # Saving in db:
                     super().save(*args, **kwargs)

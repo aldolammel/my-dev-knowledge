@@ -54,6 +54,9 @@ class PagexKeyword(models.Model):
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
+        # Runs full validation before saving:
+        self.full_clean()
+        
         if self.kw.strip():
             self.kw = self.kw.lower()
             self.slug = pagex_slugifier(self.kw)
@@ -116,6 +119,9 @@ class PagexCategory(models.Model):
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
+        # Runs full validation before saving:
+        self.full_clean()
+
         if self.cat.strip():
             # self.cat = self.cat.title()  # In this case, leave it for the user!
             self.slug = pagex_slugifier(self.cat)
@@ -294,7 +300,9 @@ class PagexPage(models.Model):
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
         # CRITICAL - DON'T change is_home value via PagexPage. MUST be managed by PagexSettings!
-
+        
+        # Runs full validation before saving:
+        self.full_clean()
         # Minimum to validate:
         if self.title:
             # If SEO Title empty, define it based on Title:
@@ -411,6 +419,9 @@ class PagexMenu(models.Model):
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
+        # Runs full validation before saving:
+        self.full_clean()
+
         if self.name.strip():
             self.name = self.name.strip().title()
             # Set the identifier based on the name:

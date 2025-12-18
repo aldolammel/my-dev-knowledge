@@ -17,6 +17,9 @@ class Movie(models.Model):
         return f'{self.name} ({self.released_year})'
 
     def save(self, *args, **kwargs):
+        # Runs full validation before saving:
+        self.full_clean()
+        
         self.name = self.name.lower()
         self.director = self.director.lower()
         super().save(*args, **kwargs)

@@ -17,9 +17,11 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # search_fields = []
     # readonly_fields = ()
     # All fields exclusively for the CMS Adding New object:
-    # add_fieldsets = ()
+    # add_fieldsets = ()  # If you to use this, it demands get_fieldsets:
+        # /Python/Web-development/django/4-cms-admin/method-get_fieldsets.py
     # All fields exclusively for the CMS Visualizing an object:
-    # fieldsets = ()
+    # fieldsets = ()  # If you to use this, it demands get_fieldsets:
+        # /Python/Web-development/django/4-cms-admin/method-get_fieldsets.py
 
     # If you have 'created_by' or 'updated_by' you definitely need this method:
     def save_model(self, request, obj, form, change):

@@ -6,35 +6,15 @@ from django.contrib import admin
 from . import forms, models
 
 """
-@admin.register(models.ExampleModel)
-class ExampleModelAdmin(admin.ModelAdmin):
-    '''Customizes the management of xxxxxxxxxxxxxxxxxxxxxx'''
-    
-    # Custom form:
-    # Reserved space...
-
-    # Custom inlines:
-    # Reserved space...
-
-    list_display = (
-        "xxxxxxx",
-    )
-    # exclude = ()
-    # filter_horizontal = ()
-    # list_filter = ()
-    # search_fields = []
-    # readonly_fields = ()
-    # All fields exclusively for the CMS Adding New object:
-    # add_fieldsets = ()
-    # All fields exclusively for the CMS Visualizing an object:
-    # fieldsets = ()
-
-    # If you have 'created_by' or 'updated_by' you definitely need this method:
-    def save_model(self, request, obj, form, change):
-        '''Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface.'''
-        # Sending to models.py the current user in CMS:
-        obj.save(user=request.user)
+Admin model class model:
+https://github.com/aldolammel/my-dev-knowledge/blob/main/Python/Web-development/django/4-cms-admin/_admin-class-model.py
 """
+
+
+
+
+
+
 
 # Admin sections that don't need to be customized:
 # Reserved space...

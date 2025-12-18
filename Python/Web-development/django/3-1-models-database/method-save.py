@@ -23,13 +23,34 @@
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Django automatically provides this save() method!
-# But if you need override the original one, basic structure:
+# Django automatically provides this save() method, but if you need override the original one (probably), basic structure:
+
+# For parent classes (common):
 class ExampleModel(models.Model):
-    #...
+    ...
     def save(self, *args, **kwargs):
         """Built-in Model method that's executed when the db entry saving runs."""
-        # custom save code...
+
+        # 1. Runs full validation before saving to fail fast if data is invalid:
+        # Mandatory! Without this, you will face some invalid data in the db once the save() doesn't check, for example, validators declared in model attributes, nor their choice options, blank status, and max_length!
+        self.full_clean()
+
+        # 2. The saving logic you wanna work here!
+        
+        # 3. Saving data in the db:
+        super().save(*args, **kwargs)
+
+# For child classes:
+class ChildExampleModel(ExampleModel):
+    ...
+    def save(self, *args, **kwargs):
+        """Built-in Model method that's executed when the db entry saving runs."""
+
+        # 1. NEVER CALL "self.full_clean()" IN CHILD IF PARENT ALREADY CALL IT!
+        
+        # 2. The saving logic you wanna work here!
+        
+        # 3. Saving data (including changes in parent via this child) in the db:
         super().save(*args, **kwargs)
 
 
@@ -48,18 +69,22 @@ class Article(models.Model):
     
     def save(self, *args, **kwargs):
         """Built-in Model method that's executed when the db entry saving runs."""
-        # Auto-generate slug from title if not provided
+        
+        # Runs full validation before saving:
+        self.full_clean()
+
+        # Auto-generate slug from title if not provided:
         if not self.slug:
             self.slug = self.title.lower().replace(' ', '-')
         
-        # Auto-update the updated_at timestamp
+        # Auto-update the updated_at timestamp:
         self.updated_at = timezone.now()
         
-        # Custom logic before publishing
+        # Custom logic before publishing:
         if self.is_published and not self.created_at:
             self.created_at = timezone.now()
         
-        # Call the parent class save() to actually save to database
+        # Call the parent class save() to actually save to database:
         super().save(*args, **kwargs)
 
 
@@ -74,4 +99,5 @@ class ExampleModel2(models.Model):
         user.save()  # INSERT into database
         # Updates existing record
         user.name = "Jane"
-        user.save()  # UPDATE database
+        # UPDATE database:
+        user.save()  # if you're using a custom clean() and your save() has full_clean() declared, this is execute the clean() validation before saving and then, if no validation errors, save it!

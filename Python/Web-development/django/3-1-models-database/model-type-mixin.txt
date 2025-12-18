@@ -1,0 +1,2 @@
+SAME LOGIC:
+/Python/Web-development/django/4-cms-admin/model-type-mixin.py

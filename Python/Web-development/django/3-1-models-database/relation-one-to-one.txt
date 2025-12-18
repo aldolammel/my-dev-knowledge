@@ -20,6 +20,8 @@ RELATION: ONE TO ONE
                 full_number = ...
 
                 def save(self, *args, **kwargs): 
+                    # Runs full validation before saving:
+                    self.full_clean()
                     # Build the full number by concatenating the fields
                     self.full_number = int(f'{self.country_code}{self.region_code}{self.number}')
                     super().save(*args, **kwargs) 
