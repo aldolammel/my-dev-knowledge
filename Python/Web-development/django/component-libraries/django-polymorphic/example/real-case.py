@@ -82,11 +82,16 @@ class PagexElementAdmin(SaveUserMixin, PolymorphicParentModelAdmin):
     list_display = (
         "name",
         "slug",
+        "element_type",  # instead of the not UX-friendly "polymorphic_ctype".
         "updated_at",
         "updated_by",
-        "polymorphic_ctype",
     )
     list_filter = ("updated_by",)
+
+    @admin.display(description="Tipo", ordering="polymorphic_ctype")  # making it sortable on CMS!
+    def element_type(self, obj):
+        # Returning the child class' verbose name:
+        return obj.polymorphic_ctype.model_class()._meta.verbose_name
 
 @admin.register(models.PagexElementTxt)
 class PagexElementTxtAdmin(SaveUserMixin, PolymorphicChildModelAdmin):

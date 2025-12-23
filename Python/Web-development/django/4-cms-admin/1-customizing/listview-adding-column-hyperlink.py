@@ -1,14 +1,16 @@
-'''
-    ADDING HYPERLINK IN LIST-VIEW:
 
-'''
+"""
+DJANGO CMS > LIST-VIEW: ADDING A HYPERLINK
 
-# In an admin.py file:
-from .models import MyModelClass
+"""
+
+# FILE: /admin.py
+from . import models
 
 
-@admin.register(MyModelClass)
+@admin.register(models.MyModelClass)
 class MyModelClassAdmin(admin.ModelAdmin):
+    
     list_display = (
         'name',
         'page_link',  # Replacing the original Model Class attribute called 'url'!

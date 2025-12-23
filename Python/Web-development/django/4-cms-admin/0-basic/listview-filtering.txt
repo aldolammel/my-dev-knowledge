@@ -1,14 +1,1 @@
-
-
-FILTERING IN THE LIST-VIEW:
-
-    >> If you want to create some filters in a specific list-view in the CMS,
-        go to the admin.py and:
-
-            class MovieCMS(admin.ModelAdmin):
-                list_filter = ('year_movie',)
-
-
-            # It will create a new column in list-view where you see
-            # all years available in the database, also showing a
-            # counter of entries/movies exist on each year.
+/Python/Web-development/django/4-cms-admin/1-customizing/listview-model-option-list_filter.py

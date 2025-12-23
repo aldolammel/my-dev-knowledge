@@ -1,6 +1,6 @@
 
 
-TYPE ANNOTATION:
+PROGRAMMING CONCEPTS: TYPE ANNOTATION
 
     It's a programming feature that adds optional type hints to variables, function parameters, and
     function return values, clarifying their expected data types.

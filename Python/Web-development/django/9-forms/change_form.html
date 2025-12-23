@@ -1,0 +1,104 @@
+{% comment %}
+MORE ABOUT THIS CUSTOM FORM: soon! xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+{% endcomment %}
+
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static %}
+
+{% block after_field_sets %}
+  {{ block.super }}
+  <div class="module">
+    <h2>Gerenciamento de Seções do Conteúdo</h2>
+    {# Force this form to be shown only for existing objects: #}
+    {% if original and original.pk %}
+      <!-- Current Sections Table -->
+      <div>
+
+        {% if current_sections %}
+          <table>
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Seção</th>
+                <th>Nº Elementos</th>
+                <th>Origem</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for section_data in current_sections %}
+                <tr style="border-bottom: 1px solid #eee;
+                           {% cycle 'background: white;
+                           ' 'background: #fafafa;
+                           ' %}">
+                  <td>
+                    <strong>{{ section_data.section_order }}</strong>
+                  </td>
+                  <td>
+                    <strong>{{ section_data.section.name }}</strong>
+                  </td>
+                  <td>{{ section_data.element_count }}</td>
+                  <td>
+                    {% if section_data.from_layout %}
+                      <span>Via layout</span>
+                    {% else %}
+                      <span>Agregada</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    <form method="post"
+                          style="display: inline"
+                          onsubmit="return confirm('Tem certeza que deseja remover a seção {{ section_data.section.name }}?\n\nIsso removerá {{ section_data.element_count }} elemento(s) de conteúdo da página.');">
+                      {% csrf_token %}
+                      <input type="hidden"
+                             name="section_order"
+                             value="{{ section_data.section_order }}" />
+                      <button type="submit" name="_remove_section">Remover</button>
+                    </form>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          <p>Nenhuma seção encontrada nesta página.</p>
+        {% endif %}
+      </div>
+      <!-- Add Section Form -->
+      <div>
+        <h3>Agregar Nova Seção</h3>
+        <form method="post">
+          {% csrf_token %}
+          <div>
+            <!-- Section Selector -->
+            <div>
+              <label for="id_section">Seção:</label>
+              <select name="section" id="id_section" required>
+                <option value="">- - - - - - -</option>
+                {% for section in available_sections %}
+                  <option value="{{ section.id }}">{{ section.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <!-- Position Input -->
+            <div>
+              <label for="id_position">Posição:</label>
+              <input type="number"
+                     name="position"
+                     id="id_position"
+                     min="0"
+                     placeholder="Final" />
+            </div>
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" name="_add_section">Agregar Seção</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    {% else %}
+      <div>To add some content, you need to save it first!</div>
+    {% endif %}
+  </div>
+{% endblock after_field_sets %}
