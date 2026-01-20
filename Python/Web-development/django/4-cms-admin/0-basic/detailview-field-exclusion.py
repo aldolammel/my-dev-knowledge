@@ -1,5 +1,8 @@
 """
-    DJANGO CMS: EXCLUDING A FIELD IN DETAIL-VIEW
+    DJANGO CMS: EXCLUDING A FIELD IN DETAIL-VIEW (DETAILED APPROACH)
+
+    For basic approach:
+        ./detailview-field-exclusion-basic.py
 
     The idea here is to "filter" which situation a field must be shown: "Only for new objects; only for editable objects, or in both cases?" To organize that, let's use the 'add_fieldsets' and 'fieldsets' tuples benefits inside the admin class:
 """
@@ -20,6 +23,9 @@ class ExampleModel(models.Model):
 @admin.register(ExampleModel)
 class ExampleModelAdmin(admin.ModelAdmin):
 
+    readonly_fields = (
+        "how_much_pages_has_my_site",
+    )
     # All fields exclusively for the CMS Adding New object:
     add_fieldsets = (
         (
@@ -59,7 +65,12 @@ class ExampleModelAdmin(admin.ModelAdmin):
         ...
     )
 
-    # IMPORTANT: This method below's MANDATORY when we use add_fieldsets and fieldsets benefits:
+    # Example of a method field (not editable, just a information):
+    def how_much_pages_has_my_site(self, obj):
+        ...
+        return ...
+
+    # IMPORTANT: This method below is MANDATORY when we use add_fieldsets and fieldsets benefits:
     def get_fieldsets(self, request, obj=None):
         """Brings all data from fieldsets of the admin class."""
         fieldsets = self.add_fieldsets if not obj else self.fieldsets
@@ -69,7 +80,6 @@ class ExampleModelAdmin(admin.ModelAdmin):
         fieldsets_list = []
         for title, opts in fieldsets:
             fields = list(opts.get("fields", []))
-
             # Only remove fields if editing an existing object:
             if obj and hasattr(obj, "site_type"):
                 match obj.site_type:
@@ -87,5 +97,4 @@ class ExampleModelAdmin(admin.ModelAdmin):
                                 fields.remove(field)
 
             fieldsets_list.append((title, {**opts, "fields": tuple(fields)}))
-
         return fieldsets_list
