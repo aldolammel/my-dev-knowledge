@@ -34,9 +34,8 @@ class ArticleAdmin(admin.ModelAdmin):
 class ArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
-        if not obj.pk:  # New object
-            obj.created_by = request.user
-        obj.last_modified_by = request.user
+        # Sending to models.py the current user in CMS:
+        obj.save(user=request.user)
         super().save_model(request, obj, form, change)
 
 

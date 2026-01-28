@@ -1,0 +1,8 @@
+
+
+VERSIONING > GIT: RESET
+
+    Moves the current branch pointer to a specific commit, optionally modifying the staging area and working directory.
+    
+
+    >> xxxxxxxxxx:

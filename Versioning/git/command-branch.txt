@@ -1,0 +1,44 @@
+
+
+VERSIONING > GIT: BRANCH
+
+    Lists, creates, or deletes branches in your repository.
+
+
+    >> Checking which branch you are:
+        
+        # check local branch:
+            $ git branch
+
+        # check all branches available, including local:
+            $ git branch -a
+
+
+    >> Creating a new local branch:
+        
+        # creating it:
+            $ git branch <new_branch_name>
+
+        # selecting it:
+            $ git checkout <new_branch_name>
+
+        >> remider: create it as remote too (using push):
+            ./command-push.txt
+
+
+    >> Force the original branch again:
+        
+        # Check exactly the branch name you want:
+            $ git branch -a
+        # Download that:
+            $ git reset --hard <branch_name>
+
+
+    >> Deleting a local branch:
+
+        $ git branch -d <branch-name>
+
+
+    >> Deleting a remote branch (using push):
+
+        ./command-push.txt

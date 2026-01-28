@@ -13,7 +13,7 @@ RE-INSTALL ONLY THE DJANGO:
         project repository again:
 
             1) Clone an existent project repo:
-                /Versioning/git/basic-commands.txt
+                /Versioning/git/_basic.txt
             
             2) Carefully, adapt this guide to reinstall the Django project:
                 /Python/Web-development/django/1-install-and-first-steps/1-with-uv-manager.txt

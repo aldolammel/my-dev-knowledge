@@ -86,7 +86,7 @@ DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
                 PRE.1) Make sure you're in the project virtual environment!
 
                 PRE.2) Project is already in your local machine!
-                        /Versioning/git/basic-commands.txt
+                        /Versioning/git/_basic.txt
                 
                 >> Project requirements/dependencies:
 

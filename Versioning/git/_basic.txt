@@ -1,0 +1,141 @@
+
+
+    GIT:
+
+        It's a version system to control project files version.
+
+        >> Git workflow:
+
+            1. Local > You develop something locally;
+            2. Local > Send it to Local Stage area (git add);
+            3. Local > Send it to Local Repo (git commit);
+            4. Remote > Send it to Remote Repo (git push);
+            5. Merge or not the main branch.
+
+
+        >> Creating a new repository (by terminal):
+            
+            ./command-init.txt
+
+
+        >> Getting in/Cloning an existent project/respository:
+
+            ./command-clone.txt
+
+        
+        >> Checking which branch you are:
+        
+            ./command-branch.txt
+
+
+        >> Switching to another branch:
+        
+            ./command-checkout.txt
+
+
+        >> Creating a new local branch:
+        
+            ./command-branch.txt
+
+
+        >> Creating a new remote branch:
+        
+            ./command-push.txt
+
+
+        >> Checking if you have the last version of the main:
+        
+            >> A report with all commits:
+                ./command-log.txt
+
+                # Find all changes without merging these changes into your current working branch:
+                    ./command-fetch.txt
+                    
+                # OR pull it, fetching and merging (or rebases) changes:
+                    ./command-pull.txt
+
+
+        >> Force the original branch again:
+        
+            ./command-branch.txt
+
+
+        >> Put a specific file/specific changes on LOCAL STAGE:
+        
+            ./command-add.txt
+
+
+        >> Stages all your changes in the entire working directory, including modifications, new files, and deletions. It stages changes in the entire repository:
+        
+            ./command-add.txt
+        
+
+        >> Stages your specific changes in the current directory and its subdirectories. It stages modifications and new files but does not include deletions:
+        
+            ./command-add.txt  
+
+
+        >> Sending your changes to the LOCAL REPO:
+        
+            ./command-commit.txt
+
+
+        >> Taking updates from teammates to the REMOTE same branch:
+        
+            $ git pull
+
+
+        >> Publishing your changes (from Local Repo) to the REMOTE same branch:
+        
+            ./command-push.txt
+
+            # or through remote command:
+
+            ./command-remote.txt
+
+
+        >> Deleting a file (from local machine and repository):
+        
+            ./command-rm.txt
+
+
+        >> Deleting a folder (from local machine and repository):
+
+            ./command-rm.txt
+
+        
+        >> Deleting a file (only from repository):
+
+            ./command-rm.txt
+
+        >> Deleting a folder (only from repository):
+
+            ./command-rm.txt
+
+
+        >> Deleting a local branch:
+
+            ./command-branch.txt
+
+
+        >> Deleting a remote branch (using push):
+
+            ./command-push.txt
+
+
+        >> Deleting the local repository:
+            # delete the .git folder,
+            # or inside the project folder, do it:
+                $ rm -rf .git
+
+    
+
+        >> Restore a file to its original content:
+
+            ./command-checkout.txt
+
+
+        
+        >> Merging two branches:
+
+            ./command-merge.txt

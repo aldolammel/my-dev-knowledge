@@ -1,0 +1,20 @@
+
+
+VERSIONING > GIT: INIT
+
+    Initializes a new Git repository in the current directory.
+
+
+    >> Creating a new repository (by terminal):
+            
+        # Creating the project folder:
+            $ mkdir <project-name>
+        
+        # In the project folder:
+            $ echo "# Project Name Here" >> README.md
+            $ git init
+            $ git add README.md
+            $ git commit -m "first commit"
+            $ git branch -M main
+            $ git remote add origin https://github.com/abcoo-ideias/<project_simpler_name>.git
+            $ git push -u origin main
