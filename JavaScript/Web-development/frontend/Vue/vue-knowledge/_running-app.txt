@@ -3,7 +3,7 @@
 RUNNING A VUE APP:
 
 
-    1) On terminal, go to the project's folder!
+    1) On terminal, go to the Vue project's folder (not necessarialy in the back-end folder)!
 
 
     2) Check if there's Git version control:

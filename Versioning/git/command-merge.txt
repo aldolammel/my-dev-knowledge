@@ -11,7 +11,7 @@ VERSIONING > GIT: MERGE
 
     >> Merging two branches:
 
-        >> Approach A: if no new stuff in the main branch - - - - - - - - - - - - - - - - - - - - - 
+        >> Approach A: if NO new stuff in the main branch - - - - - - - - - - - - - - - - - - - - - 
             
             Given that you're the sole developer and no changes have been made to main since you branched off to the other branch you have been working, merging is straightforward and safe approach:
 
@@ -23,20 +23,21 @@ VERSIONING > GIT: MERGE
 
             3. Push to remote:
                 $ git push origin main
+                    # It's expected the prompt to return "Total 0, reused 0, pack-reused 0".
 
-            4. Do you want to keep the working branch active for future development work?
+            4. CRITICAL: Test the main branch!
 
-                4A) Keep it:
+            5. Do you want to keep the working branch active for future development work?
+
+                5A) Keep it:
 
                     # Switch back to working branch to continue working:
                     $ git checkout <branch_name>
                 
-                4B) Or delete it:
+                5B) Or delete it:
                     
                     $ git branch -d <branch_name>  # local deletion
                     $ git push origin --delete <branch_name>  # remote deletion
-
-            5. CRITICAL: Test the main branch!
 
 
         >> Approach B: if there's new stuff in the main branch - - - - - - - - - - - - - - - - - - -

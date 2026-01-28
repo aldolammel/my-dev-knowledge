@@ -73,8 +73,9 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # IMPORTANT: This method below is MANDATORY when we use add_fieldsets and fieldsets benefits:
     def get_fieldsets(self, request, obj=None):
         """Brings all data from fieldsets of the admin class."""
-        fieldsets = self.add_fieldsets if not obj else self.fieldsets
-        # return fieldsets  # If you would have no field customizations!
+        
+        # If you would have no field customizations:
+        # return self.add_fieldsets if not obj else self.fieldsets
 
         # Convert tuple of tuples into mutable structure:
         fieldsets_list = []

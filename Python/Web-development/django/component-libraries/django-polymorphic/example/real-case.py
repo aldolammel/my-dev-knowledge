@@ -188,8 +188,9 @@ class PagexElementTxtAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
     )
 
     def get_fieldsets(self, request, obj=None):
-        base_fieldsets = self.add_fieldsets if not obj else self.fieldsets
-        return base_fieldsets
+        """Built-in method to retrieve a list of tuples, in which each tuple represents a fieldset on the admin form page."""
+        # Defines which fieldsets to start from:
+        return self.add_fieldsets if not obj else self.fieldsets
 
 @admin.register(models.PagexElementLink)
 class PagexElementLinkAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
@@ -291,5 +292,6 @@ class PagexElementLinkAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
     )
 
     def get_fieldsets(self, request, obj=None):
-        base_fieldsets = self.add_fieldsets if not obj else self.fieldsets
-        return base_fieldsets
+        """Built-in method to retrieve a list of tuples, in which each tuple represents a fieldset on the admin form page."""
+        # Defines which fieldsets to start from:
+        return self.add_fieldsets if not obj else self.fieldsets
