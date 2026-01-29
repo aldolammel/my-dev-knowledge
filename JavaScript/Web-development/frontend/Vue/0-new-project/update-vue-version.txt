@@ -2,27 +2,7 @@
 
 VUE: KEY POINTS FOR UPDATE THE VUE VERSION IN AN EXISTENT PRODUCT
 
-    >> xxxxx
+    /JavaScript/Web-development/frontend/Vue/2-updating/updating-vue.txt
+    
 
-    >> Check the pyproject.toml file!
-        There are settings there specifying the Python version at least for dev dependencies!
-
-    >> xxxxxxxxxxxxxxxxxxxx
-
-    >> xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-    >> How to update:
-
-        x) xxxxxxxxxxxxxxxxx
-
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
-        x) xxxxxxxxxxxxxxxxx
-        
 

@@ -189,7 +189,7 @@
                             >> If node version is NOT what you want, do it:
 
                                 A) Switch the Node version to use:
-                                    /JavaScript/NodeJS/nvm-switch-node-version-automatically.txt
+                                    /JavaScript/NodeJS/2.2-automating-switch-process.txt
 
                                 B) Re-install the Vue-CLI!
 

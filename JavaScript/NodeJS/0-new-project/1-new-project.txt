@@ -1,0 +1,12 @@
+
+
+NODE PROJECTS: ROADMAPS
+    
+    >> Node installation only:
+        /JavaScript/NodeJS/1-installation.txt
+    
+    >> Strong JavaScript projects:
+        /JavaScript/00-New-Project/1-new-project.txt
+
+    >> Strong JavaScript projects with Vue:
+        /JavaScript/Web-development/frontend/Vue/0-new-project/1-new-project.txt

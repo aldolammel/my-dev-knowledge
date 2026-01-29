@@ -1,0 +1,9 @@
+
+
+NODE.JS > NPM: UPDATING THE NODE PACKAGE MANAGER APART
+
+    REMEMBER:
+        When you install Node (standalone or through NVM), it brings its default package manager, NPM, but it doesn't mean the NPM version is the latest one available, once the NPM into the Node was the latest version available when that Node version was released.
+    
+    >> Forcing the NPM update, globally:
+        $ npm install -g npm

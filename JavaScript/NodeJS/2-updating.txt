@@ -1,0 +1,36 @@
+
+
+NODE.JS: UPDATING
+
+    
+    REMEMBER:
+        When you install the NVM, it brings the Node.js and, by consequence, the NPM (the embedded Node Package Manager).
+
+    WHAT TO UPDATE:
+        If you wanna update Node, NPM, and NVM, keep going in this checklist. Otherwise, skip this and visit this one:
+            ./3.1-updating-compoenent.txt
+        
+        
+    PRE) Node installed:
+        ./1-installation.txt
+
+    
+    1) Update the Ubunto package list:
+        $ sudo apt update
+        $ sudo apt upgrade
+
+
+    2) Checking current versions for the current user:
+
+        IMPORTANT:
+            Node.js with NVM is NOT installed by project but user. The user/you can define which installed Node.JS version should run for each project folder.
+
+
+        $ nvm -v                           <-- Node Version Manager
+        $ nvm list node                    <-- If already available, best way to check Node version!
+        $ npm -v                           <-- Node Package Manager (it's embedded with NVM)
+
+
+
+    3) Update (switching to or including the latest version):
+        ./2.1-switch-versions.txt

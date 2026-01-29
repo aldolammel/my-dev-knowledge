@@ -22,7 +22,7 @@
 
         1) Install Node.js (dependence):
 
-            /JavaScript/NodeJS/installation-and-basic.txt
+            /JavaScript/NodeJS/1-installation.txt
 
 
         

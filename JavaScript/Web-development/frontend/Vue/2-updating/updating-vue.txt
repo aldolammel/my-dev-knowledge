@@ -1,0 +1,67 @@
+
+
+VUE.JS: UPDATING VUE
+
+
+    TO THINK:
+        First, it could be important to update the Node.js if possible for your project:
+            /JavaScript/NodeJS/0-new-project/update-node-version.txt
+
+
+    PRE) Assuming you already got Vue installed correctly:
+        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
+
+
+    1) Go to the Vue project folder, e.g. /project_name/frontend/;
+
+
+    2) Which Node package manager are you using:
+        
+        A) Using NPM;
+        B) Using XXXXXX;
+
+        - - - - - 
+
+        A) NPM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            A.1) Check the Vue version:
+                $ npm list vue
+
+            A.2) Once you noticed an oportunity to update it:
+                
+                >> Which update approach you wanna go:
+                
+                    >> Safe:
+                        For update Vue but ignoring major updates (e.g. from 3.3.x to 3.5.x):
+                            $ npm update vue
+                                # If some vulnerability is detected:
+                                    $ npm audit fix
+                
+                    >> Advanced:
+                        Or update Vue directly to latest version available, but make sure it won't broken your project looking the Changelog of that. Once you're confident:
+                            
+                            REMEMBER:
+                                If you're using Vite, no worries, Vite is not a package manager.
+
+                            $ npm install vue@latest
+    
+
+        B) XXXXXX - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            Soon...
+
+
+         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    3) (PROBABLY IR NOT APPLICABLE FOR VUE)
+        Check the pyproject.toml file, if something about Vue was declared!
+
+
+    4) (OPTIONAL)
+        Update your basic stack information for AI prompts;
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+

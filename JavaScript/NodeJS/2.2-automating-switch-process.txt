@@ -1,0 +1,51 @@
+
+
+NODE > NVM: AUTOMATING THE SWITCH PROCESS BY PROJECT
+
+    
+    PRE) Assuming you already got the NVM (default Node Version Manager) installed:
+        ./1-installation.txt
+
+    
+    >> Choose what automation you wish:
+
+        A) Semi-automatic, using .nvmrc file on each project folder (Faster, most common);
+        B) Absolutelly automatic, editing the ~/.bashrc (Advanced);
+
+        - - - - - - 
+
+        A) Semi-automatic, using .nvmrc file - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            A.1) Go to the project folder root:
+                            
+                # Option 1/2 - a specific installed version:
+                    $ echo "<version>" > .nvmrc      <-- E.g. you can set like "22" or exact "22.17.1" that is a LTS version.
+                
+                # Option 2/2 - the most recent LTS (Long Term Support) version already installed:
+                    # It's confusing coz it demands the LTS-code-name to works (Not recommended here)!
+
+                # To edit that file (if needed):
+                    $ nano .nvmrc
+
+            A.2) Now, always you get in the project folder, run this to automatically select the right
+                Node.JS version:
+                    $ nvm use
+            
+
+
+        B) Absolutelly automatic, editing the ~/.bashrc - - - - - - - - - - - - - - - - - - - - - - 
+        
+            B.1) ...
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> UBSTALLING NODE COMPONENTS:
+    ./3-installing-new-components.txt
+
+
+>> UNINSTALLING:
+    ./4-uninstall.txt
+

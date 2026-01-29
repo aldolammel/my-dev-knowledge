@@ -1,0 +1,91 @@
+
+
+NODE.JS: SWITCHING NODE VERSION
+
+
+    In addition to being able to manually switch Node versions according to the project folder, you can also automate the process (further).
+
+
+    1) Which Node version manager are you using:
+
+        A) NVM as Node version manager (default);
+        B) Docker as Node version manager;
+
+        - - - - - -
+
+        A) NVM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            PRE) Assuming you already got NVM installed (it's used to install Node and NPM):
+                ./1-installation.txt
+
+            >> Switching the Node version for a project:
+
+                1) Go to the project folder (not needed but just in case);
+
+                2) Make sure which version is been used now:
+                    $ nvm current
+
+                3) Check all versions you got installed:
+                    $ nvm list node                     <-- That's why "node -v" is NOT recommended!
+
+                    >> If you need to change:
+                    
+                        H) The version what I want is NOT listed;
+                        J) The version What I want IS listed;
+
+                        - - - - - -
+
+                        H) What I want is NOT listed - - - - - - - - - - - - - - - - - - - - - - - -
+
+                            H.1) Installing:
+                                    
+                                # Specific:
+                                    $ nvm install 24              <-- It'll take eg. 24.13.0, + NPM.
+                                # Or most recent LTS (Long Term Support):
+                                    $ nvm install --lts
+                            
+                            H.2) Go to the 'J' steps now!
+
+
+                        J) What I want IS listed - - - - - - - - - - - - - - - - - - - - - - - - - -
+                    
+                            J.1) Select the right version:
+                                # Specific:
+                                    $ nvm use <version>
+                                # Or most recent LTS (Long Term Support):
+                                    $ nvm use --lts
+
+                            J.2) Make sure it's selected:
+                                $ nvm current
+
+                                    
+
+        B) Docker - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+            Soon
+
+
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+
+    2) Update the automate Node version selection for your current project:
+
+        CRUCIAL:
+            If your project has no Node version selection automated yet, skip next steps, jumping directly to:
+                ./2.2-automating-switch-process.txt
+
+        >> Update your automation:
+            
+            P) Using .nvmrc file;
+            Q) Or using ~/.bashrc;
+
+            - - - - - - 
+
+            P) Using .nvmrc file - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                >> In your project frontend folder, open the .nvmrc file, and update the Node version declared in there!
+            
+            Q) Or using ~/.bashrc - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+                >> Soon...
+
