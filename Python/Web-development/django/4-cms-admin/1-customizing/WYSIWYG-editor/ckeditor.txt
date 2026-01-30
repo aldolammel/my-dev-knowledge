@@ -47,22 +47,26 @@
             from django.conf import settings
             from django.conf.urls.static import static
 
+            # DJANGO BASIC:
             urlpatterns = [
-                # DJANGO:
-                # ...
-
-                # APIs:
-                # ...
-                
-                # THIRD-PARTY:
-                path('ckeditor5/', include('django_ckeditor_5.urls')),
-
-                # SUB-APPS:
-                # ...
+                # CMS:
+                ...
+                # SUB-APPs, APIs:
+                ..
             ]
 
-            # Telling to browsers the media path already protected for security reasons:
+            # DJANGO > ONLY WHEN DEBUG TRUE:
+            # Telling to browsers the media path already protected for security reasons. It must be before front-end stuff!
             urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+            ...
+            
+            # THIRD-PARTY:
+            urlpatterns += [
+                path("ckeditor/", include("django_ckeditor_5.urls")),
+            ]
+
+            # FRONTEND:
+            ...
 
 
         4) models.py:

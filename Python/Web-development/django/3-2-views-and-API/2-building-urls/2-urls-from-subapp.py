@@ -1,14 +1,12 @@
 """
 
-    URLS.PY OF SUB-APPS
-    
-    >> This file is called 'urls.py' and it belongs to a sub-app created by the developer.
-        This file should be created manually in the sub-app folder when needed.
-        
-    >> This file depends of the its relationship with 'urls.py' in core-folder (another file):
-    
-        /Python/Web-development/django/3-2-views-and-API/2-building-urls/1-urls-from-core-folder.py
+    URLS.PY FOR SUB-APPS
+    ('sub-apps' are every folder in the first level of '/apps/' folder. 'apps' folder need to be manually created as well as each sub-app folder)
 
+    The '/apps/sub-app-name/urls.py' file defines all URLs that belong specifically to a sub-app.
+        
+    This file deeply depends of the 'urls.py' in Django core folder:
+        ./1-urls-from-core-folder.py
 
 """
 
@@ -44,17 +42,6 @@ urlpatterns = [
 
 
 """
-    THERE IS A GLOBAL URLS.PY
-    
-    This 'recipes/' as a folder in URL is defined in the
-    config-folder (in the project, pretty often this folder has the same name of the project).
-    In config-folder, you find a file called 'urls.py' as well. There, you must
-    define that 'recipes/' or whatever you want.
-    
-    /Python/Web-development/django/3-2-views-and-API/2-building-urls/urls-from-config-folder.py
-
-    
     ABOUT PATH CONVERTERS:
-    /Python/Web-development/django/3-2-views-and-API/2-building-urls/path-converters.txt
-
+    ./path-converters.txt
 """

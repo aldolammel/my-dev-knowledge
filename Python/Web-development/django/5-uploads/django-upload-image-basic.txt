@@ -3,10 +3,10 @@
 DJANGO: HOW TO UPLOAD IMAGE FILES (BASIC STEPS)
 
 
-    1) If not ready yet, create the 'media' folder (or another name up to you, like 'uploads'), in the Django project's root folder;
+    1) If not ready yet, create the 'media' folder (it's the convension for 'upload' folder), in the Django project's root folder;
             
 
-    2) In your Django core settings (settings.py), define the MEDIA_ROOT constant path based on your choice in the previous step:
+    2) In your Django core (settings.py), define the MEDIA_ROOT constant path based on your choice in the previous step:
 
         E.g.
             # Where the files are 'physically' stored on server:
@@ -16,15 +16,30 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (BASIC STEPS)
             MEDIA_URL = 'media/'
 
 
-    3) Now, in core urls.py file, tell browsers where are the images added dynamically:
+    3) Now, in core urls.py file, tell browsers where are the images added dynamically when your project is in development mode. Once the Debug is False, Django automatically manage to ignore the development mode settings.
 
         from django.conf import settings
         from django.conf.urls.static import static
         #...
         
-        # Right after the urlpatterns array:
-        # Telling to browsers the media path already protected for security reasons:
+        # DJANGO BASIC:
+        urlpatterns = [
+            # CMS:
+            ...
+            # SUB-APPs, APIs:
+            ...
+        ]
+
+        # DJANGO > ONLY WHEN DEBUG TRUE:
+        # Telling to browsers the media path already protected for security reasons. It must be before front-end stuff!
         urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+        
+        # THIRD-PARTY:
+        ...
+        
+        # FRONTEND:
+        ...
     
     
     4) Install the Pillow (needed to use Django models.ImageField):

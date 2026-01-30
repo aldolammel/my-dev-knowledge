@@ -42,9 +42,9 @@ class ContentMixin:
         for el in content_qs:
             element = el.section_element.element
             if isinstance(element, models.PagexElementImg):
-                value = el.element_content_file_img or None
+                value = el.element_content_file_img.url if el.element_content_file_img else ""
             elif isinstance(element, models.PagexElementFile):
-                value = el.element_content_file_doc or None
+                value = el.element_content_file_doc.url if el.element_content_file_doc else ""
             else:
                 value = el.element_content_txt
             content_dict[el.element_identifier] = {"v": value}
