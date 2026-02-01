@@ -53,7 +53,7 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                                     ./0-installing-and-updating/postgres-updating.txt
 
                                 A3.2.2) Update the entire system:
-                                    /OS/linux/debian-ubuntu/update.txt
+                                    /OS/linux/debian-ubuntu/2-updates/update.txt
 
                             WINDOWS:
                                 A3.2.1) xxxxxxxxxxxxxxx

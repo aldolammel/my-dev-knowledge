@@ -1,0 +1,27 @@
+
+
+LINUX > DEBIAN: DEB VS SNAP
+
+    Install the DEB package from Mozilla's repository!
+
+    Snap Disadvantages:
+
+        - Slower startup - First launch is significantly slower due to snap confinement
+        - File system access issues - Can't easily access files outside home directory
+        - Theme integration problems - May not match your system theme perfectly
+        - Larger disk space - Each snap includes its own dependencies
+        - Updates can't be delayed - Updates automatically when available
+
+    DEB Advantages:
+
+        - Better performance - Faster startup, native integration
+        - Full system integration - Proper theme support, easier file access
+        - Smaller footprint - Shares system libraries
+        - Controllable updates - Updates when YOU run sudo apt upgrade
+        - Better for development - Easier to work with local files
+
+    
+    >> That said:
+
+        Install apps through the terminal, using:
+            $ sudo apt install <app_name>

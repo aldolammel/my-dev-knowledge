@@ -4,7 +4,7 @@ DEBIAN/UBUNTU: INSTALL AND UNINSTALL APPS
 
     
     >> Installing (common):
-        $ sudo apt install <package_name>
+        $ sudo apt install <package_name> -y    <-- this '-y' skip the install question "yes or no".
 
 
     >> Installing .sh files:
@@ -14,9 +14,11 @@ DEBIAN/UBUNTU: INSTALL AND UNINSTALL APPS
 
 
     >> Finding a package name installed:
-        /OS/linux/debian-ubuntu/finding-installed-apps.txt
+        /OS/linux/debian-ubuntu/1-apps-installations/finding-installed-apps.txt
 
 
     >> Removing:
         $ sudo apt remove <package_name>
+            # Clean up APT cache:
+                $ sudo apt autoclean
 

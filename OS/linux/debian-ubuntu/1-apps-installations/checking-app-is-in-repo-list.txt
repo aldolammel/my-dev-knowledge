@@ -1,0 +1,22 @@
+
+
+LINUX > UBUNTU: HOW TO FIGURE OUT IF AN APP IS ALREADY IN THE APT-UPDATE LIST
+
+    1) On terminal:
+        $ grep -r "<app_name>" /etc/apt/sources.list.d/
+
+    2) If it's there, check if the apt-update is considering that:
+        $ sudo apt update | grep -i <app-name>
+
+
+
+
+>> HOW TO REMOVE THE APP FROM THE APT-UPDATE LIST:
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
