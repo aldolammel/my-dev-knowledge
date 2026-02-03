@@ -1,11 +1,14 @@
 
 """
-    DJANGO SERIALIZERS > API LOGIC: DEFINING A VIEWSET
+    DJANGO SERIALIZERS: DEFINING THE API LOGIC THROUGH A VIEWSET
 
     Views are the place where all Django data is declared to be sent externally.
 
     >> Whole Django serialization roadmap:
-        /Python/Web-development/django/3-2-views-and-API/serializer.txt
+        ./serializer.txt
+
+    >> Or if you just want to a simple serializer class model:
+        ./_serializer-class-model.py
 """
 
 # FILE: /apps/my_app/views.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

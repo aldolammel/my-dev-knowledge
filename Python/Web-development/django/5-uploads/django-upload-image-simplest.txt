@@ -21,7 +21,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
     2) Go to the app views.py file and create a view class that inherits CreateView's features:
         
         >> CreateView features:
-            /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.txt
+            /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py
 
         E.g.
             from django.views.generic.edit import CreateView

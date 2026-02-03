@@ -1,11 +1,14 @@
 
 """
-    DJANGO SERIALIZERS > DATA CONVERSION: CREATING A SERIALIZER CLASS
+    DJANGO SERIALIZERS: CREATING A SERIALIZER CLASS
 
     When you create a serializer class, you are building up an API.
 
     >> Whole Django serialization roadmap:
-        /Python/Web-development/django/3-2-views-and-API/serializer.txt
+        ./serializer.txt
+
+    >> Example of a custom field for serializer class:
+        ./serializer-creating-class-custom-fields.py
 """
 
 # FILE: /apps/my_app/serializers.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -13,6 +16,7 @@
 # Using Django Rest Framework:
 # /Python/Web-development/django/component-libraries/django-rest-framework/
 from rest_framework import serializers
+from . import models
 
 class ExampleModelSerializer(serializers.ModelSerializer):
     """Serializer for XXXXXXXXXXX content entries."""
@@ -25,11 +29,10 @@ class ExampleModelSerializer(serializers.ModelSerializer):
 
     class Meta:
         # Which model class the data's coming from:
-        model = ExampleModel
+        model = models.ExampleModel
         # Which fields (attributes) specifically:
         fields = [
-            "slug",
-            "is_published",
-            # - - - custom fields: - - -
-            # Reserved space...
+            "xxxxxx_field_1",
+            "xxxxxx_field_2",
+            # "reserved_space",  # Custom field
         ]

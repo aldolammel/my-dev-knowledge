@@ -2,8 +2,13 @@
 """
     DJANGO SERIALIZERS: CREATING CUSTOM FIELDS DIRECTLY IN SERIALIZER CLASS
 
+    When you create a serializer class, you are building up an API, and, if needed, with custom fields that exist just through serializer class.
+   
     >> Whole Django serialization roadmap:
         ./serializer.txt
+
+    >> Or if you just want to a simple serializer class model:
+        ./_serializer-class-model.py
 """
 
 # Example 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -17,7 +22,7 @@ class ExampleSerializer(serializers.ModelSerializer):
     category_names = serializers.SerializerMethodField()  # Auto calls get_category_names()
 
     class Meta:
-        model = Example
+        model = models.Example
         fields = [
             ...
             "identifier",
@@ -49,7 +54,7 @@ class PostSerializer(serializers.ModelSerializer):
     created_by_name = serializers.SerializerMethodField()  # Auto calls get_created_by_name()
 
     class Meta:
-        model = Example
+        model = models.Example
         fields = [
             ...
             "blog",  # Output: e.g. 1

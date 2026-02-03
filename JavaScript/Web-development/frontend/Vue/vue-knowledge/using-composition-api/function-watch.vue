@@ -8,7 +8,7 @@ watch(
       store.fetchPage(newSlug);
     }
   },
-  { immediate: true } // immediate:true ensures it runs on component mount
+  { immediate: true } // immediate: true ensures it runs on component mount!
 );
 </script>
 

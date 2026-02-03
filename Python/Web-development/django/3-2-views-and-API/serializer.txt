@@ -23,7 +23,7 @@ DJANGO: SERIALIZERS
         1) Data conversion:
             Creating a Serializer-class (API) attached with the Model-class where the data belongs.
             
-                ./serializer-creating-class.py
+                ./_serializer-class-model.py
 
 
         2) API logic:
@@ -37,7 +37,7 @@ DJANGO: SERIALIZERS
                     /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         
 
-        3) URL routing:
+        3) URL routing (my_app/urls.py):
             Direct the incoming web requests, pointing them to the right Views.py class.
                 
                 ./serializer-urls.py
