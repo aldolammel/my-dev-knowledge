@@ -1,0 +1,6 @@
+
+>> Open the current db shell:
+
+    $ python manage.py dbshell
+    or
+    $ uv run manage.py dbshell

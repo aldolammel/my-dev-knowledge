@@ -20,15 +20,14 @@ DJANGO: SERIALIZERS
                 /Python/Web-development/django/component-libraries/django-rest-framework/0-restframewok.txt     
         
 
-        1) Data conversion:
+        1) Data conversion (my_app/serializers.py):
             Creating a Serializer-class (API) attached with the Model-class where the data belongs.
-            
                 ./_serializer-class-model.py
 
 
         2) API logic:
             
-            >> Sending data:
+            >> Sending data (my_app/views.py)::
                 Declaring which serialized data must be released externally.
                     ./serializer-view-sending-data.py
 
@@ -43,4 +42,10 @@ DJANGO: SERIALIZERS
                 ./serializer-urls.py
 
 
-        4) Test it!
+        4) Visualization on CMS (my_app/admin.py):
+            ./serializer-admin-json-preview.py
+        
+        
+        5) Test it!
+
+        

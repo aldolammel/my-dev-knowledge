@@ -21,10 +21,10 @@ from . import models
 class ExampleModelSerializer(serializers.ModelSerializer):
     """Serializer for XXXXXXXXXXX content entries."""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
 
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     # my_serial_method = serializers.SerializerMethodField()  # Auto-calls get_my_serial_method()
 
     class Meta:

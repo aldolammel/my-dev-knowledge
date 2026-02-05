@@ -13,14 +13,16 @@
 
 # FILE: /apps/my_app/views.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 from rest_framework import viewsets
+from . import models
+from . import serializers as serial
 
 class ExampleModelViewSet(viewsets.ReadOnlyModelViewSet):
-    """Sending JSON to the front-end."""
+    """Read-only endpoint exposing XXXXXXXXXXXXXXXXX to Vue Router."""
     
-    queryset = ExampleModel.objects.prefetch_related("one_related_field_from_foreignkey")
-    serializer_class = ExampleModelSerializer
+    queryset = models.ExampleModel.objects.prefetch_related("one_related_field_from_foreignkey")
+    serializer_class = serial.ExampleModelSerializer
     lookup_field = "slug"
 
     def get_queryset(self):
         """Built-in method to customize even more the qs."""
-        return ExampleModel.objects.filter(is_published=True)
+        return models.ExampleModel.objects.filter(is_published=True)

@@ -1,5 +1,5 @@
 """
-    DJANGO CMS: EXCLUDING A FIELD IN DETAIL-VIEW (BASIC APPROACH)
+    DJANGO CMS: EXCLUDING A FIELD IN DETAIL-VIEW (BASIC APPROACH WITHOUT ADD_FIELDSETS CONFIG)
 
     For more options, check:
         ./detailview-field-exclusion.py

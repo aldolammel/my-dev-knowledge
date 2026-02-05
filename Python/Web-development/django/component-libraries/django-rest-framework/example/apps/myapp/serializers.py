@@ -11,10 +11,10 @@ class PagexPageSerializer(serializers.ModelSerializer):
     """Django Rest Framework creates Pagex Pages API where all the pages data is converted to JSON
     format."""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
     
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     # Reserved space...  # Automatically calls get_<custom_method_var>()
     
     class Meta:
@@ -32,10 +32,10 @@ class PagexPageSerializer(serializers.ModelSerializer):
 class PagexMenuLinkSerializer(serializers.ModelSerializer):
     """Django REST Framework organizes links of a menu to be used by PagexMenuSerializer."""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
     
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     title = serializers.SerializerMethodField()  # Automatically calls get_title()
     url = serializers.SerializerMethodField()  # Automatically calls get_url()
 
@@ -87,10 +87,10 @@ class PagexMenuSerializer(serializers.ModelSerializer):
 class RecursiveLinkSerializer(serializers.ModelSerializer):
     """xxxxxxxxxxxxxxxxxxxxxxxxxxxx"""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
     
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     children = serializers.SerializerMethodField()  # Automatically calls get_children()
 
     class Meta:

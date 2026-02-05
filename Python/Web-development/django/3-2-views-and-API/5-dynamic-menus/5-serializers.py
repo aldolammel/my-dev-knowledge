@@ -10,10 +10,10 @@ from .utils import pagex_url_builder
 class PagexMenuLinkSerializer(serializers.ModelSerializer):
     """Django REST Framework organizes links of a menu to be used by PagexMenuSerializer."""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
 
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     title = serializers.SerializerMethodField()  # Auto-calls get_title()
     url = serializers.SerializerMethodField()  # Auto-calls get_url()
     url_target = serializers.SerializerMethodField()  # Auto-calls get_url_target()
@@ -73,10 +73,10 @@ class PagexMenuLinkSerializer(serializers.ModelSerializer):
 class PagexMenuSerializer(serializers.ModelSerializer):
     """Creating the Pagex Menu API where all menus data is converted to JSON format."""
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     links = PagexMenuLinkSerializer(many=True, read_only=True)
 
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     is_urls_relative = serializers.SerializerMethodField()  # Auto calls get_is_urls_relative()
 
     class Meta:
@@ -100,10 +100,10 @@ class PagexMenuSerializer(serializers.ModelSerializer):
 class RecursiveLinkSerializer(serializers.ModelSerializer):
     """WIP: to create submenus (children) in main menu links..."""  # TODO: WIP
 
-    # Custom Serializer Fields (based on another serializer class):
+    # Custom Fields (directly based on another serializer class):
     # Reserved space...
 
-    # Custom Serializer Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField):
     children = serializers.SerializerMethodField()  # Automatically calls get_children()
 
     class Meta:
