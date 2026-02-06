@@ -9,7 +9,7 @@ import NavMain from "@/components/layout/NavMain.vue";
 
 <template>
   <!-- Start App Header Section -->
-  <NavMain identifier="menu_principal" />
+  <NavMain menu-key="menu_principal" />
   <!-- End App Header Section -->
 </template>
 

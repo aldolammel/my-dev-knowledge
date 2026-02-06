@@ -5,8 +5,8 @@ import { useMenusStore } from "@/stores/menus"; // Vue Pinia
 
 // Receiving Props from Parent:
 const props = defineProps({
-  // Identifier is, e.g., "main_menu", "footer_menu", etc.
-  identifier: {
+  // menuKey (menu-key) is a "key_of_a_menu" defined on CMS:
+  menuKey: {
     type: String,
     required: true,
   },
@@ -16,12 +16,12 @@ const route = useRoute();
 const store = useMenusStore();
 
 onMounted(async () => {
-  if (!store.menus[props.identifier]) {
-    await store.fetchMenu(props.identifier);
+  if (!store.menus[props.menuKey]) {
+    await store.fetchMenu(props.menuKey);
   }
 });
 
-const links = computed(() => store.menus[props.identifier] || []);
+const links = computed(() => store.menus[props.menuKey] || []);
 
 const isActive = (url) => route.path === url || route.path.startsWith(`${url}/`);
 </script>

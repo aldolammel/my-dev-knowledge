@@ -8,21 +8,33 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
     Field look-like on front-end:
         - Single line field.
 
-    Example:
+    Examples:
         
-        first_name = models.CharField(
-            max_length=25,
-            blank=True,
-            null=True,
-            default=None,
-        )
+        # basic:
+            first_name = models.CharField(
+                max_length=25,
+                blank=True,
+                default="",                   # or None, but avoid to use 'null=True' if blank=True!
+            )
         
+        # advanced:
+            first_name = models.CharField(
+                max_length=25,
+                blank=True,
+                default="",                   # or None, but avoid to use 'null=True' if blank=True!
+                validators=[
+                    MinLengthValidator(2),
+                    MaxLengthValidator(25),
+                    # validators.validate_chars_spaces_enabled,
+                ],
+            )
+
         # dropdown field example:
-        front_type = models.CharField(
-            max_length=35,  # Database level checking.
-            choices=consts.CHOICES_FRONTEND,
-            default=consts.VAL_FRONT_TOOL_DEFAULT,
-        )
+            front_type = models.CharField(
+                max_length=35,  # Database level checking.
+                choices=consts.CHOICES_FRONTEND,
+                default=consts.VAL_FRONT_TOOL_DEFAULT,
+            )
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

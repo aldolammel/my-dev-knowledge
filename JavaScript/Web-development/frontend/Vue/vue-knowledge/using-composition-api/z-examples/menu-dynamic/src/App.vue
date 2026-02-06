@@ -6,7 +6,7 @@ import NavMain from "@/components/layout/NavMain.vue";
 
 <template>
   <!-- Defining Props of menu created through Django CMS Pagex -->
-  <NavMain identifier="menu_principal" />
+  <NavMain menu-key="menu_principal" />
 
   <!-- Where the router will load each link/route defined in its RouterLink's: -->
   <RouterView />

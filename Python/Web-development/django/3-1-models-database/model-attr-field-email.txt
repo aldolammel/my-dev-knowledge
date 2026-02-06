@@ -8,12 +8,23 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: EMAIL FIELD
     Field look-like on front-end:
         - Single field with simple e-mail validation.
 
-    Example:
+    Examples:
         
-        email = models.EmailField(
-            max_length=254,
-            unique=True,
-        )
+        # Basic:
+            email = models.EmailField(
+                max_length=255,
+                unique=True,
+                blank=True,
+            )
+
+        # Advanced:
+            email = models.EmailField(
+                max_length=255,
+                unique=True,
+                blank=False,
+                default="",                   # or None. It's demanded if blank=False or null=False!
+            )
+            
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

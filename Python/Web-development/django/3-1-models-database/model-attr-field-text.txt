@@ -8,24 +8,25 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: TEXT FIELD
     Field look-like on front-end:
         - Textarea field with multilines.
 
-    Example:
+    Examples:
         
-        book_chapter_content = models.TextField(
-            blank=False,
-            validators=[
-                MinLengthValidator(140),
-            ],
-        )
+        # Basic:
+            book_chapter_content = models.TextField(
+                blank=False,
+                validators=[
+                    MinLengthValidator(140),
+                ],
+            )
         
         # Limiting size for core-business and db-size-protection:
-        seo_desc = models.TextField(
-            max_length=consts.VAL_SEO_DESC_MAX,
-            blank=True,
-            validators=[
-                MinLengthValidator(consts.VAL_SEO_DESC_MIN),
-                MaxLengthValidator(consts.VAL_SEO_DESC_MAX),
-            ],
-        )
+            seo_desc = models.TextField(
+                max_length=consts.VAL_SEO_DESC_MAX,
+                blank=True,
+                validators=[
+                    MinLengthValidator(consts.VAL_SEO_DESC_MIN),
+                    MaxLengthValidator(consts.VAL_SEO_DESC_MAX),
+                ],
+            )
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

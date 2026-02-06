@@ -7,7 +7,8 @@ import { useMenusStore } from "@/stores/menus"; // Vue Pinia
 
 // Receiving Props from Parent:
 const props = defineProps({
-  identifier: {
+  // menuKey (menu-key) is a "key_of_a_menu" defined on CMS:
+  menuKey: {
     type: String,
     required: true,
   },
@@ -17,12 +18,12 @@ const route = useRoute();
 const store = useMenusStore();
 // Fetch menu on component mount:
 onMounted(async () => {
-  if (!store.menus[props.identifier]) {
-    await store.fetchMenu(props.identifier);
+  if (!store.menus[props.menuKey]) {
+    await store.fetchMenu(props.menuKey);
   }
 });
 // Computed property to get links from store:
-const links = computed(() => store.menus[props.identifier] || []);
+const links = computed(() => store.menus[props.menuKey] || []);
 // Check if current route matches link URL:
 const isActive = (url) => route.path === url || route.path.startsWith(`${url}/`);
 </script>

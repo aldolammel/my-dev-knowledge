@@ -8,15 +8,16 @@ import NavFooter from "@/components/layout/NavFooter.vue";
 // Common components:
 // Reserved space...
 
+const STRUCT_KEY = "structure_rodape";
 const store = useStructuresStore();
 
 // Fetching the content first before to try to display that:
 onMounted(async () => {
-  await store.fetchStructure("rodape");
+  await store.fetchStructure(STRUCT_KEY);
 });
 
 const struct = computed(() => {
-  return store.structures.rodape?.content || {};
+  return store.structures[STRUCT_KEY]?.content || {};
 });
 </script>
 
@@ -27,7 +28,7 @@ const struct = computed(() => {
         <p>{{ struct["4891_text_block"]?.v }}</p>
       </div>
       <div>
-        <NavFooter identifier="menu_rodape" />
+        <NavFooter menu-key="menu_rodape" />
       </div>
       <div>
         {{ new Date().getFullYear() }} © MyCompanyExample | Developed by 

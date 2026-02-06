@@ -8,13 +8,21 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: URL FIELD
     Field look-like on front-end:
         - Single field with simple URL validation.
 
-    Example:
-        
-        url = models.URLField(
-            max_length=255,
-            blank=False,
-            # validators=[URLValidator()],  # Not need when using URLField!
-        )
+    Examples:
+
+        # Basic:
+            url = models.URLField(
+                max_length=255,
+                blank=True,
+                # validators=[URLValidator()],                       # Not need when using URLField!
+            )
+
+        # Advanced:
+            url = models.URLField(
+                max_length=255,
+                blank=False,
+                default="",                   # or None. It's demanded if blank=False or null=False!
+            )
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

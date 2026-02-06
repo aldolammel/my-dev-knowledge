@@ -17,6 +17,11 @@ BACK AND FRONT-END INTEGRATION: USING DJANGO ONLY
         E.g.
             xxxxx
 
+    x) About "context_processors":
+
+        /xxxxxxxxxxxxxxxx
+        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/global-context.txt
+
     x) xxxxxxxxxxxxxxx
 
         E.g.

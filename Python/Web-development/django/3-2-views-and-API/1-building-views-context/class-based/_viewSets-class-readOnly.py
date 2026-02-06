@@ -11,17 +11,25 @@
 
 # Example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+# apps/my_app/models.py:
+class ExampleModel(...):
+    ...
+
+# apps/my_app/serializers.py:
+class ExampleModelSerializer(...):
+    ...
+
+# apps/my_app/views.py:
 from django.views import View
 
+class ExampleModelViewSet(viewsets.ReadOnlyModelViewSet):
+    """Read-only endpoint exposing XXXXXXXXXXXXXXXXX to <<<<<<<Vue Router>>>>>."""
 
-class PagexPostViewSet(viewsets.ReadOnlyModelViewSet):
-    """Read-only endpoint exposing published posts to Vue Router."""
-
-    queryset = models.PagexPost.objects.filter(is_published=True).prefetch_related(
+    queryset = models.ExampleModel.objects.filter(is_published=True).prefetch_related(
         "categories",
         "seo_keywords",
     )
-    serializer_class = serial.PagexPostSerializer
+    serializer_class = serial.ExampleModelSerializer
     lookup_field = "slug"  # Allow lookup by other attr. instead of ID.
     lookup_value_regex = "[^/]+"  # Handles slugs with hyphens or underscores correctly.
 
