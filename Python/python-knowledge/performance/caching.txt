@@ -1,0 +1,12 @@
+
+
+PYTHON: CACHING
+
+
+    >> What is it:
+        /Programming-Concepts/cache.txt
+
+    
+    >> Cache Aside-Pattern:
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        To watch: https://youtu.be/vRO0UfvsbDw?si=_N4hbUDNGRv2zTje&t=72

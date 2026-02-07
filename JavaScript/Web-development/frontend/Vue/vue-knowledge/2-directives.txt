@@ -1,40 +1,41 @@
 
 
->> DIRECTIVES
+VUE.JS: DIRECTIVES
+
     They are special tokens (attributes) in the markup that tell the library to do something to
     a DOM element. They are prefixed with v- to indicate that they are Vue-specific.
 
     >> v-text
-        ./v-text.txt
+        ./2-v-text.txt
 
     >> v-html
-        ./v-html.txt
+        ./2-v-html.txt
 
     >> v-show             (any)
 
     >> v-If
-        ./v-if.txt
+        ./2-v-if.txt
 
     >> v-else
-        ./v-else.txt
+        ./2-v-else.txt
             
     >> v-else-if
-        ./v-else-if.txt
+        ./2-v-else-if.txt
 
     >> v-for
-        ./v-for.txt
+        ./2-v-for.txt
 
     >> v-on
-        ./v-on.txt
+        ./2-v-on.txt
 
-    >> v-bind
-        ./v-bind.txt
+    >> v-bind                           <---- to build URL / HREF= / SRC=, for example!
+        ./2-v-bind.txt
 
     >> v-model
-        ./v-model.txt
+        ./2-v-model.txt
 
     >> v-slot
-        ./v-slot.txt
+        ./2-v-slot.txt
 
     >> v-pre              (don't expect expression)
     >> v-once             (don't expect expression)

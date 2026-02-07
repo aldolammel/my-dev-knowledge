@@ -1,0 +1,56 @@
+
+
+PROGRAMMING CONCEPTS: GARBAGE COLLECTOR
+
+    It's an automatic memory management system that identifies and frees memory that's no longer being used by your program. For example, Python uses a hybrid approach, combining a Reference Counting, and a Generational solution:
+
+        # Python:
+            # Reference counting:
+                import sys
+
+                a = []
+                print(sys.getrefcount(a))  # 2 (a var + function arg)
+
+                b = a
+                print(sys.getrefcount(a))  # 3 (increase one reference)
+
+                b = None
+                print(sys.getrefcount(a))  # 2 (decrease one reference)
+
+            # Generational collection:
+                -Divide objs in 3 generations (0, 1, 2 ...);
+                -New objs start in a generation 0;
+                -Collection survivor objs are promoted to superior generations;
+                -Older generations are low frequency collected.
+
+            # Python limitation:
+                This language cannot manage automatically garbage collection for circular relations!
+                    /Python/python-knowledge/performance/manual-garbage-collection.txt
+    
+    
+    In languages without garbage collection (like C or C++), you must manually manage memory:
+
+        // C:
+            // Manual memory management:
+            int* array = malloc(100 * sizeof(int));  // Allocate memory
+            // Use the array ...
+            free(array);  // YOU must remember to free it!
+
+    If you forget to free() the memory, you have a memory leak - your program keeps consuming memory until it crashes or slows down the system.
+
+
+    >> Languages WITH GC:
+
+        - Python - reference counting + generational GC;
+        - Java - generational GC with multiple algorithms (G1, ZGC, etc.);
+        - JavaScript - mark-and-sweep GC;
+        - C# - generational GC (similar to Java);
+        - Go - concurrent mark-and-sweep GC;
+
+    >> Languages WITHOUT GC:
+
+        C - fully manual memory management (malloc/free);
+        C++ - manual management + RAII/smart pointers;
+        Rust - ownership system (compile-time memory safety);
+        Assembly - completely manual;
+        Zig - manual memory management with allocators;

@@ -2,14 +2,14 @@
 
 VUE.JS DEEPER KNOWLEDGE
 
-    >> What is Vue.js (basic):
+    >> What is Vue:
         ./_about.txt
 
     >> Two options for the product's structure with Vue.js: SPA vs MPA:
         ./SPA-vs-MPA.txt
 
         >> About both strategies, examples of their folder's structures:
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/backend-python-django.txt    
+            .../Vue/1-install-and-first-steps/backend-python-django.txt    
     
     >> Two main Vue-cores:
         
@@ -17,10 +17,10 @@ VUE.JS DEEPER KNOWLEDGE
             Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
 
         2) Reactivity:
-            Vue automatically tracks JavaScript state changes and efficiently updates the DOM (Document Object Model) when changes happen.
+            Vue automatically tracks JS state changes and efficiently updates the DOM (Document Object Model) when changes happen.
 
     
-    >> Vue.js development files (.vue) is splitted in 3 layers:
+    >> Vue development files (.vue) is splitted in 3 layers:
         
         1) Script: 
             Where the Vue.js methods and other functions stuff is set.
@@ -43,8 +43,7 @@ VUE.JS DEEPER KNOWLEDGE
         ./1-vue-structure.txt
 
     
-    >> With Vue.js, part of the work is done in JavaScript file, and another part
-        in the HTML file.
+    >> With Vue.js, part of the work is done in JS file, and another part in the HTML file.
 
 
     >> To create a Vue.js project, you need a Build-Tool. Here is some options:
@@ -52,21 +51,18 @@ VUE.JS DEEPER KNOWLEDGE
 
 
     >> DECLARATIVE RENDERING
-        It's the same as 'Template variable' in Django Templates, for example.
-        You can use this only in HTML elements/tags, but never in their attributes (more about it,
-        next).
+        It's the same as 'Template variable' in Django Templates, for example. You can use this only in HTML elements/tags, but never in their attributes (more about it, next).
 
             E.g. 
                 {{ my_template_var }}
 
 
-        >> DECLARATIVE RENDERING FOR DYNAMIC ATTRIBUTES
+        >> DECLARATIVE RENDERING: FOR DYNAMIC ATTRIBUTES
             If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
             Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
 
                 >> context:
-                    You're using a for-loop that wanna call an image from db.
-                    Each product has an 'image' attribute with the string value:
+                    You're using a for-loop that wanna call an image from db. Each product has an 'image' attribute with the string value:
                         "/img/<nameImage.fileType>"
 
                     <div v-for="p in products">
@@ -91,8 +87,13 @@ VUE.JS DEEPER KNOWLEDGE
             {{ book.isReady ? "I'm ready" : 'NOT READY YET' }}
 
     
+    
+    >> VUE DIRECTIVES:
+        ./2-directives.txt
+    
+    
     >> VUE APPs AND THEIR COMPONENTS
-            ./5-components.txt
+        ./5-components.txt
 
 
     

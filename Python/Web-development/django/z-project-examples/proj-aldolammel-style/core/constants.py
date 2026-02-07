@@ -19,18 +19,18 @@
 # from .settings import PROD_BASE_URL
 
 
-# APP ESSENTIAL INFO: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# APP ESSENTIAL INFO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ADMIN_EMAIL = 'xxxxx@gmail.com'
 # EMAIL_HOST_USER = defined in .env file!
 BRAND_NAME = 'My Brand Name'
-BRAND_DESCRIPT = 'Soon...'  # TODO How do I translate this?
+BRAND_DESC = 'Soon...'
 BRAND_EMAIL = 'xxxxxx@gmail.com'
 BRAND_URL = "https://this-product-main-domain.com"
 DEV_NAME = 'AL'
 DEV_URL = 'https://dev.aldolammel.com'
-BRAND_KEYWORDS = 'Soon...'  # TODO How do I translate this?
+BRAND_TAGS = 'Soon...'
 
-# SUB-APP PATTERNNAMES: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# SUB-APP PATTERNNAMES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 NAMEAPP_0 = "admin"
 NAMEAPP_1 = "general"
 NAMEAPP_2 = "in"
@@ -68,7 +68,7 @@ PATTERN_4_6 = 'xxxxxx_view'
 PATTERN_4_7 = 'xxxxxx_view'
 PATTERN_4_8 = 'xxxxxx_view'
 
-# PATHS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# PATHS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 PATH_NAMEAPP_0_USERS = "/" + NAMEAPP_0 + "/" + NAMEAPP_3 + "/user/"  # '/admin/auth/user/'
 #PATH_XXXXX_XXXXX_XXXX = 'icons/events/attack/'
 
@@ -88,7 +88,7 @@ CHOICES_STATUS_CONTENT = (
     ('off', 'Archived'),  # _('Archived')
 )
 
-# OTHERS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# OTHERS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # REL_ for 'related_name' on models!
 # VAL_ for constant values!
 

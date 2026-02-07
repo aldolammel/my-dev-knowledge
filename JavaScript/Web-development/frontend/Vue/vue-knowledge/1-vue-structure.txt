@@ -3,19 +3,18 @@
 VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
-    Important: if you are using Vite as Built-tool, it already will manage the SCSS files 
-                compilation as well as other files compilation. So try do NOT customize
-                compilation paths, like to force the css files in /public/ folder!
+    Important: 
+        if you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
 
-                More about compilation time:
-                    /JavaScript/Web-development/frontend/Vue/vue-knowledge/90-go-live-compilation.txt
+        More about compilation time:
+            ./90-go-live-compilation.txt
 
 
     >> Vue folder structure:
 
 
         Structure to copy:
-            /JavaScript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/
+            .../Vue/z-example-structure/aldolammel-style/
 
 
         frontend/
@@ -90,7 +89,7 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
         >> Example of a Django folder project with Vue:
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+            .../Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
 
 
     >> A Vue.js app file (.vue) divide itself by 3 layers:
@@ -106,7 +105,7 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
             >> There are 2-ways to code components, using 'Options API' or 'Component API' but both
                 use JavaScript (TypeScript is optional) to be written:
                 
-                    /JavaScript/Web-development/frontend/Vue/vue-knowledge/3-approaches-to-code.txt
+                    ./3-approaches-to-code.txt
 
 
         >> <TEMPLATE> layer:
@@ -114,8 +113,8 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
             >> Templates is basically pure HTML, and each template can be fragmented in infinite
                 other small pieces, using Vue Component structure associated with Vue Slots:
 
-                    /JavaScript/Web-development/frontend/Vue/vue-knowledge/5-components.txt
-                    /JavaScript/Web-development/frontend/Vue/vue-knowledge/5.4-slot.txt
+                    ./5-components.txt
+                    ./5.4-slot.txt
 
 
         >> <STYLE> layer:
@@ -132,8 +131,8 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
 >> MORE ABOUT:
-    /JavaScript/Web-development/frontend/Vue/vue-knowledge/0-overview-deep-knowledge.txt
+    ./0-overview-deep-knowledge.txt
 
 
 >> INSTALL A VUE PROJECT:
-    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
+    .../Vue/1-install-and-first-steps/_vue-installation.txt

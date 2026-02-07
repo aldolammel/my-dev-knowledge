@@ -1,0 +1,34 @@
+
+
+PYTHON: GARBAGE COLLECTION
+
+    What is it:
+        /Programming-Concepts/garbage-collector.txt
+
+    Even Python working with an automatic solution, Python is not allowed to deal with circular relations. For this case, the manual gargabe collection should be executed!
+
+
+
+
+
+
+
+
+    >> GC in manual control:
+
+        import gc
+
+        # Checking if it's allowed:
+        print(gc.isenabled())  # True por padrão
+
+        # Forcing the manual collection:
+        gc.collect()
+
+        # Turning it off (not recommended, only in specific scenarios):
+        gc.disable()
+
+        # Check the generation stats:
+        print(gc.get_count())  # (threshold0, threshold1, threshold2)
+
+        # See tracked objects by GC:
+        print(len(gc.get_objects()))
