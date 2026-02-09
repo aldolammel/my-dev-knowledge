@@ -42,7 +42,7 @@ DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
         4) Creating the virtual environment:
                     
             >> Create it:
-                /Python/02-virtual-environment/creating-virtual-environment.txt
+                /Python/3-virtual-environment/creating-virtual-environment.txt
 
             >> Active it:
                 /xxxxxx

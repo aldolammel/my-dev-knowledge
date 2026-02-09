@@ -2,7 +2,7 @@
 
 VUE: KEY POINTS FOR UPDATE THE VUE VERSION IN AN EXISTENT PRODUCT
 
-    /JavaScript/Web-development/frontend/Vue/2-updating/updating-vue.txt
+    .../Vue/2-updating-removing/updating-vue.txt
     
 
 

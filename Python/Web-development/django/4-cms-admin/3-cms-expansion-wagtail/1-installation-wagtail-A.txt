@@ -15,17 +15,17 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
 
 
     PRE.1) Python interpreter (if needed);
-        /Python/01-python-installation/
+        /Python/1-python-installation/
 
     PRE.2) Create the project folder, and get it:
         $ mkdir <project_folder>
         $ cd <project_folder>
 
     PRE.3) Create the project's virtual environment:
-        /Python/02-virtual-environment/creating-virtual-environment.txt
+        /Python/3-virtual-environment/creating-virtual-environment.txt
 
     PRE.4) Did you already active project's virtual environment?! I hope so!
-        /Python/02-virtual-environment/activate-and-deactivate.txt
+        /Python/3-virtual-environment/activate-and-deactivate.txt
 
     PRE.5) IDE, language setup:
         >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt

@@ -1,22 +1,25 @@
 // Component registry for lazy loading:
 const componentRegistry = {
   // For static routes:
-  SysNotFound: () => import("@/components/pages/SysNotFound.vue"),
+  LoadError: () => import("@/components/pages/LoadError.vue"),
   // For dynamic routes:
   Home: () => import("@/components/pages/Home.vue"),
   About: () => import("@/components/pages/About.vue"),
-  Profiles: () => import("@/components/pages/Profiles.vue"),
-  Cannabis: () => import("@/components/pages/Cannabis.vue"),
-  Test: () => import("@/components/pages/Test.vue"),
+  LoadBlog: () => import("@/components/pages/LoadBlog.vue"),
+  LoadBlogPost: () => import("@/components/pages/LoadBlogPost.vue"),
+  ListByCategory: () => import("@/components/pages/ListByCategory.vue"),
+  ListByTag: () => import("@/components/pages/ListByTag.vue"),
 };
-
 // Static routes configuration:
 const routes = [
   {
-    path: "/oops", // TODO implementar isso!
-    component: componentRegistry["SysNotFound"],
+    path: "/:pathMatch(.*)*", // Catch unregistered routes!
+    component: componentRegistry["LoadError"],
   },
-  // TODO: 503 tambem
+  {
+    path: "/503",
+    component: componentRegistry["LoadError"],
+  },
 ];
 
 export { routes, componentRegistry };

@@ -5,7 +5,7 @@ DJANGO: DISCOVERY
     Group of action to figure out a Django project settings and features:
 
         PRE) Discovery about Python:
-            /Python/00-New-Project/discovery-python.txt
+            /Python/0-New-Project/discovery-python.txt
 
         x) xxxxxx
 

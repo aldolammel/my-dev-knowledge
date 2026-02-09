@@ -12,7 +12,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
     >> BEFORE DJANGO INSTALLATION:
     
         1) Make sure you are in the MAIN python environment, not in a virtual one!
-            /Python/02-virtual-environment/activate-and-deactivate.txt
+            /Python/3-virtual-environment/activate-and-deactivate.txt
 
         2) Now, install the UV package manager:
             /Python/Package-manager/uv.txt
@@ -76,7 +76,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
                     >> In pyproject.toml file:
 
                         PRE.1) Make sure you has active the project's virtual environment!
-                            /Python/02-virtual-environment/activate-and-deactivate.txt
+                            /Python/3-virtual-environment/activate-and-deactivate.txt
 
                         PRE.2) If needed, model files:
                             >> With Python basics:
@@ -130,7 +130,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
                                 /Python/Package-manager/uv/create-or-find-current-venv.txt
 
                                 # After 'venv' command, active the new virtual environment!
-                                    /Python/02-virtual-environment/activate-and-deactivate.txt
+                                    /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
                     4B.1.DONT) Project don't has the pyproject.toml file - - - - - - - - - - - - - -

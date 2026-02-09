@@ -2,12 +2,19 @@
 
 HOW TO USE API WITH VUE:
 
+    PRE) What is API:
+        /Programming-Concepts/api.txt
+
+
     >> Using the JavaScript native solution 'Fetch API':
 
-        /JavaScript/Web-development/frontend/Vue/3-component-libraries/api/fetch-api.txt
+        .../Vue/3-component-libraries/api/fetch-api.txt
 
     
-    >> Use the Vue-Axios (Deprecated???????):
+    >> Use the Vue-Axios:
 
-        /JavaScript/Web-development/frontend/Vue/3-component-libraries/api/axios.txt
-                
+        .../Vue/3-component-libraries/api/axios.txt
+
+
+    >> More about API:
+        /API/

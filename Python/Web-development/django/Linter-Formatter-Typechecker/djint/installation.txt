@@ -10,7 +10,7 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
     1) INSTALLING:
 
         PRE) Assuming you already got a virtual environment for the project, active it:
-            /Python/02-virtual-environment/activate-and-deactivate.txt
+            /Python/3-virtual-environment/activate-and-deactivate.txt
 
         1.1) Install the djlint as development dependency:
             

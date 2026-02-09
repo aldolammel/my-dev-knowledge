@@ -6,7 +6,7 @@ IDE FOR PYTHON PROJECT: VSCODE
     >> Basic for run Python:
 
         PRE.1) Python project:
-            /Python/00-New-Project/1-new-project.txt
+            /Python/0-New-Project/1-new-project.txt
 
         PRE.2) IDE VSCode:
             Download the IDE:
@@ -16,7 +16,7 @@ IDE FOR PYTHON PROJECT: VSCODE
     >> Basic to setup VSCode also for specific projects:
 
         PRE.3) Assuming you already have the project's virtual environment to work:
-            /Python/02-virtual-environment/creating-virtual-environment.txt
+            /Python/3-virtual-environment/creating-virtual-environment.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

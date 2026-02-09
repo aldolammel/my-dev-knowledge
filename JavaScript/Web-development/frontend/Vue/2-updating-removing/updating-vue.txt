@@ -9,7 +9,7 @@ VUE.JS: UPDATING VUE
 
 
     PRE) Assuming you already got Vue installed correctly:
-        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
+        .../Vue/1-install-and-first-steps/_vue-installation.txt
 
 
     1) Go to the Vue project folder, e.g. /project_name/frontend/;

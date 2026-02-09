@@ -11,7 +11,7 @@ IDE FOR DJANGO PROJECT: VSCODE
 
 
         PRE.2) Assuming you already activated the project's virtual environment:
-                /Python/02-virtual-environment/activate-and-deactivate.txt
+                /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

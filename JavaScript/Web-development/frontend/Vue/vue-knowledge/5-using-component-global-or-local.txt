@@ -4,7 +4,7 @@ VUE.JS COMPONENT: USING IT GLOBAL OR LOCALLY?
 
 
     >> Global component:
-        It will be loaded before the application be shown on the browser.
+        It will be loaded before the app be shown on the browser.
         It's perfect for those components always (or almost) running/visible on the app interface.
 
         E.g.

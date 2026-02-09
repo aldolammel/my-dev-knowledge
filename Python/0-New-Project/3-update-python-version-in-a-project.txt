@@ -61,7 +61,7 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
                     /Python/Package-manager/uv/auto-installation-with-sync.txt
 
                 # Deactive and active the project environment:
-                    /Python/02-virtual-environment/activate-and-deactivate.txt
+                    /Python/3-virtual-environment/activate-and-deactivate.txt
                 
                 # Verify the Python version in the environment
                     $ uv run python --version

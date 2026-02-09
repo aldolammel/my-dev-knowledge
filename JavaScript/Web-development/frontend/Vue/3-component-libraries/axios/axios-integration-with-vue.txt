@@ -19,12 +19,21 @@ AXIOS: INTEGRATION WITH VUE.JS:
                     /Environment-Variables/env-for-local/in-frontend/.env
 
             2) In the front-end main-app-js file, include:
-                // After the basic importations:
+                
+                // Importing for SPA:
+                ...
                 import axios from 'axios';
 
-                // App config, after the App creation:
-                // Vite automatically searches for VITE_ prefix env vars, and it's accessible via import.meta.env:
+                // Declarations:
+                ...
+
+                // Other configs:
+                // Vite automatically searches for VITE_ prefix env vars:
                 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;  // Where Django's running currently!
+
+                // Installing Vue plugins:
+                ...
+
 
         >> For MPA projects:
             

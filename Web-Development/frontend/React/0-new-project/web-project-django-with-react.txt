@@ -1,1 +1,1 @@
-/Python/00-New-Project/2-web-project-django-with-react.txt
+/Python/0-New-Project/2-web-project-django-with-react.txt

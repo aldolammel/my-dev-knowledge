@@ -6,17 +6,17 @@ RE-INSTALL VUE:
     >> If you are install Vue for the very first time, and it's a brand new project,
         skip here and go:
 
-            /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
+            ./_vue-installation.txt
 
 
     >> If you want just re-install the Vue based on the existent project, you can just clone the
         project repository again:
 
             1) Clone an existent project repo:
-                /35-version/git/basic.txt
+                /Versioning/git/command-clone.txt
             
             2) Carefully, adapt this guide to reinstall the Vue project:
-                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
+                ./starting-project-using-LOCAL-installation.txt
 
 
     >> Or if you want to re-install the Vue absolutely from scratch (a new Vue copy):

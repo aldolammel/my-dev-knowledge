@@ -4,34 +4,35 @@ PINIA: HOW TO CREATE DATA
 
     STEP 0: WORKFLOW
         Overview of the Pinia workflow:
-        /JavaScript/Web-development/frontend/Vue/3-component-libraries/pinia/pinia-workflow.png
+            ./pinia-workflow.png
 
 
 
     STEP 1: ADDING TO THE /SRC/MAIN.JS
 
-
-        // Pinia:
+        // Importing for SPA:
+        ...
         import { createPinia } from "pinia";
 
-        // App configs:
+        // Declarations:
+        ...
         const pinia = createPinia();
-        app.use(pinia);
 
-        // Mouting app:
-        // ...
+        // Installing Vue plugins:
+        ...
+        app.use(pinia);
 
 
     STEP 2: CREATING THE /SRC/STORES/ FOLDER
 
         >> Example of a Pinia's store:
-            /JavaScript/Web-development/frontend/Vue/3-component-libraries/pinia/example/src/stores/counter.js
+            ./example/src/stores/counter.js
 
     
     STEP 3: CALLING THE STORE IN A COMPONENT
 
         >> Example:
-            /JavaScript/Web-development/frontend/Vue/3-component-libraries/pinia/example/src/ccomponents/Counter.vue
+            ./example/src/ccomponents/Counter.vue
 
 
             

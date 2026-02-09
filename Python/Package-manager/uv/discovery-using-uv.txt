@@ -3,7 +3,7 @@
 UV PACKAGE MANAGER: DOING A DISCOVERY USING UV
 
     >> Python discovery:
-        /Python/00-New-Project/discovery-python.txt
+        /Python/0-New-Project/discovery-python.txt
 
     >> Django discovery:
         /Python/Web-development/django/0-new-project/discovery-django.txt

@@ -14,7 +14,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT
             >> PyCharm: /xxxxxxxxxxxxxxxxxxxxxxxx_flask.txt
         
         3) Python installation (if needed);
-            /Python/01-python-installation/
+            /Python/1-python-installation/
         
         4) Virtual Environment and Flask installation (and its dependencies):
             /Python/Web-development/flask/xxxxxxxxx

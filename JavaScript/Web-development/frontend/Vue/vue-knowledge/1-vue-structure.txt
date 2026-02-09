@@ -56,8 +56,16 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
         │   │   │
         |   |   └── pages/                # Components specific to a page/route.
         |   |       ├── Home.vue
-        │   │       ├── About.vue      
+        │   │       ├── ListByCategory.vue
+        │   │       ├── LoadBlog.vue
+        │   │       ├── LoadBlogPost.vue
         │   │       └── ...
+        │   │
+        │   ├── composables/              # Reusable functions for Composition API.
+        |   |   ├── useErrorHandler.js
+        |   |   ├── useLoadingState.js
+        |   |   ├── usePage.js
+        |   |   └── ...
         │   │
         │   ├── hooks/                # For custom Composition API functions (hooks), conventionally its files using 'use' as prefix.
         |   |   ├── useAuth.js
@@ -80,7 +88,7 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
         │   │   └── tinyslider-testimonial.js
         │   │
         │   ├── App.vue          # Root component page (main-vue-app).  <---------------
-        │   └── main.js          # JavaScript config file of the main-vue-app.
+        │   └── main.js          # Vue app init.
         │
         ├── .env                 # Exclusive front-end environment variables. 
         ├── index.html           # Run it to see the app on the browser. 

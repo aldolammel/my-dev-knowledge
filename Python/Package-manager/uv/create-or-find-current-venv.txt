@@ -13,7 +13,7 @@ PYTHON > UV PACKAGE MANAGER: CREATING A VENV OR FINDING THE EXISTING ONE
 
 
     2) Still in the project root folder, active the virtual environment:
-        /Python/02-virtual-environment/activate-and-deactivate.txt
+        /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

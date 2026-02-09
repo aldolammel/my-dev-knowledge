@@ -1,0 +1,35 @@
+
+
+PROGRAMMING CONCEPTS: REGULAR EXPRESSIONS (REGEX)
+
+
+    As known as regex too, they are patterns used to match, search, and manipulate text based on specific rules. They're a powerful tool for string processing found in most programming languages.
+
+
+    >> Core Concept:
+
+        A regex is a sequence of characters that defines a search pattern.
+        For example, \d{3}-\d{2}-\d{4} matches a pattern like "123-45-6789" (could be a social security number format).
+
+
+    >> Common Use Cases:
+        
+        You'd use regex when you need to:
+        - Validate input formats (emails, phone numbers, dates);
+        - Search and replace text with complex patterns;
+        - Extract specific data from strings;
+        - Split strings based on patterns;
+        - Clean or transform text data.
+
+    
+    >> Basic Building Blocks:
+
+        - Literals: abc matches "abc" exactly;
+        - Character classes: [0-9] matches any digit, [a-z] matches any lowercase letter;
+        - Metacharacters: . (any character), ^ (start), $ (end), * (zero or more), + (one or more), ? (zero or one);
+        - Quantifiers: {3} (exactly 3), {2,5} (between 2 and 5);
+        - Escape: \ makes special characters literal, like \. matches a period.
+
+
+    >> A nice web Regex tool:
+        https://regex101.com/

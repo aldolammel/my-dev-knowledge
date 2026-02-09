@@ -3,7 +3,7 @@
 DJANGO: UPDATING THE DJANGO VERSION IN AN EXISTENT PROJECT
 
     >> Considering a Python update too:
-        /Python/00-New-Project/3-update-python-version-in-a-project.txt
+        /Python/0-New-Project/3-update-python-version-in-a-project.txt
 
     >> Which tool are you using:
 

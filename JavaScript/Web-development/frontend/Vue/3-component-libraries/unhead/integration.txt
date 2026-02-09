@@ -1,0 +1,54 @@
+
+
+UNHEAD-VUE: INTEGRATION
+
+
+    PRE.1) Assuming you alread installed it:
+        ./0-unhead.txt
+
+
+    PRE.2) For Composition API projects:
+
+        - Conposable: useHead() for primary composition function;
+        - Conposable: useHeadSafe() for sanitizes input to prevent XSS;
+        - SSR-friendly with server-side rendering support.
+    
+
+    1) In the APP's JS config file (main.js):
+
+        ...
+        import { createHead } from "@unhead/vue/client";
+        
+        // Declarations:
+        ...
+        const head = createHead()
+
+        // Installing Vue plugins:
+        ...
+        app.use(head)
+
+    2) Basic usage for Vue components:
+
+        E.g. Home.vue:
+
+            <script setup lang="ts">
+            import { useHead } from '@unhead/vue'
+
+            useHead({
+                title: 'Home Page',
+                meta: [
+                    {
+                        name: 'description',
+                        content: 'Welcome to our website'
+                    }
+                ]
+            })
+            </script>
+
+            <template>
+            <h1>Home</h1>
+            </template>
+
+        
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -35,8 +35,16 @@ VUE.JS DEEPER KNOWLEDGE
                 In a .vue file, it is represented by a <style> tag.
 
         >> Convention about layer's order in component/app files:
-            - For "Options API" approach: template, script, style;
-            - For "Composition API" approach: script, template, style;
+            
+            >> For "Options API" approach:
+                1. template;
+                2. script;
+                3. style.
+
+            >> For "Composition API" approach:
+                1. script;
+                2. template;
+                3. style.
     
 
     >> Vue logic structure:

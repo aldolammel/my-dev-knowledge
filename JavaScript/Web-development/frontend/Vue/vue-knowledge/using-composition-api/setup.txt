@@ -18,6 +18,6 @@ VUE.JS WITH COMPOSITION API APPROACH: SETUP() VS <SCRIPT SETUP>
     
 
     >> Differences and examples:
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/_computed.vue
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/_methods.vue
+        ./_computed.vue
+        ./_methods.vue
 

@@ -20,7 +20,7 @@ PYTHON PACKAGE MANAGEMENT: PIP (PYTHON BUILT-IN MODULE)
 
 
         2) Active your environment:
-            /Python/02-virtual-environment/
+            /Python/3-virtual-environment/
 
 
         3) Now, install/update it:

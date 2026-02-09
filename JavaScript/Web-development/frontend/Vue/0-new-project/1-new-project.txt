@@ -6,4 +6,4 @@ VUE PROJECTS: ROADMAPS
         /JavaScript/00-New-Project/1-new-project.txt
 
     >> Strong Python projects:
-        /Python/00-New-Project/1-new-project.txt
+        /Python/0-New-Project/1-new-project.txt
