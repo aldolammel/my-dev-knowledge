@@ -1,0 +1,23 @@
+
+
+CSS FRAMEWORK: VUETIFY
+
+    Vuetify is a Vue.js component framework that implements "Material Design" (a Design System by Google) specification. It's essentially a comprehensive UI library for building Vue appss with Material Design aesthetics and principles.
+
+    >> https://vuetifyjs.com/
+        
+
+    Decent lesson:
+        https://www.youtube.com/watch?v=LCSQK_Gcvnk
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+ABOUT VUE.JS:
+    /JavaScript/Web-development/frontend/Vue/vue-knowledge/_about.txt
+
+
+DIFFERENCES BETWEEN CSS FRAMEWORKS:
+    .../css-libraries-frameworks/differences-between-frameworks.png

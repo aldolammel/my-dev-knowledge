@@ -1,6 +1,0 @@
-
-
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT WAGTAIL (BACK AND FRONT-END???????):
-
-    Roadmap installation options:
-        /Python/Web-development/django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt

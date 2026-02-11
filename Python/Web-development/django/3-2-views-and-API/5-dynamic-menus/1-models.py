@@ -63,7 +63,7 @@ class PagexKeyword(models.Model):
             super().save(*args, **kwargs)
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
         if self.kw:
             result1 = validators.clean_checker_txt_uniqueness(
                 PagexKeyword, self, "kw", self.kw, True, "lower"
@@ -128,7 +128,7 @@ class PagexCategory(models.Model):
             super().save(*args, **kwargs)
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
         if self.cat:
             result1 = validators.clean_checker_txt_uniqueness(
                 PagexCategory, self, "cat", self.cat, True, "lower"
@@ -351,7 +351,7 @@ class PagexPage(models.Model):
             self.seo_keywords.add(keyword)
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
         if self.title:
             result1 = validators.clean_checker_txt_uniqueness(
                 PagexPage, self, "title", self.title, False, ""

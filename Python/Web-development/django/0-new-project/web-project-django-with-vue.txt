@@ -1,6 +1,6 @@
 
 
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END VUE:
+PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END VUE:
 
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,7 +13,7 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
     >> Back-end:
 
         1.2) Basic installations:
-            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+            .../django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
     >> Front-end:
 
@@ -31,6 +31,9 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
         1.5) (Optional)
             CSS Framework:
 
+            >> Vuetify:
+                /Web-Development/frontend/CSS/css-libraries-frameworks/vuetify/
+
             >> Bootstrap:
                 /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
@@ -43,6 +46,9 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
 
 2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    0) Create the AI context prompt for the project:
+        /Python/Web-development/ai-prompt-context-model.txt
+        
     2.1) Front-end:
 
         >> Convert the HTML template to Vue templates/components;

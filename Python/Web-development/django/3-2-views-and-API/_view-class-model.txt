@@ -1,13 +1,13 @@
 
 >> VIEWS:
     >> Class-based:
-        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/
+        ./1-building-views-context/class-based/
 
     >> Function-based:
-        /Python/Web-development/django/3-2-views-and-API/1-building-views-context/function-based/
+        ./1-building-views-context/function-based/
 
 
 
 >> VIEWSET FOR SERIALIZERS:
     
-    /Python/Web-development/django/3-2-views-and-API/1-building-views-context/class-based/_viewSets-class-readOnly.py
+    ./1-building-views-context/class-based/_viewSets-class-readOnly.py

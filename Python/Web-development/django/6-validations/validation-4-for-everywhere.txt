@@ -3,9 +3,19 @@
 DJANGO FORMS VALIDATIONS: FOR ALL LEVELS (MIXING SOLUTIONS)
 
     >> I'm using Django also as template solution:
-        In this case, the best place to set the maximum of universal validations (that should impact DB, CMS, and APP) is models.py, using the DB constraints, validators, and clean() when needed.
+        In this case, the best place to set the maximum of universal validations (that should impact DB, CMS, and APP) is models.py, using these ways together:
         
-    >> I'm NOT using Django as template solution:
+            >> DB constraints validations:
+                ./validation-1-for-database.txt
+            
+            >> Validations:
+                ./models-validators-built-in.txt
+            
+            >> clean() method:
+                ./clean-differences-between-model-and-form.txt
+            
+        
+    >> Or I'm NOT using Django as template solution:
         In this case, you must be the same commented above but keep in mind, when you use external template solution (like Vue, React, Angular) you PROBABLY need to replicate some APP-level validations in that front-end framework too.
 
 

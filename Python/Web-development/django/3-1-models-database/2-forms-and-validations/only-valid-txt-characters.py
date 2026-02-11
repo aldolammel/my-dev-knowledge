@@ -11,7 +11,7 @@ from django.core.exceptions import ValidationError
 
 # Validators - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 def validate_chars_no_spaces(value, can_space: bool = False) -> None:
-    """Checks if a text field is using only valid characters (alpha-numeric)."""
+    """Checks if a text field is using only valid characters (alpha-numeric). If alright, it returns None."""
     # Escape:
     if not value:
         return None

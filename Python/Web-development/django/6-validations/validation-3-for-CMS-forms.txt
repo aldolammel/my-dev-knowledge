@@ -7,12 +7,12 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
     IMPORTANT:
         All validation for db-level (only written through the models.py file) Django manages to propagate them to CMS-level (admin.py), automatically. So it's correct to say database validation's level propagates directly into the CMS, but NEVER to the opposite (if you create validations on admin.py that won't be propagate to db-level).
 
-    Considering "Field-level" means any field from a Model-class or Admin-class, and "Model-level" means any class from models.py and admin.py, for CMS validations, there are these approaches to set each validation logic:
+    Considering "Field-level" means any field from a Model-class or Admin-class, and "Model-level" means any class from models.py and admin.py, for CMS validations there are these approaches to set each validation logic:
 
-        1. In models.py, model-field-level validation (using "validators");
-        2. In models.py, model-level validation (using "clean()");
-        3. In admin.py, admin-model-field-level validation (using "validators") (NOT COMMON);
-        4. Admin-model-level validation (using "clean()" ONLY VIA FORMS.PY)
+        A. In models.py, model-field-level validation (using "validators");
+        B. In models.py, model-level validation (using "clean()");
+        C. In admin.py, admin-model-field-level validation (using "validators") (NOT COMMON);
+        D. Admin-model-level validation (using "clean()" ONLY VIA FORMS.PY)
         
     All that said, keep in mind:
 
@@ -73,7 +73,7 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
                 stock = ...
 
                 def clean(self):
-                    """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+                    """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
                     # Cross-field validation:
                     if self.stock == 0 and self.price > 0:
                         raise Validation(

@@ -1,6 +1,6 @@
 
 
-DJANGO: DISCOVERY
+PYTHON PROJECT ROADMAPS: DISCOVERY IN DJANGO
 
     Group of action to figure out a Django project settings and features:
 

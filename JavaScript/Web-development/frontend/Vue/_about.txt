@@ -2,4 +2,4 @@ About Vue.JS language:
     /JavaScript/
 
 About Vue.JS:
-    /JavaScript/Web-development/frontend/Vue/vue-knowledge/_about.txt
+    ./vue-knowledge/_about.txt

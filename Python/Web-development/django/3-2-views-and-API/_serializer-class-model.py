@@ -36,3 +36,6 @@ class ExampleModelSerializer(serializers.ModelSerializer):
             "xxxxxx_field_2",
             # "reserved_space",  # Custom field
         ]
+
+    # Method fields:
+    # Reserved space...

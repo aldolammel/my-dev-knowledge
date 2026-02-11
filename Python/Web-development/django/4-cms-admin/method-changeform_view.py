@@ -48,7 +48,8 @@ class ProductAdmin(admin.ModelAdmin):
 # Another example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 def changeform_view(self, request, object_id=None, form_url="", extra_context=None):
-    """Intercept _add_section and _remove_section before Django Admin tries to validate inlines (which causes ManagementForm errors, blocking the update of page's sections amount)."""
+    """This build-in method handles the "add" and "change" form pages in CMS."""
+    # Intercept _add_section and _remove_section before Django Admin tries to validate inlines (which causes ManagementForm errors, blocking the update of page's sections amount):
     if request.method == "POST" and object_id is not None:
         obj = self.get_object(request, object_id)
         if obj:

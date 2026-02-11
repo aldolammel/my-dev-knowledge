@@ -28,7 +28,7 @@ def clean_fieldnamehere(self):
     return <fieldname>
 
 def clean(self):
-    """Form-level validation that runs after individual field validations if available."""
+    """Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
     cleaned_data = super().clean()  # Get already validated field data!
     
     # Add cross-field validation logic
@@ -40,7 +40,7 @@ def clean(self):
 
 # Common example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 def clean(self):
-    """Form-level validation that runs after individual field validations if available."""
+    """Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
     cleaned_data = super().clean()
     password = cleaned_data.get("password")
     confirm = cleaned_data.get("confirm_password")

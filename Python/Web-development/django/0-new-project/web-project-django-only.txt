@@ -1,6 +1,6 @@
 
 
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT-END):
+PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END):
 
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -38,18 +38,23 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT DJANGO (BACK AND FRONT
 
         1.4) (Optional)
             Front-end CSS Framework:
-
-                >> Bootstrap:
-                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
-
-                >> Or Tailwind:
+                
+                >> Tailwind:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
-
+                
                 >> Or Bulma:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+                
+                >> Or Bootstrap:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+
 
 2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    0) Create the AI context prompt for the project:
+        /Python/Web-development/ai-prompt-context-model.txt
+    
     2.1) Front-end:
         >> Convert the HTML template to Django Template;
         >> Code the entire navigation;

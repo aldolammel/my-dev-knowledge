@@ -22,7 +22,7 @@ class ExampleModel(models.Model):
     title = ...
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
 
         # Once the clean() is applied directly as a method in the model, to call the model (instance) data from db, just use 'self' to refer data from the own instance:
         if self.title:

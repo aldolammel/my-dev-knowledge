@@ -1,6 +1,6 @@
 
 
-DJANGO: UPDATING THE DJANGO VERSION IN AN EXISTENT PROJECT
+PYTHON PROJECT ROADMAPS: UPDATING DJANGO VERSION IN AN EXISTENT PROJECT
 
     >> Considering a Python update too:
         /Python/0-New-Project/3-update-python-version-in-a-project.txt

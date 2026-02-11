@@ -14,24 +14,24 @@ VUE: WITH DJANGO BACK-END
 
         2A) Recommendation for MPA project:
 
-            my_project_name/     # /Python/Web-development/django/django-project-folder-structure.txt
-            └── frontend/        # /JavaScript/Web-development/frontend/Vue/vue-knowledge/1-vue-structure.txt
+            my_project/         # /Python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
             >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
-                folder (e.g. "my_project_name").
+                folder (e.g. "my_project").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         2B) Recommendation for SPA project:
 
-            my_project_name/     # /Python/Web-development/django/django-project-folder-structure.txt
-            └── frontend/        # /JavaScript/Web-development/frontend/Vue/vue-knowledge/1-vue-structure.txt
+            my_project/         # /Python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
             >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
-                folder (e.g. "my_project_name").
+                folder (e.g. "my_project").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     3) Once you have decided with structure to follow, return to the main guide for Vue installation:
-        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/_vue-installation.txt
+        ./_vue-installation.txt

@@ -11,7 +11,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # For explicit path:
     # change_form_template = "admin/your_app/model_name/change_form.html"
 
-    # Custom inlines:huSpUsa$r7_ex3s9
+    # Custom inlines:
     # Reserved space...
 
     list_display = (
@@ -34,3 +34,9 @@ class ExampleModelAdmin(admin.ModelAdmin):
         '''Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface.'''
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
+
+    # Method fields:
+    # Reserved space...
+
+    # Defining method field labels:
+    # Reserved space...

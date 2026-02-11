@@ -1,6 +1,6 @@
 
 
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRONT-END REACT:
+PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END REACT:
 
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -43,6 +43,9 @@ PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END DJANGO + FRON
 
 2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    0) Create the AI context prompt for the project:
+        /Python/Web-development/ai-prompt-context-model.txt
+    
     2.1) Front-end:
 
         >> xxxxxxxxxxxxxxxxxxxxx

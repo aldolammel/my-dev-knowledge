@@ -1,0 +1,2 @@
+Example:
+    /Python/Web-development/ai-prompt-context-model.txt

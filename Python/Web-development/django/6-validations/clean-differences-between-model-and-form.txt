@@ -5,16 +5,24 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
 
         clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When exactly the clean() method is executaded is different between models and forms cases:
 
+
             MODELS CLEAN() METHOD:
+
                 It's used to provide custom model-level validation logic, and is called by full_clean() before saving the object.
 
+
             FORMS CLEAN() METHOD:
-                On a form, it provides custom validation logic that runs after field-level validation but before cleaned data is returned.
+
+                On a form, it provides custom validation logic that runs after field-level validation but before cleaned_data is returned.
+                
+                If an Admin class to demand any clean(), it's mandatory to create a form class (forms.py) once Django doesn't allow the clean() use directly in admin.py.
+                
+                Unlike its version for models, clean() for forms accepts clean_<fieldname>() to validade a specific field, individualy.
 
 
         BASIC KNOWLEDGE:
             ./validation-2-for-app-forms.txt
-            /Python/Web-development/django/9-forms/error-messages/basic.txt
+            .../django/9-forms/error-messages/basic.txt
 
 
         IMPORTANT:
@@ -27,18 +35,24 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
             
             >> For MODEL classes:
 
-                    class ExampleModel(model.Model):
+                    class ExampleModelOne(model.Model):
                         ...
 
+                        def save(self, *args, **kwargs):
+                            """Built-in Model method that's executed when the db entry saving runs."""
+                            # Runs full validation before saving:
+                            self.full_clean()
+                            ...
+
                         def clean(self):
-                            """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
-                            # Access model fields data directly:
-                            p = self.goal_primary
-                            s = self.goal_secondary
+                            """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
+                            
+                            if self.string_one_field == self.string_two_field:
+                                raise ValidationError(f'Strings cannot be the same!')
 
-                            # Some validator function in validators.py:
-                            my_custom_validator(p, s)
-
+                        def clean_<field_name>(self):
+                            # Individual validation is NOT allowed for models in this way!
+                            # There, for individual fields, you must use 'Validators'!
 
 
             >> For FORM classes:
@@ -46,33 +60,46 @@ DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR 
                     class ExampleModelForm(forms.ModelForm):
                         
                         class Meta:
-                            model = ExampleModel
+                            model = ExampleModelOne
                             fields = "__all__"
 
                         def clean(self):
-                            """Form-level validation that runs after individual field validations if available."""
-                            # Always starts like this:
+                            """Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
                             cleaned_data = super().clean()
 
-                            # Something to make it useful:
-                            p = cleaned_data.get('goal_primary')
-                            s = cleaned_data.get('goal_secondary')
-                            my_custom_validator(p, s)
+                            # In main forms' clean() you SHOULDN'T use 'self.':
+                            s1 = cleaned_data.get('string_one_field')
+                            s2 = cleaned_data.get('string_two_field')
 
-                            # And ends, returning that dictionary:
+                            if s1 and s2 and s1 == s2:
+                                raise ValidationError({
+                                    'string_one_field': "Error message 1",
+                                    'string_two_field': "Error message 2",
+                                })
+                            
                             return cleaned_data
 
+                        def clean_<fieldname>(self):
+                            """Built-in Form method to validate an individual form field before the main clean method."""
                             
+                            # For individual clean() you MUST use 'self.':
+                            age = self.cleaned_data.get('age')
+        
+                            if age and age < 18:
+                                raise forms.ValidationError("You must be at least 18 years old")
+                            
+                            return age
+
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 HOW TO BUILD A VALIDATORS.PY:
-    /Python/Web-development/django/6-validations/models-validators-customized.py
+    ./models-validators-customized.py
 
 CLEAN() FOR MODELS:
-    /Python/Web-development/django/3-1-models-database/method-clean.py
+    .../django/3-1-models-database/method-clean.py
 
 CLEAN() FOR FORMS:
-    /Python/Web-development/django/9-forms/method-clean.py
+    .../django/9-forms/method-clean.py

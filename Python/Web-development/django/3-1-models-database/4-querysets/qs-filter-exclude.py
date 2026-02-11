@@ -22,7 +22,7 @@ class Movie(models.Model):
     status = ...
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
 
         # Check if other movie has the same title but using case-insensitive:
         is_same_title = Movie.objects.exclude(pk=self.pk).filter(title__iexact=self.title).exists()

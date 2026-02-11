@@ -61,7 +61,7 @@ class ExampleModel(models.Model):
             super().save(*args, **kwargs)
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
 
         if self.xxxxxxx:
             result = validators.clean_checker_txt_uniqueness(
@@ -124,7 +124,7 @@ class ExampleModel(models.Model):
         super().save(*args, **kwargs)
 
     def clean(self):
-        """Built-in Model method used to provide custom model-level validation logic, and is called by full_clean() before save() the instance."""
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
         # Allows the parent class to execute full_clean() in this child too:
         super().clean()
         # Reserved space for child validations...

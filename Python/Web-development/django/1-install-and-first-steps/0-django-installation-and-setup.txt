@@ -149,7 +149,16 @@ DJANGO: INSTALLING AND SETUP
     
     
 
-    7) Create basic sub-apps in the project's application:
+    7) Create basic sub-apps in the project's app:
+
+        TO APPLY IN THIS POINT) Reorganize it! Because what main 'sub-app' to use for pages, and posts management?
+
+            >> Pagex?
+                .../xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            >> Wagtail?
+                .../django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt
+
 
         7.1) (Skip it if you'll use an existent settings.py model later) 
             Show to Django where will be each template folder in your sub-apps, going to the
@@ -162,7 +171,7 @@ DJANGO: INSTALLING AND SETUP
 
 
         7.2) If you want to use a settings.py model file, now is the time!
-            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
+            .../django/z-project-examples/proj-aldolammel-style/core/settings.py
             
             >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
                 file when you bring it to your project!
@@ -174,16 +183,16 @@ DJANGO: INSTALLING AND SETUP
 
             
             >> How to create a sub-app:
-                /Python/Web-development/django/2-creating-and-deleting-apps/creating.txt
+                .../django/2-creating-and-deleting-apps/creating.txt
 
 
             >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!!)
                 'general' sub-app:
-                About: /Python/Web-development/django/z-project-examples/proj-aldolammel-style/general/_readme.txt
+                About: .../django/z-project-examples/proj-aldolammel-style/general/_readme.txt
                 
                 g.1) Bring the basic sub-app files and templates-folder too:
                     
-                    /Python/Web-development/django/z-project-examples/proj-aldolammel-style/general/
+                    .../django/z-project-examples/proj-aldolammel-style/general/
 
                 g.2) Include it in the INSTALLED_APPS in the settings.py file!
                 g.3) Makemigrations and migrate!
@@ -193,7 +202,7 @@ DJANGO: INSTALLING AND SETUP
             >> Do you need user management through the app front-end too?
 
                 >> If not:
-                    /Python/Web-development/django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
+                    .../django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
 
                 >> If so:
                     /Python/Web-development/django/3-1-models-database/3-users/2-extending-users.txt
