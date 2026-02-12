@@ -4,4 +4,4 @@
 
         >> From Form (forms.py):
 
-            /Python/Web-development/django/9-forms/form-receiving-data.py
+            .../django/9-forms/form-receiving-data.py

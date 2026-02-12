@@ -45,6 +45,9 @@ DJANGO FORMS: VALIDATIONS
 
         >> Validations via ADMIN.PY:
 
+            The admin.py doesn't accept any kind of validation, except through a Modelform-class in forms.py:
+                ./xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
             
 
         >> Validations via FORMS.PY:

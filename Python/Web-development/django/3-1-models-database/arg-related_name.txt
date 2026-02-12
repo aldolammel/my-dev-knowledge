@@ -2,11 +2,64 @@
 
 DJANGO MODEL CLASS > ARGUMENT: RELATED_NAME
 
-    xxxx
+    The 'related_name' is an argument to specify the reverse relation name from the related model back to the model defining the ForeignKey.
 
+    The name you choose becomes the attribute name on the related model instance! Be specific!
+
+
+    >> WITHOUT related_name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        E.g.
+            class Book(models.Model):
+                author = models.ForeignKey(
+                    Author,
+                    on_delete=models.CASCADE
+                )
+                
+                >> Calling reverse relation:
+                    author.book_set.all()
+
+
+    >> WITH related_name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        E.g.
+            class Book(models.Model):
+                author = models.ForeignKey(
+                    Author,
+                    on_delete=models.CASCADE,
+                    related_name='books'       # Always plural(convension)!    # Usage: author.books
+                )
+                
+                >> Calling reverse relation:
+                    author.books.all()
+
+
+    >> SPECIAL: Avoiding related_name conflicts - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        E.g.
+            class AuditBase(models.Model):  # Abstract model!
+                ...
+                created_by = models.ForeignKey(
+                    stgs.AUTH_USER_MODEL,
+                    related_name="%(app_label)s_%(class)s_created_by",                     # <----
+                        # Output: "appName_modelName_modelInhiretedAuditbase_created_by"   # <----
+                    ...,
+                )
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    >> More special use:
+
+        - related_name='+'                  - disables the reverse relation entirely
+        - Can be used in prefetch_related() for optimization
+
+        
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-DJANGO QUERYSETS:
-    ./4-querysets/
+
+MODEL FOREIGN KEY:
+    ./model-attr-foreignKey.txt

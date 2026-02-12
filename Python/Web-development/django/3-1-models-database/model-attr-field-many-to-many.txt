@@ -2,18 +2,21 @@
 
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: MANY-TO-MANY FIELD
 
+
     Common Usage:
         Defining a many-to-many relationship between two models. This requires Django to create a separate "junction" or "through" table in the database.
+
 
     Field look-like on front-end:
         xxxxxxx
 
+
     Example:
         
-        categories = models.ManyToManyField(
+        categories = models.ManyToManyField(           # m2m attr name's an exception: always PLURAL
             "PagexCategory",
             blank=True,
-            related_name="pagex_categories",
+            related_name="%(app_label)s_categories",                        # ./arg-related_name.txt
         )
 
         # On an Article model (an article can have many tags, and a tag can be on many articles):
@@ -22,13 +25,16 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: MANY-TO-MANY FIELD
         # On a Course model (a student can take many courses, and a course can have many students):
         students = models.ManyToManyField(Student)
 
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
->> Other related options:
+
+>> OTHER RELATED OPTIONS:
     
     >> Foreign Key:
-        /Python/Web-development/django/3-1-models-database/model-attr-foreignKey.txt
+        ./model-attr-foreignKey.txt
 
     >> One-To-One Field:
-        /Python/Web-development/django/3-1-models-database/model-attr-field-one-to-one.txt
+        ./model-attr-field-one-to-one.txt
 
