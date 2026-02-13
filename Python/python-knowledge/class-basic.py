@@ -51,7 +51,7 @@ print()
 
 class UserClassExample2:
     def __init__(self, uid, username, email):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         self.uid = uid
         self.username = username
         self.email = email
@@ -71,7 +71,7 @@ print()
 
 class UserClassExample3:
     def __init__(self, uid, user, email):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         self.uid = uid
         self.user = user
         self.email = email

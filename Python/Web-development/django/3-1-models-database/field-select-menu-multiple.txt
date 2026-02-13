@@ -7,7 +7,7 @@ FIELD: MULTI-SELECT-MENU
 
 
 
-1) FIELD: DYNAMIC OPTIONS, one or more options to return previously added via CMS:
+1) FIELD: DYNAMIC OPTIONS, one or more options to return previously added via CMS - - - - - - - - - 
 
     >> You want your CMS page to show a MULTI SELECT MENU with dynamic options to select one or more of them:
         
@@ -32,7 +32,7 @@ FIELD: MULTI-SELECT-MENU
 
 
             >> More about ManyToMany relationship:
-                /Python/Web-development/django/3-1-models-database/relation-many-to-many.txt
+                ./relation-many-to-many.txt
                 
 
 
@@ -59,6 +59,9 @@ FIELD: MULTI-SELECT-MENU
                     # displaying two boxes side by side, one with options and another with the selected ones.
                     filter_horizontal = ('musicians',)
 
+                        >> Screenshot of that:
+                            .../django/4-cms-admin/0-basic/detailview-m2m-horizontal-multi-selection.jpg
+
                 
                 #admin.site.register(MusicianType, MusicianTypeCMS)
                 #admin.site.register(Band, BandCMS)
@@ -72,7 +75,7 @@ FIELD: MULTI-SELECT-MENU
 
 
 
-2) FIELD: STATIC OPTIONS, one or more options to return (hardcoded):
+2) FIELD: STATIC OPTIONS, one or more options to return (hardcoded) - - - - - - - - - - - - - - - - 
 
     >> You want your CMS page to show a MULTI SELECT MENU with static options to select one or more of them:
 

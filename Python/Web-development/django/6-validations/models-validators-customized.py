@@ -117,7 +117,7 @@ class ExampleForm(forms.Form):
         @deconstructible
         class ValidateDiv:
             def __init__(self, user_num):
-                """Built-in method called 'Constructor', designed to initialize the instance."""
+                """Dunder method called 'constructor' that runs automatically when a class instance is created."""
                 self.user_num = user_num
                 
             def __call__(self, system_num):

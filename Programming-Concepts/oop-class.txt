@@ -19,7 +19,7 @@ OOP: CLASSES
                 species = "Canis familiaris"                             # attr shared by all dogs
 
                 def __init__(self, name, age, color):    # If an INSTANCE is created, make it unique
-                    """Built-in method called 'Constructor', designed to initialize the instance."""
+                    """Dunder method called 'constructor' that runs automatically when a class instance is created."""
                     self.name = name                                     # inst attr unique each dog
                     self.age = age
                     self.color = color
@@ -35,7 +35,7 @@ OOP: CLASSES
 
             class Doberman(Dog):                                               # Child-class
                 def __init__(self, name, age, color="black", ears="cropped"):  # inherit and Extend
-                    """Built-in method called 'Constructor', designed to initialize the instance."""
+                    """Dunder method called 'constructor' that runs automatically when a class instance is created."""
                     super().__init__(name, age, color)                         # inherit Dog methods
                     
                     self.ears = ears                                   # Doberman-specific attribute

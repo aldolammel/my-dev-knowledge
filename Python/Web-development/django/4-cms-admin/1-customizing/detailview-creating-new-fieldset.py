@@ -83,7 +83,7 @@ class PagexContentForm(forms.ModelForm):
         ]
 
     def __init__(self, *args, **kwargs):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         super().__init__(*args, **kwargs)
 
         if self.instance and self.instance.section_element:

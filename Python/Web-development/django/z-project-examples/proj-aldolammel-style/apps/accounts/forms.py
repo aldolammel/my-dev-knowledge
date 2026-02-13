@@ -199,7 +199,7 @@ class UserProfileOneForm(forms.ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         user = kwargs.pop("user", None)  # Get the current user (from view)!
         super().__init__(*args, **kwargs)
         if user:

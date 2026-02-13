@@ -30,7 +30,7 @@ class BrandCarStoreForm(forms.ModelForm):
     # Reserved space...
     
     def __init__(self, **args, **kwargs):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         seller = kwargs.pop('seller', None)  # 'seller' here is the authenticated User!
         super().__init__(*args, **kwargs)
         

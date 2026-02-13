@@ -61,7 +61,7 @@ if not my_list:
 # Custom objects with len():
 class MyCollection:
     def __init__(self, items):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         self.items = items
     
     def __len__(self):

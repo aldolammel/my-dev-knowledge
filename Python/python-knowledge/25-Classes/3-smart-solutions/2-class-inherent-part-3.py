@@ -9,14 +9,14 @@ CLASS INHERENT: SUPER()
 
 class Person:
     def __init__(self, f_name, l_name):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         self.f_name = f_name
         self.l_name = l_name
 
 
 class Professor(Person):
     def __init__(self, f_name, l_name, t_status, h_date, f_date):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         super().__init__(f_name, l_name)
         self.t_status = t_status
         self.h_date = h_date
@@ -33,7 +33,7 @@ class Professor(Person):
 
 class Student(Person):
     def __init__(self, f_name, l_name, l_status, dt_enroll, dt_closure):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         super().__init__(f_name, l_name)
         self.l_status = l_status
         self.dt_enroll = dt_enroll

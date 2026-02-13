@@ -27,7 +27,7 @@ class MovieForm(forms.ModelForm):
         included_by = forms.CharField(...)
         
         def __init__(self, *args, **kwargs):
-            """Built-in method called 'Constructor', designed to initialize the instance."""
+            """Dunder method called 'constructor' that runs automatically when a class instance is created."""
             movie = kwargs.pop('movie', None)  # Get it from the View!
             super().__init__(*args, **kwargs)
             

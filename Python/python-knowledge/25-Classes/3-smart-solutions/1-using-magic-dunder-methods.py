@@ -45,7 +45,7 @@ For example:
 
 class MyGarage:
     def __init__(self, city):
-        """Built-in method called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         self.city = city
         self.cars = []
 
