@@ -7,7 +7,7 @@ from parler.models import TranslatableModel, TranslatedFields
 # from parler.managers import TranslatableManager, TranslatableQuerySet
 from .validators import validate_user_agreement, validate_birth, validate_goals
 from core import language as lng
-from core.constants import (
+from core.consts import (
     CHOICES_STATUS_CONTENT,
     CHOICES_PHONE_CODE,
     CHOICES_PROFILE_TYPE,

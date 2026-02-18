@@ -1,0 +1,17 @@
+
+
+SYSTEM TOOL: OH MY BASH (A TERMINAL CLI)
+
+    "Oh My Bash" is an open source, community-driven framework for managing your bash configuration. You'll take advantage of the hundreds of powerful plugins and beautiful themes.
+
+
+    >> Prerequisites:
+        - Unix-like operating system (macOS or Linux);
+        - curl or wget should be installed;
+        - git should be installed;
+
+
+    >> Download & Install:
+        https://github.com/ohmybash/oh-my-bash
+
+    

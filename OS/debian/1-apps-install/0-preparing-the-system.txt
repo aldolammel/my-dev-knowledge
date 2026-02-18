@@ -1,0 +1,26 @@
+
+
+    
+
+    1) Prevent Snap from being preferred in the future (APT pinning safeguard):
+
+        $ echo -e "Package: *\nPin: release o=Ubuntu\nPin-Priority: 700" | sudo tee /etc/apt/preferences.d/ubuntu.pref
+
+        $ echo -e "Package: snapd\nPin: release *\nPin-Priority: -10" | sudo tee /etc/apt/preferences.d/nosnap.pref
+
+            TO BE CLEAR:
+                Don't worry, your current snap apps still working and updating normally!
+
+    
+    2) Install dependencies (this ensures your system is ready to add new repositories):
+        
+        $ sudo apt update && sudo apt upgrade -y
+        $ sudo apt install software-properties-common apt-transport-https wget gpg -y
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+INSTALLING THE BASIC APPS:
+    ./1-installing-apps.txt

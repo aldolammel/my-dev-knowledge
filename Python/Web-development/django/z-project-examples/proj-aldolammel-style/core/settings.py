@@ -7,7 +7,7 @@
 
 from pathlib import Path
 import environ
-from .constants import (
+from .consts import (
     NAMEAPP_1,
     NAMEAPP_2,
     NAMEAPP_3,

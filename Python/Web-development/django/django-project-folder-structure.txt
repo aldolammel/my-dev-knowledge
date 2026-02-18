@@ -14,30 +14,46 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
         A) Django as ENTIRE solution for back and front-end:
 
             my_project_name/
-            ├── .venv/                 # Virtual environment folder where Django things are installed.
+            ├── .venv/                       # Virtual env folder where Django things are installed.
             │
-            ├── core/                      # Django core folder.
+            ├── core/                        # Django core folder.
             │   ├── __init__.py
-            │   ├── constants.py           # Where you define global Django variables.
-            │   ├── context_processors.py  # Those data/context you wanna make available to the entire project.
-            │   ├── settings.py            # Main configuration file of the entire project.
-            │   ├── urls.py                # Main URL configuration for the entire project.
-            │   └── wsgi.py                # xxxxx
+            │   ├── consts.py                # Where is defined global Django constant variables.
+            │   ├── context_processors.py    # Data/context to make available to the entire project.
+            │   ├── settings.py              # Main configuration file of the entire project.
+            │   ├── urls.py                  # Main URL configuration for the entire project.
+            │   └── wsgi.py                  # xxxxxxxx.
             │
             ├── apps/
-            │   ├── app1/              # Example of a 'sub-app' of the main-app (project folder).
-            │   │   ├── migrations/    # Folder where all database logic/structure changes are tracked.
-            │   │   ├── __init__.py
-            │   │   ├── admin.py       # All CMS needs of this specific app are defined here.
-            │   │   ├── apps.py        # Where this specific app's name is defined for the entire system.
-            │   │   ├── forms.py       # Form classes linked with some models.py or receiving data from some views.py.
-            │   │   ├── models.py      # All database schema for this specific app is defined here.
-            │   │   ├── serializers.py # Where this app builds its APIs;
-            │   │   ├── tests.py       # xxxxx
-            │   │   ├── urls.py        # URL configuration specific for this app.
-            │   │   └── views.py       # All data/context of this specific app wants to send to the template.
+            │   ├── app1/               # Example of a 'sub-app' of the main-app (project folder).
+            │   │   ├── migrations/     # Folder where all db logic/structure changes are tracked.
+            │   │   │   └── ...
+            │   │   │
+            │   │   ├── services/       # When a utils is not generic, demanding db, managing files.
+            │   │   │   └── ...         # Every service/method should be a specific file.
+            │   │   │
+            │   │   ├── templates/      # Where custom CMS html for this sub-app is located.
+            │   │   │   └── admin/      # Local CMS interface customizations.
+            │   │   │       └── ...
+            │   │   │
+            │   │   ├── __init__.py     # Django sub-app init file (empty).
+            │   │   ├── admin.py        # All CMS needs of this specific app are defined here.
+            │   │   ├── apps.py         # Where this app's name is defined for the entire system.
+            │   │   ├── consts.py       # Local constant vars library.
+            │   │   ├── forms.py        # Form classes tied w/ Models or receiving data from Views.
+            │   │   ├── lang.py         # Language library, important for multilanguage systems.
+            │   │   ├── models.py       # All database schema for this specific app is defined here.
+            │   │   ├── serializers.py  # Where this app builds its APIs.
+            │   │   ├── signals.py      # xxxxxxxx.
+            │   │   ├── tests.py        # xxxxxxxx.
+            │   │   ├── urls.py         # URL configuration specific for this app.
+            │   │   ├── utils.py        # Only funcs, with no db-access, stateless, agnostic.
+            │   │   ├── utils_models.py # <--- MAYBE NOT NEEDED!
+            │   │   ├── validators.py   # Custom validators to validate things through the sub-app.
+            │   │   └── views.py        # Data/context from this app to send to the template.
             │   │
             │   ├── app.../
+            │   │   └── ...
             │   │
             │   └── __init__.py        # Makes Apps folder to be a package of apps.
             │
@@ -49,14 +65,16 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │   └── dist/              # xxxxx
             │
             ├── templates/               # Django templates.
-            │   ├── admin/               # Basic admin interface customizations.
+            │   ├── admin/               # Global CMS interface customizations.
             │   │    └── base_site.html    
             │   │
-            │   ├── components/          # Reusable template fragments.
+            │   ├── components/            # If using Django front-end, reusable template fragments.
+            │   │   └── ...
             │   │
-            │   └── pages/               # xxxxx
+            │   └── pages/                 # If using Django front-end, html of pages.
             │       ├── home.html      
-            │       └── about.html     
+            │       ├── about.html
+            │       └── ...
             │
             ├── .env                   # Exclusive back-end environment variables.
             ├── .gitignore             # For Git repository untrack specific files and folders.
@@ -74,7 +92,7 @@ DJANGO: ITS FILES AND FOLDER STRUCTURE
             │
             ├── core/                  
             │   ├── __init__.py        
-            │   ├── constants.py       
+            │   ├── consts.py       
             │   ├── settings.py        
             │   ├── urls.py            
             │   └── wsgi.py            

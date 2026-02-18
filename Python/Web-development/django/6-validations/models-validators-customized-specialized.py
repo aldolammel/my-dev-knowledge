@@ -1,6 +1,8 @@
 # EXAMPLE OF A VALIDATOR WITH ADDITIONAL AND UNLIMITED CUSTOMIZATION (SPECIALIZED)!
 # FILE: /apps/my_apps/validators.py
 
+# REMEMBER: VALIDATORS CHECK ONLY FIELD VALUES and not field existence or whatelse!
+
 import re  # From Django built-in lib
 from functools import partial  # From Django built-in lib
 from django.core.exceptions import ValidationError

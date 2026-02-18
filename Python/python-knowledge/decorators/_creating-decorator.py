@@ -1,9 +1,9 @@
 """
-INNER FUNCTIONS:
-Inner functions, also known as NESTED FUNCTIONS, are functions that you define inside other functions. In Python,
-this kind of function has direct access to variables and names defined in the enclosing function.
-Inner functions have many uses, most notably as closure factories and decorator functions.
+    INNER FUNCTIONS:
 
+        Inner functions, also known as NESTED FUNCTIONS, are functions that you define inside other functions. In Python, this kind of function has direct access to variables and names defined in the enclosing function. 
+        
+        Inner functions have many uses, most notably as closure factories and decorator functions.
 """
 
 

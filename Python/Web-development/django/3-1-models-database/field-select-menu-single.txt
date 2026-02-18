@@ -101,7 +101,7 @@ B) FIELD: SELECT MENU (STATIC OPTIONS BUT ONLY ONE TO RETURN)
                     ./model-attr-field-char.txt
 
 
-        B.2) In the sub-app constants.py (or in the models.py if you prefer), define them:
+        B.2) In the sub-app consts.py (or in the models.py if you prefer), define them:
 
                 # CONSTANTS:
                 VALUE_ACTIVE = 'on'       # In postgreSQL 'on' and 'off' are 1/true and 0/false too;

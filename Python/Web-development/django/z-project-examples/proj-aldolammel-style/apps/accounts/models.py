@@ -7,7 +7,7 @@ from django.utils import timezone
 # from parler.managers import TranslatableManager, TranslatableQuerySet
 from .validators import validate_user_agreement, validate_birth
 from core import language as lng
-from core.constants import (
+from core.consts import (
     CHOICES_PROFILE_TYPE,
     REL_PROFILE_1,
     #CHOICES_SEX,

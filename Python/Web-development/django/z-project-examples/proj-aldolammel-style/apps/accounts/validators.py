@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.utils import timezone
-from core.constants import (
+from core.consts import (
     VAL_PROFILE_1_BIRTH_MIN,
     VAL_PROFILE_1_BIRTH_MAX,
 )

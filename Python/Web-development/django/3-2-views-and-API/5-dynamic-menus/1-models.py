@@ -4,7 +4,7 @@ from django.db.models.functions import Length
 
 from django.conf import settings as stgs
 
-from . import constants as consts
+from . import consts
 from . import validators
 from .utils_models import pagex_slugifier
 

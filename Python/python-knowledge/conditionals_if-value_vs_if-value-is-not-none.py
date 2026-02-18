@@ -12,8 +12,8 @@ COMPARISON:
 
 VAR ---------------- if VAR: -------------- if VAR is not None:
 "hello" . . . . . . . pass . . . . . . . . . . pass
-0 . . . . . . . . . . FAIL . . . . . . . . . . pass
 "" . . . . . . . . . FAIL . . . . . . . . . . . pass
+0 . . . . . . . . . . FAIL . . . . . . . . . . pass
 [] . . . . . . . . . FAIL . . . . . . . . . . . pass
 False . . . . . . . . FAIL . . . . . . . . . . pass
 None . . . . . . . . . FAIL . . . . . . . . . . FAIL

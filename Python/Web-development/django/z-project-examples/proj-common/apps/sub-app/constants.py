@@ -1,1 +1,0 @@
-# /Python/Web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/constants.py

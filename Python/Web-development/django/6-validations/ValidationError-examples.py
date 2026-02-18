@@ -26,3 +26,10 @@ if not self.name:
             )
         }
     )
+
+"""- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    MORE ABOUT PYTHON ERROR MESSAGES:
+        /Python/python-knowledge/errors/_errors-most-common.py
+
+"""

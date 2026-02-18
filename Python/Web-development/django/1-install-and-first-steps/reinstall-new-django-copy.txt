@@ -98,7 +98,7 @@ RE-INSTALL ONLY THE DJANGO:
 
                 CRITICAL: DO NOT copy the settings.py file yet!!!
 
-                /core/constants.py
+                /core/consts.py
                 /core/context_processors.py
                 /core/language.py                 <--- if you're working with translations!
                 /core/middlewares.py              <--- if you're working with translations!

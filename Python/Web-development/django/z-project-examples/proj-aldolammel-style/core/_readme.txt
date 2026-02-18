@@ -4,7 +4,7 @@ application health and are regularly used through all sub-apps.
 
 E.g. of /core-folder/ extra content:
 
-    - constants.py
+    - consts.py
     - context_processors.py
     - language.py
 

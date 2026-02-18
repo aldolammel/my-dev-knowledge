@@ -4,7 +4,7 @@
 
         Be aware:
             This is not like the built-in function len():
-                /Python/python-knowledge/len-length.py
+                ./len-length.py
 
         
         Purpose:

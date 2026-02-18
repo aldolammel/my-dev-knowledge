@@ -4,7 +4,7 @@
     Set this function in your app's utils.py:
 """
 
-from . import constants as consts
+from . import consts
 
 def pagex_url_builder(obj: object, builder: int, option: str | None = None):
     """Builds front-end and back-end URLs for front-end-previews or API/JSON-visualizers.

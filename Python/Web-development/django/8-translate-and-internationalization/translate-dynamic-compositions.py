@@ -9,7 +9,7 @@
 
 """
 
-# E.g. in /config-folder/constants.py:
+# E.g. in /config-folder/consts.py:
 # More about: /Python/Web-development/django/3-1-models-database/_constants-map.py
 VAL_PROFILE_NAME_MAXLNGH = 20
 
@@ -23,7 +23,7 @@ TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.')
 # E.g. in /accounts/models.py:
 
 from myconfigfolder.language as lng
-from myconfigfolder.constants import VAL_PROFILE_NAME_MAXLNGH
+from myconfigfolder.consts import VAL_PROFILE_NAME_MAXLNGH
 
 class Profile(models.ModelForm):
     name = models.CharField(

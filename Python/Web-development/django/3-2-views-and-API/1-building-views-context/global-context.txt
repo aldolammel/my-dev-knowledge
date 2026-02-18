@@ -6,9 +6,9 @@
             you want a 'Global Context'!
 
 
-        1) RECOMMENDED: create a 'constants.py' file in your core-folder:
+        1) RECOMMENDED: create a 'consts.py' file in your core-folder:
 
-            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/constants.py
+            /Python/Web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py
 
 
         2) In a core-folder, create a file called 'context_processors.py':

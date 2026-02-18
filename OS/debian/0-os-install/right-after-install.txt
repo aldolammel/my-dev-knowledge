@@ -1,0 +1,42 @@
+
+
+OS > DEBIAN: RIGHT AFTER INSTALLATION
+
+
+    >> Primordial > Acertar a frequência da memória RAM (X.M.P = Profile1 = 3200 CAS/Latência em 16).
+    
+    >> Primordial > Bios deve estar configurada para UEFI
+    
+    >> Bios deve estar configurada com Virtualization Mode ON (M.I.T. > Advanced Frequency Settings > Advanced CPU Settings > SVM Mode = enabled)
+    
+    >> Primordial > Peripherals > Ligar o "Above 4G decoding":
+        
+        >> As subtarefas disso é focada apenas para Windows 11 (gaming);
+    
+    >> Set Windows to use UTC time, equal to Ubuntu, for compatibility with Dual-boot;
+        
+        >>  Linux works better with UTC instead of Local Time.
+            
+            >> On Windows 10 or 11 > Win+R > regedit > HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\
+            
+            >> Right-click on the right panel → New → DWORD (32-bit);
+            
+            >> Value Name it: RealTimeIsUniversal;
+            
+            >> Edit value to 1 and Decimal.
+
+
+
+    And then:
+
+        >> Config Display;
+        
+        >> Config Sounds;
+        
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+UBUNTU PREPARATION:
+    ./_roadmap.txt

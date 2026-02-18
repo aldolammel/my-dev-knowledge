@@ -1,0 +1,28 @@
+
+
+INTERNET TOOL: BRAVE BROWSER
+
+    PRE) Add Brave official GPG key:
+        $ curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg \
+| sudo gpg --dearmor -o /etc/apt/keyrings/brave-browser-archive-keyring.gpg
+
+    1) Adding .deb version as repository:
+        $ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
+| sudo tee /etc/apt/sources.list.d/brave-browser.list
+
+    2) Update the system;
+
+    3) Install it:
+        $ sudo apt install -y brave-browser
+
+    
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+XXXXXXXXXXXXXXXXX:
+    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

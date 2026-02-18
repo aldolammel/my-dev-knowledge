@@ -4,7 +4,7 @@
 
         Be aware:
             This is not like the built-in method .count():
-                /Python/python-knowledge/count.py
+                ./count.py
 
 
         Purpose:

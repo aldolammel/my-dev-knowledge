@@ -4,7 +4,7 @@ from .forms import CustomUserCreationForm
 #from parler.admin import TranslatableAdmin  # TODO: has multilingual support?
 from django.utils.html import format_html
 from django.urls import reverse
-from core.constants import (
+from core.consts import (
     REL_PROFILE_1,
     PATH_CMS_USERS,
 )

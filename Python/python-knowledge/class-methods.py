@@ -21,6 +21,8 @@ class Car:
         self.model = model
         self.year = year
 
+        # >> More about dunders: ./dunders.py
+
     # This is a METHOD (a function inside a class):
     def start_engine(self):
         print(f"{self.brand}'s engine gets started!")

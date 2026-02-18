@@ -1,0 +1,14 @@
+
+PRE) Current system:
+    $ lsb_release -a
+
+
+>> Best prompt to install things:
+
+    Shortly, I'm on Ubuntu <25.10>.
+    Install <app-name>.
+    Requirements:
+    - By terminal and using APT.
+    - Use official repository or trusted PPA if necessary.
+
+    Provide exact commands only!

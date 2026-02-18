@@ -2,7 +2,6 @@
 
 LINUX > DEBIAN: DEB VS SNAP
 
-    Install the DEB package from Mozilla's repository!
 
     Snap Disadvantages:
 
@@ -22,6 +21,26 @@ LINUX > DEBIAN: DEB VS SNAP
 
     
     >> That said:
+        
+        IMPORTANT:
+            When you run "sudo apt install <package>", APT searches through its package index — a db of all available packages from repositories you've already added to your system. This index is created and updated when you run "sudo apt update".
 
-        Install apps through the terminal, using:
-            $ sudo apt install <app_name>
+        
+        >> Prepare the system & install the basic apps:
+            ./0-preparing-the-system.txt
+        
+        
+        >> Install other apps:
+            ./1-installing-apps.txt
+
+
+        >> To see current repositories stored:
+            ./checking-app-is-in-repo-list.txt
+ 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+XXXXXXXXXXXXXXXXXXX:
+    /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

@@ -2,7 +2,7 @@
 # from django import forms as f
 from django.contrib import admin
 
-#from . import constants as consts
+#from . import consts
 from . import forms, models
 
 """

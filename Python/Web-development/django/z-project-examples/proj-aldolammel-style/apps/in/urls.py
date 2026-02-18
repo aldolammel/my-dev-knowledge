@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from core.constants import (
+from core.consts import (
     NAMEAPP_2,
     PATTERN_2_1,
     PATTERN_2_2,

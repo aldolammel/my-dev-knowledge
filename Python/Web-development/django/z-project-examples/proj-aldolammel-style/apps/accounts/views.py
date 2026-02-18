@@ -22,7 +22,7 @@ from .forms import (
     UserProfileOneForm,
 )
 from core import language as lng
-from core.constants import (
+from core.consts import (
     NAMEAPP_1,
     NAMEAPP_2,
     NAMEAPP_3,

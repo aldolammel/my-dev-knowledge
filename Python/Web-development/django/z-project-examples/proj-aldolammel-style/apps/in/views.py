@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 
 # from django.utils.translation import gettext_lazy as _
-from core.constants import (
+from core.consts import (
     NAMEAPP_2,
     NAMEAPP_3,
     PATTERN_2_2,

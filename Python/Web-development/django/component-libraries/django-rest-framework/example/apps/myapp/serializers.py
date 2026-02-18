@@ -4,7 +4,7 @@ from .models import (
     PagexMenu,
     PagexMenuLink,
 )
-from .constants import VAL_FRONT_TOOL_VUE
+from .consts import VAL_FRONT_TOOL_VUE
 
 
 class PagexPageSerializer(serializers.ModelSerializer):

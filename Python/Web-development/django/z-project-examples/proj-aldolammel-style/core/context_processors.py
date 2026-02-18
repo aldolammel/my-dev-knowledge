@@ -1,7 +1,7 @@
 from django.conf import settings as stgs
 from django.utils import timezone
 
-from . import constants as consts
+from . import consts
 # from . import lang
 
 

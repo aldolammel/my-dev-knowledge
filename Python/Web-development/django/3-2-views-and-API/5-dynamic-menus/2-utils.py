@@ -4,7 +4,7 @@ from django.conf import settings as stgs
 from django.core.cache import cache
 from django.core.exceptions import ImproperlyConfigured
 
-from . import constants as consts
+from . import consts
 from .models import PagexSettings
 
 
@@ -104,7 +104,7 @@ def pagex_front_url_setup(front_type, prefix_front, prefix_back, obj, option):
                             )
         case _:
             raise ValueError(
-                f"{consts.TAG_E} pagex_front_url_setup > Erro relacionado ao Tipo de Front-end do projeto. Certifique-se sobre a integridade dos valores de 'CHOICES_FRONTEND' no arquivo 'constants.py' do Pagex."
+                f"{consts.TAG_E} pagex_front_url_setup > Erro relacionado ao Tipo de Front-end do projeto. Certifique-se sobre a integridade dos valores de 'CHOICES_FRONTEND' no arquivo 'consts.py' do Pagex."
             )
     return url
 

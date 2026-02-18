@@ -1,0 +1,7 @@
+
+WHAT DO YOU NEED?
+- Prevent a method to use 'self.' to call its class attributes;
+- Prevent a method to use 'self.' to call its other methods;
+
+Read more about @staticmethod:
+    .../python-knowledge/decorators/@staticmethod.py

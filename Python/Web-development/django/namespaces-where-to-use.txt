@@ -27,7 +27,7 @@
         E.g.
 
             from django.apps import AppConfig
-            from cefalog.constants import NAMEAPP_3
+            from cefalog.consts import NAMEAPP_3
 
 
             class AccountsConfig(AppConfig):  <----------------------- NEVER CHANGE THIS CLASS NAME!

@@ -10,7 +10,7 @@ import { reactive, ref } from "vue";
 import axios from "axios";
 import { env } from "@/utils/env";
 
-const PATH = "/api/menus"; // It's also partially declared in /apps/pagex/constants.py
+const PATH = "/api/menus"; // It's also partially declared in /apps/pagex/consts.py
 
 export const useMenusStore = defineStore("menus", () => {
   // State:

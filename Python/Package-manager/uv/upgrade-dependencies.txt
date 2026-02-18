@@ -30,7 +30,7 @@ PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
         
             PRE) (Only for LINUX)
                 Update and Upgrade your system!
-                    /OS/linux/debian-ubuntu/2-updates/update.txt
+                    /OS/debian/2-updates/update.txt
 
 
             1) Update dependencies:

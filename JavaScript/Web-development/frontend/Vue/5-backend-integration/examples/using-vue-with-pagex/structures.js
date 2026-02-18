@@ -10,7 +10,7 @@ import { reactive, ref } from "vue";
 import axios from "axios";
 import { env } from "@/utils/env";
 
-const PATH = "/api/structures"; // It's also partially declared in /apps/pagex/constants.py
+const PATH = "/api/structures"; // It's also partially declared in /apps/pagex/consts.py
 
 export const useStructuresStore = defineStore("structures", () => {
   // State:

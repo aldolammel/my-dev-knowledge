@@ -1,0 +1,35 @@
+
+
+DEBIAN: CHECK THE CURRENT APT-UPDATE REPO LIST
+
+
+    >> Checking all repos (using old "deb" formats and new "URIs" ones):
+        
+        $ grep -r -E "^(deb|Types:|URIs:)" /etc/apt/sources.list.d/
+    
+    
+    >> Only for a specific app:
+
+        $ grep -r "<app_name>" /etc/apt/sources.list.d/
+
+    
+    >> If it's there, check if the apt-update is considering that:
+        $ sudo apt update | grep -i <app-name>
+
+
+    >> More details about a repos (which priority, etc):
+
+        $ apt-cache policy
+        # Or:
+        $ apt-cache policy <app_name>
+
+        IMPORTANT:
+            500 = It's just a how high that version of the app will be considered by apt-update when you upgrade the system.
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> REMOVING REPO:
+    /xxxxxxxxxxxxxxxxxxx

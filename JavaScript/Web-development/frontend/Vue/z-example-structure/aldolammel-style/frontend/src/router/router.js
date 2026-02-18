@@ -49,7 +49,7 @@ export async function initDynamicRoutes() {
   // Add category routes dynamically for each category:
   categories.forEach((category) => {
     router.addRoute({
-      path: `/c/${category.slug}`, // It's also partially declared in /apps/pagex/constants.py
+      path: `/c/${category.slug}`, // It's also partially declared in /apps/pagex/consts.py
       component: componentRegistry["ListByCategory"],
       props: { categorySlug: category.slug },
     });
@@ -58,7 +58,7 @@ export async function initDynamicRoutes() {
   // Add tag routes dynamically for each tag:
   tags.forEach((tag) => {
     router.addRoute({
-      path: `/t/${tag.slug}`, // It's also partially declared in /apps/pagex/constants.py
+      path: `/t/${tag.slug}`, // It's also partially declared in /apps/pagex/consts.py
       component: componentRegistry["ListByTag"],
       props: { tagSlug: tag.slug },
     });

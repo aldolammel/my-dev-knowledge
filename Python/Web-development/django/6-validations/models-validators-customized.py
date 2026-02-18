@@ -2,6 +2,8 @@
 """
     DJANGO FORMS > VALIDATIONS > CUSTOM VALIDATORS
 
+    Validators focus are the field VALUE, and not the field itself or its cross-field relations.
+
     CRUCIAL:
         Validators run at app, forms, and model levels, BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
 

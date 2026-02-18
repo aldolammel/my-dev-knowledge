@@ -12,7 +12,7 @@ from datetime import timedelta
 from .models import User, UserProfileOne, Language  # TODO: has multilingual support?
 from core import language as lng
 from core.settings import DATE_INPUT_FORMATS
-from core.constants import (
+from core.consts import (
     VAL_PROFILE_1_BIRTH_MAX,
     VAL_PROFILE_1_BIRTH_MIN,
 )

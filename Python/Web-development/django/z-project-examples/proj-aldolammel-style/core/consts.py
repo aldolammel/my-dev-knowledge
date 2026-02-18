@@ -1,15 +1,15 @@
 """
     CONSTANT MAP:
     
-        Recommended be deployed in config-folder as 'constants.py' file.
+        Recommended be deployed in config-folder as 'consts.py' file.
         
         To call these constants at the same folder:
         
-            from .constants import <constant_name>, ...
+            from .consts import <constant_name>, ...
         
         To call them at other folder:
         
-            from <config-folder-name>.constants import <constant_name>, ...
+            from <config-folder-name>.consts import <constant_name>, ...
             
 """
 

@@ -1,18 +1,16 @@
 
 
-OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
+# OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
 
-    Let's see some of special (or "magic") methods in Python objects/classes:
+#     Let's see some of special (or "magic") methods in Python objects/classes:
 
     
     
-    >> def __init__(self, ...):
+    # >> def __init__(self, ...):
 
-        This method is called the Constructor-Method and is automatically invoked when you create a
-        new instance of a class. Its primary purpose is to initialize the attributes (or properties)
-        of the object.
+        # This method is called the Constructor-Method and is automatically invoked when you create a new instance of a class. Its primary purpose is to initialize the attributes (or properties) of the object.
 
-            E.g.
+            # E.g.
                 class Person:
                     def __init__(self, name, age):
                         """Dunder method called 'constructor' that runs automatically when a class instance is created."""
@@ -32,14 +30,11 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
 
 
 
-    >> def __str__(self):
+    # >> def __str__(self):
 
-        This method is used to define a human-readable string representation of an object. When
-        you call the str() function on an object or use the object in a context where a string
-        is expected (e.g., print()), Python automatically calls the __str__ method to get the
-        string representation of the object.
+        # This method is used to define a human-readable string representation of an object. When you call the str() function on an object or use the object in a context where a string is expected (e.g., print()), Python automatically calls the __str__ method to get the string representation of the object.
 
-            E.g.
+            # E.g.
                 class Person:
                     def __init__(self, name, age):
                         """Dunder method called 'constructor' that runs automatically when a class instance is created."""
@@ -57,14 +52,11 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
 
 
 
-    >> def __call__(self, ...):
+    # >> def __call__(self, ...):
 
-        This method allows an instance of a class to be called as if it were a function. When you
-        define the __call__ method in a class, instances of that class become callable objects. This
-        means you can use the instance followed by parentheses () and optionally pass arguments,
-        just like you would with a function.
+        # This method allows an instance of a class to be called as if it were a function. When you define the __call__ method in a class, instances of that class become callable objects. This means you can use the instance followed by parentheses () and optionally pass arguments, just like you would with a function.
 
-            E.g.
+            # E.g.
                 class Adder:
                     def __init__(self, initial_value=0):
                         """Dunder method called 'constructor' that runs automatically when a class instance is created."""
@@ -82,5 +74,5 @@ OBJECTS AND ITS BUILT-IN/SPECIAL/MAGIC METHODS:
 
 
 
-    >> More about:
-        /25-Classes/3-smart-solutions/1-using-magic-dunder-methods.py
+    # >> More about:
+    #     /25-Classes/3-smart-solutions/1-using-magic-dunder-methods.py

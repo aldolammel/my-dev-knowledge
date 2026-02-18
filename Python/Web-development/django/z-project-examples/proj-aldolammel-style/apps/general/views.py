@@ -1,5 +1,5 @@
 from django.views.generic.base import TemplateView
-from core.constants import (
+from core.consts import (
     NAMEAPP_1,
 )
 from core.language import (

@@ -1,0 +1,22 @@
+
+
+DEBIAN: FINDING INSTALLED APPS
+
+        # Finding all:
+            $ apt list --installed
+        
+        # Finding all with 'adobe' in the name:
+        
+            $ apt list --installed | grep adobe
+
+        # Finding all the initial letters are 'web':
+        
+            $ apt list --installed | grep ^web
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK CURRENT REPO LIST:
+    ./checking-app-is-in-repo-list.txt
