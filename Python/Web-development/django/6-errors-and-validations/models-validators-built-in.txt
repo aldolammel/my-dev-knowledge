@@ -2,10 +2,10 @@
 
 DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
 
-    Django Forms fields support use of utility functions and classes known as validators (built-in and customized ones). A validator is a callable object or function that takes a value and returns nothing if the value is valid or raises a ValidationError if not.
+    Django Forms fields support use of utility functions and classes known as validators (built-in and customized ones). A validator is a callable object or function that -ONLY- takes a value and returns nothing if the value is valid or raises a -ValidationError- if not.
 
     CRUCIAL:
-        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the database level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
+        Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the db-level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
 
 
     >> In /apps/my_app/models.py file, example:
@@ -70,8 +70,8 @@ DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
 
 
 >> CREATE YOUR OWN MODEL VALIDATOR:
-    /Python/Web-development/django/6-validations/models-validators-customized.py
+    /Python/Web-development/django/6-errors-and-validations/models-validators-customized.py
 
 
 >> OTHER VALIDATION LEVELS:
-    /Python/Web-development/django/6-validations/1-validation-basic.txt
+    /Python/Web-development/django/6-errors-and-validations/1-validation-basic.txt

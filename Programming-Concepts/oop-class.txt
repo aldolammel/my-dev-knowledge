@@ -70,7 +70,7 @@ OOP: CLASSES
     >> By language:
 
         >> Classes with Python:
-            /Python/python-knowledge/25-Classes/
+            /Python/python-knowledge/classes/
 
         >> Classes with JavaScript:
             /JavaScript/js-knowledge/classes/

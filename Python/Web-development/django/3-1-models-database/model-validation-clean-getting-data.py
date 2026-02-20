@@ -6,7 +6,7 @@
             /Python/Web-development/django/9-forms/form-validation-clean-getting-data.py
 
         >> Model clean() VS Form clean():
-            /Python/Web-development/django/6-validations/clean-differences-between-model-and-form.txt
+            /Python/Web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
         
         >> I'm sure I wanna use clean() method in models.py:
             KEEP IN THIS FILE!

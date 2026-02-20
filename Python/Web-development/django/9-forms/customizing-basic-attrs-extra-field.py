@@ -53,6 +53,8 @@ class MyModelForm(forms.ModelForm):
         widget=forms.CheckboxInput(attrs={'class': 'is-large', 'id': 'bool_example'}),
         help_text="You'll need to call this here too.",
     )
+    # Dropdown menu more dynamic?
+    # .../django/4-cms-admin/1-customizing/detailview-dropdown-menu-pointing-to-files.py
     dropdown_example = forms.ModelChoiceField(
         queryset=Language.objects.filter(status='on'),
         required=False,

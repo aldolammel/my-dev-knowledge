@@ -46,7 +46,7 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
             6. It impacts in app-level and forms-level;
 
             >> More about:
-                ./clean-differences-between-model-and-form.txt
+                ./2-clean-differences-between-model-and-form.py
 
 
     CROSS-FIELD-LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -67,7 +67,7 @@ DJANGO FORMS VALIDATIONS: FOR APP LEVEL (FINAL USER'S FRONT-END)
                 6. It impacts in app-level and forms-level;
             
             >> More about:
-                ./clean-differences-between-model-and-form.txt
+                ./2-clean-differences-between-model-and-form.py
 
 
     IMPORTANT:

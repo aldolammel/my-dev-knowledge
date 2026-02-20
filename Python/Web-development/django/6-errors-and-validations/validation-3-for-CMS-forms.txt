@@ -97,7 +97,7 @@ DJANGO FORMS VALIDATIONS: FOR CMS LEVEL
             If you bypass forms usage (e.g., calling Product.objects.create() directly), clean() method WON'T run automatically too.
 
         >> Clean() semantic differences between Model and Form classes:
-            ./clean-differences-between-model-and-form.txt
+            ./2-clean-differences-between-model-and-form.py
 
 
 

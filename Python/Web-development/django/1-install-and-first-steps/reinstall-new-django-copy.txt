@@ -100,7 +100,7 @@ RE-INSTALL ONLY THE DJANGO:
 
                 /core/consts.py
                 /core/context_processors.py
-                /core/language.py                 <--- if you're working with translations!
+                /core/lang.py                 <--- if you're working with translations!
                 /core/middlewares.py              <--- if you're working with translations!
                 /core/tests.py
                 /core/urls.py

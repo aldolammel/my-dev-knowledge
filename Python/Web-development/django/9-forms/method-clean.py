@@ -15,7 +15,7 @@
         /Python/Web-development/django/3-1-models-database/method-clean.py
 
     >> Model clean() VS Form clean():
-        /Python/Web-development/django/6-validations/clean-differences-between-model-and-form.txt
+        /Python/Web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
 
 """
 

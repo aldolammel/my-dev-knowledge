@@ -1,0 +1,38 @@
+
+
+DJANGO: HOW TO MANAGE AND RAISE ERRORS
+
+
+    raise ValidationError():
+        ./raise-ValidationError.py
+
+
+    raise ModelClass.DoesNotExist()
+        ./raise-Model-DoesNotExists.py
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    MORE ABOUT NATIVE PYTHON ERRORS:
+        /Python/python-knowledge/errors/_errors-most-common.py
+
+        raise Exception()
+        raise IndexError()
+        raise ValueError()
+        raise TypeError()
+        raise KeyError()
+        raise FileNotFoundError()
+        raise ZeroDivisionError()
+        raise NotImplementedError()
+        raise MemoryError()
+        raise FloatingPointError()
+        raise PermissionError()
+        raise IsADirectoryError()
+        raise NotADirectoryError()
+        raise TimeoutError()
+        raise ImportError()
+        raise ModuleNotFoundError()
+        raise NameError()
+        raise StopIteration()

@@ -20,14 +20,20 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: SLUG FIELD
                 unique=True, 
                 max_length=200, 
                 default='', 
-                blank=True, 
+                editable=False,  # Auto-generated in save().
+                blank=True,  # Once it's auto-generated in save(), it'll pass empty for clean().
                 null=False, 
                 db_index=True,
             )
 
+            def save(self, *args, **kwargs):
+                """Built-in Model method that's executed when the db entry saving runs."""
+                # Runs full validation before saving:
+                self.full_clean()
+                # Defining the slug based on SEO Title:
+                self.slug = slugify(self.title)
+                super().save(*args, **kwargs)
 
-        CRUCIAL:
-            Avoid to use in the slugify(self.title) method, otherwise one the instance is created, the slug attribute would be overriden.
 
         
         In admin.py:
@@ -40,23 +46,3 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: SLUG FIELD
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
-    
-    >> Char Field:
-        /Python/Web-development/django/3-1-models-database/model-attr-field-char.txt
-
-
-
-
-
-    1) In models.py:
-
-        E.g.
-
-            
-
-
-
-    2) 
-

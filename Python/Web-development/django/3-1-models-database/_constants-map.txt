@@ -1,0 +1,10 @@
+
+
+.../django/z-project-examples/proj-aldolammel-style/core/consts.py
+
+
+
+
+NOT CONSTANT BUT:
+    Looking for global variables that consulting db?
+        ./_global-vars-through-app.txt

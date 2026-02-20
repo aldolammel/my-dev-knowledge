@@ -15,7 +15,7 @@
         - Generic editing views.
 
     >> Its usage in Views:
-        /Python/Web-development/django/3-2-views-and-API/method-get_form.py
+        .../django/3-2-views-and-API/method-get_form.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -37,7 +37,7 @@ class PagexPostAdmin(admin.ModelAdmin):
         """Built-in method to customize the form that's displayed in the interface."""
         form = super().get_form(request, obj, change, **kwargs)
         ...
-        # Customizing the drop-down-menu "blog" foreignkey field:
+        # Customizing the dropdown-menu "blog" foreignkey field:
         if "blog" in form.base_fields:
             # Removing default add/remove buttons, applying the simple ModelChoiceField:
             form.base_fields["blog"] = f.ModelChoiceField(

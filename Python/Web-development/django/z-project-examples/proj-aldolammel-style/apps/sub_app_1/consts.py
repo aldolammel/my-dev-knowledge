@@ -1,4 +1,4 @@
-# To avoid circular-import with language.py, translatable constants must stay here!
+# To avoid circular-import with lang.py, translatable constants must stay here!
 # from django.utils.translation import gettext_lazy as _
 
 # PATHS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

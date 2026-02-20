@@ -2,8 +2,10 @@
 
     FORMS: DYNAMIC DROPDOWN
 
-    # FILE: /apps/my_app/forms.py
+    FILE: /apps/my_app/forms.py
 
+    How to load filenames as choices:
+        .../django/4-cms-admin/1-customizing/detailview-dropdown-menu-pointing-to-files.py
     
 """
 

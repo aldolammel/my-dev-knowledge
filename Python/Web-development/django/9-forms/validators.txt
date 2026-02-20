@@ -2,4 +2,4 @@
 
     VALIDATORS:
 
-        .../django/6-validations/models-validators-built-in.txt
+        .../django/6-errors-and-validations/models-validators-built-in.txt

@@ -33,7 +33,7 @@ SINGLETON
     >> Singleton Examples: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> In Python:
-            /Python/python-knowledge/25-Classes/singletone.py
+            /Python/python-knowledge/classes/singleton.py
 
         >> In JavaScript:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

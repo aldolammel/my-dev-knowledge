@@ -13,7 +13,7 @@
             
 """
 
-# To avoid circular-import with language.py or settings.py, for example, translatable constants and
+# To avoid circular-import with lang.py or settings.py, for example, translatable constants and
 # any other constants defined in other places must be defined here manually as well!
 # from django.utils.translation import gettext_lazy as _
 # from .settings import PROD_BASE_URL

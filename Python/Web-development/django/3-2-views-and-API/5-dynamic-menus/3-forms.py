@@ -27,7 +27,7 @@ class PagexMenuLinkForm(forms.ModelForm):
     # Reserved space...
 
     def __init__(self, *args, **kwargs):
-        """Built-in method that's called 'Constructor', designed to initialize the instance."""
+        """Dunder method called 'constructor' that runs automatically when a class instance is created."""
         super().__init__(*args, **kwargs)
         # Populate the choices with pages and categories:
         page_choices = [

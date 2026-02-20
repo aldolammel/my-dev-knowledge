@@ -12,6 +12,12 @@
 
 """
 
+# Simplest example:
+name = 123
+if not isinstance(name, str):
+    raise TypeError("Name must be a string")
+
+
 # Check if "Hello" is one of the types described in the type parameter:
 x = isinstance("Hello", (float, int, str, list, dict, tuple)) 
 
@@ -22,13 +28,8 @@ y = myObj()
 x = isinstance(y, myObj) 
 
 
+""" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-"""
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-Related:
-    issubclass()
-
+    Related:
+        issubclass()
 """

@@ -6,7 +6,7 @@ E.g. of /core-folder/ extra content:
 
     - consts.py
     - context_processors.py
-    - language.py
+    - lang.py
 
 
 ABCOO:

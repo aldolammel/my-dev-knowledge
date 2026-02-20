@@ -10,11 +10,11 @@
 """
 
 # E.g. in /config-folder/consts.py:
-# More about: /Python/Web-development/django/3-1-models-database/_constants-map.py
+# More about: /Python/Web-development/django/3-1-models-database/_constants-map.txt
 VAL_PROFILE_NAME_MAXLNGH = 20
 
 
-# E.g. in /config-folder/language.py:
+# E.g. in /config-folder/lang.py:
 # More about: /Python/Web-development/django/8-translate-and-internationalization/language-file-example.py
 LB_PROFILE_NAME = _('Profile Name')
 TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.')
@@ -41,7 +41,7 @@ class Profile(models.ModelForm):
 """
     WARNING:
     
-    Unfortunately, you cannot make all translations directly on the 'language.py' file.
+    Unfortunately, you cannot make all translations directly on the 'lang.py' file.
     If you use at same time a translatable variable that will feed another translatable variable
     (dynamic composition), Parler badly tries to translate everything at the same time, bringing
     weird behaviors, some times translating to a wrong language, even making the 'makemigrations'

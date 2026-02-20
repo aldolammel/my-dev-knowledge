@@ -5,4 +5,4 @@ Look this amazing solution in Django Template that can be easily adapt to Vue te
 
 
 And this:
-    /Python/Web-development/django/6-validations/error-identification-codes.txt
+    /Python/Web-development/django/6-errors-and-validations/error-identification-codes.txt

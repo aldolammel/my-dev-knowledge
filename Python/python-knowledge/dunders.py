@@ -75,4 +75,4 @@
 
 
     # >> More about:
-    #     /25-Classes/3-smart-solutions/1-using-magic-dunder-methods.py
+    #     /classes/1-using-magic-dunder-methods.py

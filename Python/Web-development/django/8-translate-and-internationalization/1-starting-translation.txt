@@ -119,7 +119,7 @@
                     >> Obs.: maybe for advanced language settings, you'll need to use it as True!
                     
 
-            1.6) (Optional) Create the 'language.py' file in your config-folder:
+            1.6) (Optional) Create the 'lang.py' file in your config-folder:
 
                 /Python/Web-development/django/8-translate-and-internationalization/language-file-example.py
                 /Python/Web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
