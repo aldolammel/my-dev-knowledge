@@ -1,0 +1,15 @@
+
+
+PROGRAMMING CONCEPTS: LARGE LANGUAGE MODEL (LLM)
+
+    It's the engine that processes language and generates text. An AI agent needs LLM to work, as well as the LLM is like an engine car where it provides power but cannot drive itself.
+
+    That said, LLM is a type of neural network trained on massive amounts of text to understand, generate, and manipulate language that need an AI agent to be used.
+
+
+
+
+- - - - 
+
+    LLM:
+        /LLMs/

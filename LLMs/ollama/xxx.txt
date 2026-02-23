@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+    >> Installing:
+        
+        1) Download it:
+            $ curl -fsSL https://ollama.com/install.sh | sh
+
+        2) As Nvidia drivers are not developed to Linux, install CUDA driver manually:
+            /https://docs.nvidia.com/cuda/cuda-installation-guide-linux/
+
+        3) 
+

@@ -1,0 +1,38 @@
+
+
+PROGRAMMING CONCEPTS: PULL-REQUEST
+
+    PR is a way to propose chancges to a codebase and request that someone review and "pull" those changes into the project. It's a fundamental part of collaborative development, especially when using version control systems like Git.
+
+
+    Questions a good pull-request must to consider:
+
+        1. WHY | Why is this change necessary?
+            - They link to the Issue/Ticket.
+            - They summarize the goal.
+
+        2. HOW | How did you approach the solution?
+            - A roadmap of the solution.
+            - Justify non-obvious choices.
+
+        3. RISK | What does this touch and what should we worry about?
+            - Potential side effects.
+            - Highlight tricy areas/features.
+
+        4. PROOF | How do you know it works and won't break things?
+            - Show test results.
+            - Provide manual testing evidence.
+            - Ensure automated checks are green.
+
+        5. DONE | Is this truly done?
+            - Did I updated the documentation?
+            - Did I self-review and remove debug code/comments?
+            - Did I leave helful comments for the next person?
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+GIT:
+    /Versioning/
