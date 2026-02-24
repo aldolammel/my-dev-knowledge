@@ -2,14 +2,16 @@
 
 INTERNET TOOL: MOZILLA FIREFOX
 
+    IT'S THE OFFICIAL UBUNTU'S CHOSEN BROWSER!
 
-    1) Adding .deb version as repository:
+
+    1) Adding .deb version as repository (NOT NEEDED IF ALREADY ONBOARD OF THE OS):
         $ sudo add-apt-repository ppa:mozillateam/ppa
 
     2) Update the system;
 
     3) Install it:
-        $ sudo apt install firefox
+        $ sudo apt install -y firefox
 
     
 

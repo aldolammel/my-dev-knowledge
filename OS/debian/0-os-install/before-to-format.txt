@@ -2,9 +2,9 @@
 
 OS: BEFORE TO FORMAT THE CURRENT OS
 
-    x) xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    1) Backup all non-clouded-files.
 
-    x) xxxxxxxxxxxxxx
+    x) Download the distro .iso file.
 
     x) xxxxxxxxxxxxxx
 

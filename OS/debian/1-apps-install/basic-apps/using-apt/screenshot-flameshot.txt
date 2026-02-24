@@ -7,7 +7,7 @@ OFFICE TOOL: FLAMESHOT
     >> Install:
         
         >> By terminal (may not the latest version):
-            $ sudo apt install flameshot
+            $ sudo apt install -y flameshot
         
         >> Or by .deb file (latest version):
             https://github.com/flameshot-org/flameshot

@@ -3,8 +3,13 @@
 CODING TOOL: VS CODE 
 
 
-    PRE) Assuming you already prepared the system:
+    PRE.1) Assuming you already prepared the system:
         .../1-apps-install/0-preparing-the-system.txt
+
+    PRE.2) You must be logged in GitHub.com!
+
+    PRE.3) Git must be installed AND integrated:
+        ./git.txt
 
 
     1) Import Microsoft's GPG key:
@@ -18,7 +23,8 @@ CODING TOOL: VS CODE
 
         $ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 
+
     3) Install VS Code:
 
         $ sudo apt update
-        $ sudo apt install code -y
+        $ sudo apt install -y code

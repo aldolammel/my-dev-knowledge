@@ -1,21 +1,30 @@
 
 
     
-
-    1) Prevent Snap from being preferred in the future (APT pinning safeguard):
-
-        $ echo -e "Package: *\nPin: release o=Ubuntu\nPin-Priority: 700" | sudo tee /etc/apt/preferences.d/ubuntu.pref
-
-        $ echo -e "Package: snapd\nPin: release *\nPin-Priority: -10" | sudo tee /etc/apt/preferences.d/nosnap.pref
-
-            TO BE CLEAR:
-                Don't worry, your current snap apps still working and updating normally!
-
-    
-    2) Install dependencies (this ensures your system is ready to add new repositories):
+  
+    1) Install dependencies (this ensures your system is ready to add new repositories):
         
         $ sudo apt update && sudo apt upgrade -y
         $ sudo apt install software-properties-common apt-transport-https wget gpg -y
+
+
+    2) Install flatpak store:
+        $ sudo apt install -y flatpak
+
+    3) Research which is the current and best Nvidia driver for your VGA card:
+
+        3.1) Basic: e.g. in Feb/2026 with a RTX3070
+            
+            $ sudo apt install -y nvidia-driver-590-open
+
+            >> AI prompt:
+                "In Ubuntu <version>, I am using a Nvidia GeForce RTX3070 with 3 monitors. How do I check the best current driver for it through the terminal? Also, should I use with kind of Ubuntu session? Xorg or Wayland? Or something else?"
+
+        3.2) Expanding VGA usage with AI (Install CUDA):
+
+            https://developer.nvidia.com/cuda/toolkit
+            
+            # Ubuntu official repos already provide future CUDA updates when it's installed.
 
 
 

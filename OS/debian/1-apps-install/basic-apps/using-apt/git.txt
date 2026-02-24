@@ -10,12 +10,15 @@ SYSTEM TOOL: GIT
 
         1) Installation:
             $ sudo apt update
-            $ sudo apt install git-all
+            $ sudo apt install -y git-all
 
         2) Integrations / Authentication:
 
             2.1) On GitHub.com, log in and go to copy your token:
                 Settings > Developer settings > Tokens (classic) > New token.
+
+                - No expiration
+                - Name: lammel-<machine>-<os>
 
             2.2) Caching your credentials, installing Git Credential Manager Core:
                 $ wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.5.0/gcm-linux_amd64.2.5.0.deb" -O /tmp/gcmcore.deb
@@ -23,4 +26,4 @@ SYSTEM TOOL: GIT
                 $ git-credential-manager configure
                 $ git config --global credential.credentialStore plaintext
 
-                Now, when you clone a git repo, a window asks you what to do!
+                Now, when you clone a git repo, a Ubuntu pop-up window asks you what to do!

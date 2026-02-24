@@ -29,6 +29,8 @@ OS > DEBIAN: RIGHT AFTER INSTALLATION
 
     And then:
 
+        >> Keep using "Ubuntu (Xorg) session" in login-screen. "Wayland" keeps too buggy in current LTS (2026/feb).
+        
         >> Config Display;
         
         >> Config Sounds;

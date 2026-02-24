@@ -2,9 +2,10 @@
 
 OS > DEBIAN: FORMATTING
 
-    x) xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    PRE) Assuming you already have done this:
+        ./before-to-format.txt
 
-    x) xxxxxxxxxxxxxx
+    x) <THE STEP-BY-STEP IS IN THE BACKUP HD.... BRING TO HERE!>
 
     x) xxxxxxxxxxxxxx
 
