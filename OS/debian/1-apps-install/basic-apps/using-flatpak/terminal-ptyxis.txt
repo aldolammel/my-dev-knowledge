@@ -1,0 +1,40 @@
+
+
+SYSTEM TOOL: PTYXIS TERMINAL (FROM NEW UBUNTU 2026)
+
+    
+    In case you are not using the latest Ubuntu 25+.
+
+    
+    PRE) Assuming you already installed Flatpak support:
+        .../1-apps-install/0-preparing-the-system.txt
+    
+    
+    1) Install Ptyxis:
+        $ flatpak install flathub app.devsuite.Ptyxis
+
+
+    2) Customize it:
+
+        2.1) Install a compatible font and set it as the font to be used in Terminal:
+            "Fira Code"
+
+                Using: Fire Code Regular 11
+
+        2.2) Palette = "Afterglow".
+
+        2.3) Other customs:
+            - Line Spacing = 1,1
+            - Blinking Text = Focused
+            - Cursor Shape = Underline 
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+XXXXXXXXXXXXXXXXX:
+    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

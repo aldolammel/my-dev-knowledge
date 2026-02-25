@@ -14,24 +14,9 @@ OS > DEBIAN: UBUNTU INSTALLATION ROADMAP
     2) Right after to install:
         ./right-after-install.txt
 
-    
-    3) Making Ubuntu mount shared SSDs automatically:
-        .../debian/mounting-shared-drives-automatically.txt
 
-    
-    4) Check if IPv6 is working properly:
-        Some website hosts don't work through IPv4 preferentially, making a few websites get stuck in loading!
-        
-        https://askubuntu.com/a/1554260/1731699 
-
-
-    5) Basic apps:
-        
-        5.1) Preparing:
-            ../debian/1-apps-install/0-preparing-the-system.txt
-
-        5.2) Installing:
-            ../debian/1-apps-install/1-installing-apps.txt
+    3) Basic apps:
+        ../debian/1-apps-install/1-installing-apps.txt
 
 
 

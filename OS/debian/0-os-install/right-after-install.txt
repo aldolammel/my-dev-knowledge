@@ -11,27 +11,49 @@ OS > DEBIAN: RIGHT AFTER INSTALLATION
     2) Check if all basic motherboard settings is ok for your system:
 
         /BIOS/basic-modo-settings.txt
-    
+            
 
-    3) (if applicable)
+    3) Keep using "Ubuntu (Xorg) session" in login-screen. "Wayland" keeps too buggy in current LTS (2026/feb).
+        
+    
+    4) First Ubuntu system log-in:
+    
+        4.1) Preparing the system:
+            .../debian/1-apps-install/0-preparing-the-system.txt
+
+        4.2) Display and sound configs;
+
+        4.3) Install your default browser:
+            .../debian/1-apps-install/basic-apps/using-apt/browser-firefox.txt
+
+        4.4) (If applicable, for Ubuntu <25)
+            Install the new Ubuntu Terminal:
+                .../debian/1-apps-install/basic-apps/using-flatpak/terminal-ptyxis.txt
+
+        4.5) (DEPRECATED ONCE I'M USING THE NEW UBUNTU 25+ TERMINAL)
+            Customize the Terminal:
+                .../debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.txt
+
+
+    5) Making Ubuntu mount shared SSDs automatically:
+        .../debian/mounting-shared-drives-automatically.txt
+
+    
+    6) Check if IPv6 is working properly:
+        Some website hosts don't work through IPv4 preferentially, making a few websites get stuck in loading!
+        
+            https://askubuntu.com/a/1554260/1731699 
+
+
+    7) (if applicable)
         In case you are using Dual-boot with Windows, set Windows to use UTC time, equal to Ubuntu, for compatibility with Dual-boot;
         
         >>  Linux works better with UTC instead of Local Time.
             
             /OS/windows/0-os-install/dual-boot-with-linux.txt
-            
 
 
-
-    And then:
-
-        >> Keep using "Ubuntu (Xorg) session" in login-screen. "Wayland" keeps too buggy in current LTS (2026/feb).
         
-        >> Config Display;
-        
-        >> Config Sounds;
-        
-
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

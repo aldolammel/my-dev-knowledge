@@ -1,5 +1,7 @@
 
 
+(DEPRECATED ONCE I'M USING THE NEW UBUNTU 25+ TERMINAL)
+
 SYSTEM TOOL: OH MY BASH (A TERMINAL CLI)
 
     "Oh My Bash" is an open source, community-driven framework for managing your bash configuration. You'll take advantage of the hundreds of powerful plugins and beautiful themes.

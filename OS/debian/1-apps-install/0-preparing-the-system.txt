@@ -8,8 +8,12 @@
         $ sudo apt install software-properties-common apt-transport-https wget gpg -y
 
 
-    2) Install flatpak store:
+    2) Install flatpak support (alternative to Snap and .deb):
+        
         $ sudo apt install -y flatpak
+        
+        # Add Flathub repository:
+        $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
     3) Research which is the current and best Nvidia driver for your VGA card:
 
