@@ -1,18 +1,28 @@
 
 
-OS: BEFORE TO FORMAT THE CURRENT OS
+OS > DEBIAN: BEFORE TO FORMAT THE CURRENT DISTRO 
 
     1) Backup all non-clouded-files.
 
-    x) Download the distro .iso file.
+    2) Download distro .iso file.
+        E.g
+            https://releases.ubuntu.com/
 
-    x) xxxxxxxxxxxxxx
+    x) With the distro .iso available locally, mount it in a USB drive (>=8GB):
 
-    x) xxxxxxxxxxxxxx
+        CRUCIAL:
+            Don't use an external HD, except if you can use it entirely, without to use multiple partitions.
 
-    x) xxxxxxxxxxxxxx
+        x.1) Format the device where you will set the .iso (format to Ext4 format);
 
-    x) xxxxxxxxxxxxxx
+        x.2) Check if your Ubuntu already brings the "Startup Disk Creator" and open it. If not, install it:
+
+            .../debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator.txt
+
+        x.3) Select the .iso file and what storage device the creator should mount the selected file.
+
+    x) Let's format the system:
+        ./distro-formatting.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
