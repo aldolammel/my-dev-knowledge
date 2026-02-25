@@ -1,0 +1,18 @@
+
+
+BIOS: BASIC CONFIG FOR MOTHERBOARD
+
+    E.g. using a Gigabyte B450 AORUS M with bios version F67 (feb/2026):
+
+        PRE) Assuming you don't need 'Secure Boot' any more!
+            ./secure-boot.txt
+
+        x) Primordial > Acertar a frequência da memória RAM (X.M.P = Profile1 = 3200 CAS/Latência em 16).
+            
+        x) Primordial > Bios deve estar configurada para UEFI
+            
+        x) Bios deve estar configurada com Virtualization Mode ON (M.I.T. > Advanced Frequency Settings > Advanced CPU Settings > SVM Mode = enabled)
+            
+        x) Primordial > Peripherals > Ligar o "Above 4G decoding":
+                
+        x) As subtarefas disso é focada apenas para Windows 11 (gaming);

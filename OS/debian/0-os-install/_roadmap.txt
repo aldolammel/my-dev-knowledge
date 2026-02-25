@@ -3,46 +3,36 @@
 OS > DEBIAN: UBUNTU INSTALLATION ROADMAP
 
 
-    PRE.1) Before to format:
+    PRE) Before to format:
         ./before-to-format.txt
     
-    PRE.2) To format your current Ubuntu:
+
+    1) To format your current Ubuntu:
         ./distro-formatting.txt
 
 
-    1) Download the latest Ubuntu LTS:
-        https://ubuntu.com/download/desktop
-
-
-    2) Install it! 
-
-
-    3) Right after to install:
+    2) Right after to install:
         ./right-after-install.txt
 
     
-    X) Making Ubuntu mount shared SSDs automatically:
+    3) Making Ubuntu mount shared SSDs automatically:
         .../debian/mounting-shared-drives-automatically.txt
 
     
-    X) Check if IPv6 is working properly:
+    4) Check if IPv6 is working properly:
         Some website hosts don't work through IPv4 preferentially, making a few websites get stuck in loading!
         
         https://askubuntu.com/a/1554260/1731699 
 
 
-    X) Basic apps:
+    5) Basic apps:
         
-        X.1) Preparing:
+        5.1) Preparing:
             ../debian/1-apps-install/0-preparing-the-system.txt
 
-        X.2) Installing:
+        5.2) Installing:
             ../debian/1-apps-install/1-installing-apps.txt
 
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-XXXXXXXXXX
-    /xxxxxxxxxxxxxxxxxxxxxxxxxxxx

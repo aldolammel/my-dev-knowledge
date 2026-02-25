@@ -1,0 +1,20 @@
+
+
+OS > WINDOWS: FORMATTING
+
+    PRE) Assuming you already have done basic to format:
+        ./before-to-format.txt
+
+    
+    1) Reboot the machine and get in your BIOS;
+        
+    2) Override the boot order to use the bootable device in boot. Then reboot again.
+
+    3) Just follow the installation wizard!
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+THE ENTIRE INSTALLATION ROADMAP:
+    ./_roadmap.txt

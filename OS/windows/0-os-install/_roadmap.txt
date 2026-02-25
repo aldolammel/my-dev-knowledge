@@ -1,0 +1,19 @@
+
+
+OS > WINDOWS: INSTALLATION ROADMAP
+
+
+    PRE) Before to format:
+        ./before-to-format.txt
+    
+    
+    1) To format your current Windows:
+        ./windows-formatting.txt
+
+
+    2) Right after to install:
+        ./right-after-install.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

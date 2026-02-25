@@ -1,0 +1,33 @@
+
+
+OS > WINDOWS: BEFORE TO FORMAT THE CURRENT OS 
+
+
+    1) Backup all non-clouded-files.
+
+
+    2) Download Windows .iso file.
+        https://www.microsoft.com/en-us/software-download/windows11
+
+
+    3) Create a media installation for Windows, using a USB drive (>=16GB):
+
+        CRUCIAL:
+            Don't use an external HD, except if you can use it entirely, without to use multiple partitions.
+
+        3.1) Search for "Create installation media for Windows <version>";
+
+        3.2) Follow that steps!
+
+
+    4) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
+
+        /BIOS/secure-boot.txt
+
+
+    5) Let's format the system:
+
+        ./windows-formatting.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

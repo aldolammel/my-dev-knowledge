@@ -1,0 +1,6 @@
+
+
+
+x) Turn the "Secure Boot" off:
+
+    /BIOS/secure-boot.txt

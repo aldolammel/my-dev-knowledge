@@ -6,17 +6,24 @@ OS > DEBIAN: FORMATTING
         ./before-to-format.txt
 
     
+    x) Reboot the machine and get in your BIOS;
+        
+    x) Override the boot order to use the bootable device in boot. Then reboot again.
 
-    x) xxxxxxxxxxxxxx
+    x) When the Ubuntu options is shown, select "Install". 
 
-    x) xxxxxxxxxxxxxx
+        IF TERMINAL IS NEEDED:
+            In any moment of this install wizard, do Ctrl + Alt + F2.
 
-    x) xxxxxxxxxxxxxx
+    x) Case you select the manual installation:
+        
+        - The "Boot loader" is a super small partition automatically created during the partition table creation (last time you installed the system). In this small partition is where the "dual-boot menu", for example, is located!
 
-    x) xxxxxxxxxxxxxx
+        - After select the partition to install Ubuntu, make sure you are using Ext4 format and the root folder is "/" only.
+
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-TO INSTALL:
+THE ENTIRE INSTALLATION ROADMAP:
     ./_roadmap.txt

@@ -21,6 +21,11 @@ OS > DEBIAN: BEFORE TO FORMAT THE CURRENT DISTRO
 
         x.3) Select the .iso file and what storage device the creator should mount the selected file.
 
+    x) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
+
+        /BIOS/secure-boot.txt
+
+
     x) Let's format the system:
         ./distro-formatting.txt
 
