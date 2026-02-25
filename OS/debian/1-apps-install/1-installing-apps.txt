@@ -1,6 +1,6 @@
 
 
-DEBIAN: INSTALLING APPS
+OS > DEBIAN: UBUNTU, INSTALLING APPS
     
     
     PRE.1) Prepare the system:
@@ -8,6 +8,9 @@ DEBIAN: INSTALLING APPS
 
     PRE.2) Install the basic apps:
         ./basic-apps/
+
+            >> @aldolammel Ubuntu's default browser = Firefox (non-snap)
+                ./basic-apps/using-apt/browser-firefox.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

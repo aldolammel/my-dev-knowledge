@@ -1,0 +1,15 @@
+
+
+OS > WINDOWS: INSTALLING APPS
+    
+    
+    PRE) Install the basic apps:
+        ./basic-apps/
+
+            >> @aldolammel Windows's default browser = Google Chrome
+                ./basic-apps/browser-chrome.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
