@@ -12,6 +12,10 @@ OS > WINDOWS: FORMATTING
 
     3) Just follow the installation wizard!
 
+        ABOUT KEY:
+            Don't worry about the key. Your Windows key is associated with your Microsoft account and after the installation, Windows will notice about that. So go forward using "I don't have a key" option!
+
+
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
