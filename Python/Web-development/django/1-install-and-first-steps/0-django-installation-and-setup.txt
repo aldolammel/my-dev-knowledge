@@ -2,9 +2,23 @@
 
 DJANGO: INSTALLING AND SETUP
 
-    ATTENTION:
-        If you are RE-installing Django, skip all of this, and following only this one:
-            ./reinstall-new-django-copy.txt
+
+    >> Which of them is your case:
+
+        A) This machine already has Django projects running, and I'm just re-installing Django for an existing app:
+            
+            >> Skip this file, jumping to this one:
+                ./reinstall-new-django-copy.txt
+
+
+        B) This machine already has Django projects running, but I got a brand new Django project:
+
+            >> Skip this file, xxxxxxxxxxxxxxxxxxxxxx
+
+
+        C) This machine is new (for example, after the OS installation) and I need to prepare it to run Django projects:
+
+            >> Still in this roadmap file!
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -37,39 +51,89 @@ DJANGO: INSTALLING AND SETUP
 
 
     
-    1) Installing Django through the right Package Manager:
+    1) (If applicable)
+        Case you already used UV for sync the existing project, skip it!
 
-        1A) Installing Django, using UV (recommended, more professional):
-            ./1-with-uv-manager.txt
+        Installing Django through the right Package Manager:
 
-        1B) Or installing Django, using PIP (Django built-in solution).
-            ./1-with-pip-manager.txt
+            1A) Installing Django, using UV (recommended, more professional):
+                ./1-with-uv-manager.txt
+
+            1B) Or installing Django, using PIP (Django built-in solution).
+                ./1-with-pip-manager.txt
 
     
     
-    2) After Django installation, create the Django Project Structure:
+    2) (If applicable) 
+        Case you already used UV for sync the existing project, skip it!
         
-        # Go to the project root folder and ask the package manager to create the 'core' folder:
-            # Using UV:
-                $ uv run django-admin startproject core .   <-- This dot's important!
-            # Using PIP:
-                $ django-admin startproject core .          <-- This dot's important!
+        After Django installation, create the Django Project Structure:   
+        
+            >> Go to the project root folder and ask the package manager to create the 'core' folder:
+                # Using UV:
+                    $ uv run django-admin startproject core .         <-- This dot's important!
+                # Using PIP:
+                    $ django-admin startproject core .                <-- This dot's important!
                 
 
-    3) Now, in the project root folder, you must see some files, like 'manage.py', including the folder 'core' with its content. If so, you create the django project correctly! That said, keep going:
+    3) (If applicable)
+        Case your existing project already has its back-end .env file, skip it! Otherwise:
+
+        >> Locally, create your existing project .env file for the back-end:
+            /Environment-Variables/env-for-local/in-backend/
+
+        >> Make sure you already included all env variables needed for your app, for example, those for email:
+            .../django/13-email/config-settings.txt
+
+
+
+    4) This current project already has a local DB?
+    
+        4A) Yes;
+        4B) No;
         
-        3.1) Test Django files:
+        - - - - 
+        
+        4A) Yes - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            >> If the existing db is not empty/clean, skip it so! Otherwise, use the Django migrate command once the .env is correctly configured:
+                .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
+
+
+        4B) No - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            4B.PRE) Check which db your project is using and if the db technology is installed in your machine!
+
+            4B.1) Create the db based on that name in the project .env file;
+
+            4B.2) Use the Django migrate command once the .env is correctly configured!
+                .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
+
+
+
+    5) Now, in the project root folder, you must see some files, like 'manage.py', including the folder 'core' with its content. If so, you create the django project correctly! That said, keep going:
+        
+        PRE) Assuming you already are in the project environment!
+        
+        5.1) Test Django files:
             $ python manage.py check
             or
             $ uv run manage.py check
 
 
-        3.2) Ask Django to create its database (further we'll see how to change db systems):
-            $ python manage.py migrate
-            or
-            $ uv run manage.py migrate
+        5.2) Ask Django to create its db (further we'll see how to change db systems):
+            
+            # If no migrations files in sub-apps folders:
+                $ python manage.py makemigrations
+                or
+                $ uv run manage.py makemigrations
 
-        3.3) Run Django to check if it's accessable by your local browsers:
+            # Build the local database:
+                $ python manage.py migrate
+                or
+                $ uv run manage.py migrate
+
+        5.3) Run Django to check if it's accessible by your local browsers:
             # Starting Django server:
                 $ python manage.py runserver
                 or
@@ -87,9 +151,9 @@ DJANGO: INSTALLING AND SETUP
 
 
 
-    4) Through the Django config-folder (e.g. "core"), open the settings.py file:
+    6) Through the Django config-folder (e.g. "core"), open the settings.py file:
     
-        4.1) (Skip it if you'll use an existent settings.py model later)
+        6.1) (Skip it if you'll use an existent settings.py model later)
             Organize the settings.py header:
 
             # App Essential Settings:
@@ -99,23 +163,23 @@ DJANGO: INSTALLING AND SETUP
             ALLOWED_HOSTS = ...
 
 
-        4.2) Prepare a Global Context with the Essential info about the app:
+        6.2) Prepare a Global Context with the Essential info about the app:
                 /Python/Web-development/django/3-2-views-and-API/1-building-views-context/global-context.txt
         
 
-        4.3) Still in settings.py file, if you WON'T use the SQLite as database:
+        6.3) Still in settings.py file, if you WON'T use the SQLite as database:
 
                 >> If you'll use an settings.py model later, save this SECRET KEY to use in the
                     new settings.py later!
 
 
-        4.4) Define your database:
-            /Python/Web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
+        6.4) Define your database:
+            .../django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
 
 
-    5) Defining the back-end environment-variables, and configure Django to read it:
+    7) Defining the back-end environment-variables, and configure Django to read it:
         
-        5.1) Create the .env file in the Django project-folder (don't mistake with the core-folder):
+        7.1) Create the .env file in the Django project-folder (don't mistake with the core-folder):
         
             >> A) Environment-variables are managed locally;
                     /Environment-Variables/env-for-local/in-backend/.env
@@ -123,33 +187,33 @@ DJANGO: INSTALLING AND SETUP
             >> B) Or environment-variables are managed by a cloud service;
                     /Environment-Variables/env-for-cloud/in-backend/.env
 
-        5.2) Configure Django to read properly those basic env vars:
+        7.2) Configure Django to read properly those basic env vars:
             
-            /Python/Web-development/django/3-1-models-database/environment-variables-on-django.txt
+            .../django/3-1-models-database/environment-variables-on-django.txt
 
 
-    6) Linters and formatters:
+    8) Linters and formatters:
 
         PRE) Python linter/formatter/type-checker:
             /Python/IDE-softwares/vscode/basic-for-python.txt
         
-        6.1) Django linter/formatter:
+        8.1) Django linter/formatter:
 
             >> Using Djlint (recommended):
-                /Python/Web-development/django/Linter-Formatter-Typechecker/djlint.txt
+                .../django/Linter-Formatter-Typechecker/djlint.txt
 
             >> Other options:
-                /Python/Web-development/django/Linter-Formatter-Typechecker/_formatter/django-options.txt
-                /Python/Web-development/django/Linter-Formatter-Typechecker/_linter/django-options.txt
+                .../django/Linter-Formatter-Typechecker/_formatter/django-options.txt
+                .../django/Linter-Formatter-Typechecker/_linter/django-options.txt
 
-        6.2) Django type-checker:
+        8.2) Django type-checker:
 
             >> Options:
-                /Python/Web-development/django/Linter-Formatter-Typechecker/_type-checker/django-options.txt
+                .../django/Linter-Formatter-Typechecker/_type-checker/django-options.txt
     
     
 
-    7) Create basic sub-apps in the project's app:
+    9) Create basic sub-apps in the project's app:
 
         TO APPLY IN THIS POINT) Reorganize it! Because what main 'sub-app' to use for pages, and posts management?
 
@@ -160,7 +224,7 @@ DJANGO: INSTALLING AND SETUP
                 .../django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt
 
 
-        7.1) (Skip it if you'll use an existent settings.py model later) 
+        9.1) (Skip it if you'll use an existent settings.py model later) 
             Show to Django where will be each template folder in your sub-apps, going to the
             core-folder 'settings.py' file and editing this line in 'template' list:
                 
@@ -170,7 +234,7 @@ DJANGO: INSTALLING AND SETUP
                     'DIRS': [BASE_DIR / 'templates'],
 
 
-        7.2) If you want to use a settings.py model file, now is the time!
+        9.2) If you want to use a settings.py model file, now is the time!
             .../django/z-project-examples/proj-aldolammel-style/core/settings.py
             
             >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
@@ -179,7 +243,7 @@ DJANGO: INSTALLING AND SETUP
             >> Keep commented the Installed sub-apps for now!
 
 
-        7.3) Adding sub-apps:
+        9.3) Adding sub-apps:
 
             
             >> How to create a sub-app:
@@ -205,23 +269,23 @@ DJANGO: INSTALLING AND SETUP
                     .../django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
 
                 >> If so:
-                    /Python/Web-development/django/3-1-models-database/3-users/2-extending-users.txt
+                    .../django/3-1-models-database/3-users/2-extending-users.txt
 
 
                     >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)
                     'in' sub-app:
-                    About: /Python/Web-development/django/z-project-examples/proj-aldolammel-style/in/_readme.txt
+                    About: .../django/z-project-examples/proj-aldolammel-style/in/_readme.txt
                     
                     i.1) Bring the basic sub-app files and templates-folder too:
                         
-                        /Python/Web-development/django/z-project-examples/proj-aldolammel-style/in/
+                        .../django/z-project-examples/proj-aldolammel-style/in/
 
                     i.2) Include it in the INSTALLED_APPS in the settings.py file!
                     i.3) Makemigrations and migrate!
                     i.4) Test it!
 
 
-    8) Creating the admin user:
+    10) Creating the admin user:
         
         $ python manage.py createsuperuser
         or
@@ -237,48 +301,49 @@ DJANGO: INSTALLING AND SETUP
 
 
 
-    9) (Skip it if you'll use an existent settings.py model later)
+    11) (Skip it if you'll use an existent settings.py model later)
         Will this project have more than one language?
 
             If not, add in your settings.py:
                 USE_I18N = False
                 
             Otherwise:
-                /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt
+                .../django/8-translate-and-internationalization/1-starting-translation.txt
 
 
-    10) Optionals:
+    12) Optionals:
 
-        10.1) Will you use file upload?
-            /Python/Web-development/django/5-uploads/
+        12.1) Will you use file upload?
+           .../django/5-uploads/
 
-        10.2) Will you use image upload?
-            /Python/Web-development/django/5-uploads/images/
+        12.2) Will you use image upload?
+            .../django/5-uploads/images/
 
 
-    11) Install the front-end solution:
+    13) Install the front-end solution:
     
-        11A) Django template solution;
-        11B) Or Vue;
-        11C) Or React;
-        11D) Or Angular;
+        13A) Django template solution;
+        13B) Or Vue;
+        13C) Or React;
+        13D) Or Angular;
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        11A) Django template solution:
-            /Python/Web-development/django/0-new-project/web-project-django-only.txt
+        13A) Django template solution:
+            .../django/0-new-project/web-project-django-only.txt
 
 
-        11B) Vue:
-            /Python/Web-development/django/0-new-project/web-project-django-with-vue.txt
+        13B) Vue:
+            .../django/0-new-project/web-project-django-with-vue.txt
 
 
-        11C) React:
-            /Python/Web-development/django/0-new-project/web-project-django-with-react.txt
+        13C) React:
+            .../django/0-new-project/web-project-django-with-react.txt
 
 
-        11D) Angular:
+        13D) Angular:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

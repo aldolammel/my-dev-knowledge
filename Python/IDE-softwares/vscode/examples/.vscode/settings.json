@@ -3,7 +3,6 @@
         VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    //"terminal.integrated.cwd": "${workspaceFolder}",  // Project folder for terminal initializ.
     "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
     "editor.rulers": [
         100 // Draw ruler at column XXX.
@@ -14,7 +13,7 @@
     // Reserved space...
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Where's Python interpreter on project:
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
+    // "python.defaultInterpreterPath": "..../.venv/bin/python3", // Not needed! Code finds it!
     "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
     "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
     "[python]": {},

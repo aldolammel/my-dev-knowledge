@@ -34,7 +34,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
         1) Local project folder:
             
             >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further:
-                /Python/Web-development/django/django-project-folder-structure.txt
+                .../django/django-project-folder-structure.txt
 
                 ATTENTION:
                     If the project already exists with a functional Django, use the django structure example only for consulting best practices.
@@ -45,7 +45,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
 
         3) Project versioning:
             >> Create a repository or use an existing one:
-                /Versioning/
+                /Versioning/git/command-init.txt
         
         
         4) Choosing the way to create the Django project files:
@@ -62,10 +62,10 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
                     PRE) Assuming you already created the virtual environment folder:
                         /Python/Package-manager/uv/create-or-find-current-venv.txt
 
-                    >> Create the minimul Python project scaffolding:
+                    >> Create the minimum Python project scaffolding:
                         
                         ATTENTION:
-                            If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overriden files in project folder is not empty!
+                            If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overridden files in project folder is not empty!
 
                         # That said, do it:
                             $ uv init
@@ -82,7 +82,7 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
                             >> With Python basics:
                                 /Python/Web-development/pyproject.toml
                             >> With Django basics:
-                                /Python/Web-development/django/IDE-softwares/vscode/examples/settings.json
+                                .../django/IDE-softwares/vscode/examples/settings.json
 
                         >> Check if the Python version on that file is correct!
                             If NOT okay:
@@ -195,4 +195,4 @@ DJANGO INSTALLATION: USING UV AS PACKAGE MANAGER
 
 
         >> Return to Django project installation roadmap:
-            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+            ./0-django-installation-and-setup.txt

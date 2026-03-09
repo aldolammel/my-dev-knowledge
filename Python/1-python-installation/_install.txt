@@ -11,9 +11,11 @@ PYTHON: INSTALLATION
         >> Check the python version installed:
         $ python3 --version
 
-        >> To install if needed:
-        $ sudo apt update
-        $ sudo apt install python3.12 (or the current version)
+        # Update the local repository info:
+            $ sudo apt update
+        
+        # Install Python, pointing the global version (it will be updated further if needed):
+            $ sudo apt install -y python3.12
 
 
     MAC:

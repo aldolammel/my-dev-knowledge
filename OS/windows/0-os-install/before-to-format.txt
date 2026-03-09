@@ -5,6 +5,8 @@ OS > WINDOWS: BEFORE TO FORMAT THE CURRENT OS
 
     1) Backup all non-clouded-files.
 
+        1.1) For workstation, save the .env files for each project once they're not on versioning.
+
 
     2) Download Windows .iso file.
         https://www.microsoft.com/en-us/software-download/windows11

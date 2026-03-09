@@ -25,12 +25,15 @@ CONFIGURING EMAIL SERVICE IN DJANGO
             EMAIL_USE_TLS=True
             # Other e-mails are in core/consts.py!
             EMAIL_HOST_USER=abcoo.ideias@gmail.com
-            EMAIL_HOST_PASSWORD=password_generated_by_gmail
+            EMAIL_HOST_PASSWORD=password_generated_by_gmail # https://myaccount.google.com/apppasswords
             DEFAULT_FROM_EMAIL=abcoo.ideias@gmail.com
 
 
             2.1) How to generate a password by Gmail:
-                - Google Account -> Security -> 2-Step Verification -> App Passwords -> Select App -> Generate
+                https://myaccount.google.com/apppasswords
+                
+                Or:
+                >> Google Account -> Security -> 2-Step Verification -> App Passwords -> Select App -> Generate
 
                 If App Passwords option is not available, make sure you have enabled 
                 "2-Step Verification is enabled".

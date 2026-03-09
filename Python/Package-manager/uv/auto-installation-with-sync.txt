@@ -5,13 +5,20 @@ PYTHON > UV PACKAGE MANAGER: USING SYNC
 
     >> Context: I'm updating Python in a project - - - - - - - - - - - - - - - - - - - - - - - - - -
         
+
         # In your project folder/environment, it deletes the current venv folder and recreate it:
             
-            PRE.1) Assuming you already execute 'uv pin' to set the new Python version (that also updates the project .python-version file!
+            PRE.1) Assuming you are in the project environment!
+
             
-            PRE.2) Assuming the Python version's manually updated in the pyproject.toml file!
+            PRE.2) Assuming you already pin the new Python version through UV (like you should have updated the .python-version file)!
+                ./pin-python-version.txt
+            
+
+            PRE.3) Assuming the Python version's manually updated in the pyproject.toml file!
                 /Python/Web-development/pyproject.toml
                 
+
             1) Syncing:
 
                 # Option 1: Mandatory ones and all dependencies from development sub-group:

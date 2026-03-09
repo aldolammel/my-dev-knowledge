@@ -1,0 +1,153 @@
+
+
+POSTGRESQL: INSTALLATION (It's NOT a db creation)
+
+
+    >> Reminder: for updating
+        ./updating.txt
+
+
+    PRE.1) Make sure you got the postgresql repository installed:
+
+        UBUNTU:
+
+            # This package provides the infrastructure for managing PostgreSQL installations:
+
+                $ sudo apt install -y postgresql-common
+
+            # This script automatically configures the official PostgreSQL Apt repository, adding the repo to your system's software sources and imports the GPG key:
+
+                $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+            # Test it:
+
+                $ sudo apt update
+
+                # If you get a annoying message about i386 architecture, just do it to force postgresql doesn't look for other than not amd64 one:
+
+                    $ sudo nano /etc/apt/sources.list.d/pgdg.sources
+
+                        Types: deb
+                        URIs: ...
+                        Suites: ...
+                        Components: ...
+                        Architectures: amd64 i386                        # <-- Remove i386 from here
+                        Signed-By: ...
+
+
+    PRE.2) Check if there's the postgresql in the current machine:
+
+        UBUNTU:
+            1.1) With NO virtual environment activated, type:
+                $ psql --version
+                $ apt list -a postgresql
+
+        WINDOWS:
+            1.1) With NO virtual environment activated, type:
+                $ psql --version
+            1.2) If the command is not recognized, open the Task Manager > Services;
+            1.3) Look for 'postgres'. If nothing, let's install, skipping the next step;
+            1.4) If you have it, forget this roadmap and let's updating it with another:
+                ./updating.txt
+
+
+    
+    1) Installation itself - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        # Make sure which version do you wanna for your project(s), and do it:
+            
+            E.g.
+                $ sudo apt install -y -t noble-pgdg postgresql-17 postgresql-client-17
+
+            IMPORTANT:
+                You can install different versions simultaneously, each one running in a specific port.
+                    
+    
+        >> Case you also wanna a db interface management, using pgAdmin (RECOMMENDED):
+            
+            https://www.pgadmin.org/
+
+            UBUNTU:
+                1.1) Install the module CURL if needed: 
+                    $ sudo apt install curl
+                
+                1.2) Install the public key for the repository (if not done previously):
+                    Check the command in the site!
+
+                1.3) Create the repository configuration file:
+                    Check the command in the site!
+
+                1.4) Install the pgadmin-desktop ONLY to prevent to user apache to run the web
+                    version:
+                        $ sudo apt install -y pgadmin4-desktop
+
+                1.5) In your app list, run the manager!
+            
+            WINDOWS:
+                1.1) Download the file;
+                1.2) After app installation, go to start and search by 'pgAdmin';
+                1.3) Make sure the Windows Terminal and main environment will recognize the Postgres commands:
+                        # Test it:    
+                            $ psql --version
+                        # If not recognized, do it but changing the version and path based on your current postgres version:
+                            $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+                        >> Test it again!
+        
+
+
+    2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+        Connect the PgAdmin to the postgreSQL now. In pgAdmin app!
+
+        2.1) Add a new server (or Register);
+        2.2) In General tab, in Name set it as (convention):
+
+            >> In development:
+                e.g.: Localhost_Ubuntu_Aldo
+
+            >> In Production:
+                e.g.: ClientA_Server  or  ClientB_Server
+
+                >> Tip: If your clients' databases are hosted on different servers
+                    (e.g., local, cloud, or remote), add each server connection
+                    separately in pgAdmin.
+
+        2.3) In Connection tab, in host set it as 'localhost';
+        2.4) Don't save anything yet, and go to terminal. Make sure PostgreSQL is running:
+            
+            UBUNTU:
+                $ systemctl status postgresql
+                # if not:
+                $ sudo systemctl start postgresql
+
+        2.5) Let's use the root user (postgres) now: 
+
+            UBUNTU:
+                $ sudo -u postgres psql
+
+        2.6) Already using the PostgreSQL user, if the Postgres warns you about
+            database version, do it:
+            $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
+
+        2.7) Already using the PostgreSQL user, do it:
+            $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';  <--- type that ; too!
+            $ exit
+        
+        2.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to
+            remember the password;
+        2.9) Save the changes finally! You're connected.
+    
+    
+    3) Define if PostgreSQL shouldn't run at the OS starts:
+        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+
+
+    4) After to install the desired database, don't forget your environment variables:
+        /Environment-Variables/
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+>> Database creation:
+    /Database/PostgreSQL/postgres-creating-db-locally.txt

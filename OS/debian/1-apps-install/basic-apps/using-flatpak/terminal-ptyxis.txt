@@ -21,7 +21,13 @@ SYSTEM TOOL: PTYXIS TERMINAL (FROM NEW UBUNTU 2026)
 
                 Using: Fire Code Regular 11
 
-        2.2) Palette = "Afterglow".
+        2.2) Palette = "Birds Of Paradise" or...
+                        "Breath Silverfox"
+                        "Broadcast"
+                        "Chameleon"
+                        "Neutron"
+                        "Solarized Darcula"
+
 
         2.3) Other customs:
             - Line Spacing = 1,1

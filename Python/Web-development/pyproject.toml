@@ -24,7 +24,7 @@ classifiers = [
 dependencies = []
 
 # [dependency-groups]
-# Don't use it 'coz it's not compactible with many tools!
+# Don't use it 'coz it's not compatible with many tools!
 # That said, keep using [project.optional-dependencies].
 
 [project.optional-dependencies]

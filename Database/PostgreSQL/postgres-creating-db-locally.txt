@@ -3,7 +3,7 @@
 POSTGRESQL: CREATING A DATABASE LOCALLY
 
     PRE.1) Assuming you got already the PostgreSQL installed locally:
-        ./0-installing-and-updating/postgres-installing.txt
+        ./0-basic/installing-and-integrating.txt
 
     PRE.2) Make sure the database is running:
         ./postgres-starting-and-stoping.txt
@@ -17,14 +17,15 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
         A) Using PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            A1) Open your local PgAdmin;
+            A.PRE) Make sure you've done the "INTEGRATION" step at once in the current machine:
+                ./0-basic/installing-and-integrating.txt
             
-            A2) In the server tree (sidebar-left), also open the 'Databases';
+            A1) In the server tree (sidebar-left), also open the 'Databases';
             
                 ATTENTION:
                     Never use the database called "postgres". This is the default db and it cannot be delete!
 
-            A3) Create the new database:
+            A2) Create the new database:
                 >> Right-click on "Databases" and select "Create" > "Database...";
                 >> In the "Database" field, enter the name:
                         
@@ -43,30 +44,30 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                     ATTENTION:
                     If an error message says "Collation version mismatch" it's because your O.S. has been updated but PostgreSQL db cluster hasn't! Solution:
 
-                        A3.1) Close the PgAdmin, and stop the Postgres service:
+                        A2.1) Close the PgAdmin, and stop the Postgres service:
                             /Database/PostgreSQL/postgres-starting-and-stoping.txt
 
-                        A3.2) Update and upgrade your Postgre and O.S;
+                        A2.2) Update and upgrade your Postgre and O.S;
 
                             UBUNTU:
-                                A3.2.1) Add the Postgre repo locally:
-                                    ./0-installing-and-updating/postgres-updating.txt
+                                A2.2.1) Add the Postgre repo locally:
+                                    ./0-basic/updating.txt
 
-                                A3.2.2) Update the entire system:
+                                A2.2.2) Update the entire system:
                                     /OS/debian/2-updates/update.txt
 
                             WINDOWS:
-                                A3.2.1) xxxxxxxxxxxxxxx
+                                A2.2.1) xxxxxxxxxxxxxxx
 
-                                A3.2.2) xxxxxxxxxxxxxxx
+                                A2.2.2) xxxxxxxxxxxxxxx
                         
-                        A3.3) Start the Postgres again:
+                        A2.3) Start the Postgres again:
                             ./postgres-starting-and-stoping.txt
 
-                        A3.4) Update the collation version:
+                        A2.4) Update the collation version:
                             ./postgres-collation-updating.txt
 
-                        A3.5) Open again the PgAdmin, and now you should be able to create a new db!
+                        A2.5) Open again the PgAdmin, and now you should be able to create a new db!
 
 
 

@@ -17,10 +17,10 @@
 >> For Node-Package-Manager I will use NPM (Node.js package manager standard command):
 
     PRE) Keep in mind what type of Vue project you will build: SPA or MPA?
-        /JavaScript/Web-development/frontend/Vue/vue-knowledge/SPA-vs-MPA.txt
+        .../Vue/vue-knowledge/SPA-vs-MPA.txt
 
     1) Create an exclusive .env file to set the front-end environment variables:
-        /Environment-Variables/env-for-local/in-frontend/.env
+        /Environment-Variables/env-for-local/in-frontend/
 
         1.1) (Optional)
             Make sure this new .env is ignored by Git. This line should be there:

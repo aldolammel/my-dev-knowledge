@@ -8,9 +8,13 @@ IDE FOR PYTHON PROJECT: VSCODE
         PRE.1) Python project:
             /Python/0-New-Project/1-new-project.txt
 
-        PRE.2) IDE VSCode:
-            Download the IDE:
-            https://code.visualstudio.com
+        PRE.2) IDE VSCode install:
+            
+            Ubuntu:
+                /OS/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+            
+            Windows:
+                https://code.visualstudio.com
 
     
     >> Basic to setup VSCode also for specific projects:
@@ -24,16 +28,40 @@ IDE FOR PYTHON PROJECT: VSCODE
         
         1) VSCode project settings:
 
-            PRE) Select your Profile more specific for this kind of project;
-            1.1) In the project folder, create the .vscode folder;
-            1.2) In .vscode folder, create the file 'settings.json';
-            1.3) In that file, apply these lines:
-                ./examples/.vscode/settings.json
+            CRITICAL:
+                When you log-in in VSCode, it'll take all your settings and profiles from its cloud and re-sync again, automatically!
 
-            # (If applicable) Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository!
+                If you have NO any VSCode profile created yet, research about it and make it true!
+
+            >> Your VSCode for new project?
+
+                A) No, the project already exists and that was configured correctly before;
+                B) Yes, it's a new project;
+
+                - - - - - -
+
+                A) No, the project already exists - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                    A.PRE) Select your VSCode PROFILE more specific for this project (it'll load all extensions and stuff you need to work properly through the IDE);
+
+                    A.1) If you are sure the existing project is already well-configured for VSCode needs, just skip it to the next main step! Otherwise, check the 'B'.
+
+
+                B) Yes, it's a new project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            
+                    B.PRE) Select your VSCode PROFILE more specific for this kind of project;
+                    
+                    B.1) In the project folder, create the .vscode folder;
+                    
+                    B.2) In .vscode folder, create the file 'settings.json';
+                    
+                    B.3) In that file, apply these lines:
+                        ./examples/.vscode/settings.json
+
+                    # (If applicable) Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository!
 
         
-        2) Configuring your VSCode profile with the project needs:
+        2) Configuring your new VSCode copy with the project needs. If your VSCode profile is already ok about extensions, and you already used your package-manager (like UV) to sync all the project dependencies, just skip it. Otherwise, re-check everything!
         
 
             2.1) Language support (Python by Microsoft):

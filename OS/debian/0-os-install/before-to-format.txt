@@ -4,7 +4,10 @@ OS > DEBIAN: BEFORE TO FORMAT THE CURRENT DISTRO
 
     1) Backup all non-clouded-files.
 
-    2) Download distro .iso file.
+        1.1) For workstation, save the .env files for each project once they're not on versioning.
+
+
+    x) Download distro .iso file.
         E.g
             https://releases.ubuntu.com/
 

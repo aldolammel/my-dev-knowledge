@@ -5,12 +5,10 @@ POSTGRESQL: UPDATING
 
     UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        X) Make sure you got the postgresql repository installed:
+        PRE) Make sure you got the postgresql repository installed:
+            ./installing-and-integrating.txt
 
-            $ sudo apt install -y postgresql-common
-            $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-
-        X) Update the repository and upgrade the postgresql if new version is available:
+        1) Update the repository and upgrade the postgresql if new version is available:
 
             $ sudo apt update
             $ sudo apt upgrade
@@ -53,7 +51,7 @@ POSTGRESQL: UPDATING
                 $ net start postgresql-x64-16
 
         X) Make sure you turn the postgres ON/OFF to start with the system:
-            /Database/PostgreSQL/0-installing-and-updating/postgres-starting-and-stoping.txt
+            /Database/PostgreSQL/0-basic/postgres-starting-and-stoping.txt
 
 
     
