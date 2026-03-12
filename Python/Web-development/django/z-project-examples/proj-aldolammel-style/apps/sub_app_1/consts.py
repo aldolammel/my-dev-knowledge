@@ -1,5 +1,6 @@
-# To avoid circular-import with lang.py, translatable constants must stay here!
+# To avoid circular-import with language.py, translatable constants must stay here!
 # from django.utils.translation import gettext_lazy as _
+
 
 # PATHS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 PATH_API_GLOBAL = "api/global"  # It's also declared in /frontend/src/stores/global.js
@@ -43,6 +44,7 @@ CHOICES_LINK_TYPE = (
 # VAL_ for constant values!
 VAL_BRAND_MIN = 1
 VAL_BRAND_MAX = 20
+VAL_BRAND_LONG_MAX = 3 * VAL_BRAND_MAX
 VAL_EMAIL_URL_MIN = 6  # x@x.co or http://x.co
 VAL_EMAIL_URL_MAX = 60
 VAL_FRONT_TOOL_CACHE = 3600  # 3600 = 1h cache!
@@ -50,6 +52,8 @@ VAL_SEO_TITLE_MIN = 3
 VAL_SEO_TITLE_MAX = 60  # Google recommends up to 60 characters!
 VAL_PAGE_TITLE_MIN = VAL_SEO_TITLE_MIN
 VAL_PAGE_TITLE_MAX = 35  # Good number to not destroy Menus layouts through big titles.
+VAL_PHONE_MIN = 6
+VAL_PHONE_MAX = 20  # "+55-51-9-9999-9999"
 VAL_POST_TITLE_MIN = VAL_SEO_TITLE_MIN
 VAL_POST_TITLE_MAX = VAL_SEO_TITLE_MAX
 VAL_POST_CONTENT_MIN = 140
@@ -68,11 +72,12 @@ VAL_SLUG_NAME_MIN = 8
 VAL_SLUG_NAME_MAX = 16
 VAL_SLUG_ADD_LIMIT = 5  # It considering the additional separator characters.
 
-# DEBUG - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-COLOR_STARTS_GREEN = "\033[1;32m"
-COLOR_STARTS_YELLOW = "\033[1;33m"
-COLOR_STARTS_RED = "\033[1;31m"
-COLOR_ENDS = "\033[m"
-TAG_D = f"{COLOR_STARTS_GREEN}PAGEX DEBUG >{COLOR_ENDS}"
-TAG_W = f"{COLOR_STARTS_YELLOW}PAGEX WARNING >{COLOR_ENDS}"
-TAG_E = f"{COLOR_STARTS_RED}PAGEX ERROR >{COLOR_ENDS}"
+# DEBUG FOR TERMINAL ONLY - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Unlike those debug-tags from 'lang.py' file, these ones accept colors to be displayed on terminal.
+COLOR_G = "\033[1;32m"  # green
+COLOR_Y = "\033[1;33m"  # yellow
+COLOR_R = "\033[1;31m"  # red
+COLOR_OFF = "\033[m"
+TAG_D = f"{COLOR_G}PAGEX DEBUG >{COLOR_OFF}"
+TAG_W = f"{COLOR_Y}PAGEX WARNING >{COLOR_OFF}"
+TAG_E = f"{COLOR_R}PAGEX ERROR >{COLOR_OFF}"

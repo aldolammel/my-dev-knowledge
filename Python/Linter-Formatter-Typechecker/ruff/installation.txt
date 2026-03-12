@@ -53,7 +53,7 @@ RUFF: INSTALLATION AND INTEGRATION
                 /Python/Web-development/pyproject.toml
 
             # Apply these configs in your project pyproject.toml file:
-                /Python/Linter-Formatter-Typechecker/ruff/pyproject.toml
+                ./pyproject.toml
 
         3) (Optional)
             Install the Ruff extension for your favorite code IDE!

@@ -12,7 +12,8 @@ PYTHON > UV PACKAGE MANAGER: INSTALLING DEPENDENCIES
         $ uv add --optional <sub-group> <package_name>
         # E.g. $ uv add --optional dev ruff
 
-
+    # Check installed dependencies:
+        $ uv pip list
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

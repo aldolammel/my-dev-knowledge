@@ -1,0 +1,59 @@
+
+
+CSS FRAMEWORK > TAILWIND: INSTALLATION
+
+
+    WHAT IS IT:
+        ./_about.txt
+
+
+    PRE) Assuming you are using Vite Build-tool:
+        /JavaScript/Build-tools/Vite/_about.txt
+
+
+
+    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+        1.1) In the frontend folder, install Tailwind and its Vite plugin:
+            $ npm install tailwindcss @tailwindcss/vite
+
+        
+    
+    2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        2.1) Configure the Vite plugin, adding the @tailwindcss/vite plugin to your Vite configuration:
+
+            In vite.config.ts:
+
+                import { defineConfig } from 'vite'
+                import tailwindcss from '@tailwindcss/vite'
+
+                export default defineConfig({
+                    plugins: [
+                        tailwindcss(),
+                    ],
+                })
+
+        2.2) Import Tailwind CSS, adding an @import to your CSS file that imports Tailwind CSS:
+
+            @import "tailwindcss";
+
+
+        2.3) Start using Tailwind in your HTML:
+
+            Make sure your compiled CSS is included in the <head> (your framework might handle this for you), then start using Tailwind’s utility classes to style your content.
+
+            E.g.
+
+                <!doctype html>
+                <html>
+                    <head>
+                        ...
+                        <link href="/src/style.css" rel="stylesheet">
+                    </head>
+                    <body>
+                        <h1 class="text-3xl font-bold underline">
+                            Hello world!
+                        </h1>
+                    </body>
+                </html>

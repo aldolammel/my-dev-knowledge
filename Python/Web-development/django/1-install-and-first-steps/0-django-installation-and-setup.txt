@@ -89,31 +89,40 @@ DJANGO: INSTALLING AND SETUP
 
     4) This current project already has a local DB?
     
-        4A) Yes;
-        4B) No;
+        4A) Yes, but empty;
+        4B) Yes, and with app content
+        4C) No, no db yet;
         
         - - - - 
         
-        4A) Yes - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        4A) Yes, but empty - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            >> If the existing db is not empty/clean, skip it so! Otherwise, use the Django migrate command once the .env is correctly configured:
+            >> Use the Django migrate command once the .env is correctly configured:
                 .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
 
 
-        4B) No - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        4B) Yes, and with app content - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            4B.PRE) Check which db your project is using and if the db technology is installed in your machine!
+            >> Skip it so!
 
-            4B.1) Create the db based on that name in the project .env file;
 
-            4B.2) Use the Django migrate command once the .env is correctly configured!
+        4C) No - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            4C.PRE) Check which db your project is using and if the db technology is installed in your machine!
+
+            4C.1) Create the db based on that name in the project .env file;
+
+            4C.2) Use the Django migrate command once the .env is correctly configured!
                 .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
 
 
 
     5) Now, in the project root folder, you must see some files, like 'manage.py', including the folder 'core' with its content. If so, you create the django project correctly! That said, keep going:
         
-        PRE) Assuming you already are in the project environment!
+        5.PRE.1) Assuming you already are in the project environment!
+
+        5.PRE.2) (if applicable) Assuming you already are in the right Versioning branch!
+            /Versioning/git/command-checkout.txt
         
         5.1) Test Django files:
             $ python manage.py check
@@ -164,7 +173,7 @@ DJANGO: INSTALLING AND SETUP
 
 
         6.2) Prepare a Global Context with the Essential info about the app:
-                /Python/Web-development/django/3-2-views-and-API/1-building-views-context/global-context.txt
+                .../django/3-2-views-and-API/1-building-views-context/global-context.txt
         
 
         6.3) Still in settings.py file, if you WON'T use the SQLite as database:
@@ -200,7 +209,7 @@ DJANGO: INSTALLING AND SETUP
         8.1) Django linter/formatter:
 
             >> Using Djlint (recommended):
-                .../django/Linter-Formatter-Typechecker/djlint.txt
+                .../django/Linter-Formatter-Typechecker/djlint/installation.txt
 
             >> Other options:
                 .../django/Linter-Formatter-Typechecker/_formatter/django-options.txt
@@ -215,12 +224,12 @@ DJANGO: INSTALLING AND SETUP
 
     9) Create basic sub-apps in the project's app:
 
-        TO APPLY IN THIS POINT) Reorganize it! Because what main 'sub-app' to use for pages, and posts management?
+        PRE) Bring your main Django sub-apps for each case:
 
-            >> Pagex?
-                .../xxxxxxxxxxxxxxxxxxxxxxxxxxx
+            >> Pagex:
+                .../django/useful-sub-apps/pagex/
 
-            >> Wagtail?
+            >> Or Wagtail:
                 .../django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt
 
 
@@ -250,19 +259,6 @@ DJANGO: INSTALLING AND SETUP
                 .../django/2-creating-and-deleting-apps/creating.txt
 
 
-            >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!!)
-                'general' sub-app:
-                About: .../django/z-project-examples/proj-aldolammel-style/general/_readme.txt
-                
-                g.1) Bring the basic sub-app files and templates-folder too:
-                    
-                    .../django/z-project-examples/proj-aldolammel-style/general/
-
-                g.2) Include it in the INSTALLED_APPS in the settings.py file!
-                g.3) Makemigrations and migrate!
-                g.4) Test it!
-
-
             >> Do you need user management through the app front-end too?
 
                 >> If not:
@@ -271,18 +267,6 @@ DJANGO: INSTALLING AND SETUP
                 >> If so:
                     .../django/3-1-models-database/3-users/2-extending-users.txt
 
-
-                    >> (I STILL THINKING IF THIS IS NECESSARY!!!!!!! BUT IF SO, ONLY IF ACCOUNTS WAS NEEDED TOO)
-                    'in' sub-app:
-                    About: .../django/z-project-examples/proj-aldolammel-style/in/_readme.txt
-                    
-                    i.1) Bring the basic sub-app files and templates-folder too:
-                        
-                        .../django/z-project-examples/proj-aldolammel-style/in/
-
-                    i.2) Include it in the INSTALLED_APPS in the settings.py file!
-                    i.3) Makemigrations and migrate!
-                    i.4) Test it!
 
 
     10) Creating the admin user:

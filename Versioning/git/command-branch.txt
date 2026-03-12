@@ -28,10 +28,7 @@ VERSIONING > GIT: BRANCH
 
     >> Force the original branch again:
         
-        # Check exactly the branch name you want:
-            $ git branch -a
-        # Download that:
-            $ git reset --hard <branch_name>
+        ./command-reset.txt
 
 
     >> Deleting a local branch:

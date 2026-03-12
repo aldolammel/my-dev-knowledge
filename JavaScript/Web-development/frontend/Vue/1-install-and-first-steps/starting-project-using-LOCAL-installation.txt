@@ -1,12 +1,14 @@
 
 
->> ATTENTION 1: 
-    Assuming you already got Node.js. Otherwise, do it:
+VUE > CREATING A PROJECT: LOCALLY
+
+
+    PRE.1) Assuming you already got Node.js. Otherwise, do it:
         ./_vue-installation.txt
 
 
->> ATTENTION 2:
-    Regardless anything, don't install Vue in these paths to avoid conflicts:
+    PRE.2) Regardless anything, don't install Vue in these paths to avoid conflicts:
+        
         >> If your project is using Django as backend:
             ./backend-python-django.txt
 
@@ -18,23 +20,18 @@
 
     PRE) Keep in mind what type of Vue project you will build: SPA or MPA?
         .../Vue/vue-knowledge/SPA-vs-MPA.txt
-
-    1) Create an exclusive .env file to set the front-end environment variables:
-        /Environment-Variables/env-for-local/in-frontend/
-
-        1.1) (Optional)
-            Make sure this new .env is ignored by Git. This line should be there:
             
-                /frontend/.env
-            
-    2) Choosing the scaffolding and managing tool (build-tool) for Vue.js projects:
+    1) Choosing the scaffolding and managing tool (build-tool) for Vue projects:
     
-        2.2A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
-        2.2B) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
+        1A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
+        1B) Or Vue-CLI (Old Vue stardard Command Line Interface / Webpack-based);
         
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - -
         
-        2.2A) Using Vite:
+        1A) Using Vite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                /JavaScript/Build-tools/Vite/_about.txt
+                
                 More about in https://vite.dev/
 
             >> On terminal, go to the folder where you wanna create the Vue project folder
@@ -44,12 +41,11 @@
             >> Install Vite locally (without -g) and start the project creation:
                 
                 # This step needs the Create-Vite package but the follow installation command should
-                    provide this for you automatically! Then this process will create the Vue project
-                    folder, asking you the folder's name soon:
+                    provide this for you automatically! Then this process will create the Vue project folder, asking you the folder's name soon:
                     
                         $ npm create vite@latest
                         
-                            # Recommended Vite settings - just follow the prompt instructions/options:
+                            # Recommended Vite settings, just follow the prompt instructions/options:
 
                                 - Project name: = by convention, use 'frontend' or just a '.' if
                                                 you already are in the root of the 'frontend' folder.
@@ -169,10 +165,10 @@
                         /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        2.2B) Or using Vue-CLI:
-                More abount in https://cli.vuejs.org/
+        1B) Or using Vue-CLI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                
+                More about in https://cli.vuejs.org/
 
             >> Install Vue-CLI globally (-g):
                 $ npm install -g @vue/cli
@@ -257,7 +253,15 @@
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    >> Use these links to access your Vue project on browser:
+
+    2) Create an exclusive .env file to set the front-end environment variables:
+        /Environment-Variables/env-for-local/in-frontend/
+
+        2.1) (Optional) Make sure this new .env is ignored by Git. This line should be there:
+                /frontend/.env
+
+
+    3) Use these links to access your Vue project on browser:
 
         http://localhost:<port>
         
@@ -270,7 +274,5 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
 >> Back to the installation instructions:
-
-    /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/create-vue-project.txt
+    ./create-vue-project.txt

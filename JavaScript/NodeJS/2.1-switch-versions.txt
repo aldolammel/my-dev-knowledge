@@ -47,7 +47,7 @@ NODE.JS: SWITCHING NODE VERSION
                             H.2) Go to the 'J' steps now!
 
 
-                        J) What I want IS listed - - - - - - - - - - - - - - - - - - - - - - - - - -
+                        J) What I want is listed - - - - - - - - - - - - - - - - - - - - - - - - - -
                     
                             J.1) Select the right version:
                                 # Specific:
@@ -83,7 +83,7 @@ NODE.JS: SWITCHING NODE VERSION
 
             P) Using .nvmrc file - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                >> In your project frontend folder, open the .nvmrc file, and update the Node version declared in there!
+                >> In your project folder (not in the frontend one), open the .nvmrc file, and update the Node version declared in there!
             
             Q) Or using ~/.bashrc - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

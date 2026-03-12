@@ -34,7 +34,7 @@ IDE FOR DJANGO PROJECT: VSCODE
 
         
         3) Linter (DjLint by Astral):
-            /Python/Web-development/django/Linter-Formatter-Typechecker/djint/installation.txt
+            /Python/Web-development/django/Linter-Formatter-Typechecker/djlint/installation.txt
 
 
         4) Formatter (DjLint by Astral):

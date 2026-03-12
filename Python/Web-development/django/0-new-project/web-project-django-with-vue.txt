@@ -47,7 +47,7 @@ PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END VUE:
 2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     0) Create the AI context prompt for the project:
-        /Python/Web-development/ai-prompt-context-model.txt
+        .../Web-development/ai-prompt-context-model.txt
         
     2.1) Front-end:
 
@@ -56,7 +56,7 @@ PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END VUE:
         >> Code the entire navigation;
 
         >> Integrate back-end with front-end:
-            /Python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
+            .../django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
         
     2.2) Back-end:
         >> Build up the database of the product;

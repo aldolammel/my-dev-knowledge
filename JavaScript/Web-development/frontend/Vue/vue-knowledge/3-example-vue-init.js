@@ -1,5 +1,5 @@
 // main.js used for real projects example:
-// .../Vue/z-example-structure/aldolammel-style/frontend/src/main.js
+// .../Vue/z-example-structure/aldolammel-style/project_root/frontend/src/main.js
 
 // By convention, this file is located and called: /src/main.js
 

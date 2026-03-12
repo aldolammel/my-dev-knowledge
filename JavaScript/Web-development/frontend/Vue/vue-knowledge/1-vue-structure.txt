@@ -17,84 +17,86 @@ VUE.JS: ITS FILES AND FOLDER STRUCTURE
             .../Vue/z-example-structure/aldolammel-style/
 
 
-        frontend/
-        ├── node_modules/        # stores all dependencies of the project and node.js stuff.
-        │
-        ├── public/              # No bundling, no transformations. Use it for static assets you reference by absolute path.
-        │   ├── favicon.ico
-        │   ├── manifest.json    # for PWA configuration.
-        │   ├── robots.txt       # xxxxx.
-        │   ├── sitemap.xml      # xxxxx.
-        |   └── ...
-        │
-        ├── src/                             # Where the entire Vue project is. For example, Vite build-tool watches this folder!
-        │   ├── assets/                      # Those files that aren't public.
-        |   |   ├── imgs/                    # Images that need optimization or processing.
-        |   |   |   ├── logo.svg
-        |   |   |   ├── bg.jpg
-        |   |   |   └── ...
-        |   |   |
-        |   │   ├── styles/                  # Files that should be imported in components or main.js. Keep design tokens and CSS resets here.
-        │   │   │   ├── app.scss             # Everything about this project product styling.
-        │   │   │   ├── css-framework.scss   # File that imports CSS framework installed for this project.
-        │   │   │   └── ...
-        │   │   │   
-        │   │   └── ...
-        │   │
-        │   ├── components/
-        |   |   ├── common/               # Reusable dumb components (Button, Modal).
-        │   │   │   ├── BestProducts.vue  
-        │   │   │   ├── Newsletter.vue       
-        │   │   │   ├── Testimonials.vue  
-        │   │   │   └── ...
-        │   │   │
-        |   |   ├── layout/               # Layout components (AppHeader, Navigation).
-        │   │   │   ├── SiteHeader.vue
-        │   │   │   ├── SiteFooter.vue
-        │   │   │   ├── NavMain.vue
-        │   │   │   └── ...
-        │   │   │
-        |   |   └── pages/                # Components specific to a page/route.
-        |   |       ├── Home.vue
-        │   │       ├── ListByCategory.vue
-        │   │       ├── LoadBlog.vue
-        │   │       ├── LoadBlogPost.vue
-        │   │       └── ...
-        │   │
-        │   ├── composables/              # Reusable functions for Composition API.
-        |   |   ├── useErrorHandler.js
-        |   |   ├── useLoadingState.js
-        |   |   ├── usePage.js
-        |   |   └── ...
-        │   │
-        │   ├── hooks/                # For custom Composition API functions (hooks), conventionally its files using 'use' as prefix.
-        |   |   ├── useAuth.js
-        |   |   └── ...
-        │   │
-        │   ├── libs/                 # Where all main library files are. Anything that connects the app to the world.
-        |   |   ├── bootstrap.js
-        |   |   └── ...
-        │   │
-        │   ├── router/           # Where routes and lazy-load pages are defined.
-        |   |   ├── router.js     # Router config file.
-        │   │   └── routes.js     # Where routes are defined.
-        |   |
-        │   ├── stores/           # Where things are caching from APIs.
-        │   │   ├── menus.js      # Caching/storing data from menus managed by back-end.
-        │   │   └── pages.js      # Caching/storing data from pages managed by back-end.
-        |   |
-        │   ├── utils/                         # Tiny, pure functions that do one thing well, but not a lib and no Vue reactivity.
-        │   │   ├── env.js                     # Calling front-end environment vars.
-        │   │   └── tinyslider-testimonial.js
-        │   │
-        │   ├── App.vue          # Root component page (main-vue-app).  <---------------
-        │   └── main.js          # Vue app init.
-        │
-        ├── .env                 # Exclusive front-end environment variables. 
-        ├── index.html           # Run it to see the app on the browser. 
-        └── package.json
-
-
+my_project/
+├── frontend/
+│   ├── node_modules/        # stores all dependencies of the project and node.js stuff.
+│   │
+│   ├── public/              # Use it for static assets you reference by absolute path.
+│   │   ├── favicon.ico
+│   │   ├── manifest.json    # for PWA configuration.
+│   │   ├── robots.txt       # xxxxx.
+│   │   ├── sitemap.xml      # xxxxx.
+│   |   └── ...
+│   │
+│   ├── src/                   # Where Vue project is. Vite build-tool watches this folder!
+│   │   ├── assets/            # Those files that aren't public.
+│   |   |   ├── imgs/          # Images that need optimization or processing.
+│   |   |   |   ├── logo.svg
+│   |   |   |   ├── bg.jpg
+│   |   |   |   └── ...
+│   |   |   |
+│   |   │   ├── styles/                  # Files to imported in components or main.js.
+│   │   │   │   ├── app.scss             # Everything about this project product styling.
+│   │   │   │   ├── css-framework.scss   # It imports CSS framework installed.
+│   │   │   │   └── ...
+│   │   │   │   
+│   │   │   └── ...
+│   │   │
+│   │   ├── components/
+│   |   |   ├── common/               # Reusable dumb components (Button, Modal).
+│   │   │   │   ├── BestProducts.vue  
+│   │   │   │   ├── Newsletter.vue       
+│   │   │   │   ├── Testimonials.vue  
+│   │   │   │   └── ...
+│   │   │   │
+│   |   |   ├── layout/               # Layout components (AppHeader, Navigation).
+│   │   │   │   ├── SiteHeader.vue
+│   │   │   │   ├── SiteFooter.vue
+│   │   │   │   ├── NavMain.vue
+│   │   │   │   └── ...
+│   │   │   │
+│   |   |   └── pages/                # Components specific to a page/route.
+│   |   |       ├── Home.vue
+│   │   │       ├── ListByCategory.vue
+│   │   │       ├── LoadBlog.vue
+│   │   │       ├── LoadBlogPost.vue
+│   │   │       └── ...
+│   │   │
+│   │   ├── composables/              # Reusable functions for Composition API.
+│   |   |   ├── useErrorHandler.js
+│   |   |   ├── useLoadingState.js
+│   |   |   ├── usePage.js
+│   |   |   └── ...
+│   │   │
+│   │   ├── hooks/                # For custom Composition API functions (hooks).
+│   |   |   ├── useAuth.js
+│   |   |   └── ...
+│   │   │
+│   │   ├── libs/                 # Where all main library files are. Things connected to the world.
+│   |   |   ├── bootstrap.js
+│   |   |   └── ...
+│   │   │
+│   │   ├── router/           # Where routes and lazy-load pages are defined.
+│   |   |   ├── router.js     # Router config file.
+│   │   │   └── routes.js     # Where routes are defined.
+│   |   |
+│   │   ├── stores/           # Where things are caching from APIs.
+│   │   │   ├── menus.js      # Caching/storing data from menus managed by back-end.
+│   │   │   └── pages.js      # Caching/storing data from pages managed by back-end.
+│   |   |
+│   │   ├── utils/            # Tiny, pure funcs that do one thing, but not lib or Vue reactivity.
+│   │   │   ├── env.js        # Calling front-end environment vars.
+│   │   │   └── tinyslider-testimonial.js
+│   │   │
+│   │   ├── App.vue           # Root component page (main-vue-app).  <---------------
+│   │   └── main.js           # Vue app init.
+│   │
+│   ├── .env                  # Exclusive front-end environment variables. 
+│   ├── index.html            # Run it to see the app on the browser. 
+│   └── package.json
+│
+├── .nvmrc                    # File used to load the correct project Node version!
+└── ...
 
         >> Example of a Django folder project with Vue:
             .../Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt

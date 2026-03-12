@@ -7,7 +7,7 @@ plugins = [
     "mypy_django_plugin.main", # Adding Type checking for Django too.
 ]
 disable_error_code = [
-    "var-annotated",  # Stop MyPy to demand Type Annotations for, e.g., model fields w/ M2M relationships.
+    "var-annotated", # Stop MyPy to demand Type Annotations for, e.g., model fields w/ M2M relationships.
 ]
 
 # Django-stubs plugin configuration

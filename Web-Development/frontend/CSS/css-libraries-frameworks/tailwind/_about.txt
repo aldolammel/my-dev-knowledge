@@ -8,6 +8,9 @@ CSS FRAMEWORK: TAILWIND
     by combining these utilities.
 
     >> https://tailwindcss.com/
+
+    >> To install:
+        ./install-and-integration.txt
         
 
 

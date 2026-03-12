@@ -2,6 +2,49 @@
 
 JAVASCRIPT BUILD-TOOL: VITE
 
-    xxxxxxx
 
-    >> xxxxx
+    Vite (French for "fast", pronounced "veet") is a JS build tool - specifically designed (same creator of Vue.js) for frontend web development. 
+    
+    It's used primarily to solve the performance and experience problems that come with traditional build tools like Webpack when projects grow large. 
+    
+    And Vite is framework-agnostic so through its plugins, Vite can support Vue, React, Svelte, Solid, for example.
+
+    
+
+    >> Figure out if Vite is installed - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> In your front-end project folder:
+            # Shows the installed Vite version and its dependencies:
+                $ npm list vite
+
+
+
+    >> Install Vite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> Using NPM:
+            # Install a specific major version (recommended for stability)
+                $ npm install vite@^7    <--    means the latest version of v7.
+                                                If you run vite@latest, probably you'll face compatible errors with Tailwind or other frameworks that depends of Vite plugins and are not ready for Vite latest version.
+
+            # Install the absolute latest version (may cause compatibility issues)
+                $ npm install vite@latest
+
+
+        >> Using YARN:
+            $ yarn add vite@^7
+
+
+
+    >> Uninstall/Re-install other Vite version - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        # Option 1: Direct installation (overwrites current version)
+            $ npm install vite@^7     # This alone will replace the current version
+
+        # Option 2: Complete reinstall (cleaner approach)
+            $ npm uninstall vite
+            $ npm install vite@^7
+
+        # Option 3: If you have dependency issues
+            $ rm -rf node_modules package-lock.json
+            $ npm install
+            $ npm install vite@^7

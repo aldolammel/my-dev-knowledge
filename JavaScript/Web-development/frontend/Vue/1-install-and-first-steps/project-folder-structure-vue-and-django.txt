@@ -17,7 +17,7 @@ VUE: WITH DJANGO BACK-END
             my_project/         # /Python/Web-development/django/django-project-folder-structure.txt
             └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
-            >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
+            >> Vue project folder (e.g. "frontend") must be created in the root of Django project
                 folder (e.g. "my_project").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -27,7 +27,7 @@ VUE: WITH DJANGO BACK-END
             my_project/         # /Python/Web-development/django/django-project-folder-structure.txt
             └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
-            >> Vue projet folder (e.g. "frontend") must be created in the root of Django project
+            >> Vue project folder (e.g. "frontend") must be created in the root of Django project
                 folder (e.g. "my_project").
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

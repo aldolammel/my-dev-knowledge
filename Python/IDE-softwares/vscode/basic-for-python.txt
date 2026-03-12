@@ -108,11 +108,10 @@ IDE FOR PYTHON PROJECT: VSCODE
             
             2.5) Type-Checker (MyPy by Microsoft):
 
-                /Python/Linter-Formatter-Typechecker/mypy/installation.txt
+                /Python/Linter-Formatter-Typechecker/MyPy/installation.txt
 
             
             2.6) Linter (Ruff by Astral):
-                (It's possible you already got this installed on project, so skip it)
                 /Python/Linter-Formatter-Typechecker/ruff/installation.txt
 
 

@@ -1,0 +1,55 @@
+
+
+PROGRAMMING CONCEPTS: DESIGN PATTERN
+
+    A design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.
+
+    Think of it as a blueprint or a template that you can customize to solve a particular design problem in your code. It's not a finished piece of code that you can copy and paste into your program. Instead, it's a description or template for how to solve a problem that you can adapt to many different situations.
+
+
+    >> Key Characteristics:
+
+        - Proven Solution
+            Best practices of skilled software developers over time.
+
+        - Reusable:
+            Reuse the idea and the structure of the pattern across different programming languages.
+
+        - General-purpose:
+            Designed to solve a general type of problem, not a very specific, one-off issue.
+
+        - A Common Vocabulary:
+            Shared vocabulary for discussing high-level design concepts: "Let's use a singleton".
+
+    
+    >> Common patterns:
+
+        - Observer
+            React to change: events, webhooks...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - Factory
+            Create complex objects: APIs, frameworks...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - Singleton
+            A shared instance: pool, config...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - Decorator
+            Adding behavior: middleware, interceptors...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - Strategy
+            Algorithm exchange: validation, ordinance, authentication...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx
+
+        - Adapter
+            Connect interfaces: External APIs, libs migration...
+                E.g.
+                    ./xxxxxxxxxxxxxxxxxxxxxxxxx

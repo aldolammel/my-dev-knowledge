@@ -7,7 +7,7 @@ PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
 
     >> Upgrade project dependencies with UV:
     
-        The command 'uv --upgrade' automatically check if the dependency envolved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
+        The command 'uv --upgrade' automatically check if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
 
         
         >> Individual updates - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

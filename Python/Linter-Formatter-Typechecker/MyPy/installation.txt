@@ -26,7 +26,7 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
 
     >> Integration:
 
-        PRE) You already got the pyproject.toml in your project:
+        PRE) Assuming you already got the pyproject.toml in your project:
             /Python/Web-development/pyproject.toml
 
 

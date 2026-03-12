@@ -6,7 +6,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
     >> A db flush is not enough?
         ./clean-database.txt
     
-    >> If you need to re-create your database from the beginning, do it:
+    >> If you need to re-create your db from the beginning, do it:
 
         ATTENTION MULTILINGUAL:
             If your app is multilingual and are using prefix_language mandatory, your new db must be created and, right after, you must include on language table at least one language for you be able to use the CMS! So be aware of this!
@@ -39,22 +39,25 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
             >> SQLite:
                 /xxxxxxxxx
 
-        3) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too, but the project settings could be hidden them!
+        3) (If applicable) Make sure you are in the right Versioning branch!
+            /Versioning/git/command-checkout.txt
+        
+        4) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too, but the project settings could be hidden them!
 
-        4) Edit your .env file as needed (the new db name, for example);
+        5) Edit your .env file as needed (the new db name, for example);
 
-        5) CRITICAL:
+        6) CRITICAL:
             close all Terminals/Prompts you ran with the old .env before (it avoids issues with old environment variables)!
 
-        6) Run 'makemigrations' for each sub-app, and then run 'migrate';
+        7) Run 'makemigrations' for each sub-app, and then run 'migrate';
         
-        7) (If applicable)
+        8) (If applicable)
             If you'll use the CMS, run 'createsuperuser' command;
 
-        8) (If applicable) 
+        9) (If applicable) 
             For multilingual apps, and have prefix_language mandatory, add manually at least one language in the language table for you are allowed to use the CMS;
 
-        9) Run 'runserver' to test Django!
+        10) Run 'runserver' to test Django!
 
 
 

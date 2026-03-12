@@ -17,8 +17,8 @@ NODE.JS: INSTALLATION
 
             # Globally:
                 $ which nodejs
-                    # If this returned something, it extremelly advised to uninstall it:
-                        ./uninstall.txt
+                    # If this returned something, it extremely advised to uninstall it:
+                        ./4-uninstall.txt
 
         >> Installation approach:
             
@@ -45,34 +45,29 @@ NODE.JS: INSTALLATION
 
                 CRUCIAL:
                     Node.js with NVM is NOT installed by project but user. You can define which installed Node.JS version should run for each project folder (you'll see it further).
-
-                B.1) Make sure Node is NOT installed globally:
-                    $ which nodejs                 <-- if nothing returns, Node is NOT global! Good!
-                        # Otherwise, if it returned something, uninstall Node:
-                            ./4-uninstall.txt
                 
-                B.2) Installing NVM (it brings Node + NPM):
+                B.1) Installing NVM (it brings Node + NPM):
                 
                     RECOMMENDED:
                         Check if the installation steps below keeps true:
                             https://nodejs.org
                             
-                    B.2.1) Download and install NVM:
-                        $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+                    B.1.1) Download and install NVM:
+                        $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
-                    B.2.2) In lieu of restarting the shell
+                    B.1.2) In lieu of restarting the shell
                         $ \. "$HOME/.nvm/nvm.sh"
                     
-                    B.2.3) Download and install Node.js (it brings the NPM):
+                    B.1.3) Download and install Node.js (it brings the NPM):
                         $ nvm install 24
                     
-                    B.2.4) Verify versions:
+                    B.1.4) Verify versions:
                         $ node -v
                         $ npm -v
 
                         # If Node version is not what you want, no worries, keep going!
 
-                    B.2.5) Define which version you wanna work:
+                    B.1.5) Define which version you wanna work:
                         ./2.1-switch-versions.txt
 
 
@@ -96,6 +91,6 @@ NODE.JS: INSTALLATION
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-UNSTALLING:
+UNINSTALLING:
     ./4-uninstall.txt
 

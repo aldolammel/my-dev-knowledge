@@ -2,7 +2,7 @@
 
 PROGRAMMING CONCEPTS: PULL-REQUEST
 
-    PR is a way to propose chancges to a codebase and request that someone review and "pull" those changes into the project. It's a fundamental part of collaborative development, especially when using version control systems like Git.
+    PR is a way to propose changes to a codebase and request that someone review and "pull" those changes into the project. It's a fundamental part of collaborative development, especially when using version control systems like Git.
 
 
     Questions a good pull-request must to consider:
