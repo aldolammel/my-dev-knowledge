@@ -1,0 +1,47 @@
+
+
+DJANGO: RE-INSTALLING A NEW COPY (DJANGO OR ENTIRE PROJECT)
+
+
+    1) Which scenario you are:
+
+        A) Installing Django project for the first time in this machine/IDE (skip this roadmap);
+        B) Install Django in a new project (skip this roadmap);
+        C) Re-installing Django dependency in an existing project;
+        D) Re-installing an entire existing project;
+
+        - - - - - 
+
+        A) Installing Django project for the first time in this machine/IDE - - - - - - - - - - - - 
+        
+            >> Skipping this current roadmap, close this file, and go to:
+                ./0-django-installation-and-setup.txt
+
+
+        B) Install Django in a new project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            >> Skipping this current roadmap, close this file, and go to:
+                ./1-install-new-project.txt
+
+
+        C) Re-installing Django dependency in an existing project - - - - - - - - - - - - - - - - - 
+                
+            # Using UV:
+                ./3-re-install-only-django-with-uv.txt
+
+            # Or using PIP:
+                ./3-re-install-only-django-with-pip.txt
+
+
+        D) Re-installing an entire existing project - - - - - - - - - - - - - - - - - - - - - - - - 
+                
+            # Using UV:
+                ./3-re-install-project-with-uv.txt
+
+            # Or using PIP:
+                ./3-re-install-project-with-pip.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+

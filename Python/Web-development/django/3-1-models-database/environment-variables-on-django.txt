@@ -3,10 +3,11 @@
 DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
 
 
-    >> Using django-environ lib: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >> Using django-environ lib - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
         PRE) Lib installation:
-            /Python/Web-development/django/Env-Var-Managers/django-environ/_about.txt
+            .../django/Env-Var-Managers/django-environ/installation-and-integration.txt
 
         E.g. of Django /core/settings.py:
 
@@ -22,7 +23,9 @@ DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
             SECRET_KEY = env("SECRET_KEY")
 
 
-    >> Using XXXXXXXXXXXXXX lib: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> Or using XXXXXXXXXXXXXX lib - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
         PRE) Lib installation:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

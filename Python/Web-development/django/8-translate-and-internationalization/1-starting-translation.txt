@@ -9,13 +9,11 @@
 
                 >> Gettext Module (to translate the content itself):
                     
-                    $ sudo apt update
-                    $ sudo apt install gettext
+                    /Python/component-libraries/gettext/0-gettext.txt
 
-                >> Rosseta app (include an admin sub-app to manage translations):
+                >> Rosetta app (include an admin sub-app to manage translations):
 
-                    $ python3 -m apt install --upgrade pip
-                    $ python3 -m pip install apt install django-rosetta
+                    .../django/component-libraries/django-rosetta/0-django-rosetta.txt
             
             
             1.2) In settings.py, add the LocaleMiddleware between 'Session' and 'Common'
@@ -261,54 +259,26 @@
         
         3) Database Translation process: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            3.1) Install the Parler Module:
+            3.1) Install and integrate Parler Module:
 
-                $ python3 -m pip install django-parler
-
-
-            3.2) Going back to settings.py, in 'Installed Apps', add:
-
-                'parler',
+                .../django/component-libraries/django-parler/0-django-parler.txt
 
 
-            3.3) Still throught settings.py, add in 'Internationalization' section:
-
-                #PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE  # Not needed because 'fallbacks' is set manually.
-                PARLER_LANGUAGES = {
-                    None: (
-                        {'code': LANG_CODE_PTBR},
-                        {'code': LANG_CODE_ES},
-                        {'code': LANG_CODE_ENUS},
-                    ),
-                    'default': {
-                        'fallbacks': [LANG_CODE_ENUS, LANG_CODE_PTBR],  # Cascade fallbacks!
-                        'hide_untranslated': False,
-                    },
-                }
-
-                >> For multi-site project: replace None with the SITE_ID. Each SITE_ID can be added
-                    as additional entry in the dictionary.
+            
+            3.2) For Models:
+                ./translate-models.txt
 
 
-            3.4) For Models:
-
-                /Python/Web-development/django/8-translate-and-internationalization/translate-models.txt
-
-
-            3.5) For CMS, through each sub-app admin.py file that has its models.py envolved:
-
-                /Python/Web-development/django/8-translate-and-internationalization/translate-cms.txt
+            3.3) For CMS, through each sub-app admin.py file that has its models.py envolved:
+                ./translate-cms.txt
 
 
-            3.6) For Model Managers and Model QuerySets:
-
-                /Python/Web-development/django/8-translate-and-internationalization/translate-querysets-and-managers.txt
+            3.4) For Model Managers and Model QuerySets:
+                ./translate-querysets-and-managers.txt
                     
 
 
-
-
-        4) Language switching on the interface: - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        4) Language switching on the interface - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
             4.1) Create a global-context file called 'context_processors.py' in 'general' sub-app:

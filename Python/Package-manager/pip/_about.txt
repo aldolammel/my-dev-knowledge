@@ -3,8 +3,9 @@
 PYTHON PACKAGE MANAGEMENT: PIP (PYTHON BUILT-IN MODULE)
 
 
-    ATTENTION: Uv is much more efficient and modern than pip:
-                /Python/Package-manager/uv.txt
+    ATTENTION:
+        Uv is much more efficient and modern than pip:
+            /Python/Package-manager/uv.txt
 
 
     That said, let's go:

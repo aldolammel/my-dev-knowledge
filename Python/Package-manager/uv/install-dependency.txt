@@ -5,6 +5,9 @@ PYTHON > UV PACKAGE MANAGER: INSTALLING DEPENDENCIES
     PRE) What is it:
         ./_about.txt
 
+    BE AWARE:
+        Avoid to use "uv pip install <package_name>" once this command doesn't automatically update crucial files in a project like 'uv.lock' and 'pyproject.toml'.
+
     # Mandatory one:
         $ uv add <package_name>
     

@@ -7,27 +7,15 @@ ENVIRONMENT VARIABLE MANAGER: DJANGO-ENVIRON
     parsing that are indispensable for Django projects.
 
 
-    Examples (Do not use them):
+    Examples:
         
         1) Defining the back-end environment variables:
-            /Python/Web-development/django/Env-Var-Managers/django-environ/examples/.env
+            ./examples/.env
         
         2) Calling those env vars in Django settings:
-            /Python/Web-development/django/Env-Var-Managers/django-environ/examples/settings.py
+            ./examples/settings.py
 
 
-    >> Installation:
+    >> Installation and Integration:
+        ./installation-and-integration.txt
 
-        1) Include the manager as a mandatory project's dependency:
-        
-            >> Using UV:
-                $ uv add django-environ
-            
-            >> Or using PIP:
-                $ python3 -m pip install django-environ
-
-
-    >> Integration:
-
-        1) (If applicable)
-            Make sure .gitignore file is ignoring or not the .env file;

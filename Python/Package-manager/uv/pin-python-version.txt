@@ -2,4 +2,16 @@
 
 UV PACKAGE MANAGER: DEFINE WITH PYTHON VERSION THE PROJECT MUST USE
 
-    $ uv python pin 3.13.9
+    # For just one version accepted:
+        $ uv python pin <python-version>
+            E.g.
+                $ uv python pin 3.13.9
+
+    # Or for multiple versions accepted:
+        $ uv python pin "<python-version>"                <-- between quotes
+            E.g.
+                $ uv python pin ">=3.13,<3.14"             <-- need to test!!!!!
+
+                
+    IMPORTANT:
+        Pin command will auto-update the .python-version file!

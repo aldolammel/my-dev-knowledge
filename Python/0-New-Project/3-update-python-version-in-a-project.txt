@@ -2,7 +2,8 @@
 
 PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
 
-    CRITICAL) Are you really sure the Python version you need to install is compatible with other techs of the project stack? For example, the back-end framework you are using supports this new Python version? If so, keep going!
+    CRITICAL:
+        Are you really sure the Python version you need to install is compatible with other techs of the project stack? For example, the back-end framework you are using supports this new Python version? If so, keep going!
     
     >> Which tool are you using:
 
@@ -38,9 +39,7 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
             B.2) In your project folder/environment, set up:
 
                 # Defining to UV which Python version the project must run, e.g.:
-                    $ uv python pin 3.13.9
-                        # It will auto-update the .python-version file!
-
+                    /Python/Package-manager/uv/pin-python-version.txt
                 
                 # (If applicable) In pyproject.toms file, update Python version:
                     [project]

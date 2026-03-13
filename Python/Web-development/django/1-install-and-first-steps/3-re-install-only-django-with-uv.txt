@@ -1,0 +1,43 @@
+
+
+DJANGO RE-INSTALLATION: USING UV AS PACKAGE MANAGER
+
+
+    PRE.1) If you wanna install a new brand project, skip this roadmap, and go to:
+        ./2-install-project-with-uv.txt
+
+        
+    PRE.2) Assuming you already got UV installed:
+        /Python/Package-manager/uv.txt
+
+
+    PRE.3) Assuming you already opened the Project folder through an IDE;
+
+
+    PRE.4) Active the project environment:
+        /Python/3-virtual-environment/activate-and-deactivate.txt
+
+
+    1) Replace the current Django version by the new one:
+        $ uv add Django==5.0
+    
+
+    2) About the integration update, UV automatically updates crucial project files like the 'pyproject.toml' one.
+
+
+
+    ---- NEED TO REVIEW: ----------------------------
+
+
+    X) migration or makemigrations is needed again?
+
+
+    3) (Optional)
+        If you have multilingual support in your project:
+
+        >> With Gettext module installed:
+            
+            $ uv run manage.py makemessages --all
+            $ uv run manage.py compilemessages
+
+            

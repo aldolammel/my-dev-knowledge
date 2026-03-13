@@ -28,6 +28,8 @@ DRF: DJANGO REST FRAMEWORK
 
     1) Install:
 
+        PRE) Assuming you already are in the project environment!
+
         # With PIP:
             $ python3 -m pip install djangorestframework
         # With UV:
@@ -71,7 +73,7 @@ DRF: DJANGO REST FRAMEWORK
                     #...
 
                     # APIs:
-                    path('api-auth/', include('rest_framework.urls'))
+                    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
                     # THIRD-PARTY:
                     #...
@@ -81,13 +83,13 @@ DRF: DJANGO REST FRAMEWORK
                     Note that the URL path can be whatever you want!
 
                 >> Example:
-                    /Python/Web-development/django/component-libraries/django-rest-framework/example/core/
+                    ./example/core/
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 >> DRF POWER-UPS: CREATING APIs
-    /Python/Web-development/django/component-libraries/django-rest-framework/1-serializers.txt
+    ./1-serializers.txt
 
 >> EXPANDING DJANGO REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
-    /Python/Web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.txt
+    .../component-libraries/json-web-token-SimpleJWT/0-jwt.txt

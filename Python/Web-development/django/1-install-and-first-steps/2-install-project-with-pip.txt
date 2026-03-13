@@ -1,0 +1,94 @@
+
+
+DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
+
+    PRE.1) If you wanna re-install an existing project, skip this roadmap, and go to:
+        ./3-re-install-project-with-pip.txt
+
+    PRE.2) Assuming you already updated PIP:
+        /Python/Package-manager/pip/_about.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> BEFORE PROJECT INSTALLATION:
+    
+        PRE.1) Make sure you are in the MAIN python environment, not in a virtual one!
+            /Python/3-virtual-environment/activate-and-deactivate.txt
+
+        PRE.2) Make sure you already installed the right Python version for this project:
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> PROJECT SETUP:
+
+        1) Local project folder:
+            
+            >> Create the project folder, keeping this in mind:
+                .../django/django-project-folder-structure.txt
+        
+        
+        2) Assuming you already opened the Project folder through an IDE;
+
+
+        3) (If applicable)
+            Project versioning:
+                >> Create a repository or use an existing one:
+                    /Versioning/git/command-init.txt
+
+
+        4) Creating the virtual environment:
+                    
+            >> Create it:
+                /Python/3-virtual-environment/creating-virtual-environment.txt
+
+            >> Active it:
+                /Python/3-virtual-environment/activate-and-deactivate.txt
+        
+        
+        5) Creating the new project:
+
+            5.1) Make sure you're in the project virtual environment!
+
+            5.2) Install Django in this project:
+                    
+                >> Ubuntu/Windows:
+
+                    >> Install:
+                        $ python3 -m pip install django
+
+                    >> Check the current Django installed:
+                        $ python -m django --version
+
+                    >> upgrade Django if needed;
+                        $ python -m pip install --upgrade pip
+
+                >> Mac:
+                    xxxxxxxxxxxxxx
+        
+
+        6) (Optional)
+            Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
+                
+                /Python/Package-manager/pip/install-dependency.txt
+
+                # The Engineering Data document link must be registered in the Django core settings.py file!
+
+
+        7) (Optional)
+            If you have multilingual support in your project:
+
+            >> With Gettext module installed:
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        
+        
+        8) (Optional)
+            Make sure you got your .gitignore updated with Django, environment and other things:
+                /Versioning/git/gitignore-file.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

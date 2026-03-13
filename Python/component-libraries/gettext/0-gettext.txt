@@ -1,0 +1,22 @@
+
+
+PYTHON MODULE: GETTEXT
+
+    The gettext module is a core part of Python's standard library that provides internationalization (i18n) and localization (l10n) services for Python apps.
+
+    >> Installation:
+
+        PRE) Assuming you're in the project environment!
+        
+        1) Install in the machine?
+            $ sudo apt update
+            $ sudo apt install gettext     <-- Check if it's not installable by PIP, for example!
+
+        2) $ uv add python-gettext
+        
+
+
+    >> Integration:
+
+        Check this file:
+            /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt

@@ -1,0 +1,126 @@
+
+
+DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
+
+    PRE.1) If you wanna re-install an existing project, skip this roadmap, and go to:
+        ./1-re-install-project-with-uv.txt
+
+    PRE.2) Assuming you already have the UV package manager installed:
+        /Python/Package-manager/uv.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> BEFORE PROJECT INSTALLATION:
+        
+        PRE.1) Make sure you are in the MAIN python environment, not in a virtual one!
+            /Python/3-virtual-environment/activate-and-deactivate.txt
+
+        PRE.2) Make sure you already installed all Python versions for this project:
+
+            >> Check which Python versions you got installed:
+                $ uv python list
+            
+            >> E.g. you want to install more than one Python version:
+                $ uv python install 3.11 3.12 3.13
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> PROJECT SETUP:
+
+        1) Local project folder:
+            
+            >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further:
+                .../django/django-project-folder-structure.txt
+        
+        
+        2) Assuming you already opened the Project folder through an IDE;
+
+
+        3) (If applicable)
+            Project versioning:
+                >> Create a repository or use an existing one:
+                    /Versioning/git/command-init.txt
+        
+        
+        4) Creating new project:
+                
+            4.1) Basic for project:
+
+                PRE) Assuming you already created the virtual environment folder:
+                    /Python/Package-manager/uv/create-or-find-current-venv.txt
+
+                >> Create the minimum Python project scaffolding:
+                    
+                    ATTENTION:
+                        If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overridden files in project folder is not empty!
+
+                    # That said, do it:
+                        $ uv init
+
+
+            4.2) Checking UV config:
+                
+                >> In pyproject.toml file:
+
+                    PRE.1) Make sure you has active the project's virtual environment!
+                        /Python/3-virtual-environment/activate-and-deactivate.txt
+
+                    PRE.2) If needed, model files:
+
+                        >> Python basics:
+                            /Python/Web-development/pyproject.toml
+
+                        >> Django basics:
+                            .../django/IDE-softwares/vscode/examples/settings.json
+
+                    >> Check if the Python version on that file is correct!
+                        If NOT okay, fix it!
+                            E.g.
+                                requires-python = ">=3.13,<3.14"
+                                
+                >> Check the .python-version file:
+                
+                    >> In case this file has the wrong Python version or versions, don't edit directly this file. Use the pin command:
+                                
+                        /Python/Package-manager/uv/pin-python-version.txt
+
+
+            4.3) Install Django in this project:
+                
+                # Install a specific version (recommended):
+                    $ uv add django==5.2.7
+                # Or the latest version:
+                    $ uv add django
+
+
+
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        5) (Optional)
+            Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
+                
+                /Python/Package-manager/uv/install-dependency.txt
+
+                # The Engineering Data document link must be registered in the Django core settings.py file!
+        
+        
+        6) (Optional)
+            If you have multilingual support in your project:
+
+            >> With Gettext module installed:
+                
+                $ uv run manage.py makemessages --all
+                $ uv run manage.py compilemessages
+
+            
+        7) (Optional)
+            Make sure you got your .gitignore updated with Django, environment and other things:
+                /Versioning/git/gitignore-file.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

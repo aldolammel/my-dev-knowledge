@@ -13,8 +13,40 @@ DJANGO > POLYMORPHIC SOLUTION: DJANGO-POLYMORPHIC
         ./example/real-case.py
         
     
-    >> Installation and Integration:
-        ./installation.txt
+    >> INSTALLING:
+
+        PRE) Assuming you already are in the project environment!
+
+        1) Install as a project dependency:
+            
+            LINUX:
+                # PIP:
+                    $ pip install django-polymorphic
+                # Or UV:
+                    $ uv add django-polymorphic
+
+            WINDOWS:
+                $ xxxxxxxxxxxxxxxxxxxxx
+
+
+    >> INTEGRATING:
+
+        1) In your Django core settings:
+
+            INSTALLED_APPS = [
+                # DJANGO DEFAULT SUB-APPS:
+                'django.contrib.contenttypes',
+                # THIRD-PARTY SUB-APPS:
+                'polymorphic',
+            ]
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    EXAMPLES:
+        ./example/basic.py
+        ./example/real-case.py
 
 
     

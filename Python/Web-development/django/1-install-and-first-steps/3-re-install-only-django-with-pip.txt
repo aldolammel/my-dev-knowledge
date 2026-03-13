@@ -1,0 +1,62 @@
+
+
+DJANGO RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
+
+    
+    PRE.1) If you wanna install a new brand project, skip this roadmap, and go to:
+        ./2-install-project-with-pip.txt
+    
+
+    PRE.2) Make sure you already updated PIP:
+        /Python/Package-manager/pip/_about.txt
+
+
+    PRE.3) Assuming you already opened the Project folder through an IDE;
+
+
+    PRE.4) Active the project environment:
+        /Python/3-virtual-environment/activate-and-deactivate.txt
+
+
+    1) Uninstall the current Django version:
+        $ pip uninstall Django
+
+
+    2) Install the new Django version:
+        $ pip install Django==5.0
+
+        # Check the current installed version:
+            $ python -m django --version
+
+
+    3) About the integration update, update the Django version in these files:
+        
+        /project_folder/pyproject.toml
+            # More about:
+                xxxxxxxxxxxxxxxxxxxxxxxx
+
+        # Or:
+        
+        /project_folder/requirements.txt
+            # More about:
+                /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
+            
+
+        
+
+
+    ---- NEED TO REVIEW: ----------------------------
+
+
+    X) migration or makemigrations is needed again?
+
+
+    3) (Optional)
+        If you have multilingual support in your project:
+
+        >> With Gettext module installed:
+            
+            $ uv run manage.py makemessages --all
+            $ uv run manage.py compilemessages
+
+        

@@ -1,8 +1,8 @@
 
 
-DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
+DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
 
-    >> Basic about PIP:
+    PRE.1) Basic about PIP:
         /Python/Package-manager/pip/_about.txt
 
 
@@ -10,7 +10,11 @@ DJANGO INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
 
 
     >> BEFORE THE PROJECT: 
-    
+
+        >> Create a new project folder, and get it:
+            $ mkdir <project_folder_v2>
+            $ cd <project_folder_v2>
+
         1) Make sure you are in the MAIN python environment, not in a virtual one!
 
         2) Now, update the PIP:

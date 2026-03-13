@@ -3,331 +3,73 @@
 DJANGO: INSTALLING AND SETUP
 
 
-    >> Which of them is your case:
+    1) Which scenario is your case:
 
-        A) This machine already has Django projects running, and I'm just re-installing Django for an existing app:
+        A) This machine and IDE are ready for Django projects, and I got a brand new project:
+
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
+
+
+        B) This machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project):
             
             >> Skip this file, jumping to this one:
-                ./reinstall-new-django-copy.txt
+                ./1-reinstall-new-copy.txt
 
 
-        B) This machine already has Django projects running, but I got a brand new Django project:
+        C) This machine (or IDE) is new (for example, after the OS installation) and I need to prepare it to run Django projects:
 
-            >> Skip this file, xxxxxxxxxxxxxxxxxxxxxx
-
-
-        C) This machine is new (for example, after the OS installation) and I need to prepare it to run Django projects:
-
-            >> Still in this roadmap file!
+            >> Keep yourself in this roadmap file!
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - -
 
 
-    PRE.1) Python interpreter (if needed);
-            /Python/1-python-installation/
+        C) This machine (or IDE) is new! Preparing it to everything about Django - - - - - - - - - -
 
-    PRE.2) Create the project folder, and get it:
-            $ mkdir <project_folder>
-            $ cd <project_folder>
+            C.PRE.1) Python interpreter (if needed);
+                /Python/1-python-installation/
 
-    PRE.3) Create the project's virtual environment:
-            /Python/3-virtual-environment/creating-virtual-environment.txt
+            C.PRE.2) Create the project folder, and get it:
+                $ mkdir <project_folder>
+                $ cd <project_folder>
 
-    PRE.4) Did you already active project's virtual environment?! I hope so!
-            /Python/3-virtual-environment/
+            C.PRE.3) Create the project's virtual environment:
+                /Python/3-virtual-environment/creating-virtual-environment.txt
 
-    PRE.5) IDE, language setup:
-            >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
-            >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+            C.PRE.4) Did you already active project's virtual environment?! I hope so!
+                /Python/3-virtual-environment/
+
+            C.PRE.5) IDE, language setup:
+                >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
+                >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+
+            C.1) IDE, framework setup:
+                >> VSCode:  .../django/IDE-softwares/vscode/basic-for-django.txt
+                >> PyCharm: .../django/IDE-softwares/pycharm/basic-for-django.txt
+
+            C.2) Install Django for a specific project:
+
+                    >> Using UV (recommended, smarter):
+                        ./2-install-project-with-uv.txt
+
+                    >> Or using PIP (Django built-in solution):
+                        ./2-install-project-with-pip.txt
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-    0) IDE, framework setup:
-        >> VSCode:  /Python/Web-development/django/IDE-softwares/vscode/basic-for-django.txt
-        >> PyCharm: /Python/Web-development/django/IDE-softwares/pycharm/basic-for-django.txt
-
-
-    
-    1) (If applicable)
-        Case you already used UV for sync the existing project, skip it!
-
-        Installing Django through the right Package Manager:
-
-            1A) Installing Django, using UV (recommended, more professional):
-                ./1-with-uv-manager.txt
-
-            1B) Or installing Django, using PIP (Django built-in solution).
-                ./1-with-pip-manager.txt
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     
+    2) Once Django project already installed, let's ask us again about the current case:
     
-    2) (If applicable) 
-        Case you already used UV for sync the existing project, skip it!
-        
-        After Django installation, create the Django Project Structure:   
-        
-            >> Go to the project root folder and ask the package manager to create the 'core' folder:
-                # Using UV:
-                    $ uv run django-admin startproject core .         <-- This dot's important!
-                # Using PIP:
-                    $ django-admin startproject core .                <-- This dot's important!
-                
+        A) This machine and IDE are already for Django projects, and I got a brand new project:
 
-    3) (If applicable)
-        Case your existing project already has its back-end .env file, skip it! Otherwise:
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
 
-        >> Locally, create your existing project .env file for the back-end:
-            /Environment-Variables/env-for-local/in-backend/
-
-        >> Make sure you already included all env variables needed for your app, for example, those for email:
-            .../django/13-email/config-settings.txt
-
-
-
-    4) This current project already has a local DB?
-    
-        4A) Yes, but empty;
-        4B) Yes, and with app content
-        4C) No, no db yet;
-        
-        - - - - 
-        
-        4A) Yes, but empty - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            >> Use the Django migrate command once the .env is correctly configured:
-                .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
-
-
-        4B) Yes, and with app content - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-            >> Skip it so!
-
-
-        4C) No - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            4C.PRE) Check which db your project is using and if the db technology is installed in your machine!
-
-            4C.1) Create the db based on that name in the project .env file;
-
-            4C.2) Use the Django migrate command once the .env is correctly configured!
-                .../django/3-1-models-database/1-recreate-database/_recreating-db.txt
-
-
-
-    5) Now, in the project root folder, you must see some files, like 'manage.py', including the folder 'core' with its content. If so, you create the django project correctly! That said, keep going:
-        
-        5.PRE.1) Assuming you already are in the project environment!
-
-        5.PRE.2) (if applicable) Assuming you already are in the right Versioning branch!
-            /Versioning/git/command-checkout.txt
-        
-        5.1) Test Django files:
-            $ python manage.py check
-            or
-            $ uv run manage.py check
-
-
-        5.2) Ask Django to create its db (further we'll see how to change db systems):
+        B) This machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project):
             
-            # If no migrations files in sub-apps folders:
-                $ python manage.py makemigrations
-                or
-                $ uv run manage.py makemigrations
+            >> Skip this file, jumping to this one:
+                ./1-reinstall-new-copy.txt
 
-            # Build the local database:
-                $ python manage.py migrate
-                or
-                $ uv run manage.py migrate
-
-        5.3) Run Django to check if it's accessible by your local browsers:
-            # Starting Django server:
-                $ python manage.py runserver
-                or
-                $ uv run manage.py runserver
-            # On browser:
-                http://localhost:8000/
-
-    
-
-
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        Since this point, you might execute basic tests without the follow steps once your goal
-                            would be to test something basic on Django.
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
-    6) Through the Django config-folder (e.g. "core"), open the settings.py file:
-    
-        6.1) (Skip it if you'll use an existent settings.py model later)
-            Organize the settings.py header:
-
-            # App Essential Settings:
-            BASE_DIR = ...
-            SECRET_KEY = ...
-            DEBUG = ...
-            ALLOWED_HOSTS = ...
-
-
-        6.2) Prepare a Global Context with the Essential info about the app:
-                .../django/3-2-views-and-API/1-building-views-context/global-context.txt
-        
-
-        6.3) Still in settings.py file, if you WON'T use the SQLite as database:
-
-                >> If you'll use an settings.py model later, save this SECRET KEY to use in the
-                    new settings.py later!
-
-
-        6.4) Define your database:
-            .../django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
-
-
-    7) Defining the back-end environment-variables, and configure Django to read it:
-        
-        7.1) Create the .env file in the Django project-folder (don't mistake with the core-folder):
-        
-            >> A) Environment-variables are managed locally;
-                    /Environment-Variables/env-for-local/in-backend/.env
-
-            >> B) Or environment-variables are managed by a cloud service;
-                    /Environment-Variables/env-for-cloud/in-backend/.env
-
-        7.2) Configure Django to read properly those basic env vars:
-            
-            .../django/3-1-models-database/environment-variables-on-django.txt
-
-
-    8) Linters and formatters:
-
-        PRE) Python linter/formatter/type-checker:
-            /Python/IDE-softwares/vscode/basic-for-python.txt
-        
-        8.1) Django linter/formatter:
-
-            >> Using Djlint (recommended):
-                .../django/Linter-Formatter-Typechecker/djlint/installation.txt
-
-            >> Other options:
-                .../django/Linter-Formatter-Typechecker/_formatter/django-options.txt
-                .../django/Linter-Formatter-Typechecker/_linter/django-options.txt
-
-        8.2) Django type-checker:
-
-            >> Options:
-                .../django/Linter-Formatter-Typechecker/_type-checker/django-options.txt
-    
-    
-
-    9) Create basic sub-apps in the project's app:
-
-        PRE) Bring your main Django sub-apps for each case:
-
-            >> Pagex:
-                .../django/useful-sub-apps/pagex/
-
-            >> Or Wagtail:
-                .../django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt
-
-
-        9.1) (Skip it if you'll use an existent settings.py model later) 
-            Show to Django where will be each template folder in your sub-apps, going to the
-            core-folder 'settings.py' file and editing this line in 'template' list:
-                
-                From:
-                    'DIRS': [],
-                To:
-                    'DIRS': [BASE_DIR / 'templates'],
-
-
-        9.2) If you want to use a settings.py model file, now is the time!
-            .../django/z-project-examples/proj-aldolammel-style/core/settings.py
-            
-            >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
-                file when you bring it to your project!
-
-            >> Keep commented the Installed sub-apps for now!
-
-
-        9.3) Adding sub-apps:
-
-            
-            >> How to create a sub-app:
-                .../django/2-creating-and-deleting-apps/creating.txt
-
-
-            >> Do you need user management through the app front-end too?
-
-                >> If not:
-                    .../django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
-
-                >> If so:
-                    .../django/3-1-models-database/3-users/2-extending-users.txt
-
-
-
-    10) Creating the admin user:
-        
-        $ python manage.py createsuperuser
-        or
-        $ uv run manage.py createsuperuser
-
-        # Now, try to login, making sure the main-app is running:
-        $ python manage.py runserver
-        or 
-        $ uv run manage.py runserver
-
-        # Go to:
-        http://localhost:8000/admin/
-
-
-
-    11) (Skip it if you'll use an existent settings.py model later)
-        Will this project have more than one language?
-
-            If not, add in your settings.py:
-                USE_I18N = False
-                
-            Otherwise:
-                .../django/8-translate-and-internationalization/1-starting-translation.txt
-
-
-    12) Optionals:
-
-        12.1) Will you use file upload?
-           .../django/5-uploads/
-
-        12.2) Will you use image upload?
-            .../django/5-uploads/images/
-
-
-    13) Install the front-end solution:
-    
-        13A) Django template solution;
-        13B) Or Vue;
-        13C) Or React;
-        13D) Or Angular;
-
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-        13A) Django template solution:
-            .../django/0-new-project/web-project-django-only.txt
-
-
-        13B) Vue:
-            .../django/0-new-project/web-project-django-with-vue.txt
-
-
-        13C) React:
-            .../django/0-new-project/web-project-django-with-react.txt
-
-
-        13D) Angular:
-            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

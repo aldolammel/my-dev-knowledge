@@ -1,0 +1,32 @@
+
+
+DJANGO LIB: DJANGO-ROSETTA
+
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    
+    >> Installation:
+
+        PRE) Probably you will need this:
+            /Python/component-libraries/gettext/0-gettext.txt
+
+        1) Installation:
+            
+            # Using UV:
+                $ uv add django-rosetta
+            
+            # Or using PIP:
+                $ xxxxxxxxxxxxxxxxxxxxx
+    
+    
+    >> Integration: 
+    
+        In core/settings.py:
+            Installed_Apps: 
+                # THIRD-PARTY SUB-APPS:
+                “rosetta”,
+
+
+        Check this file:
+            /Python/Web-development/django/8-translate-and-internationalization/1-starting-translation.txt
+

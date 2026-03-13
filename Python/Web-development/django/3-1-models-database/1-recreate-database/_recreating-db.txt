@@ -65,4 +65,4 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
 
 
 HOW TO RE-INSTALL ONLY THE DJANGO:
-    .../django/1-install-and-first-steps/reinstall-new-django-copy.txt
+    .../django/1-install-and-first-steps/1-reinstall-new-copy.txt
