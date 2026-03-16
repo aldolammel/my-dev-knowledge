@@ -4,7 +4,7 @@ CREATING THE SUPER ADMIN USER:
 
 
     PRE) After to install the desired database:
-        /Python/Web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
+        ./_define-the-database.txt
 
 
     1) Let's perform the database basic tasks:

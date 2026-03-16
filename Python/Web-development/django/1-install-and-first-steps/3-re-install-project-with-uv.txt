@@ -2,28 +2,26 @@
 
 DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
 
-    PRE.1) Basic about UV:
-        /Python/Package-manager/uv.txt
-
-    PRE.2) If you wanna install a totally new brand project, skip this roadmap, and go to:
+    PRE.1) If you wanna install a totally new brand project, skip this roadmap, and go to:
         ./2-install-project-with-uv.txt
+
+    PRE.2) Assuming you already have the UV package manager installed:
+        /Python/Package-manager/uv.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     >> BEFORE PROJECT RE-INSTALLATION:
-    
-        >> Create a new project folder, and get it:
+        
+        PRE) Case you have an older and non-function project version in your machine, don't delete that project folder! You may need that further!
+
+        1) Create a new folder for the existing project:
             $ mkdir <project_folder_v2>
             $ cd <project_folder_v2>
-    
-        1) Make sure you are in the MAIN python environment, not in a virtual one!
-            /Python/3-virtual-environment/activate-and-deactivate.txt
 
-        2) Now, install the UV package manager:
-            /Python/Package-manager/uv.txt
-
+        2) Open this new folder in your IDE;
+        
         3) Make sure you already installed all Python versions for this project:
 
             >> Check which Python versions you got installed:
@@ -33,105 +31,53 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
                 $ uv python install 3.11 3.12 3.13
 
 
-    
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-    >> DJANGO INSTALLATION AND SETUP:
+    >> PROJECT RE-CREATION:
 
-        1) Local project folder:
+        1) Clone the project into the new project folder:
+            /Versioning/git/command-clone.txt
+
+        
+        2) (If applicable)
+            Local project folder structure:
             
-            >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further:
+            >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further (use the django structure example only for consulting best practices):
                 .../django/django-project-folder-structure.txt
-
-                ATTENTION:
-                    If the project already exists with a functional Django, use the django structure example only for consulting best practices.
         
         
-        2) Assuming you already opened the Project folder through an IDE;
+        3) Create the .venv folder:
+            /Python/Package-manager/uv/auto-installation-with-sync.txt
 
-
-        3) (If applicable)
-            Project versioning:
-                >> Create a repository or use an existing one:
-                    /Versioning/git/command-init.txt
+            # Make sure you activated the environment:
+                /Python/3-virtual-environment/activate-and-deactivate.txt
         
         
-        4) Choosing the way to create the Django project files:
+        4) Installing all project dependencies based on requirements:
+
+            >> Using pyproject.toml:
+                >> Nothing to do! Uv already synced dependencies when .venv folder was created!
+
+            >> Or Using requirements.toml:
+                /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
 
 
-            4B) OR I'M GETTING AN EXISTING PROJECT:
+        5) Choosing the way to create the project's db:
 
-                >> Create a new project folder, and get it:
-                    $ mkdir <project_folder_v2>
-                    $ cd <project_folder_v2>
+            >> You don't have a local db created yet:
+                /Database/00-new-project/
 
-                4B.1) In project folder, what about pyproject.toml file:
-
-                    4B.1.YES) Project has the pyproject.toml file;
-                    4B.1.NO) Project don't has the pyproject.toml file;
-
-                    - - - - -
-
-                    4B.1.YES) Project has its pyproject.toml file - - - - - - - - - - - - - - - - - 
-
-                        >> Make UV create the virtual environment based on the project's pyproject.toml file:
-                            /Python/Package-manager/uv/auto-installation-with-sync.txt
-
-                            # Alternatively, if by any reason you can't use 'sync', use the 'venv' command:
-                                /Python/Package-manager/uv/create-or-find-current-venv.txt
-
-                                # After 'venv' command, active the new virtual environment!
-                                    /Python/3-virtual-environment/activate-and-deactivate.txt
-
-
-                    4B.1.NO) Project don't has the pyproject.toml file - - - - - - - - - - - - - -
-
-                        PRE) Once you've checked with the project team the file indeed doesn't exist, keep going!
-
-                        >> Find the current local venv folder if it exists, or if it doesn't, create a venv folder:
-                            /Python/Package-manager/uv/create-or-find-current-venv.txt
-
-                        >> (CAREFUL HERE, USE INIT COMMAND ONLY IF YOU KNOW WHAT YOU DOING)
-                        Case the project has no pyproject.toml and other minimum Python project scaffolding files, ask UV to create them:
+            >> Or you already have the local db created:
                         
-                        ATTENTION:
-                            Other files like .gitignore will be created too, double check to see which files the init command would create (or override) in project!
+                >> Run the makemigrations command:
+                    $ uv run manage.py makemigrations
 
-                        # That said, do it:
-                            $ uv init
-
-                        >> Install dependencies:
-                            /Python/Package-manager/uv/install-dependency.txt
+                >> Even if no migrations in previously command, run the migrate command:
+                    $ uv run manage.py migrate
 
 
-                    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-                4B.2) Choosing the way to create the Django project database:
-
-                    4B.2.YES) You already have the local database created;
-                    4B.2.NO) Or you don't have a local database created yet;
-
-                    - - - - - 
-
-                    4B.2.YES) You already have the local database created - - - - - - - - - - - - - 
-                                
-                        >> Run the makemigrations command:
-                            $ uv run manage.py makemigrations
-
-                        >> Even if no migrations in previously command, run the migrate command:
-                            $ uv run manage.py migrate
-
-                    4B.2.NO) You don't have a local database created yet - - - - - - - - - - - - -
-                            
-                        xxxxxxxxxxxxxxxxxxxx
-
-
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-        5) (Optional)
+        6) (If applicable)
             If you have multilingual support in your project:
 
             >> With Gettext module installed:
@@ -140,11 +86,17 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
                 $ uv run manage.py compilemessages
 
             
-
-        6) (Optional)
+        7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
                 /Versioning/git/gitignore-file.txt
 
 
-        >> Return to Django project installation roadmap:
-            ./0-django-installation-and-setup.txt
+        8) Check Django installation and setup:
+            ./2.1-installed-project-testing.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt

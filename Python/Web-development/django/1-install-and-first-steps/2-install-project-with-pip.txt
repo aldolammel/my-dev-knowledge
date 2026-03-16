@@ -14,8 +14,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
     >> BEFORE PROJECT INSTALLATION:
     
-        PRE.1) Make sure you are in the MAIN python environment, not in a virtual one!
-            /Python/3-virtual-environment/activate-and-deactivate.txt
+        PRE.1) DON'T create venv yet!
 
         PRE.2) Make sure you already installed the right Python version for this project:
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -23,7 +22,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    >> PROJECT SETUP:
+    >> PROJECT CREATION:
 
         1) Local project folder:
             
@@ -40,20 +39,15 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
                     /Versioning/git/command-init.txt
 
 
-        4) Creating the virtual environment:
+        4) Creating new project:
                     
-            >> Create it:
+            4.1) Create the virtual environment folder:
                 /Python/3-virtual-environment/creating-virtual-environment.txt
 
-            >> Active it:
+            4.2) Once you now got a .venv folder, active the project's virtual environment:
                 /Python/3-virtual-environment/activate-and-deactivate.txt
         
-        
-        5) Creating the new project:
-
-            5.1) Make sure you're in the project virtual environment!
-
-            5.2) Install Django in this project:
+            4.3) Install Django in this project:
                     
                 >> Ubuntu/Windows:
 
@@ -68,9 +62,25 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
                 >> Mac:
                     xxxxxxxxxxxxxx
-        
 
-        6) (Optional)
+
+            4.4) Define your database case it SHOULDN'T use SQLite:
+                .../django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
+
+
+            4.5) After Django installation:
+
+                4.5.1) Create the Django Project structure, going to the project root folder and asking the package manager to create the 'core' folder:
+                
+                    $ django-admin startproject core .                     <-- This dot's important!
+            
+            
+                4.5.2) (If applicable)
+                    Case you need an admin user:
+                        .../django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.txt
+
+
+        5) (Optional)
             Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
                 
                 /Python/Package-manager/pip/install-dependency.txt
@@ -78,17 +88,40 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
                 # The Engineering Data document link must be registered in the Django core settings.py file!
 
 
-        7) (Optional)
+        6) (Optional)
             If you have multilingual support in your project:
 
             >> With Gettext module installed:
                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         
         
-        8) (Optional)
+        7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
                 /Versioning/git/gitignore-file.txt
 
 
+        8) Check Django installation and setup:
+            ./2.1-installed-project-testing.txt
+
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        Since this point, you might execute basic tests without the follow steps once your goal
+                            would be to test something basic on Django.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        10) (If applicable)
+            Commit files in your versioning service (e.g. GitHub)!
+
+        
+        11) Let's setup the new project:
+            ./2.2-installed-project-setup.txt
+
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt

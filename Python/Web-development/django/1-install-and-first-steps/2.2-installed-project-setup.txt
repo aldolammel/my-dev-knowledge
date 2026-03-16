@@ -1,0 +1,126 @@
+
+
+DJANGO: NEW PROJECT SETUP
+
+    
+    PRE.1) Assuming you already installed the new/empty project (with db or not):
+        ./2-install-project-with-uv.txt  or  ./2-install-project-with-pip.txt
+
+
+    PRE.2) Assuming you already successfully tested the new/empty project:
+        ./2.1-installed-project-testing.txt
+
+
+    1) In core/settings.py, save in a safe place the SECRET_KEY (link in the project's Engineering Data document)!
+    
+    
+    2) Through the Django config-folder (e.g. "core"), open the settings.py file:
+    
+        2.1) (Skip it if you'll use an existent settings.py model later)
+            Organize the settings.py header:
+
+            # App Essential Settings:
+            BASE_DIR = ...
+            SECRET_KEY = ...
+            DEBUG = ...
+            ALLOWED_HOSTS = ...
+
+
+        2.2) Prepare a Global Context with the Essential info about the app:
+                .../django/3-2-views-and-API/1-building-views-context/global-context.txt
+
+
+    3) Defining the back-end environment-variables, and configure Django to read it:
+        
+        3.1) Create the .env file in the Django project-folder (don't mistake with the core-folder):
+        
+            >> Environment-variables are managed locally;
+                /Environment-Variables/env-for-local/in-backend/.env
+
+            >> Or environment-variables are managed by a cloud service;
+                /Environment-Variables/env-for-cloud/in-backend/.env
+
+        3.2) Configure Django to read properly those basic env vars:
+            .../django/3-1-models-database/environment-variables-on-django.txt
+
+
+    4) Linters and formatters:
+
+        4.PRE) Python linter/formatter/type-checker:
+            /Python/IDE-softwares/vscode/basic-for-python.txt
+        
+        4.1) Django linter/formatter:
+
+            >> Using Djlint (recommended):
+                .../django/Linter-Formatter-Typechecker/djlint/installation.txt
+
+            >> Other options:
+                .../django/Linter-Formatter-Typechecker/_formatter/django-options.txt
+                .../django/Linter-Formatter-Typechecker/_linter/django-options.txt
+
+        4.2) Django type-checker:
+
+            >> Options:
+                .../django/Linter-Formatter-Typechecker/_type-checker/django-options.txt
+    
+    
+    5) Create/Bring basic sub-apps in the app:
+
+        5.PRE) Bring your main Django sub-apps for each case:
+
+            >> Pagex:
+                .../django/useful-sub-apps/pagex/
+
+            >> Or Wagtail:
+                .../django/4-cms-admin/3-cms-expansion-wagtail/_installation.txt
+
+
+        5.1) (Skip it if you'll use an existent settings.py model later) 
+            Show to Django where will be each template folder in your sub-apps, going to the
+            core-folder 'settings.py' file and editing this line in 'template' list:
+                
+                From:
+                    'DIRS': [],
+                To:
+                    'DIRS': [BASE_DIR / 'templates'],
+
+
+        5.2) If you want to use a settings.py model file, now is the time!
+            .../django/z-project-examples/proj-aldolammel-style/core/settings.py
+            
+            >> Don't forget to uncomment (of delete) those "TODO:" lines in the settings.py model
+                file when you bring it to your project!
+
+            >> Keep commented the Installed sub-apps for now!
+
+
+        5.3) Adding sub-apps:
+
+            >> How to create a sub-app:
+                .../django/2-creating-and-deleting-apps/creating.txt
+
+            >> Do you need user management through the app front-end too?
+
+                >> If not:
+                    .../django/3-1-models-database/3-users/1-basic-users-only-for-cms.txt
+
+                >> If so:
+                    .../django/3-1-models-database/3-users/2-extending-users.txt
+
+
+    6) Test the project's app again:
+        ./2.1-installed-project-testing.txt
+
+
+    7) (If applicable)
+        Will this project have more than one language? Skip it if you'll use an existent settings.py model later!
+
+            If not, add in your settings.py:
+                USE_I18N = False
+                
+            Otherwise:
+                .../django/8-translate-and-internationalization/1-starting-translation.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -13,13 +13,13 @@ PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END):
     >> Back-end:
 
         1.2) Basic installations:
-            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+            .../django/1-install-and-first-steps/0-django-installation-and-setup.txt
         
     >> Front-end:
     
         1.3) Front-end solution (Django):
             Use it as reference:
-                /Python/Web-development/django/django-project-folder-structure.txt
+                .../django/django-project-folder-structure.txt
 
                 >> In Django project-folder:
                     - Create the main 'templates' folder;

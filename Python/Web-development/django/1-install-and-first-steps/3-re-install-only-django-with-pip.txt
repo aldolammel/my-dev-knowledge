@@ -60,3 +60,9 @@ DJANGO RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
             $ uv run manage.py compilemessages
 
         
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt

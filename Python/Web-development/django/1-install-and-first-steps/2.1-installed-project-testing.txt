@@ -1,0 +1,31 @@
+
+
+DJANGO > PROJECT INSTALLATION: TESTING
+
+
+    PRE) Assuming you already installed the new/empty project (with db or not):
+        ./2-install-project-with-uv.txt  or  ./2-install-project-with-pip.txt
+        
+
+    1) Check Django installation and current setup:
+
+        >> Using UV:
+
+            # Check the installation:
+                $ uv run manage.py check
+        
+            # Starting Django server:
+                $ uv run manage.py runserver
+
+        >> Or using PIP:
+
+            # Check the installation:
+                $ python manage.py check
+        
+            # Starting Django server:
+                $ python manage.py runserver
+        
+        
+
+    2) Testing on browser:
+        http://localhost:8000/

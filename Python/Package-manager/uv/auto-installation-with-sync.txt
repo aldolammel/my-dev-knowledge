@@ -2,24 +2,30 @@
 
 PYTHON > UV PACKAGE MANAGER: USING SYNC
 
+    A) I'm updating Python in a project;
+    B) I lost the virtual environment folder in a project;
+    C) I'm cloning an existing project only;
+    D) Something wrong with my project dependencies;
 
-    >> Context: I'm updating Python in a project - - - - - - - - - - - - - - - - - - - - - - - - - -
+    - - - - -
+
+    A) I'm updating Python in a project - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
 
-        # In your project folder/environment, it deletes the current venv folder and recreate it:
+        # In your project folder/environment, it deletes the current .venv folder and recreate it:
             
-            PRE.1) Assuming you are in the project environment!
+            A.PRE.1) Assuming you are in the project environment!
 
             
-            PRE.2) Assuming you already pin the new Python version through UV (like you should have updated the .python-version file)!
+            A.PRE.2) Assuming you already pin the new Python version through UV (like you should have updated the .python-version file)!
                 ./pin-python-version.txt
             
 
-            PRE.3) Assuming the Python version's manually updated in the pyproject.toml file!
+            A.PRE.3) Assuming the Python version's manually updated in the pyproject.toml file!
                 /Python/Web-development/pyproject.toml
                 
 
-            1) Syncing:
+            A.1) Syncing:
 
                 # Option 1: Mandatory ones and all dependencies from development sub-group:
                     $ uv sync --extra dev
@@ -32,15 +38,21 @@ PYTHON > UV PACKAGE MANAGER: USING SYNC
 
 
 
-    >> Context: I lost the virtual environment folder in a project - - - - - - - - - - - - - - - - -
+    B) I lost the virtual environment folder in a project - - - - - - - - - - - - - - - - - - - - - 
         
-        # In your project folder/environment, recreate the venv folder, using one of those options in 'Syncing' step above!
+        # In your project folder/environment, recreate the venv folder, using one of those options in 'Syncing' (A.1) step above!
 
 
 
-    >> Context: Something wrong with my project dependencies - - - - - - - - - - - - - - - - - - - -
+    C) I'm cloning an existing project only - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        # In your project folder/environment, recreate the venv folder, using one of those options in 'Syncing' (A.1) step above!
+
+
+
+    D) Something wrong with my project dependencies - - - - - - - - - - - - - - - - - - - - - - - - 
         
-        # In your project folder/environment, reinstall dependencies, using one of those options in 'Syncing' step above!
+        # In your project folder/environment, reinstall dependencies, using one of those options in 'Syncing' (A.1) step above!
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

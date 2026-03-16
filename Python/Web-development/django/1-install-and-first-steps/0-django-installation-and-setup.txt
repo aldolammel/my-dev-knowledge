@@ -5,19 +5,19 @@ DJANGO: INSTALLING AND SETUP
 
     1) Which scenario is your case:
 
-        A) This machine and IDE are ready for Django projects, and I got a brand new project:
+        1A) This machine and IDE are ready for Django projects, and I got a brand new project:
 
             >> Skip this file, jumping to this one:
                 ./1-install-new-project.txt
 
 
-        B) This machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project):
+        1B) This machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project):
             
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.txt
 
 
-        C) This machine (or IDE) is new (for example, after the OS installation) and I need to prepare it to run Django projects:
+        1C) This machine (or IDE) is new (for example, after the OS installation) and I need to prepare it to run Django projects:
 
             >> Keep yourself in this roadmap file!
 
@@ -25,36 +25,32 @@ DJANGO: INSTALLING AND SETUP
         - - - - -
 
 
-        C) This machine (or IDE) is new! Preparing it to everything about Django - - - - - - - - - -
+        1C) This machine (or IDE) is new! Preparing it to everything about Django - - - - - - - - -
 
-            C.PRE.1) Python interpreter (if needed);
+            1C.PRE.1) Python interpreter (if needed);
                 /Python/1-python-installation/
 
-            C.PRE.2) Create the project folder, and get it:
+            1C.PRE.2) Create the project folder, and get it:
                 $ mkdir <project_folder>
                 $ cd <project_folder>
 
-            C.PRE.3) Create the project's virtual environment:
-                /Python/3-virtual-environment/creating-virtual-environment.txt
+            1C.PRE.3) DON'T create the .venv yet (so is NOT need to activate environ for now)!
 
-            C.PRE.4) Did you already active project's virtual environment?! I hope so!
-                /Python/3-virtual-environment/
-
-            C.PRE.5) IDE, language setup:
+            1C.PRE.4) IDE, language setup:
                 >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
                 >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
 
-            C.1) IDE, framework setup:
+            1C.1) IDE, framework setup:
                 >> VSCode:  .../django/IDE-softwares/vscode/basic-for-django.txt
                 >> PyCharm: .../django/IDE-softwares/pycharm/basic-for-django.txt
 
-            C.2) Install Django for a specific project:
+            1C.2) Install Django for a specific project:
 
-                    >> Using UV (recommended, smarter):
-                        ./2-install-project-with-uv.txt
+                >> Using UV (recommended, smarter):
+                    ./2-install-project-with-uv.txt
 
-                    >> Or using PIP (Django built-in solution):
-                        ./2-install-project-with-pip.txt
+                >> Or using PIP (Django built-in solution):
+                    ./2-install-project-with-pip.txt
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

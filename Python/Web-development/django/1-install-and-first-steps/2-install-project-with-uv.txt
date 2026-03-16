@@ -6,7 +6,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         ./1-re-install-project-with-uv.txt
 
     PRE.2) Assuming you already have the UV package manager installed:
-        /Python/Package-manager/uv.txt
+        /Python/Package-manager/uv/_about-install-and-update.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -14,8 +14,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
     >> BEFORE PROJECT INSTALLATION:
         
-        PRE.1) Make sure you are in the MAIN python environment, not in a virtual one!
-            /Python/3-virtual-environment/activate-and-deactivate.txt
+        PRE.1) DON'T create venv yet!
 
         PRE.2) Make sure you already installed all Python versions for this project:
 
@@ -29,7 +28,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-    >> PROJECT SETUP:
+    >> PROJECT CREATION:
 
         1) Local project folder:
             
@@ -48,39 +47,34 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         
         4) Creating new project:
                 
-            4.1) Basic for project:
+            4.1) Create the virtual environment folder:
+                /Python/Package-manager/uv/create-or-find-current-venv.txt
 
-                PRE) Assuming you already created the virtual environment folder:
-                    /Python/Package-manager/uv/create-or-find-current-venv.txt
+                >> Do you need a pyproject.toml model?
+                    /Python/Web-development/pyproject.toml
 
-                >> Create the minimum Python project scaffolding:
+            4.2) (NOT SURE IF IT'S NEEDED AFTER 4.1)
+                Create the minimum Python project scaffolding:
                     
-                    ATTENTION:
-                        If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overridden files in project folder is not empty!
+                ATTENTION:
+                    If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overridden files in project folder if not empty!
 
-                    # That said, do it:
-                        $ uv init
+                # That said, do it:
+                    $ uv init
+            
+            4.3) Once you now got a .venv folder, active the project's virtual environment:
+                /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
-            4.2) Checking UV config:
-                
-                >> In pyproject.toml file:
+            4.4) Other stuff:
 
-                    PRE.1) Make sure you has active the project's virtual environment!
-                        /Python/3-virtual-environment/activate-and-deactivate.txt
+                >> Django basics:
+                    .../django/IDE-softwares/vscode/examples/settings.json
 
-                    PRE.2) If needed, model files:
-
-                        >> Python basics:
-                            /Python/Web-development/pyproject.toml
-
-                        >> Django basics:
-                            .../django/IDE-softwares/vscode/examples/settings.json
-
-                    >> Check if the Python version on that file is correct!
-                        If NOT okay, fix it!
-                            E.g.
-                                requires-python = ">=3.13,<3.14"
+                >> Check if the Python version on that file is correct!
+                    If NOT okay, fix it!
+                        E.g.
+                            requires-python = ">=3.13,<3.14"
                                 
                 >> Check the .python-version file:
                 
@@ -89,13 +83,27 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                         /Python/Package-manager/uv/pin-python-version.txt
 
 
-            4.3) Install Django in this project:
+            4.5) Install Django in this project:
                 
                 # Install a specific version (recommended):
                     $ uv add django==5.2.7
                 # Or the latest version:
                     $ uv add django
 
+
+            4.6) Define your database case it SHOULDN'T use SQLite:
+                .../django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
+
+
+            4.7) After Django installation:
+
+                4.7.1) Create the Django Project structure, going to the project root folder and asking the package manager to create the 'core' folder
+                
+                    $ uv run django-admin startproject core .              <-- This dot's important!
+
+                4.7.2) (If applicable)
+                    Case you need an admin user:
+                        .../django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.txt
 
 
             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -117,10 +125,35 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 $ uv run manage.py compilemessages
 
             
-        7) (Optional)
+        7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
                 /Versioning/git/gitignore-file.txt
 
 
+        8) Check Django installation and setup:
+            ./2.1-installed-project-testing.txt
+
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        Since this point, you might execute basic tests without the follow steps once your goal
+                            would be to test something basic on Django.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        9) (If applicable)
+            Commit files in your versioning service (e.g. GitHub)!
+
+
+        10) Let's setup the new project:
+            ./2.2-installed-project-setup.txt
+
+
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt

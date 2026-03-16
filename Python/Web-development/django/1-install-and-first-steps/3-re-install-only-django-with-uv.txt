@@ -41,3 +41,9 @@ DJANGO RE-INSTALLATION: USING UV AS PACKAGE MANAGER
             $ uv run manage.py compilemessages
 
             
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt

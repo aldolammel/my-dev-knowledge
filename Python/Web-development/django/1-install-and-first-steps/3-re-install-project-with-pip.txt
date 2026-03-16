@@ -2,145 +2,98 @@
 
 DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
 
-    PRE.1) Basic about PIP:
+    PRE.1) If you wanna install a totally new brand project, skip this roadmap, and go to:
+        ./2-install-project-with-pip.txt
+    
+    PRE.2) Basic about PIP:
         /Python/Package-manager/pip/_about.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-    >> BEFORE THE PROJECT: 
+    >> BEFORE PROJECT RE-INSTALLATION:
 
-        >> Create a new project folder, and get it:
+        PRE) Case you have an older and non-function project version in your machine, don't delete that project folder! You may need that further!
+
+        1) Create a new folder for the existing project:
             $ mkdir <project_folder_v2>
             $ cd <project_folder_v2>
 
-        1) Make sure you are in the MAIN python environment, not in a virtual one!
+        2) Open this new folder in your IDE;
 
-        2) Now, update the PIP:
+        3) Make sure you already installed the right Python version for this project:
 
-            /Python/Package-manager/pip/_about.txt
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    >> PROJECT SETUP:
 
-        1) Local project folder:
+    >> PROJECT RE-CREATION:
+
+        1) Clone the project into the new project folder:
+            /Versioning/git/command-clone.txt
+        
+        2) (If applicable)
+            Local project folder structure:
             
-            >> Create the project folder, keeping this in mind:
-                /Python/Web-development/django/django-project-folder-structure.txt
-
-            >> Or, if it already exists, next step!
+            >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further (use the django structure example only for consulting best practices):
+                .../django/django-project-folder-structure.txt
         
         
-        2) Open the Project folder through the IDE;
+        3) Create the .venv folder:
+            /Python/3-virtual-environment/creating-virtual-environment.txt
+
+            # Make sure you activated the environment:
+                /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
-        3) Project versioning:
+        4) Installing all project dependencies based on requirements:
 
-            >> Create a repository or use an existing one:
-                /Versioning/
+            >> Using pyproject.toml:
+                >> Probably if you were using this file, you were using UV, and not PIP!
+
+            >> Or Using requirements.toml:
+                /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
 
 
-        4) Creating the virtual environment:
-                    
-            >> Create it:
-                /Python/3-virtual-environment/creating-virtual-environment.txt
-
-            >> Active it:
-                /xxxxxx
         
         
-        5) Choosing the way to create the Django project:
+        5) Choosing the way to create the project's db:
 
-            5A) CREATING A NEW PROJECT:
-            5B) OR I'M GETTING AN EXISTING PROJECT:
+            >> You don't have a local db created yet:
+                /Database/00-new-project/
 
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
-            5A) CREATING A NEW PROJECT:
-
-                >> Installing Django:
-
-                    >> Make sure you're in the project virtual environment!
+            >> Or you already have the local db created:
                         
-                        >> On Ubuntu/Windows:
+                >> Run the makemigrations command:
+                    $ python manage.py makemigrations
 
-                            >> Update pip module:
-                                /Python/Package-manager/pip.txt
+                >> Even if no migrations in previously command, run the migrate command:
+                    $ python manage.py migrate
 
-                            >> Install Django:
-                                $ python3 -m pip install django
 
-                            >> Check the current django installed:
-                                $ python -m django --version
+        6) (If applicable)
+            If you have multilingual support in your project:
 
-                            >> upgrade django if needed;
-                                $ python -m pip install --upgrade pip
-
-                        >> On Mac:
-
-                            xxxxxxxxxxxxxx
-
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-            5B) OR I'M GETTING AN EXISTING PROJECT:
-
-                PRE.1) Make sure you're in the project virtual environment!
-
-                PRE.2) Project is already in your local machine!
-                        /Versioning/git/_basic.txt
+            >> With Gettext module installed:
                 
-                >> Project requirements/dependencies:
+                $ python manage.py makemessages --all
+                $ python manage.py compilemessages
 
-                    A) Using requirements.txt file;
-                    B) Or using pyproject.toml;
-                    
-                    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-                    
-                    A) Using requirements.txt file:
-
-                        /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
-                    
-                    B) Using pyproject.toml file:
-
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-                    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-                    >> Local project database:
-
-                        >> You already have the local database created:
-                            
-                            >> Run the makemigrations command:
-                                $ xxxxxxxxx manage.py makemigrations
-
-                            >> Even if no migrations in previously command, run the migrate command:
-                                $ xxxxxxxxx manage.py migrate
-
-                        >> OR if you don't have a local database created yet:
-                        
-                            xxxxxxxxxxxxxxxxxxxx
-
-       
-                    >> (OPTIONAL)
-                        If you have multilingual support in your project:
-
-                        >> With Gettext module installed:
-                            
-                            $ xxxxxxxxx manage.py makemessages --all
-                            $ xxxxxxxxx manage.py compilemessages
-        
-        
-            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
-
-        6) (Optional)
+            
+        7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
                 /Versioning/git/gitignore-file.txt
 
 
-        >> Return to Django project installation roadmap:
-            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+        8) Check Django installation and setup:
+            ./2.1-installed-project-testing.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+MAKE SURE YOU FINISHED ALL THESE STEPS:
+    ./0-django-installation-and-setup.txt
