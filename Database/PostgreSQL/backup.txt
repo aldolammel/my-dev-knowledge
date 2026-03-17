@@ -4,7 +4,7 @@ POSTGRESQL: HOW TO BACKUP A DATABASE
 
 
     PRE) Make sure the db service is running!
-        ./postgres-starting-and-stoping.txt 
+        ./0-basic/starting-and-stopping.txt 
 
     >> What you wanna do:
 
@@ -31,7 +31,7 @@ POSTGRESQL: HOW TO BACKUP A DATABASE
                     # sudo -u <postgres_user> pg_dump <current_db> > bkp_<name_date>.sql
                         $ sudo -u postgres pg_dump ibcpa_website_2025 > bkp_ibcpa_2025107.sql
 
-            A1.2) The backup is in the same path where the command above executaded!
+            A1.2) The backup is in the same path where the command above executed!
 
 
         A2) In a VPS (via your local terminal):

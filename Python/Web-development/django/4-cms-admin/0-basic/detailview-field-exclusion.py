@@ -4,6 +4,9 @@
     For basic approach:
         ./detailview-field-exclusion-basic.py
 
+    For fieldset approach:
+        ./detailview-fieldset-exclusion.py
+
     The idea here is to "filter" which situation a field must be shown: "Only for new objects; only for editable objects, or in both cases?" To organize that, let's use the 'add_fieldsets' and 'fieldsets' tuples benefits inside the admin class:
 """
 
@@ -41,7 +44,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "layout",
-                    "vue_component",  # May be removed dynamically if certain conditions are met.
+                    "vue_component",  # May be removed dynamically if certain conds are met.
                 )
             },
         ),
@@ -51,7 +54,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
     fieldsets = (
         ...
         (
-            "Configuraçoes",
+            "Configurações",
             {
                 "fields": (
                     "config_1",  # May be removed dynamically if certain conditions are met.
@@ -99,3 +102,23 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
             fieldsets_list.append((title, {**opts, "fields": tuple(fields)}))
         return fieldsets_list
+
+
+    # ANOTHER EXAMPLE:
+    def get_fieldsets(...):
+        # If it's in singleton creation step, escape this method:
+        if obj is None:
+            return self.add_fieldsets
+        # Otherwise, convert tuple of tuples into mutable structure:
+        fieldsets = list(self.fieldsets)
+        # Check if the right attribute exists, and if Vue isn't the external front-end solution:
+        if obj and hasattr(obj, "front_type") and obj.front_type != consts.VAL_FRONT_TOOL_VUE:
+            fieldsets_list = []
+            for title, opts in fieldsets:
+                fields = list(opts.get("fields", []))
+                field = "vue_pg_comps_path"
+                if field in fields:
+                    fields.remove(field)
+                # Rebuild fieldset with updated fields:
+                fieldsets_list.append((title, {**opts, "fields": fields}))
+            fieldsets = fieldsets_list

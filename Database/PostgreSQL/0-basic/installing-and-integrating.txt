@@ -139,7 +139,7 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
     
     
     3) Define if PostgreSQL shouldn't run at the OS starts:
-        /Database/PostgreSQL/postgres-starting-and-stoping.txt
+        .../PostgreSQL/0-basic/starting-and-stopping.txt
 
 
     4) After to install the desired database, don't forget your environment variables:
@@ -150,4 +150,4 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 >> Database creation:
-    /Database/PostgreSQL/postgres-creating-db-locally.txt
+    .../PostgreSQL/creating-db-locally.txt

@@ -2,7 +2,8 @@
 
 DEBIAN/UBUNTU: TERMINAL BASIC COMMANDS
 
-    >> Terminal
+    
+    >> Very basic
 
         List the directories:
             $ ls
@@ -54,3 +55,11 @@ DEBIAN/UBUNTU: TERMINAL BASIC COMMANDS
         How to learn more about a command:
             $ man <command you are trying to understand>
             $ man postgres
+
+
+    >> Specialized:
+
+        Changing current user on terminal:
+            ./command-change-user.txt
+
+            

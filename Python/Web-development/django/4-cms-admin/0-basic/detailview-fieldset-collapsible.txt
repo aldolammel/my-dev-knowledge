@@ -2,6 +2,9 @@
 
 DJANGO CMS > DETAIL-VIEW: MAKE FIELDSET BE COLLAPSIBLE
 
+    For field exclusion:
+        ./detailview-field-exclusion.py
+
     # admin.py:
     @admin.register(models.PagexPage)
     class PagexPageAdmin(admin.ModelAdmin):

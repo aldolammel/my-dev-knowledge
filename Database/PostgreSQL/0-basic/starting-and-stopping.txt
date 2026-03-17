@@ -1,8 +1,27 @@
 
-POSTGRESQL: STARTING AND STOPING THE SERVICE
+POSTGRESQL: STARTING AND STOPPING THE SERVICE
 
 
-    WINDOWS: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    
+        >> To check the service status:
+            $ systemctl status postgresql
+        
+        >> To Start the service:
+            $ sudo systemctl start postgresql
+
+        >> To Stop the service:
+            $ sudo systemctl stop postgresql
+
+        >> To prevent postgres to startup with the system:
+            $ sudo systemctl disable postgresql
+        
+        >> To set postgres to startup with the system again:
+            $ sudo systemctl enable postgresql
+
+
+
+    WINDOWS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> To check the service status:
             Open the Task Manager, go to Service tab. Search for 'postgres'.
@@ -31,27 +50,8 @@ POSTGRESQL: STARTING AND STOPING THE SERVICE
             
             Pretty similar the previous step.
         
-    
-        
-    UBUNTU: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-        >> To check the service status:
-            $ systemctl status postgresql
-        
-        >> To Start the service:
-            $ sudo systemctl start postgresql
-
-        >> To Stop the service:
-            $ sudo systemctl stop postgresql
-
-        >> To prevent postgres to startup with the system:
-            $ sudo systemctl disable postgresql
-        
-        >> To set postgres to startup with the system again:
-            $ sudo systemctl enable postgresql
 
 
-
-    MAC: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    MAC - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         xxxxxxxxx

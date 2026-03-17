@@ -21,7 +21,7 @@
 
 # EXAMPLE 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-print("\nEXAMPLE 1 >>")
+print("EXAMPLE 1")
 try:
     file = open("class26z-file.txt")
     print("abc" + 5)
@@ -49,7 +49,7 @@ dictionary = {'A': 'Alpha', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta', 'E': 'Ec
               'P': 'Papa', 'Q': 'Quebec', 'R': 'Romeo', 'S': 'Sierra', 'T': 'Tango', 'U': 'Uniform', 'V': 'Victor',
               'W': 'Whiskey', 'X': 'Xray', 'Y': 'Yankee', 'Z': 'Zulu'}
 
-print("\nEXAMPLE 2 >> Create a list of the phonetic code words from a word that the user inputs:")
+print("EXAMPLE 2 >> Create a list of the phonetic code words from a word that the user inputs:")
 while True:
     word = input("Enter a letter or word: ").strip().upper()
 

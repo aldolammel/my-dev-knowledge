@@ -73,7 +73,7 @@ PYTHON PROJECT ROADMAPS: UPDATING DJANGO VERSION IN AN EXISTENT PROJECT
 
 
             B.1) Make a project's db backup!
-                /Database/PostgreSQL/postgres-backup.txt
+                /Database/PostgreSQL/backup.txt
                 /Database/MySQL/mysql-backup.txt
                 /Database/MariaDB/mariadb-backup.txt
                 /Database/SQLite/sqlite-backup.txt

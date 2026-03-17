@@ -1,0 +1,12 @@
+sudo -i -u <user_name>
+
+E.g.
+    Changing the aldolammel user to postgres user:
+
+        $ sudo -i -u postgres
+
+            # Before running the command:
+            aldolammel@ubuntu-desk:~$
+
+            # After running the command:
+            postgres@ubuntu-desk:~$

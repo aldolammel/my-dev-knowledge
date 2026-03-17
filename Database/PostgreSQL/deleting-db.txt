@@ -4,7 +4,7 @@ POSTGRESQL: DELETING A DATABASE LOCALLY
 
 
     PRE) CRITICAL, if backup is needed:
-        ./postgres-backup.txt
+        ./backup.txt
 
     
     1) Deleting method:
@@ -38,5 +38,5 @@ POSTGRESQL: DELETING A DATABASE LOCALLY
 
 
 NEED TO CREATE A NEW ONE?
-    ./postgres-creating-db-locally.txt
+    ./creating-db-locally.txt
 

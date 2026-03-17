@@ -66,7 +66,7 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
         5) Choosing the way to create the project's db:
 
             >> You don't have a local db created yet:
-                /Database/00-new-project/
+                /Database/00-new-project/create-db-for-existing-project.txt
 
             >> Or you already have the local db created:
                         

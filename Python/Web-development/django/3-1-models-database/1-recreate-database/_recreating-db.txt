@@ -14,7 +14,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
         1) Delete the current database;
 
             >> PostgreSQL:
-                /Database/PostgreSQL/postgres-deleting-db.txt
+                /Database/PostgreSQL/deleting-db.txt
 
             >> MySQL:
                 /xxxxxxxxx
@@ -28,7 +28,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
         2) Create the new database:
 
             >> PostgreSQL:
-                /Database/PostgreSQL/postgres-creating-db-locally.txt
+                /Database/PostgreSQL/creating-db-locally.txt
 
             >> MySQL:
                 /xxxxxxxxx
