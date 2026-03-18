@@ -52,7 +52,7 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
 
 
     
-    1) Installation itself - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1) Installation:
 
         # Make sure which version do you wanna for your project(s), and do it:
             
@@ -95,7 +95,7 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
         
 
 
-    2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    2) Integration:
     
         Connect the PgAdmin to the postgreSQL now. In pgAdmin app!
 
@@ -138,12 +138,16 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
         2.9) Save the changes finally! You're connected.
     
     
-    3) Define if PostgreSQL shouldn't run at the OS starts:
-        .../PostgreSQL/0-basic/starting-and-stopping.txt
+
+    3) (Optional)
+        Define if PostgreSQL shouldn't run at the OS starts:
+            ./starting-and-stopping.txt
 
 
-    4) After to install the desired database, don't forget your environment variables:
-        /Environment-Variables/
+
+    4) (If applicable)
+        Ask yourself if you need to update some .env file in a specific project! If so, remember what to do in that file:
+            /Environment-Variables/
 
 
 

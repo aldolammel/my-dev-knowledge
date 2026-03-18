@@ -168,6 +168,11 @@ class CategorySerializer(serializers.ModelSerializer):  # main serializer what w
 # models.py
 class MenuLink(models.Model):
     """Each instance is a link in the app menus."""
+    menu = models.ForeignKey(
+        "Menu",
+        on_delete=models.CASCADE,
+        related_name="menu_links",
+    )
     ...
 class Menu(models.Model):
     """It manages which Menus exist through the app."""
@@ -183,15 +188,15 @@ class MenuLinkSerializer(serializers.ModelSerializer):
     ...
 
 class MenuSerializer(serializers.ModelSerializer):
-    """Creating the Menu API where all menus data is converted to JSON format."""
+    """Creating the Pagex Menu API where all menus data is converted to JSON format."""
 
     # Custom Fields (directly based on another serializer class):
-    all_menu_links = MenuLinkSerializer(many=True, read_only=True)
+    links = PagexMenuLinkSerializer(many=True, read_only=True, source="menu_links")
 
     class Meta:
         model = models.Menu
         fields = [
             ...
-            "all_menu_links",  # Custom field
+            "links",  # Custom field
         ]
     ...

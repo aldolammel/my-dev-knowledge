@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+
+"Originally, interpreter was made to start fast and to end fast." - Fabio Akita.
+
+
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+COMPILER:
+    ./compiler.txt

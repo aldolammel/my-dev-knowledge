@@ -35,7 +35,7 @@
 
             # Create an Admin class that will be responsable for all customization of the
             # original model from models.py:
-            class MovieAdmin(admin.ModelAdmin):  # 'Admin' in classname is convension for CMS.
+            class MovieAdmin(admin.ModelAdmin):  # 'Admin' in classname is convention for CMS.
                 # Each specifically fields will be visible on CMS movies list-view:
                 list_display = (
                     # these fields right below are known because you are creating a 'relation'
@@ -72,7 +72,7 @@
         
         
             @admin.register(Movie)  # Registering the CMS customized model!
-            class MovieAdmin(admin.ModelAdmin):  # 'Admin' in classname is convension for CMS.
+            class MovieAdmin(admin.ModelAdmin):  # 'Admin' in classname is convention for CMS.
                 ...
 
         # 2) Check the result: http://localhost:8000/admin/

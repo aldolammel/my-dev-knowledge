@@ -55,20 +55,14 @@
 
 
 
+            X) (Optional)
+                Pagex is an Django site builder developed by me (@aldolammel), and it's compatible with Vue:
+                    /Python/Web-development/django/useful-sub-apps/pagex/with-frontend-vue.txt
 
 
 
 
 
-
-
-
-
-
-
-        >> Mac: 
-
-            xxxx
 
         >> There are two approaches:
 

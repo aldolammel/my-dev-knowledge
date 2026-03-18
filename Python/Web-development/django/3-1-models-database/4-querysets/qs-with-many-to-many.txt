@@ -15,4 +15,4 @@ QUERYSETS: WITH MANY-TO-MANY
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 >> For Foreigner Keys:
-    /Python/Web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.txt
+    ./qs-with-foreigner-keys.txt

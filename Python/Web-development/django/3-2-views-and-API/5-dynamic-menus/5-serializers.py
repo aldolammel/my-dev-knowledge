@@ -1,9 +1,6 @@
 from rest_framework import serializers
 
-from .models import (
-    PagexMenu,
-    PagexMenuLink,
-)
+from . import models
 from .utils import pagex_url_builder
 
 
@@ -20,7 +17,7 @@ class PagexMenuLinkSerializer(serializers.ModelSerializer):
     is_home = serializers.SerializerMethodField()  # Auto-calls get_is_home()
 
     class Meta:
-        model = PagexMenuLink
+        model = models.PagexMenuLink
         fields = [
             # "id",
             # "menu",
@@ -30,17 +27,16 @@ class PagexMenuLinkSerializer(serializers.ModelSerializer):
             # "redirection",
             # "position",  # Here is not needed 'coz the JSON preserves the current links order.
             # "parent",  # TODO: WIP
-            # - - - custom fields: - - -
-            "url",
-            "url_target",
-            "is_home",
-            "title",  # Business rule: Menus won't use seo_title!
+            "url",  # Custom method field
+            "url_target",  # Custom method field
+            "is_home",  # Custom method field
+            "title",  # Custom method field # Business rule: Menus won't use seo_page_title!
         ]
 
     def get_title(self, obj):
         """Based on link_type, Django REST Framework defines what attr. It will be used as 'title' for links in Menus API."""
         if obj.link_type == "page" and obj.page:
-            return obj.page.title  # For menus, keep 'title' instead of 'seo_title'.
+            return obj.page.title  # For menus, keep 'title' instead of 'seo_page_title'.
         elif obj.link_type == "category" and obj.category:
             return obj.category.cat
         elif obj.link_type == "redirection" and obj.redirection:
@@ -74,27 +70,30 @@ class PagexMenuSerializer(serializers.ModelSerializer):
     """Creating the Pagex Menu API where all menus data is converted to JSON format."""
 
     # Custom Fields (directly based on another serializer class):
-    links = PagexMenuLinkSerializer(many=True, read_only=True)
+    links = PagexMenuLinkSerializer(many=True, read_only=True, source="pagex_menu_links")
 
     # Custom Method Fields (SerializerMethodField):
     is_urls_relative = serializers.SerializerMethodField()  # Auto calls get_is_urls_relative()
 
     class Meta:
-        model = PagexMenu
+        model = models.PagexMenu
         fields = [
             # "id",
             # "name",
-            "identifier",
-            # - - - custom fields: - - -
-            "is_urls_relative",
-            "links",
+            "slug_key",
+            "is_urls_relative",  # Custom method field
+            "links",  # Custom field
         ]
 
     def get_is_urls_relative(self, obj):
         pagex_stgs = PagexSettings.objects.first()
-        if pagex_stgs and hasattr(pagex_stgs, "is_urls_relative"):
-            return pagex_stgs.is_urls_relative
-        return "ERROR: get_is_urls_relative"
+        # Error:
+        if not pagex_stgs or not hasattr(pagex_stgs, "is_urls_relative"):
+            e = "SERIALIZERS > PagexMenuSerializers: get_is_urls_relative() fail!"
+            print(e)
+            raise Exception(e)
+        # Otherwise:
+        return pagex_stgs.is_urls_relative
 
 
 class RecursiveLinkSerializer(serializers.ModelSerializer):
