@@ -1,0 +1,16 @@
+
+
+JAVASCRIPT > LINTER > ESLINT: CHECKING ERRORS
+
+    WHAT IS IT:
+        ./_about.txt
+
+    
+    # Just list issues:
+        # Using NPM:
+            $ npm run lint:check
+    
+
+    # List and fix them:
+        # Using NPM:
+            $ npm run lint

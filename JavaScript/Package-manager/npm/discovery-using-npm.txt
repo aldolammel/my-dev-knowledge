@@ -7,3 +7,12 @@ NPM PACKAGE MANAGER: DOING A DISCOVERY USING NPM
 
     >> Vue discovery:
         /JavaScript/Web-development/frontend/Vue/0-new-project/discovery-vue.txt
+
+
+    >> Check Node dependencies:
+    
+        # In a specific folder project:
+            $ npm list
+        
+        # Anywhere:
+            $ npm list -g

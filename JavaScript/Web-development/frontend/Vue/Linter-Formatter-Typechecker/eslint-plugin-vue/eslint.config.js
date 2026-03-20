@@ -1,36 +1,24 @@
-// File: eslint.config.js
-// MORE ABOUT: https://eslint.vuejs.org/
+// FILE: /frontend/eslint.config.js
+// This basic file model: /JavaScript/Linter-Formatter-Typechecker/eslint/eslint.config.js
 
 import js from '@eslint/js';
-import pluginVue from 'eslint-plugin-vue';
-import globals from 'globals';
+import pluginVue from 'eslint-plugin-vue';  // <---- ADD IT!
+//...
 
 export default [
   js.configs.recommended,
-  ...pluginVue.configs['flat/recommended'],
+  ...pluginVue.configs['flat/recommended'],  // <---- ADD IT!
   {
-    files: ['**/*.vue', '**/*.js', '**/*.mjs'],
+    files: ['**/*.vue', '**/*.js', '**/*.mjs'],  // <---- ADD IT!
     languageOptions: {
-      parser: pluginVue.parser,
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        process: true
-      }
+      parser: pluginVue.parser,  // <---- ADD IT!
+      ecmaVersion: 'latest',
+      //...
     },
     rules: {
-      // Vue rules
-      'vue/multi-word-component-names': 'off',
-      'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-      'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+      'vue/multi-word-component-names': 'off', // <---- ADD IT!
+      //...
     },
   },
-  {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'public/**',
-    ],
-  },
+  //...
 ];

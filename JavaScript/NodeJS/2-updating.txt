@@ -8,14 +8,14 @@ NODE.JS: UPDATING
 
     WHAT TO UPDATE:
         If you wanna update Node, NPM, and NVM, keep going in this checklist. Otherwise, skip this and visit this one:
-            ./3.1-updating-compoenent.txt
+            ./3.1-updating-component.txt
         
         
-    PRE) Node installed:
+    PRE) Assuming you already got Node installed:
         ./1-installation.txt
 
     
-    1) Update the Ubunto package list:
+    1) Update Ubuntu package list:
         $ sudo apt update
         $ sudo apt upgrade
 

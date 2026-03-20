@@ -7,7 +7,7 @@ LESS: VUE INTEGRATION
         >> .less (a Vite built-in solution):
             
             # Associating the Vite built-in solution to the project:
-                $ npm add -D xxxxxxxxxxxxxxxxxxxx
+                $ npm install -D xxxxxxxxxxxxxxxxxxxx
                     # Verify your LESS dependency in package.json in the root project-folder:
                         E.g.
                             {

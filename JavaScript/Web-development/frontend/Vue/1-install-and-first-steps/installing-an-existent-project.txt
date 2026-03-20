@@ -10,7 +10,7 @@ INSTALLING AN EXISTENT VUE PROJECT:
     >> Do you agree with the current build-tool used in the project?
 
         >> What is build-tool?
-            /JavaScript/Web-development/frontend/Vue/1-build-tools.txt
+            .../Vue/1-build-tools.txt
     
         >> If you don't agree:
             # Use your favorite build-tool and install all dependencies manually.
@@ -19,7 +19,7 @@ INSTALLING AN EXISTENT VUE PROJECT:
         >> Or, if you agree:
 
             >> Ask to NPM install all dependencies:
-                $ npm i
+                /JavaScript/Package-manager/npm/auto-install-all-project-dependencies.txt
 
 
     >> After the install:
@@ -27,13 +27,13 @@ INSTALLING AN EXISTENT VUE PROJECT:
         >> Consider to install if needed:
             
             >> CSS Pre-processors (Vite built-in solutions):
-                            /Web-Development/frontend/CSS/scss/vue-integration.txt
+                /Web-Development/frontend/CSS/scss/vue-integration.txt
 
             >> Linter for Vue:
-                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_linter/vue-options.txt
+                .../Vue/Linter-Formatter-Typechecker/_linter/vue-options.txt
 
             >> Formatter for Vue: 
-                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_formatter/vue-options.txt
+                .../Vue/Linter-Formatter-Typechecker/_formatter/vue-options.txt
 
             >> Type-checker for Vue:
-                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
+                .../Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt

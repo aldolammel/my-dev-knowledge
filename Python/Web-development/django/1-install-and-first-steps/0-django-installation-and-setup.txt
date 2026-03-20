@@ -53,7 +53,7 @@ DJANGO: INSTALLING AND SETUP
                     ./2-install-project-with-pip.txt
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        - - - - -
 
     
     2) Once Django project already installed, let's ask us again about the current case:
@@ -68,4 +68,22 @@ DJANGO: INSTALLING AND SETUP
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.txt
 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
+
+        >> DJANGO as back and front-end:
+            .../django/0-new-project/web-project-django-only.txt
+
+        >> Django with VUE as front-end:
+            .../django/0-new-project/web-project-django-with-vue.txt
+
+        >> Django with REACT as front-end:
+            .../django/0-new-project/web-project-django-with-react.txt
+
+        >> Django with ANGULAR as front-end:
+            .../django/0-new-project/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

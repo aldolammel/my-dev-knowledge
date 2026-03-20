@@ -3,17 +3,32 @@
 IDE FOR JS PROJECT: VSCODE
 
 
-    >> Basic for run JS:
+        PRE.1) Python project:
+            /JavaScript/00-New-Project/1-new-project.txt
+
+
+        PRE.2) IDE VSCode install:
+
+            Ubuntu:
+                /OS/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+            
+            Windows:
+                https://code.visualstudio.com
+
+
+        PRE.3) (IS IT REALLY NECESSARY FOR JS????????????????)
+            Assuming you already have the project's virtual environment to work:
+                /xxxxxxxxxxxxxxxxxxxxx
 
 
         1) VSCode project settings:
 
             1.1) In the project folder, open this file: .vscode/settings.json;
             1.2) In that file, apply these lines:
-                /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
+                ./examples/.vscode/settings.json
 
-            # Make sure your .gitignore file is not blocking the .vscode folder and its content
-                in project repository!
+            IMPORTANT FOR TEAMS:
+                Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository! Once you wouldn't be the only team member in this project, people like to custom their IDEs too.
 
         
         2) Type-Checker:

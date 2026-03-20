@@ -4,9 +4,8 @@ VUE > TEMPLATE LINTER: ESLINT PLUGIN VUE
 
     
     
-    ATTENTION!
-        It's only add value for Vue projects that uses Single-Files-Components 
-        (SFC, it means: .vue files). Otherwise, this lint won't do nothing.
+    BE AWARE FOR SINGLE-FILE-COMPONENTS!
+        It's only add value for Vue projects that uses Single-Files-Components (SFC, it means: .vue files). Otherwise, this lint won't do nothing.
 
 
 
@@ -28,7 +27,7 @@ VUE > TEMPLATE LINTER: ESLINT PLUGIN VUE
 
 
     >> INSTALLING AND INTEGRATION:
-        /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/installation.txt
+        ./installation.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -6,10 +6,10 @@
             /JavaScript/NodeJS/1-installation.txt
         
         PRE II) Vue.js installation:
-            ./_vue-installation.txt
+            ./0-vue-installation-and-setup.txt
 
         PRE III) Creating a Vue.js project:
-            ./create-vue-project.txt
+            ./1-install-new-project.txt
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

@@ -7,3 +7,11 @@ NODE.JS > NPM: UPDATING THE NODE PACKAGE MANAGER APART
     
     >> Forcing the NPM update, globally:
         $ npm install -g npm
+
+    >> Check Node dependencies:
+    
+        # In a specific folder project:
+            $ npm list
+        
+        # Anywhere:
+            $ npm list -g

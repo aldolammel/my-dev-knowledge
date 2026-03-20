@@ -1,0 +1,21 @@
+// FILE: /frontend/eslint.config.js
+
+//...
+import prettier from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
+
+export default [
+  //...
+  // Adding Prettier config to disable conflicting rules:
+  prettierConfig,
+  {
+    //...
+    plugins: {
+      prettier,
+    },
+    rules: {
+      "prettier/prettier": "error", // All Prettier rules are detailed in its .prettierrc!
+    },
+    //...
+  },
+]

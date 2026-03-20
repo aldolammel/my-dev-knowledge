@@ -1,68 +1,78 @@
 
 
-SCSS/SASS: VUE INTEGRATION
+SCSS/SASS: VUE INTEGRATION WITH THIS CSS PRE-PROCESSORS
 
-    >> CSS Pre-processors using Vue:
+    Vue SFC (.vue files) support <style> blocks with preprocessors like Sass/SCSS. After installing this package below, you can write like this in .vue files:
 
-        xxxxxxx
+        E.g.
+            <style lang="scss" scoped>
+            .container {
+                .title {
+                    color: blue;
+                    
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            </style>
+
     
-    >> CSS Pre-processors using Vue + Vite:
+    INFO) This is compatible with front-end projects using:
+        - Vite
+        - Webpack (Vue CLI)
+        - Nuxt
+        - No bundler (directly in Node scripts)
 
-        >> .scss/.sass (a Vite built-in solution):
+        
+    1) Install the SASS Compiler (only for dev environment):
+        
+        $ npm install -D sass-embedded                                        <-- -D dev dependency!
             
-            1) Associating the Vite built-in solution to the project (only for dev environment):
-                $ npm add -D sass-embedded
-                    # Verify your SASS dependency in package.json in the root project-folder:
-                        E.g.
-                            {
-                                "devDependencies": {
-                                    "sass-embedded": "^1.89.1",
-                                }
-                            }
+            # Verify your SASS dependency in package.json!
 
-            2) In front-end folder, open the vite.config.js file:
 
-                export default defineConfig({
-                    //...
-                    build: {
+    2) In front-end folder, open the vite.config.js file:
+
+        export default defineConfig({
+            //...
+            build: {
+                //...
+            },
+            plugins: [
+                //...
+            ],
+            resolve: {
+                //...
+            },
+            publicDir: "public",
+            css: {
+                preprocessorOptions: {
+                    scss: {
                         //...
-                    },
-                    plugins: [
-                        //...
-                    ],
-                    resolve: {
-                        //...
-                    },
-                    publicDir: "public",
-                    css: {
-                        preprocessorOptions: {
-                            scss: {
-                                //...
-                                quietDeps: true, // Handling deprecation warnings!
-                                sassOptions: {
-                                    quietDeps: true, // Belt and suspenders approach!
-                                },
-                            },
+                        quietDeps: true, // Handling deprecation warnings!
+                        sassOptions: {
+                            quietDeps: true, // Belt and suspenders approach!
                         },
                     },
-                    server: {
-                        //...
-                    },
-                });
+                },
+            },
+            server: {
+                //...
+            },
+        });
+
+    3) In all Vue components (.vue) using CSS, include the language in Style tag:
         
-            3) In all Vue components (.vue) using CSS, include the language in Style tag:
-                
-                E.g.:
-                    # .scss/.sass
-                    <style lang="scss" scoped>
+        E.g.:
+            # .scss/.sass
+            <style lang="scss" scoped>
 
 
-            >> More about Vite:
-                https://vite.dev/
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-        >> .less (an alternative Vite built-in solution too):
-            /Web-Development/frontend/css/less/vue-integration.txt
+>> For .less (an alternative Vite built-in solution too):
+    .../CSS/less/vue-integration.txt
 
-    >> More about Vue.js:
-        /JavaScript/Web-development/frontend/Vue/

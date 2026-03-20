@@ -42,7 +42,11 @@ PRETTIER FORMATTER: INTEGRATION
                 "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
             },
 
-        4) (If applicable) 
+        4) (Optional)
+            Add the Prettier config file in your frontend folder:
+                ./.prettierrc
+        
+        5) (If applicable) 
             For Python projects, make sure the pyproject.toml has Prettier basic settings:
                 /JavaScript/Linter-Formatter-Typechecker/prettier/pyproject.toml
                             

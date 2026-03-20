@@ -3,10 +3,9 @@
 IDE FOR PYTHON PROJECT: VSCODE
 
 
-    >> Basic for run Python:
-
         PRE.1) Python project:
             /Python/0-New-Project/1-new-project.txt
+
 
         PRE.2) IDE VSCode install:
             
@@ -17,13 +16,8 @@ IDE FOR PYTHON PROJECT: VSCODE
                 https://code.visualstudio.com
 
     
-    >> Basic to setup VSCode also for specific projects:
-
         PRE.3) Assuming you already have the project's virtual environment to work:
             /Python/3-virtual-environment/creating-virtual-environment.txt
-
-
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         
         1) VSCode project settings:
@@ -38,7 +32,7 @@ IDE FOR PYTHON PROJECT: VSCODE
                 A) No, the project already exists and that was configured correctly before;
                 B) Yes, it's a new project;
 
-                - - - - - -
+                - - - - -
 
                 A) No, the project already exists - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -58,7 +52,8 @@ IDE FOR PYTHON PROJECT: VSCODE
                     B.3) In that file, apply these lines:
                         ./examples/.vscode/settings.json
 
-                    # (If applicable) Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository!
+                    IMPORTANT FOR TEAMS:
+                        Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository! Once you wouldn't be the only team member in this project, people like to custom their IDEs too.
 
         
         2) Configuring your new VSCode copy with the project needs. If your VSCode profile is already ok about extensions, and you already used your package-manager (like UV) to sync all the project dependencies, just skip it. Otherwise, re-check everything!

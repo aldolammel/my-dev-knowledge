@@ -4,7 +4,7 @@ CAUTION: With CDN, you must define your components as JS objects 'coz browser do
         .vue files. Use CDN 'installation' only for very simple Vue solutions.
 
             >> For professional solutions, use the local installation:
-                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/starting-project-using-LOCAL-installation.txt
+                /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/2-local-installation.txt
 
 
 
@@ -71,5 +71,5 @@ CAUTION: With CDN, you must define your components as JS objects 'coz browser do
 
     >> Back to the installation instructions:
 
-        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/create-vue-project.txt
+        /JavaScript/Web-development/frontend/Vue/1-install-and-first-steps/1-install-new-project.txt
 

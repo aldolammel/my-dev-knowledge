@@ -3,18 +3,18 @@
 VUE.JS: ITS FILES AND FOLDER STRUCTURE
 
 
-    Important: 
-        if you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
+    IMPORTANT: 
+        If you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
 
         More about compilation time:
             ./90-go-live-compilation.txt
 
 
-    >> Vue folder structure:
+>> Vue folder structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-        Structure to copy:
-            .../Vue/z-example-structure/aldolammel-style/
+Structure to copy:
+    .../Vue/z-example-structure/aldolammel-style/
 
 
 my_project/
@@ -145,4 +145,4 @@ my_project/
 
 
 >> INSTALL A VUE PROJECT:
-    .../Vue/1-install-and-first-steps/_vue-installation.txt
+    .../Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt

@@ -5,10 +5,12 @@ VUE.JS: GITIGNORE FILE
     >> Add these lines in your .gitignore file (if applicable):
 
         ### Node.js ###
-        node_modules/
+        node_modules
         jspm_packages/
-        dist/                         <-- Aware: probably duplicated!
-        dist-ssr/
+        dist                         <-- Aware: probably duplicated!
+        dist-ssr
+        *.local
+
         logs
         *.log                         <-- Aware: probably duplicated!
         npm-debug.log*
@@ -25,13 +27,24 @@ VUE.JS: GITIGNORE FILE
         .yarn/install-state.gz
         .pnp.*
 
+        # Editor directories and files
+        .idea                         <-- Aware: probably duplicated!
+        *.suo
+        *.ntvs*
+        *.njsproj
+        *.sln
+        *.sw?
+
         ### Vue.js ###
         .vuepress/dist
 
 
-    >> IMPORTANT: Check if the .gitignore is NOT duplicated along the project child folder.
-                For example, Vue installation by Vite creates a git file in vue root folder!
+    IMPORTANT:
+        Check if the .gitignore is NOT duplicated along the project child folder. For example, Vue installation by Vite creates a git file in vue root folder!
 
 
->> MORE ABOUT GITIGNORE FILE:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+MORE ABOUT GITIGNORE FILE:
     /Versioning/git/gitignore-file.txt

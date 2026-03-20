@@ -7,12 +7,12 @@ TYPE-CHECKER FOR VUE: OPTIONS
 
     >> Options:
 
-        >> Coding with Vanilla JavaScript:
+        >> Coding with Vanilla JS:
             
             >> Check the JS type-checker options:
                 /JavaScript/Linter-Formatter-Typechecker/_type-checker/js-options.txt
 
-        >> Coding with TypeScript:
+        >> Or coding with TypeScript:
 
             >> Volar:
-                /JavaScript/Web-development/frontend/Vue/Linter-Formatter-Typechecker/vue-volar.txt
+                ./vue-volar/

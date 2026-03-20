@@ -20,4 +20,4 @@ FORMATTER: PRETTIER
 
 
 >> INSTALLATION AND INTEGRATION:
-    /JavaScript/Linter-Formatter-Typechecker/prettier/installation.txt
+    ./installation.txt

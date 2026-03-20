@@ -1,28 +1,41 @@
 
 
-RUNNING A VUE APP:
+VUE: RUNNING THE FRONT-END APP
 
 
-    1) On terminal, go to the Vue project's folder (not necessarialy in the back-end folder)!
+    PRE) Assuming you already installed a Vue project in your machine:
+        .../Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+
+    
+    1) On terminal, go to the front-end's folder in your project!
+        E.g.
+            /my_project/frontend/
 
 
-    2) Check if there's Git version control:
-        $ git status
+    2) (If applicable)
+        Check if you are in the right versioning branch:
+        
+        # Check if you are versioning this project:
+            $ git status
 
-        2.1) If so, be aware if you are in the right branch to use the application!
+        # If so, be aware if you are in the right branch to use the application:
+            /Versioning/git/command-checkout.txt
     
 
-    3) Run the app:
+    3) Run the Vue app once you are in the frontend folder:
 
-        >> Using the frontend-frontend-build-tool VITE:
-            $ npm run dev
+        >> For Vue projects built by Vite:
+            # Using NPM:
+                $ npm run dev
+            # Using YARN:
+                $ yarn dev
 
-            >> Check the app through the browser:
+            >> Check this on browser:
                 http://localhost:5173/
 
-        >> Using the frontend-frontend-build-tool Vue-CLI:
-            $ npm run serve
-
-            >> Check the app through the browser:
-                http://localhost:8080/
+        >> For Vue projects built by Vue-CLI (default):
+            # Using NPM:
+                $ npm run serve
+            # Using YARN:
+                $ yarn serve
     

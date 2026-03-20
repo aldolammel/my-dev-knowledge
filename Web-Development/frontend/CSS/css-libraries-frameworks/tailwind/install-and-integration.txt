@@ -8,7 +8,7 @@ CSS FRAMEWORK > TAILWIND: INSTALLATION
 
 
     PRE) Assuming you are using Vite Build-tool:
-        /JavaScript/Build-tools/Vite/_about.txt
+        /JavaScript/Build-tools/Vite/0-vite.txt
 
 
 

@@ -1,0 +1,162 @@
+
+
+VUE: INSTALLING AND SETUP
+
+
+    1) Which scenario is your case:
+
+        1A) This machine and IDE are ready for Vue projects, and I got a brand new project:
+
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
+
+
+        1B) This machine and IDE are ready for Vue projects, and I'm just re-installing Vue for an existing app (or re-installing the entire project):
+            
+            >> Skip this file, jumping to this one:
+                ./1-reinstall-new-copy.txt
+
+
+        1C) This machine (or IDE) is new (for example, after the OS installation) and I need to prepare it to run Vue projects:
+
+            >> Keep yourself in this roadmap file!
+
+
+        - - - - -
+
+        1C) This machine (or IDE) is new! Preparing it to everything about Vue - - - - - - - - - - -
+
+            xxxxxxxxxx
+
+            xxxxxxxxxx - bring the same logic to here from:
+                            /Python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+
+            xxxxx
+
+
+        - - - - -
+
+    
+    2) Once Vue project already installed, let's ask us again about the current case:
+    
+        2A) This machine and IDE are already for Vue projects, and I got a brand new project:
+
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
+
+        2B) This machine and IDE are ready for Vue projects, and I'm just re-installing Vue for an existing app (or re-installing the entire project):
+            
+            >> Skip this file, jumping to this one:
+                ./1-reinstall-new-copy.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
+
+        >> VUE as front-end and no backend at all:
+            .../Vue/0-new-project/web-project-vue-only-front.txt
+        
+        >> VUE as back and front-end:
+            .../Vue/0-new-project/web-project-vue-as-back-and-front.txt
+
+        >> VUE as front-end of Django:
+            .../Vue/0-new-project/web-project-django-with-vue.txt
+
+        >> VUE as front-end of Flask:
+            .../Vue/0-new-project/web-project-flask-with-vue.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    PRE.1) In case you need install or re-install an existent Vue project:
+
+        ./reinstall-new-vue-copy.txt
+        
+
+    PRE.2) Check the project's folder structure based on the project's back-end:
+
+        >> For Django back-end:
+            ./project-folder-structure-vue-and-django.txt
+
+        >> For Flask back-end:
+            ./project-folder-structure-vue-and-flask.txt
+            
+        >> OR NO BACK-END or Vue.js will be the full solution, so keep going anyway...
+
+
+    1) Will you need Node.js in your project?
+
+        1A) Sure (RECOMMENDED);
+        1B) No, I will use CDN (Content Delivery Network);
+
+        - - - - -
+
+        1A) I need Node - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            1A.1) Install Node.js (JS backend):
+                /JavaScript/NodeJS/1-installation.txt
+
+
+                1A.1.1) (optional)
+                    Install 'Vue.js devtools' (Extension) for your browser!
+
+
+                1A.1.2) (optional)
+                    Install the Vue extension in your IDE:
+                
+                        >> For VSCode:
+                            https://marketplace.visualstudio.com/items?itemName=Vue.volar
+
+                        >> For PyCharm:
+                            xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+            1A.2) Install the Vue build-tool and Create the Vue.js (framework) project:
+                ./1-install-new-project.txt
+
+
+        1B) Using CDN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            ARE YOU SURE?
+                You'll need Node.js if you want:
+                - SFC (.vue files with templates, script, and style in one file).
+                - Build tools like Vite, Webpack, or Vue CLI for optimization.
+                - TypeScript support with proper compilation.
+                - Server-Side Rendering (SSR) with frameworks like Nuxt.
+                - Modern tooling for testing, linting, and production optimization.
+                - Package management to install third-party Vue libraries.
+
+            CAUTION!
+                With CDN, you must define your components as JS objects 'coz browser doesn't understand .vue files.
+
+            ./2-cdn-installation.txt
+
+            >> Project example using CDN solution:
+                .../Vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
+
+
+        - - - - -
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+        
+        
+
+            

@@ -9,7 +9,7 @@ VUE.JS DEEPER KNOWLEDGE
         ./SPA-vs-MPA.txt
 
         >> About both strategies, examples of their folder's structures:
-            .../Vue/1-install-and-first-steps/backend-python-django.txt    
+            .../Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt 
     
     >> Two main Vue-cores:
         

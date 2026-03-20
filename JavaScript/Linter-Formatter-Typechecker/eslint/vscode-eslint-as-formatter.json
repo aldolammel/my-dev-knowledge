@@ -5,12 +5,12 @@
     "editor.codeActionsOnSave": { // ESLint
         "source.fixAll.eslint": "explicit"
     },
-    "eslint.validate": [
+    "eslint.validate": [ // ESLint
         "javascript",
         //"javascriptreact", // Add this only if the project is using React!
         //"vue", // Add this only if the project is using Vue!
     ],
     "eslint.workingDirectories": [
-        "frontend" // ESLint working directories (if it's in a subfolder)
+        "frontend" // ESLint working directories (ONLY if it's in a subfolder of frontend installed)
     ],
 }
