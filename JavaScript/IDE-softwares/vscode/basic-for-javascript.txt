@@ -55,7 +55,7 @@ IDE FOR JS PROJECT: VSCODE
         PRE.2) IDE VSCode install:
 
             Ubuntu:
-                /OS/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+                /OS/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
             
             Windows:
                 https://code.visualstudio.com

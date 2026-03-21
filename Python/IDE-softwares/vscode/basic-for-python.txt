@@ -11,7 +11,7 @@ IDE FOR PYTHON PROJECT: VSCODE
             
             Ubuntu:
 <<<<<<< HEAD
-                /OS/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+                /OS/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
 =======
                 /OS/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
 >>>>>>> 4e0f7344 (fedora stuff added)
