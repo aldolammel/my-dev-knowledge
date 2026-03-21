@@ -15,12 +15,26 @@ SYSTEM TOOL: GIT
         2) Integrations / Authentication:
 
             2.1) On GitHub.com, log in and go to copy your token:
-                Settings > Developer settings > Tokens (classic) > New token.
+                Settings > Developer settings > Fine-grained-Tokens > New token (not classic).
 
                 - No expiration
-                - Name: lammel-<machine>-<os>
+                - All repositories
+                - Name: lammel-<machine>-<distro>
+                    E.g.
+                        lammel-desktop-ubuntu
 
-            2.2) Caching your credentials, installing Git Credential Manager Core:
+            2.2) For Ubuntu, you can use the system's credential helper with GitHub CLI:
+                # Install GitHub CLI (easier authentication):
+                    $ sudo apt install -y gh
+
+                # Authenticate with GitHub:
+                    $ gh auth login
+
+                    # Follow the terminal instructions!
+            
+            
+            BACKUP) IN CASE THE STEP ABOVE FAIL!!!!!!!!!!!!!!!!
+                Caching your credentials, installing Git Credential Manager Core:
                 $ wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.5.0/gcm-linux_amd64.2.5.0.deb" -O /tmp/gcmcore.deb
                 $ sudo dpkg -i /tmp/gcmcore.deb
                 $ git-credential-manager configure

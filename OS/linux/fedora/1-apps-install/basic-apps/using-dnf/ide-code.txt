@@ -1,0 +1,31 @@
+
+
+CODING TOOL: VS CODE 
+
+
+    PRE.1) Assuming you already prepared the system:
+        .../1-apps-install/0-preparing-the-system.txt
+
+    PRE.2) You must be logged in GitHub.com!
+
+    PRE.3) Git must be installed AND integrated:
+        ./git.txt
+
+    PRE.4) Remove Snap version if present:
+        $ sudo snap remove code 2>/dev/null
+
+    PRE.5) Remove Flatpak version if present:
+        $ flatpak uninstall com.visualstudio.code 2>/dev/null
+
+
+    1) Import Microsoft's GPG key:
+        This key verifies that the packages you download are authentic and from Microsoft!
+        
+        $ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+
+    2) Install VS Code:
+
+        $ sudo dnf update
+        $ sudo dnf install -y code

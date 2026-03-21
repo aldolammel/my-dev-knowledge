@@ -1,0 +1,23 @@
+
+
+OS > FEDORA: INSTALLATION ROADMAP
+
+
+    PRE) Before to format:
+        ./before-to-format.txt
+    
+
+    1) To format your current Fedora:
+        ./distro-formatting.txt
+
+
+    2) Right after to install:
+        ./right-after-install.txt
+
+
+    3) Basic apps:
+        ../fedora/1-apps-install/1-installing-apps.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

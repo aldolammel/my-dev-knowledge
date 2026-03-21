@@ -30,7 +30,11 @@ PYTHON > UV PACKAGE MANAGER: UPDATING DEPENDENCIES (--UPGRADE)
         
             PRE) (Only for LINUX)
                 Update and Upgrade your system!
+<<<<<<< HEAD
                     /OS/debian/2-updates/update.txt
+=======
+                    /OS/linux/debian/2-updates/update.txt
+>>>>>>> 4e0f7344 (fedora stuff added)
 
 
             1) Update dependencies:

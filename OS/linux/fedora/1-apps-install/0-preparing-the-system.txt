@@ -1,0 +1,39 @@
+
+
+    
+  
+    1) Install dependencies (this ensures your system is ready to add new repositories):
+        
+        $ sudo dnf update && sudo dnf upgrade -y
+        $ sudo dnf install software-properties-common apt-transport-https wget gpg -y
+
+
+    2) Install flatpak support (alternative to Snap and .deb):
+        
+        $ sudo dnf install -y flatpak
+        
+        # Add Flathub repository:
+        $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    3) Research which is the current and best Nvidia driver for your VGA card:
+
+        3.1) Basic: e.g. in Feb/2026 with a RTX3070
+            
+            $ sudo dnf install -y nvidia-driver-590-open
+
+            >> AI prompt:
+                "In Ubuntu <version>, I am using a Nvidia GeForce RTX3070 with 3 monitors. How do I check the best current driver for it through the terminal? Also, should I use with kind of Ubuntu session? Xorg or Wayland? Or something else?"
+
+        3.2) Expanding VGA usage with AI (Install CUDA):
+
+            https://developer.nvidia.com/cuda/toolkit
+            
+            # Ubuntu official repos already provide future CUDA updates when it's installed.
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+INSTALLING THE BASIC APPS:
+    ./1-installing-apps.txt

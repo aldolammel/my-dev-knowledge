@@ -1,8 +1,7 @@
 
 
-DEBIAN/UBUNTU: TERMINAL BASIC COMMANDS
+LINUX: TERMINAL COMMANDS
 
-    
     >> Very basic
 
         List the directories:
@@ -35,31 +34,11 @@ DEBIAN/UBUNTU: TERMINAL BASIC COMMANDS
 
         Move a folder/file:
             # if the directory doesn't exist, create it as instructed above.
-            # move the file/fpçder:
+            # move the file/folder:
             $ mv <folder_name_or_file_name_with_extension> <directory_destination>
 
         Get in a folder:
             $ cd <folder name>
 
         Step back from the current folder:
-            $ cd ..    # notice there's space in between.
-
-    >> Helpers
-
-        How to start, stop, and check a service. Let's use the 'postgres' as an example:
-            $ sudo systemctl status postgres
-            $ sudo systemctl start postgres
-            $ sudo systemctl stop postgres
-            $ sudo systemctl restart postgres
-
-        How to learn more about a command:
-            $ man <command you are trying to understand>
-            $ man postgres
-
-
-    >> Specialized:
-
-        Changing current user on terminal:
-            ./command-change-user.txt
-
-            
+            $ cd ..              <-- notice there's space in between.

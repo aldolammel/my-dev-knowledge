@@ -1,0 +1,55 @@
+
+
+OS > FEDORA: INSTALLING APPS
+    
+    
+    PRE.1) Prepare the system:
+        ./0-preparing-the-system.txt
+
+    PRE.2) Install the basic apps:
+        ./basic-apps/
+
+            >> @aldolammel Fedora's default browser = Firefox (non-snap)
+                ./basic-apps/using-apt/browser-firefox.txt
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    INSTALL AND UNINSTALL APPS:
+
+
+        IMPORTANT:
+            When you run "sudo dnf install <package>", DNF searches through its package index — a db of all available packages from repositories you've already added to your system. This index is created and updated when you run "sudo dnf update".
+
+        
+        >> Installing:
+
+            $ sudo dnf install -y <package_name>                  <-- '-y' skip install question.
+
+
+            >> Finding a package name installed:
+                ./finding-installed-apps.txt
+
+
+            >> Check apt-update repo list:
+                ./checking-app-is-in-repo-list.txt
+
+
+        >> Removing:
+
+            >> .rpm:
+                $ sudo dnf remove <package_name>
+
+                    # Clean up DNF cache:
+                        $ sudo dnf autoclean ??????????????? 
+
+                    # Remove unused old apps/dependencies:
+                        $ sudo dnf autoremove
+
+            >> Snap:
+                $ sudo snap remove <app_name> || true
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+

@@ -1,0 +1,36 @@
+
+
+OS > DEBIAN: BEFORE TO FORMAT THE CURRENT DISTRO 
+
+    1) Backup all non-clouded-files.
+
+        1.1) For workstation, save the .env files for each project once they're not on versioning.
+
+
+    x) Download distro .iso file.
+        E.g
+            https://releases.ubuntu.com/
+
+    x) With the distro .iso available locally, mount it in a USB drive (>=8GB):
+
+        CRUCIAL:
+            Don't use an external HD, except if you can use it entirely, without to use multiple partitions.
+
+        x.1) Format the device where you will set the .iso (format to Ext4 format);
+
+        x.2) Check if your Ubuntu already brings the "Startup Disk Creator" and open it. If not, install it:
+
+            .../debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator.txt
+
+        x.3) Select the .iso file and what storage device the creator should mount the selected file.
+
+    x) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
+
+        /BIOS/secure-boot.txt
+
+
+    x) Let's format the system:
+        ./distro-formatting.txt
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

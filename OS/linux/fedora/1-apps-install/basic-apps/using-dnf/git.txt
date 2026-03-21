@@ -1,0 +1,37 @@
+
+
+SYSTEM TOOL: GIT
+
+    Repository management.
+
+    >> Install:
+
+        PRE) Keep logged in to your GitHub account on the browser.
+
+        1) Installation:
+            $ sudo dnf update
+            $ sudo dnf install -y git-all
+
+        2) Integrations / Authentication:
+
+            2.1) On GitHub.com, log in and go to copy your token:
+                Settings > Developer settings > Fine-grained-Tokens > New token (not classic)
+
+                - No expiration
+                - All repositories
+                - Name: lammel-<machine>-<distro>
+                    E.g.
+                        lammel-laptop-fedora
+
+            2.2) For Fedora, you can use the system's credential helper with GitHub CLI:
+                # Install GitHub CLI (easier authentication):
+                    $ sudo dnf install -y gh
+
+                # Authenticate with GitHub:
+                    $ gh auth login
+
+                    # Follow the terminal instructions!
+
+
+
+                

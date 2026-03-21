@@ -1,0 +1,22 @@
+
+
+FEDORA: FINDING INSTALLED APPS
+
+        # Finding all:
+            $ dnf list --installed
+        
+        # Finding all with 'adobe' in the name:
+        
+            $ dnf list --installed | grep adobe
+
+        # Finding all the initial letters are 'web':
+        
+            $ dnf list --installed | grep ^web
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK CURRENT REPO LIST:
+    ./checking-app-is-in-repo-list.txt
