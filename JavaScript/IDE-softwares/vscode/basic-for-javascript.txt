@@ -42,6 +42,7 @@ IDE FOR JS PROJECT: VSCODE
         4) Formatter (Recommended: Prettier):
             /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
 
+<<<<<<< HEAD
 
 
 
@@ -87,3 +88,5 @@ IDE FOR JS PROJECT: VSCODE
         4) Formatter (Recommended: Prettier):
             /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
 
+=======
+>>>>>>> 4e0f7344 (fedora stuff added)

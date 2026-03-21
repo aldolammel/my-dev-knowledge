@@ -66,7 +66,11 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
                                         >> Update the entire system:
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             /OS/linux/debian/2-updates/update.txt
+=======
+                                            /OS/linux/debian/2-updates/update.txt
+>>>>>>> 4e0f7344 (fedora stuff added)
 =======
                                             /OS/linux/debian/2-updates/update.txt
 >>>>>>> 4e0f7344 (fedora stuff added)
