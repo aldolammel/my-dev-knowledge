@@ -30,8 +30,16 @@ SYSTEM TOOL: GIT
                 # Authenticate with GitHub:
                     $ gh auth login
 
-                    # Follow the terminal instructions!
+                        # Follow the terminal instructions!
 
+                            # Check if everything is fine:
+                                $ gh auth status
 
+                2.2.1) Set your global Git user name and email
+                    $ git config --global user.name "John Doe"
+                    $ git config --global user.email "johndoe6123123@gmail.com"
+
+                    IMPORTANT:
+                        Since you installed GitHub CLI (gh) and configured the credential helper, your authentication is handled automatically. The user.email you set should match your GitHub email for proper attribution of your commits on GitHub.com.
 
                 
