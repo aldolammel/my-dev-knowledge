@@ -19,4 +19,4 @@ x) Check if all basic motherboard settings is ok for your system:
     4.2) Display and sound configs;
 
     4.3) Install your default browser:
-        .../xxxxxxxxxx/1-apps-install/basic-apps/using-apt/browser-firefox.txt
+        .../windows/1-apps-install/basic-apps/browser-chrome.txt
