@@ -4,3 +4,19 @@
 x) Turn the "Secure Boot" off:
 
     /BIOS/secure-boot.txt
+
+
+x) Check if all basic motherboard settings is ok for your system:
+
+        /BIOS/basic-modo-settings.txt
+
+
+4) First Windows system log-in:
+
+    4.1) Preparing the system:
+        .../xxxxxxxx/1-apps-install/0-preparing-the-system.txt
+
+    4.2) Display and sound configs;
+
+    4.3) Install your default browser:
+        .../xxxxxxxxxx/1-apps-install/basic-apps/using-apt/browser-firefox.txt
