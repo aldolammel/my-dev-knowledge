@@ -1,6 +1,6 @@
 
 
-PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END):
+PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END)
 
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

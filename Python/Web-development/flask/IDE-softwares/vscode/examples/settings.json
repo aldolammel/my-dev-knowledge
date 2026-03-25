@@ -1,0 +1,68 @@
+// file: /project_root/.vscode/settings.json
+{
+    /*
+        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+    */
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    //...
+    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    //...
+    // FLASK SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.
+        "./app", // Main Flask app/package folder.
+        //"./app/blueprints/<blueprint_name>",
+        //"./config",                   // Config folder, if kept separate from the app package.
+    ],
+    "terminal.integrated.env.linux": { // Environment vars for Linux terminal sessions.
+        "FLASK_APP": "app:create_app", // Entry point: module:factory or module:app_instance. Adjust to match yours.
+        "FLASK_DEBUG": "1" // Enables debug mode + reloader. Replaces deprecated FLASK_ENV=development (removed in Flask 2.3).
+        //"FLASK_RUN_PORT": "5000",
+    },
+    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Flask has no VSCode-extension key equivalent to Django's "django.i18n".
+    // If using Flask-Babel, internationalization is configured via babel.cfg and pyproject.toml, not here.
+    //...
+    "[jinja-html]": { // Requires: samuelcolvin.jinjahtml (Better Jinja).
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.quickSuggestions": { // Configure IntelliSense suggestions inside Jinja2 HTML.
+            "other": true, // Suggestions for general code.
+            "comments": false, // Suggestions in comments.
+            "strings": true // Suggestions inside strings.
+        }
+    },
+    // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "[css]": {
+        //"editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+    },
+    // FILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tell VSCode how to treat files based on patterns:
+    "files.associations": {
+        "**/*.html": "jinja-html", // Treat all HTML files as Jinja2 templates.
+        "**/templates/**/*.html": "jinja-html",
+        "**/templates/**/*.css": "css",
+        "*.css": "css",
+        //...
+        // For better Python support in Flask:
+        "**/app/**/*.py": "python",
+        //"**/config/**/*.py": "python"
+    },
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
+        //...
+        // "**/__pycache__": true,
+        // "**/.pytest_cache": true,
+        // "**/instance": true   // Flask's instance folder: holds local config overrides, secrets,
+        // and possibly a local SQLite DB. Consider excluding from both
+        // explorer and search, and make sure it is in your .gitignore.
+    },
+    // Files/folders to hide from VSCode searches:
+    "search.exclude": {
+        //...
+        // "**/instance": true
+    },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // ...
+}

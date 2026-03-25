@@ -2,6 +2,12 @@
 
 PYTHON > UV PACKAGE MANAGER: USING SYNC
 
+
+    ONLY IN CASE OF REQUIREMENTS.TX
+        Convert your current existing project using requirements.txt to use pyproject.toml file:
+            ./converting-non-uv-project-in-one.txt
+
+
     A) I'm updating Python in a project;
     B) I lost the virtual environment folder in a project;
     C) I'm cloning an existing project only;

@@ -1,0 +1,89 @@
+
+
+FLASK: INSTALLING AND SETUP
+
+
+    1) Which scenario is your case:
+
+        1A) This machine and IDE are ready for Flask projects, and I got a brand new project:
+
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
+
+
+        1B) This machine and IDE are ready for Flask projects, and I'm just re-installing Flask for an existing app (or re-installing the entire project):
+            
+            >> Skip this file, jumping to this one:
+                ./1-reinstall-new-copy.txt
+
+
+        1C) This machine (or IDE) is new (for example, after the OS installation) and I need to prepare it to run Flask projects:
+
+            >> Keep yourself in this roadmap file!
+
+
+        - - - - -
+
+
+        1C) This machine (or IDE) is new! Preparing it to everything about Flask - - - - - - - - -
+
+            1C.PRE.1) Python interpreter (if needed);
+                /Python/1-python-installation/
+
+            1C.PRE.2) Create the project folder, and get it:
+                $ mkdir <project_folder>
+                $ cd <project_folder>
+
+            1C.PRE.3) DON'T create the .venv yet (so is NOT need to activate environ for now)!
+
+            1C.PRE.4) IDE, language setup:
+                >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
+                >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+
+            1C.1) IDE, framework setup:
+                >> VSCode:  .../flask/IDE-softwares/vscode/basic-for-flask.txt
+                >> PyCharm: .../flask/IDE-softwares/pycharm/basic-for-flask.txt
+
+            1C.2) Install Flask for a specific project:
+
+                >> Using UV (recommended, smarter):
+                    ./2-install-project-with-uv.txt
+
+                >> Or using PIP:
+                    ./2-install-project-with-pip.txt
+
+
+        - - - - -
+
+    
+    2) Once Flask project already installed, let's ask us again about the current case:
+    
+        A) This machine and IDE are already for Flask projects, and I got a brand new project:
+
+            >> Skip this file, jumping to this one:
+                ./1-install-new-project.txt
+
+        B) This machine and IDE are ready for Flask projects, and I'm just re-installing Flask for an existing app (or re-installing the entire project):
+            
+            >> Skip this file, jumping to this one:
+                ./1-reinstall-new-copy.txt
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+    MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
+
+        >> FLASK as back and front-end:
+            .../flask/0-new-project/web-project-flask-only.txt
+
+        >> FLASK with VUE as front-end:
+            .../flask/0-new-project/web-project-flask-with-vue.txt
+
+        >> FLASK with REACT as front-end:
+            .../flask/0-new-project/web-project-flask-with-react.txt
+
+        >> FLASK with ANGULAR as front-end:
+            .../flask/0-new-project/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+

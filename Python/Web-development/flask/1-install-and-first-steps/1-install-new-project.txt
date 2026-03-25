@@ -1,0 +1,50 @@
+
+
+DJANGO: INSTALLING A NEW PROJECT
+
+
+    1) Which scenario you are:
+
+        1A) Installing Flask project for the first time in this machine/IDE (skip this roadmap);
+        1B) Re-installing Flask dependency in an existing project (skip this roadmap);
+        1C) Re-installing an entire existing project (skip this roadmap);
+        1D) Install Flask in a new project;
+
+        - - - - - 
+
+        1A) Installing Flask project for the first time in this machine/IDE - - - - - - - - - - - -
+        
+            >> Skipping this current roadmap, close this file, and go to:
+                ./0-flask-installation-and-setup.txt
+
+
+        1B) Re-installing Flask dependency in an existing project - - - - - - - - - - - - - - - - -
+
+            >> Skipping this current roadmap, close this file, and go to:
+                ./1-reinstall-new-copy.txt
+
+
+        1C) Re-installing an entire existing project - - - - - - - - - - - - - - - - - - - - - - - -
+
+            >> Skipping this current roadmap, close this file, and go to:
+                ./1-reinstall-new-copy.txt
+
+
+        1D) Install Flask in a new project - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+            >> Using UV:
+                ./2-install-project-with-uv.txt
+
+            >> Or using PIP:
+                ./2-install-project-with-pip.txt
+
+
+        - - - - - 
+
+
+    2) Return to the main Flask roadmap and keep going:
+        ./0-flask-installation-and-setup.txt
+
+
+    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

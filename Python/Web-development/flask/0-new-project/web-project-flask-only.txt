@@ -1,44 +1,58 @@
 
 
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT FLASK (BACK AND FRONT-END):
+PYTHON PROJECT ROADMAPS: PROJECT FLASK (BACK AND FRONT-END)
 
 
-    >> SETUP:
+1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        >> Back-end + Front-end:
+    >> Database:
 
-            1) IDE, language setup:
-                >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
-                >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
+        1.1) What db should be used:
+            /Database/00-new-project/
 
-            2) IDE, framework setup:
-                >> VSCode:  /xxxxxxxxxxxxxxxxxx_flask.txt
-                >> PyCharm: /xxxxxxxxxxxxxxxxxxxxxxxx_flask.txt
-    
-            3) Virtual Environment and Flask installation:
-                /Python/Web-development/flask/xxxxxxxxxxxxxxxxxxxxxxxxxx
+    >> Back-end:
+
+        1.2) Basic installations:
+            .../flask/1-install-and-first-steps/0-flask-installation-and-setup.txt
+
+    >> Front-end:
 
 
-            4) (Optional) Front-end CSS Framework:
+           1.3) Front-end solution (Flask):
+            Use it as reference:
+                .../flask/flask-project-folder-structure.txt
 
-                >> Bootstrap:
-                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                >> In Flask project-folder:
+                    - Create the main 'xxxxxx' folder;
+                    - Create the main 'xxxxxx' folder;
+                    - Create the main 'xxxxxx' folder;
 
+                    ...
+
+        1.4) (Optional)
+            Front-end CSS Framework:
+                
                 >> Tailwind:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/tailwind/
-
-                >> Bulma:
+                
+                >> Or Bulma:
                     /Web-Development/frontend/CSS/css-libraries-frameworks/bulma/
+                
+                >> Or Bootstrap:
+                    /Web-Development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
 
-    >> DEVELOPMENT:
+2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        1) Front-end:
-            >> Convert the HTML template to Flask Template;
-            >> Code the entire navigation;
-        
-        2) Back-end:
-            >> Build up the database of the product;
-            >> xxxxxxxxxxxxxxxxx
+    0) Create the AI context prompt for the project:
+        /Python/Web-development/ai-prompt-context-model.txt
+    
+    2.1) Front-end:
+        >> Convert the HTML template to Flask Template;
+        >> Code the entire navigation;
+    
+    2.2) Back-end:
+        >> Build up the database of the product;
+        >> xxxxxxxxxxxxxxxxx
 
-        3) Final touches between Back and Front-end!
+    2.3) Final touches between Back and Front-end!

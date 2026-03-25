@@ -1,0 +1,31 @@
+
+
+FLASK > PROJECT INSTALLATION: TESTING
+
+
+    PRE) Assuming you already installed the new/empty project (with db or not):
+        ./2-install-project-with-uv.txt  or  ./2-install-project-with-pip.txt
+        
+
+    1) Check Flask installation and current setup:
+
+        >> Using UV:
+
+            # Check the installation:
+                $ uv run xxxxxxxxxx
+        
+            # Starting Flask server:
+                $ uv run flask run
+
+        >> Or using PIP:
+
+            # Check the installation:
+                $ python xxxxxxxxxx
+        
+            # Starting Flask server:
+                $ python flask run
+        
+        
+
+    2) Testing on browser:
+        http://127.0.0.1:5000/

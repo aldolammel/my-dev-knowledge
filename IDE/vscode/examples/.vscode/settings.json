@@ -1,7 +1,32 @@
-/* 
-    Python Project example:
-    /Python/IDE-softwares/vscode/examples/.vscode/settings.json
-    
-    JavaScript Project example:
-    /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
-*/
+// file: /project_root/.vscode/settings.json
+{
+    /*
+        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+    */
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
+    "editor.rulers": [
+        100 // Draw ruler at column XXX.
+    ],
+    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
+    "editor.wordWrapColumn": 100,
+    // FILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tell VSCode how to treat files based on patterns:
+    "files.associations": {
+        //...
+    },
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
+        // "**/venv": true,
+        // "**/.venv": true,
+        // "**/.git": true,
+    },
+    // Files/folders to hide from VSCode searches:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/.git": true,
+    },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // ...
+}

@@ -1,0 +1,21 @@
+
+UV: HOW TO CONVERT A REQUIREMENTS.TXT IN A PYPROJECT.TOML
+
+    AWARE:
+        Avoid to use the "uv pip install -r requirements.txt" command once it will not update automatically your pyproject.toml, and to keep a project using the requirement.txt method is not reliable in long-term.
+    
+    
+    If you wanna convert an existing project to use UV as its package manager, including all basic package management files to replace requirements.txt, do it:
+
+        x) In the existing project folder, install UV;
+
+        x) There, active the local environment and execute uv init;
+            # It will create the basic scaffolding files in the project!
+
+        x) Take the current requirements.txt and rewrite each requirement for UV format, installing all of them (and automatically include them in pyproject.toml file as well):
+
+            E.g.
+                $ uv pip install "Flask~=3.0.2" "SQLAlchemy~=2.0.27" "flask-sqlalchemy~=3.1.1" "Bootstrap-Flask~=2.3.3" "jinja2~=3.1.3"
+
+        x) Make sure your pyproject.toml file is updated in those requirements and, then, delete the requirements.txt file from the project;
+

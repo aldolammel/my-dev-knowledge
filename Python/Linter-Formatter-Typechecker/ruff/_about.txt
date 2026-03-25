@@ -8,14 +8,14 @@ PYTHON LANGUAGE > LINTER AND FORMATTER: RUFF
 
     Checks: Python syntax errors, import sorting, code style (PEP 8), bugs, complexity, etc.
 
-    Tip: Ruff is developed by the same company of the UV Package manager, so both are completely
-        integrated.
-            /Python/Package-manager/uv.txt
+        TIP:
+            Ruff is developed by the same company of the UV Package manager, so both are completely integrated.
+                /Python/Package-manager/uv.txt
 
 
 
     >> INSTALLING AND INTEGRATION:
-        /Python/Linter-Formatter-Typechecker/ruff/installation.txt
+        ./installation.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -30,7 +30,7 @@ PYTHON LANGUAGE > LINTER AND FORMATTER: RUFF
 
 
     >> HOW TO FIX CODE FORMATTING:
-        $ uv run ruff format                      # Format all files in Django-project-folder **.
+        $ uv run ruff format                      # Format all files in project-folder **.
         $ uv run ruff format path/to/code/        # Format all files in `path/to/code` (and any subdirectories).
         $ uv run ruff format path/to/file.py      # Format a single file.
 

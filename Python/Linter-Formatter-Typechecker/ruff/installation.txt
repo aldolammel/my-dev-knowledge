@@ -4,10 +4,8 @@ RUFF: INSTALLATION AND INTEGRATION
 
 
     PRE) What is it:
-        /Python/Linter-Formatter-Typechecker/ruff/_about.txt
+        ./_about.txt
 
-
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
     1) INSTALLING:

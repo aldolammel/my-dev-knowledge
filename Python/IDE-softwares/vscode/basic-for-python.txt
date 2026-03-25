@@ -9,7 +9,7 @@ IDE FOR PYTHON PROJECT: VSCODE
         1) VSCode project settings:
 
             1.1) In the project folder, open this file: 
-                /.vscode/settings.json;
+                /your_project/.vscode/settings.json;
 
             1.2) In that file, apply these new lines specific for Python projects:
                 ./examples/.vscode/settings.json

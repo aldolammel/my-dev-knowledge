@@ -1,6 +1,6 @@
 
 
-DJANGO PROJECT: WHAT DATABASE TO USE
+FLASK PROJECT: WHAT DATABASE TO USE
 
     >> PostgreSQL:
         ./PostgreSQL/installation.txt

@@ -1,0 +1,36 @@
+
+
+DATABASE ON FLASK: POSTGRESQL
+
+    Summary:
+        1) Installing the db with its basic integration;
+        2) Integrating database and back-end;
+        3) Creating the database;
+
+    Let's go:
+
+    
+    1) Installing the db with its basic integration - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> If the db won't be in the cloud, install it locally:
+            /Database/PostgreSQL/0-basic/installing-and-integrating.txt
+        
+
+
+    2) Integrating database and back-end - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        2.1) Install a Python lib for PostgreSQL:
+            /Python/component-libraries/psycopg/0-psycopg.txt
+        
+        2.2) (If applicable)
+            Make a copy of the '.env' file to your project root folder:
+                /Environment-Variables/
+
+        2.3) ?????????????????????????If you see the file sqlite.db in the project root folder, delete it once you are using PostgreSQL and you have no data from this project in that SQLite.
+
+
+
+    3) Creating the db - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        xxxxxxxxxxxxxxxx
+        

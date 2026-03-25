@@ -1,0 +1,15 @@
+// file: /project_root/.vscode/extensions.json
+{
+    /*
+        VSCODE RECOMMENDED EXTENSIONS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        Ensuring all devs got consistent tooling, formatting, and linting!
+    */
+    "recommendations": [
+        // PYTHON - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        // Assuming you've added too: /Python/IDE-softwares/vscode/examples/.vscode/extensions.json
+        // FLASK - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        "samuelcolvin.jinjahtml", // It's a syntax highlighting for VSCode.
+        // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // ...
+    ]
+}
