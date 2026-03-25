@@ -48,18 +48,27 @@ IDE: VSCode
 
         >> BY (WORKSPACE) PROJECT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-            Its configuration file is called settings.json that belongs the /.vscode/ folder in
+            >> Its configuration file is called settings.json that belongs the /.vscode/ folder in
             the project folder. This settings file override other previously settings.
 
-            To access:
-                Through VSCode interface, open the project folder, and then go to the .vscode folder inside the project and open the settings.json file.
+                To access:
+                    Through VSCode interface, open the project folder, and then go to the .vscode folder inside the project and open the settings.json file.
 
                         E.g.
                             /IDE/vscode/examples/.vscode/settings.json
 
-            Tip:
-                Make this .vscode folder available in your project repository to rule this features
-                for all developers involved on the project.
+                Tip:
+                    Make this .vscode folder available in your project repository to rule this features for all developers involved on the project.
+
+            >> Also, you got the extensions.json file in the same project folder. Here this file tells your VSCode what extensions this project demands. This makes each project's team member machine more reliable about which linting, tooling and formatting features to use.
+
+                to access:
+                    Same logic of settings.json file.
+
+                        E.g.
+                            /IDE/vscode/examples/.vscode/extensions.json
+
+
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

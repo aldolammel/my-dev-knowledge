@@ -1,0 +1,13 @@
+{
+    /*
+        VSCODE RECOMMENDED EXTENSIONS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        Ensuring all devs got consistent tooling, formatting, and linting!
+    */
+    "recommendations": [
+        // JS/VUE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        // Assuming you've added too: /JavaScript/IDE-softwares/vscode/examples/.vscode/extensions.json
+        "johnsoncodehk.volar", // Support for Vue 3 (type checking, IntelliSense, autocomplete).
+        // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // ...
+    ]
+}

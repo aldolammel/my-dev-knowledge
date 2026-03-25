@@ -1,0 +1,13 @@
+{
+    /*
+        VSCODE RECOMMENDED EXTENSIONS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        Ensuring all devs got consistent tooling, formatting, and linting!
+    */
+    "recommendations": [
+        // JS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        "dbaeumer.vscode-eslint", // ESLint for JS and Vue (handles auto-fixing on save).
+        "esbenp.prettier-vscode", // Code formatter used for JS, JSON, CSS, HTML, and Vue.
+        // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // ...
+    ]
+}

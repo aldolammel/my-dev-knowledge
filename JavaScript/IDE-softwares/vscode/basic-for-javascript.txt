@@ -26,6 +26,8 @@ IDE FOR JS PROJECT: VSCODE
             1.1) In the project folder, open this file: .vscode/settings.json;
             1.2) In that file, apply these lines:
                 ./examples/.vscode/settings.json
+            1.3) Create this file too:
+                ./examples/.vscode/extensions.json
 
             IMPORTANT FOR TEAMS:
                 Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository! Once you wouldn't be the only team member in this project, people like to custom their IDEs too.

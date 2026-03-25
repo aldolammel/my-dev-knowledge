@@ -70,6 +70,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
                 >> Django basics:
                     .../django/IDE-softwares/vscode/examples/settings.json
+                    .../django/IDE-softwares/vscode/examples/extensions.json
 
                 >> Check if the Python version on that file is correct!
                     If NOT okay, fix it!

@@ -1,0 +1,23 @@
+
+
+IDE FOR PYTHON PROJECT: VSCODE
+
+
+    >> Basic for run Python:
+
+
+        1) VSCode project settings:
+
+            1.1) In the project folder, open this file: 
+                /.vscode/settings.json;
+
+            1.2) In that file, apply these new lines specific for Python projects:
+                ./examples/.vscode/settings.json
+
+            1.3) Also, tells VSCode you got some extension recommendations for other project's devs:
+                ./examples/extensions.json
+
+            # (If applicable) Make sure your .gitignore file is NOT blocking the .vscode folder and its content in project repository!
+        
+    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

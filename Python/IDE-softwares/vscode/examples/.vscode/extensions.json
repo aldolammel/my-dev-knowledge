@@ -1,0 +1,14 @@
+{
+    /*
+        VSCODE RECOMMENDED EXTENSIONS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        Ensuring all devs got consistent tooling, formatting, and linting!
+    */
+    "recommendations": [
+        // PYTHON - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        "ms-python.python", // Base Python extension w/ IntelliSense, debugging, and env management.
+        "ms-python.pylance", // Fast, feature-rich language server for Python.
+        "charliermarsh.ruff", // Python linter/formatter.
+        // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // ...
+    ]
+}

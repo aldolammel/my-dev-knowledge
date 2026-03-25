@@ -1,0 +1,15 @@
+{
+    /*
+        VSCODE RECOMMENDED EXTENSIONS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        Ensuring all devs got consistent tooling, formatting, and linting!
+    */
+    "recommendations": [
+        // PYTHON - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        // Assuming you've added too: /Python/IDE-softwares/vscode/examples/.vscode/extensions.json
+        // DJANGO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        "ms-django.django", // Django template support (URL patterns, model fields autocomplete).
+        "monosans.djlint", // Django/Jinja2 template linter/formatter for HTML files.
+        // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // ...
+    ]
+}
