@@ -1,6 +1,6 @@
 
 
-DJANGO: RUNNING AN APP
+FLASK: RUNNING AN APP
 
 
     PRE.1) Keep it in mind: this app is using local db or a cloud one? Case local, is the db service running properly?
@@ -22,18 +22,18 @@ DJANGO: RUNNING AN APP
     4) Run the app:
 
         # Using UV:
+            # Running with no cache:
+                $ uv run flask run --debug
             # Regular:
-                $ uv run manage.py runserver
-            # With no auto-reload (avoid server auto-update and instability):
-                $ uv run manage.py runserver --noreload
+                $ uv run flask run
 
         # Or using PIP:
-            # Regular:
-                $ python manage.py runserver
-            # With no auto-reload (avoid server auto-update and instability):
-                $ python manage.py runserver --noreload
-    
+            # Running with no cache:
+                $ python flask run --debug
+            # Regular: 
+                $ python flask run
+
 
     5) Check the app through the browser:
-        http://localhost:8000/
-        http://127.0.0.1:8000/
+        http://localhost:5000/
+        http://127.0.0.1:5000/

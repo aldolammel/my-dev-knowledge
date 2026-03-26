@@ -7,25 +7,17 @@ FLASK > PROJECT INSTALLATION: TESTING
         ./2-install-project-with-uv.txt  or  ./2-install-project-with-pip.txt
         
 
-    1) Check Flask installation and current setup:
+    1) Check the installation and current setup:
 
-        >> Using UV:
+        # Using UV:
+            $ uv run xxxxxxxxxx
 
-            # Check the installation:
-                $ uv run xxxxxxxxxx
-        
-            # Starting Flask server:
-                $ uv run flask run
+        # Or using PIP:
+            $ python xxxxxxxxxx
 
-        >> Or using PIP:
 
-            # Check the installation:
-                $ python xxxxxxxxxx
-        
-            # Starting Flask server:
-                $ python flask run
-        
+    2) Run the app:
+        .../flask/_running-app.txt
         
 
-    2) Testing on browser:
-        http://127.0.0.1:5000/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

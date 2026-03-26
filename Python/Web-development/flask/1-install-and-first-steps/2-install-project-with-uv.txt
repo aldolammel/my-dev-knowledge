@@ -130,7 +130,7 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         Since this point, you might execute basic tests without the follow steps once your goal
-                            would be to test something basic on Django.
+                            would be to test something basic on Flask.
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
@@ -149,4 +149,4 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
 
 MAKE SURE YOU FINISHED ALL THESE STEPS:
-    ./0-django-installation-and-setup.txt
+    ./0-flask-installation-and-setup.txt
