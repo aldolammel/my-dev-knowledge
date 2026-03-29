@@ -13,7 +13,7 @@ DATABASE ON DJANGO: POSTGRESQL
     1) Installing the db with its basic integration - - - - - - - - - - - - - - - - - - - - - - - - 
 
         >> If the db won't be in the cloud, install it locally:
-            /Database/PostgreSQL/0-basic/installing-and-integrating.txt
+            /Database/PostgreSQL/0-basic/1-installing-and-integrating.txt
         
 
 

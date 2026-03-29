@@ -103,6 +103,7 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+
         5) (Optional)
             Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
                 

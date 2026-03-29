@@ -42,6 +42,7 @@ JAVASCRIPT BUILD-TOOL: VITE
                 /JavaScript/Linter-Formatter-Typechecker/eslint/vite-plugin-eslint.txt
 
 
+
     >> Update Vite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         # Checking the current Vite version:

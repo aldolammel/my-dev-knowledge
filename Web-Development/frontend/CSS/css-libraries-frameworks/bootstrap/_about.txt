@@ -8,8 +8,18 @@ CSS FRAMEWORK: BOOTSTRAP
 
     Bootstrap is a component-based framework that provides pre-built components like buttons, cards,
     navbars, and modals. It uses semantic class names!
-
+    
     >> https://getbootstrap.com/
+
+    
+    Integration examples:
+    
+        - with build-tool Vite:
+        - with build-tool Webpack:
+        - with front-end framework Vue:
+        - with front-end framework React:
+
+            All of them: https://github.com/twbs/examples/tree/main
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
