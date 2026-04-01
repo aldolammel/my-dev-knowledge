@@ -1,0 +1,26 @@
+
+
+DB MANAGER: SQLITE
+
+    1) Adding .deb version as repository:
+        NOT NEEDED
+
+        >> Only for Ubuntu and its variants:
+            # To add this ppa just type in these commands in terminal:
+                $ sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+
+    2) Update the system;
+
+    3) Install it:
+        $ sudo apt install -y sqlitebrowser
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+XXXXXXXXXXXXXXXXX:
+    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

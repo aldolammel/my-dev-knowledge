@@ -2,6 +2,9 @@
 
 DATABASE ON FLASK: POSTGRESQL
 
+    DISCLAIMER
+        Flask doesn't have a "default" database because it's a micro-framework that doesn't bring a built-in ORM and a pre-configured db setup like Django, for example.
+
     Summary:
         1) Installing the db with its basic integration;
         2) Integrating database and back-end;
@@ -34,3 +37,17 @@ DATABASE ON FLASK: POSTGRESQL
         
         xxxxxxxxxxxxxxxx
         
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /IDE/vscode/
+
+    >> PyCharm:
+        /IDE/pycharm/

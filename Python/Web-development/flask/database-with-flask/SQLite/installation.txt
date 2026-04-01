@@ -1,14 +1,26 @@
 
 DATABASE ON FLASK: SQLITE
 
-    Is it the Flask db by default???????
+    DISCLAIMER
+        Flask doesn't have a "default" database because it's a micro-framework that doesn't bring a built-in ORM and a pre-configured db setup like Django, for example.
 
-    1) xxxxxxxxxx
+    However, SQLite is widely considered the de facto standard for Flask development for three main reasons:
+        
+        1. Zero Configuration;
+        2. Official Documentation & Tutorials;
+        3. Ease of Use with Flask-SQLAlchemy;
 
 
-    2) xxxxxxxxxxx
 
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-        6) <check the last steps of postgres checklist to migrate those steps here maybe!!!>
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /IDE/vscode/
+
+    >> PyCharm:
+        /IDE/pycharm/

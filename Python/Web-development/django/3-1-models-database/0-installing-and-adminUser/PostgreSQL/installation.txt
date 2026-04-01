@@ -48,3 +48,15 @@ DATABASE ON DJANGO: POSTGRESQL
             $ uv run manage.py makemigrations
             $ uv run manage.py migrate
         
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /IDE/vscode/
+
+    >> PyCharm:
+        /IDE/pycharm/

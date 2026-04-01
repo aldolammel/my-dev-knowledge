@@ -1,6 +1,9 @@
 
 DATABASE ON FLASK: MYSQL
 
+    DISCLAIMER
+        Flask doesn't have a "default" database because it's a micro-framework that doesn't bring a built-in ORM and a pre-configured db setup like Django, for example.
+
     1) xxxxxxxxxx
 
 
@@ -12,3 +15,16 @@ DATABASE ON FLASK: MYSQL
 
 
         6) <check the last steps of postgres checklist to migrate those steps here maybe!!!>
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /IDE/vscode/
+
+    >> PyCharm:
+        /IDE/pycharm/

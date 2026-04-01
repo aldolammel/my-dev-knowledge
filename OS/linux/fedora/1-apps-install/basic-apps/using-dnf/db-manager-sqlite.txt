@@ -1,14 +1,14 @@
 
 
-MULTIMEDIA: VLC
+DB MANAGER: SQLITE
 
-    1) Adding .rpm version as repository:
+    1) Adding .deb version as repository:
         NOT NEEDED
 
     2) Update the system;
 
     3) Install it:
-        $ sudo apt install -y vlc
+        $ sudo dnf install sqlitebrowser
 
 
 

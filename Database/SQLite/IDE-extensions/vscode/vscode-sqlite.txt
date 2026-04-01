@@ -1,0 +1,49 @@
+
+
+IDE EXTENSIONS > VSCODE > SQLITE: VSCODE-SQLITE
+
+
+    It's a extension for vscode where you can explorer your SQLite db through the IDE UI.
+
+
+    >> Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        PRE) Assuming you already got the extension installed in your current chosen VSCode profile;
+
+        1) Installing the SQLite support in your current machine:
+
+            >> On Windows/Mac:
+                Nothing to do;
+
+            >> Linux:
+                $ sudo apt install sqlite3
+        
+        2) Ctrl+Shift+P and select "SQLite: Open Database".
+            # In VSCode sidebar will be shown "SQLite Explorer". Done!
+
+
+
+    >> Manipulating data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        ADVICE:
+            Use a GUI for this. Much faster and easier to work with an app with interface than by terminal for this kind of 'puxadinho' to deal with IDE UI:
+            
+            # For Ubuntu:
+                /OS/linux/debian/1-apps-install/basic-apps/using-apt/db-manager-sqlite.txt
+            
+            # For Fedora:
+                /OS/linux/fedora/1-apps-install/basic-apps/using-dnf/db-manager-sqlite.txt
+            
+            # For others:
+                /OS/...
+
+        
+        PRE) In VSCode sidebar, you find 'SQLite Explorer' area;
+
+
+        >> Adding a new table:
+            xxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> Adding a new column:
+            xxxxxxxxxxxx

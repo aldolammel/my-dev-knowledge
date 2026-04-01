@@ -1,6 +1,6 @@
 
 
-MULTIMEDIA: VLC
+DB MANAGER: POSTGRESQL
 
     1) Adding .rpm version as repository:
         NOT NEEDED
@@ -8,7 +8,7 @@ MULTIMEDIA: VLC
     2) Update the system;
 
     3) Install it:
-        $ sudo apt install -y vlc
+        $ xxxxxxxxxxxxxxxxxx
 
 
 
