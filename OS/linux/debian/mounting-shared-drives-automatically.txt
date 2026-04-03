@@ -2,6 +2,9 @@
 
 DEBIAN/UBUNTU: MOUNTING SHARED DRIVES AUTOMATICALLY
 
+    
+    After this config, your shared SSD should be automatically available for Ubuntu to be read and written without any manual permission or manual access first.
+
 
     1. Find your SSD's UUID:
         $ sudo blkid
@@ -20,35 +23,54 @@ DEBIAN/UBUNTU: MOUNTING SHARED DRIVES AUTOMATICALLY
         
     3. Backup your fstab file:
         $ sudo cp /etc/fstab /etc/fstab.backup
+
+    
+    4. Check your current user ID:
+        $ id
         
-    4. Edit the fstab file:
+    5. Edit the fstab file:
         $ sudo nano /etc/fstab
 
-    5. Add this line at the end of the file, and, after that, return to terminal:
+    6. Add this line at the end of the file, and, after that, return to terminal:
 
         # Shared SSD for dual-boot files
-        UUID=6A1A27711A273989 /media/shared-ssd ntfs-3g defaults,uid=1000,gid=1000,umask=022,nofail,x-gvfs-show 0 0
+        UUID=6A1A27711A273989 /media/shared-ssd ntfs-3g rw,uid=1000,gid=1000,umask=000,nofail,x-gvfs-show 0 0
         
-        # Explanation of the options:
-        # UUID=6A1A27711A273989: Your drive's unique identifier
-        # /media/shared-ssd: Mount point we created
-        # ntfs-3g: Driver for NTFS filesystems
-        # uid=1000,gid=1000: Sets ownership to your user (first user created is usually 1000)
-        # umask=022: Sets file permissions (read/write for owner, read for others)
-        # nofail: Prevents boot errors if drive isn't available
-        # x-gvfs-show: Makes it visible in file manager
         
-    6. Refresh the fstab loaded by its new version:
+        >> Explanation of the options:
+
+            UUID=6A1A27711A273989:         Your drive's unique identifier
+            /media/shared-ssd:             Mount point we created
+            ntfs-3g:                       Driver for NTFS filesystems
+            rw:                            explicitly enables read and write.
+            uid=1000,gid=1000:             Sets ownership to you (first user created's usually 1000)
+            umask=000:                     full read/write/execute to everyone
+            nofail:                        Prevents boot errors if drive isn't available
+            x-gvfs-show:                   Makes it visible in file manager
+        
+
+    7. Refresh the fstab loaded by its new version:
         $ sudo systemctl daemon-reload
         
-    7. Test the configuration:
+    8. Test the configuration:
         $ sudo mount -a
         $ ls -la /media/shared-ssd
 
-    8. Set proper permissions (if needed):
+    9. Set proper permissions (if needed):
         $ sudo chown -R $USER:$USER /media/shared-ssd
 
-    9. After setup, reboot the Ubuntu!
-        After reboot, your shared SSD should be automatically available to all applications,
-        including your audio player, without needing manual access first. The drive will 
-        appear in your file manager and be accessible to all your media applications.
+    10. (If you cannot write files in the drive)
+        Probably it's because you are in dual-boot with Windows and it left the NTFS partition in a "dirty" or hibernated state. Solution:
+
+            1. Log in your Windows;
+
+            2. Disable Fast Startup:
+                Control Panel → Power Options → Choose what power buttons do → Disable "Turn on fast startup"
+
+            3. Run as admin:
+                $ chkdsk /f <ISSUED_DRIVE_LETTER>:
+
+            4. Fully shut down Windows (NOT restart):
+                $ shutdown /s /f /t 0
+        
+    11. Return to Ubuntu and test it!

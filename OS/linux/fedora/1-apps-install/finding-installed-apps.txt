@@ -2,12 +2,20 @@
 
 FEDORA: FINDING INSTALLED APPS
 
+
         # Finding all:
             $ dnf list --installed
         
+        
         # Finding all with 'adobe' in the name:
         
-            $ dnf list --installed | grep adobe
+            $ dnf list --installed | grep adobe             <-- or "with quotes" for composed names.
+
+
+        # Finding all with some 'obe' in the name:
+
+            $ dnf list --installed | grep obe               <-- It'll find all Adobe stuff.
+
 
         # Finding all the initial letters are 'web':
         

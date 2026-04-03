@@ -2,15 +2,16 @@
 
 INTERNET TOOL: MOZILLA FIREFOX
 
+
     Since Ubuntu 22.04, Canonical decided to ship Firefox only as a Snap in the main repository. The .deb version is maintained separately by the Mozilla Team PPA.
 
 
-    1) Ubuntu already comes with Firefox but not the real one. It comes with the SNAP version. So, at first, delete that version:
+    1) Ubuntu already comes with Firefox ("sandboxed" one) but not the .deb one (faster). It comes with the sandboxed "SNAP" version. So, at first, delete that version:
         
         $ sudo apt remove firefox
     
 
-    2) Force Ubuntu just consider the .deb version:
+    2) Force Ubuntu APT just consider the .deb version from "mozillateam PPA", blocking the app in SNAP version from official Ubuntu repos:
 
         $ sudo nano /etc/apt/preferences.d/mozilla-firefox
 
@@ -18,11 +19,20 @@ INTERNET TOOL: MOZILLA FIREFOX
             Pin: release o=LP-PPA-mozillateam
             Pin-Priority: 1001
 
+            Package: firefox*
+            Pin: release o=Ubuntu
+            Pin-Priority: -1
 
-    3) Update the system;
 
-        >> (NOT NEEDED IF ALREADY ONBOARD OF THE OS) Adding .deb version as repository:
-            $ sudo add-apt-repository ppa:mozillateam/ppa
+    3) Update the system, but first:
+
+        3.1) Check if the app repo is been considered by APT:
+                .../1-apps-install/checking-app-is-in-repo-list.txt
+
+            # If not, add it as repository:
+                $ sudo add-apt-repository ppa:mozillateam/ppa
+
+        3.2) Run $ sudo apt update;
 
 
     4) Install it:
