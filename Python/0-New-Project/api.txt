@@ -1,0 +1,17 @@
+
+
+PYTHON PROJECT ROADMAPS: API WITH PYTHON MODULE
+
+
+    TO THINK
+        If you're want to build up an API, consider to use a framework like Flask (simple) or Django (complex stuff)!
+            .../Web-development/flask/0-new-project/api.txt
+            .../Web-development/django/0-new-project/api.txt
+
+
+    
+    >> Using http.server module:
+
+        /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        

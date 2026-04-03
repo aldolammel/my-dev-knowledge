@@ -61,26 +61,16 @@
                 $ git rm --cached <file_name>     or    git rm -r --cached <folder_name>
             
             3) Commit the changes:
-                
-                $ git commit -a -m "Gitignore updated"
+                ./command-commit.txt
             
             
             4) The git rm command, along with the --cached option, deletes the file from the
                 repository but does not delete the actual file. This means the file remains on 
                 your local system and in your working directory as an ignored file:
             
-                >> To delete a local branch
-                    
-                    # branches list:
-                    $ git branch -a
+                >> To delete a local branch / removing a local one:
+                    ./command-branch.txt
                 
-                    # removing a local one:
-                    $ git branch -d <branch_name>
-                
-                >> To delete a remote branch
-                    
-                    # branches list:
-                    $ git branch -a
-                    
-                    # removing a remote one:
-                    $ git push origin -d <branch_name>
+                >> To delete a remote branch:
+                    ./command-branch.txt
+                    ./command-push.txt

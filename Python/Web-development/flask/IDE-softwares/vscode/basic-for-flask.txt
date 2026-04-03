@@ -45,4 +45,9 @@ IDE FOR FLASK PROJECT: VSCODE
             # Not need to install anything additional 'coz Ruff is also a formatter.
 
 
-            
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+VSCODE USER PROFILES:
+    /IDE/vscode/user-profiles-bkp/

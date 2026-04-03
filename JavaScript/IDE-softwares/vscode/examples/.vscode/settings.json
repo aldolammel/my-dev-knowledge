@@ -3,30 +3,42 @@
         VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
-    "editor.rulers": [
-        100 // Draw ruler at column XXX.
-    ],
-    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
-    "editor.wordWrapColumn": 100,
+    // !!!!!!!!!!!!!!!!! Check: /IDE/vscode/examples/.vscode/settings.json
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // !!!!!!!!!!!!!!!!! Check: /IDE/vscode/examples/.vscode/settings.json
     // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[javascript]": {
-        "editor.defaultFormatter": "",
+        "editor.defaultFormatter": null,
         "editor.tabSize": 2,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },
     // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[json]": {
-        "editor.defaultFormatter": ""
+        "editor.defaultFormatter": null,
+    },
+    // HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "html.format.wrapLineLength": 100,
+    "html.format.indentInnerHtml": true,
+    "html.format.templating": true,
+    "html.format.maxPreserveNewLines": 2,
+    // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
     },
     // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tell VSCode how to treat files based on patterns:
     "files.associations": {
+        "**/*.html": "html",
+        "*.css": "css",
         "*.json": "jsonc",
     },
     // Files/folders to hide from the VSCode explorer:
     "files.exclude": {
+        // "**/node_modules": true,
         //"**/venv": true,
         //"**/.venv": true,
         //"**/.git": true,
@@ -36,5 +48,8 @@
         "**/venv": true,
         "**/.venv": true,
         "**/.git": true,
+        "**/node_modules": true,
     },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
 }

@@ -72,8 +72,12 @@ PYTHON PACKAGE MANAGEMENT: UV
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
->> DJANGO PROJECT WITH UV MANAGEMENT:
-    /Python/Web-development/django/1-install-and-first-steps/1-with-uv-manager.txt
+>> DJANGO PROJECT WITH UV:
+    /Python/Web-development/django/1-install-and-first-steps/2-install-project-with-uv.txt
+
+
+>> FLASK PROJECT WITH UV:
+    /Python/Web-development/flask/1-install-and-first-steps/2-install-project-with-uv.txt
 
 
 >> HOW TO CREATE A REQUIREMENTS OF PROJECT WITH UV:

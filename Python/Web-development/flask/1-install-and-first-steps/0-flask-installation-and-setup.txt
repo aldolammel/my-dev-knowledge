@@ -36,7 +36,12 @@ FLASK: INSTALLING AND SETUP
 
             1C.PRE.3) DON'T create the .venv yet (so is NOT need to activate environ for now)!
 
-            1C.PRE.4) IDE, language setup:
+            1C.PRE.4) IDE, select through the IDE GUI which User Profile this project demands!
+                        # Aldo's profile backups:
+                            /IDE/vscode/user-profiles-bkp/
+                            /IDE/pycharm/xxxxxxxxxxxxxxxx/
+
+            1C.PRE.5) IDE, language setup:
                 >> VSCode:  /Python/IDE-softwares/vscode/basic-for-python.txt
                 >> PyCharm: /Python/IDE-softwares/pycharm/basic-for-python.txt
 

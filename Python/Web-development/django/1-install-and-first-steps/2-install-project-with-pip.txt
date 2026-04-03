@@ -18,6 +18,17 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
         PRE.2) Make sure you already installed the right Python version for this project:
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        1) (Optional)
+            Advanced IDE configure for Python in this project:
+
+            >> Python basics:
+
+                # For project:
+                    /Python/IDE-softwares/vscode/examples/.vscode/
+                
+                # For API only:
+                    The same example above!
     
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -30,7 +41,14 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
                 .../django/django-project-folder-structure.txt
         
         
-        2) Assuming you already opened the Project folder through an IDE;
+        2) IDE steps:
+
+            2.1) Select through the IDE GUI which User Profile this project demands!
+                    # Aldo's profile backups:
+                        /IDE/vscode/user-profiles-bkp/
+                        /IDE/pycharm/xxxxxxxxxxxxxxxx/
+
+            2.2) Open this new folder in your IDE;
 
 
         3) (If applicable)
@@ -46,8 +64,21 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
             4.2) Once you now got a .venv folder, active the project's virtual environment:
                 /Python/3-virtual-environment/activate-and-deactivate.txt
+
+            
+            4.3) (Optional)
+                Advanced IDE configure for this framework in this project:
+
+                >> Django basics:
+
+                    # For project:
+                        .../django/IDE-softwares/vscode/examples/.vscode/
+                    
+                    # For API only:
+                        .../django/IDE-softwares/vscode/examples/.vscode-for-api-only/
+
         
-            4.3) Install Django in this project:
+            4.4) Install Django in this project:
                     
                 >> Ubuntu/Windows:
 
@@ -64,18 +95,18 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
                     xxxxxxxxxxxxxx
 
 
-            4.4) Define your database case it SHOULDN'T use SQLite:
+            4.5) Define your database case it SHOULDN'T use SQLite:
                 .../django/3-1-models-database/0-installing-and-adminUser/_define-the-database.txt
 
 
-            4.5) After Django installation:
+            4.6) After Django installation:
 
-                4.5.1) Create the Django Project structure, going to the project root folder and asking the package manager to create the 'core' folder:
+                4.6.1) Create the Django Project structure, going to the project root folder and asking the package manager to create the 'core' folder:
                 
                     $ django-admin startproject core .                     <-- This dot's important!
             
             
-                4.5.2) (If applicable)
+                4.6.2) (If applicable)
                     Case you need an admin user:
                         .../django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.txt
 

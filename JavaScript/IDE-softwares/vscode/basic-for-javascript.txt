@@ -3,14 +3,17 @@
 IDE FOR JS PROJECT: VSCODE
 
 
-        PRE.1) Python project:
+        PRE.1) JS project:
             /JavaScript/00-New-Project/1-new-project.txt
 
 
         PRE.2) IDE VSCode install:
 
-            Ubuntu:
+            Linux:
                 /OS/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+                or
+                /OS/linux/fedora/1-apps-install/basic-apps/using-dnf/ide-code.txt
+
             
             Windows:
                 https://code.visualstudio.com
@@ -44,51 +47,9 @@ IDE FOR JS PROJECT: VSCODE
         4) Formatter (Recommended: Prettier):
             /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
 
-<<<<<<< HEAD
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-
-IDE FOR JS PROJECT: VSCODE
-
-
-        PRE.1) Python project:
-            /JavaScript/00-New-Project/1-new-project.txt
-
-
-        PRE.2) IDE VSCode install:
-
-            Ubuntu:
-                /OS/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
-            
-            Windows:
-                https://code.visualstudio.com
-
-
-        PRE.3) (IS IT REALLY NECESSARY FOR JS????????????????)
-            Assuming you already have the project's virtual environment to work:
-                /xxxxxxxxxxxxxxxxxxxxx
-
-
-        1) VSCode project settings:
-
-            1.1) In the project folder, open this file: .vscode/settings.json;
-            1.2) In that file, apply these lines:
-                ./examples/.vscode/settings.json
-
-            IMPORTANT FOR TEAMS:
-                Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository! Once you wouldn't be the only team member in this project, people like to custom their IDEs too.
-
-        
-        2) Type-Checker:
-            /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
-
-        
-        3) Linter (Recommended: ESLint):
-            /JavaScript/Linter-Formatter-Typechecker/_linter/js-options.txt
-
-
-        4) Formatter (Recommended: Prettier):
-            /JavaScript/Linter-Formatter-Typechecker/_formatter/js-options.txt
-
-=======
->>>>>>> 4e0f7344 (fedora stuff added)
+VSCODE USER PROFILES:
+    /IDE/vscode/user-profiles-bkp/

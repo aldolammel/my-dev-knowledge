@@ -1,33 +1,44 @@
 {
     /*
-        VSCODE SPECIFIC SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+        VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
-    // PROJECT SETTINGS:
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     //...
-    // BACKEND SETTINGS:
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     //...
-    // VUE SETTINGS:
+    // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // !!!!!!!!!!!!!!!!! Check: /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // !!!!!!!!!!!!!!!!! Check: /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // VUE SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "[vue]": {
         //"editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.tabSize": 2,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },
-    // FILE ASSOCIATIONS:
+    // HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // !!!!!!!!!!!!!!!!! Check: /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // !!!!!!!!!!!!!!!!! Check: /JavaScript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tell VSCode how to treat files based on patterns:
     "files.associations": { // Tell VSCode how to treat files based on patterns.
         //...
         "*.vue": "vue",
     },
-    // FILE EXCLUSIONS:
+    // Files/folders to hide from the VSCode explorer:
     "files.exclude": { // Files/folders to hide from the VSCode explorer.
         //...
         // "**/node_modules": true,
         // "**/dist": true,
     },
-    // SEARCH EXCLUSIONS:
+    // Files/folders to hide from the VSCode searchings:
     "search.exclude": { // Files/folders to hide from the VSCode searchings.
         //...
         "**/node_modules": true,
         "**/dist": true,
     },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
 }

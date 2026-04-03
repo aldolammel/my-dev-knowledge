@@ -3,14 +3,9 @@
         VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    "editor.formatOnSave": true, // Automatically formats the current file (all types) in saving.
-    "editor.rulers": [
-        100 // Draw ruler at column XXX.
-    ],
-    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
-    "editor.wordWrapColumn": 100,
-    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // Reserved space...
+    // !!!!!!!!!!!!!!!!! Check: /IDE/vscode/examples/.vscode/settings.json
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // !!!!!!!!!!!!!!!!! Check: /IDE/vscode/examples/.vscode/settings.json
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Where's Python interpreter on project:
     // "python.defaultInterpreterPath": "..../.venv/bin/python3", // Not needed! Code finds it!
@@ -24,12 +19,13 @@
     },
     // Files/folders to hide from the VSCode explorer:
     "files.exclude": {
-        //"**/__pycache__": true,
+        "**/__pycache__": true,
         //"**/*.pyc": true,
         //"**/.pytest_cache": true,
         //"**/venv": true,
         //"**/.venv": true,
         //"**/.git": true,
+        "**/.ruff_cache": true, // Ruff linter/formatter!
     },
     // Files/folders to hide from the VSCode searchings:
     "search.exclude": {
@@ -38,7 +34,8 @@
         "**/__pycache__": true,
         "**/*.pyc": true,
         "**/.git": true,
+        "**/.ruff_cache": true, // Ruff linter/formatter!
     },
     // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // Never in project, always in the developer profiles!
+    // Reserved space...
 }

@@ -23,7 +23,15 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
 
     >> PYTHON > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
+        >> Python:
+
+            >> API with a Python module:
+                ./api.txt
+        
         >> with Django:
+
+            >> API with Django:
+                /Python/Web-development/django/0-new-project/api.txt
 
             >> Django as Back and Front-end: 
                 /Python/Web-development/django/0-new-project/web-project-django-only.txt
@@ -36,7 +44,10 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
 
         >> with Flask:
 
-            >> Flask as Back and Front-end: 
+            >> API with Flask:
+                /Python/Web-development/flask/0-new-project/api.txt
+
+            >> Flask as Back and Front-end:
                 /Python/Web-development/flask/0-new-project/web-project-flask-only.txt
 
             >> Back-end Flask + Front-end Vue.js:

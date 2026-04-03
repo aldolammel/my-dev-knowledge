@@ -11,17 +11,9 @@
     "editor.wordWrapColumn": 100,
     "prettier.printWidth": 100, // Prettier
     // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    "[plaintext]": {
-        "editor.defaultFormatter": null, // xxx
-        "editor.lineNumbers": "off",
-        "editor.renderWhitespace": "none",
-        "editor.indentSize": "tabSize",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 4,
-        "editor.trimAutoWhitespace": true,
-        "editor.renderLineHighlight": "line",
-        "editor.guides.indentation": false,
-        //"editor.wordWrap": "on",
+    "[markdown]": { // Bugged (2026/april)
+        // This shit doesn't work if declared in Default Profile or Profile. It must be in project!
+        "editor.wordWrap": "wordWrapColumn",
     },
     // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[javascript]": {

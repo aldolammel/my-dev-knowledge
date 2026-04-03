@@ -20,7 +20,14 @@ DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN 
             $ mkdir <project_folder_v2>
             $ cd <project_folder_v2>
 
-        2) Open this new folder in your IDE;
+        2) IDE steps:
+
+            2.1) Select through the IDE GUI which User Profile this project demands!
+                    # Aldo's profile backups:
+                        /IDE/vscode/user-profiles-bkp/
+                        /IDE/pycharm/xxxxxxxxxxxxxxxx/
+
+            2.2) Open this new folder in your IDE;
 
         3) Make sure you already installed the right Python version for this project:
 

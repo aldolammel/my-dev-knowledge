@@ -1,0 +1,47 @@
+
+
+FLASK: WHAT IS IT?
+
+    Flask is a microframework that uses Jinja2 engine to work under the hood.
+
+    Even Flask it's a single solution, it's possible to expand features using additional libs:
+
+        >> For ORM:
+            e.g. SQLAlchemy
+            
+        >> For Admin panel (CMS):
+            e.g. Flask-Admin
+            
+        >> For Authentication:
+            e.g. Flask-Login
+        
+        >> For Migrations:
+            e.g. Alembic
+            
+        >> For Form handling:
+            e.g. WTForms
+            
+        >> For Internationalization:
+            ??????????????????
+        
+        >> For Security (CSRF, XSS…):
+            ??????????????????
+            
+        >> For REST API support
+            e.g. Flask-RESTful
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+>> HOW TO INSTALL A FLASK PROJECT:
+    ./1-install-and-first-steps/
+
+
+>> HOW IS A FOLDER'S STRUCTURE OF A FLASK PROJECT:
+    ./flask-project-folder-structure.txt
+        
+
+>> NEED SOMETHING MORE POWERFUL WITH BUILT-IN SOLUTION:
+    >> Django:
+        .../Web-development/django/_about.txt

@@ -5,7 +5,7 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
     PRE.1) If you wanna re-install an existing project, skip this roadmap, and go to:
         ./1-re-install-project-with-uv.txt
 
-    PRE.2) Assuming you already have the UV package manager installed:
+    PRE.2) Assuming you already have UV package manager globally installed:
         /Python/Package-manager/uv/_about-install-and-update.txt
 
 
@@ -24,6 +24,19 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
             >> E.g. you want to install more than one Python version:
                 $ uv python install 3.11 3.12 3.13
 
+            # You'll select the right one later!
+
+        1) (Optional)
+            Advanced IDE configure for Python in this project:
+
+            >> Python basics:
+
+                # For project:
+                    /Python/IDE-softwares/vscode/examples/.vscode/
+                
+                # For API only:
+                    The same example above!
+
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -36,7 +49,14 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 .../flask/flask-project-folder-structure.txt
         
         
-        2) Assuming you already opened the Project folder through an IDE;
+        2) IDE steps:
+
+            2.1) Select through the IDE GUI which User Profile this project demands!
+                    # Aldo's profile backups:
+                        /IDE/vscode/user-profiles-bkp/
+                        /IDE/pycharm/xxxxxxxxxxxxxxxx/
+
+            2.2) Open this new folder in your IDE;
 
 
         3) (If applicable)
@@ -53,8 +73,8 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 >> Do you need a pyproject.toml model?
                     /Python/Web-development/pyproject.toml
 
-            4.2) (NOT SURE IF IT'S NEEDED AFTER 4.1)
-                Create the minimum Python project scaffolding:
+            4.2) (If applicable)
+                If what you're building is a real project (not just an API, for example), create the minimum Python project scaffolding:
                     
                 ATTENTION:
                     If you wanna use existing pyproject.toml and .gitignore files for example, be aware once the 'init' command will create those files with others, overridden files in project folder if not empty!
@@ -62,15 +82,21 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 # That said, do it:
                     $ uv init
             
-            4.3) Once you now got a .venv folder, active the project's virtual environment:
+            4.3) Active the project's virtual environment:
                 /Python/3-virtual-environment/activate-and-deactivate.txt
 
 
-            4.4) Other stuff:
+            4.4) (Optional)
+                Advanced IDE configure for this framework in this project:
 
                 >> Flask basics:
-                    .../flask/IDE-softwares/vscode/examples/settings.json
-                    .../flask/IDE-softwares/vscode/examples/extensions.json
+
+                    # For project:
+                        .../flask/IDE-softwares/vscode/examples/.vscode/
+                    
+                    # For API only:
+                        .../flask/IDE-softwares/vscode/examples/.vscode-for-api-only/
+
 
                 >> Check if the Python version on that file is correct!
                     If NOT okay, fix it!

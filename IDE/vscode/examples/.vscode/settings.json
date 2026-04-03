@@ -8,8 +8,21 @@
     "editor.rulers": [
         100 // Draw ruler at column XXX.
     ],
-    "editor.wordWrap": "wordWrapColumn", //"on"  // to respect only the screen edge.
+    "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    "[plaintext]": {
+        "editor.lineNumbers": "off",
+        "editor.trimAutoWhitespace": false,
+        "editor.guides.indentation": false,
+    },
+    "[markdown]": { // Bugged (2026/april)
+        // This shit (editor.wordWrap) doesn't work if declared in Default Profile or Profile. It must be in project AND inside the markdown tag!
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.lineNumbers": "off",
+        "editor.trimAutoWhitespace": true,
+        "editor.guides.indentation": true,
+    },
     // FILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tell VSCode how to treat files based on patterns:
     "files.associations": {
@@ -28,5 +41,5 @@
         "**/.git": true,
     },
     // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // ...
+    // Reserved space...
 }

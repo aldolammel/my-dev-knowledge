@@ -5,11 +5,12 @@
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     //...
-    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    "django.i18n": false, // Django internationalization features in VSCode extensions.
-    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     //...
+    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // !!!!!!!!!!!!!!!!! Check: /Python/IDE-softwares/vscode/examples/.vscode/settings.json
     // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "django.i18n": false, // Django internationalization features in VSCode extensions.
     "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.
         "./apps", // Django apps folder
         //"./apps/<another_app>",
@@ -34,11 +35,22 @@
             "strings": true // Suggestions inside strings.
         }
     },
+    // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Reserved space...
+    // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Reserved space...
     // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[css]": {
         //"editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
     },
+    // HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "html.format.wrapLineLength": 100,
+    "html.format.indentInnerHtml": true,
+    "html.format.templating": true,
+    "html.format.maxPreserveNewLines": 2,
     // FILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tell VSCode how to treat files based on patterns:
     "files.associations": {
@@ -47,6 +59,7 @@
         "**/templates/**/*.css": "css",
         "*.css": "css",
         //...
+        "*.json": "jsonc",
         // For a better Python support in Django:
         "**/apps/**/*.py": "python",
         "**/core/**/*.py": "python"

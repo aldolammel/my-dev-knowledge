@@ -42,3 +42,8 @@ IDE FOR DJANGO PROJECT: VSCODE
 
 
             
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+VSCODE USER PROFILES:
+    /IDE/vscode/user-profiles-bkp/

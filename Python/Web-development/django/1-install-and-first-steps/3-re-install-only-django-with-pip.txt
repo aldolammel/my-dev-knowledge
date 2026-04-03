@@ -11,7 +11,14 @@ DJANGO RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
         /Python/Package-manager/pip/_about.txt
 
 
-    PRE.3) Assuming you already opened the Project folder through an IDE;
+    PRE.3) IDE steps:
+
+        >> Select through the IDE GUI which User Profile this project demands!
+                # Aldo's profile backups:
+                    /IDE/vscode/user-profiles-bkp/
+                    /IDE/pycharm/xxxxxxxxxxxxxxxx/
+
+        >> Open this new folder in your IDE;
 
 
     PRE.4) Active the project environment:

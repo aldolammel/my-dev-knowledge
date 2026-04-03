@@ -14,12 +14,12 @@ DJANGO: WHAT IS IT?
 
     >> Django is divided in 3 main parts: models, views, and templates.
 
-        >> Models are responsable for listing the data structure of a Django application, using
+        >> Models are responsible for listing the data structure of a Django application, using
             classes to build tables and their attributes in a database.
 
-        >> Views are responsable for manage what data the user will see through a template. 
+        >> Views are responsible for manage what data the user will see through a template. 
         
-        >> Templates are responsable for display the data to the user through a text or layout file
+        >> Templates are responsible for display the data to the user through a text or layout file
             such as an HTML page.
 
 
@@ -27,11 +27,16 @@ DJANGO: WHAT IS IT?
 
 
 >> HOW TO INSTALL A DJANGO PROJECT:
-    /Python/Web-development/django/1-install-and-first-steps/
+    ./1-install-and-first-steps/
 
 
 >> HOW IS A FOLDER'S STRUCTURE OF A DJANGO PROJECT:
-    /Python/Web-development/django/django-project-folder-structure.txt
+    ./django-project-folder-structure.txt
 
 
+>> NEED SOMETHING SIMPLE AND/OR MODULAR WITHOUT SO MUCH BUILT-IN STUFF:
+        >> Flask:
+            .../Web-development/flask/_about.txt
+        >> FastAPI:
+            .../xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

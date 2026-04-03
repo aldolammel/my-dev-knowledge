@@ -8,11 +8,6 @@
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     //...
     // FLASK SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // Reserved space...
-    // TRANSLATION SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // Flask has no VSCode-extension key equivalent to Django's "django.i18n".
-    // If using Flask-Babel, internationalization is configured via babel.cfg and pyproject.toml, not here.
-    //...
     "[jinja-html]": { // Requires: samuelcolvin.jinjahtml (Better Jinja).
         "editor.tabSize": 2,
         "editor.indentSize": "tabSize",

@@ -8,7 +8,7 @@ IDE FOR PYTHON PROJECT: VSCODE
 
         1) VSCode project settings:
 
-            1.1) In the project folder, open this file: 
+            1.1) In the project folder, create or edit this file: 
                 /your_project/.vscode/settings.json;
 
             1.2) In that file, apply these new lines specific for Python projects:
@@ -21,3 +21,7 @@ IDE FOR PYTHON PROJECT: VSCODE
         
     
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+VSCODE USER PROFILES:
+    /IDE/vscode/user-profiles-bkp/
