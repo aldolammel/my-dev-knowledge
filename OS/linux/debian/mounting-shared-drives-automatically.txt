@@ -67,10 +67,15 @@ DEBIAN/UBUNTU: MOUNTING SHARED DRIVES AUTOMATICALLY
             2. Disable Fast Startup:
                 Control Panel → Power Options → Choose what power buttons do → Disable "Turn on fast startup"
 
-            3. Run as admin:
+            3. Open the Terminal/CMD but run it as ADMINISTRATOR:
                 $ chkdsk /f <ISSUED_DRIVE_LETTER>:
+                    E.g.
+                        $ chkdsk /f U:
 
-            4. Fully shut down Windows (NOT restart):
-                $ shutdown /s /f /t 0
+                    # If OS ask you to unmount the drive, do it!
+
+            4. (ATTENTION: IT WILL TURN THE PC OFF)
+                Fully shut down Windows (NOT restart). So then after that return to Ubuntu, manually:
+                    $ shutdown /s /f /t 0
         
-    11. Return to Ubuntu and test it!
+    11. Once on Ubuntu again, test the read and write in the target drive!
