@@ -40,7 +40,7 @@
     },
     // VUE SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+        "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier NOT RECOMMENDED FOR VUE!
         "editor.tabSize": 2,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,

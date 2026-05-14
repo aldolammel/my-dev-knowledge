@@ -22,7 +22,7 @@ VERSIONING > GIT: BRANCH
         # selecting it:
             $ git checkout <new_branch_name>
 
-        >> remider: create it as remote too (using push):
+        >> reminder: create it as remote too (using push):
             ./command-push.txt
 
 

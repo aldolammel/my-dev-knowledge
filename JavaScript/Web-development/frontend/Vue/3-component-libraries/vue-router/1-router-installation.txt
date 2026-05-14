@@ -2,25 +2,27 @@
 
 VUE ROUTER: INSTALLATION AND INTEGRATION
 
-    Be aware: if you already created your project via Vue-CLI (default), you probably already have
-                the Router once it was an Vue-CLI option during the project creation process.                
-                Make sure about checking it through the Vue project folder:
+    BE AWARE!
+        If you already created your project via Vue-CLI (default), you probably already have the Router once it was an Vue-CLI option during the project creation process. Make sure about checking it through the Vue project folder:
                 
-                    $ npm list
-                    
-                    >> If you don't see any router stuff, keep with the installation and integration
-                        processes below, otherwise skip this checklist!
+            $ npm list
+            
+            >> If you don't see any router stuff, keep with the installation and integration
+                processes below, otherwise skip this checklist!
 
 
     1) Installing:
         
         # To install Vue-Router:
             $ npm install vue-router@<version you want>
+                E.g.
+                    npm install vue-router@latest
+                    
         # Check installation:
-            $ npm list
+            $ npm list vue-router
 
         >> Uninstall (if needed):
-            /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/router-uninstall.txt
+            ./router-uninstall.txt
             
 
     2) Integration:
@@ -28,18 +30,18 @@ VUE ROUTER: INSTALLATION AND INTEGRATION
         SPA) For Single-Page-Application (SPA);
         MPA) Or for Multi-Pages-Application (MPA);
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - -
 
         SPA) For SPA project:
 
-            SPA.1) In the .env file of your project, create these environment variables:
-                    /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/.env_example
+            SPA.1) In the front-end .env file, create these env vars:
+                    ./example-SPA/project_one/frontend/.env_example
 
             SPA.2) Import the router and setup the very basic in the main-app-js file:
-                    /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js
+                    ./example-SPA/project_one/frontend/src/main.js
 
             SPA.3) Create the router-config file and setup its options:
-                    /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index.js
+                    ./example-SPA/project_one/frontend/src/router/index.js
 
             SPA.4) Make sure you already have all views ("pages") in the /frontend/src/pages/ folder:
                     E.g.
@@ -53,13 +55,13 @@ VUE ROUTER: INSTALLATION AND INTEGRATION
                         <RouterView />
 
                         E.g.
-                            /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue
+                            ./example-SPA/project_one/frontend/src/App.vue
 
             SPA.6) Define each link option (<RouterLink>) for the main navigation menu of the app:
                     E.g.
-                        /JavaScript/Web-development/frontend/Vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue
+                        ./example-SPA/project_one/frontend/src/components/NavMain.vue
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - -
             
         MPA) For MPA project:
 

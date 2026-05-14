@@ -32,7 +32,7 @@ PINIA: HOW TO CREATE DATA
     STEP 3: CALLING THE STORE IN A COMPONENT
 
         >> Example:
-            ./example/src/ccomponents/Counter.vue
+            ./example/src/components/Counter.vue
 
 
             

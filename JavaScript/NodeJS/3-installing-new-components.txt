@@ -22,8 +22,8 @@ NODE.JS: INSTALLING NEW NODE COMPONENTS
             # In the project folder, check the current packages are installed on this project:
                 $ npm list
             
-            # So, again, in the project folder, install the desired package/component:
-                $ npm install <package_name>
+            # No matter where you are, install the desired package/component globally (-g):
+                $ npm install -g <package_name>
 
 
         B) Locally (RECOMMENDED) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -31,8 +31,9 @@ NODE.JS: INSTALLING NEW NODE COMPONENTS
             # In your user root folder, check the current packages are installed on this machine:
                 $ npm list
             
-            # No matter where you are, install the desired package/component globally (-g):
-                $ npm install -g <package_name>
+            # So, again, in the project folder, install the desired package/component:
+                $ npm install <package_name>
+            
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

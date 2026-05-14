@@ -5,10 +5,10 @@ VUE.JS: GITIGNORE FILE
     >> Add these lines in your .gitignore file (if applicable):
 
         ### Node.js ###
-        node_modules
+        node_modules/
         jspm_packages/
-        dist                         <-- Aware: probably duplicated!
-        dist-ssr
+        dist/                         <-- Aware: probably duplicated!
+        dist-ssr/
         *.local
 
         logs

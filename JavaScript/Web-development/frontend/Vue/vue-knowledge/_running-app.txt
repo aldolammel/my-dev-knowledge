@@ -23,19 +23,29 @@ VUE: RUNNING THE FRONT-END APP
     
 
     3) Run the Vue app once you are in the frontend folder:
+    
+        3.PRE) Are you using Node locally, right? Probably you need to do it:
+        
+            # At first, select the node version configured for this project:
+                $ nvm use
+                
+                # More about this config:
+                    /JavaScript/NodeJS/2.2-automating-switch-process.txt
 
-        >> For Vue projects built by Vite:
-            # Using NPM:
-                $ npm run dev
-            # Using YARN:
-                $ yarn dev
+        3.1) Running the app:
+        
+            >> For Vue projects built by Vite:
+                # Using NPM:
+                    $ npm run dev
+                # Using YARN:
+                    $ yarn dev
 
-            >> Check this on browser:
-                http://localhost:5173/
+                >> Check this on browser:
+                    http://localhost:5173/
 
-        >> For Vue projects built by Vue-CLI (default):
-            # Using NPM:
-                $ npm run serve
-            # Using YARN:
-                $ yarn serve
+            >> For Vue projects built by Vue-CLI (default):
+                # Using NPM:
+                    $ npm run serve
+                # Using YARN:
+                    $ yarn serve
     

@@ -40,5 +40,4 @@ VUE: WITH DJANGO BACK-END
         - - - - -
 
 
-    2) Once you have decided with structure to follow, return to the main guide for Vue installation:
-        ./0-vue-installation-and-setup.txt
+    2) Once you have decided with structure to follow, return to the main guide for Vue installation you are following!

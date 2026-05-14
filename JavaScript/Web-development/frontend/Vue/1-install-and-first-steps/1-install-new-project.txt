@@ -5,32 +5,27 @@ VUE: INSTALLING A NEW PROJECT
 
     1) Which scenario you are:
 
+
         1A) Installing Vue project for the first time in this machine/IDE (skip this roadmap);
+        
+            ./0-vue-installation-and-setup.txt
+            
+            # Case you already have node installed, select one of these next options below!
+                
+                
         1B) Re-installing Vue dependency only in a front-end existing project (skip this roadmap);
-        1C) Re-installing an entire front-end existing project (skip this roadmap);
-        1D) Install Vue in a new project;
-
-        - - - - - 
-
-        1A) Installing Vue project for the first time in this machine/IDE - - - - - - - - - - - - 
         
             >> Skipping this current roadmap, close this file, and go to:
-                ./0-vue-installation-and-setup.txt
-
-
-        1B) Re-installing Vue dependency only in a front-end existing project - - - - - - - - - - - 
-
+                ./1-reinstall-new-copy.txt
+                
+                
+        1C) Re-installing an entire front-end existing project (skip this roadmap);
+        
             >> Skipping this current roadmap, close this file, and go to:
                 ./1-reinstall-new-copy.txt
-
-
-        1C) Re-installing an entire front-end existing project - - - - - - - - - - - - - - - - - - -
-
-            >> Skipping this current roadmap, close this file, and go to:
-                ./1-reinstall-new-copy.txt
-
-
-        1D) Install Vue in a new project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                
+                
+        1D) Install Vue in a new project;
 
             1D.PRE.1) Assuming you already got Node.js and also its Node-Version-Manager installed:
                 ./0-vue-installation-and-setup.txt
@@ -40,7 +35,7 @@ VUE: INSTALLING A NEW PROJECT
 
                 ./2-local-installation.txt
                 
-                FOR REMOTE ONE:
+                Otherwise, here for remote installation:
                     ./2-cdn-installation.txt
                 
 
@@ -69,16 +64,6 @@ VUE: INSTALLING A NEW PROJECT
 
                     # Running the front-end server:
                         .../Vue/vue-knowledge/_running-app.txt
-            
-            
-            1D.6) (If applicable / Option)
-                Use this links to access your Vue project on browser:
-
-                    # Vue Devtools dedicated windows:
-                    http://localhost:5173/__devtools__/  
-                    
-                    # Vue Devtools modal window shortcut:
-                    Alt+Shift+D
 
 
         - - - - - 

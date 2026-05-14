@@ -3,6 +3,7 @@
 {
     // PROJECT SETTINGS
     "editor.codeActionsOnSave": { // ESLint
+        // This will auto-correct all fixable ESLint errors, and those from Prettier plugin:
         "source.fixAll.eslint": "explicit"
     },
     "eslint.validate": [ // ESLint

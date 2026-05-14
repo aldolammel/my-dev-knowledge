@@ -8,8 +8,8 @@ TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
 
 
 
-        Aware: There is no "type checker for vanilla JS" because vanilla JS has no types to check!
-                These options below are how you add a type layer on top of JS!
+        BE AWARE!
+            There is no "type checker for vanilla JS" because vanilla JS has no types to check! These options below are how you add a type layer on top of JS!
 
 
 

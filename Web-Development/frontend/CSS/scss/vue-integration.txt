@@ -61,8 +61,14 @@ SCSS/SASS: VUE INTEGRATION WITH THIS CSS PRE-PROCESSORS
                 //...
             },
         });
+        
+        
+    3) (Optional)
+        Enable the use of global variables through SCSS/SASS files:
+            ./variables-global.txt
+                
 
-    3) In all Vue components (.vue) using CSS, include the language in Style tag:
+    4) In all Vue components (.vue) using CSS, include the language in Style tag:
         
         E.g.:
             # .scss/.sass

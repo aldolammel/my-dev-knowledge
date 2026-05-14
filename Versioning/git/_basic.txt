@@ -57,7 +57,7 @@
 
         >> Force the original branch again:
         
-            ./command-branch.txt
+            ./command-reset.txt
 
 
         >> Put a specific file/specific changes on LOCAL STAGE:

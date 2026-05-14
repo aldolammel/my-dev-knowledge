@@ -3,7 +3,7 @@
 UNHEAD-VUE: INTEGRATION
 
 
-    PRE.1) Assuming you alread installed it:
+    PRE.1) Assuming you already installed it:
         ./0-unhead.txt
 
 
