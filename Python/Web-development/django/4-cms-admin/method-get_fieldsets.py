@@ -89,7 +89,4 @@ def get_fieldsets(self, request, obj=None):
         if not is_vue and "vue_component" in fields:
             fields.remove("vue_component")
         fieldsets.append((title, {**opts, "fields": fields}))
-        # If it's a page updating, and page was layouted before, hide content layout field:
-        if obj and getattr(obj, "is_layouted", False) and "layout" in fields:
-            fields.remove("layout")
     return fieldsets

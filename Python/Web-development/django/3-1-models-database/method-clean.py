@@ -3,17 +3,17 @@
 """
     DJANGO MODELS > METHODS: CLEAN()
 
-    It's a method in Django models is used for model-level validation. So it does:
+    It's a method in Django models used for model-level validation. So it does:
 
-    - Called automatically during full_clean() and form/model form validation;
+    - Called automatically during full_clean() and form/model-form validation;
     - Validates multiple fields together (unlike field validators which validate single fields);
     - Raises ValidationError if validation fails;
-    - Use it for complex validation logic that depends on multiple fields;
+    - Used for complex validation logic that depends on multiple fields;
     - Not automatically called when calling save() directly - you need to call full_clean() first;
     - If everything alright, clean() will return none; otherwise, you should raise a message.
 
-    >> The clean() method for Models is not the same of clean() for Forms:
-        /Python/Web-development/django/9-forms/method-clean.py
+    >> The clean() method for Models is NOT the same of clean() for Forms:
+        .../9-forms/method-clean.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

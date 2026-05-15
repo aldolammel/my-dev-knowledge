@@ -8,14 +8,14 @@
     - Runs after individual field clean_<fieldname>() methods;
     - Used for cross-field validation (e.g., "if field A is X, then field B must be Y")
     - Must return the cleaned data dictionary;
-    - Place errors in self.add_error() or raise ValidationError;
-    - Access cleaned data via self.cleaned_data.
+    - Places errors in self.add_error() or raise ValidationError;
+    - Accesses cleaned data via self.cleaned_data.
 
-    >> The clean() method for Forms is not the same of clean() for Models:
-        /Python/Web-development/django/3-1-models-database/method-clean.py
+    >> The clean() method for Forms is NOT the same of clean() for Models:
+        .../3-1-models-database/method-clean.py
 
     >> Model clean() VS Form clean():
-        /Python/Web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
+        .../6-errors-and-validations/2-clean-differences-between-model-and-form.py
 
 """
 
