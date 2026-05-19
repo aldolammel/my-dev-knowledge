@@ -1,0 +1,9 @@
+
+
+DEBIAN/UBUNTU: UPDATING THE OS LTS VERSION
+
+    1) Update the current system:
+        ./update.txt
+        
+    2) Tell OS to upgrade to the newest LTS:
+        $ sudo do-release-upgrade

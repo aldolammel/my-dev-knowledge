@@ -16,53 +16,43 @@ PYTHON PACKAGE MANAGEMENT: UV
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     
-    >> INSTALLING:
-
-        LINUX/MAC:
-            # Using CURL:
-                $ curl -LsSf https://astral.sh/uv/install.sh | sh
-            # or using WGET:
-                $ wget -qO- https://astral.sh/uv/install.sh | sh
+    1) INSTALLING:
         
-        WINDOWS
-            $ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-            $ winget install --id=astral-sh.uv  -e
+        1.1) Choose the OS:
+            LINUX/MAC:
+                # Using CURL:
+                    $ curl -LsSf https://astral.sh/uv/install.sh | sh
+                # or using WGET:
+                    $ wget -qO- https://astral.sh/uv/install.sh | sh
+            
+            WINDOWS
+                $ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+                $ winget install --id=astral-sh.uv  -e
+                
+        1.2) (If applicable) Do you need to update it?
+            ./upgrade-uv.txt
 
 
-    >> UPDATING UV:
-        
-        ./upgrade-uv.txt
+    2) USING THE UV: 
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-    >> USING THE UV: 
-
-
-        >> Create / Recreate (or find the current) virtual environment in the current folder:
+        2.PRE) Create / Recreate (or find the current) venv in your project folder:
             ./create-or-find-current-venv.txt
             
-            
-        >> Create the minimal Python project scaffolding:
+        2.1) Create the minimal Python project scaffolding:
             
             # It creates automatically some files like pyproject.toml:
             # Don't use this for existing projects with these files already!
 
                 $ uv init
-                
 
-        >> Updating or restoring Python, and project dependencies (existing projects ongoing):
+        2.2) Updating or restoring Python, and project dependencies (existing projects ongoing):
             ./auto-installation-with-sync.txt
 
-
-        >> Install package (only in the active virtual environment):
+        2.3) Install package (only in the active virtual environment):
             ./install-dependency.txt
         
-        
-        >> Check installed dependencies:
+        2.4) Check installed dependencies:
             $ uv pip list
-
 
         >> Uninstall package (only in the active virtual environment):
             ./uninstall-dependency.txt

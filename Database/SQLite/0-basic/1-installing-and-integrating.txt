@@ -1,0 +1,26 @@
+
+
+DATABASE > SQLITE: INSTALLATION
+
+    
+    PRE.1) Make sure you are in the right virtual environment!
+    
+    
+    PRE.2) FOR PYTHON PROJECTS:
+        SQLite3 is part of Python's standard library, it comes with Python itself and doesn't need to be installed via pip or uv.
+        
+        # Check your SQlite in Python:
+            $ python -c "import sqlite3; print(sqlite3.sqlite_version)"
+            
+    
+    1) Installing: if you need a standalone SQLite3 CLI tool (to inspect .db files from the terminal), you install it at the OS level:
+        
+        $ sudo apt install -y sqlite3
+    
+            # Check if not installed yet:
+                $ sqlite3 --version
+        
+        
+        
+    2) Integration:
+        xxxxxxxxxxxxxxx

@@ -2,6 +2,7 @@
 
 DEBIAN/UBUNTU: UPDATING THE SYSTEM
 
-    $ sudo apt update        ← update the repositories list
-    $ sudo apt upgrade       ← install the available updates
-    $ sudo apt autoremove    ← removes what’s not needed anymore.
+    $ sudo apt update       ← update the repositories list
+    $ sudo apt upgrade      ← install the available updates
+    $ sudo apt autoremove   ← removes all dependencies installed but not needed anymore.
+    $ sudo apt autoclean    ← cleans the local package cache by removing downloaded obsolete files.

@@ -15,7 +15,7 @@ PYTHON: INSTALLATION
             $ sudo apt update
         
         # Install Python, pointing the global version (it will be updated further if needed):
-            $ sudo apt install -y python3.12
+            $ sudo apt install -y python3.13
 
 
     MAC:

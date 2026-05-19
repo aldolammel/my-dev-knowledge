@@ -24,12 +24,12 @@ LINUX: TERMINAL BASIC COMMANDS
 
     Delete a folder:
         # Check if you can see the folder in the list:
-        $ ls
-        # or
-        $ ls -a
+            $ ls
+        # or hidden files:
+            $ ls -a
 
         # If so, delete the folder:
-        $ rm -r <folder_name>
+            $ rm -r <folder_name>
 
     Move a folder/file:
         # if the directory doesn't exist, create it as instructed above.

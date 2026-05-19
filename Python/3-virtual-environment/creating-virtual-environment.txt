@@ -9,7 +9,7 @@ VIRTUAL ENVIRONMENT:
         
         A) by Python built-in command;
         B) by installing a module called virtualenv;
-        C) by UV Package Manager (RECOMMENDED);
+        C) by UV package manager and resolver (HIGHLY RECOMMENDED);
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

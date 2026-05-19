@@ -1,3 +1,15 @@
+
+
+DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: XXXXXXXXXXXXXXXXXXXXXX
+
+
+  PRE.1) Assuming you have finished the previous step!
+  
+  PRE.2) You're in the VPS terminal!
+
+
+
+
 Building a new server > 5) Web server configurations
 Creating the WSGI Entry Point
 # in the project folder:
@@ -147,3 +159,8 @@ sudo less /var/log/nginx/error.log: checks the Nginx error logs.
 sudo less /var/log/nginx/access.log: checks the Nginx access logs.
 sudo journalctl -u nginx: checks the Nginx process logs.
 sudo journalctl -u myproject: checks your Flask app’s Gunicorn logs.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    DONE!

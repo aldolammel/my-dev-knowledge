@@ -11,7 +11,12 @@
             3. Local > Send it to Local Repo (git commit);
             4. Remote > Send it to Remote Repo (git push);
             5. Merge or not the main branch.
-
+            
+            
+        >> Install GIT on the machine (not for projects):
+            $ sudo apt install git
+            
+            
 
         >> Creating a new repository (by terminal):
             

@@ -1,3 +1,15 @@
+
+
+DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: XXXXXXXXXXXXXXXXXXXXXX
+
+
+  PRE.1) Assuming you have finished the previous step!
+  
+  PRE.2) You're in the VPS terminal!
+
+
+
+
 Building a new server > 4) Deploy the Database
 Exception: nowadays, in my portfolio repo, it's included the database (not recommended but in my case it's ok), the this step must be skipped.
 
@@ -28,3 +40,9 @@ $ ls
 $ cd instance
 $ ls
 $ cd ..
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    NEXT STEP:
+        ./5-step.txt

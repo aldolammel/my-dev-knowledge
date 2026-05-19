@@ -5,29 +5,29 @@ DEBIAN/UBUNTU > VPS: UPDATING A WEB APPLICATION
 
     PRE) Keep in mind: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
-        Current application files:
-            Keep your application GIT repo accessible on the browser. e.g.:
+        Your current app files:
+            Keep your app GIT repo accessible on the browser JUST for you. e.g.:
                 https://github.com/xxxxxxxxxx/tree/main
 
-        Current application main domain:
+        Your current app main domain:
             E.g.
-                http://vpsXXXXX.publiccloud.com
+                http://vpsXXXXX.publicXXXXX.com
         
-        Current app path on server:
+        Your current app path on server:
             E.g.
                 $ cd /home/admin/portfolio
                 
         Updating database:
-            For example, I'm currently using the portfolio repo to store the DB ("instance" folder).
+            For tiny apps, I like to store the db locally inside de project folder, so it would be in the repo too ("instance" folder).
 
 
     1) Updating files: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         
         1.1) Connect to the server:
-            $ ssh -p 4928 root@<server-ip>
+            .../connecting-via-ssh.txt
 
-        1.2) Update the application repository:
-            $ sudo git pull
+        1.2) Update the app repository:
+            /Versioning/git/command-pull.txt
 
         1.3) Refresh the communication between the web server and the app, restarting the Gunicorn (WSGI):
             $ systemctl restart <your_application_name>   # e.g. portfolio

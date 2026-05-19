@@ -1,46 +1,94 @@
-Building a new server > 3) Deploy the Web Application:
-Install Python
-Before you install Python on Linux VPS, you should check whether it's already installed by default (probably yes):
-$ python3 --version
-If you want to update the Python version, it's advised to remove the old one to avoid two or more Python version running:
-$ sudo apt-get -y purge python3.8   # or the version you wanna remove!
-$ sudo apt-get -y autoremove
-Preparing for Python new version:
-$ sudo apt update
-$ sudo apt upgrade
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt update
-$ apt list | grep python3.12
-If the output is similar to this below, everything is fine:
 
-Install that Python version:
-$ sudo apt install python3.12
-$ python3.12 --version    # to confirm that it's installed
-Install pip:
-$ sudo apt install python3-pip -y
 
-$ python3 -m pip --version
+DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: DEPLOYING A WEB APP
 
-Installing a database
-For SQLite3
-This option already comes with Ubuntu, but check if everything is ok:
-$ sqlite3 --version
-If no SQLite is installed:
-$ sudo apt install sqlite3 -y
 
-Installing a web application
+    PRE.1) Assuming you have finished the previous step!
+    
+    
+    PRE.2) You're in the VPS terminal!
+    
+    
+    1) Once the VPS is to store a project's product, create the project folder in the convention folder, not attached to any user specifically:
+    
+        # Where you are:
+            $ pwd
+            
+            # To list the folder's content:
+                $ ls
+                
+        1.1) Go to: 
+            /var/www/
+        
+        1.2) Create the project folder:
+            $ sudo mkdir <project_folder>
+        
+        KEEP IT IN MIND:
+            Your project's path: /var/www/<project_folder>
 
-Bring it from the repository
-In the terminal, check where you are (path):
-$ pwd
-Go to "/home/<your_non_root_user>/" and create the project folder. Example:
-/home/admin/
-Create the application folder:
-$ mkdir <project_name_folder>
-$ cd <project_name_folder>
-In the new folder, clone your project repo from GitHub here:
-$ git clone <ssh_project_link> .        # This '.' means the repo files will be installed in the current folder.
-GitHub will ask for the Public Key password. It's here:   as "SSH Public Key" pass.
+
+    2) Install Python:
+    
+        Before you install Python on Linux VPS, you should check whether it's already installed by default (probably yes):
+            /Python/1-python-installation/_install.txt
+        
+        If you want to update the Python version, it's advised to remove the old one to avoid two or more Python version running:
+            /Python/1-python-installation/uninstall.txt
+
+
+    3) Python dependencies:
+    
+        3.1) Install a package manager:
+    
+            >> PIP (built-in Python solution, but in Debian it's not bundled on Python):
+                /Python/Package-manager/pip/
+            
+            >> UV:
+                /Python/Package-manager/uv/
+                    # In this case, restart your terminal shell!
+                    
+        3.2) Install the Python package dependency for NOT PURE Python modules:
+            $ sudo apt install -y python3-dev
+        
+        3.3) (If applicable) Only for non-UV users, install the python-venv module:
+            $ sudo apt install -y python3-venv
+            
+            
+    4) Create a venv folder in the VPS project folder:
+    
+        4.1) Creation: 
+            >> Using Python-venv module:
+                /Python/3-virtual-environment/creating-virtual-environment.txt
+                
+            >> Using UV:
+                /Python/Package-manager/uv/create-or-find-current-venv.txt
+                
+        4.2) Active the venv:
+            /Python/3-virtual-environment/activate-and-deactivate.txt
+            
+       
+    5) Installing a database:
+    
+        >> For SQLite3 (Python bundled db solution):
+            /Database/SQLite/0-basic/1-installing-and-integrating.txt
+
+    
+    6) Installing a web application:
+        
+        6.PRE.1) Assuming you are in VPS project folder yet!
+
+        6.PRE.2) Assuming the project already got a venv!
+        
+        6.PRE.3) Git is installed on the server:
+            /Versioning/git/_basic.txt
+        
+        6.1) Clone your project repo from GitHub here:
+            /Versioning/git/command-clone.txt
+            
+        6.2) GitHub will ask for the Public Key password. 
+            It's here:   as "SSH Public Key" pass.
+            
+        6.3) 
 
 Temporary replacement of your main.py for the simplest version for testing purposes
 For Flask web application:
@@ -74,13 +122,13 @@ $ sudo virtualenv <venv_name_project>
 Example of output after that:
 
 # Active the environment:
-$ . <venv_name_project>/bin/activate
-#or
-$ source <venv_name_project>/bin/activate
+    $ . <venv_name_project>/bin/activate
+    #or
+    $ source <venv_name_project>/bin/activate
 
 # Confirm the venv is successfully selected:
-$ which python3
-# You should see the virtual environment path pointing right in your web application folder.
+    $ which python3
+    # You should see the virtual environment path pointing right in your web application folder.
 
 Are you having any trouble installing the modules in the right venv?
 Try to do that with the root user.
@@ -91,8 +139,8 @@ Still in the root project folder and on the right virtualenv selected, install t
 $ python3 -m pip list
 
 # install:
-$ sudo pip install wheel        # probably already installed.
-$ sudo pip install gunicorn     # WSGI
+    $ sudo pip install wheel        # probably already installed.
+    $ sudo pip install gunicorn     # WSGI
 
 # Check again:
 $ python3 -m pip list
@@ -132,3 +180,10 @@ Example:
 root       10445   10351  0 19:20 pts/1    00:00:00 /var/www/portfolio/venv_portf/bin/python /var/www/portfolio/venv_portf/bin/flask run
 The process id (pid) is the second number (10351). So if you want to use the default port (5000), stop the process that is using it:
 $ kill 10351
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    NEXT STEP:
+        ./4-step.txt

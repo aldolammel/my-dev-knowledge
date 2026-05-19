@@ -1,0 +1,4 @@
+
+
+$ sudo apt -y purge python3.8   # or the version you wanna remove!
+$ sudo apt -y autoremove
