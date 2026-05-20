@@ -1,0 +1,13 @@
+
+
+PYTHON SERVER TOOL > GUNICORN: INSTALLING
+
+    PRE.1) About:
+        ./_about.txt
+        
+    PRE.2) Assuming you are in the project venv!
+    
+    1) Installing:
+        $ sudo pip install gunicorn
+        
+    

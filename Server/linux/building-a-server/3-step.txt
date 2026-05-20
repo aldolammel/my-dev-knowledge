@@ -22,10 +22,13 @@ DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: DEPLOYING A WEB APP
         
         1.2) Create the project folder:
             $ sudo mkdir <project_folder>
+                E.g.
+                    portfolio_2030
         
         KEEP IT IN MIND:
-            Your project's path: /var/www/<project_folder>
-
+            1 - Project path: /var/www/<project_folder>
+            2 - DON'T CREATE VENV FOLDER YET ONCE GIT CLONE WOULD CONFLICT WITH IT!
+            
 
     2) Install Python:
     
@@ -36,151 +39,150 @@ DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: DEPLOYING A WEB APP
             /Python/1-python-installation/uninstall.txt
 
 
-    3) Python dependencies:
+    3) Python basic modules:
     
-        3.1) Install a package manager:
+        3.1) Install a package manager (Don't create VENV yet!):
     
-            >> PIP (built-in Python solution, but in Debian it's not bundled on Python):
+            >> PIP:
+                Built-in Python solution, but the Python in Debian doesn't bundled PIP. So do it manually if needed!
+                
                 /Python/Package-manager/pip/
             
             >> UV:
                 /Python/Package-manager/uv/
                     # In this case, restart your terminal shell!
                     
-        3.2) Install the Python package dependency for NOT PURE Python modules:
+        3.2) Install Python package dependency for NOT PURE Python modules:
             $ sudo apt install -y python3-dev
         
-        3.3) (If applicable) Only for non-UV users, install the python-venv module:
-            $ sudo apt install -y python3-venv
+        3.3) (If applicable) Only for non-UV users:
             
-            
-    4) Create a venv folder in the VPS project folder:
-    
-        4.1) Creation: 
-            >> Using Python-venv module:
-                /Python/3-virtual-environment/creating-virtual-environment.txt
-                
-            >> Using UV:
-                /Python/Package-manager/uv/create-or-find-current-venv.txt
-                
-        4.2) Active the venv:
-            /Python/3-virtual-environment/activate-and-deactivate.txt
+            >> Install the python-venv module (to create, further, the venv):
+                $ sudo apt install -y python3-venv
             
        
-    5) Installing a database:
+    4) Installing a database:
     
         >> For SQLite3 (Python bundled db solution):
             /Database/SQLite/0-basic/1-installing-and-integrating.txt
 
     
-    6) Installing a web application:
+    5) Installing a web application (based in an existing repository):
         
-        6.PRE.1) Assuming you are in VPS project folder yet!
-
-        6.PRE.2) Assuming the project already got a venv!
+        5.PRE.1) Assuming you are in VPS project folder yet!
         
-        6.PRE.3) Git is installed on the server:
+        5.PRE.2) Git is installed on the server:
             /Versioning/git/_basic.txt
         
-        6.1) Clone your project repo from GitHub here:
+        5.1) Clone your project repo from GitHub here:
             /Versioning/git/command-clone.txt
             
-        6.2) GitHub will ask for the Public Key password. 
-            It's here:   as "SSH Public Key" pass.
+            CRUCIAL:
+                Use "SSH" hyperlink version on GitHub to clone the repo. That will ask for Public Key already created!
             
-        6.3) 
+        5.2) GitHub will ask for the Public Key password (that I advice you to create w/ 20+ chars)!
+            
+        5.3) Create a venv folder in the VPS project folder:
+    
+            5.3.1) Creation: 
+                >> Using Python-venv module:
+                    /Python/3-virtual-environment/creating-virtual-environment.txt
+                    
+                >> Using UV:
+                    /Python/Package-manager/uv/create-or-find-current-venv.txt
+                    
+            5.3.2) Active the venv:
+                /Python/3-virtual-environment/activate-and-deactivate.txt
+                
+        5.4) Installing project dependencies:
+        
+            >> PIP users:
+                /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
+            
+            >> Or UV users:
+                /Python/Package-manager/uv/auto-installation-with-sync.txt
+    
+    
+    6) Building the bridge between the Webserver and the app's code language:
+        
+        6.1) Which language you are working:
+        
+            >> For Python projects:
+            
+                >> Gunicorn solution:
+                    /Server/_languages-server-tools/python/gunicorn/install.txt
+                    
+        6.2) (If applicable) Update the firewall:
+            
+            >> Using UFW:
+                $ sudo ufw allow <language_port>
+            
+            >> Which language:
+                >> For Python projects, port = 5000;          
+                
+            >> Check firewall current rules:
+                >> Using UFW:
+                    $ ufw status verbose
+        
+                    
+    x) Environment variables on Production (VPS):
+    
+        x.1) (If applicable) Once your project is on prod, set the VPS environ vars:
+            
+            # Open the Env Vars list of the VPS:
+                $ sudo nano /etc/environment
 
-Temporary replacement of your main.py for the simplest version for testing purposes
-For Flask web application:
-from flask import Flask
+            # Copy the env vars from the back-end project .env file to the VPS!
+                
+                ATTENTION:
+                    Check if all env var values make sense to go like that to prod!
+                
+                CRITICAL:
+                    Don't be stupid as hell to send your .env file to the repo, or even to the prod!
+                
+            # Save it (ctrl+s) and exit (ctrl+x).
+            
+            # Logout and reconnect to the VPS to check the new env vars:
+                $ exit
+                $ <connect again>
+                $ printenv
+  
+    
+    x) Testing the application:
+    
+        x.1) Preparing a testing file:
+        
+            # Replace your product main file for one of them below just for test if the server is printing out the product:
+        
+            >> For Python > Flask projects:
+                /Python/Web-development/flask/z_examples/_minimal-code.py
+            
+            >> For Python > Django projects:
+                /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                
+        x.2) Check if the production environment is showing the project product on browser:
+        
+            x.2.PRE.1) Assuming the prod environment is using a 'hello world' version for testing!
+            
+            x.2.PRE.2) Assuming you're in VPS with the right venv activated!
+            
+            x.2.1) Run the test:
+                # For Python:
+                    $ python3 <project_main_file>.py
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def go_start():
-    return "<h1>Hello world!</h1>"
-
-
-if __name__ == "__main__":
-    # app.run(debug=True)
-    app.run(host="0.0.0.0")  # This IP is a special that forces Flask to run in all machines with app access.
-
-
-Create a virtual environment
-In the current project directory, create a new venv (to my portfolio = venv_p). 
-# From anywhere, install the virtualenv on the server:
-$ sudo pip install virtualenv
-
-# Go again to the application folder:
-$ cd <project_name_folder>
-# Check if right:
-$ pwd
-
-# create the venv in the current path you are (/var/www/<project_name_folder>):
-$ sudo virtualenv <venv_name_project>
-Example of output after that:
-
-# Active the environment:
-    $ . <venv_name_project>/bin/activate
-    #or
-    $ source <venv_name_project>/bin/activate
-
-# Confirm the venv is successfully selected:
-    $ which python3
-    # You should see the virtual environment path pointing right in your web application folder.
-
-Are you having any trouble installing the modules in the right venv?
-Try to do that with the root user.
-
-Installing VPS-side modules
-Still in the root project folder and on the right virtualenv selected, install the vps-side modules:
-# Check if the modules are present on the virtual environment modules installed list:
-$ python3 -m pip list
-
-# install:
-    $ sudo pip install wheel        # probably already installed.
-    $ sudo pip install gunicorn     # WSGI
-
-# Check again:
-$ python3 -m pip list
-Installing all application modules
-After that, run the web application requirements.txt file:
-$ sudo pip install -r requirements.txt
-
-# Check if the modules are present on the virtual environment modules installed list:
-$ python3 -m pip list
-Firewall update
-Python running on the web uses port 5000
-$ sudo ufw allow 5000
-Environment Variables (system-wide global variables)
-If you're using it, let's edit this file:
-$ sudo nano /etc/environment
-
-# Add all your environment variables like the example:
-YOUR_VAR_NAME_1="VALUE_1_HERE"
-YOUR_VAR_NAME_2="VALUE_2_HERE"
-It should be like this:
-
-Save it (ctrl+s) and exit (ctrl+x).
-Logout and reconnect to initiate the new config:
-$ exit
-$ ssh -p <port_number> <user>@<server_ip>
-Check whether environment variables are listed on the system correctly:
-$ printenv
-Test it (without WSGI yet): [ If it's a complex file with db, it doesn't work in this stage of configuration. Recommended to test first with a simple .py file] 
-# in the root of project folder, make sure you are in the correct virtual environment:
-$ . <venv_name>/bin/activate
-$ python <project_main_file>.py
-# if no environ variable error, check your web browser: http://<server_ip>:5000
-The port is already in use?
-If so, do it:
-$ ps -fA | grep python
-Example: 
-root       10445   10351  0 19:20 pts/1    00:00:00 /var/www/portfolio/venv_portf/bin/python /var/www/portfolio/venv_portf/bin/flask run
-The process id (pid) is the second number (10351). So if you want to use the default port (5000), stop the process that is using it:
-$ kill 10351
-
+            x.2.2) Check on browser:
+                >> For Python:
+                    http://<vps_address>:5000
+                    
+                # The port is already in use?
+                    $ ps -fA | grep python
+                    
+                    Output e.g.
+                        root   10445   10351   0   19:20   pts/1   00:00:00 /var/www/xxxx/venv/bin/python /var/www/xxxx/venv/bin/flask run
+                        The process id (pid) is the second number (10351). So if you want to use the default port (5000), stop the process that is using it:
+                    
+                    $ kill 10351
+                        # And then try again!
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

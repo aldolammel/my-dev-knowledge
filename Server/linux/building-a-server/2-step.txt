@@ -9,62 +9,66 @@ DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: THE BASIC
     PRE.2) You're in the VPS terminal!
 
 
-    1) (Optional) Customizing the ssh_config file (CURRENTLY IS NOT WORKING)!!!!!!!!!!!!!!!!!!!!!!
+    1) (Optional) Customizing the ssh_config file:
     
         1.1) Server-side (VPS):
         
             1.1.PRE.1) Assuming you are in the VPS terminal:
                 /Server/connecting-via-ssh.txt
             
-            1.1.PRE.2) Go to the file:
+            1.1.PRE.2) Open to the file:
                 $ sudo nano /etc/ssh/ssh_config
         
-            1.1.PRE.3) Using this command to find specific lines:
+            1.1.PRE.3) Use this command to find specific directives:
                 Ctrl + W
             
             1.1.1) Edit them:
-                ClientAliveInterval 1200
-                # 20 minutes timeout
-        
-                ClientAliveCountMax 3
+                # Seconds between keepalive probes sent to the client:
+                    ClientAliveInterval 60
+                # How many unanswered probes before the server drops the connection:
+                    ClientAliveCountMax 20
             
                 TCPKeepAlive yes
                 # this feat. enables the periodic transmission of KeepAlive msgs to detect if a connection is still active
         
             1.1.2) Save (ctrl+s) and exit (ctrl+x);
         
-            1.1.3) Reboot the VPS!
+            1.1.3) Restart the SSH service on VPS:
+                $ sudo systemctl restart sshd
+                
+                # Not need to reboot or close the terminal!
         
         
         1.2) Client-side (your local machine):
         
-            1.2.PRE.1) Assuming you are in the local terminal!
+            1.2.PRE) Assuming you are in the local terminal!
     
-            1.2.PRE.2) Go to the file:
-                $ sudo nano /etc/ssh/ssh_config
+            1.2.1) Go to the file:
             
-            1.2.PRE.3) Using this command to find specific lines:
-                Ctrl + W
-            
-            1.2.1) Increasing the tolerance for SSH timeout:
-                ConnectTimeout 1200
-                # 1200 = 20 minutes. Default value is 0.
-            
-            1.2.2) Save (ctrl+s) and exit (ctrl+x);
-            
-            1.2.3) Restart the local SSH service:
-                $ systemctl restart ssh
-            
-                # No SSH.service?
-                
-                1. Install the SSH server locally:
-                    $ sudo apt install openssh-server
+                # Affecting only your local user (RECOMMENDED):
+                    /home/<your_user>/.ssh/config
+                    $ nano /home/<your_user>/config    <- It's a new file!
                     
-                2. Check if it's running now:
-                    $ systemctl status ssh
+                # Or affecting all local users:
+                    /etc/ssh/ssh_config
+                    $ sudo nano /etc/ssh/ssh_config     <- Existing file!
+            
+            1.2.2) Add these lines and save it:
                     
-                3. Done.
-                    You don't need to restart the ssh because you just start the service after the ssh_config customization ;)
+                >> For all cases (RECOMMENDED):
+                    Host *
+                        ServerAliveInterval 60
+                        ServerAliveCountMax 20
+                        
+                >> Or for specific host/VPS:
+                    Host <your-vps-name>
+                        HostName <your.vps.ip.or.domain>
+                        User <youruser>
+                        ServerAliveInterval 60
+                        ServerAliveCountMax 20
+                        
+                INFO:
+                    For client-side, no need to restart any service once the local SSH 'config' is read automatically for every new SSH connection called on local terminal.
         
         
     2) (optional) Configuring the firewall:
@@ -229,7 +233,7 @@ DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: THE BASIC
         6.3) The key generator window will ask you to create an SSH key passphrase to access your private key. Set one as strong as possible;
         
             Tip:
-                Use Norton Generated Password with 20 char length:
+                Use Norton Generated Password with 20 char length and special chars:
                     https://us.norton.com/feature/password-generator
                     
             This password, you will use, for example, when you GIT CLONE the repo!

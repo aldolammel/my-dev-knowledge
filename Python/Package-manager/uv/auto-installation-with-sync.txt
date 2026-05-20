@@ -3,7 +3,7 @@
 PYTHON > UV PACKAGE MANAGER: USING SYNC
 
 
-    ONLY IN CASE OF REQUIREMENTS.TX
+    ONLY IN CASE OF REQUIREMENTS.TXT
         Convert your current existing project using requirements.txt to use pyproject.toml file:
             ./converting-non-uv-project-in-one.txt
 

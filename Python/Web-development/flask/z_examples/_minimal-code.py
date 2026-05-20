@@ -18,11 +18,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World! from myPythonStudies</p>"
-
+def go_start():
+    return "<p>Hello, World!</p>"
 
 if __name__ == "__main__":  # MAIN and NOT NAME. Be careful!
-    app.run(host="0.0.0.0")  # This IP is a special that force Flask to run in all machines with app access.
+    # app.run(debug=True)
+    app.run(host="0.0.0.0")  # This IP is a special that forces Flask to run in all machines with app access.
+    clear

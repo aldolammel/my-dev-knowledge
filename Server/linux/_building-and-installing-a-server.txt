@@ -11,7 +11,7 @@ DEBIAN/UBUNTU: BUILDING UP A WEB-SERVER
         2. The basic;                                 /Server/linux/building-a-server/2-step.txt
         3. Deploy the Web Application;                /Server/linux/building-a-server/3-step.txt
         4. Deploy the Database;                       /Server/linux/building-a-server/4-step.txt
-        5. Web server configurations;                 /Server/linux/building-a-server/5-step.txt
+        5. Late configurations;                       /Server/linux/building-a-server/5-step.txt
         6. SSL certificate creation (if needed);      /Server/ssl-certification.txt
 
         Prerequisites:
