@@ -10,7 +10,7 @@ PYTHON > UV PACKAGE MANAGER: USING SYNC
 
     A) I'm updating Python in a project;
     B) I lost the virtual environment folder in a project;
-    C) I'm cloning an existing project only;
+    C) I just cloned an existing project repo;
     D) Something wrong with my project dependencies;
 
     - - - - -
@@ -50,7 +50,7 @@ PYTHON > UV PACKAGE MANAGER: USING SYNC
 
 
 
-    C) I'm cloning an existing project only - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    C) I just cloned an existing project repo - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         # In your project folder/environment, recreate the venv folder, using one of those options in 'Syncing' (A.1) step above!
 

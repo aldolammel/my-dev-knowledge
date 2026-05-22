@@ -1,121 +1,138 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: DEPLOYING A WEB APP
+DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING A WEB APP
 
 
-    PRE.1) Assuming you have finished the previous step!
+    PRE.1) Assuming you have finished the previous steps!
     
     
     PRE.2) You're in the VPS terminal!
     
     
-    1) Once the VPS is to store a project's product, create the project folder in the convention folder, not attached to any user specifically:
+    PRE.3) You're in as admin user, and not as root, and the project folder was created by this admin user!
     
-        # Where you are:
-            $ pwd
-            
-            # To list the folder's content:
-                $ ls
+    
+    1) VPS projects main folder:
+    
+        1.PRE) (If applicable)
+            Make sure you are using the admin user and not the root one!
+            If you create folders with root, the admin need to run the 'chown' command again to re-add permission needs.
                 
         1.1) Go to: 
-            /var/www/
+            # This is the convention path:
+                /var/www/
         
         1.2) Create the project folder:
             $ sudo mkdir <project_folder>
                 E.g.
-                    portfolio_2030
+                    portfolio_2024
         
         KEEP IT IN MIND:
             1 - Project path: /var/www/<project_folder>
-            2 - DON'T CREATE VENV FOLDER YET ONCE GIT CLONE WOULD CONFLICT WITH IT!
-            
-
-    2) Install Python:
+            2 - DON'T CREATE ANY .VENV FOLDER YET!
     
-        Before you install Python on Linux VPS, you should check whether it's already installed by default (probably yes):
-            /Python/1-python-installation/_install.txt
-        
-        If you want to update the Python version, it's advised to remove the old one to avoid two or more Python version running:
-            /Python/1-python-installation/uninstall.txt
-
-
-    3) Python basic modules:
     
-        3.1) Install a package manager (Don't create VENV yet!):
-    
-            >> PIP:
-                Built-in Python solution, but the Python in Debian doesn't bundled PIP. So do it manually if needed!
-                
-                /Python/Package-manager/pip/
-            
-            >> UV:
-                /Python/Package-manager/uv/
-                    # In this case, restart your terminal shell!
-                    
-        3.2) Install Python package dependency for NOT PURE Python modules:
-            $ sudo apt install -y python3-dev
+    2) Clone the web application (based in an existing Git repository) on prod:
         
-        3.3) (If applicable) Only for non-UV users:
-            
-            >> Install the python-venv module (to create, further, the venv):
-                $ sudo apt install -y python3-venv
-            
-       
-    4) Installing a database:
-    
-        >> For SQLite3 (Python bundled db solution):
-            /Database/SQLite/0-basic/1-installing-and-integrating.txt
-
-    
-    5) Installing a web application (based in an existing repository):
+        2.PRE.1) Assuming you're in VPS project folder yet!
         
-        5.PRE.1) Assuming you are in VPS project folder yet!
+        2.PRE.2) Assuming you DON'T create any project venv folder!
         
-        5.PRE.2) Git is installed on the server:
-            /Versioning/git/_basic.txt
+        2.PRE.3) Assuming you already installed GIT globally on VPS!
         
-        5.1) Clone your project repo from GitHub here:
-            /Versioning/git/command-clone.txt
-            
+        2.PRE.4) (If applicable) Assuming you DON'T installed any with UV yet!
+        
+        2.1) Clone your project repo from GitHub here:
+        
             CRUCIAL:
                 Use "SSH" hyperlink version on GitHub to clone the repo. That will ask for Public Key already created!
-            
-        5.2) GitHub will ask for the Public Key password (that I advice you to create w/ 20+ chars)!
-            
-        5.3) Create a venv folder in the VPS project folder:
-    
-            5.3.1) Creation: 
-                >> Using Python-venv module:
-                    /Python/3-virtual-environment/creating-virtual-environment.txt
-                    
-                >> Using UV:
-                    /Python/Package-manager/uv/create-or-find-current-venv.txt
-                    
-            5.3.2) Active the venv:
-                /Python/3-virtual-environment/activate-and-deactivate.txt
                 
-        5.4) Installing project dependencies:
-        
+            /Versioning/git/command-clone.txt
+            
+            # GitHub will ask for the Public Key password!
+            
+            
+    3) Installing the app dependencies on VPS:
+
+        3.1) Installing the package manager:
+            >> PIP:
+                Built-in Python solution, but the Python in Debian doesn't bundled PIP. So do it manually if needed!
+                    /Python/Package-manager/pip/
+            
+            >> Or UV (RECOMMENDED):
+                /Python/Package-manager/uv/
+            
+        3.2) App venv creation:
+            >> Using Python-venv module:
+                /Python/3-virtual-environment/creating-virtual-environment.txt
+                
+            >> Using UV (RECOMMENDED):
+                /Python/Package-manager/uv/create-or-find-current-venv.txt
+                
+        3.3) Make sure your already activated the venv:
+            /Python/3-virtual-environment/activate-and-deactivate.txt
+            
+        3.4) Installing app dependencies:
             >> PIP users:
                 /Python/Package-manager/pip/auto-installation-from-requirements-file.txt
             
             >> Or UV users:
                 /Python/Package-manager/uv/auto-installation-with-sync.txt
+
+
+    4) Install Python, and its crucial tools:
     
+        INFO:
+            For UV users, probably, after the uv sync, Python is already installed! Check it out!
     
-    6) Building the bridge between the Webserver and the app's code language:
+        4.PRE) Assuming you are connected in the VPS terminal!
         
-        6.1) Which language you are working:
-        
-            >> For Python projects:
+        4.1) Install them:
+            /Python/1-python-installation/_install.txt
+
+
+    
+    5) Installing the database:
+    
+        >> Using SQLite3 (Python bundled db solution):
+            /Database/SQLite/0-basic/1-installing-and-integrating.txt
             
-                >> Gunicorn solution:
-                    /Server/_languages-server-tools/python/gunicorn/install.txt
+        >> Using Postgresql:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    
+    6) WSGI installing: building the bridge between the Webserver and the app's code language
+    
+        6.1) Installation:
+            How do you installed the WSGI solution?
+        
+                6.1A) Globally in development machine;
+                6.1B) Installed as part of the app dependency (by project);
+                
+                - - - - - 
+                
+                6.1A) Globally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                
+                    >> For Python projects:
+                        >> Gunicorn solution:
+                            /Server/_languages-server-tools/python/gunicorn/install.txt
+                        
+                
+                6.1B) By project - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                    
+                    In this case, skip the installation, just checking if the dependency is listed as part of the venv installed dependencies:
+                    
+                    >> For Python projects:
+                        # Assuming you are active in the app venv:
+                            $ pip list
+                            # or 
+                            $ uv pip list
+                
                     
         6.2) (If applicable) Update the firewall:
             
             >> Using UFW:
-                $ sudo ufw allow <language_port>
+                $ sudo ufw allow <programming_language_port>
             
             >> Which language:
                 >> For Python projects, port = 5000;          

@@ -24,16 +24,21 @@ OS > DEBIAN: UBUNTU, INSTALLING APPS
 
         
         >> Installing:
+        
+            >> From a repository (MOST USED):
+                $ sudo apt install -y <package_name>                 <-- '-y' skip install question.
 
-            $ sudo apt install -y <package_name>                  <-- '-y' skip install question.
+                >> Finding a package name installed:
+                    ./finding-installed-apps.txt
 
-
-            >> Finding a package name installed:
-                ./finding-installed-apps.txt
-
-
-            >> Check apt-update repo list:
-                ./checking-app-is-in-repo-list.txt
+                >> Check apt-update repo list:
+                    ./checking-app-is-in-repo-list.txt
+                    
+            >> From a local file:
+                # Go to the installation file current folder and:                
+                    $ sudo apt install ./<filename>.<file_extension>
+                        E.g.
+                            $ sudo apt install ./obsidian.deb
 
 
         >> Removing:

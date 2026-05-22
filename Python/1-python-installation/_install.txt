@@ -2,27 +2,69 @@
 
 PYTHON: INSTALLATION
 
-    WINDOWS:
-        Make sure to check the box that says “Add python.exe to PATH” to make Python accessible
-        from the command line.
 
-
-    UBUNTU:
-        >> Check the python version installed:
-        $ python3 --version
-
-        # Update the local repository info:
-            $ sudo apt update
+    PRE.1) Check if Python is already installed:
+    
+        >> Global:
+            PRE) Make sure you are not in any venv!
+            
+            $ python3 --version
         
-        # Install Python, pointing the global version (it will be updated further if needed):
-            $ sudo apt install -y python3.13
+        >> By project:    
+            PRE) Assuming you activated the right venv folder!
+            
+            # Same command as above!
+        
+    
+    PRE.2) Case you wanna uninstall it:
+        >> Global:
+            /Python/1-python-installation/uninstall.txt 
+        >> By project:
+            /Python/Package-manager/uv/uninstall-python-old-version.txt
 
+        
+    1) Which installation approach do you want:
+        
+        >> DEBIAN/UBUNTU:
+        
+            1A) Old style (global);
+            1B) Or using UV (by project, RECOMMENDED)
+            
+            - - - - -
+        
+            1A) Old style (global) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                # Update the local repository info:
+                    $ sudo apt update
+            
+                # Installing Python:
+                    $ sudo apt install -y python3.13
+            
+            1B) Or using UV (by project) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                
+                1B.PRE) UV installation:
+                    /Python/Package-manager/uv/_about-install-and-update.txt
+                    
+                1B.1) Installing Python with UV (by project):
+                    /Python/Package-manager/uv/install-python-with-uv.txt
 
-    MAC:
-        >> Check the python version installed:
-        xxxxxx
-
-        >> To install if needed:
-        xxxxx
-        xxxxxx
-
+            - - - - -
+    
+    
+    2) Check the Python version installed:
+        # No venv for global installation, or venv activated for 'by project' installation:
+            $ python3 --version
+    
+    
+    3) Globally, with no venv activated, install these basic system-wide Python tools on VPS:
+    
+        $ sudo apt install -y build-essential libssl-dev zlib1g-dev
+        
+            >> build-essential:
+                gcc/make, required to compile any C extension packages;
+            >> libssl-dev:
+                SSL support (Flask, requests, etc.);
+            >> zlib1g-dev:
+                Compression support.
+    
+        
+        

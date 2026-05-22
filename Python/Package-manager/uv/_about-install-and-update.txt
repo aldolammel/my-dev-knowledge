@@ -18,18 +18,24 @@ PYTHON PACKAGE MANAGEMENT: UV
     
     1) INSTALLING:
         
-        1.1) Choose the OS:
+        1.1) Choose the OS and install it:
             LINUX/MAC:
-                # Using CURL:
-                    $ curl -LsSf https://astral.sh/uv/install.sh | sh
-                # or using WGET:
+                # Downloading using WGET (bundled on Debian distros):
                     $ wget -qO- https://astral.sh/uv/install.sh | sh
+                
+                # Or downloading using CURL:
+                    $ curl -LsSf https://astral.sh/uv/install.sh | sh
             
             WINDOWS
                 $ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
                 $ winget install --id=astral-sh.uv  -e
-                
-        1.2) (If applicable) Do you need to update it?
+             
+        1.2) Restart your terminal to include definitely UV stuff in the local machine $PATH!
+        
+        1.3) Test it:
+            $ uv --version
+            
+        1.4) (If applicable) Do you need to update it?
             ./upgrade-uv.txt
 
 

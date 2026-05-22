@@ -2,12 +2,19 @@
 
 PYTHON SERVER TOOL > GUNICORN: INSTALLING
 
-    PRE.1) About:
+    PRE) About:
         ./_about.txt
         
-    PRE.2) Assuming you are in the project venv!
+    1) Installing by project:
     
-    1) Installing:
-        $ sudo pip install gunicorn
+        1.PRE) Assuming you are in the app venv!
+    
+        >> Using PIP:
+            $ sudo pip install gunicorn
+                # Don't forget to add this dependency in the project requirement list file!
+            
+        >> Or using UV:
+            $ uv add gunicorn
+                # In this way it's automatically included to the project requirement list file!
         
     

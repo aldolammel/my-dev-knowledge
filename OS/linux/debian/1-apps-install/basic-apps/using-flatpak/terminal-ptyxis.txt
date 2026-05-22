@@ -25,8 +25,8 @@ SYSTEM TOOL: PTYXIS TERMINAL (FROM NEW UBUNTU 2026)
                         "Breath Silverfox"
                         "Broadcast"
                         "Chameleon"
-                        "Neutron"
                         "Solarized Darcula"
+                        "Monokai Pro"
 
 
         2.3) Other customs:

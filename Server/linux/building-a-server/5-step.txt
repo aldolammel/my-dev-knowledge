@@ -1,137 +1,140 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A WEB-SERVER: LATE CONFIGURATIONS
+DEBIAN/UBUNTU > BUILDING UP A SERVER: LATE CONFIGURATIONS
 
 
-  PRE.1) Assuming you have finished the previous step!
-  
-  PRE.2) You're in the VPS terminal!
+    PRE.1) Assuming you have finished the previous steps!
+    
+    
+    PRE.2) Assuming you're in the VPS terminal, and in the project's folder!
+    
+    
+    PRE.3) Assuming you're using the right venv!
 
 
+    1) WSGI configuration:
+    
+        >> For Python projects:
+    
+            1.1) Make sure the wsgi.py is already:
+                $ nano wsgi.py  
+                    E.g.
+                        from main import app, db
+                        if __name__ == "__main__":
+                            with app.app_context():
+                                db.create_all()
+                            app.run()
+                        
+                # Save (ctrl+s) and exit (ctrl+x)
+            
+            1.2) Let's launching a production-ready Python web server to host the app:
+                
+                >> Via VENV directly:
+                    $ .venv/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
+                
+                >> Via UV RUN:
+                    $ uv run gunicorn --bind 0.0.0.0:5000 wsgi:app
+                        Output e.g.
+                            [2026-05-21 11:01:12 -0300] [30652] [INFO] Starting gunicorn ...
+                            ...
 
+                INFO:
+                    Maybe it'll look like frozen terminal, but it's not. Just go to the next step (or for some reason, in order to abort, do Ctrl+C).
+                    
+                SOME ERROR?
+                    Getting explicit error when you try to connect with 0.0.0.0:5000?
+                        Probably something is already using that special IP and/or port. So kill them:
+                            $ fuser -k 5000/tcp
+                            
+            1.3) Check the result on the browser:
+                http://<server_ip_or_domain>:5000
+                
+            1.4) After testing, on terminal, close the connection (ctrl+c), and deactivate the current venv!
+                
+            1.5) Automating the WSGI startup on server:
+                Important:
+                    To this only into an admin home-folder, never into the root home-folder (/root/) or the www-folder (/var/www/). This can avoid some advanced necessities.
 
-Building a new server > 5) Web server configurations
-Creating the WSGI Entry Point
-# in the project folder:
-$nano wsgi.py
-The file:
-from <main_python_file_name> import <calleble_application_name_in_use>
+                # Creating the file:
+                    $ nano /etc/systemd/system/<project_name>.service
+                        Its content:
+                            [Unit]
+                            Description=Gunicorn instance to serve <project_name>
+                            After=network.target
 
-if __name__ == "__main__":
-        <calleble_application_name_in_use>.run()
-Example:
-from main import app                # calls the main.py file.
+                            [Service]
+                            User=<user_name>
+                            Group=www-data
+                            WorkingDirectory=<path_to_the>/<project_folder_name>
+                            Environment="PATH=<path_to_the>/<project_folder_name>/<venv_name>/bin"
+                            ExecStart=<path_to_the>/<project_folder_name>/<venv_name>/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
 
-if __name__ == "__main__":
-        app.run()
+                            [Install]
+                            WantedBy=multi-user.target
+                            Example:
+                            [Unit]
+                            Description=Gunicorn instance to serve Portfolio project.
+                            After=network.target
 
-# OR -------------------------------------------------------------------------------------
+                            [Service]
+                            User=root
+                            Group=www-data
+                            WorkingDirectory=/home/admin/portfolio
+                            Environment="PATH=/home/admin/portfolio/venv_p/bin"
+                            ExecStart=/home/admin/portfolio/venv_p/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
 
-from main import app, db            # calls the main.py file, including the db.
+                            [Install]
+                            WantedBy=multi-user.target
+                
+                # Start the service:
+                    $ systemctl daemon-reload
+                    $ systemctl restart <project_name_without_.service>
+                
+                # Check the status:
+                    $ systemctl status <project_name_without_.service>
+                        You should see this output:
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            
+                        Need to change something from <your_project>.service file? Do the changes and then:
+                            $ systemctl daemon-reload
+                            $ systemctl restart <project_name_without_.service>
+                            $ systemctl status <project_name_without_.service>
+                            
+                # Configuring Nginx to Proxy Requests:
+                    Create a fundamental configuration file for your website:
+                        $ sudo nano /etc/nginx/sites-available/<project_name>
+                            Content:
+                                server {
+                                        listen 80;
+                                        server_name <domain_without_www> <domain_with_www>;        # never include protocols (http / https)
 
-if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-    app.run()
+                                        location / {
+                                                include proxy_params;
+                                                proxy_pass http://unix:/var/www/<project_name>/gunicorn.sock;
+                                        }
+                                }
+                                
+                            E.g.
+                                Regular domain and root user...
+                                server {
+                                        listen 80;
+                                        server_name aldolammel.com www.aldolammel.com;
 
-Save (ctrl+s) and exit (ctrl+x)
-Pass the name of entry point:
-# Make sure you keep into the right virtual environment:
-$ . <venv_name>/bin/activate
+                                        location / {
+                                                include proxy_params;
+                                                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
+                                        }
+                                }
+                                Subdomain and other user usage...
+                                server {
+                                        listen 80;
+                                        server_name loja.aldolammel.com;
 
-$ sudo gunicorn --bind 0.0.0.0:5000 wsgi:app
-Example of output:
-
-Attention: it's not frozen! It looks like, but it's not! Just go to the next step (or for some reason, in order to abort, do ctrl+c). 
-Getting explicit error when you try to connect with 0.0.0.0:5000?
-Probably something is already using that special IP and/or port. So kill them:
-$ fuser -k 5000/tcp
-Check the result on the browser:
-http://<server_ip_or_domain>:5000
-After you perform the test, return to your Terminal and close the WSGI connection:
-# ctrl+c
-Since now you’re done with your virtual environment, deactivate it:
-$ deactivate      # Any Python commands will now use the system’s Python environment again.
-
-Automating the WSGI startup
-Important: to this only into an admin home-folder, never into the root home-folder (/root/) or the www-folder (/var/www/). This can avoid some advanced necessities.
-
-Creating the file:
-$ nano /etc/systemd/system/<project_name>.service
-Its content:
-[Unit]
-Description=Gunicorn instance to serve <project_name>
-After=network.target
-
-[Service]
-User=<user_name>
-Group=www-data
-WorkingDirectory=<path_to_the>/<project_folder_name>
-Environment="PATH=<path_to_the>/<project_folder_name>/<venv_name>/bin"
-ExecStart=<path_to_the>/<project_folder_name>/<venv_name>/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
-
-[Install]
-WantedBy=multi-user.target
-Example:
-[Unit]
-Description=Gunicorn instance to serve Portfolio project.
-After=network.target
-
-[Service]
-User=root
-Group=www-data
-WorkingDirectory=/home/admin/portfolio
-Environment="PATH=/home/admin/portfolio/venv_p/bin"
-ExecStart=/home/admin/portfolio/venv_p/bin/gunicorn --workers 3 --bind unix:gunicorn.sock -m 007 wsgi:app
-
-[Install]
-WantedBy=multi-user.target
-Start the service:
-$ systemctl daemon-reload
-$ systemctl restart <project_name_without_.service>
-Check the status:
-$ systemctl status <project_name_without_.service>
-You should see this output:
-
-Need to change something from <your_project>.service file?
-Do the changes and then:
-$ systemctl daemon-reload
-$ systemctl restart <project_name_without_.service>
-$ systemctl status <project_name_without_.service>
-Configuring Nginx to Proxy Requests
-Create a fundamental configuration file for your website:
-$ sudo nano /etc/nginx/sites-available/<project_name>
-Through Nano interface:
-server {
-        listen 80;
-        server_name <domain_without_www> <domain_with_www>;        # never include protocols (http / https)
-
-        location / {
-                include proxy_params;
-                proxy_pass http://unix:/var/www/<project_name>/gunicorn.sock;
-        }
-}
-Examples:
-Regular domain and root user...
-server {
-        listen 80;
-        server_name aldolammel.com www.aldolammel.com;
-
-        location / {
-                include proxy_params;
-                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
-        }
-}
-Subdomain and other user usage...
-server {
-        listen 80;
-        server_name loja.aldolammel.com;
-
-        location / {
-                include proxy_params;
-                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
-        }
-}
+                                        location / {
+                                                include proxy_params;
+                                                proxy_pass http://unix:/home/<some_non_root_user>/<project_folder>/gunicorn.sock;
+                                        }
+                                }
 Important: no worries about the SSL (HTTPS) now!
 Back to Terminal, though:
 To enable the Nginx server block configuration you’ve created, link the file to the sites-enabled directory. You can do this by running the ln command and the -s flag to create a symbolic or soft link, as opposed to a hard link:

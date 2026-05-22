@@ -2,8 +2,19 @@
 
 PYTHON > UV PACKAGE MANAGER: UNINSTALL A SPECIFIC PYTHON VERSION
 
-    # Remove Python 3.13.3 if you're not using it anymore
-        $ uv python uninstall 3.13.3
-
-    # Verify only 3.13.7 remains
-        $ uv python list
+    BE AWARE:
+        You are able to uninstall Python through UV only if you installed Python using UV method:
+            /Python/Package-manager/uv/install-python-with-uv.txt
+            
+        Otherwise, uninstall Python using the traditional way:
+            /Python/1-python-installation/uninstall.txt
+        
+    
+    1) Check the all Python installed through UV:
+        $ uv pip tree
+        # or:
+        $ uv run python --version
+    
+    
+    2) Uninstalling a specific version:
+        $ uv python uninstall 3.13
