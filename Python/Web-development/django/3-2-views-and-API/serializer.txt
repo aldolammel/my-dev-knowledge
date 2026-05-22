@@ -4,7 +4,7 @@ DJANGO: SERIALIZERS
 
 
     WHAT:
-        /Programming-Concepts/serialization.txt
+        /Dev-Concepts/serialization.txt
 
 
     CREATING THE API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

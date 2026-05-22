@@ -43,7 +43,7 @@ OS > FEDORA: RIGHT AFTER INSTALLATION
         
         >>  Linux works better with UTC instead of Local Time.
             
-            /OS/windows/0-os-install/dual-boot-with-linux.txt
+            /OS/os/windows/0-os-install/dual-boot-with-linux.txt
 
 
         

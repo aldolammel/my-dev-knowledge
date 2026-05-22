@@ -1,1 +1,1 @@
-/Server/mac/
+/Server/os/mac/

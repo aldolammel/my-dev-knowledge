@@ -1,7 +1,7 @@
 /*
 TYPE ANNOTATIONS / DATA HINT DECLARATIONS
 
-    Concept: /Programming-Concepts/type-annotation.txt
+    Concept: /Dev-Concepts/type-annotation.txt
 
     Types in JS (JSDoc):
         integer = {number}
@@ -17,10 +17,10 @@ TYPE ANNOTATIONS / DATA HINT DECLARATIONS
 
 let num = 10;
 let name = "Aldo";
-let data = { "vini": 1, "azevedo": 2 };
+let data = { vini: 1, azevedo: 2 };
 
 function getSomething() {
-  return { 'abc': 1, 'def': 2 };
+  return { abc: 1, def: 2 };
 }
 
 // With:
@@ -29,14 +29,14 @@ function getSomething() {
 let num = 10;
 
 /** @type {string} */
-let name = 'Aldo';
+let name = "Aldo";
 
 /** @type {Object.<string, number>} */
-let data = { 'vini': 1, 'azevedo': 2 };
+let data = { vini: 1, azevedo: 2 };
 
 /**
-* @returns {Object.<string, number>}
-*/
+ * @returns {Object.<string, number>}
+ */
 function getSomething() {
-  return { 'abc': 1, 'def': 2 };
+  return { abc: 1, def: 2 };
 }

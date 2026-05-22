@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ce1159497feb538d",
+        "id": "7f786bd932bb5a95",
         "type": "tabs",
         "children": [
           {
-            "id": "ee767e4a222fc25c",
+            "id": "b72cc0aeb4b5b742",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -37,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -176,9 +176,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "ee767e4a222fc25c",
+  "active": "b72cc0aeb4b5b742",
   "lastOpenFiles": [
-    "README.md",
-    "Welcome.md"
+    "Welcome.md",
+    "linux/building-a-server/1-step.md",
+    "linux/building-a-server/2-step.md",
+    "linux/building-a-server/3-step.md",
+    "linux/building-a-server/4-step.md",
+    "linux/building-a-server/5-step.md",
+    "linux/updating-web-application-via-git.md",
+    "linux/building-a-server/_reinstalling-a-server.md",
+    "linux/updating-server.md",
+    "linux/_linux-knowledge.md",
+    "linux/_building-and-installing-a-server.md",
+    "README.md"
   ]
 }

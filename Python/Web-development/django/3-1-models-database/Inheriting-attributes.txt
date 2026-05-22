@@ -3,7 +3,7 @@
 DJANGO > MODELS: INHERITING ATTRIBUTES
 
     >> What is attribute:
-        /Programming-Concepts/oop-class-attribute.txt
+        /Dev-Concepts/oop-class-attribute.txt
 
 
     >> Imagine you re-using common attributes almost are used in all your tables

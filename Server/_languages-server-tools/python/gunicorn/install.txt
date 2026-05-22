@@ -2,19 +2,51 @@
 
 PYTHON SERVER TOOL > GUNICORN: INSTALLING
 
+
     PRE) About:
         ./_about.txt
+    
         
-    1) Installing by project:
+    1) Which kind of installation:
     
-        1.PRE) Assuming you are in the app venv!
-    
-        >> Using PIP:
-            $ sudo pip install gunicorn
-                # Don't forget to add this dependency in the project requirement list file!
+        1A) By project (RECOMMENDED);
+        1B) Globally;
+        
+        - - - - - 
+        
+        1A) By project - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+            1A.PRE) Assuming you are in the app venv!
+        
+            >> Using PIP:
+                $ sudo pip install gunicorn
+                    # Don't forget to add this dependency in the project requirement list file!
+                
+            >> Or using UV:
+                $ uv add gunicorn
+                    # In this way it's automatically included to the project requirement list file!
+        
+        
+        1B) Globally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+            1B.PRE) Assuming you are NOT in a app venv!
             
-        >> Or using UV:
-            $ uv add gunicorn
-                # In this way it's automatically included to the project requirement list file!
+            >> Using a distro built-in package manager:
+                >> Debian/Ubuntu:
+                    $ sudo apt install gunicorn
+                >> Fedora:
+                    $ sudo dnf install gunicorn
+                
+            >> Or using UV:
+                IMPORTANT:
+                    UV will:
+                    - create an isolated virtual environment for gunicorn;
+                    - expose the gunicorn executable globally in your user PATH;
+                    - avoid polluting the system Python.
+                    
+                $ uv tool install gunicorn
+                
+        - - - - - 
         
-    
+        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

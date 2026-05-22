@@ -3,7 +3,7 @@
 PYTHON: GARBAGE COLLECTION
 
     What is it:
-        /Programming-Concepts/garbage-collector.txt
+        /Dev-Concepts/garbage-collector.txt
 
     Even Python working with an automatic solution, Python is not allowed to deal with circular relations. For this case, the manual gargabe collection should be executed!
 

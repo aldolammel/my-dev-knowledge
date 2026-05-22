@@ -3,7 +3,7 @@
 FEDORA: TERMINAL COMMANDS
     
     >> Very basic:
-        .../linux/terminal-basic-commands.txt
+        .../os/linux/terminal-basic-commands.txt
 
 
     >> Fedora basic:

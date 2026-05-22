@@ -1,0 +1,32 @@
+
+
+WEB-SERVER > APACHE: INSTALLING
+
+    
+    xxxxxxx is a system-level service, so it must be installed always globally in the OS!????????????????????????????????
+    
+    
+    PRE.1) What is it:
+        ./_about.txt
+      
+        
+    1) Install it:
+    
+        1.PRE) Assuming you are NOT activated on any venv!??????????????????????
+        
+        1.1) Installing:
+            
+            >> Debian/Ubuntu:
+                $ sudo apt install -y apache2
+            
+            >> Windows:
+                $ xxxxxxxxxxxxxxxx
+            
+            >> Mac:
+                $ xxxxxxxxxxxxxxxx
+                
+    
+    2) Integration:
+    
+        2.1) Be aware with possible firewalls on the server! Web-servers demand be allowed by firewalls.
+        

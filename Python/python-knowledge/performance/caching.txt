@@ -4,7 +4,7 @@ PYTHON: CACHING
 
 
     >> What is it:
-        /Programming-Concepts/cache.txt
+        /Dev-Concepts/cache.txt
 
     
     >> Cache Aside-Pattern:

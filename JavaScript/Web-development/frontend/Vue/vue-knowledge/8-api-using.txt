@@ -3,7 +3,7 @@
 HOW TO USE API WITH VUE:
 
     PRE) What is API:
-        /Programming-Concepts/api.txt
+        /Dev-Concepts/api.txt
 
 
     >> Using the JavaScript native solution 'Fetch API':

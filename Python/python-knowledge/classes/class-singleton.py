@@ -1,6 +1,6 @@
 '''
     SINGLETON
-        Concept: /Programming-Concepts/singleton.txt
+        Concept: /Dev-Concepts/singleton.txt
 '''
 
 # Example of a class designed to restrict more than just one instance creation, and providing a

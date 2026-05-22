@@ -3,7 +3,7 @@
 FORMATTER FOR VUE: OPTIONS
 
     >> What is it:
-        /Programming-Concepts/tool-formatter.txt
+        /Dev-Concepts/tool-formatter.txt
 
     >> Options:
 

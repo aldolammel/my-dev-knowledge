@@ -1,0 +1,32 @@
+
+
+WEB-SERVER: APACHE
+
+
+    Apache is one of the oldest and most widely used web servers on the internet. Apache became dominant during the early growth of the web and is still heavily used today. Especially during the PHP era (WordPress, Drupal, Joomla), Apache was almost everywhere. Like Nginx, it can:
+        - Serve website
+        - Handle HTTP/HTTPS requests
+        - Host web applications
+        - Work as a reverse proxy
+        - Manage virtual hosts (multiple websites on one server)
+
+
+    When Apache is still a good choice:
+        - shared hosting;
+        - legacy systems;
+        - PHP-heavy environments;
+        - teams already familiar with .htaccess;
+        - environments needing highly granular directory configs.
+        
+        
+    Macro workflow:
+        Internet     -> Webserver -> HTTP server -> App server/language
+        User Browser -> Apache    -> Gunicorn    -> Python
+            
+            
+    >> To install:
+        ./_install.txt
+    
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+

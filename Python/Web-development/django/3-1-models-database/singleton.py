@@ -2,7 +2,7 @@
     SINGLETON: CREATION WITH DJANGO (STEP 1/2)
 
     >> What is it:
-        /Programming-Concepts/singleton.txt
+        /Dev-Concepts/singleton.txt
 
     >> This file:
         /django_project/apps/your_app/models.py

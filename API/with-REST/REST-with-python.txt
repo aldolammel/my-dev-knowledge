@@ -3,7 +3,7 @@
 API WITH REST:
 
     What is it:
-        /Programming-Concepts/principles-REST.txt
+        /Dev-Concepts/principles-REST.txt
 
     REST in Python:
         /python/30-API/with-REST/

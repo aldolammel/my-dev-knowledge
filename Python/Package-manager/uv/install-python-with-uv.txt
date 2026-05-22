@@ -1,18 +1,20 @@
 
 
-UV: PYTHON INSTALLATION
+UV: PYTHON INSTALLATION WITH UV
 
-    1A) Using UV, install Python by project;
+    1A) Using UV, install Python by project (RECOMMENDED);
     1B) Or using UV too, but install Python globally;
     
     - - - - -
 
-    1A) Using UV, install Python by project (RECOMMENDED) - - - - - - - - - - - - - - - - - - - - - 
+    1A) Using UV, install Python by project - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         
         Most professional and long-term approach, once it's easier to update Python in case the VPS would gain new apps in parallel, for example. 
         
-        1A.1) Create the project venv and install Python by project:
+        1A.PRE) Assuming you are activated in the right app venv:
+            /Python/3-virtual-environment/activate-and-deactivate.txt
         
+        1A.1) Install it by project:
             $ uv venv --python <python-version>
                 E.g
                     $ uv venv --python 3.13.5

@@ -4,7 +4,7 @@ DJANGO > MODELS: INHERITING METHODS
 
 
     >> What is methods:
-        /Programming-Concepts/oop-class-method.txt
+        /Dev-Concepts/oop-class-method.txt
 
 
     >> How method inheritance works:        
