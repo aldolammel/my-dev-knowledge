@@ -1,6 +1,6 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A SERVER: THE BASIC
+DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
 
     PRE.1) Assuming you have finished the previous steps!

@@ -33,3 +33,8 @@ SQLITE: DEPLOYING
                         /Versioning/git/command-pull.txt
                         
                     1B.2.2) Check if db file is in the right place. If not, check again your .gitignore file!
+                    
+            - - - - -
+            
+            
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

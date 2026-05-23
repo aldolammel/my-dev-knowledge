@@ -1,6 +1,6 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING A WEB APP
+DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
 
 
     PRE.1) Assuming you have finished the previous steps!
@@ -182,12 +182,12 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING A WEB APP
                     
     7) Environment variables on Production (VPS):
     
-        x.1) (If applicable) Once your project is on prod, set the VPS environ vars:
+        7.1) (If applicable) Once your project is on prod, set the VPS environ vars:
             
             # Open the Env Vars list of the VPS:
                 $ sudo nano /etc/environment
 
-            # Copy the env vars from the back-end project .env file to the VPS!
+            # Copy the env vars from the back-end project's .env file to the VPS!
                 
                 ATTENTION:
                     Check if all env var values make sense to go like that to prod!
@@ -203,9 +203,9 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING A WEB APP
                 $ printenv
   
     
-    8) Testing the application:
+    8) Testing the app:
     
-        x.1) Preparing a testing file:
+        8.1) Preparing a testing file:
         
             # Replace your product main file for one of them below just for test if the server is printing out the product:
         
@@ -215,21 +215,21 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING A WEB APP
             >> For Python > Django projects:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 
-        x.2) Check if the production environment is showing the project product on browser:
+        8.2) Check if the production environment is showing the project product on browser:
         
-            x.2.PRE.1) Assuming the prod environment is using a 'hello world' version for testing!
+            8.2.PRE.1) Assuming the prod environment is using a 'hello world' (minimal code) version for testing!
             
-            x.2.PRE.2) Assuming you're in VPS with the right venv activated!
+            8.2.PRE.2) Assuming you're using the right venv!
             
-            x.2.1) Run the test:
+            8.2.1) Run the test:
                 # For Python:
-                    $ python3 <project_main_file>.py
+                    $ python3 <app_testing_main_file>.py
 
-            x.2.2) Check on browser:
+            8.2.2) Check on browser:
                 >> For Python:
                     http://<vps_address>:5000
                     
-                # The port is already in use?
+                # Error case: the port is already in use?
                     $ ps -fA | grep python
                     
                     Output e.g.

@@ -1,6 +1,6 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A SERVER: DEFINING ROOT USER AND OS
+DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
 
 
     PRE.1) Warnings!
@@ -17,7 +17,7 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEFINING ROOT USER AND OS
         
         
     PRE.2) VPS reinstallation?
-        ./_reinstalling-a-server.txt
+        ./dedicated-instance/_reinstalling-a-server.txt
     
 
     1) Connect to the server:
@@ -30,9 +30,6 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEFINING ROOT USER AND OS
             
             # Public Key error?
                 If you have no other servers to worry about, make a copy of your user 'known_hosts' ('known_hosts.old') and then delete the original file:
-                    
-                    >> Windows OS:
-                        <WINDOWS_DRIVE>:\Users\<your_user>\.ssh\known_hosts
                     
                     >> Debian/Ubuntu OS:
                         /root/.ssd/known_hosts

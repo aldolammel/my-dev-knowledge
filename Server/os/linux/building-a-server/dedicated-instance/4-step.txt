@@ -9,16 +9,12 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING THE DATABASE
     1) Which db you wanna deploy:
     
         >> SQLite:
-            /Database/SQLite/deploy/deploy.txt
+            /Database/SQLite/deploy/_deploy.txt
             
         >> Postgres:
-            /xxxxxxxxxxxxxxxxxxxxxxxx
-        
-    
-
-
-    
-
+            /Database/PostgreSQL/deploy/_deploy.txt
+       
+       
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

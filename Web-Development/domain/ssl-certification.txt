@@ -1,6 +1,6 @@
 
 
-SSL CERTIFICATION CERTIFICATION (http to https)
+DOMAIN: SSL CERTIFICATION CERTIFICATION (HTTP TO HTTPS)
 
 
     LINUX/UBUNTU:
@@ -11,13 +11,25 @@ SSL CERTIFICATION CERTIFICATION (http to https)
 
             1) Install the Certbot with its Nginx plugin if you're using Nginx:
                 $ sudo apt update
-                $ sudo apt install certbot python3-certbot-nginx
+                $ sudo apt install -y certbot python3-certbot-nginx
 
             2) Obtain an SSL Certificate:
-                $ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+                
+                2.1) Requesting:
+                    $ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+                    # or for subdomain:
+                    $ sudo certbot --nginx -d my.yourdomain.com
+                
+                2.2) After that, the Certbot will automatically create a CRON to renew the certification each period. But if something gets wrong, set the admin email for SSL renewal alerts too!
+                
+                2.3) Verify auto-renewal and when the auto-renew must run automatically:
+                    $ sudo systemctl status certbot.timer
+                    $ sudo certbot certificates
+                    
+                    
+                
 
-                # After that, the Certbot will automatically create a CRON to renew the certification
-                each period. 
+                
 
             3) To make sure the SSL certification will be renewed:
                 $ certbot renew --dry-run

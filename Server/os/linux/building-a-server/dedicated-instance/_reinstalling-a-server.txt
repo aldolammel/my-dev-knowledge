@@ -1,6 +1,6 @@
 
 
-DEBIAN/UBUNTU > BUILDING UP A SERVER: REINSTALLING
+DEBIAN/UBUNTU > BUILDING UP A VPS: REINSTALLING
 
 
     PRE.1) Make sure you knows which OS the server demands!
@@ -21,7 +21,7 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: REINSTALLING
                 # Remove the old SSH host keys from your local 'known_hosts' file:
                     $ ssh-keygen -f '/home/<your_user>/.ssh/known_hosts' -R '<server_address>'
                         E.g.
-                            ssh-keygen -f '/home/aldo/.ssh/known_hosts' -R 'vps123.public.com'
+                            ssh-keygen -f '/home/obama/.ssh/known_hosts' -R 'vps123.public.com'
                             
                 # Next, go to:
                     ./1-step.txt
