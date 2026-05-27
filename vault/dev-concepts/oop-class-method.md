@@ -1,4 +1,4 @@
 
 
 Method is a Function, but a Function is not necessarily a Method:
-    ./oop-class-function.txt
+    ./oop-class-function.md

@@ -3,7 +3,7 @@
 FORMATTER FOR PYTHON: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.txt
+        /vault/dev-concepts/tool-formatter.md
 
     >> Options:
 

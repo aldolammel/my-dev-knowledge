@@ -2,7 +2,7 @@
     SINGLETON: CREATION WITH DJANGO (STEP 2/2)
 
     >> What is it:
-        /vault/dev-concepts/singleton.txt
+        /vault/dev-concepts/singleton.md
 
     >> This file:
         /django_project/apps/your_app/models.py

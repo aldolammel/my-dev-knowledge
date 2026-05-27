@@ -1,18 +1,16 @@
-
-
 OOP: FUNCTION ARGUMENTS (PARAMETERS' VALUES)
-    
+
     PARAMETER:
         Parameters are the names defined in a function's signature. Parameters are the blank "fields" where arguments are set (e.g., "city:", "start_dt:", "end_dt:").
-    
+
     ARGUMENT:
         An argument is a value that you pass into a function (or method) through a parameter. Arguments are the concrete values you supply from outside the function to make it work. The arguments are the data you define in parameters (e.g., "Prague", "17/01/17", "10/10/17").
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class-function.txt
+        /vault/dev-concepts/oop-class-function.md
 
-        
+
     >> Example:
 
         def memories(city, start_dt, end_dt):             # 'city' and others are params of memories
@@ -21,14 +19,9 @@ OOP: FUNCTION ARGUMENTS (PARAMETERS' VALUES)
 
         memories("Prague", "17/01/2017", "10/10/17")              # calls the function with its args
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> Directly related:
 
         >> Class Functions (Methods):
-            /vault/dev-concepts/oop-class-function.txt
-
-
+            /vault/dev-concepts/oop-class-function.md

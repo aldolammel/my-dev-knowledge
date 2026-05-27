@@ -2,4 +2,4 @@
 
 API SOLUTION: FETCH API (JS native solution)
     
-    /vault/javascript/api.txt
+    /vault/javascript/api.md

@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "82c44c9cfe18d695",
+        "id": "7332f61bb0966504",
         "type": "tabs",
         "children": [
           {
-            "id": "1ce98760c01e8710",
+            "id": "80108b836b76a643",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "database/principles-pacelc.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "principles-pacelc"
             }
           }
         ]
@@ -176,34 +180,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "711eaa44df1bb64c",
+  "active": "80108b836b76a643",
   "lastOpenFiles": [
+    "database/constraint-type-unique.md",
+    "database/constraint-type-primary-key.md",
+    "database/constraint-type-not-null.md",
+    "database/constraint-type-foreign-key.md",
+    "database/constraint-type-default.md",
+    "database/constraint-type-check.md",
+    "database/constraint-for-db.md",
+    "database/pacelc.png",
+    "dev-concepts/architecture-client-server.png",
+    "database/principles-pacelc.md",
+    "dev-concepts/web-server.md",
+    "dev-concepts/type-annotation.md",
+    "dev-concepts/tool-typechecker.md",
+    "dev-concepts/tool-linter.md",
+    "dev-concepts/tool-formatter.md",
+    "dev-concepts/syntax.md",
+    "dev-concepts/singleton.md",
+    "dev-concepts/server-vps.md",
+    "dev-concepts/serialization.md",
+    "dev-concepts/semantic.md",
+    "dev-concepts/regular-expressions.md",
+    "dev-concepts/regex.md",
+    "dev-concepts/pull-request.md",
+    "dev-concepts/principles-rest.md",
+    "dev-concepts/principles-dry.md",
+    "dev-concepts/password-storage.md",
+    "dev-concepts/oop.md",
+    "dev-concepts/oop-class.md",
     "Untitled.canvas",
-    "os/linux/terminal-basic-commands.md",
-    "os/linux/debian/server/_about.md",
-    "os/linux/debian/terminal-commands.md",
-    "os/linux/debian/mounting-shared-drives-automatically.md",
-    "os/linux/debian/environment-variables.md",
-    "os/linux/debian/command-change-user.md",
-    "os/linux/debian/2-updates/update.md",
-    "os/linux/debian/2-updates/firmwares-updates.md",
-    "os/linux/debian/2-updates/changing-LTS-version.md",
-    "os/linux/debian/0-os-install/_roadmap.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-snap/canonical-livepatch.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-snap/discord.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-snap/snap-store.md",
-    "os/linux/debian/1-apps-install/_important.md",
-    "os/linux/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md",
-    "os/linux/debian/1-apps-install/basic-apps/_ai-prompt.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-flatpak/terminal-ptyxis.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/xxxxx-xxxxxxxxxx.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/torrent-qbittorrent.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/screenshot-flameshot.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/git.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/ftp-filezilla.md",
-    "os/linux/debian/1-apps-install/basic-apps/using-apt/db-manager-sqlite.md",
     "Untitled.base",
     "os/linux/terminal-basic-commands.txt",
     "vault/python/Web-development",
@@ -221,8 +228,6 @@
     "interview-challenges/web-development/url-shortener/7-hash-colision-issue.png",
     "interview-challenges/web-development/url-shortener/7-doesnt-work-for-that-requirements.png",
     "interview-challenges/web-development/url-shortener/6-hash-calc.png",
-    "interview-challenges/web-development/url-shortener/5-hash-function.png",
-    "interview-challenges/web-development/url-shortener/4-db-shortcode-is-primary-key.png",
-    "interview-challenges/web-development/url-shortener/3-estimates.png"
+    "interview-challenges/web-development/url-shortener/5-hash-function.png"
   ]
 }

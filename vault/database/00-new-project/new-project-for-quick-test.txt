@@ -14,6 +14,6 @@ DATABASE > NEW PROJECT: FOR A QUICK TEST APP
     
     >> PACELC DESIGN RECOMMENDATION
         What is it:
-            ./principles-PACELC.txt
+            ./principles-PACELC.md
         
         For Institutional App, xxxxxxxxxxxxxxxxxxxxxxxxx

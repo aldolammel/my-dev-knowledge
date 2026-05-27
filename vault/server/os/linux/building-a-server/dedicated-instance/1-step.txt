@@ -6,7 +6,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
     PRE.1) Warnings!
     
         VPS CONCEPT & STRATEGIES:
-            /vault/dev-concepts/server-vps.txt
+            /vault/dev-concepts/server-vps.md
     
         CRUCIAL:
             Always check if your VPS setup is allowed to run healthily the chosen OS!

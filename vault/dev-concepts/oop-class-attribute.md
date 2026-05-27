@@ -1,12 +1,10 @@
-
-
 OOP: CLASS ATTRIBUTES
 
     An attribute is a variable that belongs to an object (or a class). It represents the state or data of the object. Attributes are defined inside the class.
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class.txt
+        /vault/dev-concepts/oop-class.md
 
 
     >> Example:
@@ -24,16 +22,9 @@ OOP: CLASS ATTRIBUTES
             def description(self):
                 return f"{self.name}'s {self.age} years old."
 
-
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> Directly related:
 
         >> Arguments (Parameters):
-            /vault/dev-concepts/oop-class-attribute-argument.txt
-
-
+            /vault/dev-concepts/oop-class-attribute-argument.md

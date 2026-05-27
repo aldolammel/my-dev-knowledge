@@ -3,7 +3,7 @@
 LINTER FOR PYTHON: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-linter.txt
+        /vault/dev-concepts/tool-linter.md
 
     >> Options:
 

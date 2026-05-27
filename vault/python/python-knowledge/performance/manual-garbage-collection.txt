@@ -3,7 +3,7 @@
 PYTHON: GARBAGE COLLECTION
 
     What is it:
-        /vault/dev-concepts/garbage-collector.txt
+        /vault/dev-concepts/garbage-collector.md
 
     Even Python working with an automatic solution, Python is not allowed to deal with circular relations. For this case, the manual gargabe collection should be executed!
 

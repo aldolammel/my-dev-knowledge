@@ -3,7 +3,7 @@
 TYPE-CHECKER FOR DJANGO: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-typechecker.txt
+        /vault/dev-concepts/tool-typechecker.md
 
     >> Options:
 

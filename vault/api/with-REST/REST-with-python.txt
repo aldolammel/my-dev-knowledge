@@ -3,7 +3,7 @@
 API WITH REST:
 
     What is it:
-        /vault/dev-concepts/principles-REST.txt
+        /vault/dev-concepts/principles-rest.md
 
     REST in Python:
         /python/30-API/with-REST/

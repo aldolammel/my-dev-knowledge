@@ -6,6 +6,6 @@ DATABASE > NEW PROJECT: FOR INSTITUTIONAL APP
     
     >> PACELC DESIGN RECOMMENDATION
         What is it:
-            ./principles-PACELC.txt
+            ./principles-PACELC.md
         
         For Institutional App, xxxxxxxxxxxxxxxxxxxxxxxxx

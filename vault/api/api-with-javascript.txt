@@ -2,4 +2,4 @@
 
 API: WITH JAVASCRIPT
 
-    /vault/javascript/api.txt
+    /vault/javascript/api.md

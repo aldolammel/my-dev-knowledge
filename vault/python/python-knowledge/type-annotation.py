@@ -1,7 +1,7 @@
 """
 TYPE ANNOTATIONS / DATA HINT DECLARATIONS
 
-    Concept: /vault/dev-concepts/type-annotation.txt
+    Concept: /vault/dev-concepts/type-annotation.md
 
     Types in Python:
         integer = int

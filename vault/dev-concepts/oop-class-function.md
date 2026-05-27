@@ -1,5 +1,3 @@
-
-
 OOP: CLASS FUNCTIONS (METHODS)
 
     FUNCTION:
@@ -20,14 +18,11 @@ OOP: CLASS FUNCTIONS (METHODS)
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class.txt
+        /vault/dev-concepts/oop-class.md
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> Directly related:
 
         >> Arguments:
-            /vault/dev-concepts/oop-class-attribute-argument.txt
-
+            /vault/dev-concepts/oop-class-attribute-argument.md

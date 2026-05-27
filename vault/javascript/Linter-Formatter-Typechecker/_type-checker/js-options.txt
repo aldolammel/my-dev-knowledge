@@ -3,7 +3,7 @@
 TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.txt
+        /vault/dev-concepts/tool-formatter.md
 
 
 

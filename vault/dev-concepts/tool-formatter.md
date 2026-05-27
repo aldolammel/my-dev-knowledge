@@ -1,5 +1,3 @@
-
-
 FORMATTER TOOL: WHAT IS IT
 
     Consistency & Readability!
@@ -29,10 +27,9 @@ FORMATTER TOOL: WHAT IS IT
 
     >> xxxxxx
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > More about:
 
->> More about:
-
-    Type-checker tools: /vault/dev-concepts/tool-typechecker.txt
-    Linter tools:       /vault/dev-concepts/tool-linter.txt
+    Type-checker tools: /vault/dev-concepts/tool-typechecker.md
+    Linter tools:       /vault/dev-concepts/tool-linter.md

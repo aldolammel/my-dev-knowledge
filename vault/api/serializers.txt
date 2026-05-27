@@ -1,1 +1,1 @@
-/vault/dev-concepts/serialization.txt
+/vault/dev-concepts/serialization.md

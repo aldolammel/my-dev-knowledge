@@ -25,4 +25,4 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: MICROSERVICE
 
 
 >> ARCHITECTURE: CLIENT-SERVER
-    ./architecture-client-server_.txt
+    ./architecture-client-server_.md

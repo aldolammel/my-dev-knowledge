@@ -1,9 +1,7 @@
-
-
 PROGRAMMING CONCEPTS > ARCHITECTURE: CLIENT-SERVER
 
-    The client–server model is a form of messaging pattern in a distributed app structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients. Often clients and servers communicate over a computer network on separate hardware, but both client and server may be on the same device. 
-    
+    The client–server model is a form of messaging pattern in a distributed app structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients. Often clients and servers communicate over a computer network on separate hardware, but both client and server may be on the same device.
+
     A server host runs one or more server programs, which share their resources with clients. A client usually doesn't share its computing resources, but it requests content or service from a server and may share its own content as part of the request. Clients, therefore, initiate communication sessions with servers, which await incoming requests.
 
     Charts:
@@ -19,9 +17,8 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: CLIENT-SERVER
         - Networks traffic blocking is one of the problems related to the client-server model;
         - If one server fail, clients’ requests cannot be served (except if P2P model);
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > ARCHITECTURE: MICROSERVICES
 
-
->> ARCHITECTURE: MICROSERVICES
-    ./architecture-microservices_.txt
+    ./architecture-microservices_.md

@@ -3,7 +3,7 @@
 TYPE-CHECKER FOR TYPESCRIPT: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.txt
+        /vault/dev-concepts/tool-formatter.md
 
     >> Need this but for vanilla JS?
         /vault/javascript/Linter-Formatter-Typechecker/_type-checker/js-options.txt

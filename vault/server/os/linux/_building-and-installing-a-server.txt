@@ -7,7 +7,7 @@ DEBIAN/UBUNTU: BUILDING UP A VPS (SERVER)
 
 
     PRE) What is it and its use strategies:
-        /vault/dev-concepts/server-vps.txt
+        /vault/dev-concepts/server-vps.md
 
     
     1) For this server, what will be your strategy?

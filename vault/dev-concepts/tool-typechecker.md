@@ -33,5 +33,5 @@ TYPE-CHECKER TOOL: WHAT IS IT
 
 >> More about:
 
-    Formatter tools: /vault/dev-concepts/tool-formatter.txt
-    Linter tools:    /vault/dev-concepts/tool-linter.txt
+    Formatter tools: /vault/dev-concepts/tool-formatter.md
+    Linter tools:    /vault/dev-concepts/tool-linter.md

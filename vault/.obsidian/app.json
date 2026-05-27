@@ -4,5 +4,9 @@
   "foldIndent": false,
   "foldHeading": false,
   "strictLineBreaks": false,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "newLinkFormat": "absolute",
+  "showUnsupportedFiles": true
 }

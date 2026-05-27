@@ -6,7 +6,7 @@ DATABASE > NEW PROJECT: FOR EXISTING PROJECT
 
 
     PRE) Assuming your project already got a database system management defined, and successfully installed locally! Otherwise:
-        /vault/database/principles-PACELC.txt
+        /vault/database/principles-PACELC.md
 
 
     1) Have you ever created the database for your current project in the current machine?

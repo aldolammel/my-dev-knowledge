@@ -60,4 +60,4 @@ API SOLUTION: AXIOS
 
 
 >> FOR SIMPLEST SOLUTION IN JAVASCRIPT:
-    /vault/javascript/api.txt
+    /vault/javascript/api.md

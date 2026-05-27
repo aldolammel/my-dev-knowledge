@@ -7,6 +7,7 @@
 
 
 
+"Originally, interpreter was made to start fast and to end fast." - Fabio Akita.
 
 
 
@@ -17,5 +18,5 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-INTERPRETER:
-    ./interpreter.txt
+COMPILER:
+    ./compiler.md

@@ -1,3 +1,0 @@
-
-
-/vault/database/constraint-for-db.txt

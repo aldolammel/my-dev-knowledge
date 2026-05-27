@@ -31,5 +31,5 @@ OBJECT-ORIENTED-PROGRAMMING (OOP):
 
         Class example:
 
-            /vault/dev-concepts/oop-class.txt
+            /vault/dev-concepts/oop-class.md
             

@@ -5,6 +5,6 @@ DATABASE > NEW PROJECT: FOR SOCIAL MEDIA APP
     
     >> PACELC DESIGN RECOMMENDATION
         What is it:
-            ./principles-PACELC.txt
+            ./principles-PACELC.md
         
         For Social Media App, xxxxxxxxxxxxxxxxxxxxxxxxx

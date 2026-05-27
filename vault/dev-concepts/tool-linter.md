@@ -1,10 +1,8 @@
-
-
 LINTER TOOL: WHAT IS IT
 
     Code Quality & Bug Prevention!
-    
-    It performs static analysis on your code to find patterns that could lead to errors, security 
+
+    It performs static analysis on your code to find patterns that could lead to errors, security
     vulnerabilities, or deviations from best practices. It understands semantics to a degree.
 
     >> Primary Purpose:
@@ -29,9 +27,9 @@ LINTER TOOL: WHAT IS IT
 
     >> xxxxxx
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> More about:
+> > More about:
 
-    Formatter tools:    /vault/dev-concepts/tool-formatter.txt
-    Type-checker tools: /vault/dev-concepts/tool-typechecker.txt
+    Formatter tools:    /vault/dev-concepts/tool-formatter.md
+    Type-checker tools: /vault/dev-concepts/tool-typechecker.md

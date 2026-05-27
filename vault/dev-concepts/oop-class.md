@@ -1,18 +1,16 @@
-
-
 OOP: CLASSES
 
     >> Basic:
-        /vault/dev-concepts/oop.txt
+        /vault/dev-concepts/oop.md
 
 
     >> Class example 1:
-            
+
             class Dog:
                 # This is where attributes and methods are defined!
                 pass
 
-    
+
     >> Class example 2:
 
             class Dog:                                                   # Parent-class/Base-class
@@ -30,41 +28,39 @@ OOP: CLASSES
                 def description(self):                                   # another instance method
                     return f"{self.name}'s {self.age} years old."
 
-    
+
     >> Class example 3:
 
             class Doberman(Dog):                                               # Child-class
                 def __init__(self, name, age, color="black", ears="cropped"):  # inherit and Extend
                     """Dunder method called 'constructor' that runs automatically when a class instance is created."""
                     super().__init__(name, age, color)                         # inherit Dog methods
-                    
+
                     self.ears = ears                                   # Doberman-specific attribute
 
                 def description(self):                                   # overrides a parent method
                     return f"{self.name}'s adult. Its ears are {self.ears}."
 
-    
+
     >> Finally, using classes:
-        
+
             my_dog = Dog("Bob", 5, "yellow")                                # creates a Dog instance
             print(f"{my_dog.name}'s species: {my_dog.species}")             # calls attributes
             print(my_dog.description())                                     # calls method
-            
+
             my_dober = Doberman("Zeus", 3, "black", "cropped")         # creates a Doberman instance
             print(my_dober.barking())                            # calls a method inherited from Dog
             print(my_dober.description())       # calls a class method overridden by instance method
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> Directly related:
 
         >> Class Attributes:
-            /vault/dev-concepts/oop-class-attribute.txt
+            /vault/dev-concepts/oop-class-attribute.md
 
         >> Class Functions (Methods):
-            /vault/dev-concepts/oop-class-function.txt
+            /vault/dev-concepts/oop-class-function.md
 
 
     >> By language:
@@ -74,5 +70,3 @@ OOP: CLASSES
 
         >> Classes with JavaScript:
             /vault/javascript/js-knowledge/classes/
-
-
