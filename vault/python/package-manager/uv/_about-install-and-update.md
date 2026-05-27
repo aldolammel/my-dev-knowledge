@@ -4,11 +4,8 @@
 
 Extremely fast Python package installer and resolver designed as a drop-in replacement for pip and pip-tools workflows. Official docs: https://docs.astral.sh/uv/getting-started/installation/
 
-When you ask to UV to initiate a project, a "uv.lock" file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a Docker);
+When you ask to UV to initiate a project, a *uv.lock* file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a *Docker*);
 
-**Ruff** (Linter/Formatter)
-UV is developed by the same company of the Ruff, so both are completely integrated.
-/vault/python/Linter-Formatter-Typechecker/ruff.txt
 
 ---
 
@@ -47,7 +44,7 @@ winget install --id=astral-sh.uv  -e
 uv --version
 ```
 
-**1.4) (If applicable) Do you need to update it?**
+**1.4) (If applicable) Do you need to update it?** 
 [[upgrade-uv]]
 
 ---
