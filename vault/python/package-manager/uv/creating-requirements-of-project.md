@@ -2,7 +2,7 @@
 
 # Creating requirements of a project
 
-Install requirements with UV is much more powerful and managable than _requirements.txt_ file that is important to get to know some concepts and what is the _pyproject.toml_ file:
+Install requirements with UV is much more powerful and manageable than _requirements.txt_ file that is important to get to know some concepts and what is the _pyproject.toml_ file:
 
 ---
 
@@ -12,19 +12,22 @@ Install requirements with UV is much more powerful and managable than _requireme
 2. What dependencies are (below);
 
 **What dependencies are:**
+
 They are packages required in order to run an app in any environment, no matter if it's production, staging or development one.
 
 **What optional-dependencies are:**
+
 They are packages NOT required to run an app, but they make tasks easier:
 
-- Sub-group _dev_:
-  - Contains everything needed for development: testing frameworks, linters, formatters, debuggers, doc builders, etc.
-- Sub-group _test_:
-  - Often a subset of dev focused purely on testing.
-- Sub-group _docs_:
-  - Tools for building documentation.
+- **Sub-group _dev_:** Contains everything needed for development: testing frameworks, linters, formatters, debuggers, doc builders, etc.
+- **Sub-group _test_:** Often a subset of dev focused purely on testing.
+- **Sub-group _docs_:** Tools for building documentation.
 
-The file _pyproject.toml_ (PEP 621) manages all dependencies (including the optional ones) of a specific project. E.g. /vault/python/Web-development/pyproject.toml
+The file _pyproject.toml_ (PEP 621) manages all dependencies (including the optional ones) of a specific project:
+
+E.g. /vault/python/Web-development/pyproject.toml
+
+
 
 ---
 

@@ -5,7 +5,6 @@
 ---
 
 ## Before:
-
 1. Assuming you're in the project folder;
 
 ---
@@ -13,13 +12,11 @@
 ## 1) Search/Create it:
 
 This command will search for existing venv folders for the current folder project, and, if none is found, UV will create a clean '.venv' folder automatically!
-
 ```
 uv venv
 ```
 
 Or for specific venv folder name (not recommended):
-
 ```
 uv venv <venv_folder_name>
 ```

@@ -3,7 +3,9 @@
 # Doing a discovery using UV
 
 **Python discovery:**
-/vault/python/0-New-Project/discovery-python.txt
+
+[[discovery-python]]
 
 **Django discovery:**
-/vault/python/Web-development/django/0-new-project/discovery-django.txt
+
+[[discovery-django]]

@@ -24,4 +24,5 @@ uv self update
 
 
 **UPGRADE PROJECT DEPENDENCIES WITH UV:**
+
 [[upgrade-dependencies]]

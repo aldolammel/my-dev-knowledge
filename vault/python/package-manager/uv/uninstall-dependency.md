@@ -30,7 +30,9 @@ uv remove --optional dev ruff
 
 
 **INSTALL DEPENDENCY:**
+
 [[install-dependency]]
 
 **UPDATE DEPENDENCY:**
+
 [[upgrade-dependencies]]

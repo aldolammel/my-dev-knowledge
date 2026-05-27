@@ -5,7 +5,7 @@ PYTHON PROJECT ROADMAPS: DISCOVERY IN DJANGO
     Group of action to figure out a Django project settings and features:
 
         PRE) Discovery about Python:
-            /vault/python/0-New-Project/discovery-python.txt
+            /vault/python/0-New-Project/discovery-python.md
 
         x) xxxxxx
 

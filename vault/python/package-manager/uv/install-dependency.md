@@ -39,7 +39,9 @@ uv pip list
 
 
 **Update dependencies:**
+
 [[upgrade-dependencies]]
 
 **Uninstall dependency:**
+
 [[uninstall-dependency]]

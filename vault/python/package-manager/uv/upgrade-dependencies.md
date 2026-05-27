@@ -80,7 +80,9 @@ uv sync --upgrade
 ---
 
 **INSTALL DEPENDENCY:**
+
 [[install-dependency]]
 
 **UNINSTALL DEPENDENCY:**
+
 [[uninstall-dependency]]

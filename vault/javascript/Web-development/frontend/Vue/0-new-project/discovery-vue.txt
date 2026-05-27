@@ -19,7 +19,7 @@ VUE: DISCOVERY
 DISCOVERY OF RELATED VUE PROJECT'S FRAMEWORKS
 
     >> Django:
-        /vault/python/Web-development/django/0-new-project/discovery-django.txt
+        /vault/python/Web-development/django/0-new-project/discovery-django.md
 
 
 DISCOVERY OF OTHER JS FRAMEWORKS:

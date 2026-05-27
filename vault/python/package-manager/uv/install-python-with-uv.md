@@ -44,4 +44,5 @@ $ uv python install 3.13.5
 ---
 
 **UNINSTALLING PYTHON WITH UV:**
+
 [[uninstall-python-old-version]]

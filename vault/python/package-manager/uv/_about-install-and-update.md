@@ -14,7 +14,8 @@ When you ask to UV to initiate a project, a *uv.lock* file is created automatica
 **1.1) Choose the OS and install it:**
 
 **Linux/Mac:**
-Downloading using WGET (bundled on Debian distros):
+
+Downloading using *wget* (bundled on *Debian* distros):
 
 ```
 wget -qO- https://astral.sh/uv/install.sh | sh
@@ -44,9 +45,7 @@ winget install --id=astral-sh.uv  -e
 uv --version
 ```
 
-**1.4) (If applicable) Do you need to update it?** 
-
-[[upgrade-uv]]
+**1.4) (If applicable) If needed, update it:** [[upgrade-uv]]
 
 ---
 
@@ -57,16 +56,18 @@ uv --version
 1. Create / Recreate (or find the current) venv in your project folder: [[create-or-find-current-venv]]
 
 **Create the minimal Python project scaffolding:**
-It creates automatically some files like pyproject.toml. Don't use this for existing projects with these files already!
+It creates automatically some files like *pyproject.toml*. Don't use this for existing projects with these files already!
 
 ```
 uv init
 ```
 
 **Updating or restoring Python, and project dependencies (existing projects ongoing):**
+
 [[auto-installation-with-sync]]
 
 **Install package (only in the active virtual environment):**
+
 [[install-dependency]]
 
 **Check installed dependencies:**
@@ -76,15 +77,18 @@ uv pip list
 ```
 
 **Uninstall package (only in the active virtual environment):**
+
 [[uninstall-dependency]]
 
 ---
 
 **DJANGO PROJECT WITH UV:**
+
 /vault/python/Web-development/django/1-install-and-first-steps/2-install-project-with-uv.txt
 
 
 **FLASK PROJECT WITH UV:**
+
 /vault/python/Web-development/flask/1-install-and-first-steps/2-install-project-with-uv.txt
 
 

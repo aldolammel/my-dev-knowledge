@@ -1,5 +1,3 @@
-
-
 PYTHON: DISCOVERY
 
     Group of action to figure out a Python project settings and features:
@@ -7,12 +5,12 @@ PYTHON: DISCOVERY
         x) Current Python version installed:
 
             >> xxxx
-            
+
             >> Using UV
-                
+
                 # All python version installed:
                     $ uv python list
-                
+
                 # Checking which Python version the project must use:
                     $ uv pin
                     # take a note!
@@ -34,7 +32,7 @@ PYTHON: DISCOVERY
         x) Check the project dependencies:
 
             # The installed ones:
-                
+
                 # Using xxxxxxxxxxxxxx
                     $ xxxxxxxxxxxxxxxx
                     # Take a note!
@@ -48,11 +46,9 @@ PYTHON: DISCOVERY
 
         x) xxxxxx
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 DISCOVERY OF PYTHON FRAMEWORKS:
 
     >> Django:
-        /vault/python/Web-development/django/0-new-project/discovery-django.txt
+        /vault/python/Web-development/django/0-new-project/discovery-django.md
