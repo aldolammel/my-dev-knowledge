@@ -1,0 +1,14 @@
+#### OS > Linux > Debian
+
+# Updating the firmwares
+
+    Install the module Firmware Update:
+        $ sudo apt install fwupd
+
+
+    Get the list of your hardware that supports firmware updates by running the command Firmware Update Manager:
+        $ fwupdmgr get-devices
+
+
+    Get the status of the devices if they have an available firmware update:
+        $ fwupdmgr get-updates

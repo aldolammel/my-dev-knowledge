@@ -1,0 +1,53 @@
+#### OS > Linux > Debian > apt
+
+# System tool > Git
+
+    Repository management.
+
+    >> Install:
+
+        PRE) Keep logged in to your GitHub account on the browser.
+
+        1) Installation:
+            $ sudo apt update
+            $ sudo apt install -y git-all
+
+        2) Integrations / Authentication:
+
+            2.1) On GitHub.com, log in and go to copy your token:
+                Settings > Developer settings > Fine-grained-Tokens > New token (not classic).
+
+                - No expiration
+                - All repositories
+                - Name: lammel-<machine>-<distro>
+                    E.g.
+                        lammel-desktop-ubuntu
+
+            2.2) For Ubuntu, you can use the system's credential helper with GitHub CLI:
+                # Install GitHub CLI (easier authentication):
+                    $ sudo apt install -y gh
+
+                # Authenticate with GitHub:
+                    $ gh auth login
+
+                        # Follow the terminal instructions!
+
+                            # Check if everything is fine:
+                                $ gh auth status
+
+                2.2.1) Set your global Git user name and email
+                    $ git config --global user.name "John Doe"
+                    $ git config --global user.email "johndoe6123123@gmail.com"
+
+                    IMPORTANT:
+                        Since you installed GitHub CLI (gh) and configured the credential helper, your authentication is handled automatically. The user.email you set should match your GitHub email for proper attribution of your commits on GitHub.com.
+
+
+            BACKUP) IN CASE THE STEP ABOVE FAIL!!!!!!!!!!!!!!!!
+                Caching your credentials, installing Git Credential Manager Core:
+                $ wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.5.0/gcm-linux_amd64.2.5.0.deb" -O /tmp/gcmcore.deb
+                $ sudo dpkg -i /tmp/gcmcore.deb
+                $ git-credential-manager configure
+                $ git config --global credential.credentialStore plaintext
+
+                Now, when you clone a git repo, a Ubuntu pop-up window asks you what to do!

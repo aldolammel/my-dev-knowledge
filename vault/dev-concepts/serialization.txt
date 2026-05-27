@@ -11,7 +11,7 @@ DEV CONCEPTS: SERIALIZATION
 
 
     >> What is API:
-        /vault/api/_about.txt
+        /vault/api/_about.md
 
 
     >> Popular Serialization Formats:

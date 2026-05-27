@@ -3,7 +3,7 @@
 FEDORA: UPDATING THE OS LTS VERSION
 
     1) Update the current system:
-        ./update.txt
+        ./update.md
         
     2) Tell OS to upgrade to the newest LTS:
         $ dnf do-release-upgrade
@@ -14,4 +14,4 @@ FEDORA: UPDATING THE OS LTS VERSION
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     FOR DEBIAN/UBUNTU:
-        /vault/os/linux/debian/2-updates/changing-LTS-version.txt
+        /vault/os/linux/debian/2-updates/changing-LTS-version.md

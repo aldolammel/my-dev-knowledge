@@ -1,5 +1,4 @@
 #### Python > Package Manager
-
 # UV
 
 Extremely fast Python package installer and resolver designed as a drop-in replacement for pip and pip-tools workflows. Official docs: https://docs.astral.sh/uv/getting-started/installation/

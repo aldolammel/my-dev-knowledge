@@ -3,7 +3,7 @@
 FEDORA: TERMINAL COMMANDS
     
     >> Very basic:
-        .../os/linux/terminal-basic-commands.txt
+        .../os/linux/terminal-basic-commands.md
 
 
     >> Fedora basic:
@@ -28,6 +28,6 @@ FEDORA: TERMINAL COMMANDS
     >> Specialized:
 
         Changing current user on terminal:
-            ./command-change-user.txt
+            ./command-change-user.md
 
             

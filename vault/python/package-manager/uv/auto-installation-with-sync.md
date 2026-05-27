@@ -1,5 +1,4 @@
 #### Python > Package Manager > UV
-
 # Using sync command
 
 The command looks for project files that listing the configurations and dependencies (like _pyproject.toml_, _requirements.txt_). Once UV read, for example, the _pyproject.toml_ file, it automatically updates _uv.lock_ file! UV makes it comparing the desired state (your project files) with the current state (what's already installed) and calculates the difference. The most import file for _uv sync_ is _uv.lock_ (in project folder root) that is dynamically managed.

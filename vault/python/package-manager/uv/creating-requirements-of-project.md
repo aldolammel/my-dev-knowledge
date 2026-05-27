@@ -1,5 +1,4 @@
 #### Python > Package Manager > UV
-
 # Creating requirements of a project
 
 Install requirements with UV is much more powerful and manageable than _requirements.txt_ file that is important to get to know some concepts and what is the _pyproject.toml_ file:

@@ -1,5 +1,4 @@
 #### Python > Package Manager > UV
-
 # Uninstalling a specific Python version
 
 ==Be aware!==

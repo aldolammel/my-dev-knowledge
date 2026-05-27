@@ -27,15 +27,15 @@ LINUX > FEDORA: RPM VS SNAP
 
         
         >> Prepare the system & install the basic apps:
-            ./0-preparing-the-system.txt
+            ./0-preparing-the-system.md
         
         
         >> Install other apps:
-            ./1-installing-apps.txt
+            ./1-installing-apps.md
 
 
         >> To see current repositories stored:
-            ./checking-app-is-in-repo-list.txt
+            ./checking-app-is-in-repo-list.md
  
 
 

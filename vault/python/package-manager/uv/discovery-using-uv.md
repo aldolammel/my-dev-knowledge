@@ -1,5 +1,4 @@
 #### Python > Package Manager > UV
-
 # Doing a discovery using UV
 
 **Python discovery:**

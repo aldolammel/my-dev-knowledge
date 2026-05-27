@@ -10,9 +10,9 @@ IDE FOR JS PROJECT: VSCODE
         PRE.2) IDE VSCode install:
 
             Linux:
-                /vault/os/os/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.txt
+                /vault/os/os/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.md
                 or
-                /vault/os/os/linux/fedora/1-apps-install/basic-apps/using-dnf/ide-code.txt
+                /vault/os/os/linux/fedora/1-apps-install/basic-apps/using-dnf/ide-code.md
 
             
             Windows:

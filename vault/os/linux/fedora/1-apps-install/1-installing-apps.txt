@@ -4,13 +4,13 @@ OS > FEDORA: INSTALLING APPS
     
     
     PRE.1) Prepare the system:
-        ./0-preparing-the-system.txt
+        ./0-preparing-the-system.md
 
     PRE.2) Install the basic apps:
         ./basic-apps/
 
             >> @aldolammel Fedora's default browser = Firefox (non-snap)
-                ./basic-apps/using-apt/browser-firefox.txt
+                ./basic-apps/using-apt/browser-firefox.md
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -29,11 +29,11 @@ OS > FEDORA: INSTALLING APPS
 
 
             >> Finding a package name installed:
-                ./finding-installed-apps.txt
+                ./finding-installed-apps.md
 
 
             >> Check apt-update repo list:
-                ./checking-app-is-in-repo-list.txt
+                ./checking-app-is-in-repo-list.md
 
 
         >> Removing:

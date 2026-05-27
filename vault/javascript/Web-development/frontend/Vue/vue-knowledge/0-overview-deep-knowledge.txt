@@ -3,7 +3,7 @@
 VUE.JS DEEPER KNOWLEDGE
 
     >> What is Vue:
-        ./_about.txt
+        ./_about.md
 
     >> Two options for the product's structure with Vue.js: SPA vs MPA:
         ./SPA-vs-MPA.txt

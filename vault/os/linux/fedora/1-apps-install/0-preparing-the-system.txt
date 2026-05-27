@@ -36,4 +36,4 @@
 
 
 INSTALLING THE BASIC APPS:
-    ./1-installing-apps.txt
+    ./1-installing-apps.md

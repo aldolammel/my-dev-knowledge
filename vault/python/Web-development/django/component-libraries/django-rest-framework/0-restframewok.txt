@@ -16,7 +16,7 @@ DRF: DJANGO REST FRAMEWORK
     https://www.django-rest-framework.org/
 
     >> More about API:
-        >> API:          /vault/api/_about.txt
+        >> API:          /vault/api/_about.md
         >> Serializers:  /vault/api/serializers.txt
 
     >> Dataflow of a real Django REST Framework usage:

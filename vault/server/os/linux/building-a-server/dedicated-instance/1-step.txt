@@ -53,10 +53,10 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
             Don't OS release upgrade (LTS or non-LTS version) without to check if the current VPS setup supports the new version!
                 
             >> Debian/Ubuntu:
-                /vault/os/os/linux/debian/2-updates/changing-LTS-version.txt
+                /vault/os/os/linux/debian/2-updates/changing-LTS-version.md
                 
             >> Fedora:
-                /vault/os/os/linux/fedora/2-updates/changing-LTS-version.txt
+                /vault/os/os/linux/fedora/2-updates/changing-LTS-version.md
         
     
     4) Restart the VPS:

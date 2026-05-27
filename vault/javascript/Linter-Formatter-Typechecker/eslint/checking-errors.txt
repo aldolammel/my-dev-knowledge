@@ -3,7 +3,7 @@
 JAVASCRIPT > LINTER > ESLINT: CHECKING ERRORS
 
     WHAT IS IT:
-        ./_about.txt
+        ./_about.md
 
     
     # Just list issues:

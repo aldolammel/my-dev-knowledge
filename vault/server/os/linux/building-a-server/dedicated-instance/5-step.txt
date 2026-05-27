@@ -202,4 +202,4 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 HOW TO UPDATE YOUR APP:
-    /vault/server/os/linux/updating-web-application-via-git.txt
+    /vault/server/os/linux/updating-web-application-via-git.md

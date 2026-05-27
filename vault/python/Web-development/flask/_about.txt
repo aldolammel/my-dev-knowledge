@@ -44,4 +44,4 @@ FLASK: WHAT IS IT?
 
 >> NEED SOMETHING MORE POWERFUL WITH BUILT-IN SOLUTION:
     >> Django:
-        .../Web-development/django/_about.txt
+        .../Web-development/django/_about.md

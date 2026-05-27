@@ -1,5 +1,4 @@
 #### Python > Package Manager > UV
-
 # Installing Python with UV
 
 ---

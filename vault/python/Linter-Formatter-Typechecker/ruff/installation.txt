@@ -4,7 +4,7 @@ RUFF: INSTALLATION AND INTEGRATION
 
 
     PRE) What is it:
-        ./_about.txt
+        ./_about.md
 
 
 

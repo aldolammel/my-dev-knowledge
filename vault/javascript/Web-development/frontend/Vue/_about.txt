@@ -2,4 +2,4 @@ About Vue.JS language:
     /vault/javascript/
 
 About Vue.JS:
-    ./vue-knowledge/_about.txt
+    ./vue-knowledge/_about.md

@@ -1,0 +1,30 @@
+#### OS > Linux > Debian
+
+# Terminal commands
+
+    >> Very basic:
+        .../os/linux/terminal-basic-commands.md
+
+
+    >> Debian basic:
+
+        Package Manager:
+            $ sudo apt ...
+
+    >> Helpers
+
+        How to start, stop, and check a service. Let's use the 'postgres' as an example:
+            $ sudo systemctl status postgres
+            $ sudo systemctl start postgres
+            $ sudo systemctl stop postgres
+            $ sudo systemctl restart postgres
+
+        How to learn more about a command:
+            $ man <command you are trying to understand>
+            $ man postgres
+
+
+    >> Specialized:
+
+        Changing current user on terminal:
+            ./command-change-user.md

@@ -4,7 +4,7 @@ CSS FRAMEWORK > TAILWIND: INSTALLATION
 
 
     WHAT IS IT:
-        ./_about.txt
+        ./_about.md
 
 
     PRE) Assuming you are using Vite Build-tool:

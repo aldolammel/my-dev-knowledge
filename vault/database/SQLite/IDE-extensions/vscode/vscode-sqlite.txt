@@ -29,10 +29,10 @@ IDE EXTENSIONS > VSCODE > SQLITE: VSCODE-SQLITE
             Use a GUI for this. Much faster and easier to work with an app with interface than by terminal for this kind of 'puxadinho' to deal with IDE UI:
             
             # For Ubuntu:
-                /vault/os/os/linux/debian/1-apps-install/basic-apps/using-apt/db-manager-sqlite.txt
+                /vault/os/os/linux/debian/1-apps-install/basic-apps/using-apt/db-manager-sqlite.md
             
             # For Fedora:
-                /vault/os/os/linux/fedora/1-apps-install/basic-apps/using-dnf/db-manager-sqlite.txt
+                /vault/os/os/linux/fedora/1-apps-install/basic-apps/using-dnf/db-manager-sqlite.md
             
             # For others:
                 /vault/os/...

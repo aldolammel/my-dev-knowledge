@@ -4,7 +4,7 @@ DJANGO CUSTOM CMS: WAGTAIL INSTALLATION ROADMAPS
 
 
     >> What is it:
-        ./_about.txt
+        ./_about.md
 
 
     >> What kind of Wagtail installation do you need:

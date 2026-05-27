@@ -1,0 +1,42 @@
+#### OS > Linux
+# .deb files versus Snap
+
+
+    Snap Disadvantages:
+
+        - Slower startup - First launch is significantly slower due to snap confinement
+        - File system access issues - Can't easily access files outside home directory
+        - Theme integration problems - May not match your system theme perfectly
+        - Larger disk space - Each snap includes its own dependencies
+        - Updates can't be delayed - Updates automatically when available
+
+    DEB Advantages:
+
+        - Better performance - Faster startup, native integration
+        - Full system integration - Proper theme support, easier file access
+        - Smaller footprint - Shares system libraries
+        - Controllable updates - Updates when YOU run sudo apt upgrade
+        - Better for development - Easier to work with local files
+
+
+    >> That said:
+
+        IMPORTANT:
+            When you run "sudo apt install <package>", APT searches through its package index — a db of all available packages from repositories you've already added to your system. This index is created and updated when you run "sudo apt update".
+
+
+        >> Prepare the system & install the basic apps:
+            ./0-preparing-the-system.md
+
+
+        >> Install other apps:
+            ./1-installing-apps.md
+
+
+        >> To see current repositories stored:
+            ./checking-app-is-in-repo-list.md
+
+---
+
+XXXXXXXXXXXXXXXXXXX:
+/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

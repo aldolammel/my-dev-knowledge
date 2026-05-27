@@ -36,7 +36,7 @@ DJANGO: WHAT IS IT?
 
 >> NEED SOMETHING SIMPLE AND/OR MODULAR WITHOUT SO MUCH BUILT-IN STUFF:
         >> Flask:
-            .../Web-development/flask/_about.txt
+            .../Web-development/flask/_about.md
         >> FastAPI:
             .../xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

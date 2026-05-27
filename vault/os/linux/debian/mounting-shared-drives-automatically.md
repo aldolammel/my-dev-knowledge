@@ -1,0 +1,80 @@
+#### OS > Linux > Debian
+
+# Mounting shared drives automatically
+
+    After this config, your shared SSD should be automatically available for Ubuntu to be read and written without any manual permission or manual access first.
+
+
+    1. Find your SSD's UUID:
+        $ sudo blkid
+
+
+        E.g. what to extract from there:
+
+            Device: /dev/sdb3
+            Label: Ubuntu SSD
+            UUID: 6A1A27711A273989
+            Type: ntfs
+
+
+    2. Create a mount point:
+        $ sudo mkdir -p /media/shared-ssd
+
+    3. Backup your fstab file:
+        $ sudo cp /etc/fstab /etc/fstab.backup
+
+
+    4. Check your current user ID:
+        $ id
+
+    5. Edit the fstab file:
+        $ sudo nano /etc/fstab
+
+    6. Add this line at the end of the file, and, after that, return to terminal:
+
+        # Shared SSD for dual-boot files
+        UUID=6A1A27711A273989 /media/shared-ssd ntfs-3g rw,uid=1000,gid=1000,umask=000,nofail,x-gvfs-show 0 0
+
+
+        >> Explanation of the options:
+
+            UUID=6A1A27711A273989:         Your drive's unique identifier
+            /media/shared-ssd:             Mount point we created
+            ntfs-3g:                       Driver for NTFS filesystems
+            rw:                            explicitly enables read and write.
+            uid=1000,gid=1000:             Sets ownership to you (first user created's usually 1000)
+            umask=000:                     full read/write/execute to everyone
+            nofail:                        Prevents boot errors if drive isn't available
+            x-gvfs-show:                   Makes it visible in file manager
+
+
+    7. Refresh the fstab loaded by its new version:
+        $ sudo systemctl daemon-reload
+
+    8. Test the configuration:
+        $ sudo mount -a
+        $ ls -la /media/shared-ssd
+
+    9. Set proper permissions (if needed):
+        $ sudo chown -R $USER:$USER /media/shared-ssd
+
+    10. (If you cannot write files in the drive)
+        Probably it's because you are in dual-boot with Windows and it left the NTFS partition in a "dirty" or hibernated state. Solution:
+
+            1. Log in your Windows;
+
+            2. Disable Fast Startup:
+                Control Panel → Power Options → Choose what power buttons do → Disable "Turn on fast startup"
+
+            3. Open the Terminal/CMD but run it as ADMINISTRATOR:
+                $ chkdsk /f <ISSUED_DRIVE_LETTER>:
+                    E.g.
+                        $ chkdsk /f U:
+
+                    # If OS ask you to unmount the drive, do it!
+
+            4. (ATTENTION: IT WILL TURN THE PC OFF)
+                Fully shut down Windows (NOT restart). So then after that return to Ubuntu, manually:
+                    $ shutdown /s /f /t 0
+
+    11. Once on Ubuntu again, test the read and write in the target drive!

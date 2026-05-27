@@ -4,7 +4,7 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
 
 
     >> WHAT IS IT:
-        ./_about.txt
+        ./_about.md
 
 
     1) INSTALLING:

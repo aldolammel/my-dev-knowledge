@@ -4,7 +4,7 @@ NODE.JS: INSTALLATION
 
 
     PRE) What is it:
-        ./_about.txt
+        ./_about.md
 
 
     1) Installing Node:

@@ -16,20 +16,20 @@ OS > FEDORA: RIGHT AFTER INSTALLATION
     3) First Fedora system log-in:
     
         3.1) Preparing the system:
-            .../fedora/1-apps-install/0-preparing-the-system.txt
+            .../fedora/1-apps-install/0-preparing-the-system.md
 
         3.2) Display and sound configs;
 
         3.3) Install your default browser: (PROBABLY NOT NEEDED ONCE IT IS DEFAULT ON FEDORA)
-            .../fedora/1-apps-install/basic-apps/using-apt/browser-firefox.txt
+            .../fedora/1-apps-install/basic-apps/using-apt/browser-firefox.md
 
         3.4) (If applicable) GOOD FOR FEDORA TOO???????????????????????
             Install the new Ubuntu Terminal:
-                .../fedora/1-apps-install/basic-apps/using-flatpak/terminal-ptyxis.txt
+                .../fedora/1-apps-install/basic-apps/using-flatpak/terminal-ptyxis.md
 
 
     4) Making Fedora mount shared SSDs automatically: ???????????????????????????????
-        .../fedora/mounting-shared-drives-automatically.txt
+        .../fedora/mounting-shared-drives-automatically.md
 
     
     6) Check if IPv6 is working properly:
@@ -52,4 +52,4 @@ OS > FEDORA: RIGHT AFTER INSTALLATION
 
 
 UBUNTU PREPARATION:
-    ./_roadmap.txt
+    ./_roadmap.md

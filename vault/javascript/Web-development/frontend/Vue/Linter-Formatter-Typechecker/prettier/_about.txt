@@ -9,7 +9,7 @@ PRETTIER FOR VUE:
 
 
     About:
-        /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.txt
+        /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.md
 
     
     Installation & Integration:

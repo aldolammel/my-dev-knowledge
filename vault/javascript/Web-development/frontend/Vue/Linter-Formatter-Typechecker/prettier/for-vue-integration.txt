@@ -5,7 +5,7 @@ PRETTIER: VUE INTEGRATION
 
 
     WHAT IS PRETTIER:
-        ./_about.txt
+        ./_about.md
 
 
     >> Using VSCode as IDE:

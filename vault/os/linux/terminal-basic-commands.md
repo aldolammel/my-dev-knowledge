@@ -1,0 +1,59 @@
+#### OS > Linux
+# Terminal basic commands
+
+LINUX: TERMINAL BASIC COMMANDS
+
+
+    List the directories:
+        $ ls
+        $ ls -a     # shows the hidden files and folders too.
+    
+    Check the current path:
+        $ pwd
+    
+    Create a folder:
+        $ mkdir <folder name>
+
+    Create a file:
+        $ nano <filename.extension>
+
+    Rename a folder:
+        $ mv <current> <new>
+
+    Delete a file:
+        $ rm <filename.extension>
+
+    Delete a folder:
+        # Check if you can see the folder in the list:
+            $ ls
+        # or hidden files:
+            $ ls -a
+
+        # If so, delete the folder:
+            $ rm -r <folder_name>
+
+    Move a folder/file:
+        # if the directory doesn't exist, create it as instructed above.
+        # move the file/folder:
+        $ mv <folder_name_or_file_name_with_extension> <directory_destination>
+
+    Get in a folder:
+        $ cd <folder name>
+
+    Step back from the current folder:
+        $ cd ..              <-- notice there's space in between.
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+    MORE:
+
+        >> Finding apps in the system:
+
+            # Debian:
+                ./debian/1-apps-install/finding-installed-apps.md
+            # Fedora:
+                ./fedora/1-apps-install/finding-installed-apps.md

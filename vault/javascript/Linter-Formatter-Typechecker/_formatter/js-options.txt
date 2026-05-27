@@ -9,7 +9,7 @@ FORMATTER FOR JAVASCRIPT: OPTIONS
 
         >> Prettier:
             (also formatter to Vue, JS, CSS/SCSS/LESS, HTML, JSON):
-            /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.txt
+            /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.md
 
         >> xxxxx:
             /xxxxx

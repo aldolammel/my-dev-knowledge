@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a1d4db615a572ccb",
+        "id": "82c44c9cfe18d695",
         "type": "tabs",
         "children": [
           {
-            "id": "fc0f60bf5f7f6797",
+            "id": "1ce98760c01e8710",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/package-manager/uv/upgrade-uv.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "upgrade-uv"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python/package-manager/uv/upgrade-uv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for upgrade-uv"
+              "title": "Backlinks"
             }
           },
           {
@@ -181,35 +176,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "fc0f60bf5f7f6797",
+  "active": "711eaa44df1bb64c",
   "lastOpenFiles": [
-    "python/package-manager/uv/upgrade-dependencies.md",
-    "python/package-manager/uv/uninstall-python-old-version.md",
-    "python/package-manager/uv/uninstall-dependency.md",
-    "python/package-manager/uv/pin-python-version.md",
-    "python/package-manager/uv/install-python-with-uv.md",
-    "python/package-manager/uv/install-dependency.md",
-    "python/package-manager/uv/discovery-using-uv.md",
-    "python/Web-development/django/0-new-project/discovery-django.md",
-    "python/0-New-Project/discovery-python.md",
-    "python/package-manager/uv/creating-requirements-of-project.md",
-    "().md",
-    "vault/python/Web-development/pyproject.toml.md",
-    "vault/python/Web-development/pyproject.toml 1.md",
+    "Untitled.canvas",
+    "os/linux/terminal-basic-commands.md",
+    "os/linux/debian/server/_about.md",
+    "os/linux/debian/terminal-commands.md",
+    "os/linux/debian/mounting-shared-drives-automatically.md",
+    "os/linux/debian/environment-variables.md",
+    "os/linux/debian/command-change-user.md",
+    "os/linux/debian/2-updates/update.md",
+    "os/linux/debian/2-updates/firmwares-updates.md",
+    "os/linux/debian/2-updates/changing-LTS-version.md",
+    "os/linux/debian/0-os-install/_roadmap.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-snap/canonical-livepatch.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-snap/discord.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-snap/snap-store.md",
+    "os/linux/debian/1-apps-install/_important.md",
+    "os/linux/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md",
+    "os/linux/debian/1-apps-install/basic-apps/_ai-prompt.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-flatpak/terminal-ptyxis.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/xxxxx-xxxxxxxxxx.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/torrent-qbittorrent.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/screenshot-flameshot.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/git.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/ftp-filezilla.md",
+    "os/linux/debian/1-apps-install/basic-apps/using-apt/db-manager-sqlite.md",
+    "Untitled.base",
+    "os/linux/terminal-basic-commands.txt",
     "vault/python/Web-development",
     "vault/python",
     "vault",
-    "python/package-manager/uv/create-or-find-current-venv.md",
-    "python/package-manager/uv/converting-non-uv-project-in-one.md",
-    "python/package-manager/uv/auto-installation-with-sync.md",
-    "python/package-manager/uv/_about-install-and-update.md",
     "web-scraping/with-python.txt",
     "web-scraping",
     "Web-Scraping/with-python.txt",
     "Web-Scraping",
     "web-development/frontend/forms/with-WTForms/9-flask-wtforms/static/css/styles.css",
-    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/index.html",
-    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/cafes.html",
     "web-development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
     "Web-Development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
     "interview-challenges/web-development/url-shortener/9-building-shortcode-with-math.png",
@@ -219,15 +223,6 @@
     "interview-challenges/web-development/url-shortener/6-hash-calc.png",
     "interview-challenges/web-development/url-shortener/5-hash-function.png",
     "interview-challenges/web-development/url-shortener/4-db-shortcode-is-primary-key.png",
-    "interview-challenges/web-development/url-shortener/3-estimates.png",
-    "Welcome.md",
-    "python/package-manager/pip/install-dependency.md",
-    "python/package-manager/pip/creating-requirements-of-project.md",
-    "python/package-manager/pip/create-or-find-current-venv.md",
-    "python/package-manager/pip/auto-installation-from-requirements-file.md",
-    "python/package-manager/pip/_install.md",
-    "python/package-manager/pip/_about.md",
-    "python/package-manager/uv/upgrade-uv.md",
-    "[install-python-with-uv].md"
+    "interview-challenges/web-development/url-shortener/3-estimates.png"
   ]
 }

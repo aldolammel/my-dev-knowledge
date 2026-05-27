@@ -1,0 +1,38 @@
+#### OS > Linux > Debian > apt
+
+# Coding tool > VSCode
+
+    PRE.1) Assuming you already prepared the system:
+        .../1-apps-install/0-preparing-the-system.md
+
+    PRE.2) You must be logged in GitHub.com!
+
+    PRE.3) Git must be installed AND integrated:
+        ./git.md
+
+    PRE.4) Remove Snap version if present:
+        $ sudo snap remove code 2>/dev/null
+
+    PRE.5) Remove Flatpak version if present:
+        $ flatpak uninstall com.visualstudio.code 2>/dev/null
+
+    PRE.6) # Remove any manually installed .deb version:
+        $ sudo apt remove code 2>/dev/null
+        $ sudo apt purge code 2>/dev/null
+
+    1) Import Microsoft's GPG key:
+        This key verifies that the packages you download are authentic and from Microsoft!
+
+        $ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/packages.microsoft.gpg
+
+        $ sudo chmod 644 /usr/share/keyrings/packages.microsoft.gpg
+
+    2) Add the VS Code repository:
+
+        $ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+
+
+    3) Install VS Code:
+
+        $ sudo apt update
+        $ sudo apt install -y code

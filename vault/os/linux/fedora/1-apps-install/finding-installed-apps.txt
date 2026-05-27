@@ -27,4 +27,4 @@ FEDORA: FINDING INSTALLED APPS
 
 
 CHECK CURRENT REPO LIST:
-    ./checking-app-is-in-repo-list.txt
+    ./checking-app-is-in-repo-list.md

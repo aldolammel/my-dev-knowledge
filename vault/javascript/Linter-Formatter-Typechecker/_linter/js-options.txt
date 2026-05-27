@@ -8,7 +8,7 @@ LINTER FOR JAVASCRIPT: OPTIONS
     >> Options:
 
         >> ESLint:
-            /vault/javascript/Linter-Formatter-Typechecker/eslint/_about.txt
+            /vault/javascript/Linter-Formatter-Typechecker/eslint/_about.md
 
         >> xxxxx:
             /xxxxx

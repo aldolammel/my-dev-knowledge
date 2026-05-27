@@ -12,7 +12,7 @@ OS > WINDOWS: INSTALLATION ROADMAP
 
 
     2) Right after to install:
-        ./right-after-install.txt
+        ./right-after-install.md
 
 
 

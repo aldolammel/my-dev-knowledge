@@ -1,6 +1,5 @@
-
-
-PIP (PYTHON BUILT-IN MODULE): INSTALLING
+#### Python > Package Manager > PIP
+# Installing PIP
 
 
     Windows:

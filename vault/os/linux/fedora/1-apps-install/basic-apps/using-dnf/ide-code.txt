@@ -4,12 +4,12 @@ CODING TOOL: VS CODE
 
 
     PRE.1) Assuming you already prepared the system:
-        .../1-apps-install/0-preparing-the-system.txt
+        .../1-apps-install/0-preparing-the-system.md
 
     PRE.2) You must be logged in GitHub.com!
 
     PRE.3) Git must be installed AND integrated:
-        ./git.txt
+        ./git.md
 
     PRE.4) Remove Snap version if present:
         $ sudo snap remove code 2>/dev/null

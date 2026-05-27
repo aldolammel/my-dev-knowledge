@@ -12,7 +12,7 @@ VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
         /vault/javascript/Linter-Formatter-Typechecker/eslint.txt
 
     PRE.4) Your Vue project is a SPA one!
-        ./_about.txt
+        ./_about.md
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

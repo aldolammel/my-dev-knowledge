@@ -14,7 +14,7 @@ x) Check if all basic motherboard settings is ok for your system:
 4) First Windows system log-in:
 
     4.1) Preparing the system:
-        .../xxxxxxxx/1-apps-install/0-preparing-the-system.txt
+        .../xxxxxxxx/1-apps-install/0-preparing-the-system.md
 
     4.2) Display and sound configs;
 

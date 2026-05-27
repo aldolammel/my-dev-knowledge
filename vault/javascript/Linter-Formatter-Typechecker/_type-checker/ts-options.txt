@@ -12,7 +12,7 @@ TYPE-CHECKER FOR TYPESCRIPT: OPTIONS
     >> Options:
 
         >> Flow (by Facebook)
-            /vault/javascript/Linter-Formatter-Typechecker/flow/_about.txt
+            /vault/javascript/Linter-Formatter-Typechecker/flow/_about.md
 
         >> xxxx
 

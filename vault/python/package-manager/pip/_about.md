@@ -1,4 +1,6 @@
-PYTHON PACKAGE MANAGEMENT: PIP (PYTHON BUILT-IN MODULE)
+#### Python > Package Manager
+# PIP (Python built-in package manager)
+
 
     ATTENTION:
         Uv is much more efficient and modern than pip:

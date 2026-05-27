@@ -8,7 +8,7 @@ LINTER FOR VUE: OPTIONS
     >> Options:
 
         >> ESLint Vue plugin:
-            .../Linter-Formatter-Typechecker/eslint-plugin-vue/_about.txt
+            .../Linter-Formatter-Typechecker/eslint-plugin-vue/_about.md
 
         >> xxxxx:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

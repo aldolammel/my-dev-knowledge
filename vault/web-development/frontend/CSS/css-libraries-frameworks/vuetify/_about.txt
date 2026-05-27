@@ -16,7 +16,7 @@ CSS FRAMEWORK: VUETIFY
 
 
 ABOUT VUE.JS:
-    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/_about.txt
+    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/_about.md
 
 
 DIFFERENCES BETWEEN CSS FRAMEWORKS:
