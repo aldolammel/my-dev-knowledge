@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/package-manager/uv/auto-installation-with-sync.md",
+                "file": "python/package-manager/uv/_about-install-and-update.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "auto-installation-with-sync"
+              "title": "_about-install-and-update"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python/package-manager/uv/auto-installation-with-sync.md",
+                "file": "python/package-manager/uv/_about-install-and-update.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for auto-installation-with-sync"
+              "title": "Backlinks for _about-install-and-update"
             }
           },
           {
@@ -167,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,6 +183,7 @@
   },
   "active": "1f27abc372d26072",
   "lastOpenFiles": [
+    "python/package-manager/uv/auto-installation-with-sync.md",
     "web-scraping/with-python.txt",
     "web-scraping",
     "Web-Scraping/with-python.txt",
@@ -192,7 +194,6 @@
     "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/base.html",
     "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/add.html",
     "web-development/frontend/forms/with-WTForms/9-flask-wtforms/static/css",
-    "web-development/frontend/CSS/css-libraries-frameworks/bulma/version-no-install/first-steps.txt",
     "web-development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
     "Web-Development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
     "interview-challenges/web-development/url-shortener/9-building-shortcode-with-math.png",
@@ -204,7 +205,6 @@
     "interview-challenges/web-development/url-shortener/4-db-shortcode-is-primary-key.png",
     "interview-challenges/web-development/url-shortener/3-estimates.png",
     "Welcome.md",
-    "python/package-manager/uv/auto-installation-with-sync.md",
     "python/package-manager/pip/install-dependency.md",
     "python/package-manager/pip/creating-requirements-of-project.md",
     "python/package-manager/pip/create-or-find-current-venv.md",
