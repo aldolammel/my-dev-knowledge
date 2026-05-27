@@ -45,6 +45,7 @@ uv --version
 ```
 
 **1.4) (If applicable) Do you need to update it?** 
+
 [[upgrade-uv]]
 
 ---
