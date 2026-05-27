@@ -1,0 +1,20 @@
+
+
+HOW TO USE API WITH VUE:
+
+    PRE) What is API:
+        /vault/dev-concepts/api.txt
+
+
+    >> Using the JavaScript native solution 'Fetch API':
+
+        .../Vue/3-component-libraries/api/fetch-api.txt
+
+    
+    >> Use the Vue-Axios:
+
+        .../Vue/3-component-libraries/api/axios.txt
+
+
+    >> More about API:
+        /vault/api/

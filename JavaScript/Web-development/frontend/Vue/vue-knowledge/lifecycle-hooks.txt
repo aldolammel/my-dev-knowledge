@@ -1,5 +1,0 @@
-
-
-JAVASCRIPT: LIFECYCLE HOOKS
-
-    /JavaScript/lifecycle-hooks.js

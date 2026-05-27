@@ -1,3 +1,0 @@
-
-
-/Python/IDE-softwares/vscode/examples/.vscode/

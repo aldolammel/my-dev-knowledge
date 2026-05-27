@@ -1,7 +1,0 @@
-
-
-SAVING DATA: localStorage VS cookies VS sessionStorage
-
-    /JavaScript/localStorage.js
-    /JavaScript/cookies.js
-    /JavaScript/sessionStorage.js

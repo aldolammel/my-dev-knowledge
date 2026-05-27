@@ -1,0 +1,43 @@
+
+
+VUE: WITH DJANGO BACK-END
+
+
+    CRITICAL:
+        Don't install Vue in Django's templates folder! It would create process rendering conflicts.
+
+    
+    PRE) Define which type of Vue project you wanna create:
+
+            >> Single-Page-Application (SPA) or Multi-Page-Application (MPA):
+                .../Vue/vue-knowledge/SPA-vs-MPA.txt 
+                
+    
+    1) Before to install Vue, check the options for your project folder's structure:
+
+        1A) For Multi-Page-App (MPA) projects;
+        1B) For Single-Page-App (SPA) projects;
+
+        - - - - -
+
+        1A) Recommendation for MPA project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            my_project/         # /vault/python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
+
+            >> Vue project folder (e.g. "frontend") must be created in the root of Django project
+                folder (e.g. "my_project").
+
+        
+        1B) Recommendation for SPA project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            my_project/         # /vault/python/Web-development/django/django-project-folder-structure.txt
+            └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
+
+            >> Vue project folder (e.g. "frontend") must be created in the root of Django project
+                folder (e.g. "my_project").
+
+        - - - - -
+
+
+    2) Once you have decided with structure to follow, return to the main guide for Vue installation you are following!

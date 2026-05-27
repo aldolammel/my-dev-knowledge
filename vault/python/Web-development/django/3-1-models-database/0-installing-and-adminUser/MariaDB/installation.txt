@@ -1,0 +1,36 @@
+
+DATABASE ON DJANGO: MARIADB
+
+    1) xxxxxxxxxx
+
+
+    2) xxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    6) <check the last steps of postgres checkist to migrate those steps here maybe!!!>
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /vault/ide/vscode/
+
+    >> PyCharm:
+        /vault/ide/pycharm/

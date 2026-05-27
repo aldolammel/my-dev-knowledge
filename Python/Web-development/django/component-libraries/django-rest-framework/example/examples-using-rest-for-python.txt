@@ -1,4 +1,0 @@
-
-
-REST: USING IT FOR PYTHON
-    /Python/python-knowledge/30-API/with-REST/

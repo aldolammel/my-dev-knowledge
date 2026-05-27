@@ -1,0 +1,9 @@
+
+
+LOOPS:
+
+    >> For:
+        /vault/python/python-knowledge/for.py
+
+    >> While:
+        /vault/python/python-knowledge/while.py

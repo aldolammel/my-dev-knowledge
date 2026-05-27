@@ -1,0 +1,17 @@
+
+
+TYPE-CHECKER FOR PYTHON: OPTIONS
+
+    >> What is it:
+        /vault/dev-concepts/tool-typechecker.txt
+
+    >> Options:
+
+        >> MyPy:
+            /vault/python/Linter-Formatter-Typechecker/MyPy/_about.txt
+
+        >> PyRight:
+            /vault/python/Linter-Formatter-Typechecker/PyRight/_about.txt
+
+        >> Pyre:
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -1,0 +1,3 @@
+
+
+/vault/database/SQLite/IDE-extensions/vscode/vscode-sqlite.txt

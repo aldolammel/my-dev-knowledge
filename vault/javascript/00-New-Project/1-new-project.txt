@@ -1,0 +1,51 @@
+
+
+INSTALLATION ROADMAP BY PROJECT TYPE:
+
+
+    >> UPDATE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> Update JS version in an existent product: /xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+        >> Update Vue version in an existent product: /vault/javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.txt
+
+        >> Update XXxxxX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+    >> DATABASE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> What db should be used:
+            /vault/database/00-new-project/
+
+
+    >> JS > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        >> with Vue:
+
+            >> Vue as Front-end: /vault/javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.txt
+
+            >> Vue as Fullstack: /vault/javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.txt
+
+            >> Back-end <SOME_JS_FRAMEWORK> + Front-end Vue.js: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+            >> Back-end <ANOTHER_JS_FRAMEWORK> + Front-end Vue: /xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        >> with Xxxxx:
+
+            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
+
+            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
+
+            >> xxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt  
+        
+
+    >> JS > SOFTWARE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+        >> with Xxxxx:
+
+            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
+            
+        >> with Xxxxx:
+
+            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt

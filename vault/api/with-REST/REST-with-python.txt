@@ -1,0 +1,12 @@
+
+
+API WITH REST:
+
+    What is it:
+        /vault/dev-concepts/principles-REST.txt
+
+    REST in Python:
+        /python/30-API/with-REST/
+
+    REST in Python + Django:
+        /vault/python/Web-development/django/component-libraries/django-rest-framework/

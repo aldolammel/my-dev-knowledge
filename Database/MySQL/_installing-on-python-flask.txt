@@ -1,3 +1,0 @@
-
-
-/Python/Web-development/flask/database-with-flask/MySQL/installation.txt

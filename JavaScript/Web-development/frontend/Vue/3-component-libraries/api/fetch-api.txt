@@ -1,5 +1,0 @@
-
-
-API SOLUTION: FETCH API (JS native solution)
-    
-    /JavaScript/api.txt

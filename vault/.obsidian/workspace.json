@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7f786bd932bb5a95",
+        "id": "88e9c5ef43f16634",
         "type": "tabs",
         "children": [
           {
-            "id": "b72cc0aeb4b5b742",
+            "id": "1f27abc372d26072",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/package-manager/uv/auto-installation-with-sync.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "auto-installation-with-sync"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "python/package-manager/uv/auto-installation-with-sync.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for auto-installation-with-sync"
             }
           },
           {
@@ -162,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,19 +180,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "b72cc0aeb4b5b742",
+  "active": "1f27abc372d26072",
   "lastOpenFiles": [
+    "web-scraping/with-python.txt",
+    "web-scraping",
+    "Web-Scraping/with-python.txt",
+    "Web-Scraping",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/static/css/styles.css",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/index.html",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/cafes.html",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/base.html",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/templates/add.html",
+    "web-development/frontend/forms/with-WTForms/9-flask-wtforms/static/css",
+    "web-development/frontend/CSS/css-libraries-frameworks/bulma/version-no-install/first-steps.txt",
+    "web-development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
+    "Web-Development/frontend/CSS/css-libraries-frameworks/differences-between-frameworks.png",
+    "interview-challenges/web-development/url-shortener/9-building-shortcode-with-math.png",
+    "interview-challenges/web-development/url-shortener/8-the-real-solution.png",
+    "interview-challenges/web-development/url-shortener/7-hash-colision-issue.png",
+    "interview-challenges/web-development/url-shortener/7-doesnt-work-for-that-requirements.png",
+    "interview-challenges/web-development/url-shortener/6-hash-calc.png",
+    "interview-challenges/web-development/url-shortener/5-hash-function.png",
+    "interview-challenges/web-development/url-shortener/4-db-shortcode-is-primary-key.png",
+    "interview-challenges/web-development/url-shortener/3-estimates.png",
     "Welcome.md",
+    "python/package-manager/uv/auto-installation-with-sync.md",
+    "python/package-manager/pip/install-dependency.md",
+    "python/package-manager/pip/creating-requirements-of-project.md",
+    "python/package-manager/pip/create-or-find-current-venv.md",
+    "python/package-manager/pip/auto-installation-from-requirements-file.md",
+    "python/package-manager/pip/_install.md",
+    "python/package-manager/pip/_about.md",
+    "python/package-manager/uv/_about-install-and-update.md",
+    "python/package-manager/uv/upgrade-uv.md",
+    "python/package-manager/uv/upgrade-dependencies.md",
+    "python/package-manager/uv/uninstall-python-old-version.md",
+    "python/package-manager/uv/uninstall-dependency.md",
+    "python/package-manager/uv/pin-python-version.md",
+    "python/package-manager/uv/install-python-with-uv.md",
+    "python/package-manager/uv/install-dependency.md",
+    "python/package-manager/uv/discovery-using-uv.md",
+    "python/package-manager/uv/creating-requirements-of-project.md",
+    "python/package-manager/uv/create-or-find-current-venv.md",
+    "python/package-manager/uv/converting-non-uv-project-in-one.md",
+    "[install-python-with-uv].md",
+    "[[install-python-with-uv]].md",
     "linux/building-a-server/1-step.md",
     "linux/building-a-server/2-step.md",
-    "linux/building-a-server/3-step.md",
-    "linux/building-a-server/4-step.md",
-    "linux/building-a-server/5-step.md",
-    "linux/updating-web-application-via-git.md",
-    "linux/building-a-server/_reinstalling-a-server.md",
-    "linux/updating-server.md",
-    "linux/_linux-knowledge.md",
-    "linux/_building-and-installing-a-server.md",
-    "README.md"
+    "linux/building-a-server/3-step.md"
   ]
 }

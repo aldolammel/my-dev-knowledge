@@ -1,5 +1,0 @@
-
-
-API: WITH JAVASCRIPT
-
-    /JavaScript/api.txt

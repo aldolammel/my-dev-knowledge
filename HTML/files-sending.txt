@@ -1,5 +1,0 @@
-
-
-HTML: SENDING FILES
-
-    /HTML/form/files-upload.txt

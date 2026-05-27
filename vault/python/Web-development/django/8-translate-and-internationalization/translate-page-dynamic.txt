@@ -1,0 +1,22 @@
+
+
+    TRANSLATING: DYNAMIC PAGE
+
+        >> Using Django-Parler!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    >> Translating static pages:
+
+        /vault/python/Web-development/django/8-translate-and-internationalization/translate-page-static.txt

@@ -1,0 +1,41 @@
+{
+    /*
+        VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
+    */
+    // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // !!!!!!!!!!!!!!!!! Check: /vault/ide/vscode/examples/.vscode/settings.json
+    // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // !!!!!!!!!!!!!!!!! Check: /vault/ide/vscode/examples/.vscode/settings.json
+    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Where's Python interpreter on project:
+    // "python.defaultInterpreterPath": "..../.venv/bin/python3", // Not needed! Code finds it!
+    "python.analysis.autoImportCompletions": false, // Disable auto-import IntelliSense suggestions.
+    "python.analysis.completeFunctionParens": true, // Auto add parentheses after function.
+    "[python]": {},
+    // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Tell VSCode how to treat files based on patterns:
+    "files.associations": {
+        "*.json": "jsonc",
+    },
+    // Files/folders to hide from the VSCode explorer:
+    "files.exclude": {
+        "**/__pycache__": true,
+        //"**/*.pyc": true,
+        //"**/.pytest_cache": true,
+        //"**/venv": true,
+        //"**/.venv": true,
+        //"**/.git": true,
+        "**/.ruff_cache": true, // Ruff linter/formatter!
+    },
+    // Files/folders to hide from the VSCode searchings:
+    "search.exclude": {
+        "**/venv": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.git": true,
+        "**/.ruff_cache": true, // Ruff linter/formatter!
+    },
+    // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // Reserved space...
+}

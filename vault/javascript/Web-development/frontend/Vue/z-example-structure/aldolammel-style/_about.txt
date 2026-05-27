@@ -1,0 +1,4 @@
+
+
+VUE PROJECT FOLDER STRUCTURE:
+    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/1-vue-structure.txt

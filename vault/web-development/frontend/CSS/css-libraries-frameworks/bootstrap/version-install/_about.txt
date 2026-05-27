@@ -1,0 +1,6 @@
+
+
+BOOTSTRAP: INSTALLED VERSION
+
+    With Django:
+        /vault/python/Web-development/django/3-3-frontend-templates/template-bootstrap-installed.html

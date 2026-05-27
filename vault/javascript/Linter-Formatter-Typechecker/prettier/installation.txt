@@ -1,0 +1,53 @@
+
+
+PRETTIER FORMATTER: INTEGRATION
+
+    >> Using VSCode:
+
+        1) Install the Prettier extension for the IDE!
+
+        2) Make sure your VSCode user profile is working properly with JS 
+            (Ctrl+Shift+p > User Preferences):
+
+            // CUSTOM CODING BEHAVIORS > JAVASCRIPT:
+            "[javascript]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.tabSize": 2,
+                "editor.indentSize": "tabSize",
+                "editor.insertSpaces": true,
+                "editor.formatOnSave": true,
+            },
+
+        3) Add the next lines in the /project/.vscode/settings.json:
+
+            ATTENTION:
+                if you're integrating ESLint to the Prettier, and the ESLint is already as the JS
+                default formatter, just skip the JS settings here, leaving it to ESLint!
+
+            // PROJECT SETTINGS
+            "prettier.printWidth": 100, // Prettier
+
+            // JAVASCRIPT SETTINGS
+            "[javascript]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+            },
+
+            // JSON SETTINGS
+            "[json]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+            },
+
+            // CSS SETTINGS
+            "[css]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+            },
+
+        4) (Optional)
+            Add the Prettier config file in your frontend folder:
+                ./.prettierrc
+        
+        5) (If applicable) 
+            For Python projects, make sure the pyproject.toml has Prettier basic settings:
+                /vault/javascript/Linter-Formatter-Typechecker/prettier/pyproject.toml
+                            
+            

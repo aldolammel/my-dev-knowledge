@@ -1,0 +1,40 @@
+
+DATABASE ON FLASK: MARIADB
+
+    DISCLAIMER
+        Flask doesn't have a "default" database because it's a micro-framework that doesn't bring a built-in ORM and a pre-configured db setup like Django, for example.
+
+    1) xxxxxxxxxx
+
+
+    2) xxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    6) <check the last steps of postgres checklist to migrate those steps here maybe!!!>
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /vault/ide/vscode/
+
+    >> PyCharm:
+        /vault/ide/pycharm/

@@ -1,4 +1,0 @@
-
-
-WITH JAVASCRIPT:
-    /JavaScript/Data-Processing-and-File-Convertion/

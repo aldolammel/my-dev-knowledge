@@ -1,3 +1,0 @@
-
-FUNCTIONS VS METHODS:
-    /Dev-Concepts/oop-class-function.txt

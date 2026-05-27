@@ -1,0 +1,62 @@
+
+
+DATABASE ON DJANGO: POSTGRESQL
+
+    Summary:
+        1) Installing the db with its basic integration;
+        2) Integrating database and back-end;
+        3) Creating the database;
+
+    Let's go:
+
+    
+    1) Installing the db with its basic integration - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> If the db won't be in the cloud, install it locally:
+            /vault/database/PostgreSQL/0-basic/1-installing-and-integrating.txt
+        
+
+
+    2) Integrating database and back-end - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        2.1) Install a Python lib for PostgreSQL:
+            /vault/python/component-libraries/psycopg/0-psycopg.txt
+            
+            # Case you need a settings.py template:
+                .../django/z-project-examples/proj-aldolammel-style/core/settings.py
+        
+        2.2) (If applicable)
+            Make a copy of the '.env' file to your project root folder:
+                /vault/environment-variables/
+
+        2.3) If you see the file sqlite.db in the project root folder, delete it once you are using PostgreSQL and you have no data from this project in that SQLite.
+
+
+
+    3) Creating the db - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        ATTENTION:
+            If you are installing a new Django project, return to the previously installation roadmap because other steps are needed before to migrate command.
+        
+        Otherwise, if you have already a Django project built, in a new Terminal window, select the virtual environment again and give the order to build the database, finally:
+            
+            $ python manage.py makemigrations
+            $ python manage.py migrate
+            
+            or
+
+            $ uv run manage.py makemigrations
+            $ uv run manage.py migrate
+        
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+CHECK IDE EXTENSIONS FOR THIS DB:
+
+    >> VSCode:
+        /vault/ide/vscode/
+
+    >> PyCharm:
+        /vault/ide/pycharm/

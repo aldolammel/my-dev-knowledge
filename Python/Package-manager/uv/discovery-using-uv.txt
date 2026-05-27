@@ -1,9 +1,0 @@
-
-
-UV PACKAGE MANAGER: DOING A DISCOVERY USING UV
-
-    >> Python discovery:
-        /Python/0-New-Project/discovery-python.txt
-
-    >> Django discovery:
-        /Python/Web-development/django/0-new-project/discovery-django.txt

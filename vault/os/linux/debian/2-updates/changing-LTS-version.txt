@@ -1,0 +1,29 @@
+
+
+DEBIAN/UBUNTU: UPDATING THE OS LTS VERSION
+
+
+    PRE) Backup your important stuff!
+
+    
+    1) Tell OS to upgrade to the newest LTS:
+        
+        # Do it just if the LTS was officially released:
+            $ sudo do-release-upgrade
+            
+        # Or if the latest LTS still in the earlier days where the first hotfix wasn't release yet:
+            $ sudo do-release-upgrade -d
+
+        
+    1) Update the new system:
+        ./update.txt
+
+    
+    2) Reboot:
+        $ reboot
+        
+        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+    FOR FEDORA:
+        /vault/os/linux/fedora/2-updates/changing-LTS-version.txt

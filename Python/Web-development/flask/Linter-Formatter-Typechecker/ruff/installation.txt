@@ -1,4 +1,0 @@
-
-
-Ruff is for Python + Flask Linter and Formatter:
-    /Python/Linter-Formatter-Typechecker/ruff/

@@ -1,0 +1,72 @@
+
+
+INSTALLATION ROADMAP BY PROJECT TYPE:
+
+
+    >> UPDATE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        >> Update Python version in an existent product: 
+            ./3-update-python-version-in-a-project.txt
+
+        >> Update Django version in an existent product: 
+            /vault/python/Web-development/django/0-new-project/update-django-version.txt
+
+        >> Update XXX version in an existent product: 
+            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+    >> DATABASE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        >> What db should be used:
+            /vault/database/00-new-project/
+
+
+    >> PYTHON > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        >> Python:
+
+            >> API with a Python module:
+                ./api.txt
+        
+        >> with Django:
+
+            >> API with Django:
+                /vault/python/Web-development/django/0-new-project/api.txt
+
+            >> Django as Back and Front-end: 
+                /vault/python/Web-development/django/0-new-project/web-project-django-only.txt
+
+            >> Back-end Django + Front-end Vue.js: 
+                /vault/python/Web-development/django/0-new-project/web-project-django-with-vue.txt
+
+            >> Back-end Django + Front-end React: 
+                /vault/python/Web-development/django/0-new-project/web-project-django-with-react.txt
+
+        >> with Flask:
+
+            >> API with Flask:
+                /vault/python/Web-development/flask/0-new-project/api.txt
+
+            >> Flask as Back and Front-end:
+                /vault/python/Web-development/flask/0-new-project/web-project-flask-only.txt
+
+            >> Back-end Flask + Front-end Vue.js:
+                /vault/python/Web-development/flask/0-new-project/web-project-flask-with-vue.txt
+        
+            >> Back-end Flask + Front-end React:
+                /vault/python/Web-development/flask/0-new-project/web-project-flask-with-react.txt 
+
+
+    >> PYTHON > SOFTWARE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+        >> with XXXXXX:
+        
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
+
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
+            
+        >> with XXXXXX:
+        
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx
+
+            >> XXXXXXXxxxx: /xxxxxxxxxxxxxxxxxxxxxxxx

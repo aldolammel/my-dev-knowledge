@@ -1,0 +1,14 @@
+
+
+LINTER FOR JAVASCRIPT: OPTIONS
+
+    >> What is it:
+        /vault/dev-concepts/tool-formatter.txt
+
+    >> Options:
+
+        >> ESLint:
+            /vault/javascript/Linter-Formatter-Typechecker/eslint/_about.txt
+
+        >> xxxxx:
+            /xxxxx

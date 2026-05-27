@@ -1,0 +1,11 @@
+
+
+XXXXXXXXX
+
+    xxxxxxxx
+
+    >> ESLint Plugin Angular:
+        /vault/javascript/Web-development/frontend/Angular/Linter-Formatter-Typechecker/eslint-plugin-angular/_about.txt
+
+    >> xxxx
+        /xxxxxxx

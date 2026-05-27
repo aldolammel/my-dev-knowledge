@@ -1,0 +1,18 @@
+
+
+TYPE-CHECKER FOR VUE: OPTIONS
+
+    >> What is it:
+        /vault/dev-concepts/tool-typechecker.txt
+
+    >> Options:
+
+        >> Coding with Vanilla JS:
+            
+            >> Check the JS type-checker options:
+                /vault/javascript/Linter-Formatter-Typechecker/_type-checker/js-options.txt
+
+        >> Or coding with TypeScript:
+
+            >> Volar:
+                ./vue-volar/

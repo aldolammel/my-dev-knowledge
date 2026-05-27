@@ -1,0 +1,15 @@
+
+
+JAVASCRIPT: ENVIRONMENT VARIABLE MANAGERS
+
+    >> Options:
+
+        >> Dotenv:
+            /vault/javascript/Env-Var-Managers/dotenv/_about.txt
+
+        >> xxxx
+            /xxxxxx
+
+        >> xxxx
+            /xxxxxx
+

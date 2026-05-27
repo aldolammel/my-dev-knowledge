@@ -1,5 +1,0 @@
-
-
-JSON WITH PYTHON:
-    /Python/python-knowledge/23-JSON/1-json-basic/
-    /Python/python-knowledge/23-JSON/2-json-from-db/

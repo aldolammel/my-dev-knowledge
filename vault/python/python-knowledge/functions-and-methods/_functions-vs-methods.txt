@@ -1,0 +1,3 @@
+
+FUNCTIONS VS METHODS:
+    /vault/dev-concepts/oop-class-function.txt

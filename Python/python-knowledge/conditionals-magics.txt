@@ -1,8 +1,0 @@
-
-
-CONDITIONAL MAGICS BY PYTHON:
-
-
-    >> List Comprehension:
-        /Python/python-knowledge/list-comprehension.py
-        

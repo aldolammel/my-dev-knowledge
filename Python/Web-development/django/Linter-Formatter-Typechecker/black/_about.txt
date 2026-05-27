@@ -1,4 +1,0 @@
-
-
-Black is for Python + Django formatter:
-    /Python/Linter-Formatter-Typechecker/black.txt
