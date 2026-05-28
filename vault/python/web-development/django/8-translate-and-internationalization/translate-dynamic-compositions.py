@@ -10,7 +10,7 @@
 """
 
 # E.g. in /config-folder/consts.py:
-# More about: /vault/python/web-development/django/3-1-models-database/_constants-map.txt
+# More about: /vault/python/web-development/django/3-1-models-database/_constants-map.md
 VAL_PROFILE_NAME_MAXLNGH = 20
 
 

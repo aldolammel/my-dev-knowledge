@@ -1,65 +1,59 @@
-
-
 PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END VUE:
 
+1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        
-    >> Database:
+    > > Database:
 
-        1.1) What db should be used:
-            /vault/database/00-new-project/
+         1.1) What db should be used:
+             /vault/database/00-new-project/
 
-    >> Back-end:
+    > > Back-end:
 
-        1.2) Basic installations:
-            .../django/1-install-and-first-steps/0-django-installation-and-setup.txt
+         1.2) Basic installations:
+             .../django/1-install-and-first-steps/0-django-installation-and-setup.md
 
-    >> Front-end:
+    > > Front-end:
 
-        1.3) IDE, framework setup:
-            
-            >> VSCode:
-                /vault/javascript/web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
-            
-            >> Or PyCharm:
-                /vault/javascript/web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
+         1.3) IDE, framework setup:
 
-        1.4) Vue installation (and its dependencies):
-            /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+             >> VSCode:
+                 /vault/javascript/web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
 
-        1.5) (Optional)
-            CSS Framework:
+             >> Or PyCharm:
+                 /vault/javascript/web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
-            >> Vuetify:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/vuetify/
+         1.4) Vue installation (and its dependencies):
+             /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
 
-            >> Bootstrap:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+         1.5) (Optional)
+             CSS Framework:
 
-            >> Tailwind:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+             >> Vuetify:
+                 /vault/web-development/frontend/CSS/css-libraries-frameworks/vuetify/
 
-            >> Bulma:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
+             >> Bootstrap:
+                 /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
+             >> Tailwind:
+                 /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
 
-2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             >> Bulma:
+                 /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
 
-    0) Create the AI context prompt for the project:
-        .../web-development/ai-prompt-context-model.txt
-        
+2.  DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    0. Create the AI context prompt for the project:
+       .../web-development/ai-prompt-context-model.txt
+
     2.1) Front-end:
 
-        >> Convert the HTML template to Vue templates/components;
-        
-        >> Code the entire navigation;
+         >> Convert the HTML template to Vue templates/components;
 
-        >> Integrate back-end with front-end:
-            .../django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
-        
-    2.2) Back-end:
-        >> Build up the database of the product;
-        >> xxxxxxxxxxxxxxxxx
+         >> Code the entire navigation;
+
+         >> Integrate back-end with front-end:
+             .../django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
+
+
+    2.2) Back-end: >> Build up the database of the product; >> xxxxxxxxxxxxxxxxx
 
     2.3) Final touches between Back and Front-end!
