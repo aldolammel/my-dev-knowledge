@@ -18,7 +18,7 @@
 
 ## 2) Right after to install:
 
-[[right-after-install]]
+[[os/linux/distros/debian/0-os-install/right-after-install]]
 
 ---
 

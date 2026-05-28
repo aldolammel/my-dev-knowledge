@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7107e06770d7b878",
+        "id": "628ea232750b3994",
         "type": "tabs",
         "children": [
           {
-            "id": "978e32c5ba8f4bb0",
+            "id": "c1068331c808c001",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/web-development/django/0-new-project/web-project-django-with-react.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "web-project-django-with-react"
+              "title": "New tab"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "convensions",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,34 +176,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "978e32c5ba8f4bb0",
+  "active": "c1068331c808c001",
   "lastOpenFiles": [
-    "javascript/Web-development/ai-prompt-context-model.md",
-    "javascript/Web-development/frontend/z-examples/form-label-clickable/label-clickable.md",
-    "javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/_about.md",
-    "javascript/Web-development/frontend/Vue/z-example-structure/project-examples.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/provide-inject-example-basic/_temp.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/menu-dynamic/here.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/component-creation/readme.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/api-with-vue/_about.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/forms/progress-bars.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/forms/label-clickable.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/forms/form-quiz.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/forms/disabled-button.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/forms/bt-submit.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/watch.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/removing-list-item.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/props-example.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/adding-list-item.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/menu-dynamic/_creating-menu-system.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/component-creation/readme.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/api-with-vue/_about.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/forms/progress-bars.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/forms/label-clickable.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/forms/form-quiz.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/forms/disabled-button.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/forms/bt-submit.md",
+    "python/0-new-project/3-update-python-version-in-a-project.md",
+    "python/0-new-project/api.md",
+    "python/0-new-project/1-new-project.md",
+    "python/0-new-project/2-web-project-flask.md",
+    "python/0-new-project/3-update-flask-version-in-a-project.md",
+    "python/0-new-project/3-update-django-version-in-a-project.md",
+    "python/0-new-project/2-web-project-flask-with-vue.md",
+    "python/0-new-project/2-web-project-flask-with-react.md",
+    "python/0-new-project/2-web-project-django-with-vue.md",
+    "python/0-new-project/2-web-project-django-with-react.md",
+    "python/0-new-project/2-web-project-django.md",
+    "python/0-new-project/discovery-python.md",
+    "python/web-development/django/0-new-project/api.md",
+    "python/web-development/flask/0-new-project/update-flask-version.md",
+    "python/web-development/django/0-new-project/update-django-version.md",
+    "javascript/_about.md",
+    "python/_about.md",
+    "python/python-knowledge/variables.md.md",
+    "python/python-knowledge/_conventions-py.md.md",
+    "javascript/js-knowledge/_conventions-js.md",
+    "database/MySQL/naming-convensions.md",
+    "os/linux/command-change-user.md",
+    "_summary.md",
+    "os/linux/terminal-basic-commands.md",
+    "os/linux/distros/debian/terminal-commands.md",
+    "os/linux/distros/fedora/terminal-commands.md",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
     "os/linux/0-os-install",

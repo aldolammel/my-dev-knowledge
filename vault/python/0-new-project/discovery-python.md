@@ -1,4 +1,5 @@
-PYTHON: DISCOVERY
+#### Python > Project types
+# Discovery
 
     Group of action to figure out a Python project settings and features:
 

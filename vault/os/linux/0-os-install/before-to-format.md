@@ -4,13 +4,15 @@
 
 ---
 
-## 1) Backup all non-clouded-files.
+## 1) Backup all non-clouded-files:
 
-1.1) For workstation, save the .env files for each project once they're not on versioning.
+**1.1) Your development projects:**
+
+Save .env files for every local projects you are developing once they shouldn't be available in the project's repository.
 
 ---
 
-## 2) Download distro .iso file.
+## 2) Download distro .iso file:
 
 **Make a choice:**
 - Debian: https://debian.org
@@ -24,11 +26,12 @@
 ==Crucial!==
 Don't use an external HD, except if you can use it entirely, without to use multiple partitions.
 
-**3.1) Format the device where you will set the .iso (format to Ext4 format);**
+**3.1) Format the USB drive:**
+- Format the device where you will mount the .iso (format to Ext4 format).
 
-**3.2) Check if your Ubuntu already brings the "Startup Disk Creator" and open it. If not, install it:**
-
-[[systemtool-startup-disk-creator]]
+**3.2) Startup disk creation:**
+- Check if your current Linux distro already brings some kind of app for startup disks creation.
+	- Debian and Ubuntu built-in solution: [[os/linux/distros/debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator]]
 
 **3.3) Select the .iso file and what storage device the creator should mount the selected file.**
 
@@ -36,12 +39,13 @@ Don't use an external HD, except if you can use it entirely, without to use mult
 
 ## 4) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
 
-/vault/bios/secure-boot.txt
+[[bios/secure-boot]]
 
 ---
 
 ## 5) Let's format the system:
 
-[[distro-formatting]]
+[[os/linux/0-os-install/distro-formatting]]
+
 
 ---

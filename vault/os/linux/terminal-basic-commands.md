@@ -1,59 +1,106 @@
 #### OS > Linux
 # Terminal basic commands
 
-LINUX: TERMINAL BASIC COMMANDS
 
+---
 
-    List the directories:
-        $ ls
-        $ ls -a     # shows the hidden files and folders too.
-    
-    Check the current path:
-        $ pwd
-    
-    Create a folder:
-        $ mkdir <folder name>
+## List directories:
+```
+ls
+```
+ Or to show **hidden** files and folders:
+```
+ ls -a
+```
 
-    Create a file:
-        $ nano <filename.extension>
+---
 
-    Rename a folder:
-        $ mv <current> <new>
+## Check the current path:
+```
+pwd
+```
 
-    Delete a file:
-        $ rm <filename.extension>
+---
 
-    Delete a folder:
-        # Check if you can see the folder in the list:
-            $ ls
-        # or hidden files:
-            $ ls -a
+## Get it:
+In a folder:
+```
+cd <folder_name>
+```
+Return one folder back
+```
+cd ..
+```
+In a text file:
+```
+nano <filename>
+```
 
-        # If so, delete the folder:
-            $ rm -r <folder_name>
+---
 
-    Move a folder/file:
-        # if the directory doesn't exist, create it as instructed above.
-        # move the file/folder:
-        $ mv <folder_name_or_file_name_with_extension> <directory_destination>
+## Create:
+Folder:
+```
+mkdir <folder name>
+```
+File:
+```
+nano <filename.extension>
+```
 
-    Get in a folder:
-        $ cd <folder name>
+---
 
-    Step back from the current folder:
-        $ cd ..              <-- notice there's space in between.
+## Rename:
+Folder:
+```
+mv <current_foldername> <new_foldername>
+```
+File:
+```
+mv <current_filename.ext> <new_filename.ext>
+```
 
+---
 
+## Delete:
+Folder:
+```
+rm -r <folder_name>
+```
+File:
+```
+rm <filename.ext>
+```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+## Finding apps in the system:
+
+- Debian: [[os/linux/distros/debian/1-apps-install/finding-installed-apps]]
+- Fedora: [[os/linux/distros/fedora/1-apps-install/finding-installed-apps]]
 
 
-    MORE:
+---
 
-        >> Finding apps in the system:
+## Helpers:
 
-            # Debian:
-                ./debian/1-apps-install/finding-installed-apps.md
-            # Fedora:
-                ./fedora/1-apps-install/finding-installed-apps.md
+How to start, stop, and check a service. Let's use the *PostgreSQL* service as example:
+```
+sudo systemctl status postgres
+sudo systemctl start postgres
+sudo systemctl stop postgres
+sudo systemctl restart postgres
+```
+
+How to learn more about a command:
+```
+man <command you are trying to understand>
+man postgres
+```
+
+
+---
+
+## Switch current user on terminal:
+
+[[os/linux/command-change-user]]

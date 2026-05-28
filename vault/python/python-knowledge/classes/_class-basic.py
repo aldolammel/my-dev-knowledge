@@ -5,7 +5,7 @@
     starts with Classes. An object is anything that you wish to manipulate or change while working
     through the code. 
     
-    >> In Python, class names must be written as PascalCase!
+    >> In Python, class names must be written as PascalCase (same as UpperCamelCase)!
 
     A class is built by:
 

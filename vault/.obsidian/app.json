@@ -9,5 +9,5 @@
   "attachmentFolderPath": "./",
   "newLinkFormat": "absolute",
   "showUnsupportedFiles": true,
-  "alwaysUpdateLinks": false
+  "alwaysUpdateLinks": true
 }

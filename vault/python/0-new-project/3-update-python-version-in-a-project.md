@@ -1,6 +1,6 @@
+#### Python > Project types
+# Updating Python in an existing project
 
-
-PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
 
     CRITICAL:
         Are you really sure the Python version you need to install is compatible with other techs of the project stack? For example, the back-end framework you are using supports this new Python version? If so, keep going!
@@ -72,12 +72,3 @@ PYTHON: UPDATING THE PYTHON VERSION IN AN EXISTING PROJECT
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-    >> CONSIDERING BACK AND FRONT-END FRAMEWORK UPDATES TOO:
-
-        >> Django:
-            /vault/python/web-development/django/0-new-project/update-django-version.md
-
-        >> Vue:
-            /vault/javascript/web-development/frontend/Vue/0-new-project/update-vue-version.md

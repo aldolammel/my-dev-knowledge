@@ -1,4 +1,4 @@
-#### OS > Linux > Debian
+#### OS > Linux > Fedora
 
 # Terminal commands
 
@@ -9,11 +9,11 @@
 
 [[os/linux/terminal-basic-commands]]
 
-## Debian/Ubuntu basic:
+## Fedora basic:
 
 Package Manager:
 ```
-sudo apt <app_or_module_name>
+sudo dnf <app_or_module_name>
 ```
 
 

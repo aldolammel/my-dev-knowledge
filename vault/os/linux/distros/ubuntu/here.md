@@ -1,3 +1,3 @@
+Ubuntu is based on Debian, so everything you need for Ubuntu is on the Debian folder!
 
-
-.../debian/
+os/linux/distros/debian/
