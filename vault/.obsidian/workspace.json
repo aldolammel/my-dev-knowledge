@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "628ea232750b3994",
+        "id": "3229ca9a2be92d91",
         "type": "tabs",
         "children": [
           {
-            "id": "c1068331c808c001",
+            "id": "0f0127d48b9978db",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_summary.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "_summary"
             }
           }
         ]
@@ -176,9 +180,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "c1068331c808c001",
+  "active": "0f0127d48b9978db",
   "lastOpenFiles": [
+    "os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list.md",
+    "_summary.md",
+    "javascript/NodeJS/2-updating.md",
+    "python/web-development/django/0-new-project/api.md",
+    "python/web-development/django/0-new-project/discovery-django.md",
     "python/0-new-project/3-update-python-version-in-a-project.md",
+    "database/00-new-project/create-db-for-existing-project.md",
+    "database/00-new-project/new-project-for-ecommerce.md",
+    "database/00-new-project/discovery-database.md",
+    "database/principles-pacelc.md",
+    "database/pacelc.png",
+    "dev-concepts/principles-pacelc.md",
     "python/0-new-project/api.md",
     "python/0-new-project/1-new-project.md",
     "python/0-new-project/2-web-project-flask.md",
@@ -190,20 +205,10 @@
     "python/0-new-project/2-web-project-django-with-react.md",
     "python/0-new-project/2-web-project-django.md",
     "python/0-new-project/discovery-python.md",
-    "python/web-development/django/0-new-project/api.md",
     "python/web-development/flask/0-new-project/update-flask-version.md",
     "python/web-development/django/0-new-project/update-django-version.md",
     "javascript/_about.md",
     "python/_about.md",
-    "python/python-knowledge/variables.md.md",
-    "python/python-knowledge/_conventions-py.md.md",
-    "javascript/js-knowledge/_conventions-js.md",
-    "database/MySQL/naming-convensions.md",
-    "os/linux/command-change-user.md",
-    "_summary.md",
-    "os/linux/terminal-basic-commands.md",
-    "os/linux/distros/debian/terminal-commands.md",
-    "os/linux/distros/fedora/terminal-commands.md",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
     "os/linux/0-os-install",
@@ -223,7 +228,6 @@
     "python/web-development/flask/7-bootstrap-framework-2-recommended/static/images/slide_2.jpg",
     "python/web-development/flask/7-bootstrap-framework-2-recommended/static/images/slide_1.jpg",
     "python/web-development/flask/7-bootstrap-framework-2-recommended/static/images/flower.jpg",
-    "python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png",
     "Untitled.canvas"
   ]
 }
