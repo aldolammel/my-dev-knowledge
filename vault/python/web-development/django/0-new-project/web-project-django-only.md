@@ -1,4 +1,5 @@
-PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END)
+#### Python > Django > Project types
+# Django as back and front-end
 
 1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

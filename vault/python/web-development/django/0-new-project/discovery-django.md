@@ -1,4 +1,5 @@
-PYTHON PROJECT ROADMAPS: DISCOVERY IN DJANGO
+#### Python > Django > Project types
+# Discovery in Django 
 
     Group of action to figure out a Django project settings and features:
 

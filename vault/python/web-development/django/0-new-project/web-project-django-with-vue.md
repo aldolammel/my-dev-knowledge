@@ -1,4 +1,5 @@
-PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END VUE:
+#### Python > Django > Project types
+# Django as back-end + Vue as front-end
 
 1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

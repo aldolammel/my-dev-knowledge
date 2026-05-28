@@ -1,5 +1,5 @@
+#### Python > Django > Project types
+# SEO in Django 
 
-
-PYTHON PROJECT ROADMAPS: SEO IMPLEMENTATION IN DJANGO
 
     xxx

@@ -1,6 +1,5 @@
-
-
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT-END REACT:
+#### Python > Flask > Project types
+# Flask as back-end + React as front-end 
 
 
     >> Back-end:
