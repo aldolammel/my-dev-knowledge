@@ -1,6 +1,6 @@
 #### Python > Package Manager
-# PIP (Python built-in package manager)
 
+# PIP (Python built-in package manager)
 
     ATTENTION:
         Uv is much more efficient and modern than pip:
@@ -24,7 +24,7 @@
 
 
         3) Now, install/update it:
-            ./_install.txt
+            ./_install.md
 
 ---
 

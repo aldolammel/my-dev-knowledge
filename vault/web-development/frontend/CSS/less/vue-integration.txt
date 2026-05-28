@@ -30,4 +30,4 @@ LESS: VUE INTEGRATION
             /vault/web-development/frontend/css/scss/vue-integration.txt
 
     >> More about Vue.js:
-        /vault/javascript/Web-development/frontend/Vue/
+        /vault/javascript/web-development/frontend/Vue/

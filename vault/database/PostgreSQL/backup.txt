@@ -4,7 +4,7 @@ POSTGRESQL: HOW TO BACKUP A DATABASE
 
 
     PRE) Make sure the db service is running!
-        ./0-basic/starting-and-stopping.txt 
+        ./0-basic/starting-and-stopping.md 
 
     >> What you wanna do:
 

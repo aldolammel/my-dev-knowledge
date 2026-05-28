@@ -10,7 +10,7 @@
     component.
 
     Methods VS Computed:
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/4-computed-vs-methods.txt
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/4-computed-vs-methods.txt
 
 -->
 
@@ -46,6 +46,6 @@ export default {
 <!--
 
     >> Example 2:
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/adding-and-removing-things-by-form/
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/adding-and-removing-things-by-form/
 
 -->

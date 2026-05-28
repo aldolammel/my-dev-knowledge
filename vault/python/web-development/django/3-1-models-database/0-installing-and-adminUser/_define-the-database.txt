@@ -1,0 +1,21 @@
+
+
+DJANGO PROJECT: WHAT DATABASE TO USE
+
+    Doubt about which to use:
+        /vault/database/principles-pacelc.md
+
+
+    You know what you want:
+
+        >> PostgreSQL:
+            ./PostgreSQL/installation.md
+
+        >> MySQL:
+            ./MySQL/installation.md
+
+        >> MariaDB:
+            ./MariaDB/installation.md
+
+        >> SQLite:
+            ./SQLite/installation.md

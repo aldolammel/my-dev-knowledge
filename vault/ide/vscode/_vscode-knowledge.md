@@ -1,0 +1,83 @@
+IDE: VSCode
+
+    VS Code, or Visual Studio Code, is a free, powerful, and lightweight code editor from Microsoft
+    for Windows, macOS, and Linux. It's a versatile tool for software development that supports
+    hundreds of programming languages and is highly customizable through a vast ecosystem of over
+    25,000 extensions. VS Code combines a fast, extensible editor with developer tooling like
+    IntelliSense code completion, debugging, and integrated Git support to create a frictionless
+    development cycle.
+
+    You can customize the whole thing through 3 layers:
+
+
+        >> BY APP DEFAULT PROFILE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            The first (lowest priority) layer of configuration. Here you set the most basic settings for everything, but without point to a specific language. Only global things that should be used by all User Profiles.
+
+                E.g. real default profile:
+                    (editable/visible only if imported to the IDE)
+                    ./user-profiles-bkp/default.code-profile
+
+PRE) Where to manage profiles in VSCode interface:
+![[2025-vscode-aldo-profiles.png]]
+
+                >> How to import an example:
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                >> How to access the existing one:
+                    - Open a new VSCode window, or select the "Default Profile";
+                    - Click CTRL+SHIFT+P
+                    - Click over "Open User Settings (JSON).
+
+
+
+        >> BY USER PROFILES (MANY) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            The second (mid-way priority) layer of configuration. Here you set basic stuff of a specific tech-stack. If correctly set, those configurations in the previously layer comes automatically to this one.
+
+                E.g. real Python+Django+Vue profile:
+                    (editable/visible only if imported to the IDE)
+                    ./user-profiles-bkp/vault/python/+Django+Vue.code-profile
+
+                >> How to import an example:
+                    Same process explained through the previous layer;
+
+                >> How to access the existing one:
+                    Same process explained through the previous layer;
+
+
+
+        >> BY PROJECT (WORKSPACE) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+            The last and highest priority layer of configuration. This is the only layer that can be simultaneously shared with a project teammates. Unlike other layers, this one is stored in the project folder and can be (or not) present in the project repository if the .gitignore is correctly set.
+
+            In the .vscode/settings.json file, you must find everything that is crucial to maintain the coding quality of the project. Sometimes, duplicating or overridden what is defined in the User Profiles. The goal of this last layer is to force every project team member to deal to the project in the same way as the other co-workers.
+
+                Path:
+                    "/your_project/.vscode/settings.json"
+
+                    E.g.
+                        ./examples/.vscode/settings.json
+
+
+
+                Tip:
+                    Make this .vscode folder available in your project repository to rule this features for all developers involved on the project.
+
+
+            >> Also, you got the extensions.json file in the same project folder. Here this file tells your VSCode what extensions this project demands. This makes each project's team member machine more reliable about which linting, tooling and formatting features to use.
+
+                to access:
+                    Same logic of settings.json file.
+
+                        E.g.
+                            ./examples/.vscode/extensions.json
+
+
+
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    >> Installation:
+        https://code.visualstudio.com/

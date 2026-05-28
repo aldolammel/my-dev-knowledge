@@ -7,7 +7,7 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
 
         >> Update JS version in an existent product: /xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-        >> Update Vue version in an existent product: /vault/javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.txt
+        >> Update Vue version in an existent product: /vault/javascript/web-development/frontend/Vue/0-new-project/update-vue-version.md
 
         >> Update XXxxxX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -22,9 +22,9 @@ INSTALLATION ROADMAP BY PROJECT TYPE:
         
         >> with Vue:
 
-            >> Vue as Front-end: /vault/javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.txt
+            >> Vue as Front-end: /vault/javascript/web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md
 
-            >> Vue as Fullstack: /vault/javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.txt
+            >> Vue as Fullstack: /vault/javascript/web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md
 
             >> Back-end <SOME_JS_FRAMEWORK> + Front-end Vue.js: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

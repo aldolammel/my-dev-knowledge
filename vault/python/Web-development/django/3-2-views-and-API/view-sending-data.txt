@@ -1,7 +1,0 @@
-
-
-    VIEWS: SENDING DATA
-
-        >> To form (forms.py):
-
-            /vault/python/Web-development/django/9-forms/form-receiving-data.py

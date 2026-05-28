@@ -33,8 +33,8 @@ export default {
     };
   },
   // Computed properties:
-  // /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
-  // /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+  // /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+  // /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
   computed: mapState([
     // Using the a 'Vuex Helper' to generate automatically the getter fncs!
     "products", // It's a state property (data)!

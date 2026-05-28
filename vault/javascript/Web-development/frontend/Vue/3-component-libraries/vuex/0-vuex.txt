@@ -29,11 +29,11 @@ LIBRARY: VUEX (Deprecated since 2025)
 
     2) Integration: How to create/update data using VueX:
 
-        /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/1-overview-how-to-create-data.txt
+        /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/1-overview-how-to-create-data.txt
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 >> PINIA IS THE OFFICIAL SOLUTION FOR VUE 3:
-    /vault/javascript/Web-development/frontend/Vue/3-component-libraries/pinia/0-pinia.txt
+    /vault/javascript/web-development/frontend/Vue/3-component-libraries/pinia/0-pinia.txt

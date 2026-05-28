@@ -13,7 +13,7 @@ PRETTIER FOR VUE:
 
     
     Installation & Integration:
-        /vault/javascript/Linter-Formatter-Typechecker/prettier/installation.txt
+        /vault/javascript/Linter-Formatter-Typechecker/prettier/installation.md
 
 
     For Vue integration:

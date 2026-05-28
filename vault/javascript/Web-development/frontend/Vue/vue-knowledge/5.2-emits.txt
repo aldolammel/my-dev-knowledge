@@ -83,8 +83,8 @@ VUE: EMITS
     >> Full examples of Emits being used, including validation:
 
         >> Using Options-API:
-            /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
+            /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
         
         >> Using Composition-API:
-            /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.txt
+            /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.txt
 

@@ -1,4 +1,5 @@
 #### Python > Package Manager > UV
+
 # Using sync command
 
 The command looks for project files that listing the configurations and dependencies (like _pyproject.toml_, _requirements.txt_). Once UV read, for example, the _pyproject.toml_ file, it automatically updates _uv.lock_ file! UV makes it comparing the desired state (your project files) with the current state (what's already installed) and calculates the difference. The most import file for _uv sync_ is _uv.lock_ (in project folder root) that is dynamically managed.
@@ -23,8 +24,8 @@ In your project folder/environment, it deletes the current .venv folder and recr
 **Before:**
 
 1. Assuming you are in the project environment!
-2. Assuming you already pin the new Python version through *UV* (like you should have updated the *.python-version* file): [[pin-python-version]]
-3. Assuming the Python version's manually updated in the _pyproject.toml_ file! (/vault/python/Web-development/pyproject.toml)
+2. Assuming you already pin the new Python version through _UV_ (like you should have updated the _.python-version_ file): [[pin-python-version]]
+3. Assuming the Python version's manually updated in the _pyproject.toml_ file! (/vault/python/web-development/pyproject.toml)
 
 **A1.1) Syncing, make a choice**:
 

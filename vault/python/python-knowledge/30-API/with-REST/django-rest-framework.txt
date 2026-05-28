@@ -1,4 +1,4 @@
 
 
 REST: LIBRARY REST FOR DJANGO
-    /vault/python/Web-development/django/component-libraries/django-rest-framework/
+    /vault/python/web-development/django/component-libraries/django-rest-framework/

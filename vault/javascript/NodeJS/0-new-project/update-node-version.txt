@@ -1,1 +1,1 @@
-/vault/javascript/NodeJS/2-updating.txt
+/vault/javascript/NodeJS/2-updating.md

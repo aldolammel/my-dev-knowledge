@@ -3,7 +3,7 @@
 VUE WITH FORMS: SUBMIT BUTTON
 
     To make a real clickable button, you need to use the directive 'v-on' (@):
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/v-on.txt
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/v-on.txt
 
     E.g.
 

@@ -6,7 +6,7 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
         ./0-basic/installing-and-integrating.txt
 
     PRE.2) Make sure the database is running:
-        ./0-basic/starting-and-stopping.txt
+        ./0-basic/starting-and-stopping.md
 
     1) Which database creation method to use:
 
@@ -56,23 +56,23 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                                 If an error message says "Collation version mismatch" it's because your O.S. has been updated but PostgreSQL db cluster hasn't! Solution:
 
                                 H.3.1) Close the PgAdmin, and stop the Postgres service:
-                                    ./0-basic/starting-and-stopping.txt
+                                    ./0-basic/starting-and-stopping.md
 
                                 H.3.2) Update and upgrade your PostgreSQL and O.S;
 
                                     UBUNTU:
                                         >> Add the PostgreSQL repo locally:
-                                            ./0-basic/updating.txt
+                                            ./0-basic/updating.md
 
                                         >> Update the entire system:
 <<<<<<< HEAD
 <<<<<<< HEAD
-                                            /vault/os/os/linux/debian/2-updates/update.md
+                                            /vault/os/os/linux/distros/debian/2-updates/update.md
 =======
-                                            /vault/os/os/linux/debian/2-updates/update.md
+                                            /vault/os/os/linux/distros/debian/2-updates/update.md
 >>>>>>> 4e0f7344 (fedora stuff added)
 =======
-                                            /vault/os/os/linux/debian/2-updates/update.md
+                                            /vault/os/os/linux/distros/debian/2-updates/update.md
 >>>>>>> 4e0f7344 (fedora stuff added)
 
                                     WINDOWS:
@@ -81,10 +81,10 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                                         >> xxxxxxxxxxxxxxx
                                 
                                 H.3.3) Start the Postgres again:
-                                    ./0-basic/starting-and-stopping.txt
+                                    ./0-basic/starting-and-stopping.md
 
                                 H.3.4) Update the collation version:
-                                    ./collation-updating.txt
+                                    ./collation-updating.md
 
                                 H.3.5) Open again the PgAdmin, and now you should be able to create a new db!
 
@@ -95,7 +95,7 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
         1B) Using Terminal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             1B.PRE) Update the collation version:
-                ./collation-updating.txt
+                ./collation-updating.md
 
 
             1B.1) Define with encoding for your project db:
@@ -118,7 +118,7 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
                 CASE OF ERROR:
                     Facing collation error?
-                    ./collation-updating.txt
+                    ./collation-updating.md
 
 
             1B.2) Exit Postgres shell:

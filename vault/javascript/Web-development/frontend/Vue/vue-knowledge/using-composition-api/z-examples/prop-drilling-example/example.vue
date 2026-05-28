@@ -110,5 +110,5 @@ defineProps({ theme: Object });
   You're passing theme through 6+ components that don't even use it, just to reach the deepest child!
 
   SOLUTION: USING PROVIDE/INJECT:
-    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/provide-inject-example-basic/example.vue
+    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/provide-inject-example-basic/example.vue
 -->

@@ -7,4 +7,4 @@ LINTER TOOLS: HOW TO USE ONE IN VUE.JS
      and enforcing coding standards, ultimately leading to cleaner, more maintainable code. 
 
     >> ESLint plugin:
-        /vault/javascript/Web-development/frontend/Vue/3-plugins/eslint/
+        /vault/javascript/web-development/frontend/Vue/3-plugins/eslint/

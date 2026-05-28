@@ -8,4 +8,4 @@ NODE.JS:
 
     
     >> HOW TO INSTALL:
-        ./1-installation.txt
+        ./1-installation.md

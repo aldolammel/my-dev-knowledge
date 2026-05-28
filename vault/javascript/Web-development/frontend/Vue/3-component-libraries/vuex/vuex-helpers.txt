@@ -23,7 +23,7 @@ VUEX: HELPERS
     >> What are Computed Properties:
         
         Theory:
-            /vault/javascript/Web-development/frontend/Vue/computed-properties.txt
+            /vault/javascript/web-development/frontend/Vue/computed-properties.txt
         
         Usage in VueX:
-            /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+            /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt

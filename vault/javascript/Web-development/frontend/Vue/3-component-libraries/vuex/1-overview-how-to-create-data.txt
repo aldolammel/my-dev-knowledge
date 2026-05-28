@@ -4,7 +4,7 @@ VUEX: HOW TO CREATE DATA
 
     STEP 0: WORKFLOW
         Overview of the VueX workflow:
-        /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/one-way-data-flow.png
+        /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/one-way-data-flow.png
 
 
     STEP 1: STATE
@@ -72,7 +72,7 @@ VUEX: HOW TO CREATE DATA
                     }
 
                     >> More about Lifecycle-hooks:
-                        /vault/javascript/Web-development/frontend/Vue/lifecycle-hooks.txt
+                        /vault/javascript/web-development/frontend/Vue/lifecycle-hooks.txt
 
 
             >> When the data must be loaded just after some user directly interaction,

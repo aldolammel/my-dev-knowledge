@@ -2,4 +2,4 @@
 
 VUEX: MAP STATE
 
-    /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+    /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt

@@ -4,7 +4,7 @@ NODE > NVM: AUTOMATING THE SWITCH PROCESS BY PROJECT
 
     
     PRE) Assuming you already got the NVM (default Node Version Manager) installed:
-        ./1-installation.txt
+        ./1-installation.md
 
     
     >> Choose what automation you wish:

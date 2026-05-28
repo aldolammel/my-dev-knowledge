@@ -9,7 +9,7 @@ VUEX: COMPUTED PROPERTIES
         >> I forget, what is Vue.js Computed Properties:
             
             >> Using Options API approach:
-                /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/option-computed.txt
+                /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/option-computed.txt
             
             >> Using Composition API approach:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -44,5 +44,5 @@ VUEX: COMPUTED PROPERTIES
 
 
         >> Using Vuex Helpers to make this above easier:
-            /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+            /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
 

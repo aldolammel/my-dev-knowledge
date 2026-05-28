@@ -59,7 +59,7 @@ DIRECTIVE: V-FOR
 
 
     V-FOR WITH SLOTS (SCOPED SLOTS):
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt
 
     FOREACH OR FOR TO USE WITH JS FILES:
         /vault/javascript/forEach-loop.JS

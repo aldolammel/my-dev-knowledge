@@ -3,7 +3,7 @@
     INTEGRATING VUE WITH DJANGO:
 
         PRE I) (Dependence) Node.js installation:
-            /vault/javascript/NodeJS/1-installation.txt
+            /vault/javascript/NodeJS/1-installation.md
         
         PRE II) Vue.js installation:
             ./0-vue-installation-and-setup.txt
@@ -57,7 +57,7 @@
 
             X) (Optional)
                 Pagex is an Django site builder developed by me (@aldolammel), and it's compatible with Vue:
-                    /vault/python/Web-development/django/useful-sub-apps/pagex/with-frontend-vue.txt
+                    /vault/python/web-development/django/useful-sub-apps/pagex/with-frontend-vue.txt
 
 
 

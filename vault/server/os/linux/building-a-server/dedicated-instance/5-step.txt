@@ -192,7 +192,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
     
         
     4) Secure Protocol configuration (HTTPS):
-        /vault/web-development/domain/ssl-certification.txt
+        /vault/web-development/domain/ssl-certification.md
         
         
         

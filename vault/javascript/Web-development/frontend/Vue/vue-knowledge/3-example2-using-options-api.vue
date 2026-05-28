@@ -1,17 +1,17 @@
 <!-- 
   
   Using the "Options API" approach:
-  More about: /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/
+  More about: /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/
 
 -->
 
 <!--
 	
 	Vue app starts when index.html calls the Vue init file:
-		/vault/javascript/Web-development/frontend/Vue/vue-knowledge/3-example-main-html.html
+		/vault/javascript/web-development/frontend/Vue/vue-knowledge/3-example-main-html.html
 
 	Vue init file:
-		/vault/javascript/Web-development/frontend/Vue/vue-knowledge/3-example-vue-init.js
+		/vault/javascript/web-development/frontend/Vue/vue-knowledge/3-example-vue-init.js
 
 -->
 
@@ -44,7 +44,7 @@ export default {
   },
 
   // Computed properties
-  // /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
+  // /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
   computed: {
     doubleCount() {
       return this.count * 2;
@@ -58,7 +58,7 @@ export default {
   },
 
   // Methods/functions
-  // /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
+  // /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
   methods: {
     increment() {
       this.count++;

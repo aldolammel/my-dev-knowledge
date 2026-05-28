@@ -7,7 +7,7 @@ PYTHON: ENVIRONMENT VARIABLE MANAGERS
 
         ATTENTION!
             Is it a Django project? If so, skip it directly to:
-                /vault/python/Web-development/django/Env-Var-Managers/_options.txt
+                /vault/python/web-development/django/Env-Var-Managers/_options.txt
 
 
     >> Options:

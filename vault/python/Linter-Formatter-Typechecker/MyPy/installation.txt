@@ -27,7 +27,7 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
     >> Integration:
 
         PRE) Assuming you already got the pyproject.toml in your project:
-            /vault/python/Web-development/pyproject.toml
+            /vault/python/web-development/pyproject.toml
 
 
         1) Include these lines in your pyproject.toml:
@@ -36,7 +36,7 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
         
             1.1) (If applicable / Optional)
                 For Django projects, install the django-stubs for better Django type hints:
-                    /vault/python/Web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.txt
+                    /vault/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.md
 
 
         2) (If applicable / Optional)

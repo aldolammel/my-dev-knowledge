@@ -1,5 +1,0 @@
-
-
-USER'S PROFILE VIEW EXAMPLE:
-    
-        /vault/python/Web-development/django/z-project-examples/proj-extended-user/accounts/views.py

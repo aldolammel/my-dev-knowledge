@@ -1,10 +1,10 @@
 #### Python > Package Manager
+
 # UV
 
 Extremely fast Python package installer and resolver designed as a drop-in replacement for pip and pip-tools workflows. Official docs: https://docs.astral.sh/uv/getting-started/installation/
 
-When you ask to UV to initiate a project, a *uv.lock* file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a *Docker*);
-
+When you ask to UV to initiate a project, a _uv.lock_ file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a _Docker_);
 
 ---
 
@@ -14,7 +14,7 @@ When you ask to UV to initiate a project, a *uv.lock* file is created automatica
 
 **Linux/Mac:**
 
-Downloading using *wget* (bundled on *Debian* distros):
+Downloading using _wget_ (bundled on _Debian_ distros):
 
 ```
 wget -qO- https://astral.sh/uv/install.sh | sh
@@ -55,7 +55,7 @@ uv --version
 1. Create / Recreate (or find the current) venv in your project folder: [[create-or-find-current-venv]]
 
 **Create the minimal Python project scaffolding:**
-It creates automatically some files like *pyproject.toml*. Don't use this for existing projects with these files already!
+It creates automatically some files like _pyproject.toml_. Don't use this for existing projects with these files already!
 
 ```
 uv init
@@ -83,13 +83,11 @@ uv pip list
 
 **DJANGO PROJECT WITH UV:**
 
-/vault/python/Web-development/django/1-install-and-first-steps/2-install-project-with-uv.txt
-
+/vault/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.txt
 
 **FLASK PROJECT WITH UV:**
 
-/vault/python/Web-development/flask/1-install-and-first-steps/2-install-project-with-uv.txt
-
+/vault/python/web-development/flask/1-install-and-first-steps/2-install-project-with-uv.txt
 
 **HOW TO CREATE A REQUIREMENTS OF PROJECT WITH UV:**
 

@@ -124,13 +124,13 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
     
         
             >> Or for NON-UV users:
-                /vault/python/1-python-installation/_install.txt
+                /vault/python/1-python-installation/_install.md
 
     
     5) Installing the database:
     
         >> Using SQLite3 (Python bundled db solution):
-            /vault/database/SQLite/0-basic/1-installing-and-integrating.txt
+            /vault/database/SQLite/0-basic/1-installing-and-integrating.md
             
         >> Using Postgresql:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -210,7 +210,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
             # Replace your product main file for one of them below just for test if the server is printing out the product:
         
             >> For Python > Flask projects:
-                /vault/python/Web-development/flask/z_examples/_minimal-code.py
+                /vault/python/web-development/flask/z_examples/_minimal-code.py
             
             >> For Python > Django projects:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

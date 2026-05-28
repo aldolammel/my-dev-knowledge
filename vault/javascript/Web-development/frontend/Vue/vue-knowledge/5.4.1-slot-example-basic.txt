@@ -54,4 +54,4 @@ VUE.JS COMPONENTS: SLOT EXAMPLE, BASIC
 
 
 VUE.JS COMPONENTS: SLOT EXAMPLE, SMARTER:
-    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt
+    /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt

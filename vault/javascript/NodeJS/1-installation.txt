@@ -13,7 +13,7 @@ NODE.JS: INSTALLATION
             # Locally:
                 $ node -v
                     # If you already have it, leave this roadmap through this one:
-                        ./2-updating.txt
+                        ./2-updating.md
 
             # Globally:
                 $ which nodejs

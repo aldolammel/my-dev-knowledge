@@ -9,4 +9,4 @@ API WITH REST:
         /python/30-API/with-REST/
 
     REST in Python + Django:
-        /vault/python/Web-development/django/component-libraries/django-rest-framework/
+        /vault/python/web-development/django/component-libraries/django-rest-framework/

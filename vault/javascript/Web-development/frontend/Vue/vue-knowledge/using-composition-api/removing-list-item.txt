@@ -46,7 +46,7 @@ REMOVING LIST ITEM:
 
 
     >> Adding example:
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/adding-list-item.vue
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/adding-list-item.vue
         
     >> Project Example:
         /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

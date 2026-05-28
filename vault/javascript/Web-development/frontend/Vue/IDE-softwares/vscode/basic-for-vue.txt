@@ -22,7 +22,7 @@ IDE FOR VUE PROJECT: VSCODE
         >> If NO back-end or Vue is the back-end, skip it!
 
         >> But if Django:
-            /vault/python/Web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
+            /vault/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.txt
 
 
     1) VSCode project settings:
@@ -55,7 +55,7 @@ IDE FOR VUE PROJECT: VSCODE
     5) Linter:
 
         >> For projects Single-File-Components (eslint-plugin-vue):
-            .../Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/installation.txt
+            .../Vue/Linter-Formatter-Typechecker/eslint-plugin-vue/installation.md
 
         >> For NOT SFC projects (<solution_name>):
             /xxxxxxxxxxxxxx

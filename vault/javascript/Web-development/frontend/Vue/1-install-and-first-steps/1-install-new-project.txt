@@ -33,10 +33,10 @@ VUE: INSTALLING A NEW PROJECT
 
             1D.1) Creating a Vue project locally:
 
-                ./2-local-installation.txt
+                ./2-local-installation.md
                 
                 Otherwise, here for remote installation:
-                    ./2-cdn-installation.txt
+                    ./2-cdn-installation.md
                 
 
             1D.2) Just in case if not yet, open the project in your IDE;

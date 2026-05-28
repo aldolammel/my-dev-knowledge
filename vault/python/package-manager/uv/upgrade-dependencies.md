@@ -1,4 +1,5 @@
 #### Python > Package Manager > UV
+
 # Updating dependencies (command --upgrade)
 
 The _uv --upgrade_ command automatically check if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
@@ -46,7 +47,7 @@ uv add "something>=3.0" --upgrade --subgrouphere
 
 **Before:**
 
-1. Only for Linux! Update and Upgrade your system: /vault/os/os/linux/debian/2-updates/update.md
+1. Only for Linux! Update and Upgrade your system: /vault/os/os/linux/distros/debian/2-updates/update.md
 
 **1B.1) Update all dependencies:**
 

@@ -109,7 +109,7 @@ PINIA: HOW TO CREATE DATA
                     }
 
                     >> More about Lifecycle-hooks:
-                        /vault/javascript/Web-development/frontend/Vue/lifecycle-hooks.txt
+                        /vault/javascript/web-development/frontend/Vue/lifecycle-hooks.txt
 
 
             >> When the data must be loaded just after some user directly interaction,

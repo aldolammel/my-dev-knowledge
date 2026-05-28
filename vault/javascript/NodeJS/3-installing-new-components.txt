@@ -7,7 +7,7 @@ NODE.JS: INSTALLING NEW NODE COMPONENTS
 
     
     PRE) Assuming you got NPM (Node Package Manager) installed. Otherwise:
-        ./1-installation.txt
+        ./1-installation.md
 
 
     1) Installing a new component:

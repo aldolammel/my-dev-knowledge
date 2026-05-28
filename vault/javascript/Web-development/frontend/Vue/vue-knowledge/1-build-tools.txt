@@ -29,4 +29,4 @@ BUILT-TOOLS FOR VUE.JS:
 
 
 >> INSTALL A VUE PROJECT:
-    /vault/javascript/Web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+    /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt

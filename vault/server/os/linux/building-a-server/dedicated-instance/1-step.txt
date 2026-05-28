@@ -44,19 +44,19 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
         3.1) Update the repos and install the updates available:
             
             >> Debian/Ubuntu:
-                /vault/os/os/linux/debian/2-updates/
+                /vault/os/os/linux/distros/debian/2-updates/
             
             >> Fedora:
-                /vault/os/os/linux/fedora/2-updates/
+                /vault/os/os/linux/distros/fedora/2-updates/
         
         3.2) After that, do you wanna change the OS version?
             Don't OS release upgrade (LTS or non-LTS version) without to check if the current VPS setup supports the new version!
                 
             >> Debian/Ubuntu:
-                /vault/os/os/linux/debian/2-updates/changing-LTS-version.md
+                /vault/os/os/linux/distros/debian/2-updates/changing-LTS-version.md
                 
             >> Fedora:
-                /vault/os/os/linux/fedora/2-updates/changing-LTS-version.md
+                /vault/os/os/linux/distros/fedora/2-updates/changing-LTS-version.md
         
     
     4) Restart the VPS:

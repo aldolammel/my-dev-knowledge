@@ -47,7 +47,7 @@ export default {
   },
 
   // Methods/functions
-  // /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
+  // /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
   methods: {
     updateMessage() {
       this.myString = "Updated!";

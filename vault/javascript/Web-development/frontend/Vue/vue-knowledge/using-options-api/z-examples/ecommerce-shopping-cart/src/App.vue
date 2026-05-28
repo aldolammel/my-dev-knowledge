@@ -12,8 +12,8 @@ import { mapState } from "vuex";
 
 export default {
   // Computed properties:
-  // /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
-  // /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
+  // /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+  // /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
   computed: mapState([
     "cart", // It's a state property (data)!
   ]),

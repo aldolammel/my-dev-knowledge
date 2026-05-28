@@ -17,13 +17,13 @@ PYTHON: HOW TO UPLOAD A FILE
             ./files-upload-raw-python.txt
         
         >> Django:
-            /vault/python/Web-development/django/5-uploads/_files-upload-with-django.txt
+            /vault/python/web-development/django/5-uploads/_files-upload-with-django.md
 
         >> FastAPI:
-            /vault/python/Web-development/fast-api/5-uploads/files-upload-with-fastapi.txt
+            /vault/python/web-development/fast-api/5-uploads/files-upload-with-fastapi.txt
         
         >> Flask:
-            /vault/python/Web-development/flask/uploads/files-upload-with-flask.txt
+            /vault/python/web-development/flask/uploads/files-upload-with-flask.md
 
         >> React:
             /xxxxxxxxxxxxx

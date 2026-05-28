@@ -4,7 +4,7 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
 
     >> Using Pagex (by @aldolammel) to manage the content:    
-        /vault/python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
+        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-with-pagex.txt
 
     >> Using xxxxx:
         /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -13,4 +13,4 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     
     >> DJANGO/VUE DATA WORKFLOW:            
-        /vault/python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png

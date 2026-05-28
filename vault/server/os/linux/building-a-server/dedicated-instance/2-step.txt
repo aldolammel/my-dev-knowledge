@@ -273,7 +273,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
         6.1) Installing the webserver:
         
             # After that, keep going:
-                /vault/server/web-server/nginx/_install.txt
+                /vault/server/web-server/nginx/_install.md
             
                 # Gives the Webserver the firewall permission:
                     # If needed, stop the service:
@@ -365,7 +365,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                     # Confirm with your Private Key password and done!
             
         8.3) Install Git globally on VPS:
-            /vault/versioning/git/_basic.txt
+            /vault/versioning/git/_basic.md
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

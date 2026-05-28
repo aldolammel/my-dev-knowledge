@@ -1,4 +1,5 @@
 #### Python > Package Manager > UV
+
 # Creating requirements of a project
 
 Install requirements with UV is much more powerful and manageable than _requirements.txt_ file that is important to get to know some concepts and what is the _pyproject.toml_ file:
@@ -24,9 +25,7 @@ They are packages NOT required to run an app, but they make tasks easier:
 
 The file _pyproject.toml_ (PEP 621) manages all dependencies (including the optional ones) of a specific project:
 
-E.g. /vault/python/Web-development/pyproject.toml
-
-
+E.g. /vault/python/web-development/pyproject.toml
 
 ---
 

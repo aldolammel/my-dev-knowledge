@@ -6,4 +6,4 @@ ENVIRONMENT VARIABLE MANAGERS BY LANGUAGE: PYTHON
         /vault/python/Env-Var-Managers/_options.txt
 
     >> For Django project:
-        /vault/python/Web-development/django/Env-Var-Managers/_options.txt
+        /vault/python/web-development/django/Env-Var-Managers/_options.txt

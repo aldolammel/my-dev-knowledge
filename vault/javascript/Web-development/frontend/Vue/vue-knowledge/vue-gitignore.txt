@@ -47,4 +47,4 @@ VUE.JS: GITIGNORE FILE
 
 
 MORE ABOUT GITIGNORE FILE:
-    /vault/versioning/git/gitignore-file.txt
+    /vault/versioning/git/gitignore-file.md

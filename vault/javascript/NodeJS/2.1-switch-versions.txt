@@ -16,7 +16,7 @@ NODE.JS: SWITCHING NODE VERSION
         A) NVM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             PRE) Assuming you already got NVM installed (it's used to install Node and NPM):
-                ./1-installation.txt
+                ./1-installation.md
 
             >> Switching the Node version for a project:
 

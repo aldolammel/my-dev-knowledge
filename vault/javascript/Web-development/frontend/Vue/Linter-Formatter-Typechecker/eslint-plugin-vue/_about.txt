@@ -27,7 +27,7 @@ VUE > TEMPLATE LINTER: ESLINT PLUGIN VUE
 
 
     >> INSTALLING AND INTEGRATION:
-        ./installation.txt
+        ./installation.md
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -6,7 +6,7 @@
         ./errors-exceptions.py
 
     For Django framework:
-        /vault/python/Web-development/django/6-errors-and-validations/raise-error.txt
+        /vault/python/web-development/django/6-errors-and-validations/raise-error.txt
 
 """
 

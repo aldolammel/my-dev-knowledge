@@ -1,11 +1,9 @@
-
-
 DEV CONCEPTS: SERIALIZATION
 
     Serialization is the process of converting an object's state or a data structure into a format that can be stored or transmitted and then reconstructed later.
 
     Serializers are components that convert complex data structures (like objects, dictionaries, or
-    database records) into a format that can be easily stored, transmitted, or reconstructed later. 
+    database records) into a format that can be easily stored, transmitted, or reconstructed later.
     The reverse process (converting serialized data back into its original form) is called
     deserialization.
 
@@ -17,7 +15,7 @@ DEV CONCEPTS: SERIALIZATION
     >> Popular Serialization Formats:
 
         Format                Use Case                                    Example Libraries
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         JSON ................ Web APIs, config files .................... json (Python), serde (Rust)
         XML	................. Legacy systems, SOAP APIs ................. lxml, ElementTree
         Protocol Buffers .... High-performance binary serialization ..... protobuf (Google)
@@ -40,7 +38,7 @@ DEV CONCEPTS: SERIALIZATION
             - Parse incoming JSON/XML data into Python objects for processing.
 
             E.g. with Python + Django:
-                /vault/python/Web-development/django/3-2-views-and-API/serializer.txt
+                /vault/python/web-development/django/3-2-views-and-API/serializer.txt
 
 
         >> Data Storage
@@ -57,4 +55,3 @@ DEV CONCEPTS: SERIALIZATION
 
             E.g. xxxxxxxxx:
                     /xxxxxxxxxxxxxxx
-

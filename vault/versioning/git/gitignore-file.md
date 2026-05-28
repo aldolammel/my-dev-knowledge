@@ -1,0 +1,76 @@
+
+
+    GIT IGNORE FILE:
+
+        1) Create the .gitignore file in the repo root:
+            
+            >> Model for Django projects:
+                /vault/python/web-development/django/z-project-examples/proj-aldolammel-style/.gitignore
+            
+            >> xxxxxxxxxxxxxxxxxxxx
+            
+
+        2) Online Generator (options):
+            https://mrkandreev.name/snippets/gitignore-generator/
+            https://www.toptal.com/developers/gitignore
+
+        3) Considering:
+            Linux
+            Windows
+            macOS
+            PyCharm
+            VisualStudioCode
+            Python
+            Django or Flask or FashAPI or nothing...
+            VirtualEnv
+            Git
+            Node.js
+            Vue.js or React or Angular or nothing...
+            css
+            SCSS or Stylus or less or nothing
+            SASS
+
+        4) Including in .gitignore manually:
+
+            .env
+            frontend/.env
+            
+            .idea/
+            .idea/workspace.xml
+            .idea/tasks.xml
+
+            Find .vscode manually and:
+                #.vscode/*  # For projects using the vscode settings.json!
+                #!.vscode/settings.json
+                #!.vscode/tasks.json
+                #!.vscode/launch.json
+                #!.vscode/extensions.json
+                #!.vscode/*.code-snippets
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        
+        
+        IGNORING A FOLDER/FILE FROM NOW ON:
+
+       
+            1) First, manually add the folder name in gitignore file;
+
+            2) Tell Git not to track that folder/file again:
+                
+                $ git rm --cached <file_name>     or    git rm -r --cached <folder_name>
+            
+            3) Commit the changes:
+                ./command-commit.txt
+            
+            
+            4) The git rm command, along with the --cached option, deletes the file from the
+                repository but does not delete the actual file. This means the file remains on 
+                your local system and in your working directory as an ignored file:
+            
+                >> To delete a local branch / removing a local one:
+                    ./command-branch.txt
+                
+                >> To delete a remote branch:
+                    ./command-branch.txt
+                    ./command-push.txt

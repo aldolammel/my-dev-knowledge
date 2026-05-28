@@ -41,7 +41,7 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
 
 
     >> Dataflow of a real Vue Pinia usage:
-        /vault/python/Web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

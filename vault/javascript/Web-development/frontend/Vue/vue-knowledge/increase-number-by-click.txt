@@ -21,4 +21,4 @@ INCREASE AND DECREASE NUMBER BY CLICKING
 
 
     EXAMPLE:
-        /vault/javascript/Web-development/frontend/Vue/examples-vue/products-selection-and-increase-amounts/index.html
+        /vault/javascript/web-development/frontend/Vue/examples-vue/products-selection-and-increase-amounts/index.html

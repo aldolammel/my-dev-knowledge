@@ -18,7 +18,7 @@ JAVASCRIPT: DISCOVERY
 DISCOVERY OF JS FRAMEWORKS:
 
     >> Vue:
-        /vault/javascript/Web-development/frontend/Vue/0-new-project/discovery-vue.txt
+        /vault/javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
 
     >> React:
         /xxxxxxxxxxxxxxxxxxxxx

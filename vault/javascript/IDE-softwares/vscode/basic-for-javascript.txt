@@ -4,15 +4,15 @@ IDE FOR JS PROJECT: VSCODE
 
 
         PRE.1) JS project:
-            /vault/javascript/00-New-Project/1-new-project.txt
+            /vault/javascript/00-New-Project/1-new-project.md
 
 
         PRE.2) IDE VSCode install:
 
             Linux:
-                /vault/os/os/linux/debian/1-apps-install/basic-apps/using-apt/ide-code.md
+                /vault/os/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/ide-code.md
                 or
-                /vault/os/os/linux/fedora/1-apps-install/basic-apps/using-dnf/ide-code.md
+                /vault/os/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/ide-code.md
 
             
             Windows:

@@ -1,0 +1,66 @@
+
+
+PYTHON PROJECT ROADMAPS: PROJECT DJANGO (BACK AND FRONT-END)
+
+
+1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    >> Database:
+
+        1.1) What db should be used:
+            /vault/database/00-new-project/
+
+    >> Back-end:
+
+        1.2) Basic installations:
+            .../django/1-install-and-first-steps/0-django-installation-and-setup.txt
+        
+    >> Front-end:
+    
+        1.3) Front-end solution (Django):
+            Use it as reference:
+                .../django/django-project-folder-structure.txt
+
+                >> In Django project-folder:
+                    - Create the main 'templates' folder;
+                    - Create the 'media' folder;
+                    - Create the 'static' folder;
+
+                    >> In static-folder:
+                        - Create a 'css' folder;
+                        - Create a 'js' folder;
+
+                        >> In css-folder:
+                            - Create a 'main.css' file;
+
+                        >> In js-folder:
+                            - Create a 'main.js' file;
+
+        1.4) (Optional)
+            Front-end CSS Framework:
+                
+                >> Tailwind:
+                    /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                
+                >> Or Bulma:
+                    /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                
+                >> Or Bootstrap:
+                    /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+
+
+
+2) DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    0) Create the AI context prompt for the project:
+        /vault/python/web-development/ai-prompt-context-model.txt
+    
+    2.1) Front-end:
+        >> Convert the HTML template to Django Template;
+        >> Code the entire navigation;
+    
+    2.2) Back-end:
+        >> Build up the database of the product;
+        >> xxxxxxxxxxxxxxxxx
+
+    2.3) Final touches between Back and Front-end!

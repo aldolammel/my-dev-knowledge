@@ -9,7 +9,7 @@
     They are part of Vue's reactivity system and are available in every Vue component by default.
 
     Methods VS Computed:
-        /vault/javascript/Web-development/frontend/Vue/vue-knowledge/4-computed-vs-methods.txt
+        /vault/javascript/web-development/frontend/Vue/vue-knowledge/4-computed-vs-methods.txt
 
     
     E.g. in a vue component file:
@@ -60,6 +60,6 @@ export default {
 <!--
     
     >> Using Computed Properties to acess VueX store:
-        /vault/javascript/Web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+        /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
 
 -->

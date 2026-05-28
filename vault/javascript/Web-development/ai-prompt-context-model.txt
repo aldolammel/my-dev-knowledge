@@ -1,2 +1,2 @@
 Example:
-    /vault/python/Web-development/ai-prompt-context-model.txt
+    /vault/python/web-development/ai-prompt-context-model.txt

@@ -1,1 +1,0 @@
-/vault/python/0-New-Project/3-update-django-version-in-a-project.txt

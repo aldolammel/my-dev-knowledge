@@ -20,4 +20,4 @@ FORMATTER: PRETTIER
 
 
 >> INSTALLATION AND INTEGRATION:
-    ./installation.txt
+    ./installation.md

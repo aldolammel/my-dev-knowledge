@@ -31,7 +31,7 @@ VUE: INSTALLING AND SETUP
                 1C.1A) Node locally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
                     1C.1A.1) Install Node.js (JS backend):
-                        /vault/javascript/NodeJS/1-installation.txt
+                        /vault/javascript/NodeJS/1-installation.md
 
                         1C.1A.1.1) (optional)
                             Install 'Vue.js devtools' (Extension) for your browser!
@@ -64,7 +64,7 @@ VUE: INSTALLING AND SETUP
                     CAUTION!
                         With CDN, you must define your components as JS objects 'coz browser doesn't understand .vue files.
 
-                    ./2-cdn-installation.txt
+                    ./2-cdn-installation.md
 
                     >> Project example using CDN solution:
                         .../Vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
@@ -96,16 +96,16 @@ VUE: INSTALLING AND SETUP
     MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
 
         >> VUE as front-end and no backend at all:
-            .../Vue/0-new-project/web-project-vue-only-front.txt
+            .../Vue/0-new-project/web-project-vue-only-front.md
         
         >> VUE as back and front-end:
-            .../Vue/0-new-project/web-project-vue-as-back-and-front.txt
+            .../Vue/0-new-project/web-project-vue-as-back-and-front.md
 
         >> VUE as front-end of Django:
-            .../Vue/0-new-project/web-project-django-with-vue.txt
+            .../Vue/0-new-project/web-project-django-with-vue.md
 
         >> VUE as front-end of Flask:
-            .../Vue/0-new-project/web-project-flask-with-vue.txt
+            .../Vue/0-new-project/web-project-flask-with-vue.md
 
 
 

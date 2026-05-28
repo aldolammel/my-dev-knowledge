@@ -27,7 +27,7 @@ WEB-SERVER: NGINX
         
         
     >> To install:
-        ./_install.txt
+        ./_install.md
         
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

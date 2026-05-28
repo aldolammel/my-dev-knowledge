@@ -80,6 +80,6 @@ VUE USING OPTIONS-API: PROPS EXAMPLES
 
 
 >> SAME EXAMPLE, BUT USING COMPOSITION-API:
-    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt
+    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt
 
     

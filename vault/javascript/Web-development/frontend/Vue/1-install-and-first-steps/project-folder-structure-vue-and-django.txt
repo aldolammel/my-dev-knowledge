@@ -22,7 +22,7 @@ VUE: WITH DJANGO BACK-END
 
         1A) Recommendation for MPA project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            my_project/         # /vault/python/Web-development/django/django-project-folder-structure.txt
+            my_project/         # /vault/python/web-development/django/django-project-folder-structure.txt
             └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
             >> Vue project folder (e.g. "frontend") must be created in the root of Django project
@@ -31,7 +31,7 @@ VUE: WITH DJANGO BACK-END
         
         1B) Recommendation for SPA project - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            my_project/         # /vault/python/Web-development/django/django-project-folder-structure.txt
+            my_project/         # /vault/python/web-development/django/django-project-folder-structure.txt
             └── frontend/       # .../Vue/vue-knowledge/1-vue-structure.txt
 
             >> Vue project folder (e.g. "frontend") must be created in the root of Django project

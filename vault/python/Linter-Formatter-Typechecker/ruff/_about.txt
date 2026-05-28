@@ -15,7 +15,7 @@ PYTHON LANGUAGE > LINTER AND FORMATTER: RUFF
 
 
     >> INSTALLING AND INTEGRATION:
-        ./installation.txt
+        ./installation.md
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

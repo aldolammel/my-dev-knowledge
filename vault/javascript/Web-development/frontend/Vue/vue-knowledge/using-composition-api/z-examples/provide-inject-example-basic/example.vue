@@ -12,7 +12,7 @@
                         └─> Badge.vue
 
   >> If you wanna see how hell is Props Drilling with the exactly same example:
-    /vault/javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/prop-drilling-example/example.vue
+    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/prop-drilling-example/example.vue
 -->
 
 <!-- App.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

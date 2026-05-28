@@ -15,4 +15,4 @@ NODE.JS: NPM, NODE PACKAGE MANAGER
 
 
 INSTALLATION:
-    /vault/javascript/NodeJS/1-installation.txt
+    /vault/javascript/NodeJS/1-installation.md
