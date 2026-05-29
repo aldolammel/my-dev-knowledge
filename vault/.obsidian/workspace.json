@@ -10,6 +10,7 @@
           {
             "id": "805098c71e3b9e10",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -17,8 +18,31 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "web-project-django-with-react"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5d767017e9319058",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f966b687412c369c",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/web-development/django/0-new-project/web-project-django-with-vue.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "web-project-django-with-vue"
             }
           }
         ]
@@ -78,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 558.5
+    "width": 558.5,
+    "collapsed": true
   },
   "right": {
     "id": "7faa00d5847e1b4c",
@@ -180,35 +205,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "805098c71e3b9e10",
+  "active": "f966b687412c369c",
   "lastOpenFiles": [
-    "python/web-development/fast-api/_about.md",
+    "python/web-development/django/0-new-project/web-project-django-with-react.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
+    "python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-using-pagex.md",
+    "web-development/frontend/CSS/css-libraries-frameworks/vuetify/_about.md",
     "python/web-development/django/0-new-project/web-project-django-only.md",
     "python/web-development/django/0-new-project/update-django-version.md",
     "python/web-development/django/0-new-project/seo-project.md",
     "python/web-development/django/0-new-project/discovery-django.md",
     "python/web-development/django/0-new-project/api.md",
     "python/0-new-project/1-new-project.md",
-    "database/00-new-project/create-db-for-existing-project.md",
-    "_summary.md",
-    "os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list.md",
-    "javascript/NodeJS/2-updating.md",
-    "python/0-new-project/3-update-python-version-in-a-project.md",
-    "database/00-new-project/new-project-for-ecommerce.md",
-    "database/00-new-project/discovery-database.md",
-    "database/principles-pacelc.md",
-    "database/pacelc.png",
-    "dev-concepts/principles-pacelc.md",
+    "python/0-new-project/discovery-python.md",
     "python/0-new-project/api.md",
-    "python/0-new-project/2-web-project-flask.md",
+    "python/web-development/flask/0-new-project/api.md",
+    "python/0-new-project/3-update-python-version-in-a-project.md",
     "python/0-new-project/3-update-flask-version-in-a-project.md",
+    "python/web-development/flask/0-new-project/update-flask-version.md",
     "python/0-new-project/3-update-django-version-in-a-project.md",
     "python/0-new-project/2-web-project-flask-with-vue.md",
+    "python/web-development/flask/0-new-project/web-project-flask-with-vue.md",
     "python/0-new-project/2-web-project-flask-with-react.md",
+    "python/web-development/flask/0-new-project/web-project-flask-with-react.md",
+    "python/0-new-project/2-web-project-flask.md",
+    "python/web-development/flask/0-new-project/web-project-flask-only.md",
     "python/0-new-project/2-web-project-django-with-vue.md",
     "python/0-new-project/2-web-project-django-with-react.md",
     "python/0-new-project/2-web-project-django.md",
+    "database/pacelc.png",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
     "os/linux/0-os-install",
