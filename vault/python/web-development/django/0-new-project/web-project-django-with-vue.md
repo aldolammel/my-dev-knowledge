@@ -7,7 +7,7 @@
 ## 1) Setup:
 
 ### 1.1) Database
-1. What db should be used: [principles-pacelc](database/principles-pacelc.md)
+1. What db should be used: [principles-pacelc](/database/principles-pacelc.md)
 ### 1.2) Back-end
 1. Django install options: [python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end
