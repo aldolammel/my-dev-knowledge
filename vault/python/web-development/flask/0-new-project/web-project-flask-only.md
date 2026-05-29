@@ -1,6 +1,5 @@
-
-
-PYTHON PROJECT ROADMAPS: PROJECT FLASK (BACK AND FRONT-END)
+#### Python > Flask > Project types
+# Flask as back and front-end
 
 
 1) SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

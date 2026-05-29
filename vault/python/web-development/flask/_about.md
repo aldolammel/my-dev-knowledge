@@ -1,34 +1,33 @@
+#### Python > Web Framework
+# Flask
 
+Flask is a microframework that uses Jinja2 engine to work under the hood. 
 
-FLASK: WHAT IS IT?
+Even Flask it's a single solution, it's possible to expand features using additional libs:
 
-    Flask is a microframework that uses Jinja2 engine to work under the hood.
-
-    Even Flask it's a single solution, it's possible to expand features using additional libs:
-
-        >> For ORM:
-            e.g. SQLAlchemy
-            
-        >> For Admin panel (CMS):
-            e.g. Flask-Admin
-            
-        >> For Authentication:
-            e.g. Flask-Login
-        
-        >> For Migrations:
-            e.g. Alembic
-            
-        >> For Form handling:
-            e.g. WTForms
-            
-        >> For Internationalization:
-            ??????????????????
-        
-        >> For Security (CSRF, XSS…):
-            ??????????????????
-            
-        >> For REST API support
-            e.g. Flask-RESTful
+>> For ORM:
+		e.g. SQLAlchemy
+		
+>> For Admin panel (CMS):
+		e.g. Flask-Admin
+		
+>> For Authentication:
+		e.g. Flask-Login
+	
+>> For Migrations:
+		e.g. Alembic
+		
+>> For Form handling:
+		e.g. WTForms
+		
+>> For Internationalization:
+		??????????????????
+	
+>> For Security (CSRF, XSS…):
+		??????????????????
+		
+>> For REST API support
+		e.g. Flask-RESTful
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

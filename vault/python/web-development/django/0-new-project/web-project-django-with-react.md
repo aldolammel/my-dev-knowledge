@@ -1,4 +1,5 @@
-PYTHON PROJECT ROADMAPS: PROJECT BACK-END DJANGO + FRONT-END REACT:
+#### Python > Django > Project types
+# Django as back-end + React as front-end 
 
 1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

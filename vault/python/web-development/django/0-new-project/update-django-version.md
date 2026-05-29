@@ -1,4 +1,5 @@
-PYTHON PROJECT ROADMAPS: UPDATING DJANGO VERSION IN AN EXISTENT PROJECT
+#### Python > Django > Project types
+# Updating Django in an existing project
 
     >> Considering a Python update too:
         /vault/python/0-new-project/3-update-python-version-in-a-project.md

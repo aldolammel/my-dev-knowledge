@@ -1,6 +1,5 @@
-
-
-PYTHON PROJECT ROADMAPS: API WITH DJANGO
+#### Python > Django > Project types
+# API with Django
 
 
     TO THINK:

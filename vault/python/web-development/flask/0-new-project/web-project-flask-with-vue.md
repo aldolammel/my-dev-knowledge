@@ -1,6 +1,5 @@
-
-
-PYTHON > WEB-DEVELOPMENT > INSTALLATION ROADMAP > PROJECT BACK-END FLASK + FRONT-END VUE:
+#### Python > Flask > Project types
+# Flask as back-end + Vue as front-end 
 
 
     >> Back-end:

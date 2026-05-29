@@ -1,3 +1,6 @@
+#### Python > Web development
+# AI prompt context
+
 THIS FILE NAME: _project-approach.txt (to place on the project root!)
 
 [Development mindset]

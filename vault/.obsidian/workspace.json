@@ -182,6 +182,7 @@
   },
   "active": "805098c71e3b9e10",
   "lastOpenFiles": [
+    "python/web-development/fast-api/_about.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
     "python/web-development/django/0-new-project/web-project-django-only.md",
     "python/web-development/django/0-new-project/update-django-version.md",
@@ -208,7 +209,6 @@
     "python/0-new-project/2-web-project-django-with-vue.md",
     "python/0-new-project/2-web-project-django-with-react.md",
     "python/0-new-project/2-web-project-django.md",
-    "python/0-new-project/discovery-python.md",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
     "os/linux/0-os-install",
