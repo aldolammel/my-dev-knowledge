@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/web-development/django/0-new-project/web-project-django-with-vue.md",
+                "file": "python/web-development/django/0-new-project/web-project-django-with-react.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "web-project-django-with-vue"
+              "title": "web-project-django-with-react"
             }
           }
         ]
@@ -182,6 +182,7 @@
   },
   "active": "805098c71e3b9e10",
   "lastOpenFiles": [
+    "python/web-development/django/0-new-project/web-project-django-with-vue.md",
     "python/web-development/django/0-new-project/web-project-django-only.md",
     "python/web-development/django/0-new-project/update-django-version.md",
     "python/web-development/django/0-new-project/seo-project.md",
@@ -208,7 +209,6 @@
     "python/0-new-project/2-web-project-django-with-react.md",
     "python/0-new-project/2-web-project-django.md",
     "python/0-new-project/discovery-python.md",
-    "python/web-development/flask/0-new-project/update-flask-version.md",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
     "os/linux/0-os-install",
