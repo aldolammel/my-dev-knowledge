@@ -10,32 +10,32 @@ Here below you find NOT the entire content, but a few examples of you can find. 
 
 - Back-end:
 	- **Django** project:
-		- Discovery: [discovery-django](discovery-django.md)
+		- Discovery: [python/web-development/django/0-new-project/discovery-django](python/web-development/django/0-new-project/discovery-django.md)
 		- API: [python/web-development/django/0-new-project/api](python/web-development/django/0-new-project/api.md)
-		- Update Django: [update-django-version](update-django-version.md)
-		- App pure Django: [web-project-django-only](web-project-django-only.md)
+		- Update Django: [python/web-development/django/0-new-project/update-django-version](python/web-development/django/0-new-project/update-django-version.md)
+		- App pure Django: [python/web-development/django/0-new-project/web-project-django-only](python/web-development/django/0-new-project/web-project-django-only.md)
 		- App Django with Vue: [python/web-development/django/0-new-project/web-project-django-with-vue](python/web-development/django/0-new-project/web-project-django-with-vue.md)
 	- **Flask** project:
 	    - API: [python/web-development/flask/0-new-project/api](python/web-development/flask/0-new-project/api.md)
-	    - App pure Flask: [web-project-flask-only](web-project-flask-only.md)
+	    - App pure Flask: [python/web-development/flask/0-new-project/web-project-flask-only](python/web-development/flask/0-new-project/web-project-flask-only.md)
 	    - App Flask with Vue: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 	- **Node.js** project:
-	    - Update Node: [2-updating](2-updating.md)
+	    - Update Node: [javascript/NodeJS/2-updating](javascript/NodeJS/2-updating.md)
 - Front-end:
 	- **Vue.js** project:
-		- Update Vue: [updating-vue](updating-vue.md)
+		- Update Vue: [javascript/Web-development/frontend/Vue/0-new-project/update-vue-version](javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md)
 		- App Vue with Django: [python/web-development/django/0-new-project/web-project-django-with-vue](python/web-development/django/0-new-project/web-project-django-with-vue.md)
 		- App Vue with Flask: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 
 ## Programming languages
 
 - **Python**
-	- What is it: [python/_about](python/_about.md)
-	- Installing: [python/1-python-installation/_install](python/1-python-installation/_install.md)
-	- Updating Python: [3-update-python-version-in-a-project](3-update-python-version-in-a-project.md)
-	- Updating a module/library: [updating-a-library](updating-a-library.md)
+	- What is it: [python/\_about](python/_about.md)
+	- Installing: [python/1-python-installation/\_install](python/1-python-installation/_install.md)
+	- Updating Python: [python/0-new-project/3-update-python-version-in-a-project](python/0-new-project/3-update-python-version-in-a-project.md)
+	- Updating a module/library: [python/2-updating/updating-a-library](python/2-updating/updating-a-library.md)
 - **JavaScript**
-	- What is it: [javascript/_about](javascript/_about.md)
+	- What is it: [javascript/\_about](javascript/_about.md)
 
 ## Database
 

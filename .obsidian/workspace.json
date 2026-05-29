@@ -4,21 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "9a1ceb03840b5b5e",
+        "id": "ec19af8556ff8182",
         "type": "tabs",
         "children": [
           {
-            "id": "731cb651a0ea9f58",
+            "id": "c8cd69b99bd49662",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "_summary.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "README"
+              "title": "_summary"
             }
           }
         ]
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "_summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for _summary"
             }
           },
           {
@@ -113,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "_summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from _summary"
             }
           },
           {
@@ -156,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "_summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of _summary"
             }
           }
         ]
@@ -183,17 +185,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "731cb651a0ea9f58",
+  "active": "c8cd69b99bd49662",
   "lastOpenFiles": [
-    "coffee.md",
-    "README.md",
-    "python/0-new-project/1-new-project.md",
+    "python/0-new-project/3-update-python-version-in-a-project.md",
     "_summary.md",
+    "python/1-python-installation/_install.md",
+    "python/_about.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
+    "javascript/00-New-Project/3-update-vue-version-in-a-project.md",
+    "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/1-new-project.md",
+    "javascript/NodeJS/2-updating.md",
+    "python/web-development/django/0-new-project/discovery-django.md",
+    "README.md",
+    "coffee.md",
+    "python/0-new-project/1-new-project.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
     "python/web-development/flask/0-new-project/api.md",
     "python/web-development/django/0-new-project/api.md",
-    "python/web-development/django/0-new-project/discovery-django.md",
-    "python/0-new-project/3-update-python-version-in-a-project.md",
     "python/0-new-project/2-web-project-django-with-react.md"
   ]
 }
