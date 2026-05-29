@@ -13,7 +13,7 @@
         ./method-changeform_view.py
 
     >> The regular Django View equivalent of this is the UpdateView:
-        /vault/python/web-development/django/3-2-views-and-API/viewtype-UpdateView.py
+        /python/web-development/django/3-2-views-and-API/viewtype-UpdateView.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

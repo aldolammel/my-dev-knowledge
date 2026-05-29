@@ -1,5 +1,3 @@
-
-
 VUE.JS: GITIGNORE FILE
 
     >> Add these lines in your .gitignore file (if applicable):
@@ -42,9 +40,7 @@ VUE.JS: GITIGNORE FILE
     IMPORTANT:
         Check if the .gitignore is NOT duplicated along the project child folder. For example, Vue installation by Vite creates a git file in vue root folder!
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 MORE ABOUT GITIGNORE FILE:
-    /vault/versioning/git/gitignore-file.md
+/versioning/git/gitignore-file.md

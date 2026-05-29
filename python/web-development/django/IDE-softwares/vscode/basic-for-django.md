@@ -1,22 +1,19 @@
-
-
 IDE FOR DJANGO PROJECT: VSCODE
-
 
     >> Basic for run Django:
 
 
         PRE.1) Assuming you have done this VSCode basic roadmap for Python:
-                /vault/python/IDE-softwares/vscode/basic-for-python.txt
+                /python/IDE-softwares/vscode/basic-for-python.txt
 
 
         PRE.2) Assuming you already activated the project's virtual environment:
-                /vault/python/3-virtual-environment/activate-and-deactivate.txt
+                /python/3-virtual-environment/activate-and-deactivate.txt
 
 
         1) VSCode project settings:
 
-            1.1) In the project folder, open this file: 
+            1.1) In the project folder, open this file:
                 /your_project/.vscode/settings.json;
 
             1.2) In that file, apply these new lines specific for Django projects:
@@ -26,13 +23,13 @@ IDE FOR DJANGO PROJECT: VSCODE
                 ./examples/extensions.json
 
             # (If applicable) Make sure your .gitignore file is NOT blocking the .vscode folder and its content in project repository!
-        
-        
+
+
         2) (If applicable, probably you already installed this during MyPy/PyRight installation)
             Type-Checker django-stubs plugin (Compatible for MyPy and PyRight):
             .../django/Linter-Formatter-Typechecker/django-stubs/installation.md
 
-        
+
         3) Linter (DjLint by Astral):
             .../django/Linter-Formatter-Typechecker/djlint/installation.md
 
@@ -41,9 +38,9 @@ IDE FOR DJANGO PROJECT: VSCODE
             # Not need to install anything additional 'coz DjLint is also a formatter.
 
 
-            
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+
+---
 
 VSCODE USER PROFILES:
-    /vault/ide/vscode/user-profiles-bkp/
+/ide/vscode/user-profiles-bkp/

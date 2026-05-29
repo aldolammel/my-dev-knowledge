@@ -1,14 +1,11 @@
-
-
 DJANGO STRUCTURE: TEMPLATES
 
-
     Unlike Flask that uses Jinja2 as its template engine, Django has its on template engine called DTL (Django Template Language) that's absolutely inspired by Jinja2, making their syntax and concepts very similar.
-    
-    
+
+
     >> Django is divided in 3 main parts: models, views, and templates.
 
-    
+
     >> TEMPLATES:
 
         They are responsible for display the data to the user through a text or layout file
@@ -27,7 +24,7 @@ DJANGO STRUCTURE: TEMPLATES
 
     OTHER DJANGO PARTS:
 
-        >> VIEWS: 
+        >> VIEWS:
 
             .../django/3-2-views-and-API/
 
@@ -39,7 +36,6 @@ DJANGO STRUCTURE: TEMPLATES
 
     EXTERNAL TEMPLATE/FRONT-END SOLUTIONS:
 
-        >> Vue.js ....... /vault/javascript/web-development/frontend/Vue/
-        >> React ........ /vault/javascript/web-development/frontend/React/
-        >> Angular ...... /vault/javascript/web-development/frontend/Angular/
-    
+        >> Vue.js ....... /javascript/web-development/frontend/Vue/
+        >> React ........ /javascript/web-development/frontend/React/
+        >> Angular ...... /javascript/web-development/frontend/Angular/

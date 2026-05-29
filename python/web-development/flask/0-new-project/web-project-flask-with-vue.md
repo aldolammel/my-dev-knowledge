@@ -1,39 +1,38 @@
 #### Python > Flask > Project types
-# Flask as back-end + Vue as front-end 
-
+# Flask as back-end + Vue as front-end
 
     >> Back-end:
 
         1) IDE, language setup:
-            >> VSCode:  /vault/python/IDE-softwares/vscode/basic-for-python.txt
-            >> PyCharm: /vault/python/IDE-softwares/pycharm/basic-for-python.txt
+            >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
+            >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
 
         2) IDE, framework setup:
             >> VSCode:  /xxxxxxxxxxxxxxxxxx_flask.txt
             >> PyCharm: /xxxxxxxxxxxxxxxxxxxxxxxx_flask.txt
-        
+
         3) Python installation (if needed);
-            /vault/python/1-python-installation/
-        
+            /python/1-python-installation/
+
         4) Virtual Environment and Flask installation (and its dependencies):
-            /vault/python/web-development/flask/xxxxxxxxx
+            /python/web-development/flask/xxxxxxxxx
 
     >> Front-end:
 
         5) IDE, framework setup:
-            >> VSCode:  /vault/javascript/web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
-            >> PyCharm: /vault/javascript/web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
+            >> VSCode:  /javascript/web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
+            >> PyCharm: /javascript/web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
 
         6) Vue installation (and its dependencies):
-            /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+            /javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
 
         7) (Optional) CSS Framework:
 
             >> Bootstrap:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
             >> Tailwind:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
 
             >> Bulma:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                /web-development/frontend/CSS/css-libraries-frameworks/bulma/

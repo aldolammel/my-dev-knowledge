@@ -1,3 +1,1 @@
-
-
-/vault/javascript/web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js
+/javascript/web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js

@@ -1,5 +1,5 @@
 About Vue.JS language:
-    /vault/javascript/
+    /javascript/
 
 About Vue.JS:
     ./vue-knowledge/_about.md

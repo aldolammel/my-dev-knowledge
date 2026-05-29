@@ -1,1 +1,1 @@
-/vault/python/Web-scraping/
+/python/Web-scraping/

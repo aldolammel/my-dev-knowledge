@@ -1,4 +1,2 @@
-
-
 WITH JAVASCRIPT:
-    /vault/javascript/vault/data-processing-and-file-convertion/
+/javascript/data-processing-and-file-convertion/

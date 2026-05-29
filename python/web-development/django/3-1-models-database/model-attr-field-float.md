@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: FLOAT FIELD
 
     For storing numbers with decimal points, like Decimal Field, but with differences!!!
@@ -17,10 +15,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: FLOAT FIELD
     Example:
         xxxxxxxxxxxxxxxxxx
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
+> > Other related options:
 
     >> Decimal Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-decimal.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-decimal.txt

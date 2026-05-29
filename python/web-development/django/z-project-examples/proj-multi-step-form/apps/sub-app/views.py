@@ -122,6 +122,6 @@ def step_two(request, pk):
 
 """
     MORE OPTIONS:
-    /vault/python/web-development/django/3-2-views-and-API/
+    /python/web-development/django/3-2-views-and-API/
 
 """

@@ -1,8 +1,4 @@
-
-
-
 LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
-
 
     1) Users setup first:
         .../django/3-1-models-database/3-users/0-users-setup.txt
@@ -48,7 +44,7 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
                 }
                 # Load template:
                 return render(request, 'registration/register.html', context)
-        
+
 
         class CustomPasswordChangeView(PasswordChangeView):
             template_name = 'accounts/pwd_change.html'
@@ -69,7 +65,7 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
                 context['bt_submit'] = lng.BT_PROFILE_PWD_SUBMIT
                 return context
 
-    
+
 
     4) Still in the 'accounts' sub-app, create the urls.py file and fill it with:
 
@@ -106,15 +102,15 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
 
     7) In your config-folder, open the settings.py and add it:
-                
+
             SESSION_COOKIE_AGE = 2419200  # a month
-            
+
             LOGIN_URL = 'accounts:login'  # It's built-in.
 
             LOGIN_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
                 # E.g. 'in:home_view'
-            
-            LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>' 
+
+            LOGOUT_REDIRECT_URL = '<subapp_namespace>:<url_pattern_name>'
                 # E.g. 'general:home_view'
 
 
@@ -124,10 +120,10 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
 
     9) Logout:
-            /vault/python/web-development/django/10-login-and-logout/3-logout-in-django.txt
+            /python/web-development/django/10-login-and-logout/3-logout-in-django.txt
 
 
 
     EXTENDING THE USER FEATURES:
 
-        /vault/python/web-development/django/3-1-models-database/3-users/extending-users-basic.txt
+        /python/web-development/django/3-1-models-database/3-users/extending-users-basic.txt

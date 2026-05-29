@@ -1,7 +1,4 @@
-
-
 DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
-
 
     ATTENTION:
         If you are RE-installing Wagtail, skip all of this, and following only this one:
@@ -11,32 +8,32 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
         Don't install Django before Wagtail! This installation is a Stand-alone.
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     PRE.1) Python interpreter (if needed);
-        /vault/python/1-python-installation/
+        /python/1-python-installation/
 
     PRE.2) Create the project folder, and get it:
         $ mkdir <project_folder>
         $ cd <project_folder>
 
     PRE.3) Create the project's virtual environment:
-        /vault/python/3-virtual-environment/creating-virtual-environment.txt
+        /python/3-virtual-environment/creating-virtual-environment.txt
 
     PRE.4) Did you already active project's virtual environment?! I hope so!
-        /vault/python/3-virtual-environment/activate-and-deactivate.txt
+        /python/3-virtual-environment/activate-and-deactivate.txt
 
     PRE.5) IDE, language setup:
-        >> VSCode:  /vault/python/IDE-softwares/vscode/basic-for-python.txt
-        >> PyCharm: /vault/python/IDE-softwares/pycharm/basic-for-python.txt
+        >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
+        >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
 
     PRE.6) IDE, main framework setup:
-        >> VSCode:  /vault/python/web-development/django/IDE-softwares/vscode/basic-for-django.txt
-        >> PyCharm: /vault/python/web-development/django/IDE-softwares/pycharm/basic-for-django.txt
+        >> VSCode:  /python/web-development/django/IDE-softwares/vscode/basic-for-django.txt
+        >> PyCharm: /python/web-development/django/IDE-softwares/pycharm/basic-for-django.txt
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     1) Define the Package Manager to setup project for Django:
@@ -46,14 +43,14 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
 
         1B) Or installing Django, using PIP (Django built-in solution):
             ./1-with-pip-manager.txt
- 
+
 
     X) Once you are in the project folder, create the minimul Python project scaffolding:
         # Using UV:
             $ uv init
         # Or manually creating the pyproject.toml file:
-            /vault/python/web-development/pyproject.toml
-            
+            /python/web-development/pyproject.toml
+
 
     2) Already in the project virtual envinronment, install the Wagtail (contains Django embedded):
         # Using UV:
@@ -63,13 +60,13 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
 
 
     3) In the project root folder:
-        
+
         ATTENTION:
             Avoid 'shadowing', use a different name folder of the main project folder instead.
-        
+
                 $ wagtail start <my_wagtail_folder_name>
 
-        
+
     4) Go to the new wagtail folder just created, and install the wagtail requirements:
         $ cd <my_wagtail_folder_name>
             # Using UV:

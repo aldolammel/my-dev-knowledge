@@ -3,18 +3,18 @@
 FORMATTER FOR PYTHON: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.md
+        /dev-concepts/tool-formatter.md
 
     >> Options:
 
         >> Ruff (Yes, it's a formatter too)
-            /vault/python/Linter-Formatter-Typechecker/ruff/
+            /python/Linter-Formatter-Typechecker/ruff/
 
         >> Black:
-            /vault/python/Linter-Formatter-Typechecker/black/
+            /python/Linter-Formatter-Typechecker/black/
 
         >> autopep8:
-            /vault/python/Linter-Formatter-Typechecker/autopep8/
+            /python/Linter-Formatter-Typechecker/autopep8/
 
         >> yapf:
             /xxxxxxxxxxxxxxxxxxxx

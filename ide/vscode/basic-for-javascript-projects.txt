@@ -1,4 +1,4 @@
 
 
-/vault/javascript/IDE-softwares/vscode/basic-for-javascript.txt
-/vault/javascript/IDE-softwares/vscode/basic-for-typescript.txt
+/javascript/IDE-softwares/vscode/basic-for-javascript.txt
+/javascript/IDE-softwares/vscode/basic-for-typescript.txt

@@ -8,13 +8,13 @@
     Use Case: ...... When you need to check if any element meets criteria;
 
     Traditional For() loop method:
-        /vault/javascript/for.js
+        /javascript/for.js
 
     Find() method:
-        /vault/javascript/find.js
+        /javascript/find.js
 
     ForEach() loop method:
-        /vault/javascript/forEach-loop.js
+        /javascript/forEach-loop.js
 */
 
 const numbers = [1, 2, 3, 4, 5];

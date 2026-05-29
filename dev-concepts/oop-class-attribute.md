@@ -4,7 +4,7 @@ OOP: CLASS ATTRIBUTES
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class.md
+        /dev-concepts/oop-class.md
 
 
     >> Example:
@@ -27,4 +27,4 @@ OOP: CLASS ATTRIBUTES
     >> Directly related:
 
         >> Arguments (Parameters):
-            /vault/dev-concepts/oop-class-attribute-argument.md
+            /dev-concepts/oop-class-attribute-argument.md

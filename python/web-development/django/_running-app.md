@@ -1,7 +1,4 @@
-
-
 DJANGO: RUNNING AN APP
-
 
     PRE.1) Keep it in mind: this app is using local db or a cloud one? Case local, is the db service running properly?
 
@@ -10,14 +7,14 @@ DJANGO: RUNNING AN APP
 
 
     PRE.3) Assuming you got the project's environment activated:
-        /vault/python/3-virtual-environment/activate-and-deactivate.txt
+        /python/3-virtual-environment/activate-and-deactivate.txt
 
 
     PRE.4) (If applicable)
         Assuming you're in the right Git branch;
-            /vault/versioning/git/command-branch.txt
-            /vault/versioning/git/command-checkout.txt
-    
+            /versioning/git/command-branch.txt
+            /versioning/git/command-checkout.txt
+
 
     4) Run the app:
 
@@ -32,7 +29,7 @@ DJANGO: RUNNING AN APP
                 $ python manage.py runserver
             # With no auto-reload (avoid server auto-update and instability):
                 $ python manage.py runserver --noreload
-    
+
 
     5) Check the app through the browser:
         http://localhost:8000/

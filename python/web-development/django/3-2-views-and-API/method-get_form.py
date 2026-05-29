@@ -15,7 +15,7 @@
         - Generic editing views.
 
     >> Its usage in CMS:
-        /vault/python/web-development/django/4-cms-admin/method-get_form.py
+        /python/web-development/django/4-cms-admin/method-get_form.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

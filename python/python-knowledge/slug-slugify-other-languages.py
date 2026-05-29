@@ -6,10 +6,10 @@
         ./slug-slugify-english.py
         
     >> Slugify with Django for English:
-        /vault/python/web-development/django/slug-slugify-django-english.py
+        /python/web-development/django/slug-slugify-django-english.py
 
     >> Slugify with Django for non-English languages:
-        /vault/python/web-development/django/slug-slugify-django-other-languages.py
+        /python/web-development/django/slug-slugify-django-other-languages.py
 """
 
 import re

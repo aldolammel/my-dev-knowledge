@@ -7,7 +7,7 @@
 */
 
 // TRADITIONAL FOR() LOOP:
-// More about: /vault/javascript/for.js
+// More about: /javascript/for.js
 
 // Break works to stop the loop:
 for (let i = 0; i < array.length; i++) {
@@ -18,7 +18,7 @@ for (let i = 0; i < array.length; i++) {
 }
 
 // FOREACH() LOOP:
-// More about: /vault/javascript/forEach-loop.js
+// More about: /javascript/forEach-loop.js
 
 // Break doesn't work with forEach:
 array.forEach((item, index) => {
@@ -29,7 +29,7 @@ array.forEach((item, index) => {
 });
 
 // SOME() LOOP:
-// More about: /vault/javascript/some.js
+// More about: /javascript/some.js
 
 // Use some() which stops when you return true:
 array.some((item, index) => {

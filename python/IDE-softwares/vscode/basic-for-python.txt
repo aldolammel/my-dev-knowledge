@@ -24,4 +24,4 @@ IDE FOR PYTHON PROJECT: VSCODE
 
 
 VSCODE USER PROFILES:
-    /vault/ide/vscode/user-profiles-bkp/
+    /ide/vscode/user-profiles-bkp/

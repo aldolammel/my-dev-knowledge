@@ -1,5 +1,3 @@
-
-
 JAVASCRIPT: LIFECYCLE HOOKS
 
-    /vault/javascript/lifecycle-hooks.js
+    /javascript/lifecycle-hooks.js

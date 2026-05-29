@@ -1,10 +1,8 @@
-
-
 DRF: DJANGO REST FRAMEWORK
 
     Django REST framework is a powerful and flexible toolkit for building Web APIs.
     Some reasons you might want to use REST framework:
-    
+
         - The Web browsable API is a huge usability win for your developers.
         - Authentication policies including packages for OAuth1a and OAuth2.
         - Serialization that supports both ORM and non-ORM data sources.
@@ -16,15 +14,13 @@ DRF: DJANGO REST FRAMEWORK
     https://www.django-rest-framework.org/
 
     >> More about API:
-        >> API:          /vault/api/_about.md
-        >> Serializers:  /vault/api/serializers.txt
+        >> API:          /api/_about.md
+        >> Serializers:  /api/serializers.txt
 
     >> Dataflow of a real Django REST Framework usage:
-        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     1) Install:
 
@@ -65,7 +61,7 @@ DRF: DJANGO REST FRAMEWORK
                 ),
             }
 
-        2.3) If you're intending to use the browsable API you'll probably also want to add REST 
+        2.3) If you're intending to use the browsable API you'll probably also want to add REST
             framework's login and logout views. Add the following to your core urls.py file:
 
                 urlpatterns = [
@@ -79,17 +75,18 @@ DRF: DJANGO REST FRAMEWORK
                     #...
                 ]
 
-                >> INFO: 
+                >> INFO:
                     Note that the URL path can be whatever you want!
 
                 >> Example:
                     ./example/core/
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > DRF POWER-UPS: CREATING APIs
 
->> DRF POWER-UPS: CREATING APIs
     ./1-serializers.txt
 
->> EXPANDING DJANGO REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
+> > EXPANDING DJANGO REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
+
     .../component-libraries/json-web-token-SimpleJWT/0-jwt.txt

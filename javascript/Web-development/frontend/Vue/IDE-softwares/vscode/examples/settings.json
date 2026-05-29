@@ -7,9 +7,9 @@
     // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     //...
     // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // !!!!!!!!!!!!!!!!! Check: /vault/javascript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /javascript/IDE-softwares/vscode/examples/.vscode/settings.json
     // JSON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // !!!!!!!!!!!!!!!!! Check: /vault/javascript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /javascript/IDE-softwares/vscode/examples/.vscode/settings.json
     // VUE SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "[vue]": {
         //"editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -18,9 +18,9 @@
         "editor.insertSpaces": true,
     },
     // HTML SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // !!!!!!!!!!!!!!!!! Check: /vault/javascript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /javascript/IDE-softwares/vscode/examples/.vscode/settings.json
     // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // !!!!!!!!!!!!!!!!! Check: /vault/javascript/IDE-softwares/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /javascript/IDE-softwares/vscode/examples/.vscode/settings.json
     // FILES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // Tell VSCode how to treat files based on patterns:
     "files.associations": { // Tell VSCode how to treat files based on patterns.

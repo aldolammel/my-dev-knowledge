@@ -1,5 +1,3 @@
-
-
 DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
 
     Django Forms fields support use of utility functions and classes known as validators (built-in and customized ones). A validator is a callable object or function that -ONLY- takes a value and returns nothing if the value is valid or raises a -ValidationError- if not.
@@ -9,7 +7,7 @@ DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
 
 
     >> In /apps/my_app/models.py file, example:
-        
+
         class ExampleModel(models.Model):
             attribute_example = models.CharField(
                 ...
@@ -19,7 +17,7 @@ DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
                 ],
             )
 
-    
+
     >> In /apps/my_app/forms.py file, the same validator example:
 
         class ExampleForm(forms.Form):
@@ -31,7 +29,7 @@ DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
                 ]
             )
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     Current options (until set/2025):
 
@@ -65,13 +63,12 @@ DJANGO FORMS > VALIDATIONS > BULT-IN VALIDATORS
         ProhibitNullCharactersValidator
         StepValueValidator
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > CREATE YOUR OWN MODEL VALIDATOR:
 
+    /python/web-development/django/6-errors-and-validations/models-validators-customized.py
 
->> CREATE YOUR OWN MODEL VALIDATOR:
-    /vault/python/web-development/django/6-errors-and-validations/models-validators-customized.py
+> > OTHER VALIDATION LEVELS:
 
-
->> OTHER VALIDATION LEVELS:
-    /vault/python/web-development/django/6-errors-and-validations/1-validation-basic.txt
+    /python/web-development/django/6-errors-and-validations/1-validation-basic.txt

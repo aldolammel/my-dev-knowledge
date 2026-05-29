@@ -1,10 +1,11 @@
 #### Python > Django > Project types
-# Discovery in Django 
+
+# Discovery in Django
 
     Group of action to figure out a Django project settings and features:
 
         PRE) Discovery about Python:
-            /vault/python/0-new-project/discovery-python.md
+            /python/0-new-project/discovery-python.md
 
         x) xxxxxx
 
@@ -30,7 +31,7 @@
 DISCOVERY OF RELATED DJANGO PROJECT'S FRAMEWORKS
 
     >> Vue:
-        /vault/javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
+        /javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
 
     >> React:
         /xxxxxxxxxxxxxxxxxxx

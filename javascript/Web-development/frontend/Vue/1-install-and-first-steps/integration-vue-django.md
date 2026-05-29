@@ -1,17 +1,15 @@
-
-
     INTEGRATING VUE WITH DJANGO:
 
         PRE I) (Dependence) Node.js installation:
-            /vault/javascript/NodeJS/1-installation.md
-        
+            /javascript/NodeJS/1-installation.md
+
         PRE II) Vue.js installation:
             ./0-vue-installation-and-setup.txt
 
         PRE III) Creating a Vue.js project:
             ./1-install-new-project.md
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> Integrating:
 
@@ -21,14 +19,14 @@
 
                 >> Win:
                     $
-                    
+
                 >> Ubuntu:
                     # Already in <frontend_folder_name>:
                     $ sudo mv dist ../static
-                
+
                 >> Mac:
                     $
-                    
+
             X) Update the settings.py:
 
                 STATIC_URL = 'static/'
@@ -57,7 +55,7 @@
 
             X) (Optional)
                 Pagex is an Django site builder developed by me (@aldolammel), and it's compatible with Vue:
-                    /vault/python/web-development/django/useful-sub-apps/pagex/with-frontend-vue.txt
+                    /python/web-development/django/useful-sub-apps/pagex/with-frontend-vue.txt
 
 
 
@@ -74,7 +72,7 @@
         A) Use Vue.js in Django Templates:
 
             A1) Include the Vue.js script in your Django template:
-            
+
                 >> Add the Vue.js library to your template:
 
                     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>

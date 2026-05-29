@@ -1,7 +1,1 @@
-
-
-
-/vault/python/web-development/django/Linter-Formatter-Typechecker/pylint-django/installation.md
-
-
-
+/python/web-development/django/Linter-Formatter-Typechecker/pylint-django/installation.md

@@ -1,1 +1,1 @@
-/vault/javascript/web-development/
+/javascript/web-development/

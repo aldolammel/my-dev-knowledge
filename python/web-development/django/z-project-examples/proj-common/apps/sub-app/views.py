@@ -1,1 +1,1 @@
-# /vault/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/views.py
+# /python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/views.py

@@ -1,1 +1,1 @@
-/vault/javascript/vault/internet-of-things/
+/javascript/internet-of-things/

@@ -1,9 +1,7 @@
-
-
 AXIOS: INTEGRATION WITH VUE.JS:
 
     >> Axios installation:
-        /vault/javascript/NodeJS/component-libraries/axios-api/axios.txt
+        /javascript/NodeJS/component-libraries/axios-api/axios.txt
 
     >> Integration with Vue:
 
@@ -16,10 +14,10 @@ AXIOS: INTEGRATION WITH VUE.JS:
                 >> CRITICAL: Vue with Vite mandatorily require env vars with 'VITE_' prefix!
 
                 >> Need to create a front-end .env file?
-                    /vault/environment-variables/env-for-local/in-frontend/.env
+                    /environment-variables/env-for-local/in-frontend/.env
 
             2) In the front-end main-app-js file, include:
-                
+
                 // Importing for SPA:
                 ...
                 import axios from 'axios';
@@ -36,7 +34,7 @@ AXIOS: INTEGRATION WITH VUE.JS:
 
 
         >> For MPA projects:
-            
+
             x) xxxx
             x) xxxx
             x) xxxx

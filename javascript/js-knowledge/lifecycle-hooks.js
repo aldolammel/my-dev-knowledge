@@ -4,7 +4,7 @@
     It is a group of phases that the javascript has when some action if called.
 
     The cycle is:
-        /vault/javascript/vuejs_lifecycle_hooks.png
+        /javascript/vuejs_lifecycle_hooks.png
 
 */
 

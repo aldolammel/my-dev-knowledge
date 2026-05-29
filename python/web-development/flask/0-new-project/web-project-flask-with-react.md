@@ -1,27 +1,27 @@
 #### Python > Flask > Project types
-# Flask as back-end + React as front-end 
 
+# Flask as back-end + React as front-end
 
     >> Back-end:
 
         1) Python installation (if needed);
-            /vault/python/1-python-installation/
-        
+            /python/1-python-installation/
+
         2) Virtual Environment and Flask installation (and its dependencies):
-            /vault/python/web-development/flask/xxxxxxxxx
-    
+            /python/web-development/flask/xxxxxxxxx
+
     >> Front-end:
 
         3) React installation (and its dependencies):
-            /vault/web-development/frontend/React/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            /web-development/frontend/React/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         4) (Optional) CSS Framework:
 
             >> Bootstrap:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
             >> Tailwind:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
 
             >> Bulma:
-                /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                /web-development/frontend/CSS/css-libraries-frameworks/bulma/

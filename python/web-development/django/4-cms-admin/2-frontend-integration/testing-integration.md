@@ -1,28 +1,25 @@
-
-
 LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
 
-    
     PRE.1) Make sure the project's database is running correctly!
 
         >> If Postgre:
-            /vault/database/PostgreSQL/0-basic/starting-and-stopping.md
+            /database/PostgreSQL/0-basic/starting-and-stopping.md
 
         >> If MySQL:
-            /vault/database/MySQL/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            /database/MySQL/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         >> Other:
-            /vault/database/
+            /database/
 
 
     1) Which environment type are you using?
-    
+
         1A) Development mode;
         1B) Or Production-like mode;
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-    
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
         1A) DEVELOPMENT MODE:
 
             >> Recommended method for development phase of the project. Here is need to run both
@@ -31,9 +28,9 @@ LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
 
                     # Terminal 1 = Django backend = localhost:8000 (default)
                         $ python manage.py runserver
-                        
+
                         # or
-                        
+
                         $ uv run manage.py runserver
 
                     # Terminal 2 = Vue frontend = localhost:5173 (default)
@@ -44,7 +41,7 @@ LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
 
         1B) Or PRODUCTION-LIKE MODE:
 
-            >> In this case, it's need to compile the entire project to visualize correctly. 
+            >> In this case, it's need to compile the entire project to visualize correctly.
                 Attention for cache issues!
 
                     # Build Vue frontend

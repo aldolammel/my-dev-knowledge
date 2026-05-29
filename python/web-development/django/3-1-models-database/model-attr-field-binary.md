@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
 
     Common Usage:
@@ -9,7 +7,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
         xxxxxxx
 
     Example:
-        
+
         from cryptography.fernet import Fernet
         import base64
 
@@ -35,7 +33,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
                 # Generate a key (In production, use a secure key from settings, not this!)
                 # key = Fernet.generate_key()
                 # cipher_suite = Fernet(key)
-                
+
                 # Use a pre-configured key from settings
                 cipher_suite = Fernet(stgs.ENCRYPTION_KEY)
                 # Encrypt the token string (requires bytes input)
@@ -63,14 +61,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
             def api_token(self, value):
                 self.set_token(value)
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > Other related options:
 
->> Other related options:
-    
     >> Char Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-char.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-char.txt
 
     >> File Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-file.txt
-
+        /python/web-development/django/3-1-models-database/model-attr-field-file.txt

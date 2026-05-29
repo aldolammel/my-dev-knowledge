@@ -1,5 +1,3 @@
-
-
     STARTING A TRANSLATION PROJECT:
 
 
@@ -8,14 +6,14 @@
             1.1) Install basic modules:
 
                 >> Gettext Module (to translate the content itself):
-                    
-                    /vault/python/component-libraries/gettext/0-gettext.txt
+
+                    /python/component-libraries/gettext/0-gettext.txt
 
                 >> Rosetta app (include an admin sub-app to manage translations):
 
                     .../django/component-libraries/django-rosetta/0-django-rosetta.txt
-            
-            
+
+
             1.2) In settings.py, add the LocaleMiddleware between 'Session' and 'Common'
                 middlewares:
 
@@ -28,16 +26,16 @@
                     >> Crucial: middleware order matters! So double-check with these guidelines:
 
                         >> Make sure it’s one of the first middleware installed;
-                        
+
                         >> It should come after SessionMiddleware, because LocaleMiddleware makes
                             use of session data;
-                        
+
                         >> It should come before CommonMiddleware because CommonMiddleware needs an
                             activated language in order to resolve the requested URL;
 
                         >> If you use CacheMiddleware, put LocaleMiddleware after it;
-            
-            
+
+
             1.3) Still in settings.py, in 'internationalization' section:
 
                 # Internationalization
@@ -115,12 +113,12 @@
                     )
 
                     >> Obs.: maybe for advanced language settings, you'll need to use it as True!
-                    
+
 
             1.6) (Optional) Create the 'lang.py' file in your config-folder:
 
-                /vault/python/web-development/django/8-translate-and-internationalization/language-file-example.py
-                /vault/python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
+                /python/web-development/django/8-translate-and-internationalization/language-file-example.py
+                /python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.txt
 
 
             1.7) (Optional????) IDE configs:
@@ -131,10 +129,10 @@
 
                         // DJANGO SETTINGS
                         "django.i18n": true, // Activates the i18n features for snippets (eg.: _(""))
-                
-                
-      
-        2) Defining which text-contents are translatable: - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        2) Defining which text-contents are translatable: - - - - - - - - - - - - - - - - - - - - -
 
             2.1) Method to translate Views and Models:
 
@@ -150,7 +148,7 @@
                         ...
                     )
 
-                >> CRUCIAL: after translate your models, remember to run 'makemigrations' 
+                >> CRUCIAL: after translate your models, remember to run 'makemigrations'
                             and 'migrate' commands.
 
 
@@ -159,7 +157,7 @@
                 >> Call this in the FIRST line on each html file that's using
                     translation benefits, EXCEPT if the template is calling
                     the template-tag 'extends':
-                        
+
                         {% extends "base.html" %}     <-- Always the first line!
                         {% load i18n %}
 
@@ -167,17 +165,17 @@
 
 
                 >> Translating the HTML content itself:
-                    
+
                         <h1>{% trans "Welcome" %}</h1>
                         <p>{% trans "I am Aldo Lammel" %}.</p>
 
                     >> Sometimes you can easy translate the text directly in the View, sending the
                         translate to template through Context. It's up to you.
-            
+
 
             2.3) Finishing the definition process:
 
-                >> Don't worry about future updates over the translatable content. 
+                >> Don't worry about future updates over the translatable content.
                     Later, I'll show how-to.
 
                 >> In project-root, create a folder called 'locale';
@@ -195,7 +193,7 @@
                 >> Create all language files (.PO):
 
                     $ django-admin makemessages --all
-                    
+
                     Or, if you are using UV:
 
                     $ uv run manage.py makemessages --all
@@ -213,7 +211,7 @@
                     declared in settings.py is 'en' or some variant of that. That said, you can
                     leave the /en/django.po file untouchable 'cause Gettext will assume each empty
                     'msgstr' means each 'msgid' text is the default/original one;
-            
+
 
             3.2) Additional language:
 
@@ -256,7 +254,7 @@
 
 
 
-        
+
         3) Database Translation process: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             3.1) Install and integrate Parler Module:
@@ -264,7 +262,7 @@
                 .../django/component-libraries/django-parler/0-django-parler.txt
 
 
-            
+
             3.2) For Models:
                 ./translate-models.txt
 
@@ -275,7 +273,7 @@
 
             3.4) For Model Managers and Model QuerySets:
                 ./translate-querysets-and-managers.txt
-                    
+
 
 
         4) Language switching on the interface - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -293,7 +291,7 @@
                         'LANGUAGES': stt.LANGUAGES,  # Available languages!
                         'LANGUAGE_CODE': request.LANGUAGE_CODE,  # Currently active language!
                     }
-            
+
 
             4.2) In settings.py, include that new global-context:
 
@@ -315,12 +313,12 @@
                     },
                 ]
 
-            
+
             4.3) On /core/urls.py file:
 
                 # DJANGO:
                 path('i18n/', include('django.conf.urls.i18n')),
-                
+
                     >> This will enable Django's 'set_language' view, which processes
                         the language change request.
 
@@ -333,7 +331,7 @@
 
 
                 >> To use a template-variable "{{ }}" globally:
-                    
+
                     \33-Web-development\backend\python\django\3-2-backend-views\1-building-views-context\global-context.txt
 
 
@@ -346,15 +344,14 @@
 
 
 
-        5) Final touch: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
+        5) Final touch: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
             5.1) Check each translation to fix all 'fuzzy' flag that means the translation needs
                 translator attention!
-            
-            
+
+
             5.2) (I never needed) Database: If your database contains any content that will be translated,
                 ensure your PostgreSQL database is set up with UTF-8 encoding, which is necessary
                 for handling multi-language content.
 
                     $ psql -U yourusername -d yourdbname -c
-

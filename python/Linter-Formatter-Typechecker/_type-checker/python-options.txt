@@ -3,15 +3,15 @@
 TYPE-CHECKER FOR PYTHON: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-typechecker.md
+        /dev-concepts/tool-typechecker.md
 
     >> Options:
 
         >> MyPy:
-            /vault/python/Linter-Formatter-Typechecker/MyPy/_about.md
+            /python/Linter-Formatter-Typechecker/MyPy/_about.md
 
         >> PyRight:
-            /vault/python/Linter-Formatter-Typechecker/PyRight/_about.md
+            /python/Linter-Formatter-Typechecker/PyRight/_about.md
 
         >> Pyre:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

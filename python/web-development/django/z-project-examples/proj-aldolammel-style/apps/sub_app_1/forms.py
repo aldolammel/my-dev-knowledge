@@ -6,7 +6,7 @@ from . import models
 
 """
 Form class model:
-https://github.com/aldolammel/my-dev-knowledge/blob/main/vault/python/web-development/django/9-forms/_form-class-model.py
+https://github.com/aldolammel/my-dev-knowledge/blob/main/python/web-development/django/9-forms/_form-class-model.py
 """
 
 

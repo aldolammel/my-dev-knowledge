@@ -1,12 +1,10 @@
-
-
 DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
 
     PRE.1) If you wanna install a totally new brand project, skip this roadmap, and go to:
         ./2-install-project-with-pip.md
-    
+
     PRE.2) Basic about PIP:
-        /vault/python/package-manager/pip/_about.md
+        /python/package-manager/pip/_about.md
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -24,8 +22,8 @@ DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN 
 
             2.1) Select through the IDE GUI which User Profile this project demands!
                     # Aldo's profile backups:
-                        /vault/ide/vscode/user-profiles-bkp/
-                        /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                        /ide/vscode/user-profiles-bkp/
+                        /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             2.2) Open this new folder in your IDE;
 
@@ -33,27 +31,27 @@ DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN 
 
             xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    
+
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     >> PROJECT RE-CREATION:
 
         1) Clone the project into the new project folder:
-            /vault/versioning/git/command-clone.txt
-        
+            /versioning/git/command-clone.txt
+
         2) (If applicable)
             Local project folder structure:
-            
+
             >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further (use the django structure example only for consulting best practices):
                 .../django/django-project-folder-structure.txt
-        
-        
+
+
         3) Create the .venv folder:
-            /vault/python/3-virtual-environment/creating-virtual-environment.txt
+            /python/3-virtual-environment/creating-virtual-environment.txt
 
             # Make sure you activated the environment:
-                /vault/python/3-virtual-environment/activate-and-deactivate.txt
+                /python/3-virtual-environment/activate-and-deactivate.txt
 
 
         4) Installing all project dependencies based on requirements:
@@ -62,16 +60,16 @@ DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN 
                 >> Probably if you were using this file, you were using UV, and not PIP!
 
             >> Or Using requirements.toml:
-                /vault/python/package-manager/pip/auto-installation-from-requirements-file.md
+                /python/package-manager/pip/auto-installation-from-requirements-file.md
 
 
         5) Choosing the way to create the project's db:
 
             >> You don't have a local db created yet:
-                /vault/database/00-new-project/create-db-for-existing-project.txt
+                /database/00-new-project/create-db-for-existing-project.txt
 
             >> Or you already have the local db created:
-                        
+
                 >> Run the makemigrations command:
                     $ python manage.py makemigrations
 
@@ -83,22 +81,20 @@ DJANGO > PROJECT RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN 
             If you have multilingual support in your project:
 
             >> With Gettext module installed:
-                
+
                 $ python manage.py makemessages --all
                 $ python manage.py compilemessages
 
-            
+
         7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
-                /vault/versioning/git/gitignore-file.md
+                /versioning/git/gitignore-file.md
 
 
         8) Check Django installation and setup:
             ./2.1-installed-project-testing.md
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+---
 
 MAKE SURE YOU FINISHED ALL THESE STEPS:
-    ./0-django-installation-and-setup.md
+./0-django-installation-and-setup.md

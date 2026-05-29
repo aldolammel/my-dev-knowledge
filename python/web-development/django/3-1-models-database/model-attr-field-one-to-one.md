@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: ONE-TO-ONE FIELD
 
     Common Usage:
@@ -9,7 +7,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: ONE-TO-ONE FIELD
         xxxxxxx
 
     Example:
-        
+
         home_page = models.OneToOneField(
             "PagexPage",
             on_delete=models.SET_NULL,
@@ -18,13 +16,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: ONE-TO-ONE FIELD
             related_name="is_home_for",
         )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Foreign Key:
-        /vault/python/web-development/django/3-1-models-database/model-attr-foreignKey.txt
-    
-    >> Many-To-Many Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.txt
+        /python/web-development/django/3-1-models-database/model-attr-foreignKey.txt
 
+    >> Many-To-Many Field:
+        /python/web-development/django/3-1-models-database/model-attr-field-many-to-many.txt

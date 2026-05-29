@@ -166,14 +166,14 @@ class MyModelForm(forms.ModelForm):
 
     >> How to customize an extra field (not from connected model):
     
-        /vault/python/web-development/django/9-forms/customizing-basic-attrs-extra-field.py
+        /python/web-development/django/9-forms/customizing-basic-attrs-extra-field.py
         
         
 
 
     >> If you need (for some weird reason) to customize fully a form without Django main assistence:
 
-        /vault/python/web-development/django/9-forms/customizing-fully-on-template.txt  (Not recommended!)
+        /python/web-development/django/9-forms/customizing-fully-on-template.txt  (Not recommended!)
 
 
 '''

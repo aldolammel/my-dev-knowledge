@@ -55,4 +55,4 @@ class ReviewForm(forms.ModelForm):  # That 'Form' in the classname is a conventi
 
 
 # ON THE TEMPLATE / FRONT-END:
-# /vault/python/web-development/django/9-forms/based-class-ModelForm/template.html
+# /python/web-development/django/9-forms/based-class-ModelForm/template.html

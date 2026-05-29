@@ -31,7 +31,7 @@ def validate_something(value):  # this 'validate_' is a convention for validator
         raise ValidationError(
             "An error message here!",
             # Check the code:
-            # /vault/python/web-development/django/6-errors-and-validations/error-identification-codes.txt
+            # /python/web-development/django/6-errors-and-validations/error-identification-codes.txt
             code="xxxxxxxxxx",
         )
 
@@ -92,7 +92,7 @@ class ExampleForm(forms.Form):
 
 """
     CUSTOM VALIDATOR FOR M2M FIELDS (SPECIAL CASE):
-        /vault/python/web-development/django/6-errors-and-validations/models-validators-customized-for-m2m.py
+        /python/web-development/django/6-errors-and-validations/models-validators-customized-for-m2m.py
 """
 
 

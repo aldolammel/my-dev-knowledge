@@ -5,5 +5,5 @@ from . import models
 
 """
 View class model:
-https://github.com/aldolammel/my-dev-knowledge/blob/main/vault/python/web-development/django/3-2-views-and-API/_view-class-model.txt
+https://github.com/aldolammel/my-dev-knowledge/blob/main/python/web-development/django/3-2-views-and-API/_view-class-model.txt
 """

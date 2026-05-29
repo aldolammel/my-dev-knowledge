@@ -1,10 +1,7 @@
-
-
 DJANGO: SERIALIZERS
 
-
     WHAT:
-        /vault/dev-concepts/serialization.md
+        /dev-concepts/serialization.md
 
 
     CREATING THE API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -16,9 +13,9 @@ DJANGO: SERIALIZERS
 
         PRE.2) Toolkit:
             Assuming you have already an Web API toolkit like Django REST Framework.
-                
-                /vault/python/web-development/django/component-libraries/django-rest-framework/0-restframewok.txt     
-        
+
+                /python/web-development/django/component-libraries/django-rest-framework/0-restframewok.txt
+
 
         1) Data conversion (my_app/serializers.py):
             Creating a Serializer-class (API) attached with the Model-class where the data belongs.
@@ -26,7 +23,7 @@ DJANGO: SERIALIZERS
 
 
         2) API logic:
-            
+
             >> Sending data (my_app/views.py)::
                 Declaring which serialized data must be released externally.
                     ./serializer-view-sending-data.py
@@ -34,18 +31,18 @@ DJANGO: SERIALIZERS
             >> Or Sending/Receiving data:
                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                     /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        
+
 
         3) URL routing (my_app/urls.py):
             Direct the incoming web requests, pointing them to the right Views.py class.
-                
+
                 ./serializer-urls.py
 
 
         4) Visualization on CMS (my_app/admin.py):
             ./serializer-admin-json-preview.py
-        
-        
+
+
         5) Test it!
 
-        
+

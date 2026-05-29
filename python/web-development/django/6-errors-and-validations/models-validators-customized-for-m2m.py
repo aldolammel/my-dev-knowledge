@@ -16,7 +16,7 @@
     There is ONLY one way to validate a m2m field, and it means do it just right AFTER the instance saving (yes, if user escape from browser without set the mandatory field, you got no that info)!
 
     >> For non-m2m fields:
-        /vault/python/web-development/django/6-errors-and-validations/models-validators-customized.py
+        /python/web-development/django/6-errors-and-validations/models-validators-customized.py
 
 """
 

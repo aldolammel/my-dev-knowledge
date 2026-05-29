@@ -1,9 +1,4 @@
-
-
-
 VIEWS REQUIRING LOGIN AUTHENTICATED:
-
-
 
     IF USING FUNCTION-BASED VIEWS (FBV):
 
@@ -38,8 +33,8 @@ VIEWS REQUIRING LOGIN AUTHENTICATED:
 
 
 
-    
+
 
     NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
 
-        /vault/python/web-development/django/12-error-pages/401/
+        /python/web-development/django/12-error-pages/401/

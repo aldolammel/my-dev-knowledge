@@ -1,20 +1,17 @@
-
-
 IDE FOR JS PROJECT: VSCODE
 
-
         PRE.1) JS project:
-            /vault/javascript/00-New-Project/1-new-project.md
+            /javascript/00-New-Project/1-new-project.md
 
 
         PRE.2) IDE VSCode install:
 
             Linux:
-                /vault/os/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/ide-code.md
+                /os/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/ide-code.md
                 or
-                /vault/os/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/ide-code.md
+                /os/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/ide-code.md
 
-            
+
             Windows:
                 https://code.visualstudio.com
 
@@ -35,21 +32,19 @@ IDE FOR JS PROJECT: VSCODE
             IMPORTANT FOR TEAMS:
                 Make sure your .gitignore file is not blocking the .vscode folder and its content in project repository! Once you wouldn't be the only team member in this project, people like to custom their IDEs too.
 
-        
-        2) Type-Checker:
-            /vault/javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
 
-        
+        2) Type-Checker:
+            /javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+
+
         3) Linter (Recommended: ESLint):
-            /vault/javascript/Linter-Formatter-Typechecker/_linter/js-options.txt
+            /javascript/Linter-Formatter-Typechecker/_linter/js-options.txt
 
 
         4) Formatter (Recommended: Prettier):
-            /vault/javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+            /javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+---
 
 VSCODE USER PROFILES:
-    /vault/ide/vscode/user-profiles-bkp/
+/ide/vscode/user-profiles-bkp/

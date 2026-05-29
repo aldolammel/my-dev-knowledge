@@ -1,1 +1,1 @@
-/vault/python/0-new-project/2-web-project-flask-with-react.md
+/python/0-new-project/2-web-project-flask-with-react.md

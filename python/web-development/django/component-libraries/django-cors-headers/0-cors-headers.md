@@ -1,5 +1,3 @@
-
-
 DJANGO CORS HEADERS:
 
     It's a Django app designed to handle Cross-Origin Resource Sharing (CORS) headers in responses
@@ -8,9 +6,7 @@ DJANGO CORS HEADERS:
 
     https://github.com/adamchainz/django-cors-headers
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> Install:
 
@@ -43,7 +39,7 @@ DJANGO CORS HEADERS:
             ]
 
             CRITICAL:
-                CorsMiddleware should be placed as high as possible, especially before any middleware that can generate responses such as Django's CommonMiddleware or Whitenoise's WhiteNoiseMiddleware. 
+                CorsMiddleware should be placed as high as possible, especially before any middleware that can generate responses such as Django's CommonMiddleware or Whitenoise's WhiteNoiseMiddleware.
 
         3) For security reasons, let's do it:
 
@@ -58,13 +54,13 @@ DJANGO CORS HEADERS:
                     FRONT_URL2=http://127.0.0.1:5173
 
                 >> A model for your .env file:
-                    /vault/environment-variables/env-for-local/in-backend/.env
+                    /environment-variables/env-for-local/in-backend/.env
 
 
             3.2) Confirm if your /core/settings.py are calling correctly those env vars:
 
                 >> Using 'environ' module:
-                    
+
                     # Environment Variables, basic:
                     #...
                     # Environment Variables, callers:
@@ -76,9 +72,9 @@ DJANGO CORS HEADERS:
                     FRONT_URL2 = env("FRONT_URL2")  # Dev env for frontend.
 
                 >> Using another Python module:
-                    
+
                     xxxxxxxx
-                
+
 
             3.3) Still in settings.py:
 
@@ -100,12 +96,8 @@ DJANGO CORS HEADERS:
                     FRONT_URL2,
                 ]
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > XXXXXXXX
 
-
->> XXXXXXXX
     /xxxxxxxxxxxxxxxxxxxx
-
-
-

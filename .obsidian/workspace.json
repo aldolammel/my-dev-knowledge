@@ -4,23 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ec19af8556ff8182",
+        "id": "4b703551251bd594",
         "type": "tabs",
         "children": [
           {
-            "id": "c8cd69b99bd49662",
+            "id": "24c462f151ddb2a4",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_summary.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "_summary"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 479.5
   },
   "right": {
     "id": "d6099b0a15759e58",
@@ -96,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for _summary"
+              "title": "Backlinks"
             }
           },
           {
@@ -115,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from _summary"
+              "title": "Outgoing links"
             }
           },
           {
@@ -158,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of _summary"
+              "title": "Outline"
             }
           }
         ]
@@ -185,24 +176,33 @@
       "bases:Create new base": false
     }
   },
-  "active": "c8cd69b99bd49662",
+  "active": "24c462f151ddb2a4",
   "lastOpenFiles": [
-    "python/0-new-project/3-update-python-version-in-a-project.md",
-    "_summary.md",
-    "python/1-python-installation/_install.md",
-    "python/_about.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
-    "javascript/00-New-Project/3-update-vue-version-in-a-project.md",
-    "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/1-new-project.md",
-    "javascript/NodeJS/2-updating.md",
-    "python/web-development/django/0-new-project/discovery-django.md",
-    "README.md",
-    "coffee.md",
     "python/0-new-project/1-new-project.md",
+    "javascript/00-New-Project/1-new-project.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md",
+    "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/seo-project.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/discovery-vue.md",
+    "python/web-development/django/0-new-project/web-project-django-only.md",
+    "python/web-development/django/0-new-project/web-project-django-with-react.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
-    "python/web-development/flask/0-new-project/api.md",
-    "python/web-development/django/0-new-project/api.md",
-    "python/0-new-project/2-web-project-django-with-react.md"
+    "javascript/Web-development/frontend/Vue/0-new-project/web-project-django-with-vue.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/web-project-flask-with-vue.md",
+    "python/web-development/flask/0-new-project/web-project-flask-with-vue.md",
+    "javascript/Build-tools/Vite/0-vite.md",
+    "javascript/NodeJS/2-updating.md",
+    "javascript/NodeJS/0-new-project/update-node-version.md",
+    "web-development/frontend/CSS/css-libraries-frameworks/vuetify/_about.md",
+    "javascript/Web-development/frontend/Vue/0-new-project/1-new-project.md",
+    "_summary.md",
+    "os/windows/0-os-install/_roadmap.md",
+    "versioning/git/_basic.md",
+    "ide/vscode/_vscode-knowledge.md",
+    "server/os/linux/_building-and-installing-a-server.md",
+    "server/os/linux/updating-server.md",
+    "javascript/_about.md"
   ]
 }

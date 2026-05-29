@@ -1,5 +1,3 @@
-
-
 INCREASE AND DECREASE NUMBER BY CLICKING
 
     >> Decrease amount:
@@ -21,4 +19,4 @@ INCREASE AND DECREASE NUMBER BY CLICKING
 
 
     EXAMPLE:
-        /vault/javascript/web-development/frontend/Vue/examples-vue/products-selection-and-increase-amounts/index.html
+        /javascript/web-development/frontend/Vue/examples-vue/products-selection-and-increase-amounts/index.html

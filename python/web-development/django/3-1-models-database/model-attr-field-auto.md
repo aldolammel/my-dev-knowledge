@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: AUTO FIELD
 
     This is a subclass of IntegerField specifically designed for primary keys. It automatically increments each time a new object is created, just like the standard BigAutoField, but with the short range of an INTEGER.
@@ -20,14 +18,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: AUTO FIELD
             editable=False,
         )
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
+> > Other related options:
 
     >> Big Auto Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-bigAuto.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-bigAuto.txt
 
     >> Small Auto Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-smallAuto.txt
-    
+        /python/web-development/django/3-1-models-database/model-attr-field-smallAuto.txt

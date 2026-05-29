@@ -59,20 +59,20 @@ Here below you find NOT the entire content, but a few examples of you can find. 
 - .env for **cloud** development:
 	- In back-end, example: [environment-variables/env-for-cloud/in-backend/.env](environment-variables/env-for-cloud/in-backend/.env)
 	- In front-end, example: [environment-variables/env-for-cloud/in-frontend/.env](environment-variables/env-for-cloud/in-frontend/.env)
-- Using env vars:
-	- With Django: [env-vars-on-django](env-vars-on-django.md)
-	- With Vue: [javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
+- Using environment vars:
+	- On Django: [python/web-development/django/3-1-models-database/env-vars-on-django](python/web-development/django/3-1-models-database/env-vars-on-django.md)
+	- On Vue: [javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
 
 ## Server
 
-- Building up a Linux VPS: [_building-and-installing-a-server](_building-and-installing-a-server.md)
-- Updating server itself: [updating-server](updating-server.md)
-- Updating web-app on server (using Git): [updating-web-app-via-git](updating-web-app-via-git.md)
+- Building up a Linux VPS: [server/os/linux/\_building-and-installing-a-server](server/os/linux/_building-and-installing-a-server.md)
+- Updating server itself: [server/os/linux/updating-server](server/os/linux/updating-server.md)
+- Updating web-app on server (using Git): [server/os/linux/updating-web-app-via-git](server/os/linux/updating-web-app-via-git.md)
 
 ## IDE
 
 - VSCode
-	- What is it and how it works: [_vscode-knowledge](_vscode-knowledge.md)
+	- What is it and how it works: [ide/vscode/\_vscode-knowledge](ide/vscode/_vscode-knowledge.md)
 	- Config files:
 		- settings.json example: [ide/vscode/examples/.vscode/settings.json](ide/vscode/examples/.vscode/settings.json)
 		- extensions.json example: [ide/vscode/examples/.vscode/extensions.json](ide/vscode/examples/.vscode/extensions.json)
@@ -80,20 +80,20 @@ Here below you find NOT the entire content, but a few examples of you can find. 
 ## Code quality
 
 - Principles:
-	- DRY: [principles-dry](principles-dry.md)
+	- DRY: [dev-concepts/principles-dry](dev-concepts/principles-dry.md)
 - Tools: 
-	- Formatter: [tool-formatter](tool-formatter.md)
-	- Linter: [tool-linter](tool-linter.md)
-	- Type Checker: [tool-typechecker](tool-typechecker.md)
+	- Formatter: [dev-concepts/tool-formatter](dev-concepts/tool-formatter.md)
+	- Linter: [dev-concepts/tool-linter](dev-concepts/tool-linter.md)
+	- Type Checker: [dev-concepts/tool-typechecker](dev-concepts/tool-typechecker.md)
 
 ## Versioning
 
 - Git
-	- How it works and basic commands: [versioning/git/_basic](versioning/git/_basic.md)
-	- Git ignore (.gitignore) file: [gitignore-file](gitignore-file.md)
-  - Installing:
-    - Install: [versioning/git/_basic](versioning/git/_basic.md)
-    - Re-install in an existing project: [re-install-git-folder-in-an-existent-local-project](re-install-git-folder-in-an-existent-local-project.md)
+	- How it works and basic commands: [versioning/git/\_basic](versioning/git/_basic.md)
+	- Git ignore (.gitignore) file: [versioning/git/gitignore-file](versioning/git/gitignore-file.md)
+- Installing:
+    - Install: [versioning/git/\_basic](versioning/git/_basic.md)
+    - Re-install in an existing project: [versioning/git/re-install-git-folder-in-an-existent-local-project](versioning/git/re-install-git-folder-in-an-existent-local-project.md)
 
 ## Operational Systems
 
@@ -110,4 +110,4 @@ Here below you find NOT the entire content, but a few examples of you can find. 
 			- Installed apps list: [os/linux/distros/fedora/1-apps-install/finding-installed-apps](os/linux/distros/fedora/1-apps-install/finding-installed-apps.md)
 			- Checking the OS repo list: [os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list](os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list.md)
 - Windows:
-	- Formatting the system and installing it: [os/windows/0-os-install/_roadmap](os/windows/0-os-install/_roadmap.md)
+	- Formatting the system and installing it: [os/windows/0-os-install/\_roadmap](os/windows/0-os-install/_roadmap.md)

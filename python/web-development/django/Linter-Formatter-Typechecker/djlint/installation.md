@@ -1,7 +1,4 @@
-
-
 LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
-
 
     >> WHAT IS IT:
         ./_about.md
@@ -10,14 +7,14 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
     1) INSTALLING:
 
         PRE) Assuming you already got a virtual environment for the project, active it:
-            /vault/python/3-virtual-environment/activate-and-deactivate.txt
+            /python/3-virtual-environment/activate-and-deactivate.txt
 
         1.1) Install the djlint as development dependency:
-            
+
             >> Using UV:
                 $ uv add --optional dev djlint
                     # Check if everything's right on the project's pyproject.toml file!
-            
+
             >> Or using PIP:
                 # Install it:
                     $ python3 -m pip install -U djlint
@@ -43,16 +40,16 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
             format_css = false  # false = Prettier should take care of it!
             format_js = false  # false = Prettier should take care of it!
 
-        
+
         2.2) And manually install the DjLint extension for your Code IDE.
 
         2.3) DjLint configuration on IDE:
-        
+
             >> Using VSCode:
 
                 PRE) Assuming you already have:
                     .../django/IDE-softwares/vscode/examples/settings.json
-                
+
                 >> In /project/.vscode/settings.json, add the lines:
 
                     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -3,7 +3,7 @@
 DJANGO PROJECT: WHAT DATABASE TO USE
 
     Doubt about which to use:
-        /vault/database/principles-pacelc.md
+        /database/principles-pacelc.md
 
 
     You know what you want:

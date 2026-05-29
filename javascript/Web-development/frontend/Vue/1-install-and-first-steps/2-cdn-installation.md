@@ -1,21 +1,19 @@
-
-
-CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't understand 
-        .vue files. Use CDN 'installation' only for very simple Vue solutions.
+CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't understand
+.vue files. Use CDN 'installation' only for very simple Vue solutions.
 
             >> For professional solutions, use the local installation:
-                /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/2-local-installation.md
+                /javascript/web-development/frontend/Vue/1-install-and-first-steps/2-local-installation.md
 
 
 
     1) In your index HTML file, add the CDN script before you call the main script file URL, as well
         as you define which element (with correct ID) Vue must inject/mount your Vue front-end:
-                    
+
         <!-- Index HTML file -->
         <html>
             ...
             <body>
-            
+
                 ...
 
                 <!-- Vue app will be mounted here -->
@@ -25,7 +23,7 @@ CAUTION: With CDN, you must define your components as JS objects 'coz browser do
 
                 <!-- Vue CDN -->
                 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-                
+
                 <!-- Main JS file -->
                 <script src="./main.js"></script>
             </body>
@@ -56,7 +54,7 @@ CAUTION: With CDN, you must define your components as JS objects 'coz browser do
 
 
     4) (INFO ONLY) This same example above but using the LOCAL installation:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/hello-world/ 
+        /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/hello-world/
 
 
     5) To test and run the Vue using the CDN solution, you'll use:
@@ -71,5 +69,4 @@ CAUTION: With CDN, you must define your components as JS objects 'coz browser do
 
     >> Back to the installation instructions:
 
-        /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/1-install-new-project.md
-
+        /javascript/web-development/frontend/Vue/1-install-and-first-steps/1-install-new-project.md

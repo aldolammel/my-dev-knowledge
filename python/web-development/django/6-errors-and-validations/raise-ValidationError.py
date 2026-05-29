@@ -30,6 +30,6 @@ if not self.name:
 """- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     MORE ABOUT PYTHON ERROR MESSAGES:
-        /vault/python/python-knowledge/errors/_errors-most-common.py
+        /python/python-knowledge/errors/_errors-most-common.py
 
 """

@@ -1,10 +1,7 @@
-
-
 DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 1/2)
 
-
     PRE.1) Make sure you already define the HTML approach:
-        /vault/python/python-knowledge/27-Files-basics/files-upload-options.txt
+        /python/python-knowledge/27-Files-basics/files-upload-options.txt
 
 
     PRE.2) Prepare the very basic Django config for media upload:
@@ -13,7 +10,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 1/2)
 
     1) (if applicable)
         Once the non-admin form is available on the front-end, and it's targeting in your Django app via form action attribute, make sure the first line after the opening <form> tag is:
-                
+
             {% csrf_token %}
 
 
@@ -31,7 +28,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 1/2)
 
                 def post(self, request):
                     request.FILES['user_image']  # Assuming the input file on form is named as 'user_image'!
-                        # This request-object has properties like: 
+                        # This request-object has properties like:
                             # .POST: access to all sent non-file data from form;
                             # .FILES: access to uploaded file (dictionary) from form;
                     return HttpResponseRedirect('/my_subapp_done_page')
@@ -46,14 +43,13 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 1/2)
                 urlpatterns = [
                     path("", views.CreateProfileView.as_view())
                 ]
-    
+
 
     4) Now, follow this roadmap:
 
         ./django-upload-image-p2.txt
 
-
-- - - - 
+---
 
 FOR ANOTHER PYTHON FRAMEWORK:
-    /vault/python/python-knowledge/27-Files-basics/files-upload-options.txt
+/python/python-knowledge/27-Files-basics/files-upload-options.txt

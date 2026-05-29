@@ -1,7 +1,4 @@
-
-
 DIRECTIVE: V-FOR
-
 
     >> It's accepted for: array, object, number, string, iterable.
 
@@ -17,7 +14,7 @@ DIRECTIVE: V-FOR
                             an iteration ID for each repeatition.
 
                             E.g.
-                                <div 
+                                <div
                                     v-for="(item, idx) in items"
                                     :key="idx"
                                 >
@@ -26,16 +23,16 @@ DIRECTIVE: V-FOR
 
         >> forEach(), for(), find(), some() in JS (you could apply it as a function via script layer
             of a Vue component):
-                /vault/javascript/for.js
-                /vault/javascript/forEach-loop.js
-                /vault/javascript/some.js
-                /vault/javascript/find.js
+                /javascript/for.js
+                /javascript/forEach-loop.js
+                /javascript/some.js
+                /javascript/find.js
 
 
     >> HOW TO USE V-FOR WITH V-IF:
 
         >> Beginner solution:
-            
+
             <tbody>
                 <tr v-for="p in products">
                     <td v-if="p.active">{{ p.quantity }}x {{ p.name }}</td>
@@ -55,12 +52,12 @@ DIRECTIVE: V-FOR
             </tbody>
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     V-FOR WITH SLOTS (SCOPED SLOTS):
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt
+        /javascript/web-development/frontend/Vue/vue-knowledge/5.4.3-slot-scoped.txt
 
     FOREACH OR FOR TO USE WITH JS FILES:
-        /vault/javascript/forEach-loop.JS
-        /vault/javascript/for.js
+        /javascript/forEach-loop.JS
+        /javascript/for.js

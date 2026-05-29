@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: URL FIELD
 
     Common Usage:
@@ -24,10 +22,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: URL FIELD
                 default="",                   # or None. It's demanded if blank=False or null=False!
             )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Char Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-char.txt
-
+        /python/web-development/django/3-1-models-database/model-attr-field-char.txt

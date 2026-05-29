@@ -1,17 +1,17 @@
 <!-- 
   
   Using the "Options API" approach:
-  More about: /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/
+  More about: /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/
 
 -->
 
 <!--
 	
 	Vue app starts when index.html calls the Vue init file:
-		/vault/javascript/web-development/frontend/Vue/vue-knowledge/3-example-main-html.html
+		/javascript/web-development/frontend/Vue/vue-knowledge/3-example-main-html.html
 
 	Vue init file:
-		/vault/javascript/web-development/frontend/Vue/vue-knowledge/3-example-vue-init.js
+		/javascript/web-development/frontend/Vue/vue-knowledge/3-example-vue-init.js
 
 -->
 
@@ -44,7 +44,7 @@ export default {
   },
 
   // Computed properties
-  // /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
+  // /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-computed.vue
   computed: {
     doubleCount() {
       return this.count * 2;
@@ -52,13 +52,13 @@ export default {
   },
 
   // Lifecycle hooks
-  // /vault/javascript/lifecycle-hooks.js
+  // /javascript/lifecycle-hooks.js
   mounted() {
     console.log("Component is mounted!");
   },
 
   // Methods/functions
-  // /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
+  // /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/_option-methods.vue
   methods: {
     increment() {
       this.count++;

@@ -1,13 +1,11 @@
-
-
 DJANGO SUB-APPS: RENAMING AN EXISTENT APP
 
     soon...
 
-    Important: 'namespace' that you see in /yourapp/urls.py has not the same scope of 'name' in 
+    Important: 'namespace' that you see in /yourapp/urls.py has not the same scope of 'name' in
                 /yourapp/apps.py. The 'namespace' is only used for that urls.py file meanwhile the
                 'name' is the true sub-app name for Django.
 
 
     Check this stuff too:
-        /vault/python/web-development/django/namespaces-where-to-use.txt
+        /python/web-development/django/namespaces-where-to-use.txt

@@ -4,7 +4,7 @@ PYTHON: CACHING
 
 
     >> What is it:
-        /vault/dev-concepts/cache.md
+        /dev-concepts/cache.md
 
     
     >> Cache Aside-Pattern:

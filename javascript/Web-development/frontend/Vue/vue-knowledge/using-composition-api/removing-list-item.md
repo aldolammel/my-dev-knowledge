@@ -1,7 +1,4 @@
-
-
 REMOVING LIST ITEM:
-
 
     >> script:
 
@@ -23,7 +20,7 @@ REMOVING LIST ITEM:
         members.value.splice(idx, 1)
         }
 
-        // Note: In <script setup>, all top-level variables and functions 
+        // Note: In <script setup>, all top-level variables and functions
         // are automatically exposed to the template, so no need for explicit return
         </script>
 
@@ -46,7 +43,7 @@ REMOVING LIST ITEM:
 
 
     >> Adding example:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/adding-list-item.vue
-        
+        /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/adding-list-item.vue
+
     >> Project Example:
         /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

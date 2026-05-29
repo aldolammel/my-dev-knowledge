@@ -5,7 +5,7 @@ PYTHON: HOW TO UPLOAD A FILE
     1) Which way you wanna create the HTML form:
         
         1A) Building that manually with form tag and its input fields;
-            /vault/html/form/files-upload.txt
+            /html/form/files-upload.txt
         
         1B) Or building that dynamically using a framework:
             Just skip this, going to the next step!
@@ -17,13 +17,13 @@ PYTHON: HOW TO UPLOAD A FILE
             ./files-upload-raw-python.txt
         
         >> Django:
-            /vault/python/web-development/django/5-uploads/_files-upload-with-django.md
+            /python/web-development/django/5-uploads/_files-upload-with-django.md
 
         >> FastAPI:
-            /vault/python/web-development/fast-api/5-uploads/files-upload-with-fastapi.txt
+            /python/web-development/fast-api/5-uploads/files-upload-with-fastapi.txt
         
         >> Flask:
-            /vault/python/web-development/flask/uploads/files-upload-with-flask.md
+            /python/web-development/flask/uploads/files-upload-with-flask.md
 
         >> React:
             /xxxxxxxxxxxxx

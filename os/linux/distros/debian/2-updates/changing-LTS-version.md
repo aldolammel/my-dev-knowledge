@@ -24,4 +24,4 @@
 ---
 
     FOR FEDORA:
-        /vault/os/linux/distros/fedora/2-updates/changing-LTS-version.md
+        /os/linux/distros/fedora/2-updates/changing-LTS-version.md

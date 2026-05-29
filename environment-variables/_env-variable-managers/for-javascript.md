@@ -1,9 +1,7 @@
-
-
 ENVIRONMENT VARIABLE MANAGERS BY LANGUAGE: JAVASCRIPT
 
     >> For pure JS project:
-        /vault/javascript/Env-Var-Managers/_options.txt
+        /javascript/Env-Var-Managers/_options.txt
 
     >> For Vue project:
         /xxxxxx

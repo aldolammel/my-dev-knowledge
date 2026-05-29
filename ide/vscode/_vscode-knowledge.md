@@ -37,7 +37,7 @@ PRE) Where to manage profiles in VSCode interface:
 
                 E.g. real Python+Django+Vue profile:
                     (editable/visible only if imported to the IDE)
-                    ./user-profiles-bkp/vault/python/+Django+Vue.code-profile
+                    ./user-profiles-bkp/python/+Django+Vue.code-profile
 
                 >> How to import an example:
                     Same process explained through the previous layer;

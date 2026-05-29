@@ -4,7 +4,7 @@ PYTHON > VIRTUAL ENVIRONMENT > CREATING REQUIREMENTS FILE
 
 
     >> Using UV: (Highly recommended)
-        /vault/python/package-manager/uv/creating-requirements-of-project.md
+        /python/package-manager/uv/creating-requirements-of-project.md
 
     >> Using PIP:
-        /vault/python/package-manager/pip/creating-requirements-of-project.md
+        /python/package-manager/pip/creating-requirements-of-project.md

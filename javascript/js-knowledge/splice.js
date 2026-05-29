@@ -26,7 +26,7 @@ if (idx > -1) {
 }
 
 // Remove all occurrences of a specific value:
-//  /vault/javascript/filter.js
+//  /javascript/filter.js
 
 // Remove by object property:
-//  /vault/javascript/filter.js
+//  /javascript/filter.js

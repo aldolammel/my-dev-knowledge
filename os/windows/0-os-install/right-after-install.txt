@@ -3,12 +3,12 @@
 
 x) Turn the "Secure Boot" off:
 
-    /vault/bios/secure-boot.txt
+    /bios/secure-boot.txt
 
 
 x) Check if all basic motherboard settings is ok for your system:
 
-        /vault/bios/basic-modo-settings.txt
+        /bios/basic-modo-settings.txt
 
 
 4) First Windows system log-in:

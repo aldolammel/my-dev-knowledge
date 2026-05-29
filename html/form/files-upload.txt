@@ -7,7 +7,7 @@ HTML > FORM: UPLOADING FILES
         PRE) Solution using:
 
             >> Python:
-                /vault/python/python-knowledge/27-Files-basics/files-upload-options.txt
+                /python/python-knowledge/27-Files-basics/files-upload-options.txt
 
             >> JavaScript:
                 /xxxxxxxxxxxxx
@@ -26,7 +26,7 @@ HTML > FORM: UPLOADING FILES
                 </form>
 
                 More about it:
-                    /vault/html/form/attr-action.txt
+                    /html/form/attr-action.txt
 
 
         2) Define that as post method;
@@ -37,7 +37,7 @@ HTML > FORM: UPLOADING FILES
                 </form>
 
                 More about it:
-                    /vault/html/form/attr-method.txt
+                    /html/form/attr-method.txt
         
 
         3) Set the 'enctype' attribute as 'multipart/form-data' that means you are telling to the browser you're sending one or more files;
@@ -48,7 +48,7 @@ HTML > FORM: UPLOADING FILES
                 </form>
 
                 More about it:
-                    /vault/html/form/attr-enctype.txt
+                    /html/form/attr-enctype.txt
 
 
         4) Now, give a name to the file input that should describe with kind of file the field deals:

@@ -1,5 +1,3 @@
-
-
 VUEX: HELPERS
 
     Vuex provides helper functions that make it easier to map store state/getters
@@ -21,9 +19,9 @@ VUEX: HELPERS
 
 
     >> What are Computed Properties:
-        
+
         Theory:
-            /vault/javascript/web-development/frontend/Vue/computed-properties.txt
-        
+            /javascript/web-development/frontend/Vue/computed-properties.txt
+
         Usage in VueX:
-            /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt
+            /javascript/web-development/frontend/Vue/3-component-libraries/vuex/computed-properties.txt

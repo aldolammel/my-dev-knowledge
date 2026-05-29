@@ -1,5 +1,3 @@
-
-
 DEV CONCEPTS: TYPE ANNOTATION
 
     It's a programming feature that adds optional type hints to variables, function parameters, and
@@ -12,12 +10,12 @@ DEV CONCEPTS: TYPE ANNOTATION
 
 
     >> IN PYTHON:
-        /vault/python/python-knowledge/type-annotation.py
+        /python/python-knowledge/type-annotation.py
 
     >> IN JAVASCRIPT (Using JSDoc):
-        /vault/javascript/js-knowledge/type-annotation.js
+        /javascript/js-knowledge/type-annotation.js
 
     >> IN TYPESCRIPT:
         /xxxxxxxxxxxxxxxxxxxxxxxxxxx
-       
-            
+
+

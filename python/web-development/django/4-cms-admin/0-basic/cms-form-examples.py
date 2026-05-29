@@ -145,6 +145,6 @@ class UserProfileOneCMS(admin.ModelAdmin):
 
     A BLANK VERSION FOR NEW PROJECTS:
     
-    /vault/python/web-development/django/4-cms-admin/0-basic/cms-form-blank-for-new-projects.py
+    /python/web-development/django/4-cms-admin/0-basic/cms-form-blank-for-new-projects.py
 
 """

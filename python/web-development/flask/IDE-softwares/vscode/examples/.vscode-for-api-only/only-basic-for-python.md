@@ -1,3 +1,1 @@
-
-
-/vault/python/IDE-softwares/vscode/examples/.vscode/
+/python/IDE-softwares/vscode/examples/.vscode/

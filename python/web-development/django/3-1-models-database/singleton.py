@@ -2,7 +2,7 @@
     SINGLETON: CREATION WITH DJANGO (STEP 1/2)
 
     >> What is it:
-        /vault/dev-concepts/singleton.md
+        /dev-concepts/singleton.md
 
     >> This file:
         /django_project/apps/your_app/models.py
@@ -11,7 +11,7 @@
         This file!
 
     >> Step 2/2 (admin.py)
-        /vault/python/web-development/django/4-cms-admin/singleton.py
+        /python/web-development/django/4-cms-admin/singleton.py
 """
 
 class PagexSettings(models.Model):

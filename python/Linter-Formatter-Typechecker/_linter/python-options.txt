@@ -3,15 +3,15 @@
 LINTER FOR PYTHON: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-linter.md
+        /dev-concepts/tool-linter.md
 
     >> Options:
 
         >> Ruff:
-            /vault/python/Linter-Formatter-Typechecker/ruff/
+            /python/Linter-Formatter-Typechecker/ruff/
 
         >> Flake8:
-            /vault/python/Linter-Formatter-Typechecker/flake8/
+            /python/Linter-Formatter-Typechecker/flake8/
 
         >> PyLint:
-            /vault/python/Linter-Formatter-Typechecker/PyLint/
+            /python/Linter-Formatter-Typechecker/PyLint/

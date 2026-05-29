@@ -15,19 +15,19 @@ DATABASE: CONSTRAINTS
 
 
     PRIMARY KEY:
-        /vault/database/constraint-type-primary-key.md
+        /database/constraint-type-primary-key.md
 
     FOREIGN KEY:
-        /vault/database/constraint-type-foreign-key.md
+        /database/constraint-type-foreign-key.md
 
     NOT NULL:
-        /vault/database/constraint-type-not-null.md
+        /database/constraint-type-not-null.md
 
     UNIQUE:
-        /vault/database/constraint-type-unique.md
+        /database/constraint-type-unique.md
 
     CHECK:
-        /vault/database/constraint-type-check.md
+        /database/constraint-type-check.md
 
     DEFAULT:
-        /vault/database/constraint-type-default.md
+        /database/constraint-type-default.md

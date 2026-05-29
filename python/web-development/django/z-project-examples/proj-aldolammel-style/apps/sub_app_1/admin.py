@@ -7,7 +7,7 @@ from . import forms, models
 
 """
 Admin model class model:
-https://github.com/aldolammel/my-dev-knowledge/blob/main/vault/python/web-development/django/4-cms-admin/_admin-class-model.py
+https://github.com/aldolammel/my-dev-knowledge/blob/main/python/web-development/django/4-cms-admin/_admin-class-model.py
 """
 
 

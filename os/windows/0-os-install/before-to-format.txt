@@ -24,7 +24,7 @@ OS > WINDOWS: BEFORE TO FORMAT THE CURRENT OS
 
     4) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
 
-        /vault/bios/secure-boot.txt
+        /bios/secure-boot.txt
 
 
     5) Let's format the system:

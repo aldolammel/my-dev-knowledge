@@ -16,6 +16,6 @@ class StepTwoForm(forms.ModelForm):
 
 """
     MORE OPTIONS:
-    /vault/python/web-development/django/9-forms/
+    /python/web-development/django/9-forms/
 
 """

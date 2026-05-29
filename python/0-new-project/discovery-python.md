@@ -1,4 +1,5 @@
 #### Python > Project types
+
 # Discovery
 
     Group of action to figure out a Python project settings and features:
@@ -52,4 +53,4 @@
 DISCOVERY OF PYTHON FRAMEWORKS:
 
     >> Django:
-        /vault/python/web-development/django/0-new-project/discovery-django.md
+        /python/web-development/django/0-new-project/discovery-django.md

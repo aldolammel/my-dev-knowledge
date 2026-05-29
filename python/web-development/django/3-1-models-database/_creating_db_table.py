@@ -5,7 +5,7 @@
     In Django, you define everything about your project database through the files called 'models.py'. Your project (also called 'main app') can have one or more sub-apps that are where the all models.py are allocated.
 
     >> First, make sure you already got a sub-app. If not, create one:
-        /vault/python/web-development/django/2-creating-and-deleting-apps/
+        /python/web-development/django/2-creating-and-deleting-apps/
 
     Into your sub-app folder, open the models.py file and let's create a table called 'Movie' with two attributes (they will be colunms of the table):
 """

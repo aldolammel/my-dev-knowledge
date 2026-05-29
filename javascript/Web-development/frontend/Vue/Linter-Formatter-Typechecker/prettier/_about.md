@@ -1,7 +1,4 @@
-
-
 PRETTIER FOR VUE:
-
 
     ATTENTION!
         For TYPESCRIPT Vue projects, Vue-Volar is more recommended to use with Vue:
@@ -9,11 +6,11 @@ PRETTIER FOR VUE:
 
 
     About:
-        /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.md
+        /javascript/Linter-Formatter-Typechecker/prettier/_about.md
 
-    
+
     Installation & Integration:
-        /vault/javascript/Linter-Formatter-Typechecker/prettier/installation.md
+        /javascript/Linter-Formatter-Typechecker/prettier/installation.md
 
 
     For Vue integration:

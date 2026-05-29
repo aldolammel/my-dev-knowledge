@@ -1,10 +1,7 @@
-
-
 DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
 
-
     PRE) Make sure you already prepared your Django:
-        /vault/python/web-development/django/5-uploads/django-upload-image-p1.txt
+        /python/web-development/django/5-uploads/django-upload-image-p1.txt
 
 
     1) To simplify and even expand the form upload possibilities, let's create a Django model (but without to store images in the db [aweful for db performance]):
@@ -20,8 +17,8 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
                             # models.ImageField(), same of FileField but with basic image checks;
 
         1.2) Run makemigrations and migrate!
-        
-    
+
+
     3) Creating the custom form using Django:
 
         3.1) In your sub-app folder, create the 'forms.py' file if it doesn't exist yet:
@@ -56,7 +53,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
 
                 def post(self, request):
                     submitted_form = ProfileForm(request.POST, request.FILES)
-                                    # This 'request' object has properties like: 
+                                    # This 'request' object has properties like:
                                     # .POST: access to all sent non-file data from form;
                                     # .FILES: access to uploaded file (dictionary) from form;
                     # If everything alright, save the image and return to sub-app home:
@@ -70,15 +67,13 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (IN A MORE CUSTOMIZABLE WAY, PART 2/2)
                     # Otherwise, load the form page again w/ the same data used in the previous go:
                     return render(request, "profiles/create_profile.html", {"form": submitted_form})
 
-        
+
         5) (Optional)
             For image validations (like allowed image extensions, maximum size file, etc):
 
                 ./django-upload-image-custom-validations.txt
 
-    
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 EXTRA INFO: CONTEXT PROCESSORS
 

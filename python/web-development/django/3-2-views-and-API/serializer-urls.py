@@ -5,14 +5,14 @@
     The core urls.py serves as the main URL configuration for the entire application. It acts as the central router, directing incoming web requests to the internal, specific and reusable urls.py files.
 
     >> Whole Django serialization roadmap:
-        /vault/python/web-development/django/3-2-views-and-API/serializer.txt
+        /python/web-development/django/3-2-views-and-API/serializer.txt
 
 """
 
 # FILE: /apps/my_app/urls.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Using Django Rest Framework:
-# /vault/python/web-development/django/component-libraries/django-rest-framework/
+# /python/web-development/django/component-libraries/django-rest-framework/
 from rest_framework.routers import DefaultRouter
 
 from .views import ExampleModelViewSet

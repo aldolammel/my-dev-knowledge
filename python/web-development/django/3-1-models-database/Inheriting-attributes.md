@@ -1,9 +1,7 @@
-
-
 DJANGO > MODELS: INHERITING ATTRIBUTES
 
     >> What is attribute:
-        /vault/dev-concepts/oop-class-attribute.md
+        /dev-concepts/oop-class-attribute.md
 
 
     >> Imagine you re-using common attributes almost are used in all your tables
@@ -19,7 +17,7 @@ DJANGO > MODELS: INHERITING ATTRIBUTES
             class Meta:
                 abstract = True  # Flags the db to don't create this table!
 
-        
+
         class Post(CommonBase):
             title = ...
             content = ...
@@ -28,16 +26,14 @@ DJANGO > MODELS: INHERITING ATTRIBUTES
         class Comment(CommonBase):
             message = ...
 
-    
-    >> CRITICAL: to avoid errors, remove any foreign key or many-to-many attribute 
+
+    >> CRITICAL: to avoid errors, remove any foreign key or many-to-many attribute
         from your abstracted/inherited class!
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
 MORE ABOUT CLASS META > ABSTRACT:
-    ./meta-abstract.txt
+./meta-abstract.txt
 
 MORE ABOUT INHERITANCE FOR METHODS:
-    /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

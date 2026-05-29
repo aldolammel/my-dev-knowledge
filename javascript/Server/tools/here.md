@@ -1,3 +1,1 @@
-
-
-/vault/server/_languages-server-tools/javascript/
+/server/\_languages-server-tools/javascript/

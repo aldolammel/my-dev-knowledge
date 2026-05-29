@@ -3,10 +3,10 @@
     DJANGO > MODEL FORM > CUSTOM VALIDATIONS: USING CLEAN() TO GET DATA AND THEN VALIDATE IT
     
         >> Using clean() method in models.py:
-            /vault/python/web-development/django/3-1-models-database/model-validation-clean-getting-data.py
+            /python/web-development/django/3-1-models-database/model-validation-clean-getting-data.py
 
         >> Model clean() VS Form clean():
-            /vault/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
+            /python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
 
         >> I'm sure I wanna use clean() method in forms.py:
             KEEP IN THIS FILE!
@@ -30,7 +30,7 @@ class ExampleModelForm(forms.ModelForm):
 
         # GETTING DATA USING QUERY SET!
         # Creating a queryset, asking db for this piece of information:
-        # /vault/python/web-development/django/3-1-models-database/4-querysets/
+        # /python/web-development/django/3-1-models-database/4-querysets/
 
             # Unlike Model clean() method, the Form clean() demands to return cleaned_data, otherwise, the clean() must return a 'raise ValidationError' message:
             raise ValidationError(...)

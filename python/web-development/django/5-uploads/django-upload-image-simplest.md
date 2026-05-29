@@ -1,10 +1,7 @@
-
-
 DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
 
-
     PRE.1) Make sure you already got the HTML form ready:
-        /vault/python/python-knowledge/27-Files-basics/files-upload-options.txt
+        /python/python-knowledge/27-Files-basics/files-upload-options.txt
 
 
     PRE.2) Prepare the very basic Django config for image upload:
@@ -12,16 +9,16 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
 
 
     1) In the HTML where is or should be the form, replace entirely the current <form> tag content to:
-        
+
         {% csrf_token %}
         {{ form }}
         <button>Upload</button>
 
 
     2) Go to the app views.py file and create a view class that inherits CreateView's features:
-        
+
         >> CreateView features:
-            /vault/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py
+            /python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py
 
         E.g.
             from django.views.generic.edit import CreateView
@@ -46,11 +43,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
                     path("", views.CreateProfileView.as_view())
                 ]
 
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 EXTRA INFO: CONTEXT PROCESSORS
 

@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: BOOLEAN FIELD
 
     Common Usage:
@@ -14,9 +12,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: BOOLEAN FIELD
             default=True,
         )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Null Boolean Field (Deprecated):
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.txt

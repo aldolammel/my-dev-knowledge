@@ -5,7 +5,7 @@
     This dunder method runs when xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     More about Python Dunder methods:
-        /vault/python/python-knowledge/classes/1-using-magic-dunder-methods.py
+        /python/python-knowledge/classes/1-using-magic-dunder-methods.py
 """
 
 # models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -1,7 +1,4 @@
-
-
 FORM: FULL CUSTOMIZATION ON THE TEMPLATE (NOT RECOMMENDED):
-
 
     >> Don't forget that you need to create every form/field feature for this approach:
 
@@ -43,14 +40,10 @@ FORM: FULL CUSTOMIZATION ON THE TEMPLATE (NOT RECOMMENDED):
 
             <input type="checkbox" name="{{ form.is_nomad.name }}" id="{{ form.is_nomad.id }}" class="checkbox" {% if form.is_nomad.value %}checked{% endif %}>
 
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> If you don't want this deep of customization, check these out:
 
-        /vault/python/web-development/django/9-forms/customizing-basic-attrs-connected-model.txt
+        /python/web-development/django/9-forms/customizing-basic-attrs-connected-model.txt
 
-        /vault/python/web-development/django/9-forms/customizing-basic-attrs-extra-field.txt
+        /python/web-development/django/9-forms/customizing-basic-attrs-extra-field.txt

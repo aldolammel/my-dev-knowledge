@@ -3,13 +3,13 @@
 CONTAINERS:
 
     >> Lists / Arrays:
-        /vault/python/python-knowledge/list-array-basic.py
+        /python/python-knowledge/list-array-basic.py
 
     >> Tuples:
-        /vault/python/python-knowledge/tuple-basic.py
+        /python/python-knowledge/tuple-basic.py
 
     >> Dictionaries:
-        /vault/python/python-knowledge/dictionary.py
+        /python/python-knowledge/dictionary.py
 
     >> Sets:
-        /vault/python/python-knowledge/set.py
+        /python/python-knowledge/set.py

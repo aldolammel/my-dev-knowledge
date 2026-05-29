@@ -21,7 +21,7 @@ HTML > FORM: ACTION ATTRIBUTE
 
 
 >> FORM METHOD ATTRIBUTE:
-    /vault/html/form/attr-method.txt
+    /html/form/attr-method.txt
 
 >> FORM ENCTYPE ATTRIBUTE:
-    /vault/html/form/attr-enctype.txt
+    /html/form/attr-enctype.txt

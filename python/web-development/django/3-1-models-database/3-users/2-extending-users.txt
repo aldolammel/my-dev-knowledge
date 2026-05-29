@@ -146,7 +146,7 @@ EXTENDING THE USER FEATURES:
             # Reserved space...
 
         >> Check this out too:
-            /vault/python/web-development/django/10-login-and-logout/0-registering-by-frontend.txt
+            /python/web-development/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
     6) Customizing the CMS User list-view and detail-view:
@@ -289,5 +289,5 @@ EXTENDING THE USER FEATURES:
     
     >> USER PROFILE PAGE:
 
-        /vault/python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile.txt
+        /python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile.txt
 

@@ -4,7 +4,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
         ./3-re-install-project-with-pip.md
 
     PRE.2) Assuming you already updated PIP:
-        /vault/python/package-manager/pip/_about.md
+        /python/package-manager/pip/_about.md
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -23,7 +23,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
             >> Python basics:
 
                 # For project:
-                    /vault/python/IDE-softwares/vscode/examples/.vscode/
+                    /python/IDE-softwares/vscode/examples/.vscode/
 
                 # For API only:
                     The same example above!
@@ -43,8 +43,8 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
             2.1) Select through the IDE GUI which User Profile this project demands!
                     # Aldo's profile backups:
-                        /vault/ide/vscode/user-profiles-bkp/
-                        /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                        /ide/vscode/user-profiles-bkp/
+                        /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             2.2) Open this new folder in your IDE;
 
@@ -52,16 +52,16 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
         3) (If applicable)
             Project versioning:
                 >> Create a repository or use an existing one:
-                    /vault/versioning/git/command-init.txt
+                    /versioning/git/command-init.txt
 
 
         4) Creating new project:
 
             4.1) Create the virtual environment folder:
-                /vault/python/3-virtual-environment/creating-virtual-environment.txt
+                /python/3-virtual-environment/creating-virtual-environment.txt
 
             4.2) Once you now got a .venv folder, active the project's virtual environment:
-                /vault/python/3-virtual-environment/activate-and-deactivate.txt
+                /python/3-virtual-environment/activate-and-deactivate.txt
 
 
             4.3) (Optional)
@@ -112,7 +112,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
         5) (Optional)
             Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
 
-                /vault/python/package-manager/pip/install-dependency.md
+                /python/package-manager/pip/install-dependency.md
 
                 # The Engineering Data document link must be registered in the Django core settings.py file!
 
@@ -126,7 +126,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
 
         7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
-                /vault/versioning/git/gitignore-file.md
+                /versioning/git/gitignore-file.md
 
 
         8) Check Django installation and setup:

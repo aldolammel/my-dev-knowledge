@@ -1,3 +1,1 @@
-
-
-/vault/python/component-libraries/
+/python/component-libraries/

@@ -25,7 +25,7 @@ DJANGO: INSTALLING AND SETUP
         1C) This machine (or IDE) is new! Preparing it to everything about Django - - - - - - - - -
 
             1C.PRE.1) Python interpreter (if needed);
-                /vault/python/1-python-installation/
+                /python/1-python-installation/
 
             1C.PRE.2) Create the project folder, and get it:
                 $ mkdir <project_folder>
@@ -35,12 +35,12 @@ DJANGO: INSTALLING AND SETUP
 
             1C.PRE.4) IDE, select through the IDE GUI which User Profile this project demands!
                         # Aldo's profile backups:
-                            /vault/ide/vscode/user-profiles-bkp/
-                            /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                            /ide/vscode/user-profiles-bkp/
+                            /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             1C.PRE.5) IDE, language setup:
-                >> VSCode:  /vault/python/IDE-softwares/vscode/basic-for-python.txt
-                >> PyCharm: /vault/python/IDE-softwares/pycharm/basic-for-python.txt
+                >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
+                >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
 
             1C.1) IDE, framework setup:
                 >> VSCode:  .../django/IDE-softwares/vscode/basic-for-django.txt

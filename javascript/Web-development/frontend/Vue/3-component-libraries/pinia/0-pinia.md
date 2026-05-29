@@ -1,8 +1,6 @@
-
-
 LIBRARY: PINIA (it replaces VueX needs in Vue 3)
 
-    Pinia is a (global) state management library designed specifically for Vue 3. It offers a 
+    Pinia is a (global) state management library designed specifically for Vue 3. It offers a
     lightweight and intuitive approach to app state management. It allows devs to create and organize stores by encapsulating state and app logic in a centralized module. Additionally, it enables us to share the state between elements and pages (components and views), creating a user-friendly experience using the new responsive concept in Vue3.
     Not all apps need access to a global state, but if yours need one, Pinia will make it easier.
 
@@ -11,7 +9,7 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
         A store is an entity holding state and business logic that isn't bound to your Component tree. In other words, it hosts global state. It's a bit like a component that is always there and that everybody can read off and write to. It has three concepts, the state, getters and actions and it's safe to assume these concepts are the equivalent of data, computed and methods in components.
 
     >> Pinia VS Vuex:
-        
+
         - Encourages multiple stores (that can easily communicate) instead of a single global store;
         - No mutations once state can be modified directly;
         - It's much easier to import stores into any component or composable;
@@ -21,12 +19,12 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
 
     >> When Pinia isn't necessary:
 
-        - Simple state management: 
+        - Simple state management:
             For a few bunch of pages you can manage state using Vue's built-in ref(), reactive(), and provide/inject APIs;
-        
-        - Django as single source of truth: 
+
+        - Django as single source of truth:
             Since you're using Django backend, most persistent data should come from your Django API endpoints;
-            
+
         - Minimal client-side complexity:
             Institutional websites typically have straightforward data flows without complex inter-component state sharing.
 
@@ -36,16 +34,14 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
         - Complex component hierarchies sharing the same data;
         - Real-time features requiring centralized state updates;
         - Client-side caching needs for API responses.
-    
+
     https://pinia.vuejs.org/
 
 
     >> Dataflow of a real Vue Pinia usage:
-        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     1) Which Vue build-tool are you using?
 
@@ -54,14 +50,14 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
 
         - - - - -
 
-        1A) Using Vue-CLI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
+        1A) Using Vue-CLI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
             Pinia team's recommending this unofficial plugin (2025):
                 https://github.com/wobsoriano/vue-cli-plugin-pinia
 
                 More about: https://pinia.vuejs.org/getting-started.html
-        
-        
+
+
 
         1B) Using Vue-Vite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -72,7 +68,7 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
                 # Check it:
                     $ npm list
 
-            
+
             >> To uninstall:
 
                 # To uninstall:
@@ -82,14 +78,13 @@ LIBRARY: PINIA (it replaces VueX needs in Vue 3)
 
 
         - - - - -
-        
 
-    2) Integration: 
+
+    2) Integration:
         ./1-overview-how-to-create-data.txt
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > VUEX IS THE OFFICIAL SOLUTION FOR VUE 2:
 
-
->> VUEX IS THE OFFICIAL SOLUTION FOR VUE 2:
     .../vuex/0-vuex.txt

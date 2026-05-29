@@ -7,7 +7,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
     # Custom form template:
     # Automatically searches as: /apps/your_app/templates/admin/your_app/model_name/change_form.html
-    # E.g. /vault/python/web-development/django/9-forms/change_form.html
+    # E.g. /python/web-development/django/9-forms/change_form.html
     # For explicit path:
     # change_form_template = "admin/your_app/model_name/change_form.html"
 
@@ -24,10 +24,10 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # readonly_fields = ()
     # All fields exclusively for the CMS Adding New object:
     # add_fieldsets = ()  # If you to use this, it demands get_fieldsets:
-        # /vault/python/web-development/django/4-cms-admin/method-get_fieldsets.py
+        # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
     # All fields exclusively for the CMS Visualizing an object:
     # fieldsets = ()  # If you to use this, it demands get_fieldsets:
-        # /vault/python/web-development/django/4-cms-admin/method-get_fieldsets.py
+        # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
 
     # If you have audit fields like 'created_by' or 'updated_by' you need save_model method:
     def save_model(self, request, obj, form, change):

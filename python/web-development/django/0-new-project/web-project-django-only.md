@@ -1,4 +1,5 @@
 #### Python > Django > Project types
+
 # Django as back and front-end
 
 1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -6,13 +7,12 @@
     > > Database:
 
          1.1) What db should be used:
-             /vault/database/00-new-project/
+             /database/00-new-project/
 
     > > Back-end:
 
          1.2) Basic installations:
              .../django/1-install-and-first-steps/0-django-installation-and-setup.md
-
 
     > > Front-end:
 
@@ -39,17 +39,16 @@
              Front-end CSS Framework:
 
                  >> Tailwind:
-                     /vault/web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                     /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
 
                  >> Or Bulma:
-                     /vault/web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                     /web-development/frontend/CSS/css-libraries-frameworks/bulma/
 
                  >> Or Bootstrap:
-                     /vault/web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                     /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
 
-2.  DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    0. Create the AI context prompt for the project:
-       /vault/python/web-development/ai-prompt-context-model.txt
+2.  DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 0. Create the AI context prompt for the project:
+    /python/web-development/ai-prompt-context-model.txt
 
     2.1) Front-end: >> Convert the HTML template to Django Template; >> Code the entire navigation;
 

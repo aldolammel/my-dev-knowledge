@@ -1,28 +1,25 @@
-
-
 DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
-
     PRE.1) Assuming you have finished the previous steps!
-    
-    
+
+
     PRE.2) Assuming you are already connected on the server via terminal:
-        /vault/server/connecting-via-ssh.txt
+        /server/connecting-via-ssh.txt
 
 
     1) (Optional) Customizing the ssh_config file:
-    
+
         1.1) Server-side (VPS):
-                
+
             1.1.PRE.1) Open to the file:
                 $ nano /etc/ssh/sshd_config
-                
+
                 INFO:
                     We don't add sudo 'cause we are connected with the root user.
-        
+
             1.1.PRE.2) Use this command to find specific directives:
                 Ctrl + W
-            
+
             1.1.1) Edit them:
                 # Seconds between KeepAlive probes sent to the client:
                     ClientAliveInterval 60
@@ -30,36 +27,36 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                     ClientAliveCountMax 20
                 # It enables the periodic transmission of KeepAlive msgs to detect if a connection is still active:
                     TCPKeepAlive yes
-        
+
             1.1.2) Save (ctrl+s) and exit (ctrl+x);
-        
+
             1.1.3) Restart the SSH service on VPS:
                 $ systemctl restart sshd
-                
+
                 # Not need to reboot or close the terminal!
-        
-        
+
+
         1.2) Client-side (your local machine):
-        
+
             1.2.PRE) Assuming you are in the local terminal!
-    
+
             1.2.1) Go to the file:
-            
+
                 # Affecting only your local user (RECOMMENDED):
                     /home/<your_user>/.ssh/config
                     $ nano /home/<your_user>/.ssh/config
-                    
+
                 # Or affecting all local users:
                     /etc/ssh/ssh_config
                     $ sudo nano /etc/ssh/ssh_config
-            
+
             1.2.2) Add these lines and save it:
-                    
+
                 >> For all cases (RECOMMENDED):
                     Host *
                         ServerAliveInterval 60
                         ServerAliveCountMax 20
-                        
+
                 >> Or for specific host/VPS:
                     Host <your-vps-name>
                         HostName <your.vps.ip.or.domain>
@@ -71,21 +68,21 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                         User root                <- Leave this already configured for root user too!
                         ServerAliveInterval 60
                         ServerAliveCountMax 20
-                        
+
                 INFO:
                     For client-side, no need to restart any service once the local SSH 'config' is read automatically for every new SSH connection called on local terminal.
-        
-        
+
+
     2) Configuring the firewall:
-    
+
         2.PRE.1) Assuming you are already connected on the server via terminal!
-        
+
         2.PRE.2) Install one: using the UFW
             $ sudo apt install ufw
-        
+
         2.1) Allowing basic permissions:
             By default, all incoming connections to our server are denied, even the SSH connection on port 22. If we log out to the server, we can't connect anymore. Let's allow SSH connection on port 22 with the command below:
-        
+
             # Allow ssh connection
                 $ ufw allow ssh
 
@@ -94,61 +91,61 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                 # Say "yes" if needed!
             $ ufw status verbose
 
-            
+
         2.3) Test the SSH connection after:
             Log out, then log in again to ensure you can still connect to the server!
-        
-        
+
+
     3) For security reasons, change SSH Port:
-    
+
         By default, the SSH port is 22. Changing this to make your server a little more secure is a good idea. Here is the process to change the port to 4928.
-    
+
         3.1) Open the SSH config's file:
             $ nano /etc/ssh/sshd_config
-        
+
             # Locate line #Port 22
                 # Remove the hashtag in front of and replace 22 by something like 4928
                     # Save the file and exit!
-        
+
         3.2) Restart the SSH service: 
             $ /etc/init.d/ssh restart
                 Output e.g.
                     Restarting ssh (via systemctl): ssh.service.
-    
+
         3.3) Update the firewall rules:
-        
+
             3.3.1) Allow SSH connection on port:
                 $ ufw allow <new_ssh_port>/tcp
-    
+
             3.3.2) Delete rule for SSH connection on port 22:
                 This is achieved in two steps where the first is to list the rule with a number assigned to each rule:
                 $ ufw status numbered
-            
+
                 # Locate the number of the rule you want to delete, then type: 
                     $ ufw delete <rule_number>       # e.g: ufw delete 1
-                
+
                 # Refresh the index:
                     $ ufw status numbered
-                
+
                 # Repeat the same for "22/tcp (v6)" too!
                     $ ufw delete <rule_number>
-                
+
                 # Check if only what you need is listed:
                     $ ufw status numbered
-                    
+
             3.4) ATTENTION NOW:
                 From now on, through this VPS, you must connect using the custom SSH port.
                 Do it now:
-                /vault/server/connecting-via-ssh.txt
-            
-        
+                /server/connecting-via-ssh.txt
+
+
     4) (Optional - HIGHLY RECOMMENDED) For security reasons, create a <new_user> with a sudo privilege:
-    
+
         WHY:
             It' NOT a good decision because a bad manipulation can cause significant damage, and - MAINLY - any exploitation of your app could grant root access to the server and take the root and VPS control.
-        
+
         4.PRE) Assuming you still using the root user, and you are in /root folder!
-        
+
         4.1) Admin creation:
             # Create the admin user using a specific Debian/Ubuntu script (adduser):
                 $ sudo adduser <new_user>
@@ -156,57 +153,57 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
             # Including it to sudo users group:
                 $ usermod -aG sudo <new_user>
-            
+
             # Verify that:
                 $ groups <new_user>
 
         4.2) Admin permissions:
             # Create the folder where the app(s) will be placed!
                 $ mkdir -p /var/www
-            
+
             # Forcing the <new_user> be able to access that root folder:
                 $ chown <new_user>:<new_user> /var/www
-            
+
             # Setting the permissions in there:
                 $ chmod 755 /var/www
-                
+
             # Check if your admin has permission:
                 $ ls -l
-            
+
         4.3) ATTENTION NOW:
             Log out, and then connect back using the admin user!
                 # From now and on, you, as VPS admin, will use 'sudo' as command prefix to call your privileges!
-        
+
         4.4) (Optional - NOT recommended) For security reasons, deactivating the root user access:
-        
+
             CRITICAL INFO:
                 If you block the root user of SSH connections (by dev terminal, for example), if a config to demand root user, you should use the terminal by the VPS provider web console, and there - SOMETIMES - Brazilian keyboards are not correctly accepted. To test it, go in there and try to type "/", ":", "-". If everything is okay, keep going! If not, I - @aldolammel - never could make this shit works properly, making me to reinstall the entire VPS once I couldn't restore the root user permission because remove-ssh was not possible by my machine and the provider-terminal didn't accept my "/" keyboard key to type commands to restore the root! So I had to reinstall the VPS just because that!
-        
+
             INFO:
-                But first, ask yourself: if you will create a public key for your root, through the hosting iframe you won't be able to ctrl+c things, so you're not able to take the public key to register in GitHub, making you need to connect via your local terminal with root user just to take that key with ctrl+c. 
+                But first, ask yourself: if you will create a public key for your root, through the hosting iframe you won't be able to ctrl+c things, so you're not able to take the public key to register in GitHub, making you need to connect via your local terminal with root user just to take that key with ctrl+c.
 
             4.4.PRE.1) Only do it after to create a <new_user> user!!!
-        
+
             4.4.PRE.2) Logged in VPS terminal using the <new_user>!
-        
+
             4.4.1) Update the SSHD_CONFIG file:
                 $ sudo nano /etc/ssh/sshd_config
                 Change the text "PermitRootLogin yes" to "PermitRootLogin no". And then save it (ctrl+s) and exit (ctrl+x).
-        
+
             4.4.2) Restart the ssh service:
                 $ sudo systemctl restart ssh
-            
+
             4.4.3) Test it:
                 # Logout the VPS terminal:
                 $ exit
-                    # And test the SSH connection again but using the root! 
+                    # And test the SSH connection again but using the root!
                     # You must see a message like "Access denied".
-                    
+
             4.4.4) Reconnect with your non-root-user and keep going with that user!
-        
-        
+
+
     5) Define the human language rules acceptable for this server:
-    
+
         5.1) Check the current locales automatically configured by the VPS provider during the OS installation:
             $ locale -a
                 Output e.g.
@@ -217,18 +214,18 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
         5.2) If your app needs to run with another language or other(s) one(s), fix it here, commenting or uncommenting the right languages to be available in this server:
             $ sudo nano /etc/locale.gen
-            
+
         5.3) Regenerate now only the right locale(s):
             $ sudo locale-gen
-            
+
         5.4) Set VPS system-wide defaults:
             E.g.
                 $ sudo update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
-                
+
             # If you need more locale customizations:
-            
+
                 $ sudo nano /etc/default/locale
-                
+
                 E.g.
                     LANG=en_US.UTF-8
                     LANGUAGE=en_US:en
@@ -243,55 +240,55 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
         5.5) Again, regenerate now only the right locale(s):
             $ sudo locale-gen
-            
+
         5.6) Close the connection and start a new SSH session to check the changes:
             $ exit
             $ <ssh connect again>
             $ locale
-            
+
         5.7) (If applicable) In case your SSH connections still showing shitty locale warnings:
-            
+
             # In your local machine, go to:
                 $ sudo nano /etc/ssh/ssh_config
-                
+
             # Fix the warnings commenting this line:
                 #SendEnv LANG LC_*
-    
-    
+
+
     6) Install a Web server:
-    
+
         Our goal is to host our web app and make it accessible through the internet, but a server is just a computer like ours but without a GUI and up every time. By default, the server doesn't have this capability, and we need to install a Web server to make this possible. The most popular web servers are Apache, Nginx, and Microsoft IIS.
-        
+
         6.PRE) We are gonna install Nginx, so check if you have Apache running on the server:
-        
+
             # If so, stop it to avoid Nginx headaches:
                 $ apache2 -v
                 # If nothing was found, this is good, but if there's Apache installed, remove it:
                     $ sudo apt autoremove
                     $ sudo apt remove apache2.*
-        
+
         6.1) Installing the webserver:
-        
+
             # After that, keep going:
-                /vault/server/web-server/nginx/_install.md
-            
+                /server/web-server/nginx/_install.md
+
                 # Gives the Webserver the firewall permission:
                     # If needed, stop the service:
                         $ sudo systemctl stop nginx
                     # Adding permission:
                         $ sudo ufw allow 'Nginx Full'
-                    
+
                     INFO:
                         The command sudo ufw allow 'Nginx Full' open ports 80 and 443 for HTTP and HTTPS, respectively, to allow incoming traffic from the web. So it's not necessary to have allowed "Nginx HTTP" and "Nginx HTTPS". Only "Nginx Full" must be allowed.
-                
+
                 # Just in case, if it wasn't done in installation step:
                     $ sudo systemctl enable nginx
                     $ sudo systemctl start nginx
                     $ sudo systemctl status nginx
-            
+
 
     7) (Optional) Security reasons, create a private key for GitHub/GitLab access to the VPS:
-    
+
         IMPORTANT:
             This is NOT to create a Public Key to replace the SSH connection password!
 
@@ -299,10 +296,10 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
             >> Ed25519:
                 A more modern algorithm with a smaller standard key size of 256 bits. It is just as secure and efficient as an RSA key due to its strong cryptographic properties. The compatibility is lower, but newer operating systems support it.
-                
+
             >> RSA:
                 An SSH RSA key is considered highly secure as it has typically larger key sizes, often 2048 or 4096 bits. It's also more compatible with older OS.
-                
+
         7.PRE) Assuming you're in VPS terminal!
 
         7.1) Generate the key:
@@ -310,65 +307,64 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                 $ ssh-keygen -t ed25519 -C "<admin_user_here>@<vps_name_here>"
                     E.g.
                         $ ssh-keygen -t ed25519 -C "ayrtonsenna@vps666"
-                
+
             >> Or using an RSA:
                 $ xxxxxxxxxxxxxxxxxxxxxxx
                     E.g.
                         $ xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        
+
         7.2) After that, the key generator should ask you to choose a location to store the keys. Just press ENTER to confirm the key location on VPS!
             E.g.
                 /home/<your_user>/.ssh/id_ed25519
-                Or 
+                Or
                 /home/<your_user>/.ssh/id_rsa
-        
+
         7.3) The key generator window will ask you to create an SSH key passphrase to access your private key. Set the same admin user password OR use Norton Generated Password to create it:
             https://us.norton.com/feature/password-generator
-                    
+
             INFO:
                 This pass you will used when you GIT CLONE the app repo in production, for example!
-                
+
         7.4) Once the key is created, ignore all the terminal output and just copy and save what the terminal prints here:
             >> Using Ed25519:
                 $ cat ~/.ssh/id_ed25519.pub
             >> Using RSA:
                 $ cat ~/.ssh/id_rsa.pub
-        
-        
+
+
     8) Prepare the server to receive clones from GitHub repositories:
-        
+
         8.1) On GitHub, go to:
-        
+
             >> Settings >> SSH and GPG Keys >> New SSH Key;
-        
+
                 Title example = <vps_name>-<vps_username>
                     e.g. vps666-kornuser
-                    
+
                 Key type = Auth Key
-                
+
                 Key = Set here the key you previously saved (step 7.4)
-                
-                And then "Add SSH key"!    
+
+                And then "Add SSH key"!
                 Now you are prepared to clone private GitHub repos into the server.
-                
+
         8.2) On the VPS terminal, test it:
             $ ssh -T git@github.com
-            
+
                 Output e.g.
                     The authenticity of host 'github.com (1.111.11.111)' can't be established.
                     ED25519 key fingerprint is xyxyxyxyxyxyxyxyxyxyxyxy.
                     This key is not known by any other names.
                     Are you sure you want to continue connecting (yes/no/[fingerprint])?
-            
+
                 # Say "yes" for the very first connection!
-            
+
                     # Confirm with your Private Key password and done!
-            
+
         8.3) Install Git globally on VPS:
-            /vault/versioning/git/_basic.md
+            /versioning/git/_basic.md
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
     NEXT STEP:
         ./3-step.txt

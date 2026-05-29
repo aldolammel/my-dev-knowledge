@@ -1,1 +1,1 @@
-/vault/python/web-development/flask/
+/python/web-development/flask/

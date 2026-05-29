@@ -1,5 +1,3 @@
-
-
 VUE ROUTER: WHAT IS IT
 
     Vue Router is the official client-side routing solution for Vue. Client-side routing is used
@@ -40,15 +38,15 @@ VUE ROUTER: WHAT IS IT
                     </RouterLink>
                 </li>
             </ul>
-            
+
             <!-- Where each View is rendered when its RouterLink is clicked: -->
             <RouterView />
 
 
 
     >> Dataflow of a real Vue-Router usage in Django project:
-        /vault/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
-    
-    
+        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+
+
     >> Installing:
-        /vault/javascript/web-development/frontend/Vue/3-component-libraries/vue-router/1-router-installation.md
+        /javascript/web-development/frontend/Vue/3-component-libraries/vue-router/1-router-installation.md

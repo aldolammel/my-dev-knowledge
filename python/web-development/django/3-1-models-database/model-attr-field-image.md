@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: IMAGE FIELD
 
     Common Usage:
@@ -9,19 +7,15 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: IMAGE FIELD
         - Single upload field.
 
     Example:
-        
+
         img_highlight = models.ImageField(
             upload_to=consts.PATH_IMG,
             blank=True,
         )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> File Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-file.txt
-
-
-
-    
+        /python/web-development/django/3-1-models-database/model-attr-field-file.txt

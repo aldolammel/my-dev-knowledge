@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: POSITIVE INTEGER FIELD
 
     Typical Size:
@@ -14,13 +12,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: POSITIVE INTEGER FIELD
     Example:
         xxxxxxxxxxxxxxxxxx
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
+> > Other related options:
 
     >> Positive Big Integer Field
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.txt
-    
+        /python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.txt
+
     >> Positive Small Integer Field
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.txt

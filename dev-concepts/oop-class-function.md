@@ -18,11 +18,11 @@ OOP: CLASS FUNCTIONS (METHODS)
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class.md
+        /dev-concepts/oop-class.md
 
 ---
 
     >> Directly related:
 
         >> Arguments:
-            /vault/dev-concepts/oop-class-attribute-argument.md
+            /dev-concepts/oop-class-attribute-argument.md

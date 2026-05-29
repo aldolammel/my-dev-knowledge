@@ -5,7 +5,7 @@
     This dunder method is called 'constructor' that runs automatically when a class instance is created.
 
     More about Python Dunder methods:
-        /vault/python/python-knowledge/classes/1-using-magic-dunder-methods.py
+        /python/python-knowledge/classes/1-using-magic-dunder-methods.py
 """
 
 # models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

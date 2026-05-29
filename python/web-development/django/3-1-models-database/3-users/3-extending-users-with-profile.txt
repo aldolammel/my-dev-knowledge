@@ -417,7 +417,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
     3) Create the signal to create a linked UserProfile entry automatically when a new user is
         created via front-end or Django CMS:
 
-        /vault/python/web-development/django/7-middlewares-and-signals/signals/signals-user-extended.txt
+        /python/web-development/django/7-middlewares-and-signals/signals/signals-user-extended.txt
 
 
 
@@ -975,7 +975,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
 
     5) Registration and Profile forms (templates):
-        /vault/python/web-development/django/10-login-and-logout/1-registering-custom-form.txt
+        /python/web-development/django/10-login-and-logout/1-registering-custom-form.txt
 
 
     6) Adding the Change Password option:
@@ -1576,15 +1576,15 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
         X) /accounts/templates/accounts/pwd_change.html:
 
-            /vault/python/web-development/django/9-forms/frontend-user-change-password.html
+            /python/web-development/django/9-forms/frontend-user-change-password.html
 
 
 
 
 
     XX) If you need to customize your CMS Accounts > Users (list-view and/or detail-view):
-        /vault/python/web-development/django/4-cms-admin/data-from-elsewhere/detailview-attr-from-other-class.py
-        /vault/python/web-development/django/4-cms-admin/data-from-elsewhere/listview-attr-from-other-class.py
+        /python/web-development/django/4-cms-admin/data-from-elsewhere/detailview-attr-from-other-class.py
+        /python/web-development/django/4-cms-admin/data-from-elsewhere/listview-attr-from-other-class.py
 
 
 
@@ -1605,4 +1605,4 @@ EXTENDING THE USER FEATURES WITH PROFILE:
 
     >> If you need the HTML models for all profile actions (reset password, change password, etc):
        
-       /home/aldolammel/Projects/vault/python/-Studies/vault/python/web-development/django/9-forms/registration/
+       /home/aldolammel/Projects/python/-Studies/python/web-development/django/9-forms/registration/

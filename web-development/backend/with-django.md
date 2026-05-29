@@ -1,1 +1,1 @@
-/vault/python/web-development/django/
+/python/web-development/django/

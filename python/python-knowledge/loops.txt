@@ -3,7 +3,7 @@
 LOOPS:
 
     >> For:
-        /vault/python/python-knowledge/for.py
+        /python/python-knowledge/for.py
 
     >> While:
-        /vault/python/python-knowledge/while.py
+        /python/python-knowledge/while.py

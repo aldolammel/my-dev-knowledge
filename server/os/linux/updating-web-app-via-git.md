@@ -1,10 +1,7 @@
-
-
 DEBIAN/UBUNTU > VPS: UPDATING A WEB APP
 
-
     PRE) Keep in mind:
-        
+
         Your current app files:
             Keep your app GIT repo accessible on the browser JUST for you. e.g.:
                 https://github.com/xxxxxxxxxx/tree/main
@@ -12,27 +9,27 @@ DEBIAN/UBUNTU > VPS: UPDATING A WEB APP
         Your current app main domain:
             E.g.
                 http://vpsXXXXX.publicExample.com
-        
+
         Your current app path on server:
             E.g.
                 $ cd /var/www/<app_name_folder>
-                
+
         Updating database:
             For tiny apps, I like to store the db locally inside de project folder, so it would be in the repo too ("instance" folder).
 
 
     1) Updating files:
-        
+
         1.1) Connect to the server:
-            /vault/server/connecting-via-ssh.txt
+            /server/connecting-via-ssh.txt
 
         1.2) Update the app repository:
-            /vault/versioning/git/command-pull.txt
+            /versioning/git/command-pull.txt
 
         1.3) Refresh the communication (service) between the web server and the app, restarting the Gunicorn (WSGI):
             $ sudo systemctl restart <simplified_app_name>
             $ systemctl status <simplified_app_name>
-            
+
             DID YOU FORGET THE SERVICE NAME?
                 $ sudo systemctl list-units --type=service
                     # Probably this list will help you to figure it out!
@@ -52,6 +49,5 @@ DEBIAN/UBUNTU > VPS: UPDATING A WEB APP
 
 
     3) Updating database:
-        
-        I'm currently using the portfolio repo to store the DB ("instance" folder).
 
+        I'm currently using the portfolio repo to store the DB ("instance" folder).

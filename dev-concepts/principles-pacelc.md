@@ -1,3 +1,3 @@
 PRINCIPLES: REST
 
-    /vault/database/principles-pacelc.md
+    /database/principles-pacelc.md

@@ -1,5 +1,5 @@
 // Using OptionsApi approach!
-// More about: /vault/javascript/web-development/frontend/Vue/vue-knowledge/3-approaches-to-code.txt
+// More about: /javascript/web-development/frontend/Vue/vue-knowledge/3-approaches-to-code.txt
 
 // Constant:
 const ConstantSomeName = {

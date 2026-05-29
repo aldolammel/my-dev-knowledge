@@ -1,5 +1,3 @@
-
-
 POSTGRESQL: CREATING A DATABASE LOCALLY
 
     PRE.1) Assuming you got already the PostgreSQL installed locally:
@@ -15,13 +13,13 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
         - - - - - -
 
-        1A) Using PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        1A) Using PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             1A.PRE) Make sure you've done the "INTEGRATION" step at once in the current machine:
                 ./0-basic/installing-and-integrating.txt
-            
+
             1A.1) In the server tree (sidebar-left), also open the 'Databases';
-            
+
                 ATTENTION:
                     Never use the database called "postgres". This is the default db and it cannot be delete!
 
@@ -35,13 +33,13 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                     G) By PostgreSQL prompt;
                     H) By PgAdmin;
 
-                    - - - - 
+                    - - - -
 
-                    G) By PostgreSQL prompt - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                    G) By PostgreSQL prompt - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                         xxxxxxxxxxxxxxxxxxxxxxxxx
 
-                    H) By PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                    H) By PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                         H.PRE) Install the PgAdmin app:
                             /xxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -65,21 +63,24 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
                                             ./0-basic/updating.md
 
                                         >> Update the entire system:
+
 <<<<<<< HEAD
 <<<<<<< HEAD
-                                            /vault/os/os/linux/distros/debian/2-updates/update.md
+/os/os/linux/distros/debian/2-updates/update.md
 =======
-                                            /vault/os/os/linux/distros/debian/2-updates/update.md
->>>>>>> 4e0f7344 (fedora stuff added)
-=======
-                                            /vault/os/os/linux/distros/debian/2-updates/update.md
->>>>>>> 4e0f7344 (fedora stuff added)
+/os/os/linux/distros/debian/2-updates/update.md
+
+> > > > > > > # 4e0f7344 (fedora stuff added)
+
+                                            /os/os/linux/distros/debian/2-updates/update.md
+
+> > > > > > > 4e0f7344 (fedora stuff added)
 
                                     WINDOWS:
                                         >> xxxxxxxxxxxxxxx
 
                                         >> xxxxxxxxxxxxxxx
-                                
+
                                 H.3.3) Start the Postgres again:
                                     ./0-basic/starting-and-stopping.md
 
@@ -105,10 +106,10 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
 
                 1B.1.1) Which encoding to use:
 
-                    PRE) Keep it in mind: 
+                    PRE) Keep it in mind:
                         project_db_name = it's the db name!
                         django_db_user = probably is the root user = postgres
-                
+
                     >> Using English language based:
                         $ CREATE DATABASE project_db_name OWNER django_db_user ENCODING UTF8 LC_COLLATE 'en_US.UTF-8' LC_CTYPE 'en_US.UTF-8' TEMPLATE template0;
 
@@ -124,9 +125,6 @@ POSTGRESQL: CREATING A DATABASE LOCALLY
             1B.2) Exit Postgres shell:
                 $ \q
 
-        
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-
+---

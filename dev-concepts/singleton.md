@@ -1,14 +1,12 @@
-
-
 SINGLETON
 
     It's a design pattern that restricts the instantiation of a class to a single object and
     provides a global point of access to that instance.
 
 
-    >> Key Characteristics: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-        - Only one instance: 
+    >> Key Characteristics: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        - Only one instance:
             The class ensures that only one instance of itself is created;
 
         - Global access:
@@ -20,7 +18,7 @@ SINGLETON
 
     >> Why Use Singletons: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        - Shared resources: 
+        - Shared resources:
             When you need a single point of control (db connection, logger, configuration);
 
         - State management:
@@ -33,7 +31,7 @@ SINGLETON
     >> Singleton Examples: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> In Python:
-            /vault/python/python-knowledge/classes/singleton.py
+            /python/python-knowledge/classes/singleton.py
 
         >> In JavaScript:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

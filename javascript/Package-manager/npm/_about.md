@@ -1,5 +1,3 @@
-
-
 NODE.JS: NPM, NODE PACKAGE MANAGER
 
     It's the default package manager for Node.js and serves two main purposes:
@@ -13,6 +11,5 @@ NODE.JS: NPM, NODE PACKAGE MANAGER
 
         2. Online registry (npmjs.com) - a massive repository of open-source JavaScript packages that developers can use in their projects.
 
-
 INSTALLATION:
-    /vault/javascript/NodeJS/1-installation.md
+/javascript/NodeJS/1-installation.md

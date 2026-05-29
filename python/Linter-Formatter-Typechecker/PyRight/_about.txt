@@ -10,4 +10,4 @@ PYRIGHT:
 
 
 
-    /vault/python/Linter-Formatter-Typechecker/PyRight/
+    /python/Linter-Formatter-Typechecker/PyRight/

@@ -1,21 +1,18 @@
-
-
-
 FRONT-END: USER LOGIN FORM
 
     >> Make sure you already have done:
-        /vault/python/web-development/django/3-1-models-database/3-users/0-users-setup.txt
-        /vault/python/web-development/django/10-login-and-logout/0-registering-by-frontend.txt
+        /python/web-development/django/3-1-models-database/3-users/0-users-setup.txt
+        /python/web-development/django/10-login-and-logout/0-registering-by-frontend.txt
 
 
     1) In 'accounts' sub-app, go to /templates/registration/ and create the 'login.html':
 
-                
-                    
+
+
                     <!-- LOGIN FORM - START -->
                     <form method="post">
                         {% csrf_token %}
-                        
+
                         {% for field in form.fields %}
 
                             {{ field.label }}
@@ -27,9 +24,9 @@ FRONT-END: USER LOGIN FORM
                         <a href="{% url 'accounts:password_reset' %}">I forgot my password</a>
                         <a href="{% url 'accounts:register_view' %}">Create a new account</a>
                     </form>
-                    <!-- LOGIN FORM - END --> 
-                    
-                
+                    <!-- LOGIN FORM - END -->
+
+
 
 
     2) If you want to print the user (username or first_name or last_name) on the template,
@@ -40,11 +37,8 @@ FRONT-END: USER LOGIN FORM
 
                 {{ user.username }}
 
-
-
-
 MORE ABOUT USER:
 
     >> If you're looking for how to import users in your models.py classes:
 
-        /vault/python/web-development/django/3-1-models-database/importing-users.txt
+        /python/web-development/django/3-1-models-database/importing-users.txt

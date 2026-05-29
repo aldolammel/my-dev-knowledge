@@ -1,1 +1,1 @@
-/vault/javascript/variables.js
+/javascript/variables.js

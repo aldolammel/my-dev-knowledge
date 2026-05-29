@@ -1,9 +1,7 @@
-
-
 DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 
     When a form field needs a basic validation as well as 'maximum length' or 'it cannot be empty', you need database level validation, also called 'database constraints'. As we are talking about validations direct for database (via Django), we are restrict a not complex options, and NONE of them will force Django to propagate that rules for other levels/layers of your app.
-    
+
     So, you must have it in mind that's just the first, basic and deepest validation level you will dive in your project. DB constraints are set via /apps/your_app/models.py file:
 
         E.g. very basic constraints:
@@ -15,7 +13,7 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
                     blank=False,               # db level validation.
                     unique=True,               # db level validation.
                     null=False,                # db level validation.
-                    
+
                     validators=[...]           # More options, but only for APP level.
                 )
                 attribute_example_2 = models.DecimalField(
@@ -50,10 +48,10 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
                     ]
                 ...
 
-        
+
         CRITICAL:
             For all validations above to run correctly, your model save() method must manually invoke the self.full_clean.
-                /vault/python/web-development/django/3-1-models-database/method-save.py
+                /python/web-development/django/3-1-models-database/method-save.py
 
 
     >> Exploring more database constraint possibilities (make sure your DB supports):
@@ -65,12 +63,11 @@ DJANGO FORMS VALIDATIONS: FOR DATABASE LEVEL (DB CONSTRAINTS)
 
 
     >> About Model clean() method:
-    
+
         If you are thinking to use Model clean() method to validate database, remember: clean() method is used just to custom validates in Django-level, never in db-level.
             .../django/3-1-models-database/method-clean.py
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
     OTHER VALIDATION LEVELS:
         ./1-validation-basic.txt

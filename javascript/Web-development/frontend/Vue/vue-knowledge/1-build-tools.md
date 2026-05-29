@@ -1,8 +1,5 @@
-
-
 BUILT-TOOLS FOR VUE.JS:
 
-    
     >> Vite (New standard, faster, modern, same creator of Vue.js)
 
         - It's NOT a framework, but a CLI (command line interface);
@@ -20,13 +17,10 @@ BUILT-TOOLS FOR VUE.JS:
         - Uses Vite (or webpack) depending on configuration.
         - A meta-framework for Vue with built-in routing, state management, and SSR.
 
+> > GET TO KNOW HOW THE VUE STRUCTURE WORKDS:
 
-
-
-
->> GET TO KNOW HOW THE VUE STRUCTURE WORKDS:
     ./vue_structure.png
 
+> > INSTALL A VUE PROJECT:
 
->> INSTALL A VUE PROJECT:
-    /vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+    /javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt

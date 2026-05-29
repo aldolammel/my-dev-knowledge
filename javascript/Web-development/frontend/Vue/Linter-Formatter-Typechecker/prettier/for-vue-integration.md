@@ -1,8 +1,4 @@
-
-
-
 PRETTIER: VUE INTEGRATION
-
 
     WHAT IS PRETTIER:
         ./_about.md
@@ -11,11 +7,11 @@ PRETTIER: VUE INTEGRATION
     >> Using VSCode as IDE:
 
         PRE) Assuming you already installed Prettier in your IDE/project:
-            /vault/javascript/Linter-Formatter-Typechecker/prettier/installation.md
+            /javascript/Linter-Formatter-Typechecker/prettier/installation.md
 
         1)  (NOT RECOMMENDED USE PRETTIER AS VUE FORMATTER)
             If you wanna a better formatter for Vue, use the ESLint for VUE, otherwise, use prettier:
-            
+
             Edit your VSCode profile that you are using Vue and:
 
             // VUE SETTINGS
@@ -26,8 +22,7 @@ PRETTIER: VUE INTEGRATION
                 "editor.insertSpaces": true,
             },
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
 BETTER VUE FORMATTER:
-    .../Linter-Formatter-Typechecker/eslint-plugin-vue/
+.../Linter-Formatter-Typechecker/eslint-plugin-vue/

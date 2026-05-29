@@ -1,30 +1,27 @@
-
-
 VUE: INSTALLING A NEW PROJECT
-
 
     1) Which scenario you are:
 
 
         1A) Installing Vue project for the first time in this machine/IDE (skip this roadmap);
-        
+
             ./0-vue-installation-and-setup.txt
-            
+
             # Case you already have node installed, select one of these next options below!
-                
-                
+
+
         1B) Re-installing Vue dependency only in a front-end existing project (skip this roadmap);
-        
+
             >> Skipping this current roadmap, close this file, and go to:
                 ./1-reinstall-new-copy.md
-                
-                
+
+
         1C) Re-installing an entire front-end existing project (skip this roadmap);
-        
+
             >> Skipping this current roadmap, close this file, and go to:
                 ./1-reinstall-new-copy.md
-                
-                
+
+
         1D) Install Vue in a new project;
 
             1D.PRE.1) Assuming you already got Node.js and also its Node-Version-Manager installed:
@@ -34,10 +31,10 @@ VUE: INSTALLING A NEW PROJECT
             1D.1) Creating a Vue project locally:
 
                 ./2-local-installation.md
-                
+
                 Otherwise, here for remote installation:
                     ./2-cdn-installation.md
-                
+
 
             1D.2) Just in case if not yet, open the project in your IDE;
 
@@ -51,7 +48,7 @@ VUE: INSTALLING A NEW PROJECT
                 Call your linter to analysis and point all possible issues/errors in your front-end code:
 
                     # Using ESLint:
-                        /vault/javascript/Linter-Formatter-Typechecker/eslint/checking-errors.txt
+                        /javascript/Linter-Formatter-Typechecker/eslint/checking-errors.txt
 
 
             1D.5) Run/Start your work in the Vue project folder root:
@@ -66,11 +63,11 @@ VUE: INSTALLING A NEW PROJECT
                         .../Vue/vue-knowledge/_running-app.txt
 
 
-        - - - - - 
+        - - - - -
 
 
     2) Return to the main Vue roadmap and keep going:
         ./0-vue-installation-and-setup.txt
 
 
-            
+

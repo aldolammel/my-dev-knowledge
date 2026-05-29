@@ -1,5 +1,3 @@
-
-
 DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP B
 
     READ THIS ALDO:
@@ -7,7 +5,7 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP B
 
 
     PRE) First, install Django using some Django project roadmap:
-        /vault/python/web-development/django/0-new-project/
+        /python/web-development/django/0-new-project/
 
     1) xxxxxxxxxxxxx
 

@@ -14,10 +14,10 @@
     - Use form's save() for form-specific data processing.
 
     >> The save_model() for Django Models is the save() method for Models:
-        /vault/python/web-development/django/3-1-models-database/method-save.py
+        /python/web-development/django/3-1-models-database/method-save.py
     
     >> The save_model() for Django Forms (including those tied with CMS) is the save() for Forms:
-        /vault/python/web-development/django/9-forms/method-save.py
+        /python/web-development/django/9-forms/method-save.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

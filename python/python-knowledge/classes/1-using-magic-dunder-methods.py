@@ -39,7 +39,7 @@
             __exit__(self, exc_type, exc_value, traceback)
 
     Dunders applied in Django framework:
-        /vault/python/web-development/django/dunder-methods-init.py
+        /python/web-development/django/dunder-methods-init.py
 """
 
 

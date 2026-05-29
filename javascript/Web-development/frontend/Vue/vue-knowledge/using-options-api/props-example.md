@@ -1,9 +1,6 @@
-
-
 VUE USING OPTIONS-API: PROPS EXAMPLES
 
-
-    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <template>
             <h1>Contacts</h1>
@@ -20,7 +17,7 @@ VUE USING OPTIONS-API: PROPS EXAMPLES
                 <p>{{ contact.country }}</p>
             </div>
         </template>
-        
+
         <script>
             export default {
                 props: {
@@ -75,11 +72,8 @@ VUE USING OPTIONS-API: PROPS EXAMPLES
             ];
         </script>
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > SAME EXAMPLE, BUT USING COMPOSITION-API:
 
-
->> SAME EXAMPLE, BUT USING COMPOSITION-API:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt
-
-    
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/props-example.txt

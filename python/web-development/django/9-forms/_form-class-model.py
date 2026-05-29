@@ -10,7 +10,7 @@ class ModelNameForm(forms.ModelForm):
 
     # def save(self, commit=True):
         # """Built-in Form method persists form data to the db."""
-        # More about: /vault/python/web-development/django/9-forms/method-save.py
+        # More about: /python/web-development/django/9-forms/method-save.py
     
     def clean(self):
     '''Form-level validation that runs after individual field validations if available.'''

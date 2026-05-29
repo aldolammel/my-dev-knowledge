@@ -1,7 +1,4 @@
-
-
 DJANGO: HOW TO MANAGE AND RAISE ERRORS
-
 
     raise ValidationError():
         ./raise-ValidationError.py
@@ -10,13 +7,10 @@ DJANGO: HOW TO MANAGE AND RAISE ERRORS
     raise ModelClass.DoesNotExist()
         ./raise-Model-DoesNotExists.py
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     MORE ABOUT NATIVE PYTHON ERRORS:
-        /vault/python/python-knowledge/errors/_errors-most-common.py
+        /python/python-knowledge/errors/_errors-most-common.py
 
         raise Exception()
         raise IndexError()

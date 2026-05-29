@@ -15,10 +15,10 @@
     - Use form's save() for form-specific data processing.
 
     >> The save() for Django Models is NOT the same of save() for Django Forms:
-        /vault/python/web-development/django/9-forms/method-save.py
+        /python/web-development/django/9-forms/method-save.py
 
     >> The save() for Django Admin Models is the save_model() method:
-        /vault/python/web-development/django/4-cms-admin/method-save_model.py
+        /python/web-development/django/4-cms-admin/method-save_model.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

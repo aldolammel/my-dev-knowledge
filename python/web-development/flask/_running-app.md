@@ -1,7 +1,4 @@
-
-
 FLASK: RUNNING AN APP
-
 
     PRE.1) Keep it in mind: this app is using local db or a cloud one? Case local, is the db service running properly?
 
@@ -10,14 +7,14 @@ FLASK: RUNNING AN APP
 
 
     PRE.3) Assuming you got the project's environment activated:
-        /vault/python/3-virtual-environment/activate-and-deactivate.txt
+        /python/3-virtual-environment/activate-and-deactivate.txt
 
 
     PRE.4) (If applicable)
         Assuming you're in the right Git branch;
-            /vault/versioning/git/command-branch.txt
-            /vault/versioning/git/command-checkout.txt
-    
+            /versioning/git/command-branch.txt
+            /versioning/git/command-checkout.txt
+
 
     4) Run the app:
 
@@ -30,7 +27,7 @@ FLASK: RUNNING AN APP
         # Or using PIP:
             # Running with no cache:
                 $ python flask run --debug
-            # Regular: 
+            # Regular:
                 $ python flask run
 
 

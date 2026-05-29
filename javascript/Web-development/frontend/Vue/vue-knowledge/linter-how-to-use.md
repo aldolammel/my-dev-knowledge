@@ -1,10 +1,8 @@
-
-
 LINTER TOOLS: HOW TO USE ONE IN VUE.JS
 
      Linter is a static code analysis tool that checks source code for potential errors, bugs, and
      stylistic issues. Linters help improve code quality by identifying problematic code patterns
-     and enforcing coding standards, ultimately leading to cleaner, more maintainable code. 
+     and enforcing coding standards, ultimately leading to cleaner, more maintainable code.
 
     >> ESLint plugin:
-        /vault/javascript/web-development/frontend/Vue/3-plugins/eslint/
+        /javascript/web-development/frontend/Vue/3-plugins/eslint/

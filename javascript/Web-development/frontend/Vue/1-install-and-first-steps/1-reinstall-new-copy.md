@@ -1,7 +1,4 @@
-
-
 VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
-
 
     1) Which scenario you are:
 
@@ -10,10 +7,10 @@ VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
         1C) Re-installing Vue dependency only in a front-end existing project;
         1D) Re-installing an entire front-end existing project;
 
-        - - - - - 
+        - - - - -
 
         1A) Installing Vue project for the first time in this machine/IDE - - - - - - - - - - - - -
-        
+
             >> Skipping this current roadmap, close this file, and go to:
                 ./0-vue-installation-and-setup.txt
 
@@ -24,28 +21,28 @@ VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
                 ./1-install-new-project.md
 
 
-        1C) Re-installing Vue dependency only in a front-end existing project - - - - - - - - - - - 
-                
+        1C) Re-installing Vue dependency only in a front-end existing project - - - - - - - - - - -
+
             BRING THIS OLD INSTRUCTION TO HERE!!!!!!
                     ./installing-an-existent-project.txt
 
-            
-                
-            
+
+
+
             1C.1) Clone an existent project repo:
-                /vault/versioning/git/command-clone.txt
-            
+                /versioning/git/command-clone.txt
+
             1C.2) xxxxxxxxxxxxxxxxxxxx:
 
 
         1D) Re-installing an entire front-end existing project - - - - - - - - - - - - - - - - - - -
-                
+
             1D.PRE) Don't delete the old frontend folder!
-        
+
             1D.1) Create a new frontend folder inside the current project/backend folder, and get it:
 
                 $ cd <project_folder>
-                
+
                 $ mkdir frontend2
                 $ cd frontend2
 
@@ -54,38 +51,38 @@ VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
 
                 1D.2M) Auto install based on package.json file;
                 1D.2P) Or xxxxxxxxxxxxxxxxxxxxxxxxxx.
-            
+
                 - - - - -
 
                 1D.2M) Auto install based on package.json file - - - - - - - - - - - - - - - - - - -
 
                     To automatically re-install all known dependencies of the front-end's project:
-                        /vault/javascript/Package-manager/npm/auto-install-all-project-dependencies.txt
+                        /javascript/Package-manager/npm/auto-install-all-project-dependencies.txt
 
 
-                1D.2P) xxxxxxxxxxxxxxxxxxxxxxxxxx - - - - - - - - - - - - - - - - - - - - - - - - - 
+                1D.2P) xxxxxxxxxxxxxxxxxxxxxxxxxx - - - - - - - - - - - - - - - - - - - - - - - - -
 
                     xxxxxxxxxxxxxxxxxxx
 
-                
+
                 - - - - -
 
 
             1D.3) bring Files (??????):
-                
+
 
             1D.4) Stores (frontend db) matters:
 
                 xxxxxxxxxxxxxxxxxxxx???????
 
-            
+
             1D.5) Test it!
 
                 $ xxxxxx
 
-            
+
             1D.6) If the application is using more than one language, ???????
-            
+
                 xxxxxxxxxxxxx
 
 
@@ -94,20 +91,17 @@ VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
                 xxxxxx??????
 
 
-        - - - - - 
+        - - - - -
 
 
     X) (If applicable)
         Call your linter to analysis and point all possible issues/errors in your front-end code:
 
             # Using ESLint:
-                /vault/javascript/Linter-Formatter-Typechecker/eslint/checking-errors.txt
+                /javascript/Linter-Formatter-Typechecker/eslint/checking-errors.txt
 
 
     2) Return to the main Vue roadmap and keep going:
         ./0-vue-installation-and-setup.txt
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
+---

@@ -1,5 +1,3 @@
-
-
 DEV CONCEPTS: PULL-REQUEST
 
     PR is a way to propose changes to a codebase and request that someone review and "pull" those changes into the project. It's a fundamental part of collaborative development, especially when using version control systems like Git.
@@ -29,10 +27,7 @@ DEV CONCEPTS: PULL-REQUEST
             - Did I self-review and remove debug code/comments?
             - Did I leave helful comments for the next person?
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 GIT:
-    /vault/versioning/
+/versioning/

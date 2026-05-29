@@ -1,12 +1,9 @@
-
-
 VUE: CREATING MENU DYNAMICALLY
 
-
-    >> Back-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> Back-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> Using Django:
-            /vault/python/web-development/django/3-2-views-and-API/5-dynamic-menus/_creating-menu-system.txt
+            /python/web-development/django/3-2-views-and-API/5-dynamic-menus/_creating-menu-system.txt
 
         >> Using Xxxxx:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -15,20 +12,19 @@ VUE: CREATING MENU DYNAMICALLY
     >> Front-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         PRE) How the Menus API data will look-like:
-            /vault/python/web-development/django/3-2-views-and-API/5-dynamic-menus/7-sending-this-data.json
-        
+            /python/web-development/django/3-2-views-and-API/5-dynamic-menus/7-sending-this-data.json
+
         1. xxxx
             ./src/stores/menus.js
-        
+
         2. xxxx
             ./src/App.vue
-        
+
         3. xxxx
             ./src/components/layout/NavMain.vue
-        
+
         4. xxxx
             ./src/components/pages/Home.vue
-        
+
         5. Run it:
-            /vault/javascript/web-development/frontend/Vue/vue-knowledge/_running-app.txt
- 
+            /javascript/web-development/frontend/Vue/vue-knowledge/_running-app.txt

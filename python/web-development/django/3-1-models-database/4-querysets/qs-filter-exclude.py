@@ -62,7 +62,7 @@ class MovieForm(forms.ModelForm):
 
 
 # More:
-# /vault/python/web-development/django/9-forms/form-queryset-filtering-dropdown.py
+# /python/web-development/django/9-forms/form-queryset-filtering-dropdown.py
 
 
 
@@ -78,7 +78,7 @@ class MovieCMS(admin.ModelAdmin):
 
 
 # More:
-# /vault/python/web-development/django/4-cms-admin/customizing/detailview-filtering-any-data.py
+# /python/web-development/django/4-cms-admin/customizing/detailview-filtering-any-data.py
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

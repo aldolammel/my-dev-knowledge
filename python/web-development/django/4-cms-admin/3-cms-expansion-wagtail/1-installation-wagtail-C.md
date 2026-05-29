@@ -1,15 +1,12 @@
-
-
 DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP C
-
 
     READ THIS ALDO:
         https://docs.wagtail.org/en/stable/getting_started/integrating_into_django.html
 
-        
+
 
     PRE) First, install Django using some Django project roadmap:
-        /vault/python/web-development/django/0-new-project/
+        /python/web-development/django/0-new-project/
 
     1) xxxxxxxxxxxxx
 

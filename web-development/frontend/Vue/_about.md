@@ -1,2 +1,2 @@
 VUE.JS:
-/vault/javascript/web-development/frontend/Vue/
+/javascript/web-development/frontend/Vue/

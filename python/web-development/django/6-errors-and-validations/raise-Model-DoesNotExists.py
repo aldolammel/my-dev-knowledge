@@ -8,7 +8,7 @@
         ./raise-error.txt
 
     Python native 'raise' options:
-        /vault/python/python-knowledge/errors/_errors-most-common.py
+        /python/python-knowledge/errors/_errors-most-common.py
 """
 
 # models.py

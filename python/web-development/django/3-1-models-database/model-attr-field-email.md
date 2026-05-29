@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: EMAIL FIELD
 
     Common Usage:
@@ -9,7 +7,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: EMAIL FIELD
         - Single field with simple e-mail validation.
 
     Examples:
-        
+
         # Basic:
             email = models.EmailField(
                 max_length=255,
@@ -24,12 +22,11 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: EMAIL FIELD
                 blank=False,
                 default="",                   # or None. It's demanded if blank=False or null=False!
             )
-            
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
->> Other related options:
-    
+---
+
+> > Other related options:
+
     >> Char Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-char.txt
-
+        /python/web-development/django/3-1-models-database/model-attr-field-char.txt

@@ -1,21 +1,18 @@
-
-
 DIRECTIVE: V-SLOT
-
 
     >> It's accepted for: JavaScript expression that's valid in a function arg position.
 
     >> It's shorter caller: '#' (hash)
 
     >> This is strongly related with Vue Components:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/5-components.txt
-    
+        /javascript/web-development/frontend/Vue/vue-knowledge/5-components.txt
+
     >> Denote named slots or scoped slots that expect to receive props.
 
     >> Examples:
 
         >> Basic:
-            /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.4.1-slot-example-basic.txt
-        
+            /javascript/web-development/frontend/Vue/vue-knowledge/5.4.1-slot-example-basic.txt
+
         >> Smarter:
-            /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt
+            /javascript/web-development/frontend/Vue/vue-knowledge/5.4.2-slot-example-smart.txt

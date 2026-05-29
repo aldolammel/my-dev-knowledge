@@ -1,18 +1,16 @@
-
-
 TYPE-CHECKER FOR TYPESCRIPT: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.md
+        /dev-concepts/tool-formatter.md
 
     >> Need this but for vanilla JS?
-        /vault/javascript/Linter-Formatter-Typechecker/_type-checker/js-options.txt
+        /javascript/Linter-Formatter-Typechecker/_type-checker/js-options.txt
 
 
     >> Options:
 
         >> Flow (by Facebook)
-            /vault/javascript/Linter-Formatter-Typechecker/flow/_about.md
+            /javascript/Linter-Formatter-Typechecker/flow/_about.md
 
         >> xxxx
 

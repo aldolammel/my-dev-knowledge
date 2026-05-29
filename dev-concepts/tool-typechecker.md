@@ -1,14 +1,12 @@
-
-
 TYPE-CHECKER TOOL: WHAT IS IT
 
     Correctness & Reliability!
 
-    It analyzes your code to ensure you are not performing invalid operations, like adding a string 
+    It analyzes your code to ensure you are not performing invalid operations, like adding a string
     to a number or calling a method that doesn't exist on an object. This happens before the code
     runs (at compile time or during editing).
 
-    >> Primary Purpose: 
+    >> Primary Purpose:
         To verify that the values and data structures in your program are used in a consistent and
         valid way according to their defined types.
 
@@ -21,17 +19,16 @@ TYPE-CHECKER TOOL: WHAT IS IT
         - Object is possibly 'null';
 
     >> Type-checker for Python:
-        /vault/python/Linter-Formatter-Typechecker/
+        /python/Linter-Formatter-Typechecker/
 
     >> Type-checker for JavaScript:
-        /vault/javascript/Linter-Formatter-Typechecker/
+        /javascript/Linter-Formatter-Typechecker/
 
     >> xxxxxx
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > More about:
 
->> More about:
-
-    Formatter tools: /vault/dev-concepts/tool-formatter.md
-    Linter tools:    /vault/dev-concepts/tool-linter.md
+    Formatter tools: /dev-concepts/tool-formatter.md
+    Linter tools:    /dev-concepts/tool-linter.md

@@ -1,5 +1,3 @@
-
-
 VUE-ROUTER: UNINSTALL
 
     # To remove:
@@ -7,8 +5,8 @@ VUE-ROUTER: UNINSTALL
     # Check removal:
         $ npm list
 
+---
 
-- - - - 
+> > INSTALLATION:
 
->> INSTALLATION:
-    /vault/javascript/web-development/frontend/Vue/3-component-libraries/vue-router/1-router-installation.md
+    /javascript/web-development/frontend/Vue/3-component-libraries/vue-router/1-router-installation.md

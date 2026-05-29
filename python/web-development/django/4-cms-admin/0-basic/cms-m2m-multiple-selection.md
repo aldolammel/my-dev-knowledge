@@ -1,5 +1,3 @@
-
-
 MANY-TO-MANY USING USER-FRENDLY MULTIPLE SELECTION:
 
     >> In admin.py, inside the Admin Model class:
@@ -12,4 +10,4 @@ MANY-TO-MANY USING USER-FRENDLY MULTIPLE SELECTION:
 
     >> More about:
 
-        /vault/python/web-development/django/3-1-models-database/field-select-menu-multiple.txt
+        /python/web-development/django/3-1-models-database/field-select-menu-multiple.txt

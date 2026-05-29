@@ -1,5 +1,3 @@
-
-
 JAVASCRIPT: CONFIRM()
 
     E.g.
@@ -9,7 +7,7 @@ JAVASCRIPT: CONFIRM()
             // Some action here if so!
         }
 
-    
-    
+
+
     >> JAVASCRIPT: ALERT()
-        /vault/javascript/alert.txt
+        /javascript/alert.txt

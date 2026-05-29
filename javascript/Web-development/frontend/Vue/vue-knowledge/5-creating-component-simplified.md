@@ -1,10 +1,7 @@
-
-
 CREATING A NEW COMPONENT (IN ONE SINGLE FILE):
 
-
     0) Basic about it:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/5-components.txt
+        /javascript/web-development/frontend/Vue/vue-knowledge/5-components.txt
 
 
     1) Create in your Vue project folder a JavaScript file for your main app and its components:
@@ -56,6 +53,4 @@ CREATING A NEW COMPONENT (IN ONE SINGLE FILE):
                 </section>
             </body>
         </html>
-        
-
 

@@ -1,3 +1,1 @@
-
-
-/vault/python/web-development/django/12-error-pages/
+/python/web-development/django/12-error-pages/

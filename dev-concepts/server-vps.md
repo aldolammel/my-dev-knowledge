@@ -24,4 +24,4 @@ DEV CONCEPTS: VIRTUAL PRIVATE SERVER (VPS)
 ---
 
 HOW TO BUILD UP A LINUX SERVER:
-/vault/server/os/linux/\_building-and-installing-a-server.md
+/server/os/linux/\_building-and-installing-a-server.md

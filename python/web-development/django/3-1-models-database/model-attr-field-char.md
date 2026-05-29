@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
 
     Common Usage:
@@ -9,14 +7,14 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
         - Single line field.
 
     Examples:
-        
+
         # basic:
             first_name = models.CharField(
                 max_length=25,
                 blank=True,
                 default="",                   # or None, but avoid to use 'null=True' if blank=True!
             )
-        
+
         # advanced:
             first_name = models.CharField(
                 max_length=25,
@@ -36,25 +34,21 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
                 default=consts.VAL_FRONT_TOOL_DEFAULT,
             )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Text Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-text.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-text.txt
 
     >> Email Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-email.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-email.txt
 
     >> URL Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-url.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-url.txt
 
     >> Slug Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-slug.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-slug.txt
 
     >> Binary Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-binary.txt
-
-
-
-    
+        /python/web-development/django/3-1-models-database/model-attr-field-binary.txt

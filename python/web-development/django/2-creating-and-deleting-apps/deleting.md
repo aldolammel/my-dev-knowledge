@@ -1,5 +1,4 @@
-
-DELETING DJANGO PACKAGE OF FUNCTIONS (APPS*):
+DELETING DJANGO PACKAGE OF FUNCTIONS (APPS\*):
 
     (*) Personally, I call 'app' as 'sub-app', meanwhile for me 'app'
         (aka 'main-app' or 'project-folder') is the project itself.
@@ -8,7 +7,7 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS*):
         1A) If sub-app is NOT installed yet;
         1B) Or if sub-app is installed;
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         1A) If sub-app is NOT installed yet:
 
@@ -20,11 +19,11 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS*):
 
             1B.1) Basicaly, in the sub-app folder, delete all classes/tables from its 'models.py';
 
-            1B.2) Make the same in 'admin.py' when needed. If other file is calling that classes, 
+            1B.2) Make the same in 'admin.py' when needed. If other file is calling that classes,
                 make sure to delete that calls too, including in other sub-apps if needed too;
 
             1B.3) Update your database with these changes:
-            
+
                 # for all apps:
                     $ python manage.py makemigrations
 
@@ -47,7 +46,7 @@ DELETING DJANGO PACKAGE OF FUNCTIONS (APPS*):
 
             1B.9) Delete the sub-app folder;
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         2) Test the application again:
-            /vault/python/web-development/django/_running-app.txt
+            /python/web-development/django/_running-app.txt

@@ -1,5 +1,3 @@
-
-
 VUEX: COMPUTED PROPERTIES
 
     While computed properties aren't a Vuex feature, they're commonly used with Vuex to
@@ -7,10 +5,10 @@ VUEX: COMPUTED PROPERTIES
 
 
         >> I forget, what is Vue.js Computed Properties:
-            
+
             >> Using Options API approach:
-                /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/option-computed.txt
-            
+                /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/option-computed.txt
+
             >> Using Composition API approach:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -27,7 +25,7 @@ VUEX: COMPUTED PROPERTIES
                         currentUser() {
                             return this.$store.state.user.currentUser;
                         },
-                        
+
                         // Accessing Vuex getters through computed property
                         isLoggedIn() {
                             return this.$store.getters.isAuthenticated;
@@ -44,5 +42,4 @@ VUEX: COMPUTED PROPERTIES
 
 
         >> Using Vuex Helpers to make this above easier:
-            /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt
-
+            /javascript/web-development/frontend/Vue/3-component-libraries/vuex/vuex-helpers.txt

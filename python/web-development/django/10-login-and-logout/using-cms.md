@@ -1,7 +1,4 @@
-
-
 LOGIN AND LOGOUT: USING THE CMS
-
 
     To login using CMS, Django already brings it to you:
 
@@ -9,4 +6,4 @@ LOGIN AND LOGOUT: USING THE CMS
 
 
         If you are in trouble, read it:
-            /vault/python/web-development/django/1-install-and-first-steps/installing-the-project.txt
+            /python/web-development/django/1-install-and-first-steps/installing-the-project.txt

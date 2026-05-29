@@ -1,5 +1,3 @@
-
-
 JSON WEB TOKEN (JWT)
 
     It's an authentication plugin designed for use with the Django REST Framework. It provides a
@@ -7,18 +5,16 @@ JSON WEB TOKEN (JWT)
 
     https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     >> For Django Rest Framework:
 
         More about Django Rest Framework:
-            /vault/python/web-development/django/component-libraries/django-rest-framework/0-restframewok.txt
+            /python/web-development/django/component-libraries/django-rest-framework/0-restframewok.txt
 
 
         1) Install the plugin:
-            
+
             # With PIP:
                 $ python3 -m pip install djangorestframework-simplejwt
             # With UV:
@@ -38,7 +34,7 @@ JSON WEB TOKEN (JWT)
             2.2) Still in settings.py, add these lines too:
 
                 from datetime import timedelta
-                
+
                 SIMPLE_JWT = {
                     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
                     'REFRESH_TOKEN_LIFETIME': timedelta(days=180),
@@ -53,21 +49,21 @@ JSON WEB TOKEN (JWT)
                     )
                     //...
                 }
-            
+
             2.4) Now, in your Django core urls.py file (or any other url config), include routes
                 for Simple JWT:
-                    
+
                     from django.url import path
                     from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
                     urlpatterns = [
                         # DJANGO:
                         #...
-                        
+
                         # APIs:
                         path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
                         path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-                        
+
                         # THIRD-PARTY:
                         #...
                     ]

@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: SMALL INTEGER FIELD
 
     Typical Size:
@@ -14,10 +12,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: SMALL INTEGER FIELD
     Example:
         xxxxxxxxxxxxxxxxxx
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
+> > Other related options:
 
     >> Integer Field
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-integer.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-integer.txt

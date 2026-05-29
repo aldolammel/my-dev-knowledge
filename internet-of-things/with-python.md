@@ -1,1 +1,1 @@
-/vault/python/vault/internet-of-things/
+/python/internet-of-things/

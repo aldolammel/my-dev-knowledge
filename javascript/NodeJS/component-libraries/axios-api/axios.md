@@ -1,5 +1,3 @@
-
-
 API SOLUTION: AXIOS
 
     Axios is a popular HTTP client library for Node.js (and browsers) that simplifies making
@@ -44,8 +42,8 @@ API SOLUTION: AXIOS
     >> Installing Axios:
 
         # On project front-end folder:
-            $ npm install axios 
-            
+            $ npm install axios
+
         # If vulnerability:
             $ npm audit fix
 
@@ -53,11 +51,10 @@ API SOLUTION: AXIOS
         >> Integrations:
 
             >> For Vue.js:
-                /vault/javascript/web-development/frontend/Vue/3-component-libraries/axios/axios-integration-with-vue.txt
+                /javascript/web-development/frontend/Vue/3-component-libraries/axios/axios-integration-with-vue.txt
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > FOR SIMPLEST SOLUTION IN JAVASCRIPT:
 
-
->> FOR SIMPLEST SOLUTION IN JAVASCRIPT:
-    /vault/javascript/api.md
+    /javascript/api.md

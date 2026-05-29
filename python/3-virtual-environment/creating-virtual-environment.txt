@@ -91,7 +91,7 @@ VIRTUAL ENVIRONMENT:
 
 
         C) With UV Package Manager:
-            /vault/python/package-manager/uv/create-or-find-current-venv.md
+            /python/package-manager/uv/create-or-find-current-venv.md
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

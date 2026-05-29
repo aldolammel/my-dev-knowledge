@@ -1,7 +1,4 @@
-
-
 VUE: INSTALLING AND SETUP
-
 
     1) Which scenario is your case:
 
@@ -12,7 +9,7 @@ VUE: INSTALLING AND SETUP
 
 
         1B) This machine and IDE are ready for Vue projects, and I'm just re-installing Vue for an existing app (or re-installing the entire project):
-            
+
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.md
 
@@ -28,17 +25,17 @@ VUE: INSTALLING AND SETUP
 
                 - - - - -
 
-                1C.1A) Node locally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                1C.1A) Node locally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                     1C.1A.1) Install Node.js (JS backend):
-                        /vault/javascript/NodeJS/1-installation.md
+                        /javascript/NodeJS/1-installation.md
 
                         1C.1A.1.1) (optional)
                             Install 'Vue.js devtools' (Extension) for your browser!
 
                         1C.1A.1.2) (optional)
                             Install the Vue extension in your IDE:
-                        
+
                                 >> For VSCode:
                                     https://marketplace.visualstudio.com/items?itemName=Vue.volar
 
@@ -71,33 +68,30 @@ VUE: INSTALLING AND SETUP
 
                 - - - - -
 
-            1C.2) Install Vue in the project: 
+            1C.2) Install Vue in the project:
                 ./1-install-new-project.md
 
 
-    
+
     2) Once Vue project already installed, let's ask us again about the current case:
-    
+
         2A) This machine and IDE are already for Vue projects, and I got a brand new project:
 
             >> Skip this file, jumping to this one:
                 ./1-install-new-project.md
 
         2B) This machine and IDE are ready for Vue projects, and I'm just re-installing Vue for an existing app (or re-installing the entire project):
-            
+
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.md
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
 
         >> VUE as front-end and no backend at all:
             .../Vue/0-new-project/web-project-vue-only-front.md
-        
+
         >> VUE as back and front-end:
             .../Vue/0-new-project/web-project-vue-as-back-and-front.md
 
@@ -124,7 +118,7 @@ VUE: INSTALLING AND SETUP
     PRE.1) In case you need install or re-install an existent Vue project:
 
         ./reinstall-new-vue-copy.txt
-        
+
 
     PRE.2) Check the project's folder structure based on the project's back-end:
 
@@ -133,18 +127,7 @@ VUE: INSTALLING AND SETUP
 
         >> For Flask back-end:
             ./project-folder-structure-vue-and-flask.txt
-            
+
         >> OR NO BACK-END or Vue.js will be the full solution, so keep going anyway...
 
-
-    
-
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
-        
-        
-
-            
+---

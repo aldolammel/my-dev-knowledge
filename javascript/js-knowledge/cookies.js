@@ -9,11 +9,11 @@
         - xxxxxxxxxxxxxxx
 
     Cookies vs localStorage:
-        /vault/javascript/localStorage.js
+        /javascript/localStorage.js
 
 
     Cookies vs sessionStorage:
-        /vault/javascript/sessionStorage.js
+        /javascript/sessionStorage.js
         
 
 */

@@ -1,1 +1,1 @@
-/vault/server/os/linux/
+/server/os/linux/

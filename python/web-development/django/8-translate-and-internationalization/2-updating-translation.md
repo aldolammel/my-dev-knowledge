@@ -1,12 +1,10 @@
-
-
     UPDATING A TRANSLATION PROJECT:
 
         There some approaches with different steps:
 
 
             CASE A) Non-database data: Update the original language;
-                
+
                 >> Crucial: the original language (msgid) NEVER be updated directly in a .po file!
 
 
@@ -21,19 +19,17 @@
 
             CASE D) Database data: add a new model-attribute as 'translations';
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
         >> CASE A:
-            
+
             1) Update the original/default text directly in models, views and templates files;
 
             2) Re-generate all translations (.po) because you've tweaked the original language,
                 consequently changing the 'msgid' those files are using to link their translations:
 
                     $ django-admin makemessages --all
-            
+
             3) Re-compile (it updates the application):
 
                     $ django-admin compilemessages
@@ -48,7 +44,7 @@
         >> CASE B:
 
             >> With NO translation manager:
-            
+
                 1) Open the .PO file related with the additional language that need to be updated;
 
                 2) In the .po file, update all 'msgstr' that need attention;
@@ -79,22 +75,22 @@
 
 
         >> CASE C:
-        
-            1) Update the desired 'translations' attribute as you wish; 
+
+            1) Update the desired 'translations' attribute as you wish;
 
             2) makemigrations and migrate commands!
-            
+
 
 
         >> CASE D:
-            
-            1) Check if the model is already child of 'TranslatableModel'. Create a 'translations' 
-                attribute in the class or, then, add the new translatable field in the existent 
+
+            1) Check if the model is already child of 'TranslatableModel'. Create a 'translations'
+                attribute in the class or, then, add the new translatable field in the existent
                 'translations' attribute:
 
                     E.g.
 
-                        /vault/python/web-development/django/8-translate-and-internationalization/translate-models.txt
+                        /python/web-development/django/8-translate-and-internationalization/translate-models.txt
 
                         >> CRUCIAL: To avoid the 'migration' BUG, make sure you are following
                                     steps from the link above!
@@ -102,7 +98,7 @@
 
             5) For CMS, if some admin.py changes is needed, don't forget the 'TranslatableAdmin' inherit:
 
-                /vault/python/web-development/django/8-translate-and-internationalization/translate-cms.txt
+                /python/web-development/django/8-translate-and-internationalization/translate-cms.txt
 
 
             6) Test!

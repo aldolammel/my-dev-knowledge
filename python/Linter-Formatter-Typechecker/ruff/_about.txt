@@ -10,7 +10,7 @@ PYTHON LANGUAGE > LINTER AND FORMATTER: RUFF
 
         TIP:
             Ruff is developed by the same company of the UV Package manager, so both are completely integrated.
-                /vault/python/package-manager/uv.txt
+                /python/package-manager/uv.txt
 
 
 

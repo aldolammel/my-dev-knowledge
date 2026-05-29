@@ -1,24 +1,21 @@
-
-
 CSS FRAMEWORK > TAILWIND: INSTALLATION
-
 
     WHAT IS IT:
         ./_about.md
 
 
     PRE) Assuming you are using Vite Build-tool:
-        /vault/javascript/Build-tools/Vite/0-vite.txt
+        /javascript/Build-tools/Vite/0-vite.txt
 
 
 
-    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        
+    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
         1.1) In the frontend folder, install Tailwind and its Vite plugin:
             $ npm install tailwindcss @tailwindcss/vite
 
-        
-    
+
+
     2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         2.1) Configure the Vite plugin, adding the @tailwindcss/vite plugin to your Vite configuration:

@@ -1,8 +1,9 @@
 #### Python > Django > Project types
+
 # Updating Django in an existing project
 
     >> Considering a Python update too:
-        /vault/python/0-new-project/3-update-python-version-in-a-project.md
+        /python/0-new-project/3-update-python-version-in-a-project.md
 
     >> Which tool are you using:
 
@@ -40,7 +41,7 @@
         B) UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             PRE-B.1) What is it:
-                /vault/python/package-manager/uv/_about-install-and-update.md
+                /python/package-manager/uv/_about-install-and-update.md
 
             PRE-B.2) In case you've just updated Python in the project:
 
@@ -66,23 +67,23 @@
                             # requires-python = ">=3.13.3, <3.14"
 
                         # Now, let's update the uv.lock and .python-version dynamically, running again the UV sync:
-                            /vault/python/package-manager/uv/auto-installation-with-sync.md
+                            /python/package-manager/uv/auto-installation-with-sync.md
 
                         # Check those files to confirm changes!
 
 
             B.1) Make a project's db backup!
-                /vault/database/PostgreSQL/backup.txt
-                /vault/database/MySQL/mysql-backup.txt
-                /vault/database/MariaDB/mariadb-backup.txt
-                /vault/database/SQLite/sqlite-backup.txt
+                /database/PostgreSQL/backup.txt
+                /database/MySQL/mysql-backup.txt
+                /database/MariaDB/mariadb-backup.txt
+                /database/SQLite/sqlite-backup.txt
 
             B.2) Update the Django, going to the project folder and, e.g.:
                 $ uv add "django>=5.2.7,<5.3"
                     # Check the pyproject.toml file if the new version was correctly declared!
 
             B.3) Update all dependencies to ensure compatibility with new Django version:
-                /vault/python/package-manager/uv/upgrade-dependencies.txt
+                /python/package-manager/uv/upgrade-dependencies.txt
 
             B.4) Test Django:
 

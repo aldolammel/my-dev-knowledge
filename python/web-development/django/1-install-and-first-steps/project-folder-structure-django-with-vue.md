@@ -1,3 +1,1 @@
-
-
-/vault/javascript/web-development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+/javascript/web-development/frontend/Vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt

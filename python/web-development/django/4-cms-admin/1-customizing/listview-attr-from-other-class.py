@@ -4,7 +4,7 @@
     ATTRIBUTE FROM OTHER CLASS: SHOWING IN A LIST-VIEW
     
         What is a list-view:
-            /vault/python/web-development/django/4-cms-admin/_about.md
+            /python/web-development/django/4-cms-admin/_about.md
     
 """
 

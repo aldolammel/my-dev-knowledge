@@ -29,7 +29,7 @@ class BlogPostCreateView(CreateView):
         ./view-class-create-usage.py
 
     ROADMAP TO APPLY THIS SOLUTION IN A PROJECT:
-        /vault/python/web-development/django/5-uploads/django-upload-image-simplest.txt
+        /python/web-development/django/5-uploads/django-upload-image-simplest.txt
 
     WHO INHERIT CREATE-VIEW CLASS:
         >> No one!

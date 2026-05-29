@@ -1,13 +1,10 @@
-
-
 DJANGO > MODELS: INHERITING METHODS
 
-
     >> What is methods:
-        /vault/dev-concepts/oop-class-method.md
+        /dev-concepts/oop-class-method.md
 
 
-    >> How method inheritance works:        
+    >> How method inheritance works:
         - Child class can extend its parent's methods actions with no lost;
         - - A parent method is NOT called automatically through the child;
         - - - You must explicitly call it using super().
@@ -39,7 +36,7 @@ DJANGO > MODELS: INHERITING METHODS
                 # Clean validations will run only here through its local attributes!
 
 
-    CHILD MODEL CLASS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    CHILD MODEL CLASS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         class ChildModel(ParentModel):
             ...child attributes here...
@@ -47,9 +44,9 @@ DJANGO > MODELS: INHERITING METHODS
 
             def save(self, *args, **kwargs):
                 # NEVER CALL "self.full_clean()" IN CHILD IF PARENT ALREADY CALLS!
-                
+
                 # 1. The saving logic you wanna work here!
-                
+
                 # 2. Saving the data (including changes in parent via this child) in the db:
                 super().save(*args, **kwargs)
 
@@ -57,5 +54,5 @@ DJANGO > MODELS: INHERITING METHODS
             def clean(self):
                 # 1. Allows the parent class to execute full_clean() in this child too:
                 super().clean()  # <-- Exactly, not full_clean() here, just clean()!
-                
+
                 # 2. Clean validations for this child runs.

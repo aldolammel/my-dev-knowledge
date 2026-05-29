@@ -1,8 +1,7 @@
-
 DATABASE ON DJANGO: SQLITE
 
-    It's the Django database default solution! 
-    
+    It's the Django database default solution!
+
     When you start a new project using the django-admin startproject command, Django automatically generates a settings.py file with SQLite pre-configured. This allows you to start developing immediately without needing to install or manage a separate database server like PostgreSQL or MySQL.
 
     In /core/settings.py will be like this:
@@ -21,14 +20,12 @@ DATABASE ON DJANGO: SQLITE
 
         6) <check the last steps of postgres checklist to migrate those steps here maybe!!!>
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 CHECK IDE EXTENSIONS FOR THIS DB:
 
     >> VSCode:
-        /vault/ide/vscode/
+        /ide/vscode/
 
     >> PyCharm:
-        /vault/ide/pycharm/
+        /ide/pycharm/

@@ -8,4 +8,4 @@ AUTOPEP8:
         >> Black
         >> xxxxx
 
-/vault/python/Linter-Formatter-Typechecker/autopep8/
+/python/Linter-Formatter-Typechecker/autopep8/

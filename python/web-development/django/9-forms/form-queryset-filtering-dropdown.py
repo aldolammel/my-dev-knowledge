@@ -12,7 +12,7 @@
             Let's go!
 
     >> What are QuerySets?
-        /vault/python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.txt
+        /python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.txt
     
 """
 from django import forms 
@@ -52,6 +52,6 @@ class BrandCarStoreForm(forms.ModelForm):
             Don't forget to make the filtering also in admin.py (different way) to make the feature
             usefull throught the admin area.
             
-                /vault/python/web-development/django/4-cms-admin/customizing/detailview-filtering-any-data.py
+                /python/web-development/django/4-cms-admin/customizing/detailview-filtering-any-data.py
 
         """

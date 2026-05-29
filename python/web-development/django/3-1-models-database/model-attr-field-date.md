@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE FIELD
 
     Common Usage:
@@ -11,13 +9,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE FIELD
     Example:
         xxxxxxxxxxxx
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Date Time Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-dateTime.txt
-    
-    >> Duration Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-duration.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-dateTime.txt
 
+    >> Duration Field:
+        /python/web-development/django/3-1-models-database/model-attr-field-duration.txt

@@ -4,5 +4,5 @@ from . import models
 
 """
 Serializer class model:
-https://github.com/aldolammel/my-dev-knowledge/blob/main/vault/python/web-development/django/3-2-views-and-API/_serializer-class-model.py
+https://github.com/aldolammel/my-dev-knowledge/blob/main/python/web-development/django/3-2-views-and-API/_serializer-class-model.py
 """

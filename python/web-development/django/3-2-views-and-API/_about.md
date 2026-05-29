@@ -1,20 +1,17 @@
-
-
 DJANGO STRUCTURE: VIEWS.PY
-
 
     >> Django is divided in 3 main parts: models, views, and templates.
 
 
     >> VIEWS:
 
-        They are responsable for manage what data the user will see through a template. 
+        They are responsable for manage what data the user will see through a template.
         The 'views.py' file contains all logic the user can see and which template/webpage the data
         will be seen.
 
-        >> Views are also responsable for manage what data the users of the app can send to the 
+        >> Views are also responsable for manage what data the users of the app can send to the
             database and, actually, what data they can read/see.
-            
+
         >> The 'views.py' file is closely related with 'urls.py' file, this one defining which view
             will be called in certain URL;
 
@@ -22,26 +19,26 @@ DJANGO STRUCTURE: VIEWS.PY
 
                 - function-base view: kwown as FBVs.
                 - class-base view: known as CBVs (recommended)
-        
+
         >> Through 'views.py' file you:
 
                 - Handle user input and interact with models to retrieve data;
                 - Render templates with the data obtained from models;
                 - Return HTTP responses (like HTML, JSON, XML, etc).
 
-    
+
     >> API:
-        
+
         Important to be clear: once Views and API concepts share similarities, they are NOT the same even though both are responsable to send data from back-end to front-end, for example.
 
 
 
     OTHER DJANGO PARTS:
 
-        >> MODELS: 
+        >> MODELS:
 
-            /vault/python/web-development/django/3-1-models-database/
+            /python/web-development/django/3-1-models-database/
 
         >> TEMPLATES:
 
-            /vault/python/web-development/django/3-3-frontend-templates/
+            /python/web-development/django/3-3-frontend-templates/

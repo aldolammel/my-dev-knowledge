@@ -5,7 +5,7 @@
     */
     "recommendations": [
         // JS/VUE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        // Assuming you've added too: /vault/javascript/IDE-softwares/vscode/examples/.vscode/extensions.json
+        // Assuming you've added too: /javascript/IDE-softwares/vscode/examples/.vscode/extensions.json
         "johnsoncodehk.volar", // Support for Vue 3 (type checking, IntelliSense, autocomplete).
         // OTHER TOOLS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         // ...

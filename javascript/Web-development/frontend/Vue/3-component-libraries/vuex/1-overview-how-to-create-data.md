@@ -1,10 +1,8 @@
-
-
 VUEX: HOW TO CREATE DATA
 
     STEP 0: WORKFLOW
         Overview of the VueX workflow:
-        /vault/javascript/web-development/frontend/Vue/3-component-libraries/vuex/one-way-data-flow.png
+        /javascript/web-development/frontend/Vue/3-component-libraries/vuex/one-way-data-flow.png
 
 
     STEP 1: STATE
@@ -34,7 +32,7 @@ VUEX: HOW TO CREATE DATA
             >> When the view is a component .vue file:
                 // Importing a Vuex Helper to handle states:
                 import { mapState } from 'vuex'
-                
+
                 export default {
                     name: 'Home',  // component name
                     data() {
@@ -56,11 +54,11 @@ VUEX: HOW TO CREATE DATA
         >> DISPATCH:
             In the view where the data is shown, address/dispatch the action to update
             a specific state property (data):
-            
+
             >> When the data must be loaded automatically:
 
                 >> Set the data dispatch in the App .vue file:
-                
+
                     export default {
                         // Computed Properties:
                         // ...
@@ -72,7 +70,7 @@ VUEX: HOW TO CREATE DATA
                     }
 
                     >> More about Lifecycle-hooks:
-                        /vault/javascript/web-development/frontend/Vue/lifecycle-hooks.txt
+                        /javascript/web-development/frontend/Vue/lifecycle-hooks.txt
 
 
             >> When the data must be loaded just after some user directly interaction,
@@ -109,15 +107,15 @@ VUEX: HOW TO CREATE DATA
         update a specific state/data when called:
 
         >> When the data must be loaded directly from an API/JSON:
-            
+
             >> Using FetchAPI (native of JavaScript):
-                /vault/javascript/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
+                /javascript/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.js
 
             >> Using Axios:
                 /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         >> When the data is already in a state, but can be updated by another action:
-            
+
             export default createStore({
                 //...
                 actions: {
@@ -129,7 +127,7 @@ VUEX: HOW TO CREATE DATA
                 },
                 //...
             })
-    
+
 
     STEP 4: MUTATION
         Finally and still in /store/index.js, create the mutation that will execute the action over
@@ -153,7 +151,6 @@ VUEX: HOW TO CREATE DATA
                 }
             },
 
-
 TESTING IT:
 
     >> Checking whether the data is been sent to the browser, using the "Vue DevTool":
@@ -162,4 +159,3 @@ TESTING IT:
         - Select the component where the data is;
         - If everything's fine, you're seeing the 'computed' with its data (array, probably)
             somewhere on the dev panel;
-

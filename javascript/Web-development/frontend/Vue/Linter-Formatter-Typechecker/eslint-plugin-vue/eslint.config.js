@@ -1,5 +1,5 @@
 // FILE: /frontend/eslint.config.js
-// This basic file model: /vault/javascript/Linter-Formatter-Typechecker/eslint/eslint.config.js
+// This basic file model: /javascript/Linter-Formatter-Typechecker/eslint/eslint.config.js
 
 import js from "@eslint/js";
 import pluginVue from "eslint-plugin-vue"; // <---- ADD IT!

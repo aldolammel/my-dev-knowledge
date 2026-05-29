@@ -1,7 +1,4 @@
-
-
 FLASK: INSTALLING AND SETUP
-
 
     1) Which scenario is your case:
 
@@ -12,7 +9,7 @@ FLASK: INSTALLING AND SETUP
 
 
         1B) This machine and IDE are ready for Flask projects, and I'm just re-installing Flask for an existing app (or re-installing the entire project):
-            
+
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.md
 
@@ -28,7 +25,7 @@ FLASK: INSTALLING AND SETUP
         1C) This machine (or IDE) is new! Preparing it to everything about Flask - - - - - - - - -
 
             1C.PRE.1) Python interpreter (if needed);
-                /vault/python/1-python-installation/
+                /python/1-python-installation/
 
             1C.PRE.2) Create the project folder, and get it:
                 $ mkdir <project_folder>
@@ -38,12 +35,12 @@ FLASK: INSTALLING AND SETUP
 
             1C.PRE.4) IDE, select through the IDE GUI which User Profile this project demands!
                         # Aldo's profile backups:
-                            /vault/ide/vscode/user-profiles-bkp/
-                            /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                            /ide/vscode/user-profiles-bkp/
+                            /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             1C.PRE.5) IDE, language setup:
-                >> VSCode:  /vault/python/IDE-softwares/vscode/basic-for-python.txt
-                >> PyCharm: /vault/python/IDE-softwares/pycharm/basic-for-python.txt
+                >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
+                >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
 
             1C.1) IDE, framework setup:
                 >> VSCode:  .../flask/IDE-softwares/vscode/basic-for-flask.txt
@@ -60,23 +57,20 @@ FLASK: INSTALLING AND SETUP
 
         - - - - -
 
-    
+
     2) Once Flask project already installed, let's ask us again about the current case:
-    
+
         A) This machine and IDE are already for Flask projects, and I got a brand new project:
 
             >> Skip this file, jumping to this one:
                 ./1-install-new-project.md
 
         B) This machine and IDE are ready for Flask projects, and I'm just re-installing Flask for an existing app (or re-installing the entire project):
-            
+
             >> Skip this file, jumping to this one:
                 ./1-reinstall-new-copy.md
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
     MAKE SURE YOU ALREADY FINISHED ONE OF THESE ROADMAPS:
 
@@ -91,4 +85,3 @@ FLASK: INSTALLING AND SETUP
 
         >> FLASK with ANGULAR as front-end:
             .../flask/0-new-project/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-

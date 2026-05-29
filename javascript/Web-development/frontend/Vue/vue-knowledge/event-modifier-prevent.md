@@ -1,12 +1,10 @@
-
-
     EVENT MODIFIER: .prevent
 
         In Vue.js, .prevent is an event modifier that's equivalent to calling preventDefault() on
         the event. It's a shorthand way to prevent the default behavior of events.
 
         The same but in JavaScript:
-            /vault/javascript/preventDefault.js
+            /javascript/preventDefault.js
 
 
         E.g. in Vue.js:

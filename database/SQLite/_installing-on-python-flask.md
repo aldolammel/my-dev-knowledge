@@ -1,3 +1,1 @@
-
-
-/vault/python/web-development/flask/database-with-flask/SQLite/installation.md
+/python/web-development/flask/database-with-flask/SQLite/installation.md

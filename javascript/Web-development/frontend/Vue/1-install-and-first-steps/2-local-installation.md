@@ -1,9 +1,7 @@
-
-
 VUE > CREATING A PROJECT: LOCALLY
 
     >> Just a simplest model:
-        .../Vue/vue-knowledge/using-composition-api/z-examples/hello-world/ 
+        .../Vue/vue-knowledge/using-composition-api/z-examples/hello-world/
 
 
     PRE.1) Assuming you already got Node.js:
@@ -11,7 +9,7 @@ VUE > CREATING A PROJECT: LOCALLY
 
 
     PRE.2) Check which backend paths Vue must keep away to avoid conflicts:
-        
+
         >> Using Django as backend:
             ./project-folder-structure-vue-and-django.txt
 
@@ -24,33 +22,33 @@ VUE > CREATING A PROJECT: LOCALLY
 
     PRE.3) Assuming you already decided which Vue project type you wanna build up
         .../Vue/vue-knowledge/SPA-vs-MPA.txt
-        
-    
+
+
     PRE.4) Create an exclusive .env file to set the front-end environment variables:
-        /vault/environment-variables/env-for-local/in-frontend/
+        /environment-variables/env-for-local/in-frontend/
 
         >> (Optional)
             Make sure this new .env is ignored by Git. This line should be there:
                 frontend/.env
 
-            
+
     1) Choosing the scaffolding and build-tool for Vue projects:
-    
+
         1A) Vite (New standard for Vue 3, faster Command Line Interface, created by Vue team);
         1B) Or Vue-CLI (Old Vue standard Command Line Interface / Webpack-based);
-        
+
         - - - -
-        
+
         1A) Using Vite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-            
+
             1A.1) Install Vite:
-                /vault/javascript/Build-tools/Vite/0-vite.txt
-                
+                /javascript/Build-tools/Vite/0-vite.txt
+
 
             1A.2) Install every front-end's dependencies of this front-end's project (what should be listed in your Engineering Data document of this project)!
-            
-            
+
+
             1A.3) (Optional)
                 Configure Vite to recognize "@" in paths and more (Recommended):
 
@@ -77,11 +75,11 @@ VUE > CREATING A PROJECT: LOCALLY
             1A.4) (If applicable / Optional)
                 In case the SCSS/SASS on the project, make Vite to recognize SCSS global vars importable:
 
-                    /vault/web-development/frontend/CSS/scss/variables-global.txt
+                    /web-development/frontend/CSS/scss/variables-global.txt
 
                     # More SCSS integration we will see later!
-            
-                
+
+
             1A.5) (If applicable / Optional)
                 Extending Vite features (probably all of them, if really needed, will be in your Engineering Data document):
 
@@ -89,12 +87,12 @@ VUE > CREATING A PROJECT: LOCALLY
                         .../Vue/3-component-libraries/vue-router/_vue-router.txt
 
                     >> CSS Pre-processors (Vite built-in solutions):
-                        /vault/web-development/frontend/CSS/scss/vue-integration.txt
-                    
-                    
+                        /web-development/frontend/CSS/scss/vue-integration.txt
+
+
 
         1B) Or using Vue-CLI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                
+
                 More about in https://cli.vuejs.org/
 
             >> Install Vue-CLI globally (-g):
@@ -105,13 +103,13 @@ VUE > CREATING A PROJECT: LOCALLY
 
                     IMPORTANT
                         Check if the Vue CLI is attached to the right Node.js version, looking for this line in the terminal right after the Vue-cli installation is finished:
-                            
+
                             "npm warn EBADENGINE   current: { node: 'v24.0.1', npm: '11.3.0' }"
 
                             >> If node version is NOT what you want, do it:
 
                                 A) Switch the Node version to use:
-                                    /vault/javascript/NodeJS/2.2-automating-switch-process.txt
+                                    /javascript/NodeJS/2.2-automating-switch-process.txt
 
                                 B) Re-install the Vue-CLI!
 
@@ -144,7 +142,7 @@ VUE > CREATING A PROJECT: LOCALLY
                         $ cd <vue_project_folder>
                     # Check what is locally installed:
                         $ npm list
-                
+
 
             >> Update Vue-CLI:
 
@@ -153,7 +151,7 @@ VUE > CREATING A PROJECT: LOCALLY
 
                 # Check the current Vue-CLI version:
                     $ vue --version
-                
+
                 # Check whether Vue-CLI is locally of globally installed:
                     $ npm list
 
@@ -170,22 +168,20 @@ VUE > CREATING A PROJECT: LOCALLY
 
         - - - - - -
 
-    
+
     2) Make sure you already got configured your code quality shields for Vue:
-                        
+
         >> Linter for Vue:
             .../Vue/Linter-Formatter-Typechecker/_linter/vue-options.txt
 
-        >> Formatter for Vue: 
+        >> Formatter for Vue:
             .../Vue/Linter-Formatter-Typechecker/_formatter/vue-options.txt
 
         >> Type-checker for Vue:
             .../Vue/Linter-Formatter-Typechecker/_type-checker/vue-options.txt
 
+---
 
+> > Back to the installation instructions:
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Back to the installation instructions:
     ./1-install-new-project.md

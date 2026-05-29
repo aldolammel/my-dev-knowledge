@@ -1,6 +1,6 @@
 '''
     SINGLETON
-        Concept: /vault/dev-concepts/singleton.md
+        Concept: /dev-concepts/singleton.md
 '''
 
 # Example of a class designed to restrict more than just one instance creation, and providing a

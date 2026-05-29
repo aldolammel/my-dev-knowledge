@@ -1,5 +1,3 @@
-
-
     LANGUAGE BY COUNTRY OR USER PREFERENCE
 
 
@@ -11,47 +9,47 @@
 
 
         >> (OPTIONAL) Advanced solution:
-            
+
             - User Authentication Check: It checks if the user is authenticated before processing
                 their language preferences.
-            
+
             - Language Preference Handling: If the user is authenticated and has no language
                 preference, it sets the user's language based on the current URL's language. If the
                 user has a language preference, it activates that language for the request.
-            
+
             - URL Language Redirection: If the URL's language doesn't match the user's preferred
                 language, it redirects the user to the same URL with the correct language code.
-            
+
             - Cookie Management: It sets a cookie for non-authenticated users to remember their
                 language preference.
-            
+
             - Geolocation Logic: If the user is not authenticated and no language preference is
                 found in cookies, it attempts to determine the user's language based on their
                 geolocation using their IP address. It maps country codes to specific languages and
                 activates the detected language.
-            
+
             - Debugging Information: It prints debugging information about the authenticated user
                 and their language preferences when in debug mode.
-            
+
             - Fallback Language Activation: If geolocation fails or if there are issues with the
                 API, it falls back to a default language setting.
-            
+
             - Handling of Anonymous Visitors: It manages language preferences for anonymous visitors
                 based on their IP address and sets the appropriate language accordingly.
-            
+
             - Request Processing: It processes the request and returns the response after applying
                 the language settings.
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        
+
         >> STEP 1/2: (MANDATORY) Basic built-in solution:
-        
-            1.1) Make sure you are ready for next moves:
-                /vault/python/web-development/django/8-translate-and-internationalization/1-starting-translation.txt
 
-            
+            1.1) Make sure you are ready for next moves:
+                /python/web-development/django/8-translate-and-internationalization/1-starting-translation.txt
+
+
             1.2) Add in settings.py:
                 LANGUAGE_COOKIE_NAME = 'user_language'
                 LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
@@ -66,7 +64,7 @@
                     - Add that before: "django.contrib.auth.middleware.AuthenticationMiddleware",
 
                     That said, do it:
-                    
+
                     MIDDLEWARE = [
                         ...
                         "django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
@@ -78,7 +76,7 @@
                     ]
 
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
         >> STEP 2/2: (OPTIONAL) Advanced solution:
@@ -104,7 +102,7 @@
                 Carefully, be aware the this middleware rules:
                 - Add that after: "django.contrib.auth.middleware.AuthenticationMiddleware",
                 - Add that before: nothing to say yet...
-                
+
                 That said, do it:
 
                 MIDDLEWARE = [
@@ -115,13 +113,13 @@
 
             2.3) In core folder, create the file called "middlewares.py":
 
-                /vault/python/web-development/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
+                /python/web-development/django/7-middlewares-and-signals/middlewares/1-advanced-multilingual-features.py
 
 
             2.4) In /accounts/views.py, an example of user's profile_view that's aware to the
                 change of user's language preference:
 
-                /vault/python/web-development/django/3-2-views-and-API/4-user-profile-view/profile-view.txt
+                /python/web-development/django/3-2-views-and-API/4-user-profile-view/profile-view.txt
 
                     E.g.
                         # Update the session language to match the new preference:
@@ -135,4 +133,3 @@
                             request.session['_language'] = language_code
                         # Feedback message:
                         messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
-

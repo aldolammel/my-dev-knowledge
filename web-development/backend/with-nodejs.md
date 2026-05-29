@@ -1,1 +1,1 @@
-/vault/javascript/NodeJS/
+/javascript/NodeJS/

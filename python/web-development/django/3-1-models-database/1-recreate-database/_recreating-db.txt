@@ -14,7 +14,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
         1) Delete the current database;
 
             >> PostgreSQL:
-                /vault/database/PostgreSQL/deleting-db.txt
+                /database/PostgreSQL/deleting-db.txt
 
             >> MySQL:
                 /xxxxxxxxx
@@ -28,7 +28,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
         2) Create the new database:
 
             >> PostgreSQL:
-                /vault/database/PostgreSQL/creating-db-locally.txt
+                /database/PostgreSQL/creating-db-locally.txt
 
             >> MySQL:
                 /xxxxxxxxx
@@ -40,7 +40,7 @@ DJANGO: RE-CREATING THE PROJECT DATABASE
                 /xxxxxxxxx
 
         3) (If applicable) Make sure you are in the right Versioning branch!
-            /vault/versioning/git/command-checkout.txt
+            /versioning/git/command-checkout.txt
         
         4) In your Django, through each sub-app migration-folder, delete all its content (except the dunder init). Check if you are visualizing the __pycache__ folder. It should be deleted too, but the project settings could be hidden them!
 

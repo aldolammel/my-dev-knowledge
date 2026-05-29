@@ -30,4 +30,4 @@ const userIdToRemove = 2;
 const filteredUsers = users.filter((user) => user.id !== userIdToRemove);
 
 // Remove first occurrence and modify original array:
-//  /vault/javascript/splice.js
+//  /javascript/splice.js

@@ -1,1 +1,1 @@
-/vault/javascript/z-examples/fetch-api-on-vuejs/App_approach_compositionApi.vue
+/javascript/z-examples/fetch-api-on-vuejs/App_approach_compositionApi.vue

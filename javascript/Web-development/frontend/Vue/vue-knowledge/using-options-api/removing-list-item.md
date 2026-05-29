@@ -1,7 +1,4 @@
-
-
 REMOVING LIST ITEM:
-
 
     >> script.js:
 
@@ -18,7 +15,7 @@ REMOVING LIST ITEM:
                 },
                 remove_member(idx) {
                     // This function removes a member to the musician's list.
-                    // Remove 1 element at the specific index: 
+                    // Remove 1 element at the specific index:
                     this.members.splice(idx, 1);
                 }
             }
@@ -47,7 +44,7 @@ REMOVING LIST ITEM:
 
 
     >> Adding example:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/adding-list-item.vue
-        
+        /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/adding-list-item.vue
+
     >> Project Example:
-        /vault/javascript/web-development/frontend/Vue/examples-vue/adding-and-removing-things-by-form/
+        /javascript/web-development/frontend/Vue/examples-vue/adding-and-removing-things-by-form/

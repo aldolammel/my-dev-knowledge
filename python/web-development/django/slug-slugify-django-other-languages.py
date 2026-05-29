@@ -6,10 +6,10 @@
         ./slug-slugify-django-english.py
     
     >> Slugify with raw Python for English:
-        /vault/python/python-knowledge/slug-slugify-english.py
+        /python/python-knowledge/slug-slugify-english.py
 
     >> Slugify with raw Python for non-English languages:
-        /vault/python/python-knowledge/slug-slugify-other-languages.py
+        /python/python-knowledge/slug-slugify-other-languages.py
 """
 
 # SIMPLEST FOR DJANGO:

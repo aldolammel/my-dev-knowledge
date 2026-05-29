@@ -8,13 +8,13 @@
     Use Case: ...... When you need to perform an action on every element;
 
     Traditional For() loop method:
-        /vault/javascript/for.js
+        /javascript/for.js
 
     Some() loop method:
-        /vault/javascript/some.js
+        /javascript/some.js
 
     Find() method:
-        /vault/javascript/find.js
+        /javascript/find.js
 */
 
 const numbers = [1, 2, 3, 4, 5];

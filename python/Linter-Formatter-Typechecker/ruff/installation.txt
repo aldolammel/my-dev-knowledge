@@ -20,7 +20,7 @@ RUFF: INSTALLATION AND INTEGRATION
             1.1A) Using UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                 PRE) UV already installed:
-                    /vault/python/package-manager/uv.txt
+                    /python/package-manager/uv.txt
 
                 >> Already in the right virtual env, add it as dev dependency only:
                     $ uv add --optional dev ruff
@@ -28,7 +28,7 @@ RUFF: INSTALLATION AND INTEGRATION
             1.1B) Using PIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
                 PRE) Basic about PIP:
-                    /vault/python/package-manager/pip/_about.md
+                    /python/package-manager/pip/_about.md
 
                 >> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -48,7 +48,7 @@ RUFF: INSTALLATION AND INTEGRATION
 
         2) Create or edit the pyproject.toml file of your project:
             # If needed, model file:
-                /vault/python/web-development/pyproject.toml
+                /python/web-development/pyproject.toml
 
             # Apply these configs in your project pyproject.toml file:
                 ./pyproject.toml

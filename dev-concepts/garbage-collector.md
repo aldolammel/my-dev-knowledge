@@ -1,5 +1,3 @@
-
-
 DEV CONCEPTS: GARBAGE COLLECTOR
 
     It's an automatic memory management system that identifies and frees memory that's no longer being used by your program. For example, Python uses a hybrid approach, combining a Reference Counting, and a Generational solution:
@@ -25,9 +23,9 @@ DEV CONCEPTS: GARBAGE COLLECTOR
 
             # Python limitation:
                 This language cannot manage automatically garbage collection for circular relations!
-                    /vault/python/python-knowledge/performance/manual-garbage-collection.txt
-    
-    
+                    /python/python-knowledge/performance/manual-garbage-collection.txt
+
+
     In languages without garbage collection (like C or C++), you must manually manage memory:
 
         // C:

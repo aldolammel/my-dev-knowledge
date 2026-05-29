@@ -1,1 +1,1 @@
-/vault/api/serializers.txt
+/api/serializers.txt

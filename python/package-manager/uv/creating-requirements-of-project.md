@@ -25,7 +25,7 @@ They are packages NOT required to run an app, but they make tasks easier:
 
 The file _pyproject.toml_ (PEP 621) manages all dependencies (including the optional ones) of a specific project:
 
-E.g. /vault/python/web-development/pyproject.toml
+E.g. /python/web-development/pyproject.toml
 
 ---
 

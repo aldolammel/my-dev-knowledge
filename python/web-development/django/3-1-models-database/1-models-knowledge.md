@@ -52,7 +52,7 @@ models.SlugField(unique=True, default='', db_index=True) .......................
 xxxxxxxxxxxxxxxxxxxxxxxxx ...................................................... <input type="week">
 
     FORM FIELDS, INCLUDING WIDGET FIELDS:
-        /vault/python/web-development/django/9-forms/_forms_knowledge.txt
+        /python/web-development/django/9-forms/_forms_knowledge.txt
 
 
 
@@ -69,15 +69,14 @@ xxxxxxxxxxxxxxxxxxxxxxxxx ......................................................
     UNDERSTANDING THE MODELS FIELDS ARGUMENTS (PARAMETERS):
 
         E.g. models.CharField(arg1, arg2, ...)
-            /vault/python/web-development/django/3-1-models-database/2-model-arguments.md
-
+            /python/web-development/django/3-1-models-database/2-model-arguments.md
 
 ---
 
 OTHER DJANGO PARTS:
 
     >> VIEWS:
-        /vault/python/web-development/django/3-2-views-and-API/
+        /python/web-development/django/3-2-views-and-API/
 
     >> TEMPLATES:
-        /vault/python/web-development/django/3-3-frontend-templates/
+        /python/web-development/django/3-3-frontend-templates/

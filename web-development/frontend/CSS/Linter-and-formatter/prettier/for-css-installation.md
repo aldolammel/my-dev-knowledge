@@ -1,14 +1,12 @@
-
-
 CSS FORMATTER: PRETTIER
 
     PRE) Assuming you know this CSS formatter:
-        /vault/javascript/Linter-Formatter-Typechecker/prettier/_about.md
+        /javascript/Linter-Formatter-Typechecker/prettier/_about.md
 
     1) Make sure you already have the "Prettier Code Formatter" extension in your IDE;
 
     2) IDE configuration:
-    
+
         >> For VSCode:
             In the project's .vscode/settings.json, add this:
 

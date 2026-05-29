@@ -1,3 +1,1 @@
-
-
-/vault/web-development/domain/ssl-certification.md
+/web-development/domain/ssl-certification.md

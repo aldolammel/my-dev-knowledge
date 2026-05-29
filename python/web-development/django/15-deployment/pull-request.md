@@ -1,3 +1,1 @@
-
-
-/vault/dev-concepts/pull-request.md
+/dev-concepts/pull-request.md

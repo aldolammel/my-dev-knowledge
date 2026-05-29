@@ -144,7 +144,7 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
 
     4) (If applicable)
         Ask yourself if you need to update some .env file in a specific project! If so, remember what to do in that file:
-            /vault/environment-variables/
+            /environment-variables/
 
 ---
 

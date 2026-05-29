@@ -1,1 +1,1 @@
-/vault/database/constraint-for-db.md
+/database/constraint-for-db.md

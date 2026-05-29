@@ -1,5 +1,3 @@
-
-
 SESSION FEATURES:
 
     >> What is it: a ongoing-connection between a client-browser and server!
@@ -13,9 +11,6 @@ SESSION FEATURES:
 
     >> Without the session, even logged users will be logout when page is reloaded or broser is closed;
 
-
-
-
 ACTIVING SESSION IN THE PROJECT:
 
     1) In config-folder, open 'settings.py' file;
@@ -25,12 +20,12 @@ ACTIVING SESSION IN THE PROJECT:
 
         'django.contrib.sessions.middleware.SessionMiddleware',
 
-        >> More about middleware: 
-            /vault/python/web-development/django/7-middlewares-and-signals/middlewares/
+        >> More about middleware:
+            /python/web-development/django/7-middlewares-and-signals/middlewares/
 
 
     3) In 'INSTALLED_APPS' list, add this right after the '.contenttypes' app:
-        
+
         'django.contrib.sessions',
 
 

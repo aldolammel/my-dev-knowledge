@@ -1,15 +1,13 @@
-
-
 DJANGO USEFUL APPS: PAGEX by @aldolammel
 
     It's an Django app that manages all pages for a website, make the process a little bit more
     dynamic.
 
 
-    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         1.PRE) Your Django project must be running fine with Django 5.2 or newer;
-        
+
         1.1) Download from <GitHub link> OR take it from another project!
 
         1.2) Set Pagex in /django_root_folder/apps/;
@@ -17,16 +15,16 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
         1.3) Make sure .../apps/pagex/migrations/ folder has only the __init__.py in, deletion all migration files case exists;
 
         1.4) Install Pagex dependencies:
-            
+
             Pillow:
-                /vault/python/component-libraries/pillow/
+                /python/component-libraries/pillow/
 
             Django-polymorphic:
                 .../django/component-libraries/django-polymorphic/
 
             Admin Sortable 2:
                 .../django/component-libraries/django-admin-sortable2/
-            
+
             Django REST Framework:
                 .../django/component-libraries/django-rest-framework/
 
@@ -36,7 +34,7 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
 
 
     2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        
+
         2.1) In core/settings.py:
 
             2.1.1) Include the Pagex as an installed sub-app:
@@ -45,7 +43,7 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
                     ...
                     "apps.pagex",  # Or only 'pagex' if you installed it directly in backend root.
                 ]
-            
+
             2.1.2) Define Pagex global variables:
 
                 # PAGEX SUB-APP:
@@ -72,7 +70,7 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
                 from django.conf import settings
                 from django.conf.urls.static import static
                 from django.urls import include, path
-                
+
                 # DJANGO BASIC:
                 urlpatterns = [
                     # CMS:
@@ -104,5 +102,4 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
             >> Front-end with React:
                 ./with-frontend-react.txt
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---

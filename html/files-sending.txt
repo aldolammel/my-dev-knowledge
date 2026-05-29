@@ -2,4 +2,4 @@
 
 HTML: SENDING FILES
 
-    /vault/html/form/files-upload.txt
+    /html/form/files-upload.txt

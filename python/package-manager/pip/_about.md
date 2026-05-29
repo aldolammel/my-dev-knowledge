@@ -4,7 +4,7 @@
 
     ATTENTION:
         Uv is much more efficient and modern than pip:
-            /vault/python/package-manager/uv.txt
+            /python/package-manager/uv.txt
 
 
     That said, let's go:
@@ -20,7 +20,7 @@
 
 
         2) Active your environment:
-            /vault/python/3-virtual-environment/
+            /python/3-virtual-environment/
 
 
         3) Now, install/update it:
@@ -30,4 +30,4 @@
 
 > > FOR PIP ALTERNATIVE: UV (Modern Package Manager)
 
-    /vault/python/package-manager/uv.txt
+    /python/package-manager/uv.txt

@@ -1,51 +1,27 @@
+#### JavaScript
+# Which JS project you wanna start
+
+---
+
+## 1) Make a choice of a project roadmap:
+
+- **Updating:**
+	- 1A) To update JS in an existent product: xxxxxxxxxx
+	- 1B) To update Vue in an existent product: [javascript/Web-development/frontend/Vue/0-new-project/update-vue-version](javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md)
+	- 1C) To update React in an existent product: xxxxxxxx
+	- 1D) To update Angular in an existent product: xxxxxxx
+- **API:**
+	- 1E) xxxxx
+- **Web application:**
+	- Pure:
+		- Pure JS? Why?
+	- **Vue**:
+		- 1F) To develop a web app with Vue as front-end: [javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front](javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md)
+		- 1G) To develop a web app with Vue as full-stack: [javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front](javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md)
+	- **React**:
+		- xxx
+	- **Angular**:
+		- xxxx
 
 
-INSTALLATION ROADMAP BY PROJECT TYPE:
-
-
-    >> UPDATE: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-        >> Update JS version in an existent product: /xxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-        >> Update Vue version in an existent product: /vault/javascript/web-development/frontend/Vue/0-new-project/update-vue-version.md
-
-        >> Update XXxxxX version in an existent product: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-    >> DATABASE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-        >> What db should be used:
-            /vault/database/00-new-project/
-
-
-    >> JS > WEB-DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        
-        >> with Vue:
-
-            >> Vue as Front-end: /vault/javascript/web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md
-
-            >> Vue as Fullstack: /vault/javascript/web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md
-
-            >> Back-end <SOME_JS_FRAMEWORK> + Front-end Vue.js: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-            >> Back-end <ANOTHER_JS_FRAMEWORK> + Front-end Vue: /xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-        >> with Xxxxx:
-
-            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
-
-            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
-
-            >> xxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt  
-        
-
-    >> JS > SOFTWARE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
-        >> with Xxxxx:
-
-            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
-            
-        >> with Xxxxx:
-
-            >> xxxxxx: /vault/javascript/00-New-Project/xxxxxxxxxx.txt
+---

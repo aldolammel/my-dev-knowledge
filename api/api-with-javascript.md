@@ -1,5 +1,3 @@
-
-
 API: WITH JAVASCRIPT
 
-    /vault/javascript/api.md
+    /javascript/api.md

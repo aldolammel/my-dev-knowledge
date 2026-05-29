@@ -1,15 +1,13 @@
-
-
 IMPLEMENTING PDF EXPORTATION:
 
     >> Example of this implementation:
-        /vault/python/web-development/django/z-project-examples/proj-exporting-pdf/
-    
+        /python/web-development/django/z-project-examples/proj-exporting-pdf/
+
     >> Checklist:
-    
+
         x) Install the package: xhtml2pdf
             https://xhtml2pdf.readthedocs.io/en/latest/
-        
+
         x) In your sub-app folder that will contain the PDF exportation, create the folder and these files (both empties):
             /sub-app/templatetags/
             /sub-app/templatetags/__init__.py

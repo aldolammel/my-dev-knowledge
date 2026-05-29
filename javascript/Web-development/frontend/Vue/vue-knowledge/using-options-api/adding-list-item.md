@@ -1,7 +1,4 @@
-
-
 ADDING LIST ITEM:
-
 
     >> script.js:
 
@@ -39,7 +36,7 @@ ADDING LIST ITEM:
             <form>
                 <label for="fname">Name:</label><br>
                 <input type="text" id="fname" name="fname" v-model="new_member.fname"><br>
-                
+
                 <label for="lname">Lastname:</label><br>
                 <input type="text" id="lname" name="lname" v-model="new_member.lname"><br>
 
@@ -52,9 +49,9 @@ ADDING LIST ITEM:
                     <option value="Drums">Drums</option>
                 </select>
                 <br><br>
-                
+
                 <input type="button" value="Add" @click="add_member()">
-            </form> 
+            </form>
         </section>
 
 
@@ -64,7 +61,7 @@ ADDING LIST ITEM:
 
 
     >> Removing example:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/removing-list-item.txt
-        
+        /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/removing-list-item.txt
+
     >> Project Example:
-        /vault/javascript/web-development/frontend/Vue/examples-vue/adding-and-removing-things-by-form/
+        /javascript/web-development/frontend/Vue/examples-vue/adding-and-removing-things-by-form/

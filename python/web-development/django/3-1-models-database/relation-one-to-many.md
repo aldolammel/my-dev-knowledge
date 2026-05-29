@@ -1,5 +1,3 @@
-
-
 RELATION: ONE TO MANY (FOREIGN KEY)
 
     >> Meanwhile an author has one or more books, a book usually has only one author.
@@ -15,15 +13,15 @@ RELATION: ONE TO MANY (FOREIGN KEY)
         class Book(models.Model):
             title = ...
             author = models.ForeignKey(
-                Author, 
-                related_name='books', 
+                Author,
+                related_name='books',
                 on_delete=models.CASCADE,    # .PROTECT  or  .SET_NULL   or   .CASCADE
                 null=True,
             )
 
 
             MORE ABOUT ON_DELETE:
-            /vault/python/web-development/django/3-1-models-database/2-model-arguments.md
+            /python/web-development/django/3-1-models-database/2-model-arguments.md
 
 
     2) Still in the same sub-app, in admin.py file:
@@ -33,5 +31,5 @@ RELATION: ONE TO MANY (FOREIGN KEY)
         admin.site.register(Author)
         admin.site.register(Book)
 
-    
+
     3) Run the CMS and check the if everything is fine.

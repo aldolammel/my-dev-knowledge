@@ -1,11 +1,9 @@
-
-
 LESS: VUE INTEGRATION
 
     >> CSS Pre-processors using Vue.js + Vite:
 
         >> .less (a Vite built-in solution):
-            
+
             # Associating the Vite built-in solution to the project:
                 $ npm install -D xxxxxxxxxxxxxxxxxxxx
                     # Verify your LESS dependency in package.json in the root project-folder:
@@ -15,9 +13,9 @@ LESS: VUE INTEGRATION
                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                                 }
                             }
-        
+
             # In all Vue components using CSS, include the language in Style tag:
-                
+
                 E.g.:
                     # .less
                     <style lang="XXXXXXXXXXXXX" scoped>
@@ -27,7 +25,7 @@ LESS: VUE INTEGRATION
 
 
         >> .scss/.sass (an alternative Vite built-in solution too):
-            /vault/web-development/frontend/css/scss/vue-integration.txt
+            /web-development/frontend/css/scss/vue-integration.txt
 
     >> More about Vue.js:
-        /vault/javascript/web-development/frontend/Vue/
+        /javascript/web-development/frontend/Vue/

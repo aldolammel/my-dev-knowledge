@@ -1,5 +1,3 @@
-
-
 OBJECT-ORIENTED-PROGRAMMING (OOP):
 
     It's a programming paradigm (a style of programming) centered around the concept of "objects." It's one of the most popular and powerful ways to structure and organize code, especially for large, complex applications.
@@ -13,7 +11,7 @@ OBJECT-ORIENTED-PROGRAMMING (OOP):
     >> The Four Main Pillars of OOP
 
         1. Encapsulation
-            
+
             This is the idea of bundling data (attributes) and the methods (functions) that operate on that data into a single unit (the object), and restricting direct access to some of the object's components.
 
         2. Abstraction
@@ -31,5 +29,5 @@ OBJECT-ORIENTED-PROGRAMMING (OOP):
 
         Class example:
 
-            /vault/dev-concepts/oop-class.md
-            
+            /dev-concepts/oop-class.md
+

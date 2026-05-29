@@ -1,9 +1,6 @@
-
-
 VUE USING COMPOSITION-API: EMITS EXAMPLES
 
-
-    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <script setup>
         // Props definition:
@@ -53,7 +50,7 @@ VUE USING COMPOSITION-API: EMITS EXAMPLES
 
         <script setup>
         import ChildComponent from './components/ChildComponent.vue'
-        
+
         // In Composition-API, this make a data reactive:
         import { ref } from 'vue'
 
@@ -81,7 +78,7 @@ VUE USING COMPOSITION-API: EMITS EXAMPLES
                     @data-event="onDataEvent"
                     @validated-event="onValidatedEvent"
                 />
-                
+
                 <div>
                     <h3>Event Log:</h3>
                     <ul>
@@ -93,17 +90,12 @@ VUE USING COMPOSITION-API: EMITS EXAMPLES
             </div>
         </template>
 
+---
 
+> > SAME EXAMPLE, BUT USING OPTIONS-API:
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
 
+> > A FULL EMITS EXAMPLE:
 
-
->> SAME EXAMPLE, BUT USING OPTIONS-API:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/emits-examples.txt
-
-
->> A FULL EMITS EXAMPLE:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/contact-list-with-form-for-new-ones/
-
-    
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/contact-list-with-form-for-new-ones/

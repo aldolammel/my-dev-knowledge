@@ -1,12 +1,10 @@
-
-
 FEEDBACK MESSAGE IS NOT BEEN TRANSLATED:
 
-    If you already have all django set to work with translations, but your feedback message keeps in a wrong language, the 
+    If you already have all django set to work with translations, but your feedback message keeps in a wrong language, the
     problem is probably the session.
 
         >> How to fix it:
-            /vault/python/web-development/django/3-2-views-and-API/4-user-profile-view/profile-view.py
+            /python/web-development/django/3-2-views-and-API/4-user-profile-view/profile-view.py
 
                 E.g.
                     # Update the session language to match the new preference:
@@ -20,7 +18,7 @@ FEEDBACK MESSAGE IS NOT BEEN TRANSLATED:
                         request.session['_language'] = language_code
                     # Feedback message:
                     messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
-    
+
 
         >> Or the basic of Django Translation:
-            /vault/python/web-development/django/8-translate-and-internationalization/1-starting-translation.txt
+            /python/web-development/django/8-translate-and-internationalization/1-starting-translation.txt

@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
 
     For storing numbers with decimal points, like Float Field, but with differences!!!
@@ -18,7 +16,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
 
         from decimal import Decimal
         from django.core.validators import MinValueValidator
-        
+
         # Can store up to 999.999.
         models.DecimalField(
             max_digits=6,      # 000.000
@@ -29,10 +27,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DECIMAL FIELD
             ]
         )
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
->> Other related options:
+> > Other related options:
 
     >> Float Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-float.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-float.txt

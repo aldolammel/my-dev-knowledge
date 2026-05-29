@@ -9,7 +9,7 @@ DEV CONCEPTS: SERIALIZATION
 
 
     >> What is API:
-        /vault/api/_about.md
+        /api/_about.md
 
 
     >> Popular Serialization Formats:
@@ -38,7 +38,7 @@ DEV CONCEPTS: SERIALIZATION
             - Parse incoming JSON/XML data into Python objects for processing.
 
             E.g. with Python + Django:
-                /vault/python/web-development/django/3-2-views-and-API/serializer.txt
+                /python/web-development/django/3-2-views-and-API/serializer.txt
 
 
         >> Data Storage

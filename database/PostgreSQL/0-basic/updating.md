@@ -1,7 +1,4 @@
-
-
 POSTGRESQL: UPDATING
-
 
     UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -13,7 +10,7 @@ POSTGRESQL: UPDATING
             $ sudo apt update
             $ sudo apt upgrade
 
-            
+
     WINDOWS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         X) First, figure out the number of the Postgres version FOR WINDOWS you want to install:
@@ -39,19 +36,16 @@ POSTGRESQL: UPDATING
         X) Make sure the postgres main command is available on the Widnows Terminal/PowerShel:
             >> Without any virtual environment activated, test it:
                 $ psql --version
-            
+
             >> If not recognized, do it but changing the version and path based on
                 your current postgres version:
                     $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
 
             >> Test again!
-        
+
         X) Restart the postgres:
             E.g.
                 $ net start postgresql-x64-16
 
         X) Make sure you turn the postgres ON/OFF to start with the system:
-            /vault/database/PostgreSQL/0-basic/starting-and-stopping.md
-
-
-    
+            /database/PostgreSQL/0-basic/starting-and-stopping.md

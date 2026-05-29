@@ -1,5 +1,3 @@
-
-
 JAVASCRIPT: DISCOVERY
 
     Group of action to figure out a JavaScript project settings and features:
@@ -10,15 +8,12 @@ JAVASCRIPT: DISCOVERY
 
         x) xxxxxx
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 DISCOVERY OF JS FRAMEWORKS:
 
     >> Vue:
-        /vault/javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
+        /javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
 
     >> React:
         /xxxxxxxxxxxxxxxxxxxxx

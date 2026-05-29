@@ -83,11 +83,11 @@ uv pip list
 
 **DJANGO PROJECT WITH UV:**
 
-/vault/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.md
+/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.md
 
 **FLASK PROJECT WITH UV:**
 
-/vault/python/web-development/flask/1-install-and-first-steps/2-install-project-with-uv.md
+/python/web-development/flask/1-install-and-first-steps/2-install-project-with-uv.md
 
 **HOW TO CREATE A REQUIREMENTS OF PROJECT WITH UV:**
 

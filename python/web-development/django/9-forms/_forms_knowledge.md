@@ -1,9 +1,6 @@
-
-
-
 DJANGO FORMS:
 
-    If you're developing an app that accepts visitor/user inputs (obviously from the app's front-end) and your template solution is Django Template (native of Django), you'll need to understand forms developed through forms.py file. 
+    If you're developing an app that accepts visitor/user inputs (obviously from the app's front-end) and your template solution is Django Template (native of Django), you'll need to understand forms developed through forms.py file.
 
     Once you create the forms file, it's there the place you define forms that will be used through the app's front-end, and/or, if needed, used as custom CMS form.
     There are 2 cases of using forms from forms.py:
@@ -27,16 +24,14 @@ DJANGO FORMS:
 
     >> Receiving data from View:
         ./form-receiving-data.py
-    
 
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
     Sometimes Django can be confusing if you are not used, so this list below is just to show to you how each ModelForm fields, and Form fields are "translated" in Djanto Template (html).
 
                 <<< to --- data from here --- to >>>
-HTML INPUT                MODELS.PY FIELDS                FORMS.PY FIELDS
+
+HTML INPUT MODELS.PY FIELDS FORMS.PY FIELDS
 
 <textarea> .............. TextField ..................... Textarea
 type= text............... TextField ..................... TextInput
@@ -54,8 +49,8 @@ type= number ............ IntegerField .................. NumberInput when Field
 ......................... DecimalField .................. NumberInput when Field.localize is False, else TextInput.
 ......................... FloatField .................... NumberInput when Field.localize is False, else TextInput
 ......................... JSONField ..................... Textarea
-<select>.................             ................... Select
-type= radio  ............ CharField ..................... forms.ChoiceField(widget=forms.RadioSelect, choices=(('1', 'First'), ('2', 'Second')))
+<select>................. ................... Select
+type= radio ............ CharField ..................... forms.ChoiceField(widget=forms.RadioSelect, choices=(('1', 'First'), ('2', 'Second')))
 ......................... MultipleChoiceField ........... SelectMultiple
 ......................... TypedMultipleChoiceField ...... SelectMultiple
 ......................... TypedChoiceField .............. Select
@@ -69,7 +64,7 @@ type= url ............... URLField ...................... URLInput
 ......................... UUIDField ..................... TextInput
 ......................... ComboField .................... TextInput
 ......................... MultiValueField ............... TextInput
-type="password" .........                ................ PasswordInput
+type="password" ......... ................ PasswordInput
 
 <input type="button">
 <input type="color">
@@ -83,8 +78,5 @@ type="password" .........                ................ PasswordInput
 <input type="text">
 <input type="week">
 
-
-
-
 MODEL FIELDS, MORE:
-    /vault/python/web-development/django/3-1-models-database/_models_knowledge.txt
+/python/web-development/django/3-1-models-database/\_models_knowledge.txt

@@ -8,7 +8,7 @@ PYTHON: UNINSTALLING
         
         
     PRE.2) If Python was installed through UV, skip this roadmap and use this one:
-        /vault/python/package-manager/uv/uninstall-python-old-version.md
+        /python/package-manager/uv/uninstall-python-old-version.md
     
     
     1) What you want?

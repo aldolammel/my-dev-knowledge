@@ -1,4 +1,5 @@
 #### Python > Package Manager > UV
+
 # Installing Python with UV
 
 ---
@@ -14,7 +15,7 @@ Most professional and long-term approach, once it's easier to update Python in c
 
 **Before:**
 
-1. Assuming you are activated in the right app venv (/vault/python/3-virtual-environment/activate-and-deactivate.txt);
+1. Assuming you are activated in the right app venv (/python/3-virtual-environment/activate-and-deactivate.txt);
 
 **1A.1) Install it by project:**
 

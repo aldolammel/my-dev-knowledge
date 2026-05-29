@@ -30,7 +30,7 @@ DATABASE ON DJANGO: MARIADB
 CHECK IDE EXTENSIONS FOR THIS DB:
 
     >> VSCode:
-        /vault/ide/vscode/
+        /ide/vscode/
 
     >> PyCharm:
-        /vault/ide/pycharm/
+        /ide/pycharm/

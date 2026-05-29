@@ -1,1 +1,1 @@
-/vault/javascript/
+/javascript/

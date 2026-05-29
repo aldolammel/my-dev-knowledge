@@ -2,13 +2,13 @@
     SINGLETON: CREATION WITH DJANGO (STEP 2/2)
 
     >> What is it:
-        /vault/dev-concepts/singleton.md
+        /dev-concepts/singleton.md
 
     >> This file:
         /django_project/apps/your_app/models.py
 
     >> Step 1/2 (models.py):
-        /vault/python/web-development/django/3-1-models-database/singleton.py
+        /python/web-development/django/3-1-models-database/singleton.py
 
     >> Step 2/2 (admin.py)
         This file!

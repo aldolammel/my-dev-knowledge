@@ -1,5 +1,3 @@
-
-
 VUE USING COMPOSITION-API: PROPS EXAMPLES
 
     Context:
@@ -37,7 +35,7 @@ VUE USING COMPOSITION-API: PROPS EXAMPLES
         </template>
 
 
-    >> In a ParentComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> In a ParentComponent.vue - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <script setup>
         import Person from './components/ChildComponent.vue'
@@ -64,15 +62,8 @@ VUE USING COMPOSITION-API: PROPS EXAMPLES
             <Person :contacts="fakeDatabase" />
         </template>
 
+---
 
+> > SAME EXAMPLE, BUT USING OPTIONS-API:
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
->> SAME EXAMPLE, BUT USING OPTIONS-API:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/props-example.txt
-
-
-
-    
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/props-example.txt

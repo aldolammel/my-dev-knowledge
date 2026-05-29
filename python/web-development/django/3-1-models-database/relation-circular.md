@@ -18,4 +18,4 @@ RELATION: CIRCULAR
 
     >> Is an itself relationship?
 
-        /vault/python/web-development/django/3-1-models-database/relation-itself.md
+        /python/web-development/django/3-1-models-database/relation-itself.md

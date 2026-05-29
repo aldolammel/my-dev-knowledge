@@ -1,14 +1,11 @@
-
-
-ERROR 404 INFORMATION: 
-
+ERROR 404 INFORMATION:
 
     >> When Debug mode is False, Django looks automatically for the 404.html
         file in the project global 'templates' folder, making unnecessary to set it in urls.py files.
 
 
     >> Since DEBUG=False, Django relies on the web server to serve static files, and you must
-        ensure all static files (including admin CSS) are collected into the STATIC_ROOT 
+        ensure all static files (including admin CSS) are collected into the STATIC_ROOT
         directory by running:
 
             # This command is not needed if DEBUG=True:
@@ -22,17 +19,17 @@ ERROR 404 INFORMATION:
     >> Debug Mode can be customized through Django core-folder file called 'settings.py' or
         in '.env' file. More about in:
 
-            /vault/environment-variables/
+            /environment-variables/
 
 
     >> If you need to call 404 error in a view, use:
         (Considering the html file is in the 'root/templates' folder)
-        
-        
+
+
         >> In a Based-Class View:
-            
+
             from django.shortcuts import render
-            
+
             return render(self.request, '404.html', status=404)
 
             >> Important: if your class-view is inherit DetailView, it will automatically
@@ -55,7 +52,7 @@ ERROR 404 INFORMATION:
         >> In a Function-Based View:
 
             from django.shortcuts import render
-            
+
             def my_function_view(request):
                 ...
                 return render(request, '404.html', status=404)

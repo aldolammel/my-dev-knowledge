@@ -1,7 +1,4 @@
-
-
 DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
-
 
     >> Using django-environ lib - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -34,10 +31,8 @@ DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
 
             xxxxxxx
 
+---
 
+> > SETTINGS.PY MODEL WITH REAL ENV VARS BEEN CALLED:
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
->> SETTINGS.PY MODEL WITH REAL ENV VARS BEEN CALLED:
-    /vault/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py
+    /python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py

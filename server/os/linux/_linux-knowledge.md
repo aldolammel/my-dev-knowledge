@@ -1,1 +1,1 @@
-/vault/os/os/linux/
+/os/os/linux/

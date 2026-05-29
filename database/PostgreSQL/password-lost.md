@@ -1,5 +1,3 @@
-
-
     POSTGRESQL: PASSWORD LOST, HOW TO RECOVER IT
 
 
@@ -8,7 +6,7 @@
 
 
 
-            >> Ubuntu - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            >> Ubuntu - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                 x) Open the PostgreSQL shell:
                     $ sudo -u postgres psql
@@ -17,7 +15,7 @@
                     $ ALTER USER postgres WITH PASSWORD 'new_password';      <--- the ';' is needed!
 
 
-            
+
             >> Windows - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                 X) Stop the postgres service!
@@ -30,14 +28,14 @@
 
                 X) Open and see carefully this image. Your file looks similar:
 
-                    /vault/database/PostgreSQL/windows_postgres_pghbaconf.jpg
+                    /database/PostgreSQL/windows_postgres_pghbaconf.jpg
 
                     >> Change the values of the 'METHOD' column to 'trust' (with no quotes);
 
                 X) Stat the postgres service again!
 
                 X) In the postgres local folder:
-                
+
                     >> Open on the terminal:
 
                         E.g.

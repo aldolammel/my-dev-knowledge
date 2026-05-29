@@ -3,9 +3,9 @@
         VSCODE SETTINGS FOR PROJECT: <CLIENT_NAME> <PRODUCT TYPE OR NAME> <YEAR RELEASE>
     */
     // PROJECT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // !!!!!!!!!!!!!!!!! Check: /vault/ide/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /ide/vscode/examples/.vscode/settings.json
     // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    // !!!!!!!!!!!!!!!!! Check: /vault/ide/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /ide/vscode/examples/.vscode/settings.json
     // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[javascript]": {
         "editor.defaultFormatter": null,

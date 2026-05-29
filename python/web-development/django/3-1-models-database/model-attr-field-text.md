@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: TEXT FIELD
 
     Common Usage:
@@ -9,7 +7,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: TEXT FIELD
         - Textarea field with multilines.
 
     Examples:
-        
+
         # Basic:
             book_chapter_content = models.TextField(
                 blank=False,
@@ -17,7 +15,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: TEXT FIELD
                     MinLengthValidator(140),
                 ],
             )
-        
+
         # Limiting size for core-business and db-size-protection:
             seo_desc = models.TextField(
                 max_length=consts.VAL_SEO_DESC_MAX,
@@ -28,13 +26,9 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: TEXT FIELD
                 ],
             )
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > Other related options:
 
->> Other related options:
-    
     >> Char Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-char.txt
-
-
-    
+        /python/web-development/django/3-1-models-database/model-attr-field-char.txt

@@ -1,15 +1,7 @@
-
-
-
 pre) Python linter:
-    /vault/python/Linter-Formatter-Typechecker/PyLint.txt
-
-
+/python/Linter-Formatter-Typechecker/PyLint.txt
 
 install
-    pylint-django
-
-
+pylint-django
 
 Integration > pyproject.toml
-

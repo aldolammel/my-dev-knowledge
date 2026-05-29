@@ -1,21 +1,18 @@
-
-
 DIRECTIVE: V-ON
-
 
     >> It's accepted for: function, inline statement, object (without arg).
 
     >> It's shorter caller: '@' (at)
 
 
-    >> Example 1: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> Example 1: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             <div
                 ...
                 v-on:click="product.active = !product.active"
             >
 
-        Or shorter version: 
+        Or shorter version:
 
             <div
                 ...
@@ -23,10 +20,10 @@ DIRECTIVE: V-ON
             >
 
 
-    >> Example 2: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> Example 2: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         # Decrease amount:
-        
+
                 <button
                     type="button"
                     @click="product.quantity--"
@@ -44,7 +41,7 @@ DIRECTIVE: V-ON
                 </button>
 
         # Increase amount:
-        
+
                 <button
                     type="button"
                     @click="product.quantity++"
@@ -62,7 +59,7 @@ DIRECTIVE: V-ON
                 </button>
 
 
-    >> Example 3: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> Example 3: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <form @submit.prevent="myFunction">
             ...
@@ -72,7 +69,7 @@ DIRECTIVE: V-ON
         </form>
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     >> How child components communicate with their parent components by sending custom events:
-        /vault/javascript/web-development/frontend/Vue/vue-knowledge/5.2-emits.txt
+        /javascript/web-development/frontend/Vue/vue-knowledge/5.2-emits.txt

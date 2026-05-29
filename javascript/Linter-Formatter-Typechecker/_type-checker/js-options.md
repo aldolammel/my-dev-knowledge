@@ -1,9 +1,7 @@
-
-
 TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.md
+        /dev-concepts/tool-formatter.md
 
 
 
@@ -15,7 +13,7 @@ TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
 
 
     >> Need this but for TypeScript?
-        /vault/javascript/Linter-Formatter-Typechecker/_type-checker/ts-options.txt
+        /javascript/Linter-Formatter-Typechecker/_type-checker/ts-options.txt
 
 
     >> Options:
@@ -23,4 +21,4 @@ TYPE-CHECKER FOR JAVASCRIPT: OPTIONS
         >> JSDoc with @typescript-eslint/parser - Types without a Build Step:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-      
+

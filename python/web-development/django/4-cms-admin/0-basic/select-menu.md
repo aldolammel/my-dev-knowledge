@@ -1,5 +1,3 @@
-
-
 Let's see:
 
     >> FIELD: SELECT-MENU (DYNAMIC OPTIONS BUT ONLY ONE TO RETURN)
@@ -9,6 +7,6 @@ Let's see:
 
 
     All of them in:
-        /vault/python/web-development/django/3-1-models-database/field-select-menu-single.txt
-        /vault/python/web-development/django/3-1-models-database/field-select-menu-multiple.txt
-        
+        /python/web-development/django/3-1-models-database/field-select-menu-single.txt
+        /python/web-development/django/3-1-models-database/field-select-menu-multiple.txt
+

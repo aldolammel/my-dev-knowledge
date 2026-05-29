@@ -1,1 +1,1 @@
-/vault/javascript/00-New-Project/
+/javascript/00-New-Project/

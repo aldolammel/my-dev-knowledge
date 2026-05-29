@@ -1,11 +1,8 @@
-
-
 REGISTERING: CUSTOMIZING THE FRONT-END FORM
-
 
     0) Very basic to use Django built-in user features:
 
-        /vault/python/web-development/django/3-1-models-database/3-users/extending-users-basic.txt
+        /python/web-development/django/3-1-models-database/3-users/extending-users-basic.txt
 
 
     1) Create or open the forms.py file in 'accounts' sub-app:
@@ -126,14 +123,14 @@ REGISTERING: CUSTOMIZING THE FRONT-END FORM
     2) Create the signal to create the UserProfile automatically when a new user is
         created in Django:
 
-        /vault/python/web-development/django/7-middlewares-and-signals/signals/signals-user-expansion.txt
+        /python/web-development/django/7-middlewares-and-signals/signals/signals-user-expansion.txt
 
 
 
     3) html's for register and profile forms:
 
-            /vault/python/web-development/django/9-forms/frontend-user-register-form.txt
-            /vault/python/web-development/django/9-forms/frontend-user-profile-form.txt
+            /python/web-development/django/9-forms/frontend-user-register-form.txt
+            /python/web-development/django/9-forms/frontend-user-profile-form.txt
 
 
     4) views.py in account sub-app too:

@@ -3,7 +3,7 @@
     DJANGO CMS > METHODS: GET_QUERYSET()
 
     >> More about:
-        /vault/python/web-development/django/3-1-models-database/4-querysets/method-get_queryset.txt
+        /python/web-development/django/3-1-models-database/4-querysets/method-get_queryset.txt
 
     >> Some alternatives to get_queryset():
         ./1-customizing/detailview-filtering-any-data.py

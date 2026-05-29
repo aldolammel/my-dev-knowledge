@@ -5,9 +5,9 @@ only server-side, unlike when is used the
 Percentage signs within curly-braces {% %} are TEMPLATE-TAGS used to perform logic operations,
 control structures, and include other template functionalities within a template. E.g. >> Calling
 another template as base for this template: {% extends 'base.html' %} >> The 'base.html' example you
-find here: /vault/python/web-development/django/z-project-examples/proj-common/templates/base.html
->> Defining the template's content-block must be loaded here: {% block content %} {% endblock
-content %} >> A conditional example: {% if cars %}
+find here: /python/web-development/django/z-project-examples/proj-common/templates/base.html >>
+Defining the template's content-block must be loaded here: {% block content %} {% endblock content
+%} >> A conditional example: {% if cars %}
 <p>Good, there is at least one car available!</p>
 {% else %}
 <p>Oops, there is no car available!</p>
@@ -21,6 +21,6 @@ variable/object: {{ car }} {# if dunder '__str__' is already define in 'models' 
 OR #} {{ car.name }} {# if no dunder '__str__' defined #} {# Accessing the attributes that object /
 content of dictionary #} {{ car['brand'] }} {# DOESNT WORK #} {{ car.brand }} {# WORKS! #} {# Result
 from a function #} {{ result_from_a_function() }} {# DOESNT WORK #} {{ result_from_a_function }} {#
-WORKS! #} >> Includes: /vault/python/web-development/django/3-3-frontend-templates/include.html >> A
+WORKS! #} >> Includes: /python/web-development/django/3-3-frontend-templates/include.html >> A
 perfect example of using the template and its other details, look this out:
-/vault/python/web-development/django/z-project-examples/proj-common/
+/python/web-development/django/z-project-examples/proj-common/

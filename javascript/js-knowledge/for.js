@@ -8,13 +8,13 @@
     Use Case: ...... When you need maximum control over iteration;
 
     ForEach() loop method:
-        /vault/javascript/forEach-loop.js
+        /javascript/forEach-loop.js
 
     Some() loop method:
-        /vault/javascript/some.js
+        /javascript/some.js
 
     Find() method:
-        /vault/javascript/find.js
+        /javascript/find.js
 */
 
 const numbers = [1, 2, 3, 4, 5];

@@ -1,7 +1,4 @@
-
-
 VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
-
 
     >> onMounted():
 
@@ -28,9 +25,7 @@ VUE > COMPOSITION API: DIFFERENCES BETWEEN ONMOUNTED VS WATCH / WATCHEFFECT
             E.g.
                 ./function-watch.vue
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 
 This in Options-API:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/watch.txt
+/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/watch.txt

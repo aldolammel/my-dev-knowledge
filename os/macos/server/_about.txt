@@ -1,1 +1,1 @@
-/vault/server/os/mac/
+/server/os/mac/

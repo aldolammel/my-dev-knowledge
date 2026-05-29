@@ -1,30 +1,27 @@
-
-
 VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
-
 
     PRE.1) Assuming you have done first steps to create a Vue project:
         .../Vue/1-install-and-first-steps/1-install-new-project.md
 
     PRE.2) Assuming you already are in the frontend folder of the project on terminal;
-    
+
     PRE.3) Assuming you already installed the ESLint for JavaScript/TypeScript:
-        /vault/javascript/Linter-Formatter-Typechecker/eslint.txt
+        /javascript/Linter-Formatter-Typechecker/eslint.txt
 
     PRE.4) Your Vue project is a SPA one!
         ./_about.md
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     1) Install the ESLint plugin for Vue (eslint-plugin-vue) as development dependency:
 
         https://eslint.vuejs.org/
-        
+
         # Using NPM:
             $ npm install -D eslint-plugin-vue                          <-- -D means DEV dependency!
-    
+
         # Or using XXX:
             xxxxxxxx
 
@@ -48,7 +45,7 @@ VUE > TEMPLATE LINTER > ESLINT: INSTALLATION
             ],
 
     4) Basic IDE configs for Vue:
-    
+
         >> For VSCode:
 
             1) In /project/.vscode/settings.json file:

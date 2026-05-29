@@ -14,7 +14,7 @@
 # FILE: /apps/my_app/serializers.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 # Using Django Rest Framework:
-# /vault/python/web-development/django/component-libraries/django-rest-framework/
+# /python/web-development/django/component-libraries/django-rest-framework/
 from rest_framework import serializers
 from . import models
 

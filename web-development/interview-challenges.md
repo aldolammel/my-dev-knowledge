@@ -1,1 +1,1 @@
-/vault/interview-challenges/web-development/
+/interview-challenges/web-development/

@@ -4,7 +4,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         ./1-re-install-project-with-uv.txt
 
     PRE.2) Assuming you already have UV package manager globally installed:
-        /vault/python/package-manager/uv/_about-install-and-update.md
+        /python/package-manager/uv/_about-install-and-update.md
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -30,7 +30,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
             >> Python basics:
 
                 # For project:
-                    /vault/python/IDE-softwares/vscode/examples/.vscode/
+                    /python/IDE-softwares/vscode/examples/.vscode/
 
                 # For API only:
                     The same example above!
@@ -51,8 +51,8 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
             2.1) Select through the IDE GUI which User Profile this project demands!
                     # Aldo's profile backups:
-                        /vault/ide/vscode/user-profiles-bkp/
-                        /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                        /ide/vscode/user-profiles-bkp/
+                        /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             2.2) Open this new folder in your IDE;
 
@@ -60,16 +60,16 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         3) (If applicable)
             Project versioning:
                 >> Create a repository or use an existing one:
-                    /vault/versioning/git/command-init.txt
+                    /versioning/git/command-init.txt
 
 
         4) Creating new project:
 
             4.1) Create the virtual environment folder:
-                /vault/python/package-manager/uv/create-or-find-current-venv.md
+                /python/package-manager/uv/create-or-find-current-venv.md
 
                 >> Do you need a pyproject.toml model?
-                    /vault/python/web-development/pyproject.toml
+                    /python/web-development/pyproject.toml
 
             4.2) (NOT SURE IF IT'S NEEDED AFTER 4.1)
                 Create the minimum Python project scaffolding:
@@ -81,7 +81,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                     $ uv init
 
             4.3) Once you now got a .venv folder, active the project's virtual environment:
-                /vault/python/3-virtual-environment/activate-and-deactivate.txt
+                /python/3-virtual-environment/activate-and-deactivate.txt
 
 
             4.4) (Optional)
@@ -105,7 +105,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
                     >> In case this file has the wrong Python version or versions, don't edit directly this file. Use the pin command:
 
-                        /vault/python/package-manager/uv/pin-python-version.md
+                        /python/package-manager/uv/pin-python-version.md
 
 
             4.5) Install Django in this project:
@@ -136,7 +136,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         5) (Optional)
             Based on you already know or in the Engineering Data document of the project, install all project dependencies and its development dependencies too:
 
-                /vault/python/package-manager/uv/install-dependency.txt
+                /python/package-manager/uv/install-dependency.txt
 
                 # The Engineering Data document link must be registered in the Django core settings.py file!
 
@@ -152,7 +152,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
 
         7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
-                /vault/versioning/git/gitignore-file.md
+                /versioning/git/gitignore-file.md
 
 
         8) Check Django installation and setup:

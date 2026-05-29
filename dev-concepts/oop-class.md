@@ -1,7 +1,7 @@
 OOP: CLASSES
 
     >> Basic:
-        /vault/dev-concepts/oop.md
+        /dev-concepts/oop.md
 
 
     >> Class example 1:
@@ -57,16 +57,16 @@ OOP: CLASSES
     >> Directly related:
 
         >> Class Attributes:
-            /vault/dev-concepts/oop-class-attribute.md
+            /dev-concepts/oop-class-attribute.md
 
         >> Class Functions (Methods):
-            /vault/dev-concepts/oop-class-function.md
+            /dev-concepts/oop-class-function.md
 
 
     >> By language:
 
         >> Classes with Python:
-            /vault/python/python-knowledge/classes/
+            /python/python-knowledge/classes/
 
         >> Classes with JavaScript:
-            /vault/javascript/js-knowledge/classes/
+            /javascript/js-knowledge/classes/

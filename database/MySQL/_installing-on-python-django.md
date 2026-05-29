@@ -1,3 +1,1 @@
-
-
-/vault/python/web-development/django/3-1-models-database/0-installing-and-adminUser/MySQL/installation.md
+/python/web-development/django/3-1-models-database/0-installing-and-adminUser/MySQL/installation.md

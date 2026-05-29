@@ -1,1 +1,1 @@
-/vault/python/0-new-project/3-update-python-version-in-a-project.md
+/python/0-new-project/3-update-python-version-in-a-project.md

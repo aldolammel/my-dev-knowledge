@@ -1,9 +1,7 @@
-
-
 FORMATTER FOR VUE: OPTIONS
 
     >> What is it:
-        /vault/dev-concepts/tool-formatter.md
+        /dev-concepts/tool-formatter.md
 
     >> Options:
 
@@ -13,4 +11,3 @@ FORMATTER FOR VUE: OPTIONS
 
         >> xxxxx:
             /xxxxx
-

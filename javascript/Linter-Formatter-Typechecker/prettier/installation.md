@@ -48,6 +48,6 @@ PRETTIER FORMATTER: INTEGRATION
         
         5) (If applicable) 
             For Python projects, make sure the pyproject.toml has Prettier basic settings:
-                /vault/javascript/Linter-Formatter-Typechecker/prettier/pyproject.toml
+                /javascript/Linter-Formatter-Typechecker/prettier/pyproject.toml
                             
             

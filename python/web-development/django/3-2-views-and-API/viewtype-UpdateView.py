@@ -8,7 +8,7 @@
         ./xxxxx
 
     >> The Admin method equivalent of this is the change_view():
-        /vault/python/web-development/django/4-cms-admin/method-change_view.py
+        /python/web-development/django/4-cms-admin/method-change_view.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

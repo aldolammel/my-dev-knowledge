@@ -8,7 +8,7 @@
 
 # FILE: /core/settings.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    # /vault/python/web-development/django/3-1-models-database/3-users/0-users-setup.txt
+    # /python/web-development/django/3-1-models-database/3-users/0-users-setup.txt
 
 
 # FILE: /apps/my_app/models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -49,7 +49,7 @@ class PageModel(AuditBase):
     attr_2 = ...
 
     # How model inheritance works:
-    # /vault/python/web-development/django/3-1-models-database/Inheriting-attributes.txt
+    # /python/web-development/django/3-1-models-database/Inheriting-attributes.txt
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
@@ -88,4 +88,4 @@ class PageModelAdmin(admin.ModelAdmin):
         obj.save(user=request.user)
 
     # If you expect to use audit in more than two admin classes, it's recommended to use Mixin class to simplify maintanance:
-    #   /vault/python/web-development/django/4-cms-admin/model-type-mixin.py
+    #   /python/web-development/django/4-cms-admin/model-type-mixin.py

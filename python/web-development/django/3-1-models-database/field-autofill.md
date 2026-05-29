@@ -1,16 +1,13 @@
-
-
 AUTOFILL FIELD:
-
 
     >> If you want to create an ID field (primary key field) that increase the values automatically:
 
-        /vault/python/web-development/django/3-1-models-database/creating-explicit-id.txt
+        /python/web-development/django/3-1-models-database/creating-explicit-id.txt
 
 
     >> If you want to create a composed field that take two or more other fields to build itself:
 
-        /vault/python/web-development/django/3-1-models-database/field-autofill-composed.txt
+        /python/web-development/django/3-1-models-database/field-autofill-composed.txt
 
 
     >> If you want to create a field that will be filled based in another one, keep reading this:

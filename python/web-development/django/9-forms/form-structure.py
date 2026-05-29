@@ -44,7 +44,7 @@ class MovieForm(forms.ModelForm):
             In order to update the db with the form data, define in your CBV or FBV which
             fields are responsable for the data of each model(s) attributes:
             
-                /vault/python/web-development/django/3-2-views-and-API/1-building-views-context/
+                /python/web-development/django/3-2-views-and-API/1-building-views-context/
         """
             
 # file: forms.py

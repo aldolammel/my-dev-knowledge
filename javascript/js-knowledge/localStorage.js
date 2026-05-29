@@ -14,7 +14,7 @@
         - String Only: Can only store strings (use JSON.stringify/parse for objects);
 
     localStorage vs sessionStorage vs cookies:
-        /vault/javascript/sessionStorage.js
+        /javascript/sessionStorage.js
 
         - localStorage: Persists until explicitly removed;
         - sessionStorage: Persists only for the browser session;

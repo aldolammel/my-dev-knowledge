@@ -8,7 +8,7 @@
     // TXT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     //...
     // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // !!!!!!!!!!!!!!!!! Check: /vault/python/IDE-softwares/vscode/examples/.vscode/settings.json
+    // !!!!!!!!!!!!!!!!! Check: /python/IDE-softwares/vscode/examples/.vscode/settings.json
     // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "django.i18n": false, // Django internationalization features in VSCode extensions.
     "python.analysis.extraPaths": [ // Add extra directories to Python analysis for imports resolution.

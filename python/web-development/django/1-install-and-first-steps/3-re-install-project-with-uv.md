@@ -1,19 +1,17 @@
-
-
 DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
 
     PRE.1) If you wanna install a totally new brand project, skip this roadmap, and go to:
         ./2-install-project-with-uv.md
 
     PRE.2) Assuming you already have UV package manager globally installed:
-        /vault/python/package-manager/uv.txt
+        /python/package-manager/uv.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
     >> BEFORE PROJECT RE-INSTALLATION:
-        
+
         PRE) Case you have an older and non-function project version in your machine, don't delete that project folder! You may need that further!
 
         1) Create a new folder for the existing project:
@@ -24,17 +22,17 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
 
             2.1) Select through the IDE GUI which User Profile this project demands!
                     # Aldo's profile backups:
-                        /vault/ide/vscode/user-profiles-bkp/
-                        /vault/ide/pycharm/xxxxxxxxxxxxxxxx/
+                        /ide/vscode/user-profiles-bkp/
+                        /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             2.2) Open this new folder in your IDE;
 
-        
+
         3) Make sure you already installed all Python versions for this project:
 
             >> Check which Python versions you got installed:
                 $ uv python list
-            
+
             >> E.g. you want to install more than one Python version:
                 $ uv python install 3.11 3.12 3.13
 
@@ -45,39 +43,39 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
     >> PROJECT RE-CREATION:
 
         1) Clone the project into the new project folder:
-            /vault/versioning/git/command-clone.txt
+            /versioning/git/command-clone.txt
 
-        
+
         2) (If applicable)
             Local project folder structure:
-            
+
             >> Don't create any additional folders beyond the project folder you already created, but mentally define which Django folder structure you will use further (use the django structure example only for consulting best practices):
                 .../django/django-project-folder-structure.txt
-        
-        
+
+
         3) Create the .venv folder:
-            /vault/python/package-manager/uv/auto-installation-with-sync.md
+            /python/package-manager/uv/auto-installation-with-sync.md
 
             # Make sure you activated the environment:
-                /vault/python/3-virtual-environment/activate-and-deactivate.txt
-        
-        
+                /python/3-virtual-environment/activate-and-deactivate.txt
+
+
         4) Installing all project dependencies based on requirements:
 
             >> Using pyproject.toml:
                 >> Nothing to do! Uv already synced dependencies when .venv folder was created!
 
             >> Or Using requirements.toml:
-                /vault/python/package-manager/pip/auto-installation-from-requirements-file.md
+                /python/package-manager/pip/auto-installation-from-requirements-file.md
 
 
         5) Choosing the way to create the project's db:
 
             >> You don't have a local db created yet:
-                /vault/database/00-new-project/create-db-for-existing-project.txt
+                /database/00-new-project/create-db-for-existing-project.txt
 
             >> Or you already have the local db created:
-                        
+
                 >> Run the makemigrations command:
                     $ uv run manage.py makemigrations
 
@@ -89,22 +87,20 @@ DJANGO > PROJECT RE-INSTALLATION: USING UV AS PACKAGE MANAGER
             If you have multilingual support in your project:
 
             >> With Gettext module installed:
-                
+
                 $ uv run manage.py makemessages --all
                 $ uv run manage.py compilemessages
 
-            
+
         7) (If applicable)
             Make sure you got your .gitignore updated with Django, environment and other things:
-                /vault/versioning/git/gitignore-file.md
+                /versioning/git/gitignore-file.md
 
 
         8) Check Django installation and setup:
             ./2.1-installed-project-testing.md
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+---
 
 MAKE SURE YOU FINISHED ALL THESE STEPS:
-    ./0-django-installation-and-setup.md
+./0-django-installation-and-setup.md

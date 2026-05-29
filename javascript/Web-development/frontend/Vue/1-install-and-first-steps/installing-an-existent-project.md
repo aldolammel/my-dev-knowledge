@@ -1,7 +1,4 @@
-
-
 INSTALLING AN EXISTENT VUE PROJECT:
-
 
     >> On terminal, go to the vue-project-folder;
 
@@ -11,28 +8,28 @@ INSTALLING AN EXISTENT VUE PROJECT:
 
         >> What is build-tool?
             .../Vue/1-build-tools.txt
-    
+
         >> If you don't agree:
             # Use your favorite build-tool and install all dependencies manually.
 
-        
+
         >> Or, if you agree:
 
             >> Ask to NPM install all dependencies:
-                /vault/javascript/Package-manager/npm/auto-install-all-project-dependencies.txt
+                /javascript/Package-manager/npm/auto-install-all-project-dependencies.txt
 
 
     >> After the install:
 
         >> Consider to install if needed:
-            
+
             >> CSS Pre-processors (Vite built-in solutions):
-                /vault/web-development/frontend/CSS/scss/vue-integration.txt
+                /web-development/frontend/CSS/scss/vue-integration.txt
 
             >> Linter for Vue:
                 .../Vue/Linter-Formatter-Typechecker/_linter/vue-options.txt
 
-            >> Formatter for Vue: 
+            >> Formatter for Vue:
                 .../Vue/Linter-Formatter-Typechecker/_formatter/vue-options.txt
 
             >> Type-checker for Vue:

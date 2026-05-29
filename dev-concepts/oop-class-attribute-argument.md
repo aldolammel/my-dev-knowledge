@@ -8,7 +8,7 @@ OOP: FUNCTION ARGUMENTS (PARAMETERS' VALUES)
 
 
     >> Basic:
-        /vault/dev-concepts/oop-class-function.md
+        /dev-concepts/oop-class-function.md
 
 
     >> Example:
@@ -24,4 +24,4 @@ OOP: FUNCTION ARGUMENTS (PARAMETERS' VALUES)
     >> Directly related:
 
         >> Class Functions (Methods):
-            /vault/dev-concepts/oop-class-function.md
+            /dev-concepts/oop-class-function.md

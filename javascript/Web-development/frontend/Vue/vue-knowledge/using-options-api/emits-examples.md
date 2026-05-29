@@ -1,9 +1,6 @@
-
-
 VUE USING OPTIONS-API: EMITS EXAMPLES
 
-
-    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> In a ChildComponent.vue: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         <!-- The template layer is the same for both API approaches -->
         <template>
@@ -20,14 +17,14 @@ VUE USING OPTIONS-API: EMITS EXAMPLES
 
                 // Props definition:
                 // Reserved space...
-                
+
                 // Emits definition:
                 emits: [
                     'simple-event',
                     'data-event',
                     'validated-event'
                 ],
-            
+
                 methods: {
                     handleSimpleClick() {
                         // Emit simple event without data
@@ -77,12 +74,12 @@ VUE USING OPTIONS-API: EMITS EXAMPLES
 
             export default {
                 name: 'ParentComponent',
-                
+
                 // Register child component
                 components: {
                     ChildComponent
                 },
-                
+
                 // Component data using Options API
                 // Everything inside data() doesn't need ref() or reactive()!
                 data() {
@@ -90,19 +87,19 @@ VUE USING OPTIONS-API: EMITS EXAMPLES
                         eventLogs: []
                     }
                 },
-                
+
                 // Event handler methods
                 methods: {
                     onSimpleEvent() {
                         // Push new log entry to reactive array
                         this.eventLogs.push('Simple event received at ' + new Date().toLocaleTimeString())
                     },
-                    
+
                     onDataEvent(payload) {
                         // Handle event with data payload
                         this.eventLogs.push(`Data event: ${payload.message} at ${new Date(payload.timestamp).toLocaleTimeString()}`)
                     },
-                    
+
                     onValidatedEvent(value) {
                         // Handle validated event
                         this.eventLogs.push(`Validated event: "${value}" at ${new Date().toLocaleTimeString()}`)
@@ -111,14 +108,12 @@ VUE USING OPTIONS-API: EMITS EXAMPLES
             }
         </script>
 
+---
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+> > SAME EXAMPLE, BUT USING COMPOSITION-API:
 
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.txt
 
->> SAME EXAMPLE, BUT USING COMPOSITION-API:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.txt
+> > A FULL EMITS EXAMPLE:
 
-
->> A FULL EMITS EXAMPLE:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/contact-list-with-form-for-new-ones/
-    
+    /javascript/web-development/frontend/Vue/vue-knowledge/using-options-api/z-examples/contact-list-with-form-for-new-ones/

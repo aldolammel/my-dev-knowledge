@@ -27,6 +27,6 @@ class Movie(models.Model):
 
 """
     MORE OPTIONS:
-    /vault/python/web-development/django/3-1-models-database/
+    /python/web-development/django/3-1-models-database/
 
 """

@@ -1,4 +1,2 @@
-
-
 DISABLED BUTTON:
-    /vault/javascript/web-development/frontend/Vue/vue-knowledge/disabled-button.html
+/javascript/web-development/frontend/Vue/vue-knowledge/disabled-button.html

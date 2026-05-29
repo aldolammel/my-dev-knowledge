@@ -1,16 +1,15 @@
-
 DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
 
-    PRE) What kind of CMS UX do you need: 
-        /vault/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.txt
+    PRE) What kind of CMS UX do you need:
+        /python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.txt
 
     For new objects, through the adding detail-view, select an option first (using a radio or dropdown menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
 
 
         B1) Install the dependency 'PolymorphicModel':
 
-            /vault/python/web-development/django/component-libraries/django-polymorphic/installation.md
-        
+            /python/web-development/django/component-libraries/django-polymorphic/installation.md
+
 
         B2) In models.py, add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS:
 
@@ -21,7 +20,7 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
                     balls_amount = ...
                 class OnlyForFemale(CommonForPeople):  # Same logic here.
                     pms_cases_by_year = ...
-        
+
 
         B3) In admin.py:
 
@@ -63,4 +62,4 @@ DJANGO > CMS > WHAT KIND OF FORM DO YOU NEED: "B"
                     # Cause you need CMS audit:
                     def save_model(self, request, obj, form, change):
                         obj.save(user=request.user)
-                
+

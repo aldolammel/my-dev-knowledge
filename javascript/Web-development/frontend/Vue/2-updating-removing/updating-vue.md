@@ -1,67 +1,70 @@
+#### JavaScript > Vue
+# Updating Vue in an existing app
+
+---
+## Before:
+1. It could be important to update the *Node.js* if possible for your project: [javascript/NodeJS/0-new-project/update-node-version](javascript/NodeJS/0-new-project/update-node-version.md)
+2. Assuming you already got Vue installed correctly: [javascript/Web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup](javascript/Web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
+
+---
+
+## 1) Go to the Vue project folder:
+
+E.g. /app_root_folder/frontend/
 
 
-VUE.JS: UPDATING VUE
+---
+
+## 2) Make a choice, which Node package manager are you using:
+- 2A) Using NPM;
+- 2B) Using Yarn;
+
+### 2A) Using NPM
+
+**2A.1)  Check the Vue version:**
+```
+npm list vue
+```
+
+**2A.2) Once you notice an opportunity to update it:**
+
+Make a choice, which update approach you wanna go:
+- Safe;
+- Or advanced;
+
+**Safe** > Updating Vue, but ignoring major updates (e.g. from 3.3.x to 3.5.x):
+```
+npm update vue
+```
+If some vulnerability is detected:
+```
+npm audit fix
+```
+
+**Advanced** > Updating Vue directly to latest version available, but make sure it won't broken your app! Once you're confident:
+```
+npm install vue@latest
+```
+==Remember!==
+If you're using [Vite](javascript/Build-tools/Vite/0-vite.md), no worries, Vite is NOT a package manager.
+
+### 2B) Using Yarn
+
+Soon...
 
 
-    TO THINK:
-        First, it could be important to update the Node.js if possible for your project:
-            /vault/javascript/NodeJS/0-new-project/update-node-version.txt
+---
+
+## 3) Make sure package.json was updated:
+
+Once you update Vue in your project, */frontend/package.json* file must be updated about Vue version for this project. But *package-lock.json* and *yarn.lock*, for example, are auto-regenerated so don't touch them.
 
 
-    PRE) Assuming you already got Vue installed correctly:
-        .../Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+---
 
 
-    1) Go to the Vue project folder, e.g. /project_name/frontend/;
+## 4) (Optional / If applicable) AI prompts update:
 
+Update the stack information of the app in its AI prompts;
 
-    2) Which Node package manager are you using:
-        
-        A) Using NPM;
-        B) Using XXXXXX;
-
-        - - - - - 
-
-        A) NPM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            A.1) Check the Vue version:
-                $ npm list vue
-
-            A.2) Once you noticed an oportunity to update it:
-                
-                >> Which update approach you wanna go:
-                
-                    >> Safe:
-                        For update Vue but ignoring major updates (e.g. from 3.3.x to 3.5.x):
-                            $ npm update vue
-                                # If some vulnerability is detected:
-                                    $ npm audit fix
-                
-                    >> Advanced:
-                        Or update Vue directly to latest version available, but make sure it won't broken your project looking the Changelog of that. Once you're confident:
-                            
-                            REMEMBER:
-                                If you're using Vite, no worries, Vite is not a package manager.
-
-                            $ npm install vue@latest
-    
-
-        B) XXXXXX - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-            Soon...
-
-
-         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-    3) (PROBABLY IR NOT APPLICABLE FOR VUE)
-        Check the pyproject.toml file, if something about Vue was declared!
-
-
-    4) (OPTIONAL)
-        Update your basic stack information for AI prompts;
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---

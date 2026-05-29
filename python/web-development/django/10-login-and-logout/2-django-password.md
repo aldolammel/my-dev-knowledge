@@ -1,5 +1,3 @@
-
-
 DJANGO: PASSWORD
 
     Password management is something that should generally not be reinvented unnecessarily, and Django endeavors to provide a secure and flexible set of tools for managing user passwords.
@@ -7,4 +5,4 @@ DJANGO: PASSWORD
     Django provides a flexible password storage system and uses PBKDF2 by default.
 
     For even more security reasons, consider:
-        /vault/dev-concepts/password-storage.md
+        /dev-concepts/password-storage.md

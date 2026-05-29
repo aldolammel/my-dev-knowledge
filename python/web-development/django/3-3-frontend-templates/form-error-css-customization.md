@@ -1,10 +1,8 @@
-
-
     FORM ERROR MESSAGES AND CSS:
 
         >> Error messages on templates:
 
-            /vault/python/web-development/django/3-3-frontend-templates/form-error-messages.html
+            /python/web-development/django/3-3-frontend-templates/form-error-messages.html
 
 
         >> How to use error identification (useful for CSS) helps to categorize errors:
@@ -17,7 +15,7 @@
 
 
             In your templates, you can target errors based on their codes. If you need to display
-            a different message or style for errors with the 'invalid' code versus another type, 
+            a different message or style for errors with the 'invalid' code versus another type,
             the error code helps you do that.
 
                 E.g.
@@ -35,6 +33,6 @@
 
 
         >> Error identification types:
-            /vault/python/web-development/django/6-errors-and-validations/error-identification-codes.txt
+            /python/web-development/django/6-errors-and-validations/error-identification-codes.txt
 
-            
+

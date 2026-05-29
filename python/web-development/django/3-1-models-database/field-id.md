@@ -1,12 +1,9 @@
-
-
 DEFINING THE FIELD ID:
 
-
-    >> For the entire Django project: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> For the entire Django project: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         In /core/settings.py:
-            
+
             DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
@@ -16,12 +13,12 @@ DEFINING THE FIELD ID:
                 'django.db.models.BigAutoField' .... Storage: 64-bit integer (8 bytes)
                                                      Range:   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
 
-                # For legacy compatibility:  
+                # For legacy compatibility:
                 'django.db.models.AutoField' ....... Storage: 32-bit integer (4 bytes)
                                                      Range:   -2,147,483,648 to 2,147,483,647
-                
-                
-        
+
+
+
 
 
     >> For each sub-app: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -32,14 +29,13 @@ DEFINING THE FIELD ID:
                 class YourAppConfig(AppConfig):
                     default_auto_field = 'django.db.models.BigAutoField'
 
-            
+
             >> Your options:
 
                     Same as above!
 
 
 
-    >> For each Model Class of a sub-app: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >> For each Model Class of a sub-app: - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        /vault/python/web-development/django/3-1-models-database/creating-explicit-id.txt
-
+        /python/web-development/django/3-1-models-database/creating-explicit-id.txt

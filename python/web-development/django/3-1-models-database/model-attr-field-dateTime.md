@@ -1,5 +1,3 @@
-
-
 DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE TIME FIELD
 
     Common Usage:
@@ -9,7 +7,7 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE TIME FIELD
         - A date and time field (simple calendar with hour together)
 
     Example:
-        
+
         created_at = models.DateTimeField(
             auto_now_add=True,
         )
@@ -18,13 +16,12 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: DATE TIME FIELD
             auto_now=True,
         )
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
 
->> Other related options:
-    
+> > Other related options:
+
     >> Date Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-date.txt
-    
-    >> Duration Field:
-        /vault/python/web-development/django/3-1-models-database/model-attr-field-duration.txt
+        /python/web-development/django/3-1-models-database/model-attr-field-date.txt
 
+    >> Duration Field:
+        /python/web-development/django/3-1-models-database/model-attr-field-duration.txt

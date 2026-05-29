@@ -27,23 +27,23 @@ MYPY TYPE-CHECKER: INSTALLATION AND INTEGRATION
     >> Integration:
 
         PRE) Assuming you already got the pyproject.toml in your project:
-            /vault/python/web-development/pyproject.toml
+            /python/web-development/pyproject.toml
 
 
         1) Include these lines in your pyproject.toml:
-            /vault/python/Linter-Formatter-Typechecker/mypy/pyproject.toml
+            /python/Linter-Formatter-Typechecker/mypy/pyproject.toml
 
         
             1.1) (If applicable / Optional)
                 For Django projects, install the django-stubs for better Django type hints:
-                    /vault/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.md
+                    /python/web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.md
 
 
         2) (If applicable / Optional)
             In the project .vscode/settings.json, do it:
 
                 PRE) Assuming you have this file in the project:
-                    /vault/python/IDE-softwares/vscode/examples/settings.json
+                    /python/IDE-softwares/vscode/examples/settings.json
 
                 2.1) Turn off the Pylance Type Checking, leaving this task only to MyPy:
                     

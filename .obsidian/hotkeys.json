@@ -31,20 +31,20 @@
       "key": "Numpad3"
     }
   ],
-  "editor:insert-tag": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Key108"
-    }
-  ],
   "editor:insert-codeblock": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "Numpad0"
+    }
+  ],
+  "editor:toggle-highlight": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Key108"
     }
   ]
 }

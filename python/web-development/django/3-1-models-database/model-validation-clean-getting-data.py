@@ -3,10 +3,10 @@
     DJANGO > MODEL > CUSTOM VALIDATIONS: USING CLEAN() TO GET DATA AND THEN VALIDATE IT
     
         >> Using clean() method in forms.py:
-            /vault/python/web-development/django/9-forms/form-validation-clean-getting-data.py
+            /python/web-development/django/9-forms/form-validation-clean-getting-data.py
 
         >> Model clean() VS Form clean():
-            /vault/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
+            /python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py
         
         >> I'm sure I wanna use clean() method in models.py:
             KEEP IN THIS FILE!
