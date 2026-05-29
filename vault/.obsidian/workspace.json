@@ -44,6 +44,20 @@
               "icon": "lucide-file",
               "title": "web-project-django-with-vue"
             }
+          },
+          {
+            "id": "b368106c22ab617b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_summary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_summary"
+            }
           }
         ]
       }
@@ -209,6 +223,8 @@
   "lastOpenFiles": [
     "python/web-development/django/0-new-project/web-project-django-with-react.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
+    "_summary.md",
+    "database/principles-pacelc.md",
     "python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/_integration-using-pagex.md",
     "web-development/frontend/CSS/css-libraries-frameworks/vuetify/_about.md",
     "python/web-development/django/0-new-project/web-project-django-only.md",
@@ -231,8 +247,6 @@
     "python/0-new-project/2-web-project-flask.md",
     "python/web-development/flask/0-new-project/web-project-flask-only.md",
     "python/0-new-project/2-web-project-django-with-vue.md",
-    "python/0-new-project/2-web-project-django-with-react.md",
-    "python/0-new-project/2-web-project-django.md",
     "database/pacelc.png",
     "javascript/NodeJS/component-libraries/axios-api/axios.tmd",
     "database/SQLite/IDE-extensions/pycharm/soon.txt",
