@@ -1,6 +1,5 @@
-
-
-NODE.JS: INSTALLATION
+#### JavaScript > Environment > Node
+# Node.js installation
 
 
     PRE) What is it:

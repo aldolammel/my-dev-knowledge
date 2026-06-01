@@ -1,11 +1,9 @@
 # Summary
 
-Before:
+Here below you find NOT the entire content, but a few examples of what you can find. After browsing it for a while, you'll be able to find a lot of useful programming knowledge.
+## Before:
 
-1. [What is this repo](https://github.com/aldolammel/my-dev-knowledge/blob/main/README.md)
-
-Here below you find NOT the entire content, but a few examples of you can find. After a while browsing it, you'll be able to find lot of useful programming knowledge. Use your IDE finder tool to search specific stuff.
-
+1. What is this repo: [README](README.md)
 ## Web development projects
 
 - Back-end:

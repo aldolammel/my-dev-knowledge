@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4b703551251bd594",
+        "id": "f75a08125502d549",
         "type": "tabs",
         "children": [
           {
-            "id": "24c462f151ddb2a4",
+            "id": "d3e101819ae12659",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "web-development/domain/ssl-certification.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "ssl-certification"
             }
           }
         ]
@@ -37,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -176,33 +180,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "24c462f151ddb2a4",
+  "active": "d3e101819ae12659",
   "lastOpenFiles": [
+    "bios/secure-boot.md",
+    "bios/basic-modo-settings.md",
+    "dev-concepts/database-constraints.md",
+    "dev-concepts/iot.md",
+    "dev-concepts/lot.md",
+    "javascript/Internet-of-Things/_temp.md",
+    "python/Internet-of-Things/_temp.md",
+    "internet-of-things/with-python.md",
+    "internet-of-things/with-javascript.md",
+    "location-of-things/temp.md",
+    "javascript/NodeJS/_about.md",
+    "location-of-things",
+    "dev-concepts/agnostic.md",
+    "dev-concepts/api.md",
+    "dev-concepts/architecture-client-server.png",
+    "dev-concepts/architecture-client-server-using-api.png",
+    "dev-concepts/architecture-microservices-even-driven-3.png",
+    "dev-concepts/interpreter.md",
+    "javascript/NodeJS/1-installation.md",
+    "javascript/Web-development/backend/NodeJS/_about.md",
+    "javascript/Build-tools/Vite/0-vite.md",
+    "README.md",
+    "_summary.md",
     "python/0-new-project/1-new-project.md",
     "javascript/00-New-Project/1-new-project.md",
     "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md",
     "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md",
     "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
     "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/seo-project.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/discovery-vue.md",
-    "python/web-development/django/0-new-project/web-project-django-only.md",
-    "python/web-development/django/0-new-project/web-project-django-with-react.md",
-    "python/web-development/django/0-new-project/web-project-django-with-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-django-with-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-flask-with-vue.md",
-    "python/web-development/flask/0-new-project/web-project-flask-with-vue.md",
-    "javascript/Build-tools/Vite/0-vite.md",
-    "javascript/NodeJS/2-updating.md",
-    "javascript/NodeJS/0-new-project/update-node-version.md",
-    "web-development/frontend/CSS/css-libraries-frameworks/vuetify/_about.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/1-new-project.md",
-    "_summary.md",
-    "os/windows/0-os-install/_roadmap.md",
-    "versioning/git/_basic.md",
-    "ide/vscode/_vscode-knowledge.md",
-    "server/os/linux/_building-and-installing-a-server.md",
-    "server/os/linux/updating-server.md",
-    "javascript/_about.md"
+    "javascript/Web-development/frontend/Vue/0-new-project/seo-project.md"
   ]
 }

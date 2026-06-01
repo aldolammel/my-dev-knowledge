@@ -6,9 +6,14 @@ This is a limited text-based database of programming matters written and maintai
 
 [\_summary](_summary.md)
 
-Or check the example below to understand how it is organized.
+Or check the example further below to understand how it's organized.
 
-## Improvements:
+## How to use it:
+1. Clone this repo in your machine;
+2. Open the repo folder in your favorite markdown IDE (e.g. VSCode, Obsidian);
+3. Use the IDE finder tool and be happy!
+
+## Suggest improvements and fixes:
 
 aldolammel@gmail.com
 
@@ -57,4 +62,4 @@ Coffee is a ...
 
 ---
 
-;) Good luck!
+;)
