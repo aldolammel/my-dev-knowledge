@@ -25,12 +25,12 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
         /python/3-virtual-environment/activate-and-deactivate.txt
 
     PRE.5) IDE, language setup:
-        >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
-        >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
+        >> VSCode:  /python/ide/vscode/basic-for-python.txt
+        >> PyCharm: /python/ide/pycharm/basic-for-python.txt
 
     PRE.6) IDE, main framework setup:
-        >> VSCode:  /python/web-development/django/IDE-softwares/vscode/basic-for-django.txt
-        >> PyCharm: /python/web-development/django/IDE-softwares/pycharm/basic-for-django.txt
+        >> VSCode:  /python/web-development/django/ide/vscode/basic-for-django.txt
+        >> PyCharm: /python/web-development/django/ide/pycharm/basic-for-django.txt
 
 
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

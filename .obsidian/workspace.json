@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4b703551251bd594",
+        "id": "e4a26d5c22fd207b",
         "type": "tabs",
         "children": [
           {
-            "id": "24c462f151ddb2a4",
+            "id": "b5319224f65040d7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -37,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -176,33 +176,33 @@
       "bases:Create new base": false
     }
   },
-  "active": "24c462f151ddb2a4",
+  "active": "b5319224f65040d7",
   "lastOpenFiles": [
+    "python/0-new-project/3-update-python-version-in-a-project.md",
+    "python/3-virtual-environment/activate-and-deactivate.md",
+    "python/package-manager/uv/uninstall-python-old-version.md",
+    "python/3-virtual-environment/creating-virtual-environment.md",
+    "python/3-virtual-environment/creating-requirements.md",
+    "python/package-manager/uv/pin-python-version.md",
+    "python/0-new-project/3-update-flask-version-in-a-project.md",
+    "python/0-new-project/3-update-django-version-in-a-project.md",
+    "python/0-new-project/2-web-project-flask-with-vue.md",
+    "python/0-new-project/2-web-project-flask-with-react.md",
+    "python/0-new-project/2-web-project-flask.md",
+    "python/0-new-project/2-web-project-django-with-vue.md",
+    "python/0-new-project/2-web-project-django-with-react.md",
+    "python/0-new-project/2-web-project-django.md",
     "python/0-new-project/1-new-project.md",
-    "javascript/00-New-Project/1-new-project.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md",
-    "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/seo-project.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/discovery-vue.md",
-    "python/web-development/django/0-new-project/web-project-django-only.md",
+    "data-processing-and-file-convertion/with-javascript.md",
+    "data-processing-and-file-convertion/with-python.md",
+    "python/web-development/django/0-new-project/api.md",
+    "python/web-development/ai-prompt-context-model.md",
+    "javascript/Web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.md",
     "python/web-development/django/0-new-project/web-project-django-with-react.md",
     "python/web-development/django/0-new-project/web-project-django-with-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-django-with-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-flask-with-vue.md",
-    "python/web-development/flask/0-new-project/web-project-flask-with-vue.md",
-    "javascript/Build-tools/Vite/0-vite.md",
-    "javascript/NodeJS/2-updating.md",
-    "javascript/NodeJS/0-new-project/update-node-version.md",
-    "web-development/frontend/CSS/css-libraries-frameworks/vuetify/_about.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/1-new-project.md",
-    "_summary.md",
-    "os/windows/0-os-install/_roadmap.md",
-    "versioning/git/_basic.md",
-    "ide/vscode/_vscode-knowledge.md",
-    "server/os/linux/_building-and-installing-a-server.md",
-    "server/os/linux/updating-server.md",
-    "javascript/_about.md"
+    "python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md",
+    "python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.md",
+    "python/web-development/django/1-install-and-first-steps/2-install-project-with-pip.md",
+    "python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup.md"
   ]
 }

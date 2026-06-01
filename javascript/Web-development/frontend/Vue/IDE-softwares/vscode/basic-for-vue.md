@@ -5,13 +5,13 @@ IDE FOR VUE PROJECT: VSCODE
         >> For JavaScript:
 
             >> with vanilla JS:
-                /javascript/IDE-softwares/vscode/basic-for-javascript.txt
+                /javascript/ide/vscode/basic-for-javascript.txt
 
             >> or with TypeScript:
-                /javascript/IDE-softwares/vscode/basic-for-typescript.txt
+                /javascript/ide/vscode/basic-for-typescript.txt
 
         >> For Python:
-            /python/IDE-softwares/vscode/basic-for-python.txt
+            /python/ide/vscode/basic-for-python.txt
 
 
     PRE.2) Assuming the Back-end framework basic project setup is done:

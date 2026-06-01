@@ -48,7 +48,7 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
             >> Using VSCode:
 
                 PRE) Assuming you already have:
-                    .../django/IDE-softwares/vscode/examples/settings.json
+                    .../django/ide/vscode/examples/settings.json
 
                 >> In /project/.vscode/settings.json, add the lines:
 

@@ -61,16 +61,13 @@
     "files.exclude": {
         "**/venv": true,
         "**/.venv": true,
-        "**/venv_studies": true,
-        "**/.venv_studies": true,
     },
     // Files/folders to hide from the VSCode searchings:
     "search.exclude": {
         "**/venv": true,
-        "**/venv_studies": true,
         "**/.venv": true,
-        "**/.venv_studies": true,
         "**/.git": true,
+        "**/.obsidian": true,
     },
     // HUMAN LANGUAGE, DICTIONARY STUFF:
     // Never in project, always in the developer profiles!

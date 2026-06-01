@@ -1,10 +1,10 @@
-IDE FOR DJANGO PROJECT: VSCODE
+IDE FOR FLASK PROJECT: VSCODE
 
-    >> Basic for run Django:
+    >> Basic for run Flask:
 
 
         PRE.1) Assuming you have done this VSCode basic roadmap for Python:
-                /python/IDE-softwares/vscode/basic-for-python.txt
+                /python/ide/vscode/basic-for-python.txt
 
 
         PRE.2) Assuming you already activated the project's virtual environment:
@@ -13,10 +13,14 @@ IDE FOR DJANGO PROJECT: VSCODE
 
         1) VSCode project settings:
 
+            PRE) Install extension for Flask:
+
+                Better Jinja Extension download!
+
             1.1) In the project folder, open this file:
                 /your_project/.vscode/settings.json;
 
-            1.2) In that file, apply these new lines specific for Django projects:
+            1.2) In that file, apply these new lines specific for Flask projects:
                 ./examples/settings.json
 
             1.3) Also, tells VSCode you got some extension recommendations for other project's devs:
@@ -30,15 +34,12 @@ IDE FOR DJANGO PROJECT: VSCODE
             .../django/Linter-Formatter-Typechecker/django-stubs/installation.md
 
 
-        3) Linter (DjLint by Astral):
-            .../django/Linter-Formatter-Typechecker/djlint/installation.md
+        3) Linter (Ruff by Astral):
+            .../flask/Linter-Formatter-Typechecker/ruff/
 
 
-        4) Formatter (DjLint by Astral):
-            # Not need to install anything additional 'coz DjLint is also a formatter.
-
-
-
+        4) Formatter (Ruff by Astral):
+            # Not need to install anything additional 'coz Ruff is also a formatter.
 
 ---
 

@@ -39,12 +39,12 @@ DJANGO: INSTALLING AND SETUP
                             /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             1C.PRE.5) IDE, language setup:
-                >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
-                >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
+                >> VSCode:  /python/ide/vscode/basic-for-python.txt
+                >> PyCharm: /python/ide/pycharm/basic-for-python.txt
 
             1C.1) IDE, framework setup:
-                >> VSCode:  .../django/IDE-softwares/vscode/basic-for-django.txt
-                >> PyCharm: .../django/IDE-softwares/pycharm/basic-for-django.txt
+                >> VSCode:  .../django/ide/vscode/basic-for-django.txt
+                >> PyCharm: .../django/ide/pycharm/basic-for-django.txt
 
             1C.2) Install Django for a specific project:
 

@@ -30,7 +30,7 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
             >> Python basics:
 
                 # For project:
-                    /python/IDE-softwares/vscode/examples/.vscode/
+                    /python/ide/vscode/examples/.vscode/
 
                 # For API only:
                     The same example above!
@@ -90,10 +90,10 @@ DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 >> Django basics:
 
                     # For project:
-                        .../django/IDE-softwares/vscode/examples/.vscode/
+                        .../django/ide/vscode/examples/.vscode/
 
                     # For API only:
-                        .../django/IDE-softwares/vscode/examples/.vscode-for-api-only/
+                        .../django/ide/vscode/examples/.vscode-for-api-only/
 
 
                 >> Check if the Python version on that file is correct!

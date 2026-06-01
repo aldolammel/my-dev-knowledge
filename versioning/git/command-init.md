@@ -39,8 +39,10 @@ VERSIONING > GIT: INIT
                         6) Use the 2-factor to validate!
                         7) Done!
 
-            # Create the remote repository on GitHub:
-                $ gh repo create abcoo-ideias/<project_simpler_name> --private
-            # Connect the new remote repo to the local one:
-                $ git remote add origin https://github.com/abcoo-ideias/<project_simpler_name>.git
-                $ git push -u origin main
+# Create the remote repository on GitHub:
+	$ gh repo create abcoo-ideias/<project_simpler_name> --private
+# Connect the new remote repo to the local one:
+$ git remote add origin https://github.com/abcoo-ideias/<project_simpler_name>.git
+```
+git push -u origin main
+```
