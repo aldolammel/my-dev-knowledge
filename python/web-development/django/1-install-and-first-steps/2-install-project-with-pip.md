@@ -23,7 +23,7 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
             >> Python basics:
 
                 # For project:
-                    /python/IDE-softwares/vscode/examples/.vscode/
+                    /python/ide/vscode/examples/.vscode/
 
                 # For API only:
                     The same example above!
@@ -70,10 +70,10 @@ DJANGO > PROJECT INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOL
                 >> Django basics:
 
                     # For project:
-                        .../django/IDE-softwares/vscode/examples/.vscode/
+                        .../django/ide/vscode/examples/.vscode/
 
                     # For API only:
-                        .../django/IDE-softwares/vscode/examples/.vscode-for-api-only/
+                        .../django/ide/vscode/examples/.vscode-for-api-only/
 
 
             4.4) Install Django in this project:

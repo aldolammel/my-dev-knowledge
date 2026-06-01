@@ -1,12 +1,32 @@
 #### OS > Linux > Debian
-
 # Updating the system
 
-    $ sudo apt update       ← update the repositories list
-    $ sudo apt upgrade      ← install the available updates
-    $ sudo apt autoremove   ← removes all dependencies installed but not needed anymore.
-    $ sudo apt autoclean    ← cleans the local package cache by removing downloaded obsolete files.
+---
 
-    # Or
+Update the repositories list:
+```
+sudo apt update
+```
+Install the available updates:
+```
+sudo apt upgrade
+```
+Removes all dependencies installed but not needed anymore:
+```
+sudo apt autoremove
+```
+Cleans the local package cache by removing downloaded obsolete files:
+```
+sudo apt autoclean
+```
+Or:
+```
+sudo apt full-upgrade -y
+```
 
-    $ sudo apt full-upgrade -y
+
+---
+
+## Changing/Upgrading the distro LTS version:
+
+[os/linux/distros/debian/2-updates/changing-LTS-version](os/linux/distros/debian/2-updates/changing-LTS-version.md)

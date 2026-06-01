@@ -39,12 +39,12 @@ FLASK: INSTALLING AND SETUP
                             /ide/pycharm/xxxxxxxxxxxxxxxx/
 
             1C.PRE.5) IDE, language setup:
-                >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
-                >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
+                >> VSCode:  /python/ide/vscode/basic-for-python.txt
+                >> PyCharm: /python/ide/pycharm/basic-for-python.txt
 
             1C.1) IDE, framework setup:
-                >> VSCode:  .../flask/IDE-softwares/vscode/basic-for-flask.txt
-                >> PyCharm: .../flask/IDE-softwares/pycharm/basic-for-flask.txt
+                >> VSCode:  .../flask/ide/vscode/basic-for-flask.txt
+                >> PyCharm: .../flask/ide/pycharm/basic-for-flask.txt
 
             1C.2) Install Flask for a specific project:
 

@@ -1,44 +1,26 @@
-DJANGO STRUCTURE: VIEWS.PY
+#### Python > Django > Structure
+# Views.py
 
-    >> Django is divided in 3 main parts: models, views, and templates.
+---
 
+Django is divided in 3 main parts: models, views, and templates. Views are responsible for manage what data the user will see through a template. The 'views.py' file contains all logic the user can see and which template/webpage the data will be seen.
+- Views are also responsible for manage what data the users of the app can send to the database and, actually, what data they can read/see.
+- The 'views.py' file is closely related with 'urls.py' file, this one defining which view will be called in certain URL;
+- Views are created through two ways apart:
+	- function-base view: known as FBVs.
+	- class-base view: known as CBVs (recommended)
+- Through 'views.py' file you:
+	- Handle user input and interact with models to retrieve data;
+	- Render templates with the data obtained from models;
+	- Return HTTP responses (like HTML, JSON, XML, etc).
 
-    >> VIEWS:
+## API:
+==Important!==
+Once Views and API concepts share similarities, they are NOT the same even though both are responsible to send data from back-end to front-end, for example.
 
-        They are responsable for manage what data the user will see through a template.
-        The 'views.py' file contains all logic the user can see and which template/webpage the data
-        will be seen.
+---
 
-        >> Views are also responsable for manage what data the users of the app can send to the
-            database and, actually, what data they can read/see.
+**OTHER DJANGO PARTS:**
+- Models: [python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
+- Templates: [python/web-development/django/3-3-frontend-templates/\_about](python/web-development/django/3-3-frontend-templates/_about.md)
 
-        >> The 'views.py' file is closely related with 'urls.py' file, this one defining which view
-            will be called in certain URL;
-
-        >> Views are created through two ways apart:
-
-                - function-base view: kwown as FBVs.
-                - class-base view: known as CBVs (recommended)
-
-        >> Through 'views.py' file you:
-
-                - Handle user input and interact with models to retrieve data;
-                - Render templates with the data obtained from models;
-                - Return HTTP responses (like HTML, JSON, XML, etc).
-
-
-    >> API:
-
-        Important to be clear: once Views and API concepts share similarities, they are NOT the same even though both are responsable to send data from back-end to front-end, for example.
-
-
-
-    OTHER DJANGO PARTS:
-
-        >> MODELS:
-
-            /python/web-development/django/3-1-models-database/
-
-        >> TEMPLATES:
-
-            /python/web-development/django/3-3-frontend-templates/

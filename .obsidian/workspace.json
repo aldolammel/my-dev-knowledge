@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f75a08125502d549",
+        "id": "a9e8ee6049f6b7b0",
         "type": "tabs",
         "children": [
           {
-            "id": "d3e101819ae12659",
+            "id": "763084105a9bddf7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "web-development/domain/ssl-certification.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ssl-certification"
+              "title": "New tab"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "PositiveIntegerField",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,37 +176,46 @@
       "bases:Create new base": false
     }
   },
-  "active": "d3e101819ae12659",
+  "active": "763084105a9bddf7",
   "lastOpenFiles": [
+    "python/web-development/django/3-1-models-database/1-models-knowledge.md",
+    "python/web-development/django/3-2-views-and-API/_about.md",
+    "python/web-development/django/3-3-frontend-templates/_about.md",
+    "javascript/Web-development/frontend/Angular/angular-knowledge/_about.md",
+    "javascript/Web-development/frontend/React/react-knowledge/_about.md",
+    "javascript/Web-development/frontend/Vue/_about.md",
+    "javascript/Web-development/frontend/Vue/vue-knowledge/_about.md",
+    "python/web-development/django/0-new-project/api.md",
+    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.md",
+    "os/linux/distros/debian/2-updates/changing-LTS-version.md",
+    "os/linux/distros/debian/2-updates/firmwares-updates.md",
+    "os/linux/distros/debian/2-updates/update.md",
+    "python/web-development/flask/ide/vscode/basic-for-flask.md",
+    "web-development/domain/ssl-certification.md",
+    "location-of-things/with-python.md",
+    "location-of-things/with-javascript.md",
+    "python/web-development/flask/ide/vscode/examples",
+    "python/web-development/flask/ide/pycharm/basic-for-flask.md",
+    "python/web-development/flask/ide/vscode",
+    "python/web-development/flask/ide/pycharm",
+    "python/web-development/flask/ide",
+    "python/web-development/django/ide/vscode/examples",
+    "python/web-development/django/ide/vscode/basic-for-django.md",
+    "python/web-development/django/ide/pycharm/basic-for-django.md",
+    "python/web-development/django/ide/vscode",
+    "python/web-development/django/ide/pycharm",
+    "python/web-development/django/ide",
+    "python/ide/vscode/examples",
+    "python/ide/vscode/basic-for-python.txt",
+    "javascript/ide/vscode/basic-for-typescript.md",
+    "javascript/ide/vscode/basic-for-javascript.md",
     "bios/secure-boot.md",
     "bios/basic-modo-settings.md",
     "dev-concepts/database-constraints.md",
     "dev-concepts/iot.md",
     "dev-concepts/lot.md",
-    "javascript/Internet-of-Things/_temp.md",
-    "python/Internet-of-Things/_temp.md",
-    "internet-of-things/with-python.md",
-    "internet-of-things/with-javascript.md",
-    "location-of-things/temp.md",
-    "javascript/NodeJS/_about.md",
-    "location-of-things",
-    "dev-concepts/agnostic.md",
-    "dev-concepts/api.md",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
-    "dev-concepts/architecture-microservices-even-driven-3.png",
-    "dev-concepts/interpreter.md",
-    "javascript/NodeJS/1-installation.md",
-    "javascript/Web-development/backend/NodeJS/_about.md",
-    "javascript/Build-tools/Vite/0-vite.md",
-    "README.md",
-    "_summary.md",
-    "python/0-new-project/1-new-project.md",
-    "javascript/00-New-Project/1-new-project.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-as-back-and-front.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/web-project-vue-only-front.md",
-    "javascript/Web-development/frontend/Vue/2-updating-removing/updating-vue.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md",
-    "javascript/Web-development/frontend/Vue/0-new-project/seo-project.md"
+    "dev-concepts/architecture-microservices-even-driven-3.png"
   ]
 }

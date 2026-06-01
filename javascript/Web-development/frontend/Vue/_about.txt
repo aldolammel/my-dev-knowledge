@@ -1,5 +1,0 @@
-About Vue.JS language:
-    /javascript/
-
-About Vue.JS:
-    ./vue-knowledge/_about.md

@@ -30,7 +30,7 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
             >> Python basics:
 
                 # For project:
-                    /python/IDE-softwares/vscode/examples/.vscode/
+                    /python/ide/vscode/examples/.vscode/
 
                 # For API only:
                     The same example above!
@@ -90,10 +90,10 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 >> Flask basics:
 
                     # For project:
-                        .../flask/IDE-softwares/vscode/examples/.vscode/
+                        .../flask/ide/vscode/examples/.vscode/
 
                     # For API only:
-                        .../flask/IDE-softwares/vscode/examples/.vscode-for-api-only/
+                        .../flask/ide/vscode/examples/.vscode-for-api-only/
 
 
                 >> Check if the Python version on that file is correct!

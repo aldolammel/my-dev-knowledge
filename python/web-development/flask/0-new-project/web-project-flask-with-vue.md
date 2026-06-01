@@ -4,8 +4,8 @@
     >> Back-end:
 
         1) IDE, language setup:
-            >> VSCode:  /python/IDE-softwares/vscode/basic-for-python.txt
-            >> PyCharm: /python/IDE-softwares/pycharm/basic-for-python.txt
+            >> VSCode:  /python/ide/vscode/basic-for-python.txt
+            >> PyCharm: /python/ide/pycharm/basic-for-python.txt
 
         2) IDE, framework setup:
             >> VSCode:  /xxxxxxxxxxxxxxxxxx_flask.txt
@@ -20,8 +20,8 @@
     >> Front-end:
 
         5) IDE, framework setup:
-            >> VSCode:  /javascript/web-development/frontend/Vue/IDE-softwares/vscode/basic-for-vue.txt
-            >> PyCharm: /javascript/web-development/frontend/Vue/IDE-softwares/pycharm/basic-for-vue.txt
+            >> VSCode:  /javascript/web-development/frontend/Vue/ide/vscode/basic-for-vue.txt
+            >> PyCharm: /javascript/web-development/frontend/Vue/ide/pycharm/basic-for-vue.txt
 
         6) Vue installation (and its dependencies):
             /javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
