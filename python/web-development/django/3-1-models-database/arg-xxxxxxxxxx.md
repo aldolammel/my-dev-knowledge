@@ -1,14 +1,12 @@
+#### Python > Django > Models > Arguments
+# Xxxxxxxxxxxxxxxx
+
+---
+
+The 'xxxxxxxxxxxxxx' is an argument to xxxxxxxxxxxxxxxxx
 
 
-DJANGO MODEL CLASS > ARGUMENT: XXXXXXXXXXXXXXXXXX
 
-    The 'xxxxxxxxxxxxxx' is an argument to xxxxxxxxxxxxxxxxx
+---
 
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-XXXXXXXXXXXXXX:
-    ./xxxxxxxxxxxxxxxxxx
+XXXXXXXXXXXXXX: /xxxxxxxxxxxxxxxxxx

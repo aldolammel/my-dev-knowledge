@@ -1,19 +1,22 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: POSITIVE SMALL INTEGER FIELD
+#### Python > Django > Models > Attribute types
+# SmallIntegerField()
 
-    Typical Size:
-        2 bytes (16-bit)
+---
 
-    Signed Range:
-        0 to 32,767 (It uses the same 2-byte storage as SmallIntegerField but restricts values to positive numbers and zero, enforced by Django).
+The ideal choice for storing small, non-negative integers where saving space is a priority. Perfect for fields with a known, limited positive range like human age, quantity in stock, days until expiration, seats in a theater.
 
-    Common usage:
-        The ideal choice for storing small, non-negative integers where saving space is a priority. Perfect for fields with a known, limited positive range like human age, quantity in stock, days until expiration, seats in a theather.
+Typical Size:
+2 bytes (16-bit)
 
-    Example:
+Signed Range:
+0 to 32,767 (It uses the same 2-byte storage as SmallIntegerField but restricts values to positive numbers and zero, enforced by Django).
 
-        pos_on_menu = models.PositiveSmallIntegerField(
-            default=0,
-        )
+E.g.
+```
+pos_on_menu = models.PositiveSmallIntegerField(
+	default=0,
+)
+```
 
 ---
 

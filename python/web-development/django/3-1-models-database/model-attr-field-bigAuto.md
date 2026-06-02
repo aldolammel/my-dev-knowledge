@@ -1,6 +1,9 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: BIG AUTO FIELD
+#### Python > Django > Models > Attribute types
+# BigIntegerField()
 
-    This is a subclass of BigIntegerField specifically designed for primary keys. It automatically increments each time a new object is created, just like the standard AutoField, but with the large range of a BIGINT.
+---
+
+This is a subclass of BigIntegerField specifically designed for primary keys. It automatically increments each time a new object is created, just like the standard AutoField, but with the large range of a BIGINT.
 
     Typical Size:
         8 bytes (like BigIntegerField)

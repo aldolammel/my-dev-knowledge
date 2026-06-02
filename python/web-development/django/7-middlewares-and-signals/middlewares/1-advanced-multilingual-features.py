@@ -58,6 +58,7 @@ class UserLanguageMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
+        """This method allows an instance of a class to be called as if it were a function."""
         # First check if user is authenticated:
         if request.user.is_authenticated:
             # Declarations:

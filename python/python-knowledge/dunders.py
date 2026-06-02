@@ -63,6 +63,7 @@
                         self.value = initial_value
 
                     def __call__(self, x):
+                        """This method allows an instance of a class to be called as if it were a function."""
                         self.value += x
                         return self.value
                     # Create an instance of Adder

@@ -1,7 +1,9 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: CHAR FIELD
+#### Python > Django > Models > Attribute fields
+# CharField()
 
-    Common Usage:
-        Requiring the max_length parameter to define the maximum number of characters, this field is for storing short-to-medium-length strings like a person's first or last name, a city name, country code, category name, an ISBN number, product code, or other short identifier.
+---
+
+Requiring the max_length parameter to define the maximum number of characters, this field is for storing short-to-medium-length strings like a person's first or last name, a city name, country code, category name, an ISBN number, product code, or other short identifier.
 
     Field look-like on front-end:
         - Single line field.

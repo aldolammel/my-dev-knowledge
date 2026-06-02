@@ -1,9 +1,9 @@
+#### Python > Django > Models > Attribute types
+# SlugField()
 
+---
 
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: SLUG FIELD
-
-    Common Usage:
-        A specialized CharField for storing URL-friendly slugs. A slug typically contains only letters, numbers, underscores, or hyphens. It's primarily used for creating clean, readable URLs for objects. It enforces this format with a default validator and is often used with prepopulate_from in the admin to auto-generate from another field (like a title). 
+A specialized CharField for storing URL-friendly slugs. A slug typically contains only letters, numbers, underscores, or hyphens. It's primarily used for creating clean, readable URLs for objects. It enforces this format with a default validator and is often used with prepopulate_from in the admin to auto-generate from another field (like a title). 
 
     Field look-like on front-end:
         Generating URLs for blog posts: /blog/my-awesome-post-title/ where my-awesome-post-title is the slug.

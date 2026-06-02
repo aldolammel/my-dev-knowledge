@@ -4,17 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "a9e8ee6049f6b7b0",
+        "id": "b78c37781bda1212",
         "type": "tabs",
         "children": [
           {
-            "id": "763084105a9bddf7",
+            "id": "f407613077bba01d",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/web-development/django/3-1-models-database/model-attr-field-url.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "model-attr-field-url"
             }
           }
         ]
@@ -49,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PositiveIntegerField",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -176,8 +182,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "763084105a9bddf7",
+  "active": "f407613077bba01d",
   "lastOpenFiles": [
+    "python/web-development/django/3-1-models-database/2-forms-and-validations/_about.md",
+    "python/web-development/django/3-1-models-database/method-clean 1.py",
+    "python/web-development/django/3-1-models-database/model-attr-field-url.md",
+    "python/web-development/django/3-1-models-database/arg-xxxxxxxxxx.md",
+    "python/web-development/django/3-1-models-database/meta.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-float.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-decimal.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-dateTime.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-text.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-smallAuto.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-positiveInteger.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-slug.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-bigAuto.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-char.md",
     "python/web-development/django/3-1-models-database/1-models-knowledge.md",
     "python/web-development/django/3-2-views-and-API/_about.md",
     "python/web-development/django/3-3-frontend-templates/_about.md",
@@ -186,34 +211,15 @@
     "javascript/Web-development/frontend/Vue/_about.md",
     "javascript/Web-development/frontend/Vue/vue-knowledge/_about.md",
     "python/web-development/django/0-new-project/api.md",
-    "javascript/Web-development/frontend/Vue/vue-knowledge/using-composition-api/emits-examples.md",
-    "os/linux/distros/debian/2-updates/changing-LTS-version.md",
-    "os/linux/distros/debian/2-updates/firmwares-updates.md",
-    "os/linux/distros/debian/2-updates/update.md",
-    "python/web-development/flask/ide/vscode/basic-for-flask.md",
-    "web-development/domain/ssl-certification.md",
-    "location-of-things/with-python.md",
-    "location-of-things/with-javascript.md",
     "python/web-development/flask/ide/vscode/examples",
-    "python/web-development/flask/ide/pycharm/basic-for-flask.md",
     "python/web-development/flask/ide/vscode",
     "python/web-development/flask/ide/pycharm",
     "python/web-development/flask/ide",
     "python/web-development/django/ide/vscode/examples",
-    "python/web-development/django/ide/vscode/basic-for-django.md",
-    "python/web-development/django/ide/pycharm/basic-for-django.md",
     "python/web-development/django/ide/vscode",
     "python/web-development/django/ide/pycharm",
     "python/web-development/django/ide",
     "python/ide/vscode/examples",
-    "python/ide/vscode/basic-for-python.txt",
-    "javascript/ide/vscode/basic-for-typescript.md",
-    "javascript/ide/vscode/basic-for-javascript.md",
-    "bios/secure-boot.md",
-    "bios/basic-modo-settings.md",
-    "dev-concepts/database-constraints.md",
-    "dev-concepts/iot.md",
-    "dev-concepts/lot.md",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
     "dev-concepts/architecture-microservices-even-driven-3.png"

@@ -123,6 +123,7 @@ class ExampleForm(forms.Form):
                 self.user_num = user_num
                 
             def __call__(self, system_num):
+                """This method allows an instance of a class to be called as if it were a function."""
                 # if the parameter 'system_num' is NOT an integer:
                 if not isinstance(system_num, int):
                     # Show a VALUE error:

@@ -1,7 +1,9 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: ONE-TO-ONE FIELD
+#### Python > Django > Models > Attribute types
+# OneToOneField()
 
-    Common Usage:
-        Defining a one-to-one relationship between two models. This is often used for model inheritance or extending a model with additional information.
+---
+
+Defining a one-to-one relationship between two models. This is often used for model inheritance or extending a model with additional information.
 
     Field look-like on front-end:
         xxxxxxx
