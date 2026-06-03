@@ -1,1 +1,1 @@
-/python/IDE-softwares/vscode/examples/.vscode/
+/python/ide-softwares/vscode/examples/.vscode/

@@ -1,1 +1,1 @@
-[javascript/Internet-of-Things/\_temp](javascript/Internet-of-Things/_temp.md)
+[javascript/internet-of-things/\_temp](javascript/internet-of-things/_temp.md)

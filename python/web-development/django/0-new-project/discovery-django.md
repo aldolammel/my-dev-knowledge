@@ -31,7 +31,7 @@
 DISCOVERY OF RELATED DJANGO PROJECT'S FRAMEWORKS
 
     >> Vue:
-        /javascript/web-development/frontend/Vue/0-new-project/discovery-vue.md
+        /javascript/web-development/frontend/vue/0-new-project/discovery-vue.md
 
     >> React:
         /xxxxxxxxxxxxxxxxxxx

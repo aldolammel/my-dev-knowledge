@@ -1,5 +1,5 @@
 pre) Python linter:
-/python/Linter-Formatter-Typechecker/PyLint.txt
+/python/linter-formatter-typechecker/PyLint.txt
 
 install
 pylint-django

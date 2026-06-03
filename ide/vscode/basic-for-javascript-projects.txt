@@ -1,4 +1,4 @@
 
 
-/javascript/IDE-softwares/vscode/basic-for-javascript.txt
-/javascript/IDE-softwares/vscode/basic-for-typescript.txt
+/javascript/ide-softwares/vscode/basic-for-javascript.txt
+/javascript/ide-softwares/vscode/basic-for-typescript.txt

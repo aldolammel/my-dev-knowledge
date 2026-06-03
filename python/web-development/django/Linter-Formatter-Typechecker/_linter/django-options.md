@@ -6,10 +6,10 @@ LINTER FOR DJANGO: OPTIONS
     >> Options:
 
         >> Ruff (also for Python):
-            /python/Linter-Formatter-Typechecker/ruff.txt
+            /python/linter-formatter-typechecker/ruff.txt
 
         >> flake8-django:
-            /python/web-development/django/Linter-Formatter-Typechecker/flake8-django.txt
+            /python/web-development/django/linter-formatter-typechecker/flake8-django.txt
 
         >> pylint-django:
-            /python/web-development/django/Linter-Formatter-Typechecker/pylint-django.txt
+            /python/web-development/django/linter-formatter-typechecker/pylint-django.txt

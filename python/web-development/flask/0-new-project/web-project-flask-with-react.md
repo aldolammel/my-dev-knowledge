@@ -13,15 +13,15 @@
     >> Front-end:
 
         3) React installation (and its dependencies):
-            /web-development/frontend/React/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            /web-development/frontend/react/xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         4) (Optional) CSS Framework:
 
             >> Bootstrap:
-                /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                /web-development/frontend/css/css-libraries-frameworks/bootstrap/
 
             >> Tailwind:
-                /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                /web-development/frontend/css/css-libraries-frameworks/tailwind/
 
             >> Bulma:
-                /web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                /web-development/frontend/css/css-libraries-frameworks/bulma/

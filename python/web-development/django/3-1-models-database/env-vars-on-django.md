@@ -4,7 +4,7 @@ DJANGO: CALLING BACK-END ENVIRONMENT VARIABLES
 
 
         PRE) Lib installation:
-            .../django/Env-Var-Managers/django-environ/installation-and-integration.txt
+            .../django/env-var-managers/django-environ/installation-and-integration.txt
 
         E.g. of Django /core/settings.py:
 

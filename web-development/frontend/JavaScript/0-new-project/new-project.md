@@ -1,1 +1,0 @@
-/javascript/00-New-Project/

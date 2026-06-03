@@ -1,1 +1,1 @@
-/python/web-development/django/Linter-Formatter-Typechecker/pylint-django/installation.md
+/python/web-development/django/linter-formatter-typechecker/pylint-django/installation.md

@@ -19,6 +19,6 @@ Built-in template tags and filters: https://docs.djangoproject.com/en/5.0/ref/te
 - Models: [python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
 
 **EXTERNAL TEMPLATE/FRONT-END SOLUTIONS:**
-- Vue: [javascript/Web-development/frontend/Vue/vue-knowledge/\_about](javascript/Web-development/frontend/Vue/vue-knowledge/_about.md)
-- React: [javascript/Web-development/frontend/React/react-knowledge/\_about](javascript/Web-development/frontend/React/react-knowledge/_about.md)
-- Angular: [javascript/Web-development/frontend/Angular/angular-knowledge/\_about](javascript/Web-development/frontend/Angular/angular-knowledge/_about.md)
+- Vue: [javascript/web-development/frontend/vue/vue-knowledge/\_about](javascript/web-development/frontend/vue/vue-knowledge/_about.md)
+- React: [javascript/web-development/frontend/react/react-knowledge/\_about](javascript/web-development/frontend/react/react-knowledge/_about.md)
+- Angular: [javascript/web-development/frontend/angular/angular-knowledge/\_about](javascript/web-development/frontend/angular/angular-knowledge/_about.md)

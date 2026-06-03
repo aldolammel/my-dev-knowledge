@@ -1,0 +1,37 @@
+VUE WITH FORMS: SUBMIT BUTTON
+
+    To make a real clickable button, you need to use the directive 'v-on' (@):
+        /javascript/web-development/frontend/vue/vue-knowledge/v-on.txt
+
+    E.g.
+
+        # On <script> layer (using Options-API):
+
+            export default {
+                data() {
+                    return {
+                        chosenAnswer: undefined,
+                    }
+                },
+
+                methods: {
+                    submitForm() {
+                        if (!this.chosenAnswer) {
+                            alert("Please, select an answer!");
+                        }
+
+                    }
+                }
+            }
+
+
+        # On <template> layer:
+
+            <button
+                type="button"
+                @click="submitForm"
+            >
+                Submit
+            </button>
+
+            # Important: you can pass args if needed: @click="submitForm(arg1, arg2, ...)"

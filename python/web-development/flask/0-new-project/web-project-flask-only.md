@@ -31,13 +31,13 @@
              Front-end CSS Framework:
 
                  >> Tailwind:
-                     /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                     /web-development/frontend/css/css-libraries-frameworks/tailwind/
 
                  >> Or Bulma:
-                     /web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                     /web-development/frontend/css/css-libraries-frameworks/bulma/
 
                  >> Or Bootstrap:
-                     /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                     /web-development/frontend/css/css-libraries-frameworks/bootstrap/
 
 2.  DEVELOPMENT - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     0. Create the AI context prompt for the project:

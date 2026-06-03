@@ -16,4 +16,4 @@ API SOLUTION: FETCH API (JS native solution)
 
 > > FOR NODE.JS, AXIOS API SOLUTION:
 
-    /javascript/NodeJS/component-libraries/axios-api/axios.txt
+    /javascript/nodejs/component-libraries/axios-api/axios.txt

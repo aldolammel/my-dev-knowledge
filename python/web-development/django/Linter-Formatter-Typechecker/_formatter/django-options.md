@@ -6,7 +6,7 @@ FORMATTER FOR DJANGO: OPTIONS
     >> Options:
 
         >> Ruff (also for Python):
-            /python/Linter-Formatter-Typechecker/ruff.txt
+            /python/linter-formatter-typechecker/ruff.txt
 
         >> Black (also for Python):
-            /python/Linter-Formatter-Typechecker/black.txt
+            /python/linter-formatter-typechecker/black.txt

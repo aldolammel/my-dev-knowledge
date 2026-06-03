@@ -18,10 +18,10 @@ Here below you find NOT the entire content, but a few examples of what you can f
 	    - App pure Flask: [python/web-development/flask/0-new-project/web-project-flask-only](python/web-development/flask/0-new-project/web-project-flask-only.md)
 	    - App Flask with Vue: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 	- **Node.js** project:
-	    - Update Node: [javascript/NodeJS/2-updating](javascript/NodeJS/2-updating.md)
+	    - Update Node: [javascript/nodejs/2-updating](javascript/nodejs/2-updating.md)
 - Front-end:
 	- **Vue.js** project:
-		- Update Vue: [javascript/Web-development/frontend/Vue/0-new-project/update-vue-version](javascript/Web-development/frontend/Vue/0-new-project/update-vue-version.md)
+		- Update Vue: [javascript/web-development/frontend/vue/0-new-project/update-vue-version](javascript/web-development/frontend/vue/0-new-project/update-vue-version.md)
 		- App Vue with Django: [python/web-development/django/0-new-project/web-project-django-with-vue](python/web-development/django/0-new-project/web-project-django-with-vue.md)
 		- App Vue with Flask: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 
@@ -59,7 +59,7 @@ Here below you find NOT the entire content, but a few examples of what you can f
 	- In front-end, example: [environment-variables/env-for-cloud/in-frontend/.env](environment-variables/env-for-cloud/in-frontend/.env)
 - Using environment vars:
 	- On Django: [python/web-development/django/3-1-models-database/env-vars-on-django](python/web-development/django/3-1-models-database/env-vars-on-django.md)
-	- On Vue: [javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](javascript/Web-development/frontend/Vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
+	- On Vue: [javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
 
 ## Server
 

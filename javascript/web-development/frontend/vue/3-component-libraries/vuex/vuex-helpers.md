@@ -1,0 +1,27 @@
+VUEX: HELPERS
+
+    Vuex provides helper functions that make it easier to map store state/getters
+    to computed properties:
+
+        E.g
+            <script>
+                import { mapState, mapGetters } from 'vuex';
+
+                export default {
+                    // Computed Properties:
+                    computed: {
+                        // These helpers create computed properties that connect to Vuex:
+                        ...mapState(['user', 'posts']),
+                        ...mapGetters(['isAuthenticated', 'userFullName'])
+                    }
+                }
+                ...
+
+
+    >> What are Computed Properties:
+
+        Theory:
+            /javascript/web-development/frontend/vue/computed-properties.txt
+
+        Usage in VueX:
+            /javascript/web-development/frontend/vue/3-component-libraries/vuex/computed-properties.txt

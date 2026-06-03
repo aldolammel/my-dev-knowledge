@@ -16,9 +16,9 @@
 
 ### 1.3) Front-end
 
-1. IDE, framework setup: [VSCode for React](javascript/Web-development/frontend/React/ide/vscode/temp.md) or [PyCharm for React](javascript/Web-development/frontend/React/ide/pycharm/temp.md).
+1. IDE, framework setup: [VSCode for React](javascript/web-development/frontend/react/ide/vscode/temp.md) or [PyCharm for React](javascript/web-development/frontend/react/ide/pycharm/temp.md).
 2. React installation (and its dependencies): /javascript/web-development/frontend/xxxxxxxxxxxx
-3. (Optional) CSS Framework: [Bootstrap](web-development/frontend/CSS/css-libraries-frameworks/bootstrap/_about.md) or [Tailwind](web-development/frontend/CSS/css-libraries-frameworks/tailwind/install-and-integration.md) or [Bulma](web-development/frontend/CSS/css-libraries-frameworks/bulma/_about.md).
+3. (Optional) CSS Framework: [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about.md) or [Tailwind](web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or [Bulma](web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
 
 ---
 

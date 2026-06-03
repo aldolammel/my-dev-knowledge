@@ -20,19 +20,19 @@
     >> Front-end:
 
         5) IDE, framework setup:
-            >> VSCode:  /javascript/web-development/frontend/Vue/ide/vscode/basic-for-vue.txt
-            >> PyCharm: /javascript/web-development/frontend/Vue/ide/pycharm/basic-for-vue.txt
+            >> VSCode:  /javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.txt
+            >> PyCharm: /javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.txt
 
         6) Vue installation (and its dependencies):
-            /javascript/web-development/frontend/Vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+            /javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
 
         7) (Optional) CSS Framework:
 
             >> Bootstrap:
-                /web-development/frontend/CSS/css-libraries-frameworks/bootstrap/
+                /web-development/frontend/css/css-libraries-frameworks/bootstrap/
 
             >> Tailwind:
-                /web-development/frontend/CSS/css-libraries-frameworks/tailwind/
+                /web-development/frontend/css/css-libraries-frameworks/tailwind/
 
             >> Bulma:
-                /web-development/frontend/CSS/css-libraries-frameworks/bulma/
+                /web-development/frontend/css/css-libraries-frameworks/bulma/

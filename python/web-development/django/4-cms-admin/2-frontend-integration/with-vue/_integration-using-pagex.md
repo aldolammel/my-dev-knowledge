@@ -42,15 +42,15 @@ BACK AND FRONT-END INTEGRATION: DJANGO (WITH PAGEX) AND VUE
 
         x) (If applicable)
             If you're usign VITE, check the Vite configure file (in front-end folder root):
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/vite.config.js
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/vite.config.js
 
         x) Create a Pinia store to manage content sent by Django Pagex (Menus, Page content, and Structure content):
 
-            /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/menus.js
+            /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/menus.js
 
-            /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/pages.js
+            /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/pages.js
 
-            /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/structures.js
+            /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/structures.js
 
         X) Create the Vue Router and its routes:
 
@@ -61,37 +61,37 @@ BACK AND FRONT-END INTEGRATION: DJANGO (WITH PAGEX) AND VUE
             - - - - - -
 
             x.A) Each page of the app has its own .vue component:
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-props/router.js
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-props/router.js
 
             x.B) Each page of the app is dynamic created, using a generic .vue component:
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-parameters/router.js
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/router-routes-as-parameters/router.js
 
             x.C) Project hybrid.......:
                 /xxxxxxxxxxxxxxx
 
 
 
-            /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/routes.js
+            /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/routes.js
 
         X) Integrate the Pagex menus, calling each dynamic menu in the right .vue component file:
             E.g.
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/App.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/App.vue
 
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/AppHeader.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/AppHeader.vue
 
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/NavMain.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/NavMain.vue
 
         X) Integrate the Pagex Page contents, calling each dynamic content through the app's front-end:
             E.g.
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/Home.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/Home.vue
 
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/HeroBig.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/HeroBig.vue
 
         X) Integrate the Pagex Structure contents, calling each global content through the app's front-end:
             E.g.
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/AppFooter.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/AppFooter.vue
 
-                /javascript/web-development/frontend/Vue/5-backend-integration/examples/using-vue-with-pagex/NavFooter.vue
+                /javascript/web-development/frontend/vue/5-backend-integration/examples/using-vue-with-pagex/NavFooter.vue
 
 
     >> Test the integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

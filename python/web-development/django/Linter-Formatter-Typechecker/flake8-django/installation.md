@@ -1,5 +1,5 @@
 pre) Python linter:
-/python/Linter-Formatter-Typechecker/flake8.txt
+/python/linter-formatter-typechecker/flake8.txt
 
 install
 flake8-django

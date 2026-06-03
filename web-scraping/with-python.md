@@ -1,1 +1,1 @@
-/python/Web-scraping/
+/python/web-scraping/

@@ -31,11 +31,11 @@ IDE FOR FLASK PROJECT: VSCODE
 
         2) (If applicable, probably you already installed this during MyPy/PyRight installation)
             Type-Checker django-stubs plugin (Compatible for MyPy and PyRight):
-            .../django/Linter-Formatter-Typechecker/django-stubs/installation.md
+            .../django/linter-formatter-typechecker/django-stubs/installation.md
 
 
         3) Linter (Ruff by Astral):
-            .../flask/Linter-Formatter-Typechecker/ruff/
+            .../flask/linter-formatter-typechecker/ruff/
 
 
         4) Formatter (Ruff by Astral):

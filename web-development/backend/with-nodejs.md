@@ -1,1 +1,1 @@
-/javascript/NodeJS/
+/javascript/nodejs/

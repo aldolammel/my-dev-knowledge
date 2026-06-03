@@ -1,1 +1,1 @@
-/python/web-development/django/Linter-Formatter-Typechecker/flake8-django/
+/python/web-development/django/linter-formatter-typechecker/flake8-django/

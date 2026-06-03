@@ -1,1 +1,0 @@
-.../Vue/3-component-libraries/updating-a-component.txt

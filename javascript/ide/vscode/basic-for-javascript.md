@@ -1,7 +1,7 @@
 IDE FOR JS PROJECT: VSCODE
 
         PRE.1) JS project:
-            /javascript/00-New-Project/1-new-project.md
+            /javascript/00-new-project/1-new-project.md
 
 
         PRE.2) IDE VSCode install:
@@ -34,15 +34,15 @@ IDE FOR JS PROJECT: VSCODE
 
 
         2) Type-Checker:
-            /javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+            /javascript/linter-formatter-typechecker/_formatter/js-options.txt
 
 
         3) Linter (Recommended: ESLint):
-            /javascript/Linter-Formatter-Typechecker/_linter/js-options.txt
+            /javascript/linter-formatter-typechecker/_linter/js-options.txt
 
 
         4) Formatter (Recommended: Prettier):
-            /javascript/Linter-Formatter-Typechecker/_formatter/js-options.txt
+            /javascript/linter-formatter-typechecker/_formatter/js-options.txt
 
 ---
 

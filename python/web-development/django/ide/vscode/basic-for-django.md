@@ -27,11 +27,11 @@ IDE FOR DJANGO PROJECT: VSCODE
 
         2) (If applicable, probably you already installed this during MyPy/PyRight installation)
             Type-Checker django-stubs plugin (Compatible for MyPy and PyRight):
-            .../django/Linter-Formatter-Typechecker/django-stubs/installation.md
+            .../django/linter-formatter-typechecker/django-stubs/installation.md
 
 
         3) Linter (DjLint by Astral):
-            .../django/Linter-Formatter-Typechecker/djlint/installation.md
+            .../django/linter-formatter-typechecker/djlint/installation.md
 
 
         4) Formatter (DjLint by Astral):

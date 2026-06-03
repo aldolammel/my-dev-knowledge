@@ -27,7 +27,7 @@ DJANGO: CREATING MENU DYNAMICALLY
     >> Front-end steps - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         >> Using Vue:
-            /javascript/web-development/frontend/Vue/vue-knowledge/using-composition-api/z-examples/dynamic-menus/_creating-menu-system.txt
+            /javascript/web-development/frontend/vue/vue-knowledge/using-composition-api/z-examples/dynamic-menus/_creating-menu-system.txt
 
         >> Using xxxx:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

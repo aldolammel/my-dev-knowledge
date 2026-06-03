@@ -8,9 +8,9 @@ TYPE CHECKER DJANGO STUBS: INSTALLATION AND INTEGRATION
 
         PRE) Your Python Type-Checker is one of them:
 
-            /python/Linter-Formatter-Typechecker/mypy.txt
+            /python/linter-formatter-typechecker/mypy.txt
             # OR
-            /python/Linter-Formatter-Typechecker/pyright.txt
+            /python/linter-formatter-typechecker/pyright.txt
 
         1) Install:
 

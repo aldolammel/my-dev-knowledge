@@ -1,0 +1,24 @@
+
+
+PYTHON: ENVIRONMENT VARIABLE MANAGERS
+
+    To use .env file in a Python project, you NEED one of those options below as project's dependency:
+    
+
+        ATTENTION!
+            Is it a Django project? If so, skip it directly to:
+                /python/web-development/django/env-var-managers/_options.txt
+
+
+    >> Options:
+
+        >> Python-Dotenv:
+            ./python-dotenv/
+
+        >> xxxx
+            /xxxxxx
+
+        >> xxxx
+            /xxxxxx
+
+    

@@ -1,2 +1,2 @@
 Black is for Python + Django formatter:
-/python/Linter-Formatter-Typechecker/black/installation.md
+/python/linter-formatter-typechecker/black/installation.md
