@@ -15,7 +15,7 @@ DJANGO > MODELS: INHERITING ATTRIBUTES
             updated_by = ...
 
             class Meta:
-                abstract = True  # Flags the db to don't create this table!
+                abstract = True  # Flags to the db that no tables should be created from this.
 
 
         class Post(CommonBase):

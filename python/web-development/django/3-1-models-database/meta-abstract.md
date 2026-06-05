@@ -32,7 +32,7 @@ DJANGO MODEL > META CLASS: ABSTRACT
                 )
 
                 class Meta:
-                    abstract = True  # Flags the db to don't create this table!
+                    abstract = True  # Flags to the db that no tables should be created from this.
 
                 # AWARE!
                 # In this example above, those classes that inherited this class must send the user via admin.py save_model() method!

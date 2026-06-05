@@ -61,5 +61,14 @@
       ],
       "key": "H"
     }
-  ]
+  ],
+  "workspace:toggle-pin": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "editor:open-link-in-new-leaf": []
 }
