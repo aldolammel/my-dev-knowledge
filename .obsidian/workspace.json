@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "6012a0facd52ee3b",
+        "id": "cc1b8851ab1dc902",
         "type": "tabs",
         "children": [
           {
-            "id": "73ac72da813f8c56",
+            "id": "554a1ef39a49e304",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "code-editor",
+              "state": {
+                "file": "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py"
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "removing-cms-permission-to-delete.py"
+            }
+          },
+          {
+            "id": "e668eb5aba239ee8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "removing-cms-permission-to-add-for-foreignKey"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,11 +196,32 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "73ac72da813f8c56",
+  "active": "e668eb5aba239ee8",
   "lastOpenFiles": [
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py",
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete-for-foreignKey.md",
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add.py",
+    "python/web-development/django/4-cms-admin/_about.md",
+    "python/web-development/django/4-cms-admin/1-customizing/detailview-preventing-changes.py",
+    "python/web-development/django/4-cms-admin/0-basic/cms-branding.md",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/templates/admin/base_site.html",
+    "python/web-development/django/4-cms-admin/0-basic/field-visibility-and-editability.md",
+    "python/web-development/django/4-cms-admin/1-customizing/listview-adding-column-counter.py",
+    "python/web-development/django/4-cms-admin/1-customizing/listview-adding-column.py",
+    "python/web-development/django/4-cms-admin/1-customizing/customizing-columns.md",
+    "python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection.md",
+    "python/web-development/django/4-cms-admin/1-customizing/adding-field-updated_by.md",
+    "python/web-development/django/4-cms-admin/1-customizing/adding-field-created_by.md",
+    "python/web-development/django/4-cms-admin/1-customizing/adding-field-created_at.md",
+    "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
+    "python/web-development/django/4-cms-admin/0-basic/listview-filtering.md",
+    "python/web-development/django/4-cms-admin/method-xxxxx.py",
+    "python/web-development/django/4-cms-admin/model-type-mixin.py",
+    "python/web-development/django/4-cms-admin/_admin-class-model.py",
+    "python/web-development/django/4-cms-admin/1-customizing/listview-model-option-list_filter.py",
     "python/0-new-project/1-new-project.md",
     "python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md",
-    ".trash",
     "environment-variables/env-for-local/in-backend/.env.md",
     "python/web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.md",
     "python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md",
@@ -192,30 +232,8 @@
     "versioning/git/_basic.md",
     "versioning/git/ignoring-folder-or-file-from-now-on.md",
     "versioning/git/command-rm.md",
-    "javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/.env_example",
-    "javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/.env",
-    "javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/.nvmrc",
     "python/web-development/flask/ide/vscode/examples/.vscode-for-api-only/only-basic-for-python.md",
-    "python/web-development/flask/ide/vscode/examples/.vscode-for-api-only",
-    "python/web-development/flask/ide/vscode/examples/.vscode/settings.json",
-    "python/web-development/flask/ide/vscode/examples/.vscode/extensions.json",
-    "python/web-development/flask/ide/vscode/examples/.vscode",
     "python/web-development/django/ide/vscode/examples/.vscode-for-api-only/same-as-other-django-projects.md",
-    "python/web-development/django/ide/vscode/examples/.vscode-for-api-only",
-    "python/web-development/django/ide/vscode/examples/.vscode/settings.json",
-    "versioning/git/command-xxxx.md",
-    "python/web-development/django/3-1-models-database/meta-abstract.md",
-    "python/web-development/django/3-1-models-database/Inheriting-attributes.md",
-    "python/web-development/flask/0-new-project/web-project-flask-with-vue.md",
-    "web-development/frontend/vue/0-new-project/web-project-flask-with-vue.md",
-    "javascript/nodejs/0-new-project/1-new-project.md",
-    "javascript/00-new-project/1-new-project.md",
-    "api/with-rest/REST-with-python.md",
-    "javascript/web-development/frontend/vue/1-install-and-first-steps/2-local-installation.md",
-    "web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md",
-    "javascript/ide/vscode/basic-for-javascript.md",
-    "javascript/package-manager/npm/discovery-using-npm.md",
-    "javascript/web-development/frontend/vue/0-new-project/discovery-vue.md",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
     "dev-concepts/architecture-microservices-even-driven-3.png"

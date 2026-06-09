@@ -19,7 +19,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
     )
 
     def n_elements(self, obj):
-            """Method field for count elements."""
+            """Custom method field: to count elements."""
             return obj.elements.count()
 
         n_elements.short_description = "Nº de elementos"  # type: ignore[attr-defined]

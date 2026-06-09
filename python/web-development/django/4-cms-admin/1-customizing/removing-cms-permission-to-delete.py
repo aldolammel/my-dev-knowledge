@@ -3,10 +3,7 @@
     
     Case:
 
-        Let's imagine you want to see each entry of UserProfile listed on the CMS but
-        no one must delete a UserProfile entry manually through the CMS, leaving the deletion task
-        for the 'on_delete' argument configured as 'CASCADE' in UserProfile model-class (models.py) 
-        if the related User (built-in class linked with that UserProfile entry) is deleted.
+        Let's imagine you want to see each entry of UserProfile listed on the CMS but no one must delete a UserProfile entry manually through the CMS, leaving the deletion task for the 'on_delete' argument configured as 'CASCADE' in UserProfile model-class (models.py) if the related User (built-in class linked with that UserProfile entry) is deleted.
         
         >> More about the model argument 'on_delete':
             /python/web-development/django/3-1-models-database/2-model-arguments.md
@@ -20,8 +17,7 @@ from .models import UserProfile  # type: ignore
 class UserProfileCMS(admin.ModelAdmin):
 
     def get_actions(self, request):
-        '''This built-in method can conditionally enable or disable CMS actions, returning
-        a dictionary of actions allowed.'''
+        '''This built-in method can conditionally enable or disable CMS actions, returning a dictionary of actions allowed.'''
         # Remove the delete action from the list-view:
         actions = super().get_actions(request)
         if 'delete_selected' in actions:

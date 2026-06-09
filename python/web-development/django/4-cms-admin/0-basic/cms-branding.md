@@ -1,7 +1,10 @@
-CMS BRANDING
+#### Python > Django > Admin (CMS)
+# Branding
 
-    >> Changing the ADMIN TITLE:
+---
 
-        Create inside /root/templates/admin/base_site.html
+**Changing the ADMIN TITLE:**
 
-            /python/web-development/django/z-project-examples/proj-aldolammel-style/templates/admin/base_site.html
+Create it: */root/templates/admin/base_site.html*
+
+E.g. [python/web-development/django/z-project-examples/proj-aldolammel-style/templates/admin/base_site.html](python/web-development/django/z-project-examples/proj-aldolammel-style/templates/admin/base_site.html)

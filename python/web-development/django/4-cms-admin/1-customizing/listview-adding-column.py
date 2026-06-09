@@ -19,7 +19,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
     )
 
     def new_field_column(self, obj):
-            """Custom method field for xxxxxxxxxxxxxxxxx."""
+            """Custom method field: to xxxxxxxxxxxxxxxxx."""
             # <your logic here>
             return <string, any...>
 
