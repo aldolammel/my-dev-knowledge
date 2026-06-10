@@ -73,9 +73,14 @@ class PagexContentForm(forms.ModelForm):
 		"""Dunder method called 'constructor' that runs automatically when a class instance is created."""
 		super().__init__(*args, **kwargs)
 		
-		# Remove the add icon from the 'element' ForeignKey widget:
+		# Simplest option - Remove the add icon from the 'element' ForeignKey widget:
 		if hasattr(self.fields["element"].widget, "can_add_related"):
 			self.fields["element"].widget.can_add_related = False
-		
+			
+		# Smarter option - Remove more than one icon:
+		widget = self.fields["element_content"].widget
+		for attr in ("can_delete_related", "can_add_related", "can_change_related"):
+			if hasattr(widget, attr):
+				setattr(widget, attr, False)
 		...
 ```

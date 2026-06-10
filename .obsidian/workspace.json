@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "cc1b8851ab1dc902",
+        "id": "7fdd5bf1e72e4360",
         "type": "tabs",
         "children": [
           {
-            "id": "554a1ef39a49e304",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "code-editor",
-              "state": {
-                "file": "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py"
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "removing-cms-permission-to-delete.py"
-            }
-          },
-          {
-            "id": "e668eb5aba239ee8",
+            "id": "bc8a23685b095816",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "removing-cms-permission-to-add-for-foreignKey"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,11 +177,19 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "e668eb5aba239ee8",
+  "active": "bc8a23685b095816",
   "lastOpenFiles": [
-    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py",
-    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete-for-foreignKey.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-char.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-text.md",
     "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
+    "os/linux/terminal-basic-commands.md",
+    "os/linux/distros/debian/1-apps-install/1-installing-apps.md",
+    ".git/index.lock",
+    "os/linux/distros/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md",
+    "os/linux/distros/debian/1-apps-install/basic-apps/_ai-prompt.md",
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py",
+    "files/temp.md",
+    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete-for-foreignKey.md",
     "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add.py",
     "python/web-development/django/4-cms-admin/_about.md",
     "python/web-development/django/4-cms-admin/1-customizing/detailview-preventing-changes.py",
@@ -219,7 +208,6 @@
     "python/web-development/django/4-cms-admin/method-xxxxx.py",
     "python/web-development/django/4-cms-admin/model-type-mixin.py",
     "python/web-development/django/4-cms-admin/_admin-class-model.py",
-    "python/web-development/django/4-cms-admin/1-customizing/listview-model-option-list_filter.py",
     "python/0-new-project/1-new-project.md",
     "python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md",
     "environment-variables/env-for-local/in-backend/.env.md",
@@ -228,12 +216,6 @@
     "python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django.md",
     "python/web-development/django/component-libraries/django-extensions/0-django-extensions.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
-    "versioning/git/gitignore-file.md",
-    "versioning/git/_basic.md",
-    "versioning/git/ignoring-folder-or-file-from-now-on.md",
-    "versioning/git/command-rm.md",
-    "python/web-development/flask/ide/vscode/examples/.vscode-for-api-only/only-basic-for-python.md",
-    "python/web-development/django/ide/vscode/examples/.vscode-for-api-only/same-as-other-django-projects.md",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
     "dev-concepts/architecture-microservices-even-driven-3.png"
