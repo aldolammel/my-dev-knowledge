@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7fdd5bf1e72e4360",
+        "id": "318078249b3db09f",
         "type": "tabs",
         "children": [
           {
-            "id": "bc8a23685b095816",
+            "id": "10ca58bb2c2b0bb5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/package-manager/uv/_about-install-and-update.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "_about-install-and-update"
             }
           }
         ]
@@ -177,14 +181,17 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "bc8a23685b095816",
+  "active": "10ca58bb2c2b0bb5",
   "lastOpenFiles": [
+    ".git/index.lock",
+    "python/package-manager/uv/install-python-with-uv.md",
+    "python/package-manager/uv/install-dependency.md",
+    "python/package-manager/uv/_about-install-and-update.md",
     "python/web-development/django/3-1-models-database/model-attr-field-char.md",
     "python/web-development/django/3-1-models-database/model-attr-field-text.md",
     "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
     "os/linux/terminal-basic-commands.md",
     "os/linux/distros/debian/1-apps-install/1-installing-apps.md",
-    ".git/index.lock",
     "os/linux/distros/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md",
     "os/linux/distros/debian/1-apps-install/basic-apps/_ai-prompt.md",
     "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py",
@@ -211,10 +218,6 @@
     "python/0-new-project/1-new-project.md",
     "python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md",
     "environment-variables/env-for-local/in-backend/.env.md",
-    "python/web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.md",
-    "python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md",
-    "python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django.md",
-    "python/web-development/django/component-libraries/django-extensions/0-django-extensions.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
