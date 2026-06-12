@@ -105,12 +105,16 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
 
     # ANOTHER EXAMPLE:
-    def get_fieldsets(...):
+    def get_fieldsets(self, request, obj=None):
+        """Brings all data from fieldsets of the admin class."""
         # If it's in singleton creation step, escape this method:
         if obj is None:
             return self.add_fieldsets
+        
         # Otherwise, convert tuple of tuples into mutable structure:
-        fieldsets = list(self.fieldsets)
+        fieldsets = list(self.fieldsets) # way 1: if your fieldsets are not manipulated dynamically by multiple sources!
+        fieldsets = list(super().get_fieldsets(request, obj)) # OR way 2: for safer extraction, once it consider inherit/parant classes!
+
         # Check if the right attribute exists, and if Vue isn't the external front-end solution:
         if obj and hasattr(obj, "front_type") and obj.front_type != consts.VAL_FRONT_TOOL_VUE:
             fieldsets_list = []

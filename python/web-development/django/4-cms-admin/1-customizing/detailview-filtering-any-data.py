@@ -2,7 +2,7 @@
     QUERYSETS FOR ADMIN (CMS): FILTERING
 
     What are QuerySets:
-        /python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.txt
+        /python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md
 """
 
 # ADMIN.PY

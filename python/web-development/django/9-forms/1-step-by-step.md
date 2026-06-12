@@ -1,40 +1,35 @@
 DJANGO FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 
-    0) Make sure you already have a models.py class created that will create the model to
-        the template/front-end form:
+---
+## Before:
+1. Make sure you already have a models.py class created that will create the model to the template/front-end form: /python/web-development/django/3-1-models-database/_creating_db_table.py
 
-            /python/web-development/django/3-1-models-database/_creating_db_table.py
+---
+## 1) In the same sub-app folder of your models.py, create a file called 'forms.py';
 
+---
+## 2) In the new 'forms.py' file, create a form class linking it with its models.py class big brother:
 
-    1) In the same sub-app folder of your models.py, create a file called 'forms.py';
+[python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
 
+2.1) Define which fields are mandatory and which of them are not:
 
-    2) In the new 'forms.py' file, create a form class linking it with its models.py class big brother:
+[python/web-development/django/9-forms/fields-required-and-not-required](python/web-development/django/9-forms/fields-required-and-not-required.md)
 
-            /python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py
+---
+## 3) In the sub-app views.py, create views.py function or class responsible for your form to be used in a template:
 
-        2.1) Define which fields are mandatory and which of them are not:
+[python/web-development/django/3-2-views-and-API/1-building-views-context/\_about](python/web-development/django/3-2-views-and-API/1-building-views-context/_about.md)
 
-            /python/web-development/django/9-forms/frontend-fields-required-and-not-required.txt
+---
+## 4) In the sub-app urls.py file, add the URL of your new view (responsible for your front-end form):
 
+[python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py](python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py)
 
-    3) In the sub-app views.py, create views.py function or class responsable for your
-        form to be used in a template:
+---
+## 5) If your sub-app folder there is NO 'templates' folder, create it;
 
-        /python/web-development/django/3-2-views-and-API/
+5.1) In 'templates' folder, create a folder with the same name of your sub-app;
+5.2) In that new folder in 'templates' folder, create your template html file and call your form over there: [python/web-development/django/3-3-frontend-templates/2-calling-a-form](python/web-development/django/3-3-frontend-templates/2-calling-a-form.md)
 
-
-    4) In the sub-app urls.py file, add the URL of your new view
-        (responsable for your front-end form):
-
-        /python/web-development/django/3-2-views-and-API/2-building-urls/
-
-
-    5) If your sub-app folder there is NO 'templates' folder, create it;
-
-
-        5.1) In 'templates' folder, create a folder with the same name of your sub-app;
-        5.2) In that new folder in 'templates' folder, create your template html file and
-            call your form over there:
-
-                /python/web-development/django/3-3-frontend-templates/2-calling-a-form.txt
+---

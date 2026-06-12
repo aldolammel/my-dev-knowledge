@@ -90,3 +90,16 @@ def get_fieldsets(self, request, obj=None):
             fields.remove("vue_component")
         fieldsets.append((title, {**opts, "fields": fields}))
     return fieldsets
+
+# Safer way to call all current fieldsets (involving inherit/parent classes awareness) - - - - - - -
+
+class PagexPageContentInline(admin.StackedInline):
+    ...
+    def get_fieldsets(self, request, obj=None):
+        """Brings all data from fieldsets of the admin class."""
+
+        # This way below means it respects parent classes, mixins, any existing override of get_fieldsets(), and future changes in Django's admin internals:
+        fieldsets = list(super().get_fieldsets(request, obj))
+        ...
+
+

@@ -4,20 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "bc9d2f6cbae6ff7f",
+        "id": "01eed0799a7ff89c",
         "type": "tabs",
         "children": [
           {
-            "id": "e781718ccb76abbc",
+            "id": "8cd45398094d5c81",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/web-development/django/9-forms/_forms_knowledge.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "_forms_knowledge"
+            }
+          },
+          {
+            "id": "6fb22f650ac39f83",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "code-editor",
+              "state": {
+                "file": "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py"
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "detailview-field-exclusion.py"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +91,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,13 +199,35 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "e781718ccb76abbc",
+  "active": "298ee3b879dc4fba",
   "lastOpenFiles": [
+    ".git/index.lock",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-field-adding.py",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion-basic.py",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py",
+    "python/web-development/django/4-cms-admin/1-customizing/adding-audit-fields.py",
+    "python/web-development/django/9-forms/_forms_knowledge.md",
+    "python/web-development/django/3-1-models-database/1-models-knowledge.md",
+    "python/web-development/django/4-cms-admin/method-get_queryset.py",
+    "python/web-development/django/3-2-views-and-API/method-get_queryset.py",
+    "python/web-development/django/3-1-models-database/4-querysets/method-get_queryset.md",
+    "python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md",
+    "python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py",
+    "python/web-development/django/3-2-views-and-API/method-xxxxxxxx.py",
+    "python/web-development/django/3-2-views-and-API/method-get_form.py",
+    "python/web-development/django/9-forms/1-step-by-step.md",
+    "python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.md",
+    "python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md",
+    "python/web-development/django/3-1-models-database/4-querysets/qs-partial-data.md",
+    "python/web-development/django/3-1-models-database/4-querysets/qs-for-validations.md",
+    "python/web-development/django/3-1-models-database/4-querysets/parameter-dynamic.md",
+    "python/web-development/django/9-forms/change_form.html",
+    "python/web-development/django/3-2-views-and-API/1-building-views-context/_about.md",
+    "python/web-development/django/9-forms/_which-kind-of-form-do-you-need.md",
     "os/linux/command-change-user.md",
     "os/linux/distros/debian/1-apps-install/other-apps/swing-music.md",
     "os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor.md",
     "os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-brave.md",
-    "os/linux/distros/debian/1-apps-install/other-apps",
     "python/package-manager/uv/_about-install-and-update.md",
     "python/package-manager/uv/install-python-with-uv.md",
     "python/package-manager/uv/pin-python-version.md",
@@ -192,29 +236,7 @@
     "python/package-manager/uv/upgrade-uv.md",
     "python/web-development/flask/1-install-and-first-steps/2-install-project-with-uv.md",
     "python/package-manager/uv/creating-requirements-of-project.md",
-    ".git/refs/remotes/origin/main.lock",
-    ".git/objects/b5/d089021ca21aeebfcbd6b10d54bfb6089c76b0",
-    ".git/objects/c7/49b9ef2906be0d7b9ce244d82a62682963d682",
-    ".git/objects/53/9f6fac6830039d03fb72a950bbe246cdf814dd",
-    ".git/objects/72/911dbce62534dc26aab9e49f100f90213df85e",
-    ".git/objects/5d/11c3271ce3b9d9759306daae2fcab7dc4d7a30",
-    ".git/objects/9e/b3c25524e0a042796e56573053fcfd25a0be80",
-    ".git/objects/04/5e20e0e42bced4e3374bb6f138a5c6df43a708",
-    ".git/objects/88/af82b8fd52da5602be5807d2234224d137549e",
     "python/package-manager/uv/install-dependency.md",
-    "python/web-development/django/3-1-models-database/model-attr-field-char.md",
-    "python/web-development/django/3-1-models-database/model-attr-field-text.md",
-    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md",
-    "os/linux/terminal-basic-commands.md",
-    "os/linux/distros/debian/1-apps-install/1-installing-apps.md",
-    "os/linux/distros/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md",
-    "os/linux/distros/debian/1-apps-install/basic-apps/_ai-prompt.md",
-    "files/temp.md",
-    "python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete-for-foreignKey.md",
-    "python/web-development/django/4-cms-admin/_about.md",
-    "python/web-development/django/4-cms-admin/0-basic/cms-branding.md",
-    "python/web-development/django/4-cms-admin/0-basic/field-visibility-and-editability.md",
-    "python/web-development/django/4-cms-admin/1-customizing/customizing-columns.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",

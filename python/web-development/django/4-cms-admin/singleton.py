@@ -44,7 +44,8 @@ class PagexSettingsAdmin(admin.ModelAdmin):
         if obj is None:
             return self.add_fieldsets
         # Start with base fieldsets:
-        fieldsets = list(self.fieldsets)
+        fieldsets = list(self.fieldsets) # Way 1, simples!
+        fieldsets = list(super().get_fieldsets(request, obj)) # Way 2, safer!
         # here you can set special fields available in certain conditions...
         # If you don't need this, delete the entire get_fieldsets().
         return fieldsets

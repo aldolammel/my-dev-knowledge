@@ -1,37 +1,39 @@
 DJANGO FORMS:
 
-    If you're developing an app that accepts visitor/user inputs (obviously from the app's front-end) and your template solution is Django Template (native of Django), you'll need to understand forms developed through forms.py file.
+If you're developing an app that accepts visitor/user inputs (obviously from the app's front-end) and your template solution is Django Template (native of Django), you'll need to understand forms developed through forms.py file.
 
-    Once you create the forms file, it's there the place you define forms that will be used through the app's front-end, and/or, if needed, used as custom CMS form.
-    There are 2 cases of using forms from forms.py:
+Once you create the forms file, it's there the place you define forms that will be used through the app's front-end, and/or, if needed, used as custom CMS form.
+There are 2 cases of using forms from forms.py:
 
-        1) Using '.ModelForm' based class: directly tied to a models.Model (common case);
-            ./class-based/inherit-ModelForm/forms.py
+## 1) Using '.ModelForm' based class: 
+It's directly tied to a models.Model (common case);
 
-        2) Using '.Form' based class: not tied to a model, useful for search bars, contact forms, filters, etc ('Django Template' as front-end solution is demanded).
-            ./class-based/inherit-Form/forms.py
+[python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
 
-    MAY YOU NOT NEED IT:
-        For projects where Django Templates is NOT the front-end solution used, forms.py are restrict only to be used attached with admin-classes (CMS, via admin.py) once the front-end forms are built/provided by another template framework (e.g. Vue, React, Angular, etc).
+## 2) Using '.Form' based class:
+It's not tied to a model, useful for search bars, contact forms, filters, etc ('Django Template' as front-end solution is demanded).
 
-    Django provides a variety of tools and libraries to help you build forms to accept input from aoo visitors and then process and respond to the input. That said: a forms.py file by itself DOESN'T input anything into the database. If a form is inputting data, it's because that form  is a ModelForm class linked with some Model class (models.py). If the form is loaded with data into the fields, it's because some view (in views.py) has been used as bridge between the form and the database.
+[python/web-development/django/9-forms/class-based/inherit-Form/forms.py](python/web-development/django/9-forms/class-based/inherit-Form/forms.py)
 
-    >> How works the form structure:
-        ./form-structure.py
+==MAY YOU NOT NEED IT:==
+For projects where Django Templates is NOT the front-end solution used, forms.py are restrict only to be used attached with admin-classes (CMS, via admin.py) once the front-end forms are built/provided by another template framework (e.g. Vue, React, Angular, etc).
 
-    >> Receiving data from Model:
-        ./form-receiving-data.py
+Django provides a variety of tools and libraries to help you build forms to accept input from aoo visitors and then process and respond to the input. That said: a forms.py file by itself DOESN'T input anything into the database. If a form is inputting data, it's because that form  is a ModelForm class linked with some Model class (models.py). If the form is loaded with data into the fields, it's because some view (in views.py) has been used as bridge between the form and the database.
 
-    >> Receiving data from View:
-        ./form-receiving-data.py
+How works the form structure: [python/web-development/django/9-forms/form-structure](python/web-development/django/9-forms/form-structure.py)
+
+Receiving data from Model: [python/web-development/django/9-forms/form-receiving-data](python/web-development/django/9-forms/form-receiving-data.py)
+
+Receiving data from View: [python/web-development/django/9-forms/form-receiving-data](python/web-development/django/9-forms/form-receiving-data.py)
 
 ---
 
-    Sometimes Django can be confusing if you are not used, so this list below is just to show to you how each ModelForm fields, and Form fields are "translated" in Djanto Template (html).
+Sometimes Django can be confusing if you are not used, so this list below is just to show to you how each ModelForm fields, and Form fields are "translated" in Djanto Template (html).
 
-                <<< to --- data from here --- to >>>
+<<< to --- data from here --- to >>>
 
-HTML INPUT MODELS.PY FIELDS FORMS.PY FIELDS
+```
+HTML INPUT .............. MODELS.PY FIELDS............... FORMS.PY FIELDS
 
 <textarea> .............. TextField ..................... Textarea
 type= text............... TextField ..................... TextInput
@@ -49,8 +51,10 @@ type= number ............ IntegerField .................. NumberInput when Field
 ......................... DecimalField .................. NumberInput when Field.localize is False, else TextInput.
 ......................... FloatField .................... NumberInput when Field.localize is False, else TextInput
 ......................... JSONField ..................... Textarea
-<select>................. ................... Select
-type= radio ............ CharField ..................... forms.ChoiceField(widget=forms.RadioSelect, choices=(('1', 'First'), ('2', 'Second')))
+
+<select>................. models.CharField ..................... forms.ChoiceField(choices=(('1', 'First'), ('2', 'Second')))
+<select multiple> ....... models.CharField ..................... forms.MultipleChoiceField(choices=(('1', 'First'), ('2', 'Second')))
+<input type="radio"> .... models.CharField ..................... forms.ChoiceField(widget=forms.RadioSelect, choices=(('1', 'First'), ('2', 'Second')))
 ......................... MultipleChoiceField ........... SelectMultiple
 ......................... TypedMultipleChoiceField ...... SelectMultiple
 ......................... TypedChoiceField .............. Select
@@ -65,7 +69,9 @@ type= url ............... URLField ...................... URLInput
 ......................... ComboField .................... TextInput
 ......................... MultiValueField ............... TextInput
 type="password" ......... ................ PasswordInput
+```
 
+```
 <input type="button">
 <input type="color">
 <input type="hidden">
@@ -77,6 +83,8 @@ type="password" ......... ................ PasswordInput
 <input type="tel">
 <input type="text">
 <input type="week">
+```
 
-MODEL FIELDS, MORE:
-/python/web-development/django/3-1-models-database/\_models_knowledge.txt
+---
+## Model fields, more:
+[python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
