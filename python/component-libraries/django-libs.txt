@@ -1,3 +1,0 @@
-
-
-/python/web-development/django/component-libraries/

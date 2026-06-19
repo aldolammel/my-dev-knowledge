@@ -31,3 +31,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - D1. xxxxxxxxxxx
 - D1. xxxxxxxxxxx
 
+---
+## CSS customization in Django Admin:
+[python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin](python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md)

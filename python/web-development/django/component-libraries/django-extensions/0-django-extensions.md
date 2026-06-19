@@ -1,6 +1,7 @@
+#### Python > Django > Components & Libraries
+# Django-Extensions
 
-
-DJANGO-EXTENSIONS:
+---
 
     Django-extensions is a popular Python library for Django that provides a collection of custom extensions to enhance your development workflow. Think of it as a toolbox filled with a wide variety of useful utilities—mostly new management commands—that help you perform common tasks faster and more efficiently than with plain Django.
 

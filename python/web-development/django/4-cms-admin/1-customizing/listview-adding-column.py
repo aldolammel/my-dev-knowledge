@@ -19,11 +19,12 @@ class ExampleModelAdmin(admin.ModelAdmin):
     )
 
     def new_field_column(self, obj):
-            """Custom method field: to xxxxxxxxxxxxxxxxx."""
-            # <your logic here>
-            return <string, any...>
+        """Custom method field: to xxxxxxxxxxxxxxxxx."""
+        # <your logic here>
+        return <string, any...>
 
-        new_field_column.short_description = "New Field Column Title"  # type: ignore[attr-defined]
+    # Defining custom method field labels:
+    new_field_column.short_description = "New Field Column Title"  # type: ignore[attr-defined]
 
 
 

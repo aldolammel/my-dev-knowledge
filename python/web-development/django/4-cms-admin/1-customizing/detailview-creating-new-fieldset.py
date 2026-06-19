@@ -1,5 +1,7 @@
 
 """
+    OLD VERSIONNNNNNNNNNNNNNNN WITH SECTION INSTEAD OF JUST ELEMENT IN ELEMENT INLINE!!!!!!!!!!!!!!!
+
     DJANGO > CMS > CREATING A ENTIRELY NEW FIELDSET
     
         >> Other options:
@@ -64,7 +66,7 @@ class PagexPageContentInline(admin.StackedInline):
         return obj.section_element.section.name
 
     # ...
-    # Defining method field labels:
+    # Defining custom method field labels:
     where_display.short_description = "Da seção"  # type: ignore[attr-defined]
 
 

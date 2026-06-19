@@ -1,0 +1,18 @@
+/*
+    Zebra Striping for Django Admin Inline tables!
+    How to implement it: /python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md
+*/
+
+.inline-related {
+	padding: 20px 0;
+}
+.inline-related fieldset {
+	background-color: transparent;
+}
+.inline-related:nth-child(even) {
+	background-color: var(--darkened-bg); /* Django theme light/dark compatible */
+	line-height: 100%;
+}
+.inline-related:nth-child(odd) {
+	background-color: var(--body-bg); /* Django theme light/dark compatible */
+}

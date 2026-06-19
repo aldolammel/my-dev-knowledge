@@ -122,8 +122,8 @@ class UserCMS(UserAdmin):
             return format_html("<a href='{}'>{} ({})</a>", url, 'User Profile', CMS_MORE_DETAILS)
         return CMS_ERRO_PROFILE
 
-    # Defining this method label:
-    profile_link.short_description = 'User Profile'
+    # Defining custom method field labels:
+    profile_link.short_description = 'User Profile'  # type: ignore[attr-defined]
 
     def get_readonly_fields(self, request, obj=None):
         """Built-in method to extend the 'readonly_fields' power."""

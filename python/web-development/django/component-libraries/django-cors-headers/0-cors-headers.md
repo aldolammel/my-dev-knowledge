@@ -1,4 +1,8 @@
-DJANGO CORS HEADERS:
+#### Python > Django > Components & Libraries
+# Django-Cors-Headers
+
+---
+
 
     It's a Django app designed to handle Cross-Origin Resource Sharing (CORS) headers in responses
     from your Django app. CORS is a security mechanism implemented by web browsers to restrict web

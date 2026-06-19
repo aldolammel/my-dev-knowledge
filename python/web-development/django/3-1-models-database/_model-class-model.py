@@ -2,6 +2,7 @@
     WHICH MODEL CLASS MODEL YOU WANT?
         1. For common/Parent class;
         2. For Child class;
+        3. Abstract;
 
 """
 
@@ -128,3 +129,8 @@ class ExampleModel(models.Model):
         # Allows the parent class to execute full_clean() in this child too:
         super().clean()
         # Reserved space for child validations...
+
+
+# 3. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# /python/web-development/django/3-1-models-database/meta-abstract.md

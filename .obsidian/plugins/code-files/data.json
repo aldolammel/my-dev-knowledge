@@ -6,7 +6,9 @@
     "jsx",
     "py",
     "vue",
-    "html"
+    "html",
+    "css",
+    "scss"
   ],
   "folding": true,
   "lineNumbers": true,

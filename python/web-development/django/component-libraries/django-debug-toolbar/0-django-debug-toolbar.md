@@ -1,6 +1,7 @@
+#### Python > Django > Components & Libraries
+# Django-Debug-toolbar
 
-
-DJANGO DEBUG TOOLBAR:
+---
 
     xxxxxxxxxxxxxxxxxxx
 

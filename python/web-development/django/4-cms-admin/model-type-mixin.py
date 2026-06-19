@@ -1,7 +1,8 @@
 """
     DJANGO > MODEL/CLASS TYPE: MIXIN
 
-    In Django, a model mixin is an abstract base class that provides reusable fields and methods to other models via multiple inheritance, promoting the "Don't Repeat Yourself" (DRY) principle. Mixins are typically used to inject common functionalities without forcing a strict "is-a" relationship (unlike typical inheritance). 
+    In Django, a model mixin is an abstract base class that provides reusable fields and methods to other models via multiple inheritance, promoting the "Don't Repeat Yourself" (DRY) principle. Mixins are typically used to inject common functionalities without forcing a strict "is-a" relationship (unlike typical inheritance).
+    So it's absolutely professional to use mixin classes everywhere you using Django in order to practice the DRY principle.
 """
 
 # admin.py (same logic for cases using models.py or serializers.py, for example) - - - - - - - - - -

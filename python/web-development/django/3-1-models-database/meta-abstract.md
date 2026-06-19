@@ -1,56 +1,60 @@
+#### Python > Django > Model matters
+# Meta class: Abstract
 
+---
 
-DJANGO MODEL > META CLASS: ABSTRACT
+Marks a model as a base class for inheritance, not a database table.
 
-    Marks a model as a base class for inheritance, not a database table.
+**When to use:**
+- To create reusable model components/mixins;
+- For shared fields or methods across multiple models;
+- To implement design patterns (like BaseModel with common fields);
+- The abstract model itself doesn't get a database table.
 
-        >> When to use:
-            - To create reusable model components/mixins;
-            - For shared fields or methods across multiple models;
-            - To implement design patterns (like BaseModel with common fields);
-            - The abstract model itself doesn't get a database table.
+E.g.
+```
+class AuditBase(models.Model):
+	"""Stores who and when things were changed."""
 
-        E.g.
-            class AuditBase(models.Model):
-                """Stores who and when things were changed."""
+	created_at = models.DateTimeField(
+		auto_now_add=True,
+		verbose_name="Instalado em",
+	)
+	updated_at = models.DateTimeField(
+		auto_now=True,
+		verbose_name="Atualizado em",
+	)
+	updated_by = models.ForeignKey(
+		stgs.AUTH_USER_MODEL,
+		editable=False,
+		related_name="%(app_label)s_%(class)s_updated_by",
+		on_delete=models.SET_NULL,
+		null=True,
+		verbose_name="Atualizado por",
+	)
 
-                created_at = models.DateTimeField(
-                    auto_now_add=True,
-                    verbose_name="Instalado em",
-                )
-                updated_at = models.DateTimeField(
-                    auto_now=True,
-                    verbose_name="Atualizado em",
-                )
-                updated_by = models.ForeignKey(
-                    stgs.AUTH_USER_MODEL,
-                    editable=False,
-                    related_name="%(app_label)s_%(class)s_updated_by",
-                    on_delete=models.SET_NULL,
-                    null=True,
-                    verbose_name="Atualizado por",
-                )
+	class Meta:
+		abstract = True  # Flags to the db that no tables should be created from this.
 
-                class Meta:
-                    abstract = True  # Flags to the db that no tables should be created from this.
+```
 
-                # AWARE!
-                # In this example above, those classes that inherited this class must send the user via admin.py save_model() method!
+==Aware!==
+In this example above, those classes that inherited this class must send the user via *admin.py* *save_model()* method!
 
-        
-        >> When you CANNOT use abstract:
+**When you CANNOT use abstract:**
 
-            You cannot use an abstract model directly in a ForeignKey or ManyToManyField, even with a 'through=' model. Django's ORM simply doesn't allow it 'cause abstract models are not installed in the database, so there's no concrete table to point to.
+You cannot use an abstract model directly in a ForeignKey or ManyToManyField, even with a '*through=*' model. Django's ORM simply doesn't allow it 'cause abstract models are not installed in the database, so there's no concrete table to point to.
 
-                >> Possible solution > Concrete Model:
-                    ./model-type-concrete.py
+**Possible solution > Concrete Model:**
 
-
+[python/web-development/django/3-1-models-database/\_model-class-model.py](python/web-development/django/3-1-models-database/_model-class-model.py)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 MODEL'S INHERITANCE IN DJANGO:
-    ./Inheriting-attributes.txt
+
+[python/web-development/django/3-1-models-database/Inheriting-attributes](python/web-development/django/3-1-models-database/Inheriting-attributes.md)
 
 WHAT IS MODEL META:
-    ./meta.md
+
+[python/web-development/django/3-1-models-database/meta](python/web-development/django/3-1-models-database/meta.md)

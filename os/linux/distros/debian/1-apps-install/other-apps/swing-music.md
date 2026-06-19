@@ -81,5 +81,20 @@ sudo systemctl restart swingmusic
 ```
 
 ---
+## 4) Updating:
+
+4.1) Stop the service!
+4.2) In another terminal, make sure you activated the app venv!
+4.3) Update the app:
+```
+uv add "swingmusic==<version>"
+```
+E.g.
+```
+uv add "swingmusic==3.0.1"
+```
+4.4) Restart the service!
+
+---
 ## This for Windows:
 Soon!

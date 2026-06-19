@@ -57,11 +57,11 @@ class ExampleModelAdmin(admin.ModelAdmin):
             "Configurações",
             {
                 "fields": (
-                    "config_1",  # May be removed dynamically if certain conditions are met.
-                    "config_2",  # May be removed dynamically if certain conditions are met.
-                    "config_3",  # May be removed dynamically if certain conditions are met.
-                    "config_4",  # May be removed dynamically if certain conditions are met.
-                    "config_5",  # May be removed dynamically if certain conditions are met.
+                    "config_1",  # May removed dynamically if conds are met.
+                    "config_2",  # May removed dynamically if conds are met.
+                    "config_3",  # May removed dynamically if conds are met.
+                    "config_4",  # May removed dynamically if conds are met.
+                    "config_5",  # May removed dynamically if conds are met.
                 )
             },
         ),

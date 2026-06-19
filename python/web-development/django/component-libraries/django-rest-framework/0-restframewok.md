@@ -1,4 +1,8 @@
-DRF: DJANGO REST FRAMEWORK
+#### Python > Django > Components & Libraries
+# Django-Rest-Framework (DRF)
+
+---
+
 
     Django REST framework is a powerful and flexible toolkit for building Web APIs.
     Some reasons you might want to use REST framework:

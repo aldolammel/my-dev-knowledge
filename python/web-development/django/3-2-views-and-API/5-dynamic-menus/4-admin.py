@@ -74,8 +74,6 @@ class PagexMenuAdmin(SortableAdminBase, admin.ModelAdmin):
         else:
             return str(pub_count)
 
-    menu_link_counter.short_description = "Nº de links"  # type: ignore[attr-defined]
-
     def json_link(self, obj):
         """Method to show the JSON data of the object."""
         url = ""
@@ -84,6 +82,8 @@ class PagexMenuAdmin(SortableAdminBase, admin.ModelAdmin):
             return format_html("<a href='{}' target='_blank'>{}</a>", url, obj.identifier)
         return "ERROR: JSON não disponível!"
 
+    # Defining custom method field labels:
+    menu_link_counter.short_description = "Nº de links"  # type: ignore[attr-defined]
     json_link.short_description = "JSON"  # type: ignore[attr-defined]
 
 
@@ -127,7 +127,7 @@ class PagexCategoryAdmin(admin.ModelAdmin):
         # For Adding a new object:
         return self.readonly_fields
 
-    # Defining this method label:
+    # Defining custom method field labels:
     page_link.short_description = "Visualizar"  # type: ignore[attr-defined]
     page_link_with_help.short_description = "Visualizar"  # type: ignore[attr-defined]
 

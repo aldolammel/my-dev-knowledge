@@ -592,8 +592,6 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                     return format_html("<a href='{}'>{} ({})</a>", url, TX_PROFILE_2, CMS_MORE_DETAILS)
                 return CMS_ERRO_PROFILE
 
-            profile_link.short_description = 'User Profile'
-
             def get_readonly_fields(self, request, obj=None):
                 '''Built-in method to extend the 'readonly_fields' power.'''
 
@@ -615,6 +613,9 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 if change and cms_user != obj.updated_by:
                     obj.updated_by = cms_user
                 super().save_model(request, obj, form, change)
+            
+            # Defining custom method field labels:
+            profile_link.short_description = 'User Profile'
 
 
         @admin.register(UserProfileOne)

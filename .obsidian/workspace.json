@@ -4,41 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "01eed0799a7ff89c",
+        "id": "49c991fa1b5a9b06",
         "type": "tabs",
         "children": [
           {
-            "id": "8cd45398094d5c81",
+            "id": "23ebc71dffcd8189",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/web-development/django/9-forms/_forms_knowledge.md",
+                "file": "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "_forms_knowledge"
+              "title": "_what-kind-of-cms-ux-do-you-need"
             }
           },
           {
-            "id": "6fb22f650ac39f83",
+            "id": "3175ae1d90ff33e2",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "code-editor",
+              "type": "markdown",
               "state": {
-                "file": "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py"
+                "file": "web-development/frontend/css/css-examples/zebra-striping.md",
+                "mode": "source",
+                "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "detailview-field-exclusion.py"
+              "title": "zebra-striping"
+            }
+          },
+          {
+            "id": "0c5c97a3f7d616c5",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "css-customization-in-admin"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -199,44 +217,44 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "298ee3b879dc4fba",
+  "active": "0c5c97a3f7d616c5",
   "lastOpenFiles": [
-    ".git/index.lock",
-    "python/web-development/django/4-cms-admin/0-basic/detailview-field-adding.py",
-    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion-basic.py",
-    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py",
-    "python/web-development/django/4-cms-admin/1-customizing/adding-audit-fields.py",
-    "python/web-development/django/9-forms/_forms_knowledge.md",
+    "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
+    "web-development/frontend/css/css-examples/zebra-striping.md",
+    "web-development/frontend/css/css-examples/django-css-zebra-striping-for-admin-inline.png",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css",
+    "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css.md",
+    "web-development/frontend/css/css-examples",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name",
+    "python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection.md",
+    "python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py",
+    "python/web-development/django/3-3-frontend-templates/_about.md",
     "python/web-development/django/3-1-models-database/1-models-knowledge.md",
-    "python/web-development/django/4-cms-admin/method-get_queryset.py",
-    "python/web-development/django/3-2-views-and-API/method-get_queryset.py",
-    "python/web-development/django/3-1-models-database/4-querysets/method-get_queryset.md",
-    "python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md",
-    "python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py",
-    "python/web-development/django/3-2-views-and-API/method-xxxxxxxx.py",
-    "python/web-development/django/3-2-views-and-API/method-get_form.py",
-    "python/web-development/django/9-forms/1-step-by-step.md",
-    "python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.md",
-    "python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md",
-    "python/web-development/django/3-1-models-database/4-querysets/qs-partial-data.md",
-    "python/web-development/django/3-1-models-database/4-querysets/qs-for-validations.md",
-    "python/web-development/django/3-1-models-database/4-querysets/parameter-dynamic.md",
-    "python/web-development/django/9-forms/change_form.html",
-    "python/web-development/django/3-2-views-and-API/1-building-views-context/_about.md",
-    "python/web-development/django/9-forms/_which-kind-of-form-do-you-need.md",
-    "os/linux/command-change-user.md",
-    "os/linux/distros/debian/1-apps-install/other-apps/swing-music.md",
-    "os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor.md",
-    "os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-brave.md",
-    "python/package-manager/uv/_about-install-and-update.md",
-    "python/package-manager/uv/install-python-with-uv.md",
-    "python/package-manager/uv/pin-python-version.md",
-    "python/package-manager/uv/uninstall-python-old-version.md",
-    "python/3-virtual-environment/activate-and-deactivate.md",
-    "python/package-manager/uv/upgrade-uv.md",
-    "python/web-development/flask/1-install-and-first-steps/2-install-project-with-uv.md",
-    "python/package-manager/uv/creating-requirements-of-project.md",
-    "python/package-manager/uv/install-dependency.md",
+    "python/web-development/django/9-forms/error-messages/_about.md",
+    "python/web-development/django/3-1-models-database/renaming-model-class.md",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-including-extra-text-messages.md",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py",
+    "python/web-development/django/4-cms-admin/0-basic/detailview-fieldset-exclusion.py",
+    "python/web-development/django/4-cms-admin/_admin-class-model.py",
+    ".obsidian/plugins/better-search-views/styles.css",
+    ".obsidian/plugins/better-search-views/main.js",
+    "python/web-development/django/3-1-models-database/model-type-mixin.md",
+    "database/PostgreSQL/0-basic/0-why-not.md",
+    "python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md",
+    "dev-concepts/polymorphism.md",
+    "python/component-libraries/django-libs.md",
+    "python/web-development/django/component-libraries/python-libs.md",
+    "python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.md",
+    "python/web-development/django/component-libraries/django-extensions/0-django-extensions.md",
+    "python/web-development/django/component-libraries/django-debug-toolbar/0-django-debug-toolbar.md",
+    "python/web-development/django/component-libraries/django-cors-headers/0-cors-headers.md",
+    "python/web-development/django/component-libraries/django-admin-sortable2/0-django-admin-sortable2.md",
+    "python/web-development/django/component-libraries/django-rosetta/0-django-rosetta.md",
+    "python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md",
+    "python/web-development/django/component-libraries/django-parler/0-django-parler.md",
+    "python/web-development/django/3-1-models-database/Polymorphic-solutions/django-polymorphic.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",

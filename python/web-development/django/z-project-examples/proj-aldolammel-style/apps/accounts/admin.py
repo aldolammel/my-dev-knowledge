@@ -120,10 +120,10 @@ class UserCMS(UserAdmin):
         "userprofileone__country",
     ]
     readonly_fields = (
-        # 'profile_type',  # Dynamicaly included!
-        # 'username',  # Dynamicaly included!
-        # 'accepted_min_age',  # Dynamicaly included!
-        # 'accepted_our_privacy',  # Dynamicaly included!
+        # 'profile_type',  # Dynamically included!
+        # 'username',  # Dynamically included!
+        # 'accepted_min_age',  # Dynamically included!
+        # 'accepted_our_privacy',  # Dynamically included!
         "profile_link",  # Important: don't remove 'profile_link' from here!
         "date_joined",
         "last_login",
@@ -155,8 +155,6 @@ class UserCMS(UserAdmin):
         #     )
         return CMS_ERRO_PROFILE
 
-    profile_link.short_description = "User Profile"
-
     def get_readonly_fields(self, request, obj=None):
         '''Built-in method to extend the 'readonly_fields' power.'''
 
@@ -175,6 +173,9 @@ class UserCMS(UserAdmin):
         """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
+
+    # Defining custom method field labels:
+    profile_link.short_description = "User Profile"  # type: ignore[attr-defined]
 
 
 @admin.register(UserProfileOne)

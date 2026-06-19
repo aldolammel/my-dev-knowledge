@@ -35,8 +35,8 @@ class ExampleModelAdmin(admin.ModelAdmin):
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
 
-    # Method fields:
+    # Custom method fields:
     # Reserved space...
 
-    # Defining method field labels:
+    # Defining custom method field labels:
     # Reserved space...

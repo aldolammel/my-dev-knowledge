@@ -27,7 +27,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
         # For new object:
         return self.readonly_fields
 
-    # Defining method field labels:
+    # Defining custom method field labels:
     my_method_field.short_description = "My Method Field"  # type: ignore[attr-defined]
 
 

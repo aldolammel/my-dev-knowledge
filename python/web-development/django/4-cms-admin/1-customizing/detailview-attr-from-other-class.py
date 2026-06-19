@@ -83,13 +83,13 @@
                 return format_html('<a href="{}">More details</a>', url)
             return "ERROR: no profile for this user!"
 
-        profile_link.short_description = 'User Profile'
-
         # It's mandatory call this, 'cause it's not possible to edit here an attr from another table:
         def get_readonly_fields(self, request, obj=None):
             # Make profile_link readonly in the detail-view:
             return super().get_readonly_fields(request, obj) + ('profile_link',)  # type: ignore
 
+        # Defining custom method field labels:
+        profile_link.short_description = 'User Profile'  # type: ignore[attr-defined]
 
     # Django CMS customs:
     admin.site.unregister(stgs.AUTH_USER_MODEL)
