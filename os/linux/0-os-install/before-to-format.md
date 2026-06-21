@@ -1,5 +1,4 @@
 #### OS > Linux
-
 # Before to format the current distro
 
 ---
@@ -39,13 +38,13 @@ Don't use an external HD, except if you can use it entirely, without to use mult
 
 ## 4) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
 
-[[secure-boot]]
+[bios/secure-boot](bios/secure-boot.md)
 
 ---
 
 ## 5) Let's format the system:
 
-[[distro-formatting]]
+[os/linux/0-os-install/distro-formatting](os/linux/0-os-install/distro-formatting.md)
 
 
 ---
