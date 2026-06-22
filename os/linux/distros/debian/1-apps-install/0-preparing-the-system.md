@@ -1,6 +1,7 @@
-#### OS > Linux > Debian
-
+#### OS > Linux > Debian > New OS installation
 # Preparing the system
+
+---
 
     1) Install dependencies (this ensures your system is ready to add new repositories):
 

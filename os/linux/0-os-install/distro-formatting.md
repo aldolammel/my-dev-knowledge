@@ -2,22 +2,16 @@
 
 # Formatting the system
 
-
 ---
-
 ## Before:
-1. Assuming you already have done basic to format: [[before-to-format]]
 
+1. Assuming you already have done basic to format: [os/linux/0-os-install/before-to-format](os/linux/0-os-install/before-to-format.md)
 
 ---
-
 ## 1) Reboot the machine and get in your BIOS;
 
-
 ---
-
 ## 2) Override the boot order to use the bootable device in boot. Then reboot again;
-
 
 ---
 
