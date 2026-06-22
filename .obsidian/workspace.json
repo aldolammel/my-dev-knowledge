@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "49c991fa1b5a9b06",
+        "id": "d065ec54a0561d61",
         "type": "tabs",
         "children": [
           {
-            "id": "23ebc71dffcd8189",
+            "id": "deaf425d7f1ae7da",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "_what-kind-of-cms-ux-do-you-need"
-            }
-          },
-          {
-            "id": "3175ae1d90ff33e2",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "web-development/frontend/css/css-examples/zebra-striping.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "zebra-striping"
-            }
-          },
-          {
-            "id": "0c5c97a3f7d616c5",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "css-customization-in-admin"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,8 +70,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -217,29 +177,32 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "0c5c97a3f7d616c5",
+  "active": "deaf425d7f1ae7da",
   "lastOpenFiles": [
-    "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
-    "web-development/frontend/css/css-examples/zebra-striping.md",
-    "web-development/frontend/css/css-examples/django-css-zebra-striping-for-admin-inline.png",
-    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css",
+    "os/linux/distros/debian/1-apps-install/0-preparing-the-system.md",
+    "os/linux/distros/debian/0-os-install/right-after-install.md",
+    "os/linux/distros/debian/0-os-install/_roadmap.md",
     "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
+    "web-development/frontend/css/css-examples/zebra-striping.md",
+    "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
+    ".git/refs/remotes/origin/main.lock",
+    ".git/objects/8e/817f9e0bac1e0c1469030b74cc754eb6820a35",
+    ".git/objects/e2/5fe833c00fbd67d74a284cad1a37af5791f934",
+    ".git/objects/7b/7a72ec10d6f1c3fc5998436855a006a2338418",
+    ".git/objects/a6/d5a61febb129e22252ac5a45df6c1e7df706e5",
+    ".git/objects/5f/48902afc176f059b40460b026cb70c57ea1f78",
+    ".git/objects/0e/8c16f83286124b0a3ba2755849295474ddbd1f",
+    ".git/objects/ce/911b9273ae6820e91185dd64aa785fb742058e",
+    ".git/objects/b0/2155b9bc45ac8f230fec2cf4a383fcfe10d432",
+    ".git/objects/7a/37e2d119c288db769e97878d607f2ddd5cc2e4",
+    "web-development/frontend/css/css-examples/django-css-zebra-striping-for-admin-inline.png",
     "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css.md",
-    "web-development/frontend/css/css-examples",
-    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css",
-    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name",
     "python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection.md",
-    "python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py",
     "python/web-development/django/3-3-frontend-templates/_about.md",
     "python/web-development/django/3-1-models-database/1-models-knowledge.md",
     "python/web-development/django/9-forms/error-messages/_about.md",
     "python/web-development/django/3-1-models-database/renaming-model-class.md",
     "python/web-development/django/4-cms-admin/0-basic/detailview-including-extra-text-messages.md",
-    "python/web-development/django/4-cms-admin/0-basic/detailview-field-exclusion.py",
-    "python/web-development/django/4-cms-admin/0-basic/detailview-fieldset-exclusion.py",
-    "python/web-development/django/4-cms-admin/_admin-class-model.py",
-    ".obsidian/plugins/better-search-views/styles.css",
-    ".obsidian/plugins/better-search-views/main.js",
     "python/web-development/django/3-1-models-database/model-type-mixin.md",
     "database/PostgreSQL/0-basic/0-why-not.md",
     "python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md",
@@ -253,8 +216,6 @@
     "python/web-development/django/component-libraries/django-admin-sortable2/0-django-admin-sortable2.md",
     "python/web-development/django/component-libraries/django-rosetta/0-django-rosetta.md",
     "python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md",
-    "python/web-development/django/component-libraries/django-parler/0-django-parler.md",
-    "python/web-development/django/3-1-models-database/Polymorphic-solutions/django-polymorphic.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
