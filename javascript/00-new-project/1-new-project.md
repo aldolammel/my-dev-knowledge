@@ -7,7 +7,7 @@
 
 - **Updating:**
 	- 1A) To update JS in an existent product: xxxxxxxxxx
-	- 1B) To update Vue in an existent product: [javascript/web-development/frontend/vue/0-new-project/update-vue-version](javascript/web-development/frontend/vue/0-new-project/update-vue-version.md)
+	- 1B) To update Vue in an existent product: [/javascript/web-development/frontend/vue/0-new-project/update-vue-version](/javascript/web-development/frontend/vue/0-new-project/update-vue-version.md)
 	- 1C) To update React in an existent product: xxxxxxxx
 	- 1D) To update Angular in an existent product: xxxxxxx
 - **API:**
@@ -16,8 +16,8 @@
 	- Pure:
 		- Pure JS? Why?
 	- **Vue**:
-		- 1F) To develop a web app with Vue as front-end: [javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front](javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front.md)
-		- 1G) To develop a web app with Vue as full-stack: [javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front](javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front.md)
+		- 1F) To develop a web app with Vue as front-end: [/javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front](/javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front.md)
+		- 1G) To develop a web app with Vue as full-stack: [/javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front](/javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front.md)
 	- **React**:
 		- xxx
 	- **Angular**:

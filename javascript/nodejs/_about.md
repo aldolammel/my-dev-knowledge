@@ -6,5 +6,5 @@
 It's predominantly used for back-end development but also plays a significant role in front-end development, including non-web-development projects like Game, [LoT](dev-concepts/lot.md), and other types of software.
 ## Installing:
 
-[javascript/nodejs/1-installation](javascript/nodejs/1-installation.md)
+[/javascript/nodejs/1-installation](/javascript/nodejs/1-installation.md)
 

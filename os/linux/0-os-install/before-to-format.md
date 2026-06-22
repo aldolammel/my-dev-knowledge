@@ -38,7 +38,7 @@ Don't use an external HD, except if you can use it entirely, without to use mult
 
 ## 4) Set the "Secure Boot" mode in BIOS (this avoid lot of headaches):
 
-[bios/secure-boot](bios/secure-boot.md)
+[/bios/secure-boot](/bios/secure-boot.md)
 
 ---
 

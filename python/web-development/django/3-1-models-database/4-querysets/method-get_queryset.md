@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-1. What is it: [python/web-development/django/3-1-models-database/4-querysets/\_what-is-queryset](python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md)
+1. What is it: [/python/web-development/django/3-1-models-database/4-querysets/\_what-is-queryset](/python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md)
 
 ---
 ## You can use *get_queryset()* in:
@@ -14,10 +14,10 @@
 - Django REST Framework (*DRF*) ViewSets or APIViews;
 
 E.g.
-- Filtering:  [python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-filtering.py](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-filtering.py)
-- Aggregation: [python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-aggregation.py](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-aggregation.py)
-- Counting: [python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-counting.py](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-counting.py)
-- Other formats: [python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-other-formats.py](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-other-formats.py)
+- Filtering:  [/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-filtering.py](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-filtering.py)
+- Aggregation: [/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-aggregation.py](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-aggregation.py)
+- Counting: [/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-counting.py](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-counting.py)
+- Other formats: [/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-other-formats.py](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/QuerySet-other-formats.py)
 
 ---
 ## Avoid redundancies:
@@ -43,5 +43,5 @@ class Meta:
 
 ---
 ## QuerySets in Forms.py:
-[python/web-development/django/9-forms/form-queryset-filtering-dropdown.py](python/web-development/django/9-forms/form-queryset-filtering-dropdown.py)
+[/python/web-development/django/9-forms/form-queryset-filtering-dropdown.py](/python/web-development/django/9-forms/form-queryset-filtering-dropdown.py)
 

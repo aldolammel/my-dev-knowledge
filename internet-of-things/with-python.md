@@ -1,2 +1,2 @@
-[python/internet-of-things/\_temp](python/internet-of-things/_temp.md)
+[/python/internet-of-things/\_temp](/python/internet-of-things/_temp.md)
 

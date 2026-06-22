@@ -11,14 +11,14 @@
 ---
 ## 1) Installing the db with its basic integration
 
-If the db won't be in the cloud, install it locally: [database/PostgreSQL/0-basic/1-installing-and-integrating](database/PostgreSQL/0-basic/1-installing-and-integrating.md)
+If the db won't be in the cloud, install it locally: [/database/PostgreSQL/0-basic/1-installing-and-integrating](/database/PostgreSQL/0-basic/1-installing-and-integrating.md)
 
 ---
 ## 2) Integrating database and back-end
 
 **2.1) Install a Python lib for PostgreSQL:** 
-- [python/component-libraries/psycopg/0-psycopg](python/component-libraries/psycopg/0-psycopg.txt)
-- Case you need a *settings.py* template: [python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
+- [/python/component-libraries/psycopg/0-psycopg](/python/component-libraries/psycopg/0-psycopg.txt)
+- Case you need a *settings.py* template: [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
 
 **2.2) (If applicable) Make a copy of the '.env' file to your project root folder:** 
 - [environment-variables/env-for-local/in-backend/.env](environment-variables/env-for-local/in-backend/.env)

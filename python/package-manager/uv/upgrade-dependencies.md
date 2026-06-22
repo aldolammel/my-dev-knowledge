@@ -81,7 +81,7 @@ uv sync --upgrade
 
 **INSTALL DEPENDENCY:**
 
-[[python/package-manager/uv/install-dependency]]
+[[/python/package-manager/uv/install-dependency]]
 
 **UNINSTALL DEPENDENCY:**
 

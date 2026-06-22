@@ -8,23 +8,23 @@ There are 2 cases of using forms from forms.py:
 ## 1) Using '.ModelForm' based class: 
 It's directly tied to a models.Model (common case);
 
-[python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
+[/python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](/python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
 
 ## 2) Using '.Form' based class:
 It's not tied to a model, useful for search bars, contact forms, filters, etc ('Django Template' as front-end solution is demanded).
 
-[python/web-development/django/9-forms/class-based/inherit-Form/forms.py](python/web-development/django/9-forms/class-based/inherit-Form/forms.py)
+[/python/web-development/django/9-forms/class-based/inherit-Form/forms.py](/python/web-development/django/9-forms/class-based/inherit-Form/forms.py)
 
 ==MAY YOU NOT NEED IT:==
 For projects where Django Templates is NOT the front-end solution used, forms.py are restrict only to be used attached with admin-classes (CMS, via admin.py) once the front-end forms are built/provided by another template framework (e.g. Vue, React, Angular, etc).
 
 Django provides a variety of tools and libraries to help you build forms to accept input from aoo visitors and then process and respond to the input. That said: a forms.py file by itself DOESN'T input anything into the database. If a form is inputting data, it's because that form  is a ModelForm class linked with some Model class (models.py). If the form is loaded with data into the fields, it's because some view (in views.py) has been used as bridge between the form and the database.
 
-How works the form structure: [python/web-development/django/9-forms/form-structure](python/web-development/django/9-forms/form-structure.py)
+How works the form structure: [/python/web-development/django/9-forms/form-structure](/python/web-development/django/9-forms/form-structure.py)
 
-Receiving data from Model: [python/web-development/django/9-forms/form-receiving-data](python/web-development/django/9-forms/form-receiving-data.py)
+Receiving data from Model: [/python/web-development/django/9-forms/form-receiving-data](/python/web-development/django/9-forms/form-receiving-data.py)
 
-Receiving data from View: [python/web-development/django/9-forms/form-receiving-data](python/web-development/django/9-forms/form-receiving-data.py)
+Receiving data from View: [/python/web-development/django/9-forms/form-receiving-data](/python/web-development/django/9-forms/form-receiving-data.py)
 
 ---
 
@@ -87,4 +87,4 @@ type="password" ......... ................ PasswordInput
 
 ---
 ## Model fields, more:
-[python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
+[/python/web-development/django/3-1-models-database/1-models-knowledge](/python/web-development/django/3-1-models-database/1-models-knowledge.md)

@@ -8,45 +8,45 @@ Here below you find NOT the entire content, but a few examples of what you can f
 
 - Back-end:
 	- **Django** project:
-		- Discovery: [python/web-development/django/0-new-project/discovery-django](python/web-development/django/0-new-project/discovery-django.md)
-		- API: [python/web-development/django/0-new-project/api](python/web-development/django/0-new-project/api.md)
-		- Update Django: [python/web-development/django/0-new-project/update-django-version](python/web-development/django/0-new-project/update-django-version.md)
-		- App pure Django: [python/web-development/django/0-new-project/web-project-django-only](python/web-development/django/0-new-project/web-project-django-only.md)
-		- App Django with Vue: [python/web-development/django/0-new-project/web-project-django-with-vue](python/web-development/django/0-new-project/web-project-django-with-vue.md)
+		- Discovery: [/python/web-development/django/0-new-project/discovery-django](/python/web-development/django/0-new-project/discovery-django.md)
+		- API: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
+		- Update Django: [/python/web-development/django/0-new-project/update-django-version](/python/web-development/django/0-new-project/update-django-version.md)
+		- App pure Django: [/python/web-development/django/0-new-project/web-project-django-only](/python/web-development/django/0-new-project/web-project-django-only.md)
+		- App Django with Vue: [/python/web-development/django/0-new-project/web-project-django-with-vue](/python/web-development/django/0-new-project/web-project-django-with-vue.md)
 	- **Flask** project:
-	    - API: [python/web-development/flask/0-new-project/api](python/web-development/flask/0-new-project/api.md)
-	    - App pure Flask: [python/web-development/flask/0-new-project/web-project-flask-only](python/web-development/flask/0-new-project/web-project-flask-only.md)
-	    - App Flask with Vue: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
+	    - API: [/python/web-development/flask/0-new-project/api](/python/web-development/flask/0-new-project/api.md)
+	    - App pure Flask: [/python/web-development/flask/0-new-project/web-project-flask-only](/python/web-development/flask/0-new-project/web-project-flask-only.md)
+	    - App Flask with Vue: [/python/web-development/flask/0-new-project/web-project-flask-with-vue](/python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 	- **Node.js** project:
-	    - Update Node: [javascript/nodejs/2-updating](javascript/nodejs/2-updating.md)
+	    - Update Node: [/javascript/nodejs/2-updating](/javascript/nodejs/2-updating.md)
 - Front-end:
 	- **Vue.js** project:
-		- Update Vue: [javascript/web-development/frontend/vue/0-new-project/update-vue-version](javascript/web-development/frontend/vue/0-new-project/update-vue-version.md)
-		- App Vue with Django: [python/web-development/django/0-new-project/web-project-django-with-vue](python/web-development/django/0-new-project/web-project-django-with-vue.md)
-		- App Vue with Flask: [python/web-development/flask/0-new-project/web-project-flask-with-vue](python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
+		- Update Vue: [/javascript/web-development/frontend/vue/0-new-project/update-vue-version](/javascript/web-development/frontend/vue/0-new-project/update-vue-version.md)
+		- App Vue with Django: [/python/web-development/django/0-new-project/web-project-django-with-vue](/python/web-development/django/0-new-project/web-project-django-with-vue.md)
+		- App Vue with Flask: [/python/web-development/flask/0-new-project/web-project-flask-with-vue](/python/web-development/flask/0-new-project/web-project-flask-with-vue.md)
 
 ## Programming languages
 
 - **Python**
-	- What is it: [python/\_about](python/_about.md)
-	- Installing: [python/1-python-installation/\_install](python/1-python-installation/_install.md)
-	- Updating Python: [python/0-new-project/3-update-python-version-in-a-project](python/0-new-project/3-update-python-version-in-a-project.md)
-	- Updating a module/library: [python/2-updating/updating-a-library](python/2-updating/updating-a-library.md)
+	- What is it: [/python/\_about](/python/_about.md)
+	- Installing: [/python/1-python-installation/\_install](/python/1-python-installation/_install.md)
+	- Updating Python: [/python/0-new-project/3-update-python-version-in-a-project](/python/0-new-project/3-update-python-version-in-a-project.md)
+	- Updating a module/library: [/python/2-updating/updating-a-library](/python/2-updating/updating-a-library.md)
 - **JavaScript**
-	- What is it: [javascript/\_about](javascript/_about.md)
+	- What is it: [/javascript/\_about](/javascript/_about.md)
 
 ## Database
 
-- Choosing a database (PACELC): [database/principles-pacelc](database/principles-pacelc.md)
+- Choosing a database (PACELC): [/database/principles-pacelc](/database/principles-pacelc.md)
 	- **PostgreSQL**:
-		- Why not: [database/PostgreSQL/0-basic/0-why-not](database/PostgreSQL/0-basic/0-why-not.md)
+		- Why not: [/database/PostgreSQL/0-basic/0-why-not](/database/PostgreSQL/0-basic/0-why-not.md)
 		- Installing and integrating:
-			- For Python project: [python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation](python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md)
-		- Starting and stopping the service: [database/PostgreSQL/0-basic/starting-and-stopping](database/PostgreSQL/0-basic/starting-and-stopping.md)
-		- Updating: [database/PostgreSQL/0-basic/updating](database/PostgreSQL/0-basic/updating.md)
+			- For Python project: [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md)
+		- Starting and stopping the service: [/database/PostgreSQL/0-basic/starting-and-stopping](/database/PostgreSQL/0-basic/starting-and-stopping.md)
+		- Updating: [/database/PostgreSQL/0-basic/updating](/database/PostgreSQL/0-basic/updating.md)
 	- **SQLite**:
 		- Installing and integrating:
-			- For Python project: [python/web-development/django/3-1-models-database/0-installing-and-adminUser/SQLite/installation](python/web-development/django/3-1-models-database/0-installing-and-adminUser/SQLite/installation.md)
+			- For Python project: [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/SQLite/installation](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/SQLite/installation.md)
 
 ## Environment Variables
 
@@ -58,14 +58,14 @@ Here below you find NOT the entire content, but a few examples of what you can f
 	- In back-end, example: [environment-variables/env-for-cloud/in-backend/.env](environment-variables/env-for-cloud/in-backend/.env)
 	- In front-end, example: [environment-variables/env-for-cloud/in-frontend/.env](environment-variables/env-for-cloud/in-frontend/.env)
 - Using environment vars:
-	- On Django: [python/web-development/django/3-1-models-database/env-vars-on-django](python/web-development/django/3-1-models-database/env-vars-on-django.md)
-	- On Vue: [javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
+	- On Django: [/python/web-development/django/3-1-models-database/env-vars-on-django](/python/web-development/django/3-1-models-database/env-vars-on-django.md)
+	- On Vue: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
 
 ## Server
 
-- Building up a Linux VPS: [server/os/linux/\_building-and-installing-a-server](server/os/linux/_building-and-installing-a-server.md)
-- Updating server itself: [server/os/linux/updating-server](server/os/linux/updating-server.md)
-- Updating web-app on server (using Git): [server/os/linux/updating-web-app-via-git](server/os/linux/updating-web-app-via-git.md)
+- Building up a Linux VPS: [/server/os/linux/\_building-and-installing-a-server](/server/os/linux/_building-and-installing-a-server.md)
+- Updating server itself: [/server/os/linux/updating-server](/server/os/linux/updating-server.md)
+- Updating web-app on server (using Git): [/server/os/linux/updating-web-app-via-git](/server/os/linux/updating-web-app-via-git.md)
 
 ## IDE
 
@@ -87,11 +87,11 @@ Here below you find NOT the entire content, but a few examples of what you can f
 ## Versioning
 
 - Git
-	- How it works and basic commands: [versioning/git/\_basic](versioning/git/_basic.md)
-	- Git ignore (.gitignore) file: [versioning/git/gitignore-file](versioning/git/gitignore-file.md)
+	- How it works and basic commands: [/versioning/git/\_basic](/versioning/git/_basic.md)
+	- Git ignore (.gitignore) file: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
 - Installing:
-    - Install: [versioning/git/\_basic](versioning/git/_basic.md)
-    - Re-install in an existing project: [versioning/git/re-install-git-folder-in-an-existent-local-project](versioning/git/re-install-git-folder-in-an-existent-local-project.md)
+    - Install: [/versioning/git/\_basic](/versioning/git/_basic.md)
+    - Re-install in an existing project: [/versioning/git/re-install-git-folder-in-an-existent-local-project](/versioning/git/re-install-git-folder-in-an-existent-local-project.md)
 
 ## Operational Systems
 

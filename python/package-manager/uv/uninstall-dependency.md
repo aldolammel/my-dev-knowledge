@@ -31,7 +31,7 @@ uv remove --optional dev ruff
 
 **INSTALL DEPENDENCY:**
 
-[[python/package-manager/uv/install-dependency]]
+[[/python/package-manager/uv/install-dependency]]
 
 **UPDATE DEPENDENCY:**
 

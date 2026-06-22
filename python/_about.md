@@ -17,4 +17,4 @@ Python is a high-level, general-purpose programming language known for its reada
 
 **Create a project:**
 
-[[python/0-new-project/1-new-project]]
+[[/python/0-new-project/1-new-project]]

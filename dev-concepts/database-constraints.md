@@ -1,1 +1,1 @@
-[database/constraint-for-db](database/constraint-for-db.md)
+[/database/constraint-for-db](/database/constraint-for-db.md)

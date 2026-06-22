@@ -42,10 +42,10 @@ front_type = models.CharField(
 
 ---
 ## Other related options:
-- Text Field: [python/web-development/django/3-1-models-database/model-attr-field-text](python/web-development/django/3-1-models-database/model-attr-field-text.md)
-- Email Field: [python/web-development/django/3-1-models-database/model-attr-field-email](python/web-development/django/3-1-models-database/model-attr-field-email.md)
-- URL Field: [python/web-development/django/3-1-models-database/model-attr-field-url](python/web-development/django/3-1-models-database/model-attr-field-url.md)
-- Slug Field: [python/web-development/django/3-1-models-database/model-attr-field-slug](python/web-development/django/3-1-models-database/model-attr-field-slug.md)
-- Binary Field: [python/web-development/django/3-1-models-database/model-attr-field-binary](python/web-development/django/3-1-models-database/model-attr-field-binary.md)
+- Text Field: [/python/web-development/django/3-1-models-database/model-attr-field-text](/python/web-development/django/3-1-models-database/model-attr-field-text.md)
+- Email Field: [/python/web-development/django/3-1-models-database/model-attr-field-email](/python/web-development/django/3-1-models-database/model-attr-field-email.md)
+- URL Field: [/python/web-development/django/3-1-models-database/model-attr-field-url](/python/web-development/django/3-1-models-database/model-attr-field-url.md)
+- Slug Field: [/python/web-development/django/3-1-models-database/model-attr-field-slug](/python/web-development/django/3-1-models-database/model-attr-field-slug.md)
+- Binary Field: [/python/web-development/django/3-1-models-database/model-attr-field-binary](/python/web-development/django/3-1-models-database/model-attr-field-binary.md)
 
 

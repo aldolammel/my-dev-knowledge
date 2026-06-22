@@ -10,26 +10,26 @@ DJANGO FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 ---
 ## 2) In the new 'forms.py' file, create a form class linking it with its models.py class big brother:
 
-[python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
+[/python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py](/python/web-development/django/9-forms/class-based/inherit-ModelForm/forms.py)
 
 2.1) Define which fields are mandatory and which of them are not:
 
-[python/web-development/django/9-forms/fields-required-and-not-required](python/web-development/django/9-forms/fields-required-and-not-required.md)
+[/python/web-development/django/9-forms/fields-required-and-not-required](/python/web-development/django/9-forms/fields-required-and-not-required.md)
 
 ---
 ## 3) In the sub-app views.py, create views.py function or class responsible for your form to be used in a template:
 
-[python/web-development/django/3-2-views-and-API/1-building-views-context/\_about](python/web-development/django/3-2-views-and-API/1-building-views-context/_about.md)
+[/python/web-development/django/3-2-views-and-API/1-building-views-context/\_about](/python/web-development/django/3-2-views-and-API/1-building-views-context/_about.md)
 
 ---
 ## 4) In the sub-app urls.py file, add the URL of your new view (responsible for your front-end form):
 
-[python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py](python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py)
+[/python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py](/python/web-development/django/3-2-views-and-API/2-building-urls/2-urls-from-subapp.py)
 
 ---
 ## 5) If your sub-app folder there is NO 'templates' folder, create it;
 
 5.1) In 'templates' folder, create a folder with the same name of your sub-app;
-5.2) In that new folder in 'templates' folder, create your template html file and call your form over there: [python/web-development/django/3-3-frontend-templates/2-calling-a-form](python/web-development/django/3-3-frontend-templates/2-calling-a-form.md)
+5.2) In that new folder in 'templates' folder, create your template html file and call your form over there: [/python/web-development/django/3-3-frontend-templates/2-calling-a-form](/python/web-development/django/3-3-frontend-templates/2-calling-a-form.md)
 
 ---

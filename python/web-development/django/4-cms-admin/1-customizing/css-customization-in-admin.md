@@ -31,7 +31,7 @@ class PagexPageContentInline(admin.StackedInline):
 	class Media:
 		css = {"all": ("pagex/css/admin_content_inline.css",)}
 ```
-"admin_content_inline.css" content: [python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css](python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css)
+"admin_content_inline.css" content: [/python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css](/python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css)
 
 ---
 ## 3) (If applicable) Run collectstatic on prod:

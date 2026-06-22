@@ -29,4 +29,4 @@ models.DecimalField(
 
 ---
 ## Other related options:
-- FloatField: [python/web-development/django/3-1-models-database/model-attr-field-float](python/web-development/django/3-1-models-database/model-attr-field-float.md)
+- FloatField: [/python/web-development/django/3-1-models-database/model-attr-field-float](/python/web-development/django/3-1-models-database/model-attr-field-float.md)

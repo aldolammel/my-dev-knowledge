@@ -27,6 +27,6 @@ students = models.ManyToManyField(Student)
 ---
 
 ## Other related options:
-- Foreign Key: [python/web-development/django/3-1-models-database/model-attr-foreignKey](python/web-development/django/3-1-models-database/model-attr-foreignKey.md)
-- One-To-One Field: [python/web-development/django/3-1-models-database/model-attr-field-one-to-one](python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md)
+- Foreign Key: [/python/web-development/django/3-1-models-database/model-attr-foreignKey](/python/web-development/django/3-1-models-database/model-attr-foreignKey.md)
+- One-To-One Field: [/python/web-development/django/3-1-models-database/model-attr-field-one-to-one](/python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md)
 

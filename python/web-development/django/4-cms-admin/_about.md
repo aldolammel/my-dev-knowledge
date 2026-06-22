@@ -53,7 +53,7 @@ if not obj:
 URL examples:
 - A new user (obj) detail: http://localhost:8000/admin/auth/user/add/
 - A new page (obj) detail: http://localhost:8000/admin/pagex/pagexpage/add/
-- How looks an Admin Class: [python/web-development/django/4-cms-admin/\_admin-class-model.py](python/web-development/django/4-cms-admin/_admin-class-model.py)
-- What kind of CMS UX you need: [python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
+- How looks an Admin Class: [/python/web-development/django/4-cms-admin/\_admin-class-model.py](/python/web-development/django/4-cms-admin/_admin-class-model.py)
+- What kind of CMS UX you need: [/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
 
 

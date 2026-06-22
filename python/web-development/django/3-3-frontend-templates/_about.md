@@ -15,10 +15,10 @@ Built-in template tags and filters: https://docs.djangoproject.com/en/5.0/ref/te
 ---
 
 **OTHER DJANGO PARTS:**
-- Views: [python/web-development/django/3-2-views-and-API/\_about](python/web-development/django/3-2-views-and-API/_about.md)
-- Models: [python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
+- Views: [/python/web-development/django/3-2-views-and-API/\_about](/python/web-development/django/3-2-views-and-API/_about.md)
+- Models: [/python/web-development/django/3-1-models-database/1-models-knowledge](/python/web-development/django/3-1-models-database/1-models-knowledge.md)
 
 **EXTERNAL TEMPLATE/FRONT-END SOLUTIONS:**
-- Vue: [javascript/web-development/frontend/vue/vue-knowledge/\_about](javascript/web-development/frontend/vue/vue-knowledge/_about.md)
-- React: [javascript/web-development/frontend/react/react-knowledge/\_about](javascript/web-development/frontend/react/react-knowledge/_about.md)
-- Angular: [javascript/web-development/frontend/angular/angular-knowledge/\_about](javascript/web-development/frontend/angular/angular-knowledge/_about.md)
+- Vue: [/javascript/web-development/frontend/vue/vue-knowledge/\_about](/javascript/web-development/frontend/vue/vue-knowledge/_about.md)
+- React: [/javascript/web-development/frontend/react/react-knowledge/\_about](/javascript/web-development/frontend/react/react-knowledge/_about.md)
+- Angular: [/javascript/web-development/frontend/angular/angular-knowledge/\_about](/javascript/web-development/frontend/angular/angular-knowledge/_about.md)

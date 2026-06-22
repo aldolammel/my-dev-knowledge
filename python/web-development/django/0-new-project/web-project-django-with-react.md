@@ -8,7 +8,7 @@
 
 ### 1.1) Database
 
-1. What db should be used: [database/principles-pacelc](database/principles-pacelc.md)
+1. What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
 
 ### 1.2) Back-end
 
@@ -16,9 +16,9 @@
 
 ### 1.3) Front-end
 
-1. IDE, framework setup: [VSCode for React](javascript/web-development/frontend/react/ide/vscode/temp.md) or [PyCharm for React](javascript/web-development/frontend/react/ide/pycharm/temp.md).
+1. IDE, framework setup: [VSCode for React](/javascript/web-development/frontend/react/ide/vscode/temp.md) or [PyCharm for React](/javascript/web-development/frontend/react/ide/pycharm/temp.md).
 2. React installation (and its dependencies): /javascript/web-development/frontend/xxxxxxxxxxxx
-3. (Optional) CSS Framework: [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about.md) or [Tailwind](web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or [Bulma](web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
+3. (Optional) CSS Framework: [Bootstrap](/web-development/frontend/css/css-libraries-frameworks/bootstrap/_about.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
 
 ---
 
@@ -26,12 +26,12 @@
 
 ### 2.1) Before
 
-1. Create the AI basic context prompt for the project: [python/web-development/ai-prompt-context-model](python/web-development/ai-prompt-context-model.md)
+1. Create the AI basic context prompt for the project: [/python/web-development/ai-prompt-context-model](/python/web-development/ai-prompt-context-model.md)
 
 ### 2.2) Front-end
 
 1. Convert the HTML template to React templates/components?????????????????????????
-2. Integrate back-end with front-end: [python/web-development/django/4-cms-admin/2-frontend-integration/with-react/\_integration](python/web-development/django/4-cms-admin/2-frontend-integration/with-react/_integration.md)
+2. Integrate back-end with front-end: [/python/web-development/django/4-cms-admin/2-frontend-integration/with-react/\_integration](/python/web-development/django/4-cms-admin/2-frontend-integration/with-react/_integration.md)
 3. Code the entire navigation;
 
 ### 2.3) Back-end

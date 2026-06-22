@@ -5,7 +5,7 @@
 ## 1) Create the .gitignore file in the repo root:
 
 Model for:
-- Django projects: [python/web-development/django/z-project-examples/proj-aldolammel-style/.gitignore](python/web-development/django/z-project-examples/proj-aldolammel-style/.gitignore)
+- Django projects: [/python/web-development/django/z-project-examples/proj-aldolammel-style/.gitignore](/python/web-development/django/z-project-examples/proj-aldolammel-style/.gitignore)
 
 ---
 ## 2) Online Generator (options):
@@ -54,7 +54,7 @@ Find .vscode manually and:
 
 **IGNORING A FOLDER/FILE FROM NOW ON:**
 
-[versioning/git/ignoring-folder-or-file-from-now-on](versioning/git/ignoring-folder-or-file-from-now-on.md)
+[/versioning/git/ignoring-folder-or-file-from-now-on](/versioning/git/ignoring-folder-or-file-from-now-on.md)
 
 
 

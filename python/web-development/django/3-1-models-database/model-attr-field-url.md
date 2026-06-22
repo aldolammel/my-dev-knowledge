@@ -39,5 +39,5 @@ url = models.URLField(
 ---
 
 ## Other related options:
-- CharField: [python/web-development/django/3-1-models-database/model-attr-field-char](python/web-development/django/3-1-models-database/model-attr-field-char.md)
+- CharField: [/python/web-development/django/3-1-models-database/model-attr-field-char](/python/web-development/django/3-1-models-database/model-attr-field-char.md)
 

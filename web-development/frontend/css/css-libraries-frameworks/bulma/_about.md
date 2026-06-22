@@ -9,8 +9,8 @@
 
 
 ## Using Bulma, make a choice:
-- Local installation: [web-development/frontend/css/css-libraries-frameworks/bulma/version-install/first-steps](web-development/frontend/css/css-libraries-frameworks/bulma/version-install/first-steps.md)
-- Or CND solution (no install): [web-development/frontend/css/css-libraries-frameworks/bulma/version-no-install/first-steps](web-development/frontend/css/css-libraries-frameworks/bulma/version-no-install/first-steps.md)
+- Local installation: [/web-development/frontend/css/css-libraries-frameworks/bulma/version-install/first-steps](/web-development/frontend/css/css-libraries-frameworks/bulma/version-install/first-steps.md)
+- Or CND solution (no install): [/web-development/frontend/css/css-libraries-frameworks/bulma/version-no-install/first-steps](/web-development/frontend/css/css-libraries-frameworks/bulma/version-no-install/first-steps.md)
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

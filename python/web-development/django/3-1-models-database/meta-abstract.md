@@ -47,14 +47,14 @@ You cannot use an abstract model directly in a ForeignKey or ManyToManyField, ev
 
 **Possible solution > Concrete Model:**
 
-[python/web-development/django/3-1-models-database/\_model-class-model.py](python/web-development/django/3-1-models-database/_model-class-model.py)
+[/python/web-development/django/3-1-models-database/\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 MODEL'S INHERITANCE IN DJANGO:
 
-[python/web-development/django/3-1-models-database/Inheriting-attributes](python/web-development/django/3-1-models-database/Inheriting-attributes.md)
+[/python/web-development/django/3-1-models-database/Inheriting-attributes](/python/web-development/django/3-1-models-database/Inheriting-attributes.md)
 
 WHAT IS MODEL META:
 
-[python/web-development/django/3-1-models-database/meta](python/web-development/django/3-1-models-database/meta.md)
+[/python/web-development/django/3-1-models-database/meta](/python/web-development/django/3-1-models-database/meta.md)

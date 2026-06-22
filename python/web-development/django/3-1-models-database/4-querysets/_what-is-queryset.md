@@ -23,7 +23,7 @@ for user in users:
 
 **For partial data:**
 
-[python/web-development/django/3-1-models-database/4-querysets/qs-partial-data](python/web-development/django/3-1-models-database/4-querysets/qs-partial-data.md)
+[/python/web-development/django/3-1-models-database/4-querysets/qs-partial-data](/python/web-development/django/3-1-models-database/4-querysets/qs-partial-data.md)
 
 **Chainable:**
 You can chain multiple methods together.
@@ -66,7 +66,7 @@ users_named_john = User.objects.filter(username__startswith='john')
 
 **More filtering examples:**
 
-[python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py](python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py)
+[/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py](/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py)
 
 **Excluding:**
 
@@ -114,18 +114,18 @@ users_by_city = User.objects.values('city').annotate(count=Count('id'))
 
 **More aggregation examples:**
 
-[python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py](python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py)
+[/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py](/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py)
 
 ---
 ## Usign QuerySets with Foreigner Keys:
-[python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys](python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md)
+[/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys](/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md)
 
 ## Usign QuerySets with Many-to-Many:
-[python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many](python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.md)
+[/python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many](/python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.md)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 **QuerySets on ADMIN/CMS:**
-- Method *get_queryset()*: [python/web-development/django/4-cms-admin/method-get_queryset.py](python/web-development/django/4-cms-admin/method-get_queryset.py)
-- [python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py](python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py)
+- Method *get_queryset()*: [/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
+- [/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py](/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.py)
 

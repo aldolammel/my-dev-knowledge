@@ -4,13 +4,13 @@
 ---
 
 **What kind of form do you need (summary):** 
-[python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
+[/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
 
 ---
 
 For new objects, through the adding detail-view, select an option first (using a radio or drop-down menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
 ## B1) Install the dependency 'PolymorphicModel':
-[python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic](python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md)
+[/python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic](/python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md)
 ## B2) In models.py, add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS:
 
 E.g.
@@ -67,4 +67,4 @@ class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
 ---
 
 ## CSS customization in Django Admin:
-[python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin](python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md)
+[/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin](/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md)

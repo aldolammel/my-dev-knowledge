@@ -50,7 +50,7 @@ A.3) Make sure the the pyproject.toml file in on the project's root, so then ins
 ### 1B) I am building a new project
 
 **B.1) Once in the project root:**
-Ask UV to create the virtual environment folder: [[python/package-manager/uv/create-or-find-current-venv]]
+Ask UV to create the virtual environment folder: [[/python/package-manager/uv/create-or-find-current-venv]]
 
 **B.2) Ask UV to install the minimal Python project scaffolding files:**
 
@@ -90,7 +90,7 @@ Ask them to clone the project's repository if (recommended) the _pyproject.toml_
 ---
 
 **HOW TO ADD NEW PACKAGES WITH UV:**
-[[python/package-manager/uv/install-dependency]]
+[[/python/package-manager/uv/install-dependency]]
 
 **HOW TO REMOVE PACKAGES WITH UV:**
 [[uninstall-dependency]]

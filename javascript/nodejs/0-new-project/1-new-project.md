@@ -5,8 +5,8 @@
 
 ## Node installation only:
 
-[javascript/nodejs/1-installation](javascript/nodejs/1-installation.md)
+[/javascript/nodejs/1-installation](/javascript/nodejs/1-installation.md)
 
 ## Strong JavaScript projects:
 
-[javascript/00-new-project/1-new-project](javascript/00-new-project/1-new-project.md)
+[/javascript/00-new-project/1-new-project](/javascript/00-new-project/1-new-project.md)

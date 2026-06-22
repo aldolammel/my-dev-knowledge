@@ -13,8 +13,8 @@ https://www.youtube.com/watch?v=LCSQK_Gcvnk
 
 **About Vue.js:** 
 
-[javascript/web-development/frontend/vue/\_about.txt](javascript/web-development/frontend/vue/_about.txt)
+[/javascript/web-development/frontend/vue/\_about.txt](/javascript/web-development/frontend/vue/_about.txt)
 
 **Differences between CSS frameworks:**
 
-![](web-development/frontend/css/css-libraries-frameworks/differences-between-frameworks.png)
+![](/web-development/frontend/css/css-libraries-frameworks/differences-between-frameworks.png)

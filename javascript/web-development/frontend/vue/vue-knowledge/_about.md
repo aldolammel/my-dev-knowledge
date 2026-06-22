@@ -25,6 +25,6 @@ Vue.js (pronounced "view JS" or just "view") is a JavaScript framework that make
 
 **How to install Vue:**  .../vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
 
-**About Vue.JS language, the JavaScript:** [javascript/\_about](javascript/_about.md)
+**About Vue.JS language, the JavaScript:** [/javascript/\_about](/javascript/_about.md)
 
 

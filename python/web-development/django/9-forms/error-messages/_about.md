@@ -3,14 +3,14 @@
 
 ---
 ## Learn the basic:
-- Basic validations: [python/web-development/django/6-errors-and-validations/1-validation-basic](python/web-development/django/6-errors-and-validations/1-validation-basic.md)
-- Clean method: [python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py](python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py)
-- Error messages itself: [python/web-development/django/6-errors-and-validations/3-error-messages](python/web-development/django/6-errors-and-validations/3-error-messages.md)
+- Basic validations: [/python/web-development/django/6-errors-and-validations/1-validation-basic](/python/web-development/django/6-errors-and-validations/1-validation-basic.md)
+- Clean method: [/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py)
+- Error messages itself: [/python/web-development/django/6-errors-and-validations/3-error-messages](/python/web-development/django/6-errors-and-validations/3-error-messages.md)
 
 ---
 ## Error messages on Django template:
-- Form Error Messages: [python/web-development/django/3-3-frontend-templates/form-error-messages.html](python/web-development/django/3-3-frontend-templates/form-error-messages.html)
-- Form Error CSS Customization: [python/web-development/django/3-3-frontend-templates/form-error-css-customization](python/web-development/django/3-3-frontend-templates/form-error-css-customization.md)
+- Form Error Messages: [/python/web-development/django/3-3-frontend-templates/form-error-messages.html](/python/web-development/django/3-3-frontend-templates/form-error-messages.html)
+- Form Error CSS Customization: [/python/web-development/django/3-3-frontend-templates/form-error-css-customization](/python/web-development/django/3-3-frontend-templates/form-error-css-customization.md)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -29,8 +29,8 @@ It's the most reliable and solid way to ensure that anything that causes an infr
 It's a great way to validate fields without consuming server resources.
 
 ### Basic
-- [python/web-development/django/6-errors-and-validations/validation-2-for-app-forms](python/web-development/django/6-errors-and-validations/validation-2-for-app-forms.md)
-- [python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms](python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms.md)
+- [/python/web-development/django/6-errors-and-validations/validation-2-for-app-forms](/python/web-development/django/6-errors-and-validations/validation-2-for-app-forms.md)
+- [/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms](/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms.md)
 
 ### Knowledge regarding error message feedbacks via final user app's front-end
 - **Using Django Template:** .../django/3-3-frontend-templates/form-error-messages.html
@@ -42,5 +42,5 @@ It's a great way to validate fields without consuming server resources.
 
 ## Django Admin > Adding an extra feedback message in a detail-view:
 
-[python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py](python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py)
+[/python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py](/python/web-development/django/4-cms-admin/1-customizing/detailview-including-extra-text-messages.py)
 

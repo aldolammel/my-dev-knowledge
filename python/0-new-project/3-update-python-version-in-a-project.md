@@ -27,7 +27,7 @@ Are you really sure the Python version you need to install is compatible with ot
 ### 1B) Using UV
 
 **Before:**
-1. Assuming you already got UV installed: [python/package-manager/uv/\_about-install-and-update](python/package-manager/uv/_about-install-and-update.md)
+1. Assuming you already got UV installed: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
 **1B.1) Check the current Python versions installed and install that you need:**
 
@@ -45,7 +45,7 @@ uv python install 3.13.9
 
 Defining to UV which Python version the project must run, e.g.:
 
-[python/package-manager/uv/pin-python-version](python/package-manager/uv/pin-python-version.md)
+[/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
 
 1B.2.1) (If applicable) In *pyproject.toml* file, update Python version:
 ```
@@ -67,11 +67,11 @@ python_version = "3.13"  # 3.13 means newest of 3.13 = 3.13.9  <----------------
 ```
 1B.2.4) Sync the environment (UV will recreate *venv* with new Python):
 
-[python/package-manager/uv/auto-installation-with-sync](python/package-manager/uv/auto-installation-with-sync.md)
+[/python/package-manager/uv/auto-installation-with-sync](/python/package-manager/uv/auto-installation-with-sync.md)
 
 1B.2.5) Deactivate and active the project environment:
 
-[python/3-virtual-environment/activate-and-deactivate](python/3-virtual-environment/activate-and-deactivate.md)
+[/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
 1B.2.6) Verify the Python version in the environment:
 ```
@@ -80,7 +80,7 @@ uv run python --version
 
 **1B.3) (Optional) Uninstall unwanted Python versions:**
 
-[python/package-manager/uv/uninstall-python-old-version](python/package-manager/uv/uninstall-python-old-version.md)
+[/python/package-manager/uv/uninstall-python-old-version](/python/package-manager/uv/uninstall-python-old-version.md)
 
 
 ---

@@ -43,10 +43,10 @@ uv pip list
 
 ---
 ## Update dependencies with UV:
-[python/package-manager/uv/upgrade-dependencies](python/package-manager/uv/upgrade-dependencies.md)
+[/python/package-manager/uv/upgrade-dependencies](/python/package-manager/uv/upgrade-dependencies.md)
 ## Uninstall dependency with UV:
-[python/package-manager/uv/uninstall-dependency](python/package-manager/uv/uninstall-dependency.md)
+[/python/package-manager/uv/uninstall-dependency](/python/package-manager/uv/uninstall-dependency.md)
 ## Install Python version with UV:
-[python/package-manager/uv/install-python-with-uv](python/package-manager/uv/install-python-with-uv.md)
+[/python/package-manager/uv/install-python-with-uv](/python/package-manager/uv/install-python-with-uv.md)
 ## Uninstall Python version with UV:
-[python/package-manager/uv/uninstall-python-old-version](python/package-manager/uv/uninstall-python-old-version.md)
+[/python/package-manager/uv/uninstall-python-old-version](/python/package-manager/uv/uninstall-python-old-version.md)

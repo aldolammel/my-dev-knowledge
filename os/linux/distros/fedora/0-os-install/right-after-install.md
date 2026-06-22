@@ -4,12 +4,12 @@
 ---
 ## 1) Turn the "Secure Boot" off:
 
-[bios/secure-boot](bios/secure-boot.md)
+[/bios/secure-boot](/bios/secure-boot.md)
 
 ---
 ## 2) Check if all basic motherboard settings are okay for your system:
 
-[bios/basic-modo-settings](bios/basic-modo-settings.md)
+[/bios/basic-modo-settings](/bios/basic-modo-settings.md)
 
 ---
 ## 3) First system log-in:

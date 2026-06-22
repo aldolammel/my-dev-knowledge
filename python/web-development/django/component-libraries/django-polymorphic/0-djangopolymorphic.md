@@ -11,8 +11,8 @@ The *Django-Polymorphic* builds on top of the standard Django model inheritance.
 https://django-polymorphic.readthedocs.io/en/latest/
 
 E.g.
-- Basic: [python/web-development/django/component-libraries/django-polymorphic/example/basic.py](python/web-development/django/component-libraries/django-polymorphic/example/basic.py)
-- Real case: [python/web-development/django/component-libraries/django-polymorphic/example/real-case.py](python/web-development/django/component-libraries/django-polymorphic/example/real-case.py)
+- Basic: [/python/web-development/django/component-libraries/django-polymorphic/example/basic.py](/python/web-development/django/component-libraries/django-polymorphic/example/basic.py)
+- Real case: [/python/web-development/django/component-libraries/django-polymorphic/example/real-case.py](/python/web-development/django/component-libraries/django-polymorphic/example/real-case.py)
 
 ---
 

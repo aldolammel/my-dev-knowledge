@@ -21,6 +21,6 @@ Once Views and API concepts share similarities, they are NOT the same even thoug
 ---
 
 **OTHER DJANGO PARTS:**
-- Models: [python/web-development/django/3-1-models-database/1-models-knowledge](python/web-development/django/3-1-models-database/1-models-knowledge.md)
-- Templates: [python/web-development/django/3-3-frontend-templates/\_about](python/web-development/django/3-3-frontend-templates/_about.md)
+- Models: [/python/web-development/django/3-1-models-database/1-models-knowledge](/python/web-development/django/3-1-models-database/1-models-knowledge.md)
+- Templates: [/python/web-development/django/3-3-frontend-templates/\_about](/python/web-development/django/3-3-frontend-templates/_about.md)
 
