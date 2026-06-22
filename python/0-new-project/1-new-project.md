@@ -7,6 +7,9 @@
 
 - **Updating:**
 	- 1A) To update Python in an existent product: [python/0-new-project/3-update-python-version-in-a-project](python/0-new-project/3-update-python-version-in-a-project.md)
+	- [3-update-python-version-in-a-project](3-update-python-version-in-a-project.md)
+	- [../web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css](../web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css)
+	- [python/0-new-project/3-update-python-version-in-a-project](/python/0-new-project/3-update-python-version-in-a-project.md)
 	- 1B) To update Django in an existent product: [python/web-development/django/0-new-project/update-django-version](python/web-development/django/0-new-project/update-django-version.md)
 	- 1C) To update Flask in an existing product: [python/web-development/flask/0-new-project/update-flask-version](python/web-development/flask/0-new-project/update-flask-version.md)
 - **API:**

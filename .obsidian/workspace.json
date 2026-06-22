@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d065ec54a0561d61",
+        "id": "cffeca1cd036eb4c",
         "type": "tabs",
         "children": [
           {
-            "id": "deaf425d7f1ae7da",
+            "id": "02f307074d9cf1c3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python/0-new-project/1-new-project.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "1-new-project"
             }
           }
         ]
@@ -177,8 +181,20 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "3441f1d6d85341c9",
+  "active": "02f307074d9cf1c3",
   "lastOpenFiles": [
+    "python/0-new-project/3-update-python-version-in-a-project.md",
+    "python/0-new-project/1-new-project.md",
+    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css",
+    "os/linux/distros/debian/0-os-install/right-after-install.md",
+    "os/linux/distros/debian/0-os-install/_roadmap.md",
+    "os/linux/0-os-install/_roadmap.md",
+    ".git/objects/27/49972c14b73a8e2bea0f9d2115748c05b66d37",
+    ".git/objects/91/8896470257d979d57b1b0501bf106260326825",
+    ".git/objects/f2/1cf5747b24d2b051930f6046027c4a01b1eb3f",
+    ".git/objects/f2/tmp_obj_JtVyyg",
+    ".git/objects/ae/d07a9e4fe8483fdf79387bea0ffc27c582c038",
+    ".git/objects/ae/tmp_obj_bFjmVW",
     ".git/MERGE_MSG",
     ".git/MERGE_MODE",
     ".git/MERGE_HEAD",
@@ -186,17 +202,7 @@
     "os/windows/0-os-install/right-after-install.md",
     "os/windows/0-os-install/dual-boot-with-linux.md",
     "os/windows/0-os-install/before-to-format.md",
-    ".git/objects/19/1eb9cdfe8a316733882644f6f20f908e220788",
-    ".git/objects/92/49a0f33e97931192ba7bd8939d174feb4868c8",
-    ".git/objects/2f/4802d3b9259faf0051bd67c6e8a84eea6b8cb3",
-    ".git/objects/2f/tmp_obj_j6VWGv",
-    ".git/objects/f4/778ca08a0b74e50003bd16ff4bc4a9b2c53007",
-    ".git/index.stash.14482.lock",
-    ".git/index.stash.14482",
-    ".git/objects/6c/28d486f322e83498ad84ecc85b33007d906d59",
     "os/linux/distros/debian/1-apps-install/0-preparing-the-system.md",
-    "os/linux/distros/debian/0-os-install/right-after-install.md",
-    "os/linux/distros/debian/0-os-install/_roadmap.md",
     "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
     "web-development/frontend/css/css-examples/zebra-striping.md",
     "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
@@ -213,9 +219,6 @@
     "python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md",
     "dev-concepts/polymorphism.md",
     "python/component-libraries/django-libs.md",
-    "python/web-development/django/component-libraries/python-libs.md",
-    "python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.md",
-    "python/web-development/django/component-libraries/django-extensions/0-django-extensions.md",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",
     "dev-concepts/architecture-client-server-using-api.png",
