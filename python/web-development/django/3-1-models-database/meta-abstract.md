@@ -34,7 +34,7 @@ class AuditBase(models.Model):
 	)
 
 	class Meta:
-		abstract = True  # Flags to the db that no tables should be created from this.
+		abstract = True  # Flags for no table be created from this.
 
 ```
 

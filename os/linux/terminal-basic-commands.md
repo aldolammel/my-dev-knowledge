@@ -1,9 +1,6 @@
 #### OS > Linux
 # Terminal basic commands
-
-
 ---
-
 ## List directories:
 ```
 ls
@@ -14,14 +11,12 @@ ls
 ```
 
 ---
-
 ## Check the current path:
 ```
 pwd
 ```
 
 ---
-
 ## Get it:
 In a folder:
 ```
@@ -37,7 +32,6 @@ nano <filename>
 ```
 
 ---
-
 ## Create:
 Folder:
 ```
@@ -49,7 +43,6 @@ nano <filename.extension>
 ```
 
 ---
-
 ## Rename:
 Folder:
 ```
@@ -61,7 +54,6 @@ mv <current_filename.ext> <new_filename.ext>
 ```
 
 ---
-
 ## Delete:
 Folder:
 ```
@@ -72,16 +64,13 @@ File:
 rm <filename.ext>
 ```
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
 ## Finding apps in the system:
 
-- Debian: [[os/linux/distros/debian/1-apps-install/finding-installed-apps]]
-- Fedora: [[os/linux/distros/fedora/1-apps-install/finding-installed-apps]]
-
+- Debian: [/os/linux/distros/debian/1-apps-install/finding-installed-apps](/os/linux/distros/debian/1-apps-install/finding-installed-apps.md)
+- Fedora: [/os/linux/distros/fedora/1-apps-install/finding-installed-apps](/os/linux/distros/fedora/1-apps-install/finding-installed-apps.md)
 
 ---
-
 ## Helpers:
 
 How to start, stop, and check a service. Let's use the *PostgreSQL* service as example:
@@ -98,9 +87,8 @@ man <command you are trying to understand>
 man postgres
 ```
 
-
 ---
-
 ## Switch current user on terminal:
 
-[[command-change-user]]
+[/os/linux/command-change-user](/os/linux/command-change-user.md)
+

@@ -50,13 +50,13 @@ Here below you find NOT the entire content, but a few examples of what you can f
 
 ## Environment Variables
 
-- What is it: [environment-variables/_about](environment-variables/_about.md)
+- What is it: [/environment-variables/_about](/environment-variables/_about.md)
 - .env for **local** development:
-	- In back-end, example: [environment-variables/env-for-local/in-backend/.env](environment-variables/env-for-local/in-backend/.env)
-	- In front-end, example: [environment-variables/env-for-local/in-frontend/.env](environment-variables/env-for-local/in-frontend/.env)
+	- In back-end, example: [/environment-variables/env-for-local/in-backend/.env](/environment-variables/env-for-local/in-backend/.env)
+	- In front-end, example: [/environment-variables/env-for-local/in-frontend/.env](/environment-variables/env-for-local/in-frontend/.env)
 - .env for **cloud** development:
-	- In back-end, example: [environment-variables/env-for-cloud/in-backend/.env](environment-variables/env-for-cloud/in-backend/.env)
-	- In front-end, example: [environment-variables/env-for-cloud/in-frontend/.env](environment-variables/env-for-cloud/in-frontend/.env)
+	- In back-end, example: [/environment-variables/env-for-cloud/in-backend/.env](/environment-variables/env-for-cloud/in-backend/.env)
+	- In front-end, example: [/environment-variables/env-for-cloud/in-frontend/.env](/environment-variables/env-for-cloud/in-frontend/.env)
 - Using environment vars:
 	- On Django: [/python/web-development/django/3-1-models-database/env-vars-on-django](/python/web-development/django/3-1-models-database/env-vars-on-django.md)
 	- On Vue: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)
@@ -70,19 +70,19 @@ Here below you find NOT the entire content, but a few examples of what you can f
 ## IDE
 
 - VSCode
-	- What is it and how it works: [ide/vscode/\_vscode-knowledge](ide/vscode/_vscode-knowledge.md)
+	- What is it and how it works: [/ide/vscode/\_vscode-knowledge](/ide/vscode/_vscode-knowledge.md)
 	- Config files:
-		- settings.json example: [ide/vscode/examples/.vscode/settings.json](ide/vscode/examples/.vscode/settings.json)
-		- extensions.json example: [ide/vscode/examples/.vscode/extensions.json](ide/vscode/examples/.vscode/extensions.json)
+		- settings.json example: [/ide/vscode/examples/.vscode/settings.json](/ide/vscode/examples/.vscode/settings.json)
+		- extensions.json example: [/ide/vscode/examples/.vscode/extensions.json](/ide/vscode/examples/.vscode/extensions.json)
 
 ## Code quality
 
 - Principles:
-	- DRY: [dev-concepts/principles-dry](dev-concepts/principles-dry.md)
+	- DRY: [/dev-concepts/principles-dry](/dev-concepts/principles-dry.md)
 - Tools: 
-	- Formatter: [dev-concepts/tool-formatter](dev-concepts/tool-formatter.md)
-	- Linter: [dev-concepts/tool-linter](dev-concepts/tool-linter.md)
-	- Type Checker: [dev-concepts/tool-typechecker](dev-concepts/tool-typechecker.md)
+	- Formatter: [/dev-concepts/tool-formatter](/dev-concepts/tool-formatter.md)
+	- Linter: [/dev-concepts/tool-linter](/dev-concepts/tool-linter.md)
+	- Type Checker: [/dev-concepts/tool-typechecker](/dev-concepts/tool-typechecker.md)
 
 ## Versioning
 
@@ -96,16 +96,16 @@ Here below you find NOT the entire content, but a few examples of what you can f
 ## Operational Systems
 
 - Linux:
-	- Terminal basic commands: [os/linux/terminal-basic-commands](os/linux/terminal-basic-commands.md)
-		- (Any Linux distro) Formatting the system and installing it: [os/linux/0-os-install/_roadmap](os/linux/0-os-install/_roadmap.md)
+	- Terminal basic commands: [/os/linux/terminal-basic-commands](/os/linux/terminal-basic-commands.md)
+		- (Any Linux distro) Formatting the system and installing it: [/os/linux/0-os-install/_roadmap](/os/linux/0-os-install/_roadmap.md)
 	- Distros:
 		- **Debian**/**Ubuntu**:
-			- Installing apps: [os/linux/distros/debian/1-apps-install/1-installing-apps](os/linux/distros/debian/1-apps-install/1-installing-apps.md)
-			- Installed apps list: [os/linux/distros/debian/1-apps-install/finding-installed-apps](os/linux/distros/debian/1-apps-install/finding-installed-apps.md)
-			- Checking OS repo list: [os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
+			- Installing apps: [/os/linux/distros/debian/1-apps-install/1-installing-apps](/os/linux/distros/debian/1-apps-install/1-installing-apps.md)
+			- Installed apps list: [/os/linux/distros/debian/1-apps-install/finding-installed-apps](/os/linux/distros/debian/1-apps-install/finding-installed-apps.md)
+			- Checking OS repo list: [/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
 		- **Fedora**:
-			- Installing apps: [os/linux/distros/fedora/1-apps-install/1-installing-apps](os/linux/distros/fedora/1-apps-install/1-installing-apps.md)
-			- Installed apps list: [os/linux/distros/fedora/1-apps-install/finding-installed-apps](os/linux/distros/fedora/1-apps-install/finding-installed-apps.md)
-			- Checking the OS repo list: [os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list](os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list.md)
+			- Installing apps: [/os/linux/distros/fedora/1-apps-install/1-installing-apps](/os/linux/distros/fedora/1-apps-install/1-installing-apps.md)
+			- Installed apps list: [/os/linux/distros/fedora/1-apps-install/finding-installed-apps](/os/linux/distros/fedora/1-apps-install/finding-installed-apps.md)
+			- Checking the OS repo list: [/os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list](/os/linux/distros/fedora/1-apps-install/checking-app-is-in-repo-list.md)
 - Windows:
-	- Formatting the system and installing it: [os/windows/0-os-install/\_roadmap](os/windows/0-os-install/_roadmap.md)
+	- Formatting the system and installing it: [/os/windows/0-os-install/\_roadmap](/os/windows/0-os-install/_roadmap.md)

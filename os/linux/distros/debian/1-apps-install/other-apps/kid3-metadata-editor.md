@@ -3,7 +3,7 @@
 
 ---
 
-This is needed if you want to edit your song's metadata case your Music player has no built-in metadata editor like [Swing Music app](os/linux/distros/debian/1-apps-install/other-apps/swing-music.md).
+This is needed if you want to edit your song's metadata case your Music player has no built-in metadata editor like [Swing Music app](/os/linux/distros/debian/1-apps-install/other-apps/swing-music.md).
 
 ---
 ## 1) Installing:

@@ -4,7 +4,7 @@
 ---
 
 **Before:**
-1. What is Polymorphism: [dev-concepts/polymorphism](dev-concepts/polymorphism.md)
+1. What is Polymorphism: [/dev-concepts/polymorphism](/dev-concepts/polymorphism.md)
 
 The *Django-Polymorphic* builds on top of the standard Django model inheritance. It makes using inherited models easier. When a query is made at the base model, the inherited model classes are returned.
 

@@ -1,1 +1,1 @@
-[dev-concepts/lot](dev-concepts/lot.md)
+[/dev-concepts/lot](/dev-concepts/lot.md)

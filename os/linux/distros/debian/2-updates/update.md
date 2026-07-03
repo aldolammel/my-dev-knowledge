@@ -29,4 +29,4 @@ sudo apt full-upgrade -y
 
 ## Changing/Upgrading the distro LTS version:
 
-[os/linux/distros/debian/2-updates/changing-LTS-version](os/linux/distros/debian/2-updates/changing-LTS-version.md)
+[/os/linux/distros/debian/2-updates/changing-LTS-version](/os/linux/distros/debian/2-updates/changing-LTS-version.md)

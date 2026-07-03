@@ -30,7 +30,7 @@ Don't use an external HD, except if you can use it entirely, without to use mult
 
 **3.2) Startup disk creation:**
 - Check if your current Linux distro already brings some kind of app for startup disks creation.
-	- Debian and Ubuntu built-in solution: [[os/linux/distros/debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator]]
+	- Debian and Ubuntu built-in solution: [[/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/systemtool-startup-disk-creator]]
 
 **3.3) Select the .iso file and what storage device the creator should mount the selected file.**
 
@@ -44,7 +44,7 @@ Don't use an external HD, except if you can use it entirely, without to use mult
 
 ## 5) Let's format the system:
 
-[os/linux/0-os-install/distro-formatting](os/linux/0-os-install/distro-formatting.md)
+[/os/linux/0-os-install/distro-formatting](/os/linux/0-os-install/distro-formatting.md)
 
 
 ---

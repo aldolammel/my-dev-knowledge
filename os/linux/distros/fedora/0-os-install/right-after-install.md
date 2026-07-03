@@ -16,13 +16,13 @@
 
 **3.1) Preparing the system:**
 
-[os/linux/distros/fedora/1-apps-install/0-preparing-the-system](os/linux/distros/fedora/1-apps-install/0-preparing-the-system.md)
+[/os/linux/distros/fedora/1-apps-install/0-preparing-the-system](/os/linux/distros/fedora/1-apps-install/0-preparing-the-system.md)
 
 **3.2) Display and sound configs;**
 
 **3.3) Install your default browser:**
 
-E.g. [os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/browser-firefox](os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/browser-firefox.md) (Firefox probably is the Fedora default solution)
+E.g. [/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/browser-firefox](/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/browser-firefox.md) (Firefox probably is the Fedora default solution)
 
 **3.4) (If applicable / Optional)**
 
@@ -31,7 +31,7 @@ Install this smarter terminal: ==Something better for Fedora???==
 ---
 ## 4) Making Linux mount shared SSDs automatically:
 
-E.g. on Debian: [os/linux/distros/debian/mounting-shared-drives-automatically](os/linux/distros/debian/mounting-shared-drives-automatically.md)
+E.g. on Debian: [/os/linux/distros/debian/mounting-shared-drives-automatically](/os/linux/distros/debian/mounting-shared-drives-automatically.md)
 
 ---
 ## 5) Check if IPv6 is working properly:
@@ -48,10 +48,10 @@ In case you are using Dual-boot with Windows, set Windows to use UTC time, equal
 ==Important!==
 Linux works better with UTC instead of Local Time.
 
-[os/windows/0-os-install/dual-boot-with-linux](os/windows/0-os-install/dual-boot-with-linux.md)
+[/os/windows/0-os-install/dual-boot-with-linux](/os/windows/0-os-install/dual-boot-with-linux.md)
 
 ---
 
 **THE ENTIRE LINUX FORMATTING ROADMAP:**
 
-[os/windows/0-os-install/\_roadmap](os/windows/0-os-install/_roadmap.md)
+[/os/windows/0-os-install/\_roadmap](/os/windows/0-os-install/_roadmap.md)

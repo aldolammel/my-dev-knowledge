@@ -3,8 +3,8 @@
 
 ---
 ## Before:
-1. Prepare the system: [os/linux/distros/debian/1-apps-install/0-preparing-the-system](os/linux/distros/debian/1-apps-install/0-preparing-the-system.md)
-2. Install the basic apps, e.g., browser: [os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-firefox](os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-firefox.md)
+1. Prepare the system: [/os/linux/distros/debian/1-apps-install/0-preparing-the-system](/os/linux/distros/debian/1-apps-install/0-preparing-the-system.md)
+2. Install the basic apps, e.g., browser: [/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-firefox](/os/linux/distros/debian/1-apps-install/basic-apps/using-apt/browser-firefox.md)
 
 ---
 ## Install and uninstall apps:
@@ -18,9 +18,9 @@ When you run *sudo apt install <package_name>*, APT searches through its package
 sudo apt install -y <package_name>        # -y skips install question!
 ```
 
-Finding a package name installed: [os/linux/distros/debian/1-apps-install/finding-installed-apps](os/linux/distros/debian/1-apps-install/finding-installed-apps.md)
+Finding a package name installed: [/os/linux/distros/debian/1-apps-install/finding-installed-apps](/os/linux/distros/debian/1-apps-install/finding-installed-apps.md)
 
-Check apt-update repo list: [os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
+Check apt-update repo list: [/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
 
 **From a local file:**
 ```

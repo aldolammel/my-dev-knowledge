@@ -5,7 +5,7 @@
     When you create a serializer class, you are building up an API.
 
     >> Whole Django serialization roadmap:
-        ./serializer.txt
+        ./serializer.md
 
     >> Example of a custom field for serializer class:
         ./serializer-creating-class-custom-fields.py
@@ -14,17 +14,17 @@
 # FILE: /apps/my_app/serializers.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 # Using Django Rest Framework:
-# /python/web-development/django/component-libraries/django-rest-framework/
+# /python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md
 from rest_framework import serializers
 from . import models
 
 class ExampleModelSerializer(serializers.ModelSerializer):
     """Serializer for XXXXXXXXXXX content entries."""
 
-    # Custom Fields (directly based on another serializer class):
+    # Custom Fields (directly based on another serializer class) declaration:
     # Reserved space...
 
-    # Custom Method Fields (SerializerMethodField):
+    # Custom Method Fields (SerializerMethodField) declaration:
     # my_serial_method = serializers.SerializerMethodField()  # Auto-calls get_my_serial_method()
 
     class Meta:
@@ -37,5 +37,5 @@ class ExampleModelSerializer(serializers.ModelSerializer):
             # "reserved_space",  # Custom field
         ]
 
-    # Method fields:
+    # Custom Method Fields:
     # Reserved space...

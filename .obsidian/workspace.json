@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "cffeca1cd036eb4c",
+        "id": "125225a726e6c00d",
         "type": "tabs",
         "children": [
           {
-            "id": "02f307074d9cf1c3",
+            "id": "3170df6a8d48a2eb",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "code-editor",
+              "state": {
+                "file": "python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py"
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "2-clean-differences-between-model-and-form.py"
+            }
+          },
+          {
+            "id": "a439364543a9b254",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "code-editor",
+              "state": {
+                "file": "python/web-development/django/9-forms/method-clean.py"
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "method-clean.py"
+            }
+          },
+          {
+            "id": "3bb096839aa3da03",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_summary.md",
+                "file": "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_summary"
+              "title": "models-validators-built-in"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,44 +210,48 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "02f307074d9cf1c3",
+  "active": "3bb096839aa3da03",
   "lastOpenFiles": [
-    "dev-concepts/database-constraints.md",
-    "python/web-development/django/0-new-project/web-project-django-with-react.md",
-    "python/web-development/django/0-new-project/web-project-django-with-vue.md",
-    "python/web-development/django/3-1-models-database/0-installing-and-adminUser/PostgreSQL/installation.md",
+    "python/web-development/django/6-errors-and-validations/models-validators-customized.py",
+    "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
+    "python/web-development/django/6-errors-and-validations/1-validation-basic.md",
+    "python/web-development/django/9-forms/method-clean.py",
+    "python/web-development/django/6-errors-and-validations/raise-ValidationError.py",
+    "python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py",
+    "python/web-development/django/6-errors-and-validations/raise-error.md",
+    "python/web-development/django/3-3-frontend-templates/form-error-css-customization.md",
+    "python/web-development/django/3-1-models-database/Inheriting-attributes.md",
+    "python/web-development/django/3-1-models-database/meta-abstract.md",
+    "python/web-development/django/3-1-models-database/model-attr-field-boolean.md",
+    "python/web-development/django/3-1-models-database/method-custom-something.py",
+    "python/python-knowledge/match.md",
+    "python/python-knowledge/dictionary.py",
+    "python/python-knowledge/dictionary-sorting-reversing-content-by-key.py",
+    "python/python-knowledge/dictionary-Nesting.py",
+    "python/python-knowledge/dictionary-another-example.py",
+    "python/python-knowledge/dict-comprehension.py",
+    "python/python-knowledge/list-comprehension.py",
+    "python/python-knowledge/comprehension.md",
+    "python/python-knowledge/tuple-packing-and-unpacking.md",
+    "python/python-knowledge/parameter-dynamic.md",
+    "python/python-knowledge/loops.md",
+    "python/python-knowledge/list-packing-and-unpacking.md",
+    "python/python-knowledge/containers.md",
+    "python/python-knowledge/conditionals-magics.md",
+    "python/python-knowledge/class.md",
+    "python/web-development/django/3-2-views-and-API/serializer.md",
+    "python/web-development/django/3-2-views-and-API/_about.md",
+    "python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md",
+    "python/web-development/django/4-cms-admin/1-customizing/detailview-inline-data-from-another-model.md",
+    "python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md",
+    "python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection.md",
+    "python/web-development/django/3-1-models-database/model-type-mixin.md",
+    "README.md",
     "_summary.md",
-    "versioning/git/_basic.md",
-    "versioning/git/gitignore-file.md",
-    "versioning/git/ignoring-folder-or-file-from-now-on.md",
-    "web-development/frontend/css/css-examples/zebra-striping.md",
-    "web-development/frontend/css/css-libraries-frameworks/bulma/_about.md",
-    "web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md",
-    "internet-of-things/with-javascript.md",
-    "javascript/00-new-project/1-new-project.md",
-    "javascript/00-new-project/3-update-vue-version-in-a-project.md",
-    "javascript/nodejs/0-new-project/1-new-project.md",
-    "javascript/nodejs/0-new-project/update-node-version.md",
-    "javascript/nodejs/_about.md",
-    "javascript/web-development/backend/nodejs/_about.md",
-    "javascript/web-development/frontend/vue/0-new-project/update-vue-version.md",
-    "javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front.md",
-    "javascript/web-development/frontend/vue/2-updating-removing/updating-vue.md",
-    "javascript/web-development/frontend/vue/_about.md",
-    "javascript/web-development/frontend/vue/vue-knowledge/_about.md",
-    "python/web-development/django/3-3-frontend-templates/_about.md",
-    "web-development/frontend/angular/_about.md",
-    "web-development/frontend/js/0-new-project/new-project.md",
-    ".git/objects/97/bbbb425245cb88723cd939addea6649536c939",
-    ".git/objects/4a/ad9237ea3faba8501513ff55218a0b096b31de",
-    ".git/objects/93/eb4831e9581f51de169c0e7f7fdc4efc61076f",
-    ".git/objects/74/5484a1653e8b037c9d349209c728ff5c3b45e0",
-    ".git/objects/77/36b68471d46b41f3c469fe9cc0ba5a7c4a3afc",
-    ".git/objects/ed/f017be85cf4104eb1e5cb11364bca5d134d4a3",
-    ".git/objects/48/333fc6469b6805212978b21cd56a604b7c5ddb",
-    ".git/objects/fe/a7cd94d289a0e3c9a58541b26d68b42e515db7",
-    "python/web-development/django/z-project-examples/proj-aldolammel-style/static/subapp_name/css/admin_zebra_striping_inline.css",
-    ".git/objects/27/49972c14b73a8e2bea0f9d2115748c05b66d37",
+    "interview-challenges/web-development/url-shortener/10-on-code-using-python.png",
+    "interview-challenges/web-development/url-shortener/6-hash-calc.png",
+    "interview-challenges/web-development/url-shortener/3-estimates.png",
+    "interview-challenges/web-development/url-shortener/1-requirements.png",
     "web-development/frontend/css/css-examples/django-css-zebra-striping-for-admin-inline.png",
     "python/web-development/django/3-1-models-database/5-ERD/myapp_models.png",
     "dev-concepts/architecture-client-server.png",

@@ -25,7 +25,7 @@ sudo do-release-upgrade -d
 
 ## 2) Update the new system:
 
-[os/linux/distros/debian/2-updates/update](os/linux/distros/debian/2-updates/update.md)
+[/os/linux/distros/debian/2-updates/update](/os/linux/distros/debian/2-updates/update.md)
 
 
 ---
@@ -40,8 +40,8 @@ sudo reboot
 
 ## For Fedora distro:
 
-[os/linux/distros/fedora/2-updates/changing-LTS-version](os/linux/distros/fedora/2-updates/changing-LTS-version.md)
+[/os/linux/distros/fedora/2-updates/changing-LTS-version](/os/linux/distros/fedora/2-updates/changing-LTS-version.md)
 
 ## Or just updating the current distro:
 
-[os/linux/distros/debian/2-updates/update](os/linux/distros/debian/2-updates/update.md)
+[/os/linux/distros/debian/2-updates/update](/os/linux/distros/debian/2-updates/update.md)

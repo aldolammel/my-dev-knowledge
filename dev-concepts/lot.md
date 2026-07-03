@@ -10,4 +10,4 @@ Not the same of *IoT* (Internet of Things). *LoT*, Location of Things, represent
 
 ## This is not the same as:
 
-*IoT*: [dev-concepts/iot](dev-concepts/iot.md)
+*IoT*: [/dev-concepts/iot](/dev-concepts/iot.md)

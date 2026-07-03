@@ -1,38 +1,31 @@
-    FORM ERROR MESSAGES AND CSS:
+FORM ERROR MESSAGES AND CSS:
 
-        >> Error messages on templates:
-
-            /python/web-development/django/3-3-frontend-templates/form-error-messages.html
+**Error messages on templates:**    /python/web-development/django/3-3-frontend-templates/form-error-messages.html
 
 
-        >> How to use error identification (useful for CSS) helps to categorize errors:
+How to use error identification (useful for CSS) helps to categorize errors:
 
-            In your back-end:
+In your back-end:
+E.g.
+```
+raise ValidationError('Opção não disponível no Brasil!', code='invalid_choice')
+```
 
-                E.g.
+In your templates, you can target errors based on their codes. If you need to display a different message or style for errors with the 'invalid' code versus another type, the error code helps you do that.
 
-                    raise ValidationError('Opção não disponível no Brasil!', code='invalid_choice')
+E.g.
+```
+{% if form.goal_primary.errors %}
+	{% for error in form.goal_primary.errors %}
+		{% if error.code == 'invalid' %}
+			<p>There is an invalid selection in the goals.</p>
+		{% else %}
+			<p>{{ error }}</p>
+		{% endif %}
+	{% endfor %}
+{% endif %}
+```
 
-
-            In your templates, you can target errors based on their codes. If you need to display
-            a different message or style for errors with the 'invalid' code versus another type,
-            the error code helps you do that.
-
-                E.g.
-
-                    {% if form.goal_primary.errors %}
-                        {% for error in form.goal_primary.errors %}
-                            {% if error.code == 'invalid' %}
-                                <p>There is an invalid selection in the goals.</p>
-                            {% else %}
-                                <p>{{ error }}</p>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-
-
-
-        >> Error identification types:
-            /python/web-development/django/6-errors-and-validations/error-identification-codes.txt
+**Error identification types:**     /python/web-development/django/6-errors-and-validations/error-identification-codes.txt
 
 

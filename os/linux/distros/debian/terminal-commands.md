@@ -7,7 +7,7 @@
 
 ## Linux basic:
 
-[[os/linux/terminal-basic-commands]]
+[[/os/linux/terminal-basic-commands]]
 
 ## Debian/Ubuntu basic:
 

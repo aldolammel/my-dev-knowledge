@@ -1,20 +1,21 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: BOOLEAN FIELD
+#### Python > Django > Model Class
+# Attribute type: BooleanField
 
-    Common Usage:
-        Representing a True/False or On/Off state.
+**Common Usage:**
+Representing a True/False or On/Off state.
 
-    Field look-like on front-end:
-        - Checkbox field.
+**Field look-like on front-end:**
+- Checkbox field.
 
-    Example:
-
-        is_published = models.BooleanField(
-            default=True,
-        )
+E.g.
+```
+is_published = models.BooleanField(
+	default=True,
+)
+```
 
 ---
 
-> > Other related options:
+## Other related options:
 
-    >> Null Boolean Field (Deprecated):
-        /python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.txt
+Null Boolean Field ==(Deprecated)==: [/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean](/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.md)

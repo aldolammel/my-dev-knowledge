@@ -51,7 +51,7 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-How to figure out your Linux current user on OS: [os/linux/command-change-user](os/linux/command-change-user.md)
+How to figure out your Linux current user on OS: [/os/linux/command-change-user](/os/linux/command-change-user.md)
 
 2.3) Enable it:
 ```
@@ -68,7 +68,7 @@ sudo systemctl status swingmusic
 ```
 
 2.5) (Optional) Once *Swing Music* app has no built-in metadata editor, you need an external solution:
-- Using *Kid3*: [os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor](os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor.md)
+- Using *Kid3*: [/os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor](/os/linux/distros/debian/1-apps-install/other-apps/kid3-metadata-editor.md)
 
 ---
 ## 3) Running it:

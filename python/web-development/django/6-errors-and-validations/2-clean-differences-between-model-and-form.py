@@ -2,7 +2,7 @@
 """
     DJANGO FORMS VALIDATIONS > APP-LEVEL/CMS-LEVEL: HOW TO APPLY CLEAN() METHOD FOR MODELS AND FORMS
 
-        clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When exactly the clean() method is executaded is different between models and forms cases:
+        clean() is a built-in method that's used in forms and models for cross-field validations or other complex uses. When exactly the clean() method is executed is different between models and forms cases:
 
             MODELS CLEAN() METHOD:
 
@@ -14,13 +14,13 @@
                 
                 If an Admin class to demand any clean(), it's mandatory to create a form class (forms.py) once Django doesn't allow the clean() use directly in admin.py.
                 
-                Unlike its version for models, clean() for forms accepts clean_<fieldname>() to validade a specific field, individualy.
+                Unlike its version for models, clean() for forms accepts clean_<fieldname>() to validade a specific field, individually.
 
         BASIC KNOWLEDGE:
             ./1-validation-basic.txt
 
         IMPORTANT:
-            All clean() validations written through 'models.py' will automatically propagate on CMS, not mandatorially demanding to add clean() in forms.py (once it's NOT ALLOWED to set clean() method directly in admin.py files). This logic you can read more:
+            All clean() validations written through 'models.py' will automatically propagate on CMS, not mandatorily demanding to add clean() in forms.py (once it's NOT ALLOWED to set clean() method directly in admin.py files). This logic you can read more:
                 ./validation-3-for-CMS-forms.txt
 """
 
@@ -29,6 +29,7 @@
 
     
 # For MODEL classes - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# More about: /python/web-development/django/3-1-models-database/method-clean.py
 
     class ExampleModelOne(model.Model):
         ...
@@ -43,20 +44,22 @@
             """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
             
             if self.string_one_field == self.string_two_field:
-                raise ValidationError(f'Strings cannot be the same!')
+                raise ValidationError('Strings cannot be the same!')
 
-        def clean_<fieldname>(self):
-            # Individual validation is NOT allowed for models in this way!
+        def clean_<fieldname>(self):  # Individual validation is NOT ALLOWED for models in this way!
+            # NOT ALLOWED HERE!
             # There, for individual fields, you must use 'Validators'!
 
 
 # For FORM classes - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# More about: /python/web-development/django/9-forms/method-clean.py
 
     class ExampleModelForm(forms.ModelForm):
         
         class Meta:
             model = ExampleModelOne
             fields = "__all__"
+
 
         def clean(self):
             """Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
@@ -74,15 +77,13 @@
             
             return cleaned_data
 
+
         def clean_<fieldname>(self):
             """Built-in Form method to validate an individual form field before the main clean method."""
             
-            # For individual clean() you MUST use 'self.':
-            age = self.cleaned_data.get('age')
-
+            age = self.cleaned_data.get("<fieldname>")
             if age and age < 18:
-                raise forms.ValidationError("You must be at least 18 years old")
-            
+                raise forms.ValidationError("You must be at least 18 years old")  # Once it's an individual-field-clean(), NEVER use ValidationError as dict!
             return age
 
 
@@ -93,8 +94,8 @@
         ./models-validators-customized.py
 
     CLEAN() FOR MODELS:
-        .../django/3-1-models-database/method-clean.py
+        /python/web-development/django/3-1-models-database/method-clean.py
 
     CLEAN() FOR FORMS:
-        .../django/9-forms/method-clean.py
+        /python/web-development/django/9-forms/method-clean.py
 """

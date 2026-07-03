@@ -10,4 +10,4 @@ xxxxxxx
 
 ## This is not the same as:
 
-*LoT*: [dev-concepts/lot](dev-concepts/lot.md)
+*LoT*: [/dev-concepts/lot](/dev-concepts/lot.md)

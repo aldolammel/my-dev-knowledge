@@ -1,1 +1,1 @@
-[dev-concepts/iot](dev-concepts/iot.md)
+[/dev-concepts/iot](/dev-concepts/iot.md)

@@ -16,9 +16,9 @@ from operator import itemgetter
 from datetime import date
 
 # MY COLORS
-_corT = '\033[1;32m'
-_corF = '\033[1;31m'
-_corOut = '\033[m'
+corT = '\033[1;32m'
+corF = '\033[1;31m'
+corOut = '\033[m'
 
 
 # Copy a dictionary:
@@ -27,81 +27,73 @@ new = original.copy()
 print(f'Original: {original}\nNew: {new}')
 
 
-
-
-
 # Pre-lessons:
 
-_movie = {                          # this is a dictionary.
+movie = {                          # this is a dictionary.
     'title': 'Star Wars',           # key: value
     'year': 1977,                   # key: value
     'Director': 'George Lucas'      # key: value
 }
 
-print(_movie.keys())                # shows only keys of the dictionary.
-print(_movie.values())              # shows only values of the dictionary.
-print(_movie.items())               # shows each couple of key and value separately by tuples.
-print(_movie)                       # shows everything from the dictionary.
+print(movie.keys())                # shows only keys of the dictionary.
+print(movie.values())              # shows only values of the dictionary.
+print(movie.items())               # shows each couple of key and value separately by tuples.
+print(movie)                       # shows everything from the dictionary.
 
-print('\n----\n')
 
-for _key, _value in _movie.items():
-    print(f'The {_key} is {_value}.')
+for key_, value_ in movie.items():
+    print(f'The {key_} is {value_}.')
 
-print('\n----\n')
 
-_people = {'Name': 'Aldo', 'Gender': 'Male', 'Age': 38}
-print(_people)
-print(f'{_people["Name"]} is {_people["Age"]} years old.')
+person = {'Name': 'Aldo', 'Gender': 'Male', 'Age': 38}
+print(person)
+print(f'{person["Name"]} is {person["Age"]} years old.')
 
-print('\nShowing all keys from _people dictionary: ')
-for _key in _people.keys():
-    print(_key, end=' ')
+print('\nShowing all keys from person dictionary: ')
+for key_ in person.keys():
+    print(key_, end=' ')
 
-print('\n')
 
 print("EDITING dictionaries:")
-del _people['Gender']                              # removing a key.
-_people['Weight'] = 82.3                           # adding a key and its value
-_people['Name'] = 'John'                           # changing a value.
-for _key, _value in _people.items():               # for dictionaries, we don't use the ENUMERATE, but the ITEMS().
-    print(f'{_key} = {_value}')
+del person['Gender']                              # removing a key.
+person['Weight'] = 82.3                           # adding a key and its value
+person['Name'] = 'John'                           # changing a value.
+for key_, value_ in person.items():               # for dictionaries, we don't use the ENUMERATE, but the ITEMS().
+    print(f'{key_} = {value_}')
 
-print('\n----\n')
 
 print("CREATING dictionaries into an array:")
-_europe = []
-_country1 = {
+europe = []
+country1 = {
     'Name': 'Czech Republic',
     'Currency': 'Koruna'
 }
-_country2 = {
+country2 = {
     'Name': 'Spain',
     'Currency': 'Euro'
 }
-_europe.append(_country1)
-_europe.append(_country2)
+europe.append(country1)
+europe.append(country2)
 
-print(f'Array "_europe": {_corT}{_europe}{_corOut}')
-print(f'First dictionary: {_europe[0]}')
-print(f'Only name of that: {_europe[0]["Name"]}')
+print(f'Array "europe": {corT}{europe}{corOut}')
+print(f'First dictionary: {europe[0]}')
+print(f'Only name of that: {europe[0]["Name"]}')
 
-print('\n----\n')
 
 print("COPYING dictionaries to array:")
-_city = dict()
-_rioGrandeDoSul = list()
+city = dict()
+state = list()
 
-for _i in range(2):
-    _city['City'] = str(input('Name of the city: ')).strip().upper()
-    _city['Mayor'] = str(input('Name of the mayor: ')).strip().upper()
-    _rioGrandeDoSul.append(_city.copy())                                # dictionary CANNOT use slicing to make copies.
+for i in range(2):
+    city['City'] = str(input('Name of the city: ')).strip().upper()
+    city['Mayor'] = str(input('Name of the mayor: ')).strip().upper()
+    state.append(city.copy())                                # dictionary CANNOT use slicing to make copies.
 
-print(f'\n{_rioGrandeDoSul}\n')
+print(f'\n{state}\n')
 
-for _eachCity in _rioGrandeDoSul:                     # FOR to array.
-    for _key, _value in _eachCity.items():            # FOR to dictionary.
-        print(f'{_key}: {_value}')
+for city in state:                     # FOR to array.
+    for key_, value_ in city.items():            # FOR to dictionary.
+        print(f'{key_}: {value_}')
     print()
 
 # ----------------------------------------
@@ -110,23 +102,23 @@ for _eachCity in _rioGrandeDoSul:                     # FOR to array.
 print('\n\nLesson 090 >> Build a program capable to read the name and grade average of one student and, at last,'
       'show those information:\n')
 
-_person = dict()                                                    # empty dictionary.
+person = dict()                                                    # empty dictionary.
 
-_person['Name'] = str(input('Name: ')).strip().upper()              # populating the dict _person.
-_person['Average'] = float(input('Grade average: '))
+person['Name'] = str(input('Name: ')).strip().upper()              # populating the dict person.
+person['Average'] = float(input('Grade average: '))
 
-if _person['Average'] >= 7:
-    _person['Status'] = 'approved'
-elif 5 <= _person['Average'] < 7:
-    _person['Status'] = 'new exam is needed'
+if person['Average'] >= 7:
+    person['Status'] = 'approved'
+elif 5 <= person['Average'] < 7:
+    person['Status'] = 'new exam is needed'
 else:
-    _person['Status'] = 'rejected'
+    person['Status'] = 'rejected'
 
 print(
     '- ' * 20,
-    f'\n >> Student: {_person["Name"]}'
-    f'\n >> Grade average: {_person["Average"]}'
-    f'\n >> Status: {_person["Status"]}'
+    f'\n >> Student: {person["Name"]}'
+    f'\n >> Grade average: {person["Average"]}'
+    f'\n >> Status: {person["Status"]}'
 )
 
 # ----------------------------------------
@@ -144,37 +136,37 @@ _game = {
 _ranking = list()
 _higherScore = 0
 
-for _key, _value in _game.items():
-    print(f'{_key} has a {_value}.')
+for key_, value_ in _game.items():
+    print(f'{key_} has a {value_}.')
     sleep(0.5)
 
 _ranking = sorted(_game.items(), key=itemgetter(1), reverse=True)              # to sorting a dictionary!
 
 print('\n--- SCOREBOARD ---')
-for _i, _tuple in enumerate(_ranking):
-    print(f'{_i + 1}# place: {_tuple[0]} with {_corT}{_tuple[1]}{_corOut}.')
+for i, _tuple in enumerate(_ranking):
+    print(f'{i + 1}# place: {_tuple[0]} with {corT}{_tuple[1]}{corOut}.')
 
 # ----------------------------------------
 # LESSON 092:
 
 print('\n\nLesson 092 >> Build a program xxxxxxxxxxxxxxxxx:\n')
 
-_people = dict()
+person = dict()
 
-_people['Name'] = str(input('Name: ')).strip().upper()
+person['Name'] = str(input('Name: ')).strip().upper()
 _birth = int(input('Birth year: '))
-_people['Age'] = date.today().year - _birth
-_people['WorkNumber'] = int(input('(If not available, type 0) Work number: '))
+person['Age'] = date.today().year - _birth
+person['WorkNumber'] = int(input('(If not available, type 0) Work number: '))
 
-if _people['WorkNumber'] != 0:
-    _people['Hire'] = int(input('Year of hire: '))
-    _people['Earnings'] = float(input('Monthly earnings: R$'))
-    _people['Retirement'] = (_people['Hire'] - _birth) + 35
+if person['WorkNumber'] != 0:
+    person['Hire'] = int(input('Year of hire: '))
+    person['Earnings'] = float(input('Monthly earnings: R$'))
+    person['Retirement'] = (person['Hire'] - _birth) + 35
 
 print('---------------')
 
-for _key, _value in _people.items():            # shows each couple of key and value separately by tuples.
-    print(f'{_key} is {_value}.')
+for key_, value_ in person.items():            # shows each couple of key and value separately by tuples.
+    print(f'{key_} is {value_}.')
 
 # ----------------------------------------
 # LESSON 093:
@@ -189,21 +181,21 @@ _soccerPlayer['Name'] = str(input('Name: ')).strip().upper()
 _matches = int(input(f'How many matches did {_soccerPlayer["Name"]} play: '))
 
 if _matches != 0:
-    for _i in range(_matches):
-        _goals = int(input(f'How many goals in the match#{_i + 1}: '))
+    for i in range(_matches):
+        _goals = int(input(f'How many goals in the match#{i + 1}: '))
         _arrayGoals.append(_goals)
         _soccerPlayer['Goals'] = _arrayGoals[:]
         _soccerPlayer['TotalGoals'] = sum(_arrayGoals)                  # NEW: summing all values in _arrayGoals.
-    for _key, _value in _soccerPlayer.items():                          # remember: dict doest use enumarate command.
-        print(f'{_corT}{_key}{_corOut} is {_corT}{_value}{_corOut}.')
+    for key_, value_ in _soccerPlayer.items():                          # remember: dict doest use enumarate command.
+        print(f'{corT}{key_}{corOut} is {corT}{value_}{corOut}.')
 
     print(f'\n{_soccerPlayer["Name"]} has played {_matches} matches:')
     for _match, _goals in enumerate(_arrayGoals):
         print(f'  >> In match#{_match + 1}, they did {_goals} goal(s).')
-    print(f'Total of goals so far: {_corT}{_soccerPlayer["TotalGoals"]}{_corOut}')
+    print(f'Total of goals so far: {corT}{_soccerPlayer["TotalGoals"]}{corOut}')
 
 else:
-    print(f'{_corF}This player has no soccer carrier yet!{_corOut}')
+    print(f'{corF}This player has no soccer carrier yet!{corOut}')
 
 # ----------------------------------------
 # LESSON 094:
@@ -219,7 +211,7 @@ while True:
 
     _eachPerson['Gender'] = str(input('Gender [M/F]: ')).strip().upper()[0]
     while _eachPerson['Gender'] not in 'MF':
-        print(f'{_corF}Invalid choice!{_corOut}')
+        print(f'{corF}Invalid choice!{corOut}')
         _eachPerson['Gender'] = str(input('Gender [M/F]: ')).strip().upper()[0]
 
     _eachPerson['Age'] = int(input('Age: '))
@@ -229,7 +221,7 @@ while True:
     while True:
         _keepRecording = str(input('Add someone else [Y/N]: ')).strip().upper()[0]
         if _keepRecording not in 'YN':
-            print(f'{_corF}Invalid choice!{_corOut}')
+            print(f'{corF}Invalid choice!{corOut}')
         else:
             break
 
@@ -237,18 +229,18 @@ while True:
         break
 
 print('\n', _everybody)
-print(f'A) We got {_corT}{len(_everybody)}{_corOut} people recorded. ')
-print(f'B) Age average is {_corT}{_ageTotal / len(_everybody):.1f} years{_corOut}.')
+print(f'A) We got {corT}{len(_everybody)}{corOut} people recorded. ')
+print(f'B) Age average is {corT}{_ageTotal / len(_everybody):.1f} years{corOut}.')
 print(f'C) There are theses females recorded: ', end='')
 for _dict in _everybody:
     if _dict['Gender'] == 'F':
-        print(f'{_corT}{_dict["Name"]}{_corOut}', end=', ')
+        print(f'{corT}{_dict["Name"]}{corOut}', end=', ')
 
 print('\nD) List of people that are over the age average:')
 for _dict in _everybody:
     if _dict['Age'] > (_ageTotal / len(_everybody)):
-        for _key, _value in _dict.items():
-            print(f'{_corT}{_key} = {_value}{_corOut}', end=' >> ')
+        for key_, value_ in _dict.items():
+            print(f'{corT}{key_} = {value_}{corOut}', end=' >> ')
         print()
 
 print('\n\n--- FINISHED ---')
@@ -280,7 +272,7 @@ while True:
         if _keepRecording in 'YN':
             break
         else:
-            print(f'{_corF}Invalid answer! Try again!{_corOut}\n')
+            print(f'{corF}Invalid answer! Try again!{corOut}\n')
     if _keepRecording == 'N':
         break
 
@@ -293,8 +285,8 @@ print(
 )
 
 print(f'{str("COD"):<4}{str("NAME"):<15}{str("MATCHES"):<15}{str("GOALS"):<15}{str("TOTAL"):<6}')
-for _key, _val in enumerate(_team):
-    print(f'{_key:>3} ', end='')
+for key_, _val in enumerate(_team):
+    print(f'{key_:>3} ', end='')
     for _data in _val.values():
         print(f'{str(_data):<15}', end='')
     print()
@@ -305,14 +297,14 @@ while True:
     if _summaryNum <= -1:
         break
     elif _summaryNum >= len(_team):
-        print(f'{_corF}Invalid summary code! Try again:{_corOut}')
+        print(f'{corF}Invalid summary code! Try again:{corOut}')
     else:
-        print(f'\nAnalysing {_corT}{_team[_summaryNum]["Name"]}{_corOut}:')
+        print(f'\nAnalysing {corT}{_team[_summaryNum]["Name"]}{corOut}:')
         if len(_team[_summaryNum]['Goals']) == 0:
-            print(f'{_corF}This player has no matches in their carrier!{_corOut}')
+            print(f'{corF}This player has no matches in their carrier!{corOut}')
         else:
             for _match, _goal in enumerate(_team[_summaryNum]['Goals']):
-                print(f'    >> In match#{_match + 1}, they got {_corT}{_goal}{_corOut} goal(s).')
+                print(f'    >> In match#{_match + 1}, they got {corT}{_goal}{corOut} goal(s).')
         print('- - - -')
 
 print('\nPROGRAM HAS BEEN FINISHED!')

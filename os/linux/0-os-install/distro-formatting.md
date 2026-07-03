@@ -5,7 +5,7 @@
 ---
 ## Before:
 
-1. Assuming you already have done basic to format: [os/linux/0-os-install/before-to-format](os/linux/0-os-install/before-to-format.md)
+1. Assuming you already have done basic to format: [/os/linux/0-os-install/before-to-format](/os/linux/0-os-install/before-to-format.md)
 
 ---
 ## 1) Reboot the machine and get in your BIOS;
@@ -21,11 +21,11 @@
 In any moment of this install wizard, do Ctrl + Alt + F2.
 
 **Basic terminal commands:**
-[[os/linux/terminal-basic-commands]]
+[[/os/linux/terminal-basic-commands]]
 
 **Specific distro commands for:**
-- Debian/ubuntu: [[os/linux/distros/debian/terminal-commands]]
-- Fedora: [[os/linux/distros/fedora/terminal-commands]]
+- Debian/ubuntu: [[/os/linux/distros/debian/terminal-commands]]
+- Fedora: [[/os/linux/distros/fedora/terminal-commands]]
 
 
 ---
@@ -41,11 +41,11 @@ After select the partition to install Ubuntu, make sure you are using Ext4 forma
 
 ## 5) Once the OS installation has finished, do this based on OS chosen:
 
-- Debian/Ubuntu: [[os/linux/distros/debian/0-os-install/right-after-install]]
-- Fedora: [[os/linux/distros/fedora/0-os-install/right-after-install]]
+- Debian/Ubuntu: [[/os/linux/distros/debian/0-os-install/right-after-install]]
+- Fedora: [[/os/linux/distros/fedora/0-os-install/right-after-install]]
 
 ---
 
 
 **THE ENTIRE LINUX INSTALLATION ROADMAP:**
-[[os/linux/0-os-install/_roadmap]]
+[[/os/linux/0-os-install/_roadmap]]

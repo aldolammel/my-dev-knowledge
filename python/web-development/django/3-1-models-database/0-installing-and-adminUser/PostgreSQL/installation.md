@@ -21,7 +21,7 @@ If the db won't be in the cloud, install it locally: [/database/PostgreSQL/0-bas
 - Case you need a *settings.py* template: [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
 
 **2.2) (If applicable) Make a copy of the '.env' file to your project root folder:** 
-- [environment-variables/env-for-local/in-backend/.env](environment-variables/env-for-local/in-backend/.env)
+- [/environment-variables/env-for-local/in-backend/.env](/environment-variables/env-for-local/in-backend/.env)
 
 **2.3) (If applicable) Delete the sqlite.db:**
 
@@ -48,6 +48,6 @@ uv run manage.py migrate
 
 **CHECK IDE EXTENSIONS FOR THIS DB:**
 
-VSCode: [ide/vscode/\_vscode-knowledge](ide/vscode/_vscode-knowledge.md)
+VSCode: [/ide/vscode/\_vscode-knowledge](/ide/vscode/_vscode-knowledge.md)
 
-PyCharm: [ide/pycharm/temp](ide/pycharm/temp.txt)
+PyCharm: [/ide/pycharm/temp](/ide/pycharm/temp.txt)
