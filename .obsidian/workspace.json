@@ -212,6 +212,7 @@
   },
   "active": "3bb096839aa3da03",
   "lastOpenFiles": [
+    ".git/index.lock",
     "python/web-development/django/6-errors-and-validations/models-validators-customized.py",
     "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
     "python/web-development/django/6-errors-and-validations/1-validation-basic.md",
@@ -230,7 +231,6 @@
     "python/python-knowledge/dictionary-Nesting.py",
     "python/python-knowledge/dictionary-another-example.py",
     "python/python-knowledge/dict-comprehension.py",
-    "python/python-knowledge/list-comprehension.py",
     "python/python-knowledge/comprehension.md",
     "python/python-knowledge/tuple-packing-and-unpacking.md",
     "python/python-knowledge/parameter-dynamic.md",
