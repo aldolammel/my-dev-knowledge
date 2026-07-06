@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "125225a726e6c00d",
+        "id": "bf19cb4df0e1ddff",
         "type": "tabs",
         "children": [
           {
-            "id": "3170df6a8d48a2eb",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "code-editor",
-              "state": {
-                "file": "python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py"
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "2-clean-differences-between-model-and-form.py"
-            }
-          },
-          {
-            "id": "a439364543a9b254",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "code-editor",
-              "state": {
-                "file": "python/web-development/django/9-forms/method-clean.py"
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "method-clean.py"
-            }
-          },
-          {
-            "id": "3bb096839aa3da03",
+            "id": "bc3957307d87a361",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "models-validators-built-in"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,27 +177,27 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "3bb096839aa3da03",
+  "active": "bc3957307d87a361",
   "lastOpenFiles": [
-    ".git/index.lock",
-    "python/web-development/django/6-errors-and-validations/models-validators-customized.py",
-    "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
-    "python/web-development/django/6-errors-and-validations/1-validation-basic.md",
-    "python/web-development/django/9-forms/method-clean.py",
-    "python/web-development/django/6-errors-and-validations/raise-ValidationError.py",
     "python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py",
+    "python/web-development/django/9-forms/method-clean.py",
+    "python/web-development/django/6-errors-and-validations/models-validators-built-in.md",
+    ".git/objects/87/01682c84ee66a9369cafd5472aac483fb8a475",
+    ".git/refs/remotes/origin/main.lock",
+    ".git/objects/42/6f63b1fd5f2c678ddec91c096027e3883363b3",
+    ".git/objects/5d/6bc17fac6a993994a926603e9bf4de9bbe9f97",
+    ".git/objects/5d/tmp_obj_kGPNyQ",
+    ".git/objects/e9/3af85fa2b50aa0fb2d0e53a6035a82dd3f859d",
+    ".git/objects/ff/20f85e73507e6b32500fa9c5aa5fe294e0d43c",
+    ".git/objects/ff/tmp_obj_eUp2TR",
+    ".git/index.lock",
+    "python/web-development/django/6-errors-and-validations/1-validation-basic.md",
     "python/web-development/django/6-errors-and-validations/raise-error.md",
     "python/web-development/django/3-3-frontend-templates/form-error-css-customization.md",
     "python/web-development/django/3-1-models-database/Inheriting-attributes.md",
     "python/web-development/django/3-1-models-database/meta-abstract.md",
     "python/web-development/django/3-1-models-database/model-attr-field-boolean.md",
-    "python/web-development/django/3-1-models-database/method-custom-something.py",
     "python/python-knowledge/match.md",
-    "python/python-knowledge/dictionary.py",
-    "python/python-knowledge/dictionary-sorting-reversing-content-by-key.py",
-    "python/python-knowledge/dictionary-Nesting.py",
-    "python/python-knowledge/dictionary-another-example.py",
-    "python/python-knowledge/dict-comprehension.py",
     "python/python-knowledge/comprehension.md",
     "python/python-knowledge/tuple-packing-and-unpacking.md",
     "python/python-knowledge/parameter-dynamic.md",
