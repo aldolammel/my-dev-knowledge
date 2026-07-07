@@ -1,59 +1,81 @@
+#### Versioning > Git
+# Command: rm
 
+---
 
-VERSIONING > GIT: RM
+Removes files from both the working directory and the staging area (marks them for deletion in the next commit).
 
-    Removes files from both the working directory and the staging area (marks them for deletion in the next commit).
+---
+## Deleting a file:
 
+- From local machine and repository;
+- Or only from local machine;
+- Or only from repository;
 
-    >> Deleting a file (from local machine and repository):
-        
-        $ git rm <file>
-        $ git status                          // only to check what's ready for the stage.
-        $ git commit -m "removed useless file"
-        $ git push
+**From local machine and repository:**
+```
+git rm <path-from-project-root-to-folder>
+git status                          // only to check what's ready for the stage.
+git commit -m "removed useless file"
+git push
+```
 
+**Only from local machine:**
+Just delete the file in your favorite way!
 
-    >> Deleting a folder (from local machine and repository):
+**Only from repository:**
+```
+git rm --cached <path-from-project-root-to-file>
+git commit -m "removed useless file only from repo"
+```
+Update the repo - Now, make sure you updated .gitignore file with the file to avoid:
+```
+git push
+```
 
-        $ git rm -r <folder>
-        $ git status                          // only to check what's ready for the stage.
-        $ git commit -m "removed useless folder"
-        $ git push
+---
+## Deleting a folder:
 
-    
-    >> Deleting a file (only from repository):
+- From local machine and repository;
+- Or only from local machine;
+- Or only from repository;
 
-            $ git rm --cached <full_file_name>
-            $ git commit -m "removed useless file only from repo"
-        
-        >> Now, make sure you updated .gitignore file with the file to avoid!
+**From local machine and repository:**
+```
+git rm -r <path-from-project-root-to-folder>
+git status                          // only to check what's ready for the stage.
+git commit -m "removed useless folder"
+git push
+```
 
-            # Update the repo:
-                $ git push
+**Only from local machine:**
+Just delete the folder in your favorite way!
 
+**Only from repository:**
+```
+git rm -r --cached <path-from-project-root-to-folder>
+git commit -m "removed useless folder only from repo"
+```
+Update the repo - Now, make sure you updated .gitignore file with the folder to avoid:
+```
+git push
+```
 
-    >> Deleting a folder (only from repository):
+---
+## Deleting a local branch:
 
-            $ git rm -r --cached <full_folder_name>
-            $ git commit -m "removed useless folder only from repo"
-        
-        >> Now, make sure you updated .gitignore file with the folder to avoid!
-        
-            # Update the repo:
-                $ git push
+[/versioning/git/command-branch](/versioning/git/command-branch.md)
 
+---
+## Deleting a remote branch (using push):
 
-    >> Deleting a local branch:
+[/versioning/git/command-push](/versioning/git/command-push.md)
 
-        ./command-branch.txt
+---
+## Deleting the local repository:
+Delete the .git folder or inside the project folder, do it!
+```
+rm -rf .git
+```
 
-
-    >> Deleting a remote branch (using push):
-
-        ./command-push.txt
-
-
-    >> Deleting the local repository:
-        # delete the .git folder,
-        # or inside the project folder, do it:
-            $ rm -rf .git
+---

@@ -2,4 +2,4 @@
 
         >> To form (forms.py):
 
-            /python/web-development/django/9-forms/form-receiving-data.py
+            /python/web-development/django/9-forms/form-getting-data.py
