@@ -25,7 +25,7 @@ class CustomUserCreationForm(UserCreationForm):
     """Customizing the Django User Registration form for front-end."""
 
     class Meta:
-        # Connected model to populate:
+        # Model tied to populate:
         model = User
         # Ordering fields on the form:
         fields = [

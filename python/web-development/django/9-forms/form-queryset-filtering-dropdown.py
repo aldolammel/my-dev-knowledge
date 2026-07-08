@@ -21,7 +21,7 @@ from .models import BrandCarStore, Vehicle
 class BrandCarStoreForm(forms.ModelForm):
     
     class Meta:
-        # Connected model to populate:
+        # Model tied to populate:
         model = BrandCarStore
         # Ordering fields on the form:
         # fields = []

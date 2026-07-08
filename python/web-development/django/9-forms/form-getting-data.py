@@ -16,9 +16,10 @@
 class MovieForm(forms.ModelForm):
 
     class Meta:
-        # Connected model to populate:
+        # Model tied to populate:
         model = models.Movie
-        # Ordering fields on the form:
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
         fields = [
             'title',  # field from Model;
             'director',  # field from Model;

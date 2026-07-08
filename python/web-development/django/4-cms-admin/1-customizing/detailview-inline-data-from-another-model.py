@@ -43,7 +43,9 @@ class Casting(models.Model):
 class CastingForm(forms.ModelForm):
     class Meta:
         model = models.Casting
-        fields = "__all__"
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
+        fields = "__all__" # Automatically remove fields editable=False!
 
 
 # admin.py - - - - - - - - - - - - - - - - 

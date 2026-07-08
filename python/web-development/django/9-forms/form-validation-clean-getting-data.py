@@ -20,7 +20,7 @@ class ExampleModelForm(forms.ModelForm):
 
     class Meta:
         model = ExampleModel   # It ties the form to a specific model (models.py).
-        fields = "__all__"     # Form will create its form fields based model's attributes (fields).
+        fields = "__all__"     # Form will create its form fields based model's attributes (fields), ignoring automatically those 'editable=False'.
 
     def clean(self):
         """Built-in Form method used to provide custom validation logic after field-level validation, but before the cleaned data's return."""
@@ -45,8 +45,9 @@ class ExampleModelForm(forms.ModelForm):
 class ExampleModelForm(forms.ModelForm):
 
     class Meta:
+        # Model tied to populate:
         model = ExampleModel
-        fields = "__all__"
+        fields = "__all__"  # Automatically remove fields editable=False!
 
     def clean(self):
         cleaned_data = super().clean()

@@ -70,5 +70,22 @@
       "key": "Enter"
     }
   ],
-  "editor:open-link-in-new-leaf": []
+  "editor:open-link-in-new-leaf": [],
+  "editor:open-search": [],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Home"
+    }
+  ],
+  "omnisearch:show-modal-infile": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Home"
+    }
+  ]
 }

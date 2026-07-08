@@ -26,8 +26,9 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
 
             class CreateProfileView(CreateView):
                 template_name = "profiles/create_profile.html"
+                # Model tied to populate:
                 model = UserProfile
-                fields = "__all__"
+                fields = "__all__"  # Automatically remove fields editable=False!
                 success_url = "/profiles"
 
             # IMPORTANT: in this way, you don't need any Django custom form in forms.py!

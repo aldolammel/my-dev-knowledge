@@ -2,13 +2,16 @@ class ModelNameForm(forms.ModelForm):
     '''Customizing the xxxxxxxxxxxxxxx detail-view in the CMS.'''
 
     class Meta:
-        model = models.ModelName  # Form tied to this model.
-        fields = '__all__'
+        # Model tied to populate:
+        model = models.ModelName
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
+        fields = '__all__' # Automatically remove fields editable=False!
         # or
         fields = [
-            'field_1', 
-            'field_3', 
-            'field_7',
+            'editable_field_1', 
+            'editable_field_2', 
+            'editable_field_3_but_also_ReadOnly_for_this_form',
         ]
 
 

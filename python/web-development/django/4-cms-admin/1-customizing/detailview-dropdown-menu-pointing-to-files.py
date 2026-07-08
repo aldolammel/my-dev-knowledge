@@ -61,8 +61,11 @@ class ModelWhereIsDropmenuForm(forms.ModelForm):
     """Customizing the XXXXXXX detail-view in the CMS. This is important for field_to_show_file_names field!"""
 
     class Meta:
-        model = models.ModelWhereIsDropmenu  # Form tied to this model.
-        fields = "__all__"
+        # Model tied to populate:
+        model = models.ModelWhereIsDropmenu
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
+        fields = "__all__" # Automatically remove fields editable=False!
 
     # Extra form fields (Not tied to the model):
     # Reserved space...

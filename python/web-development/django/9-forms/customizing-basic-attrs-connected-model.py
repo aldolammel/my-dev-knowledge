@@ -28,7 +28,7 @@ FORM: BASIC CUSTOMIZING ATTRIBUTES OF CONNECTED MODEL'S FIELD
 class MyModelForm(forms.ModelForm):
 
     class Meta:
-        # Connected model to populate:
+        # Model tied to populate:
         model = MyModel
         # Ordering fields on the form:
         fields = [

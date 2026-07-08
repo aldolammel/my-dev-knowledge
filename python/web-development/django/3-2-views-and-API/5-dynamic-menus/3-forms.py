@@ -18,7 +18,10 @@ class PagexMenuLinkForm(forms.ModelForm):
     )
 
     class Meta:
-        model = PagexMenuLink  # Form tied to this model.
+        # Model tied to populate:
+        model = PagexMenuLink
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
         fields = [
             "combined_link",
         ]

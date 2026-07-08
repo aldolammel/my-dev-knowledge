@@ -1,6 +1,6 @@
 [
-  "global-search-and-replace",
   "code-files",
   "show-all-hidden-files",
-  "better-search-views"
+  "omnisearch",
+  "global-search-and-replace"
 ]

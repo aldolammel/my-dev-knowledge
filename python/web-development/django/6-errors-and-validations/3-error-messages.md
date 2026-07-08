@@ -1,48 +1,24 @@
+#### Python > Django > Errors & Validations
+# Managing error messages
 
+---
+## DB level
 
-DJANGO: MANAGING ERROR MESSAGES
+- Basic about: [/python/web-development/django/6-errors-and-validations/validation-1-for-database](/python/web-development/django/6-errors-and-validations/validation-1-for-database.md)
 
+---
+## CMS level
 
-DB LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- Basic about: [/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms](/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms.md)
+- How to use any kind of error messages on CMS:  [/python/web-development/django/6-errors-and-validations/raise-ValidationError.py](/python/web-development/django/6-errors-and-validations/raise-ValidationError.py)
+- How to validate just the field's value added and not the field itself: [/python/web-development/django/6-errors-and-validations/models-validators-built-in](/python/web-development/django/6-errors-and-validations/models-validators-built-in.md)
 
-    >> Basic about:
+---
+## App level
 
-        ./validation-1-for-database.txt
+- Basic about: [/python/web-development/django/6-errors-and-validations/validation-2-for-app-forms](/python/web-development/django/6-errors-and-validations/validation-2-for-app-forms.md)
+- How to use error messages on templates: [/python/web-development/django/3-3-frontend-templates/form-error-messages.html](/python/web-development/django/3-3-frontend-templates/form-error-messages.html)
+- CSS customization for error messages: [/python/web-development/django/3-3-frontend-templates/form-error-css-customization](/python/web-development/django/3-3-frontend-templates/form-error-css-customization.md)
+- How to validate just the field's value added and not the field itself: [/python/web-development/django/6-errors-and-validations/models-validators-built-in](/python/web-development/django/6-errors-and-validations/models-validators-built-in.md)
 
-
-CMS LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-    >> Basic about:
-
-        ./validation-3-for-CMS-forms.txt
-    
-    >> How to use any kind of error messages on CMS:
-        
-        ./raise-ValidationError.py
-        
-    >> How to validate just the field's value added and not the field itself:
-        
-        ./models-validators-built-in.txt
-
-
-APP LEVEL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-    >> Basic about:
-
-        ./validation-2-for-app-forms.txt
-
-    >> How to use error messages on templates:
-
-        .../django/3-3-frontend-templates/form-error-messages.html
-
-        >> CSS customization for error messages:
-
-            .../django/3-3-frontend-templates/form-error-css-customization.txt
-
-    >> How to validate just the field's value added and not the field itself:
-        
-        ./models-validators-built-in.txt
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---

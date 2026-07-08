@@ -1,10 +1,15 @@
 from django import forms
-from .models import Movie
+from . import models
 
 class MovieForm(forms.ModelForm):
     class Meta:
-        model = Movie
-        fields = ['movie_title']
+        # Model tied to populate:
+        model = models.Movie
+        # Bringing specific fields from the model:
+        # Django rule: to be called here, the field CANNOT be 'editable=False'. If the field is editable but for the form it should be readonly_fields, no problem, you can called here!
+        fields = [
+            'movie_title',
+        ]
 
     def save(self, user, *args, **kwargs):
         instance = super().save(commit=False)
