@@ -26,39 +26,38 @@
 from django.core.exceptions import ValidationError
 
 def validate_something(value):  # this 'validate_' is a convention for validators!
-    """Validates xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. If alright, it returns None."""
+    """App-level validation for xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. If alright, it returns None."""
     if <SOMETHING_COMPLEX_THAT_IS_NOT_VALID>:
         raise ValidationError(
             "An error message here!",
-            # Check the code:
-            # /python/web-development/django/6-errors-and-validations/error-identification-codes.txt
-            code="xxxxxxxxxx",
+            # Check the code: /python/web-development/django/6-errors-and-validations/error-identification-codes.md
+            # code="xxxxxxxxxx",  # (looks useless!!!)
         )
 
 def validate_valid_chars(...):
     # ./validation-custom-only-valid-chars.py
 
 def validate_goals(p, s):
-    """Validates primary and secondary goal fields logic before to save them on the db. If alright, it returns None."""
+    """App-level validation for primary and secondary goal fields logic before to save them on the db. If alright, it returns None."""
     if not p and s:
         raise ValidationError(
             "Select a primary goal at least!",
-            code="invalid_choice",
+            # code="invalid_choice",  # (looks useless!!!)
         )
     elif p and s and p == s:
         raise ValidationError(
             "Primary and secondary goals cant be the same!",
-            code="overlap",
+            # code="overlap",  # (looks useless!!!)
         )
 
 from django.utils.translation import gettext_lazy as _  # for this case!
 def validate_even(value):
-    """Validates for even numbers only. If alright, it returns None."""
+    """App-level validation for even numbers only. If alright, it returns None."""
     if value % 2 != 0:
         raise ValidationError(
             _("%(value)s is not an even number"),
             params={"value": value},
-            code="invalid_choice",
+            # code="invalid_choice",  # (looks useless!!!)
         )
 
 

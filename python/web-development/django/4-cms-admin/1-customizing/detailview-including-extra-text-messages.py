@@ -32,7 +32,7 @@ class MovieContentInline(admin.StackedInline):
     )
 
     def get_fieldsets(self, request, obj=None):
-        """Brings all data from fieldsets of the admin class."""
+        """Built-in method that brings all data from fieldsets of the admin class."""
         fieldsets = list(super().get_fieldsets(request, obj))
         title, options = fieldsets[0]
         fields = list(options["fields"])

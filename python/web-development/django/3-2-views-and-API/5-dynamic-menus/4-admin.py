@@ -34,9 +34,9 @@ class PagexMenuAdmin(SortableAdminBase, admin.ModelAdmin):
         "name",
     ]
     readonly_fields = ("identifier",)
-    # All fields exclusively for the CMS Adding New object:
+    # All fields exclusively for the CMS' ADDING new object detail-view:
     # add_fieldsets = ()
-    # All fields exclusively for the CMS Visualizing an object:
+    # All fields exclusively for the CMS' EXISTING object detail-view:
     # fieldsets = ()
 
     def menu_link_counter(self, obj):

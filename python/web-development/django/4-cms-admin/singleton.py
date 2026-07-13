@@ -39,7 +39,7 @@ class PagexSettingsAdmin(admin.ModelAdmin):
         return False
 
     def get_fieldsets(self, request, obj=None):
-        """Brings all data from fieldsets of the admin class."""
+        """Built-in method that brings all data from fieldsets of the admin class."""
         # If it's in singleton creation step, escape this method:
         if obj is None:
             return self.add_fieldsets

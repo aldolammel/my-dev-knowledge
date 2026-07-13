@@ -1011,7 +1011,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 '''Customizing the Django User Registration form for front-end.'''
 
                 class Meta:
-                    # Model tied to populate:
+                    # Model tied used to populate it:
                     model = User
                     # Ordering fields on the form:
                     fields = [
@@ -1212,7 +1212,7 @@ EXTENDING THE USER FEATURES WITH PROFILE:
                 '''UserProfile form specific for Business usage through front-end.'''
 
                 class Meta:
-                    # Model tied to populate:
+                    # Model tied used to populate it:
                     model = UserProfileTwo
                     # Ordering fields on the form:
                     fields = [

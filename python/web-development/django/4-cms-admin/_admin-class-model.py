@@ -22,10 +22,10 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # list_filter = ()
     # search_fields = []
     # readonly_fields = ()
-    # All fields exclusively for the CMS Adding New object:
+    # All fields exclusively for the CMS' ADDING new object detail-view:
     # add_fieldsets = ()  # If you to use this, it demands get_fieldsets:
         # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
-    # All fields exclusively for the CMS Visualizing an object:
+    # All fields exclusively for the CMS' EXISTING object detail-view:
     # fieldsets = ()  # If you to use this, it demands get_fieldsets:
         # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
 

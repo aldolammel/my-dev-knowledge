@@ -20,126 +20,162 @@ models.CharField(max_length=40)
 ```
 <input type="text">
 ```
+
 models.TextField()
 ```
 <textarea>
 ```
+
 models.CharField(..., choices=(('v1', 'V 1'),('v2', 'V 2')), default='v1')
 ```
 <select>
 ```
+
 models.CharField(..., choices=(('v1', 'V 1'),('v2', 'V 2')), default='v1')
 ```
 <input type="radio">
 ```
+
+models.IntegerField(..., choices=((1, 'V 1'),(2, 'V 2')), default=1)
+```
+<select>
+```
+
 models.BooleanField() or NullBooleanField() <- when null=True
 ```
 <boolean>
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="button">
 ```
+
 models.ManyToMany()
 ```
 <input type="checkbox">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="color">
 ```
+
 models.DateField(auto_now_add=True)
 ```
 <input type="date">
 ```
+
 models.DateTimeField(auto_now_add=True)
 ```
 <input type="datetime-local">
 ```
+
 models.EmailField()
 ```
 <input type="email">
 ```
+
 models.FileField(default='', upload_to='/%Y/%m/%d/', max_length=100)
 ```
 <input type="file">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="hidden">
 ```
+
 models.ImageField(default='pholder.png', upload_to='/%Y/%m/%d/')
 ```
 <input type="image">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="month">
 ```
+
 models.PositiveSmallIntegerField()
 ```
 <input type="number">
 ```
+
 models.PositiveIntegerField()
 ```
 <input type="number">
 ```
+
 models.PositiveBigIntegerField()
 ```
 <input type="number">
 ```
+
 models.IntegerField()
 ```
 <input type="number">
 ```
+
 models.FloatField()
 ```
 <input type="number">
 ```
+
 models.DecimalField()
 ```
 <input type="number">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="password">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="range">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="reset">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx 
 ```
 <input type="search">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx 
 ```
 <input type="submit">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx 
 ```
 <input type="tel">
 ```
+
 models.TimeField(auto_now_add=True)
 ```
 <input type="time">
 ```
+
 models.DurationField()
 ```
 <input type="time">
 ```
+
 models.URLField(unique=True, default='', db_index=True)
 ```
 <input type="url">
 ```
+
 models.SlugField(unique=True, default='', db_index=True)
 ```
 <input type="url">
 ```
+
 xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 <input type="week">

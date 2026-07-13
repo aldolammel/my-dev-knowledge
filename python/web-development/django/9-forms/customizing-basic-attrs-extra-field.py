@@ -22,7 +22,7 @@ FORM: BASIC CUSTOMIZING ATTRIBUTES OF AN EXTRA FIELD (NOT FROM CONNECTED MODEL)
 class MyModelForm(forms.ModelForm):
     
     class Meta:
-        # Model tied to populate:
+        # Model tied used to populate it:
         model = ...
         # Ordering fields on the form:
         fields = [

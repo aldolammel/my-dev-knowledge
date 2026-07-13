@@ -1,22 +1,6 @@
 
-# RECOMMENDED APPROACH FOR GENERAL!
-# Result in CMS: Django highlights the field and set the warning message over the field!
-if not self.fieldnamehere:
-    raise ValidationError(
-        {
-            "fieldnamehere": ValidationError(
-                "This field is required!",  # custom msg, but if you use it, comment the code arg!
-                # code="required"           # if code's called, no matter what custom msg, django uses default (Looks useless!!!!)
-                    # More codes:
-                    # ./error-identification-codes.md
-            )
-        }
-    )
-
-
-
-# RECOMMENDED ONLY FOR THOSE COMPLEX OR CROSS-FIELD VALIDATIONS:
-# Result in CMS: Django highlights the field and set the custom error message over the field!
+# USED IN MODEL CLEAN() METHOD (FOR COMPLEX OR CROSS-FIELD VALIDATIONS):
+# Result in CMS, e.g. Django highlights the field and set the custom warning message over the field!
 if not self.fieldnamehere:
     raise ValidationError(
         {

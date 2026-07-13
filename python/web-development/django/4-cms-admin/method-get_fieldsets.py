@@ -62,7 +62,7 @@ fieldsets = [
 
 # This method is mandatory when we are using add_fieldsets and/or fieldsets benefits:
 def get_fieldsets(self, request, obj=None):
-    """Brings all data from fieldsets of the admin class."""
+    """Built-in method that brings all data from fieldsets of the admin class."""
     # Defines which fieldsets to work from:
     #   'add_fieldsets' are fieldsets of adding new objects;
     #   'fieldsets' are fieldsets of existing objects
@@ -73,7 +73,7 @@ def get_fieldsets(self, request, obj=None):
 # Example with even more customizations - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 def get_fieldsets(self, request, obj=None):
-    """Brings all data from fieldsets of the admin class."""
+    """Built-in method that brings all data from fieldsets of the admin class."""
     # # If it's a page updating, inject page_link_with_help into readonly_fields:
     if obj and "page_link_with_help" not in self.readonly_fields:
         self.readonly_fields += ("page_link_with_help",)  # type: ignore[assignment, misc]
@@ -96,7 +96,7 @@ def get_fieldsets(self, request, obj=None):
 class PagexPageContentInline(admin.StackedInline):
     ...
     def get_fieldsets(self, request, obj=None):
-        """Brings all data from fieldsets of the admin class."""
+        """Built-in method that brings all data from fieldsets of the admin class."""
 
         # This way below means it respects parent classes, mixins, any existing override of get_fieldsets(), and future changes in Django's admin internals:
         fieldsets = list(super().get_fieldsets(request, obj))

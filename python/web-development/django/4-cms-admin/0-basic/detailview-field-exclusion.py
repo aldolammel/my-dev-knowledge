@@ -29,7 +29,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
     readonly_fields = (
         "how_much_pages_has_my_site",
     )
-    # All fields exclusively for the CMS Adding New object:
+    # All fields exclusively for the CMS' ADDING new object detail-view:
     add_fieldsets = (
         (
             None,
@@ -50,7 +50,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
         ),
         ...
     )
-    # All fields exclusively for the CMS Visualizing an object:
+    # All fields exclusively for the CMS' EXISTING object detail-view:
     fieldsets = (
         ...
         (
@@ -75,7 +75,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
     # IMPORTANT: This method below is MANDATORY when we use add_fieldsets and fieldsets benefits:
     def get_fieldsets(self, request, obj=None):
-        """Brings all data from fieldsets of the admin class."""
+        """Built-in method that brings all data from fieldsets of the admin class."""
         
         # If you would have no field customizations:
         # return self.add_fieldsets if not obj else self.fieldsets
@@ -106,7 +106,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
     # ANOTHER EXAMPLE:
     def get_fieldsets(self, request, obj=None):
-        """Brings all data from fieldsets of the admin class."""
+        """Built-in method that brings all data from fieldsets of the admin class."""
         # If it's in singleton creation step, escape this method:
         if obj is None:
             return self.add_fieldsets

@@ -26,7 +26,7 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
 
             class CreateProfileView(CreateView):
                 template_name = "profiles/create_profile.html"
-                # Model tied to populate:
+                # Model tied used to populate it:
                 model = UserProfile
                 fields = "__all__"  # Automatically remove fields editable=False!
                 success_url = "/profiles"

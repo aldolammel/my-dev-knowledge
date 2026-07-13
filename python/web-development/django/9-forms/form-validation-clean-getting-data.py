@@ -45,7 +45,7 @@ class ExampleModelForm(forms.ModelForm):
 class ExampleModelForm(forms.ModelForm):
 
     class Meta:
-        # Model tied to populate:
+        # Model tied used to populate it:
         model = ExampleModel
         fields = "__all__"  # Automatically remove fields editable=False!
 

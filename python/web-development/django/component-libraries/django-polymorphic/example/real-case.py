@@ -120,7 +120,7 @@ class PagexElementTxtAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
         "updated_at",
         "updated_by",
     )
-    # All fields exclusively for the CMS Adding New object:
+    # All fields exclusively for the CMS' ADDING new object detail-view:
     add_fieldsets = (
         (
             None,
@@ -148,7 +148,7 @@ class PagexElementTxtAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
             },
         ),
     )
-    # All fields exclusively for the CMS Visualizing an object:
+    # All fields exclusively for the CMS' EXISTING object detail-view:
     fieldsets = (
         (
             None,
@@ -222,7 +222,7 @@ class PagexElementLinkAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
         "updated_at",
         "updated_by",
     )
-    # All fields exclusively for the CMS Adding New object:
+    # All fields exclusively for the CMS' ADDING new object detail-view:
     add_fieldsets = (
         (
             None,
@@ -251,7 +251,7 @@ class PagexElementLinkAdmin(SaveUserMixin, PolymorphicChildModelAdmin):
             },
         ),
     )
-    # All fields exclusively for the CMS Visualizing an object:
+    # All fields exclusively for the CMS' EXISTING object detail-view:
     fieldsets = (
         (
             None,
