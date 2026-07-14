@@ -87,5 +87,13 @@
       ],
       "key": "Home"
     }
+  ],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Numpad0"
+    }
   ]
 }

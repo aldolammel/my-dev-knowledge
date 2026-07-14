@@ -1,18 +1,21 @@
+#### Python > Django > Signals
+# Basic of signals
 
+---
 
-BASIC SIGNALS
+## Move signals to a dedicated `signals.py` and connect them in `AppConfig.ready()`:
 
+Signal handlers are a classic source of circularity because they often need to import models from other apps. Isolating them avoids polluting `models.py`:
 
+E.g.
+```
+# /apps/my_subapp/apps.py
+from django.apps import AppConfig
 
-    >> Open the sub-app file called 'app.py', and ensure that the signals are connected at the right
-        time. The common practice is to import the signals module in the ready method of your
-        sub-app's configuration class:
+class MySubappConfig(AppConfig):
+	...
+	name = 'apps.my_subapp'
 
-            from django.apps import AppConfig
-
-            class SubAppNameConfig(AppConfig):
-                ...
-                name = 'sub_app_folder_name'
-
-                def ready(self):
-                    import sub_app_folder_name.signals
+	def ready(self):
+		import apps.my_subapp.signals
+```

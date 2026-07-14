@@ -1,30 +1,31 @@
 """
-    DJANGO > UTILS: ALDO'S SOLUTION
+    DJANGO > UTILS: ALDO'S SLUGIFIER SOLUTION
 
-    Set this function in your app's utils_models.py:
+    
 """
 
-# TO AVOID CIRCULAR IMPORT ERRORS, THIS FILE DOESN'T IMPORT ANY FROM MODELS.PY, AND ITS UTILS ARE APPLIED ONLY FOR MODELS.PY:
 
+# apps/your_app/utils.py:
 
-def pagex_slugifier(txt: str, is_underscore: bool = False, should_prefix: bool = False):
+def pagex_slugifier(txt: str, is_underscore: bool = False, should_suffix: bool = False):
+    """Extended Django slugify function to serve Pagex purposes."""
     from django.utils.text import slugify
 
     # Initial value:
     slugified = slugify(txt)
     # Traditional slug (common):
-    if not is_underscore and not should_prefix:
-        return slugified  # text-like-this
+    if not is_underscore and not should_suffix:
+        return slugified  # E.g. text-like-this
     # Special slugs:
     special_slugified = slugified.replace("-", "_")
     # Slug with underscore instead:
-    if is_underscore and not should_prefix:
-        return special_slugified  # text_like_this
+    if is_underscore and not should_suffix:
+        return special_slugified  # E.g. text_like_this
     # Slug underscore with prefix:
-    if is_underscore and should_prefix:
+    if is_underscore and should_suffix:
         from random import randint
 
-        return f"{randint(1, 9999)}_{special_slugified}"  # 0001_text_like_this
+        return f"{special_slugified}_{randint(20, 9999)}"  # E.g. text_like_this_3023
     else:
-        print("PAGEX ERROR: pagex_slugifier has trying an ilegal setup!")
+        print(f"{consts.TAG_E}: pagex_slugifier() has trying a forbidden setup!")
         return None
