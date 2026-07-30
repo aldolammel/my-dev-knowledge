@@ -20,3 +20,8 @@ x) Check if all basic motherboard settings is ok for your system:
 
     4.3) Install your default browser:
         .../os/windows/1-apps-install/basic-apps/browser-chrome.txt
+
+
+**4.6) Privacy > Turn off your Recent Opened Files:**
+
+Settings > Privacy & Security > File History & Trash > Turn off "File History".

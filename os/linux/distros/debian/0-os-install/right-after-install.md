@@ -37,6 +37,10 @@ Install this smarter terminal: [/os/linux/distros/debian/1-apps-install/basic-ap
 
 Customize the Terminal: [/os/linux/distros/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash](/os/linux/distros/debian/1-apps-install/basic-apps/terminal-CLI-oh-my-bash.md)
 
+**4.6) Privacy > Turn off your Recent Opened Files:**
+
+Settings > Privacy & Security > File History & Trash > Turn off "File History".
+
 ---
 ## 5) Making Linux mount shared SSDs automatically:
 

@@ -28,6 +28,10 @@ E.g. [/os/linux/distros/fedora/1-apps-install/basic-apps/using-dnf/browser-firef
 
 Install this smarter terminal: ==Something better for Fedora???==
 
+**3.5) Privacy > Turn off your Recent Opened Files:**
+
+Settings > Privacy & Security > File History & Trash > Turn off "File History".
+
 ---
 ## 4) Making Linux mount shared SSDs automatically:
 
