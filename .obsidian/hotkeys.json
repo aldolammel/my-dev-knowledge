@@ -37,6 +37,12 @@
         "Mod"
       ],
       "key": "Numpad0"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Insert"
     }
   ],
   "editor:toggle-highlight": [
@@ -94,6 +100,12 @@
         "Alt"
       ],
       "key": "Numpad0"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Insert"
     }
   ]
 }

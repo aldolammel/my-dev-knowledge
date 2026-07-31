@@ -1,6 +1,6 @@
 # WHAT IS IT
 
-This is a limited text-based database of programming matters written and maintained by _@aldolammel_ as part of his studies and experiences. All data here is structured to be read as action roadmaps, and not as a official documentations or wiki alternative.
+This is a limited text-based database of programming matters written and maintained by _@aldolammel_ as part of his studies and experiences. All data here is structured to be read as action roadmaps, and not as a official documentations or wiki alternatives.
 
 ## Start here:
 
@@ -10,8 +10,8 @@ Or check the example further below to understand how it's organized.
 
 ## How to use it:
 1. Clone this repo in your machine;
-2. Open the repo folder in your favorite markdown IDE (e.g. VSCode, Obsidian);
-3. Use the IDE finder tool and be happy!
+2. Open the repo folder in your favorite markdown IDE (e.g. VSCode, Obsidian, or other PKM app);
+3. Use the PKM search tool, and be happy!
 
 ## Suggest improvements and fixes:
 

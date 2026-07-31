@@ -1,11 +1,12 @@
+#### Python > Django > CMS
+# Many-To-Many field as an horizontal multi-selection field
 
+---
 
-DJANGO > CMS: MANY-TO-MANY FIELD AS AN HORIZONTAL MULTI-SELECTION FIELD
-
-    What:
-        ./detailview-m2m-horizontal-listing.jpg
-    
-    In admin.py:
+## What:
+![](/python/web-development/django/4-cms-admin/0-basic/detailview-m2m-horizontal-multi-selection.jpg)
+   
+## In admin.py:
 
         # from:
             filter_horizontal = ()

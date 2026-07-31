@@ -1,6 +1,8 @@
 [
   "code-files",
   "show-all-hidden-files",
+  "obsidian-excalidraw-plugin",
+  "global-search-and-replace",
   "omnisearch",
-  "global-search-and-replace"
+  "obsidian-git"
 ]
