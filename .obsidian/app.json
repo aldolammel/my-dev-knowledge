@@ -8,5 +8,11 @@
   "showInlineTitle": false,
   "defaultViewMode": "preview",
   "readableLineLength": false,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": false,
+  "showIndentGuide": false,
+  "rightToLeft": false,
+  "useTab": true
 }
