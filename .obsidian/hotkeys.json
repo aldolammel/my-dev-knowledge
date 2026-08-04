@@ -77,23 +77,6 @@
     }
   ],
   "editor:open-link-in-new-leaf": [],
-  "editor:open-search": [],
-  "omnisearch:show-modal": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Home"
-    }
-  ],
-  "omnisearch:show-modal-infile": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Home"
-    }
-  ],
   "editor:toggle-code": [
     {
       "modifiers": [
@@ -107,5 +90,27 @@
       ],
       "key": "Insert"
     }
-  ]
+  ],
+  "obsidian-excalidraw-plugin:save": [],
+  "markdown:add-metadata-property": [],
+  "workspace:close": [],
+  "workspace:close-window": [],
+  "file-explorer:new-file-in-new-pane": [],
+  "editor:delete-paragraph": [],
+  "editor:follow-link": [],
+  "workspace:goto-last-tab": [],
+  "workspace:goto-tab-1": [],
+  "workspace:goto-tab-2": [],
+  "workspace:goto-tab-3": [],
+  "workspace:goto-tab-4": [],
+  "workspace:goto-tab-5": [],
+  "workspace:goto-tab-6": [],
+  "workspace:goto-tab-7": [],
+  "workspace:goto-tab-8": [],
+  "graph:open": [],
+  "app:go-back": [],
+  "app:go-forward": [],
+  "editor:open-link-in-new-window": [],
+  "editor:open-link-in-new-split": [],
+  "switcher:open": []
 }
