@@ -6,8 +6,9 @@ BACK AND FRONT-END INTEGRATION: DJANGO (WITH PAGEX) AND VUE
     PRE.2) It's crucial 'Pagex' module (sub-app by @aldolammel) be installed in the back-end.
             /python/web-development/django/useful-sub-apps/pagex_install-and-integration.txt
 
-    PRE.3) Remember - data workflow between Django and Vue:
-            ./django-with-vue-integration.png
+PRE.3) Remember - data workflow between Django and Vue:
+
+[/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
     PRE.4) Make sure you already got the front-end .env file:
             /environment-variables/env-for-local/in-frontend/.env

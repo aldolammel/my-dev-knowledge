@@ -44,9 +44,9 @@ VUE ROUTER: WHAT IS IT
 
 
 
-    >> Dataflow of a real Vue-Router usage in Django project:
-        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+>> Dataflow of a real Vue-Router usage in Django project:
+[/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
 
-    >> Installing:
-        /javascript/web-development/frontend/vue/3-component-libraries/vue-router/1-router-installation.md
+>> Installing:
+/javascript/web-development/frontend/vue/3-component-libraries/vue-router/1-router-installation.md

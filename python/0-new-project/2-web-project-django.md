@@ -1,2 +1,6 @@
+#### Python > Project types
+# Web-project Django only
 
-[web-project-django-only](web-project-django-only.md)
+---
+
+[/python/web-development/django/0-new-project/web-project-django-only](/python/web-development/django/0-new-project/web-project-django-only.md)

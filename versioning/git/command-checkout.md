@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Checkout
 
+---
 
-VERSIONING > GIT: CHECKOUT
-
-    Switches between branches or restores files from a specific commit.
+Switches between branches or restores files from a specific commit.
 
     >> Switching to another branch:
         

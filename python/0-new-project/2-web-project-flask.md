@@ -1,1 +1,6 @@
-[web-project-flask-only](web-project-flask-only.md)
+#### Python > Project types
+# Web-project Flask only
+
+---
+
+[/python/web-development/flask/0-new-project/web-project-flask-only](/python/web-development/flask/0-new-project/web-project-flask-only.md)

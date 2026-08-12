@@ -2,7 +2,6 @@
 # Which Python project you wanna start
 
 ---
-
 ## 1) Make a choice of a project roadmap:
 
 - **Updating:**

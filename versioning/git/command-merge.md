@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Merge
 
+---
 
-VERSIONING > GIT: MERGE
-
-    Combines changes from one branch into your current branch.
+Combines changes from one branch into your current branch.
 
     Alternatives to merging?
         ./command-fetch.txt

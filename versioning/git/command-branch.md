@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Branch
 
+---
 
-VERSIONING > GIT: BRANCH
-
-    Lists, creates, or deletes branches in your repository.
+Lists, creates, or deletes branches in your repository.
 
 
     >> Checking which branch you are:

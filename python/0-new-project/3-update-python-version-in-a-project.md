@@ -3,8 +3,6 @@
 
 ---
 
-# Updating Python in an existing project
-
 ==Critical!==
 Are you really sure the Python version you need to install is compatible with other techs of the project stack? For example, the back-end framework you are using supports this new Python version? If so, keep going!
 

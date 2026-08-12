@@ -21,8 +21,9 @@
         >> API:          /api/_about.md
         >> Serializers:  /api/serializers.txt
 
-    >> Dataflow of a real Django REST Framework usage:
-        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+Dataflow of a real Django REST Framework usage:
+
+[/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
 ---
 

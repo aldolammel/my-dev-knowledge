@@ -2,11 +2,12 @@
 
 # Using sync command
 
-The command looks for project files that listing the configurations and dependencies (like _pyproject.toml_, _requirements.txt_). Once UV read, for example, the _pyproject.toml_ file, it automatically updates _uv.lock_ file! UV makes it comparing the desired state (your project files) with the current state (what's already installed) and calculates the difference. The most import file for _uv sync_ is _uv.lock_ (in project folder root) that is dynamically managed.
+---
 
-**Only in case of _requirements.txt:_**
+The command looks for project files that listing the configurations and dependencies (like `pyproject.toml`, `requirements.txt`). Once UV read, for example, the `pyproject.toml` file, it automatically updates `uv.lock` file! UV makes it comparing the desired state (your project files) with the current state (what's already installed) and calculates the difference. The most import file for `uv sync` is `uv.lock` (in project folder root) that is dynamically managed.
 
-Convert your current existing project using _requirements.txt_ to use _pyproject.toml_ file: [[converting-non-uv-project-in-one]]
+**Only in case of _requirements.txt:_** 
+- Convert your current existing project using `requirements.txt` to use `pyproject.toml` file: [/python/package-manager/uv/converting-non-uv-project-in-one](/python/package-manager/uv/converting-non-uv-project-in-one.md)
 
 ---
 

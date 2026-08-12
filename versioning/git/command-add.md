@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Add
 
+---
 
-VERSIONING > GIT: ADD
-
-    Stages changes (new, modified, or deleted files) to be included in the next commit.
+Stages changes (new, modified, or deleted files) to be included in the next commit.
 
 
     >> Put a specific file/specific changes on LOCAL STAGE:

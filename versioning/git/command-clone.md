@@ -1,15 +1,23 @@
+#### Versioning > Git > Command
+# Clone
 
+---
 
-VERSIONING > GIT: CLONE
+It creates a local copy of a remote repository on your machine.
 
-    Creates a local copy of a remote repository on your machine.
+---
+## 1) Getting in/Cloning an existent project/repository:
 
+```
+git clone <HTTPS_OF_PROJECT> .
+```
 
-    >> Getting in/Cloning an existent project/respository:
+==Important:== 
+That "." makes the clone to be installed exactly in the folder where you are, don't creating the parent folder.
 
-        $ git clone HTTPS_OF_PROJECT .      // that "." makes the clone to be installed
-                                            //exactly in the folder where you are, dont
-                                            // creating the parent folder.
+---
+## 2) Check the current branch status (everything must be fine):
 
-        # Check the current branch status (everything must be fine):
-            ./command-status.txt
+[/versioning/git/command-status](/versioning/git/command-status.md)
+
+---

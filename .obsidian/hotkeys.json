@@ -112,5 +112,21 @@
   "app:go-forward": [],
   "editor:open-link-in-new-window": [],
   "editor:open-link-in-new-split": [],
-  "switcher:open": []
+  "switcher:open": [],
+  "omnisearch:show-modal-infile": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Home"
+    }
+  ],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Home"
+    }
+  ]
 }

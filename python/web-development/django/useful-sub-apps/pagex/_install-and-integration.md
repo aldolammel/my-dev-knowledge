@@ -1,10 +1,9 @@
 DJANGO USEFUL APPS: PAGEX by @aldolammel
 
-    It's an Django app that manages all pages for a website, make the process a little bit more
-    dynamic.
+It's an Django app that manages all pages for a website, make the process a little bit more dynamic.
 
 
-    1) Installing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## 1) Installing
 
         1.PRE) Your Django project must be running fine with Django 5.2 or newer;
 
@@ -32,8 +31,7 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
                 .../django/component-libraries/django-cors-headers/
 
 
-
-    2) Integration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## 2) Integration
 
         2.1) In core/settings.py:
 
@@ -103,3 +101,4 @@ DJANGO USEFUL APPS: PAGEX by @aldolammel
                 ./with-frontend-react.txt
 
 ---
+

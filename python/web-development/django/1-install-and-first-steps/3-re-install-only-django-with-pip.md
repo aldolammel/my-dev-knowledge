@@ -1,4 +1,7 @@
-DJANGO RE-INSTALLATION: USING PIP AS PACKAGE MANAGER (PYTHON BUILT-IN SOLUTION)
+#### Python > Django
+# Django re-installation: using PIP as package manager (Python built-in solution)
+
+---
 
     PRE.1) If you wanna install a new brand project, skip this roadmap, and go to:
         ./2-install-project-with-pip.md

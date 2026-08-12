@@ -7,7 +7,7 @@ Avoid to use the *uv pip install -r requirements.txt* command once it will not u
 If you wanna convert an existing project to use UV as its package manager, including all basic package management files to replace *requirements.txt*, do it:
 
 ## Before:
-1. In the existing project folder, install UV: [[_about-install-and-update]]
+1. In the existing project folder, install UV: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
 ## 1) There, active the local environment and execute *uv init*!
 

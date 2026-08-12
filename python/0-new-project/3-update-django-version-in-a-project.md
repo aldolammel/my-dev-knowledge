@@ -1,1 +1,6 @@
-[update-django-version](update-django-version.md)
+#### Python > Project types
+# Updating Django version in an existing project
+
+---
+
+[/python/web-development/django/0-new-project/update-django-version](/python/web-development/django/0-new-project/update-django-version.md)

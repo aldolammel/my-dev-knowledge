@@ -1,8 +1,9 @@
 #### Python > Django > Project types
-
 # Discovery in Django
 
-    Group of action to figure out a Django project settings and features:
+---
+
+Group of action to figure out a Django project settings and features:
 
         PRE) Discovery about Python:
             /python/0-new-project/discovery-python.md

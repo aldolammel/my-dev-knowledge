@@ -1,4 +1,7 @@
-DJANGO > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
+#### Python > Django
+# Project installation: using UV as package manager
+
+---
 
     PRE.1) If you wanna re-install an existing project, skip this roadmap, and go to:
         ./1-re-install-project-with-uv.txt

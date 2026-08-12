@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Pull
 
+---
 
-VERSIONING > GIT: PULL
-
-    Fetches changes from a remote repository and immediately merges them into your current branch.
+Fetches changes from a remote repository and immediately merges them into your current branch.
 
     If you just wanna fetch:
         ./command-fetch.txt

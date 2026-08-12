@@ -1,5 +1,4 @@
 #### Python > Django > Project types
-
 # (WIP) Django as back-end + React as front-end
 
 ---

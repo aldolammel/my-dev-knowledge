@@ -1,8 +1,9 @@
 #### Python > Project types
-
 # Discovery
 
-    Group of action to figure out a Python project settings and features:
+---
+
+Group of action to figure out a Python project settings and features:
 
         x) Current Python version installed:
 

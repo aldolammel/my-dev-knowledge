@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Remote
 
+---
 
-VERSIONING > GIT: REMOTE
-
-    Manages the set of remote repositories your local repository tracks.
+Manages the set of remote repositories your local repository tracks.
 
 
     >> Publishing your changes (from Local Repo) to the REMOTE same branch:

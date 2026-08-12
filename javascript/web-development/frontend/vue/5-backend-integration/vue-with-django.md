@@ -8,5 +8,6 @@ BACK AND FRONT-END INTEGRATION: DJANGO AND VUE
 
 ---
 
-    >> DJANGO/VUE DATA WORKFLOW:
-        /python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/django-with-vue-integration.png
+DJANGO/VUE DATA WORKFLOW:
+
+[/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)

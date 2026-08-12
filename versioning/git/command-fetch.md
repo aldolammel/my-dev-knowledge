@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Fetch
 
+---
 
-VERSIONING > GIT: FETCH
-
-    Downloads commits, files, and references from a remote repository without merging them into your local branch.
+Downloads commits, files, and references from a remote repository without merging them into your local branch.
 
     If you wanna merging:
         ./command-merge.txt

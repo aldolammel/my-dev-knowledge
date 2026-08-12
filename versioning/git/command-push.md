@@ -1,8 +1,9 @@
+#### Versioning > Git > Command
+# Push
 
+---
 
-VERSIONING > GIT: PUSH
-
-    Uploads your local commits to a remote repository.
+Uploads your local commits to a remote repository.
 
 
     >> Creating a new remote branch:
