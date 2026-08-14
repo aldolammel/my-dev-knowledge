@@ -36,7 +36,7 @@ from polymorphic.admin import (
 ```
 @admin.register(models.OnlyForMale)
 class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
-	base_model = models.OnlyForMale
+	base_model = models.OnlyForMale  # Declared here too only for Polymorphic purpose!
 	show_in_index = False  # hide link from CMS home (sidebar menu still shown)
 
 	# Cause you need CMS audit:
@@ -50,7 +50,7 @@ And so on for all form options...
 ```
 @admin.register(models.CommonForPeople)
 class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
-	base_model = models.CommonForPeople
+	base_model = models.CommonForPeople  # Declared here too only for Polymorphic purpose!
 	child_models = (
 		models.OnlyForMale,    # First on this tuple's treated as the default!
 		models.OnlyForFemale,

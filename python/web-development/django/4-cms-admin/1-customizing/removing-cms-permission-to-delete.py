@@ -11,7 +11,7 @@
 """
 
 from django.contrib import admin
-from .models import UserProfile  # type: ignore
+from .models import UserProfile
 
 
 class UserProfileCMS(admin.ModelAdmin):

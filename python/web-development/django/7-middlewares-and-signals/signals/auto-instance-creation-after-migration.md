@@ -24,7 +24,6 @@ def your_fuction_name_to_create_instances(sender, **kwargs):
         model.objects.get_or_create(slug=defaults["slug"], defaults=defaults)
 ```
 
-
 ---
 ## 2) Connect a receiver to `post_migrate`:
 
@@ -43,8 +42,17 @@ class YourSubappConfig(AppConfig):
         post_migrate.connect(signals.your_fuction_name_to_create_instances, sender=self)
 ```
 
+---
+## 3) (Optional) Blocking the deletion of seed instances:
+[/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete](/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-delete.py)
 
 ---
-## 3) Done!
+## 4) (Optional) Blocking the addition of new instances:
+[/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add](/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add.py)
+
+---
+## 5) Done!
 
 Now, every time the `migrate` command is run, Django will execute that function, making sure those instances exist!
+
+---
