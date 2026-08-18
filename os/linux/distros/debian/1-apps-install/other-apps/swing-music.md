@@ -7,25 +7,23 @@ It's a Music player app based on Python.
 
 ---
 ## 1) Installing:
-1.1) Create a venv;
 
-1.2) Install Python 3.12;
+**1.1) Create a venv:** 
+- Using Python built-in solution: [/python/3-virtual-environment/creating-virtual-environment](/python/3-virtual-environment/creating-virtual-environment.md)
+- Using `uv`: [/python/package-manager/uv/create-or-find-current-venv](/python/package-manager/uv/create-or-find-current-venv.md)
+
+**1.2) Install Python 3.12;**
 
 ==Be aware!==
 Currently, jun/2026, the app is not compatible with Py 3.13+
 
-1.3) Install the app:
-Using PIP:
-```
-pip install swingmusic
-```
-Using UV:
-```
-uv add swingmusic
-```
+**1.3) Install the app:**
+- Using PIP: `$ pip install swingmusic`
+- Using UV: `$ uv add swingmusic`
 
 ---
 ## 2) Integration:
+
 2.1) Make it be a service to start up with the OS:
 ```
 sudo nano /etc/systemd/system/swingmusic.service
@@ -75,16 +73,21 @@ sudo systemctl status swingmusic
 http://localhost:1970
 
 ==Important!==
-Case you edit song's metadata through an external solution, you must restart the Swing Music service manually to see the changes:
-```
-sudo systemctl restart swingmusic
-```
+Case you edit song's metadata through an external solution, you must:
+
+- Easiest solution: In your app, go to `Settings`, `Folders`, and then click on `Rescan`;
+- Solid solution: restart the Swing Music service manually to see the changes: `$ sudo systemctl restart swingmusic`
 
 ---
 ## 4) Updating:
 
-4.1) Stop the service!
+4.1) Stop the service:
+```
+sudo systemctl stop swingmusic
+```
+
 4.2) In another terminal, make sure you activated the app venv!
+
 4.3) Update the app:
 ```
 uv add "swingmusic==<version>"
@@ -93,8 +96,9 @@ E.g.
 ```
 uv add "swingmusic==3.0.1"
 ```
+
 4.4) Restart the service!
 
 ---
 ## This for Windows:
-Soon!
+[/os/windows/1-apps-install/other-apps/swing-music](/os/windows/1-apps-install/other-apps/swing-music.md)

@@ -10,5 +10,4 @@ uv pip install -y <module_name>
 ```
 
 ## Or auto-installing (requirements.txt file):
-
-[[auto-installation-from-requirements-file]]
+[/python/package-manager/pip/auto-installation-from-requirements-file](/python/package-manager/pip/auto-installation-from-requirements-file.md)

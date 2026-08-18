@@ -56,6 +56,7 @@ class ActorAdmin(admin.ModelAdmin):
 
 class MovieCastingInline(admin.StackedInline):
     model = models.Casting
+    fk_name = "actor"  # to flag what Foreignkey (attr) is the the main one for this inline class case the model class has more than one foreignekey.
     form = forms.CastingForm
     extra = 0
 
