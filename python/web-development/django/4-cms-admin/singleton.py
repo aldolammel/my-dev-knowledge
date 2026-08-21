@@ -1,18 +1,24 @@
 """
-    SINGLETON: CREATION WITH DJANGO (STEP 2/2)
+    SINGLETON: CREATION WITH DJANGO (STEP 2/3)
 
     >> What is it:
         /dev-concepts/singleton.md
 
     >> This file:
-        /django_project/apps/your_app/models.py
+        /django_project/apps/your_app/admin.py
 
-    >> Step 1/2 (models.py):
+    >> Step 1/3 (models.py):
         /python/web-development/django/3-1-models-database/singleton.py
 
-    >> Step 2/2 (admin.py)
+    >> Step 2/3 (admin.py)
         This file!
+
+    >> Step 3/3 (signals.py & apps.py)
+        /python/web-development/django/7-middlewares-and-signals/signals/seeding-singleton.md
 """
+
+# subapp/admin.py:
+
 
 from .models import PagexSettings
 

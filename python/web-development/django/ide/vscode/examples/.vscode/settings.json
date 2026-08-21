@@ -72,6 +72,7 @@
     // Files/folders to hide from the VSCode searchings:
     "search.exclude": {
         //...
+        "**/migrations": true,
     },
     // HUMAN LANGUAGE, DICTIONARY STUFF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     // ...

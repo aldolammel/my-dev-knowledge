@@ -7,7 +7,7 @@
 ### 1.1) Database
 1. [ ] What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
 ### 1.2) Back-end
-1. [ ] Django install options: [0-django-installation-and-setup](0-django-installation-and-setup.md)
+1. [ ] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end
 1. [ ] IDE, framework setup:  [VSCode for Vue](/javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.md) or [PyCharm for Vue](/javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.md).
 2. [ ] Vue installation (and its dependencies): [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)

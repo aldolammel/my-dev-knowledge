@@ -2,7 +2,6 @@
 # Basic of signals
 
 ---
-
 ## Move signals to a dedicated `signals.py` and connect them in `AppConfig.ready()`:
 
 Signal handlers are a classic source of circularity because they often need to import models from other apps. Isolating them avoids polluting `models.py`:
@@ -19,3 +18,8 @@ class MySubappConfig(AppConfig):
 	def ready(self):
 		import apps.my_subapp.signals
 ```
+
+---
+## Using signals to create instances automatically:
+[/python/web-development/django/7-middlewares-and-signals/signals/auto-instance-creation-after-migration](/python/web-development/django/7-middlewares-and-signals/signals/auto-instance-creation-after-migration.md)
+
