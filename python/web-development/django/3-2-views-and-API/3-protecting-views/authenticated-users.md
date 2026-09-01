@@ -1,14 +1,15 @@
 PROTECTING VIEW: AUTHENTICATED USERS
 
-    >> Validating whether the visitor is authenticated:
+>> Validating whether the visitor is authenticated:
 
-        E.g.
+E.g.
+```
+if request.user.is_authenticated:
+	pass
+```
 
-            if request.user.is_authenticated:
-                pass
 
 
+>> NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
 
-    >> NEED A UNAUTHORIZED PAGE (401)? CHECK THIS OUT:
-
-        /python/web-development/django/12-error-pages/401/
+Folder: /python/web-development/django/12-error-pages/401/
