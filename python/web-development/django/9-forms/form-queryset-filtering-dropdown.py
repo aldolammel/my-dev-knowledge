@@ -16,13 +16,13 @@
     
 """
 from django import forms 
-from .models import BrandCarStore, Vehicle
+from . import models
 
 class BrandCarStoreForm(forms.ModelForm):
     
     class Meta:
         # Model tied used to populate it:
-        model = BrandCarStore
+        model = models.BrandCarStore
         # Ordering fields on the form:
         # fields = []
     
@@ -36,8 +36,13 @@ class BrandCarStoreForm(forms.ModelForm):
         
         if seller and seller.brand:
             
+            # (Simplest version): 
             # Connected fields (from connected model), customizations:
-            self.fields['sold_vehicle'].queryset = Vehicle.objects.filter(brand=seller.brand)  # type: ignore
+            self.fields['sold_vehicle'].queryset = models.Vehicle.objects.filter(brand=seller.brand)  # type: ignore
+            # (Safier version):
+            sold_veh = self.fields["sold_vehicle"]
+            if isinstance(sold_veh, forms.ModelChoiceField):
+                sold_veh.queryset = models.Vehicle.objects.filter(brand=seller.brand)
             
             # Extra fields, pre-populating:
             # Unlike fields from connected model, extra fields must be manually linked!

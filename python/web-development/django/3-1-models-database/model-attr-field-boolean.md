@@ -1,6 +1,8 @@
 #### Python > Django > Model Class
 # Attribute type: BooleanField
 
+---
+
 **Common Usage:**
 Representing a True/False or On/Off state.
 

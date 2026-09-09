@@ -13,6 +13,9 @@
 
     >> Some stuff you could set in here, actually you can use get_form() method too:
         ./method-get_form.py
+
+    >> Instead of formfield_for_foreignkey method, use the custom admin class form (forms.py) init to define it (excellent option):
+        /python/web-development/django/9-forms/form-queryset-filtering-dropdown.py
 """
 
 # Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

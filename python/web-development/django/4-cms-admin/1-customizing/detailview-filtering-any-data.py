@@ -14,8 +14,7 @@ class ExampleModelAdmin(admin.ModelAdmin):
 
 
     # FILTERING FROM A FIELD/ATTRIBUTE (DROPDOWN) - - - - - - - - - - - - - - - - - - - - - - - - - 
-    # ./method-formfield_for_foreignkey.py
-
+    # /python/web-development/django/4-cms-admin/method-formfield_for_foreignkey.py
     
 
  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -24,7 +23,9 @@ class ExampleModelAdmin(admin.ModelAdmin):
 """
     FORMS.PY:
 
-    Don't forget to make the filtering also in forms.py (different way) to make the feature usefull throught the front-end as well case the Django templates is your front-end solution too.
+    Sometimes, the best way to do this is edit the custom form of that admin class OR create one to set this filtering!
+    The great stuff in to filtering through the Form Class (forms.py) is the way is reproduced to the app's front-end easily,
+    and not just for CMS:
 
     /python/web-development/django/9-forms/form-queryset-filtering-dropdown.py
 """

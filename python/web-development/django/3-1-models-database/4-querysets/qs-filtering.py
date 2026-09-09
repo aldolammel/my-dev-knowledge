@@ -116,3 +116,12 @@ as_tuple = Recipe.objects.filter(id=7).values_list()
 # Return as boolean:
 as_bool = Recipe.objects.filter(id=7).exists()
 """ Output: True """
+
+
+"""
+EXAMPLES:
+
+    How to make the CMS doens't show unpublished things with the published ones:
+        /python/web-development/django/4-cms-admin/method-formfield_for_foreignkey.py
+
+"""
