@@ -4,7 +4,8 @@
 ---
 
 Django is divided in 3 main parts: models, views, and templates. Views are responsible for manage what data the user will see through a template. The 'views.py' file contains all logic the user can see and which template/webpage the data will be seen.
-- Views are also responsible for manage what data the users of the app can send to the database and, actually, what data they can read/see.
+
+- Besides the Views are responsible about what data users can read/see, Views are also what manages the data the app's users can send to the database.
 - The 'views.py' file is closely related with 'urls.py' file, this one defining which view will be called in certain URL;
 - Views are created through two ways apart:
 	- function-base view: known as FBVs.

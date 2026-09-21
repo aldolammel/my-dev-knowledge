@@ -1,8 +1,10 @@
 #### Python > Django > Models > ERD
-# Exporting directly from Django
+# Generating/Exporting directly from Django
 
 ---
 ## Before:
+
+What is ERD: [/database/\_tools/ERD/\_about](database/_tools/ERD/_about.md)
 
 **1) Make sure you got GraphViz installed (not-in-virtual-env):**
 Windows:

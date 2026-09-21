@@ -100,5 +100,10 @@ It's an Django app that manages all pages for a website, make the process a litt
             >> Front-end with React:
                 ./with-frontend-react.txt
 
+
+/static/pagex/css/admin_content_inline.css!
+
+
+
 ---
 
