@@ -2,9 +2,11 @@
 # One-to-One
 ---
 
+Shorthand: `1:1`
+
 This the least common type of relationship, but it’s the easiest to visualize. In this relationship, there is one and only one record on each side of the relationship. Each row in a table is connected to a single row in another table. A one-to-one relationship is always one-to-one, no matter which table you start with.
 
-==image==
+![](database/_basic-concepts/relationship-types/imgs/erd_one-to-one.png)
 
 ## It doesn't offer much  for data analysis but it's great to limit access:
 
@@ -20,5 +22,4 @@ This the least common type of relationship, but it’s the easiest to visualize.
 - A student ID for a school is connected to a single student. 
 - Santa Claus is affiliated with a single holiday. 
 - A driver generally has one license. 
-- An edition of a book has one publisher.
 - Most countries have one national flag and one capital city, though there are a few countries with two (e.g., Bolivia, Swaziland, and Honduras), and one country with three capitals (South Africa). Because of rare exceptions like this, database administrators need to carefully consider if a relationship should be set up as one-to-one.

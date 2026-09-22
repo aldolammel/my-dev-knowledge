@@ -2,11 +2,11 @@
 # One-to-Many / Many-to-One
 ---
 
+Shorthand: `1:N`
+
 This is the most common relationship type. In this relationship, there is one record on one side of the relationship, and zero, one, or many on the other. From the linked table, the one-to-many relationship becomes a many-to-one relationship. For example, a biological mom can have many children, but each child can only have one biological mom.
 
-
-==IMAGEM==
-
+![](database/_basic-concepts/relationship-types/imgs/erd_one-to-many.png)
 
 ## Other examples of one-to-many:
 

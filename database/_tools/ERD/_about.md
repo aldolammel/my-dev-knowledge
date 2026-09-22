@@ -22,7 +22,7 @@ It's a visual representation of the logical structure of a database. It maps out
 
 ---
 ## Relationship types:
-[/database/\_basic-concepts/relationship-types/\_types](/database/_basic-concepts/relationship-types/_types.md)
+[/database/\_basic-concepts/relationship-types/\_types](database/_basic-concepts/relationship-types.md)
 
 ---
 ## Relationship cardinality:

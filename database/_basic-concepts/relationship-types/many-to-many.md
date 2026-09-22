@@ -2,22 +2,39 @@
 # Many-to-Many
 ---
 
+Shorthand: `M:N`
+
 This is the most flexible relationship type. There is zero, one, or many records on one side of the relationship, and zero, one, or many on the other. 
 
-![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many.png)
+==Crucial!==
+*Many-to-Many* tables require an intermediate one!
 
-## Many-to-Many tables requires an intermediate one:
+Many-to-many relationships require an intermediate table to make the connection, because relational systems can’t directly manage the connection. 
 
-Many-to-many relationships require an intermediate table to make the connection, because relational systems can’t directly manage the connection. These tables have many names (by convention), including:
+**Wrong usage:**
+![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_wrong.png)
 
-- Junction
-- Linking
-- Cross-reference
+It's impossible to store multiple author IDs in just one Book row on the db. That's why an intermediate table is needed.
+
+**Right usage:**
+![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_right.png)
+
+Notice:
+- Once `map_book_author` exists in between, both original tables preserve their original relationship with the `map_book_author` table, but the `map_book_author` uses a [One-to-Many](/database/_basic-concepts/relationship-types/one-to-many.md), making the relation be much more specific between the data.
+- `map_book_author` table is using a composite key built-up by both Primary Keys that compose the mapping table.
+
+---
+## Convention name:
+This "extra" table that *Many-to-Many* relationships demand has, by convention, some options for its prefix name:
+
 - Mapping
+- Junction
+- Cross-reference
 - Join
-- Associative
 
-E.g.
+---
+## Logic behind the mapping table creation:
+
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-1.png)
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-2.png)
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-3.png)

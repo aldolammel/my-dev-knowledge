@@ -37,6 +37,8 @@ Here below you find NOT the entire content, but a few examples of what you can f
 
 ## Database
 
+- Basic conceptions:
+	- Relationship types: [/database/\_basic-concepts/relationship-types](/database/_basic-concepts/relationship-types.md)
 - Choosing a database (PACELC): [/database/principles-pacelc](/database/principles-pacelc.md)
 	- **PostgreSQL**:
 		- Why not: [/database/PostgreSQL/0-basic/0-why-not](/database/PostgreSQL/0-basic/0-why-not.md)
