@@ -8,6 +8,9 @@ This is the most common relationship type. In this relationship, there is one re
 
 ![](database/_basic-concepts/relationship-types/imgs/erd_one-to-many.png)
 
+==CRITICAL==
+The "many" side is always here the *ForeignKey* (`something_id`) lies.
+
 ## Other examples of one-to-many:
 
 - One book can have more than one author. For example, the 1996 book _Tube: The Invention of Television_ was written by David E. Fisher and Marshall Jon Fisher. 

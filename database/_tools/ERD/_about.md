@@ -5,15 +5,26 @@
 
 It's a visual representation of the logical structure of a database. It maps out how different pieces of information, called _entities_, relate to one another.
 
-## Crow's Foot notation pattern (recommended):
+---
+## Structure:
+
+![](database/_tools/ERD/imgs/erd_structure.png)
+
+- **Entity:** 
+	- Object or concept that store data (e.g., `User`, `Product`, `Order`).
+	- Represented by rectangles.
+- **Attribute:**
+	- The property or characteristic of an entity (e.g., a `User` entity has attributes like `email`, `username`, and `created_at`).
+	- Represented by listed inside the entity box.
+- **Cardinality/Relationship:**
+	- How entity interact or connect with one another (e.g., a `User` places an `Order`).
+	- Represented by connecting lines with cardinality markers (like [One-to-One](/database/\_basic-concepts/relationship-types/one-to-one.md), [One-to-Many](/database/\_basic-concepts/relationship-types/one-to-many.md), or [Many-to-Many](/database/\_basic-concepts/relationship-types/many-to-many.md)).
+
+---
+## *Crow's Foot notation* pattern (recommended):
 
 ![](database/_tools/ERD/imgs/erd_with_crows-foot-notation.png)
 ![](database/_tools/ERD/imgs/erd_example.jpeg)
-## Key components of an ERD include:
-
-- **Entities:** Objects or concepts that store data (e.g., `User`, `Product`, `Order`). Represented by rectangles.
-- **Attributes:** The properties or characteristics of an entity (e.g., a `User` entity has attributes like `email`, `username`, and `created_at`). Represented by ovals or listed inside the entity box.
-- **Relationships:** How entities interact or connect with one another (e.g., a `User` places an `Order`). Represented by connecting lines with cardinality markers (like one-to-one, one-to-many, or many-to-many).
 ### Why use ERDs?
 
 - **Database Design:** Acts as a blueprint before writing SQL or creating tables.
@@ -22,34 +33,36 @@ It's a visual representation of the logical structure of a database. It maps out
 
 ---
 ## Relationship types:
+
+- One-to-One
+- One-to-Many
+- Many-to-Many
+- And others...
+
 [/database/\_basic-concepts/relationship-types/\_types](database/_basic-concepts/relationship-types.md)
 
 ---
-## Relationship cardinality:
+## Relationship cardinalities:
 
 ![](database/_tools/ERD/imgs/relationship-cardinality.png)
 
-- **line** = one;
-- **crow's foot** = many or infinite;
-- **line + line** = one and only one (mandatory);
-- **circle + line** = zero to a maximum of one;
-- **line + crow's foot** = a minimum of one to many;
-- **circle + crow's foot** = zero to many;
+- **Duo vertical line** ............................ shorthand = `1..1` ........ must have exactly one related instance - mandatory.
+- **Circle + Vertical line** ..................... shorthand = `0..1` ........ may have zero or max of one related instance.
+- **Vertical line + Crow's foot**  ......... shorthand = `1..N` ........ must have one or more related instances.
+- **Circle + Crow's foot** ...................... shorthand = `0..N` ........ may have zero or more related instances.
 
-==Important==
-You can add a text in the relationship line to indicate what relation is that between tables like "has", "belongs", "attends", "cares", etc... Check the hospital example below.
+Without *business rule* applied, you can find out these ones out there:
 
-**The same but using text:**
-- `1:N` or `1:*` means `None, one or many (one-to-many)`;
-- `N:M` or `*:*` means `Many-to-many (requires a junction/intermediate table)`;
-- `1:1` means `One and only one (strict one-to-one relationship)`; 
+- **Vertical line only** ......................... shorthand = `1` ............... simplification of the **Duo vertical line**.
+- **Crow's foot only** .......................... shorthand = `M..N` ........ may have many without defining a minimum related instance amount.
 
 ---
-## Hospital management example:
+## Describing relations:
+You can add a text in the cardinality line to indicate what kind of relation is that between entities/tables like "inherits", "typifies", "has", "belongs", "attends", "cares", "describes", etc.
 
 ![](database/_tools/ERD/imgs/erd_hospital-management.png)
 
-**Translating the ERD above:**
+**Reading the ERD above:**
 - Patient is treated by `one and only one` doctor; 
 - Patient has `at least one or many` appointments;
 - Patient is cared by `one and only one` hospital ward; 
