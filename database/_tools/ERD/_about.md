@@ -6,6 +6,31 @@
 It's a visual representation of the logical structure of a database. It maps out how different pieces of information, called _entities_, relate to one another.
 
 ---
+## Why use ERDs?
+
+- **Database Design:** Acts as a blueprint before writing SQL or creating tables.
+- **Visualization:** Helps developers, stakeholders, and database administrators understand complex data models at a glance.
+- **Documentation:** Serves as a reference for how data flows and connects within an application.
+
+---
+## *Crow's Foot notation* pattern (recommended):
+
+![](database/_tools/ERD/imgs/erd_hospital-management.png)
+
+**Reading the ERD above:**
+- Patient is treated by `one and only one` doctor.
+- Patient has `at least one or many` appointments.
+- Patient is cared by `one and only one` hospital ward.
+- Doctor treats `none, one or many` patients.
+- Doctor attends `none, one, or many` appointments.
+- Appointment is attended by `one and only one` doctor.
+- Appointment has `one and only one` patient.
+- Appointment is admitted by `one and only one` ward.
+- Ward cares `none, one or many` patients.
+- Ward cares `none, one or many` appointments.
+- (Optional) You can add a text in the cardinality line to indicate what kind of relation is that.
+
+---
 ## Structure:
 
 ![](database/_tools/ERD/imgs/erd_structure.png)
@@ -21,58 +46,39 @@ It's a visual representation of the logical structure of a database. It maps out
 	- Represented by connecting lines with cardinality markers (like [One-to-One](/database/\_basic-concepts/relationship-types/one-to-one.md), [One-to-Many](/database/\_basic-concepts/relationship-types/one-to-many.md), or [Many-to-Many](/database/\_basic-concepts/relationship-types/many-to-many.md)).
 
 ---
-## *Crow's Foot notation* pattern (recommended):
-
-![](database/_tools/ERD/imgs/erd_with_crows-foot-notation.png)
-![](database/_tools/ERD/imgs/erd_example.jpeg)
-### Why use ERDs?
-
-- **Database Design:** Acts as a blueprint before writing SQL or creating tables.
-- **Visualization:** Helps developers, stakeholders, and database administrators understand complex data models at a glance.
-- **Documentation:** Serves as a reference for how data flows and connects within an application.
-
----
 ## Relationship types:
 
 - One-to-One
 - One-to-Many
 - Many-to-Many
-- And others...
+- Self-referential
 
 [/database/\_basic-concepts/relationship-types/\_types](database/_basic-concepts/relationship-types.md)
 
 ---
 ## Relationship cardinalities:
 
+### Without business rule
 ![](database/_tools/ERD/imgs/relationship-cardinality.png)
+### With business rule
+==RECOMMENDED!==
+![](database/_tools/ERD/imgs/relationship-cardinality-with-business-rule.png)
 
-- **Duo vertical line** ............................ shorthand = `1..1` ........ must have exactly one related instance - mandatory.
-- **Circle + Vertical line** ..................... shorthand = `0..1` ........ may have zero or max of one related instance.
-- **Vertical line + Crow's foot**  ......... shorthand = `1..N` ........ must have one or more related instances.
-- **Circle + Crow's foot** ...................... shorthand = `0..N` ........ may have zero or more related instances.
+- **Duo vertical line** ............................ must have exactly one related instance - mandatory.
+- **Circle + Vertical line** ..................... may have zero or max of one related instance.
+- **Vertical line + Crow's foot**  ......... must have one or more related instances.
+- **Circle + Crow's foot** ...................... may have zero or more related instances.
 
-Without *business rule* applied, you can find out these ones out there:
-
-- **Vertical line only** ......................... shorthand = `1` ............... simplification of the **Duo vertical line**.
-- **Crow's foot only** .......................... shorthand = `M..N` ........ may have many without defining a minimum related instance amount.
+Text version of *Crow's Foot Notation*:
+![](database/_tools/ERD/imgs/relationship-in-text.png)
 
 ---
-## Describing relations:
-You can add a text in the cardinality line to indicate what kind of relation is that between entities/tables like "inherits", "typifies", "has", "belongs", "attends", "cares", "describes", etc.
 
-![](database/_tools/ERD/imgs/erd_hospital-management.png)
+## Business rules:
+When your ERD also describe the business rule of each relationship, your document is much more powerful for the project planing.
 
-**Reading the ERD above:**
-- Patient is treated by `one and only one` doctor; 
-- Patient has `at least one or many` appointments;
-- Patient is cared by `one and only one` hospital ward; 
-- Doctor treats `none, one or many` patients; 
-- Doctor attends `none, one, or many` appointments; 
-- Appointment is attended by `one and only one` doctor; 
-- Appointment has `one and only one` patient; 
-- Appointment is admitted by `one and only one` ward;
-- Ward cares `none, one or many` patients; 
-- Ward cares `none, one or many` appointments; 
+![](database/_tools/ERD/imgs/erd_business-rule.png)
+
 
 ---
 ## Generating/Exporting ERD from Django projects:

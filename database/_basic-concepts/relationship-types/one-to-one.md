@@ -4,13 +4,16 @@
 
 Shorthand: `1:1`
 
-This the least common type of relationship, but it’s the easiest to visualize. In this relationship, there is one and only one record on each side of the relationship. Each row in a table is connected to a single row in another table. A one-to-one relationship is always one-to-one, no matter which table you start with.
+This the least common type of relationship, but it’s the easiest to visualize. In this relationship, there is one and only one record on each side of the relationship. Each row in a table is connected to a single row in another table. The only crucial detail to be aware is about the business rule: if a relationship-end is mandatory, define which one is mandatory.
 
 ![](database/_basic-concepts/relationship-types/imgs/erd_one-to-one.png)
 
-## It doesn't offer much  for data analysis but it's great to limit access:
-
-![](database/_basic-concepts/relationship-types/imgs/erd_one-to-one_limited-access.png)
+Notice:
+- `person` entity (table, class) has zero or one `identity_card` instance related.
+- `identity_card` (table, class) has one and only one `person` instance related.
+- Foreign key (FK) of this relationship must be always in the side that demands a mandatory data.
+	- In a CMS, the `person` instance form will NOT show a `identity_card` field.
+	- In a CMS, the `identity_card` instance form WILL show a `person` field for selection/edition.
 
 ## Other examples of one-to-one:
 
@@ -23,3 +26,8 @@ This the least common type of relationship, but it’s the easiest to visualize.
 - Santa Claus is affiliated with a single holiday. 
 - A driver generally has one license. 
 - Most countries have one national flag and one capital city, though there are a few countries with two (e.g., Bolivia, Swaziland, and Honduras), and one country with three capitals (South Africa). Because of rare exceptions like this, database administrators need to carefully consider if a relationship should be set up as one-to-one.
+
+---
+
+
+

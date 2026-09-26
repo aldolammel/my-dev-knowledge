@@ -6,7 +6,7 @@
 Marks a model as a base class for inheritance, not a database table.
 
 **When to use:**
-- To create reusable model components/mixins;
+- To create reusable model components/[mixins](dev-concepts/class-type-mixin.md);
 - For shared fields or methods across multiple models;
 - To implement design patterns (like BaseModel with common fields);
 - The abstract model itself doesn't get a database table.
@@ -39,7 +39,7 @@ class AuditBase(models.Model):
 ```
 
 ==Aware!==
-In this example above, those classes that inherited this class must send the user via *admin.py* *save_model()* method!
+In this example above, those classes that inherited this class must send the user via `admin.py` `save_model()` method!
 
 **When you CANNOT use abstract:**
 

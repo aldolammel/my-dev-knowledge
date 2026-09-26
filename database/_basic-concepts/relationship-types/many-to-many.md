@@ -7,30 +7,25 @@ Shorthand: `M:N`
 This is the most flexible relationship type. There is zero, one, or many records on one side of the relationship, and zero, one, or many on the other. 
 
 ==Crucial!==
-*Many-to-Many* tables require an intermediate one!
+When two tables have a *Many-to-Many* relationship, this relation demands a *Map Table* (also known as *Junction Table* and *Bridge Table*) in between!
+Once it's impossible to manage precisely data directly in *Many-To-Many* relations, *Map Table* is an intermediate table that forces original tables to use other type of relation more precise between them.
 
-Many-to-many relationships require an intermediate table to make the connection, because relational systems can’t directly manage the connection. 
+### Wrong usage
+Applying *Many-To-Many* directly:
 
-**Wrong usage:**
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_wrong.png)
 
-It's impossible to store multiple author IDs in just one Book row on the db. That's why an intermediate table is needed.
+It's impossible to store multiple `author` IDs in just one `book` table's row on the db. That's why a *Map Table* is needed.
 
-**Right usage:**
-![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_right.png)
+### Right usage
+Creating the bridge in between:
+
+![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many.png)
 
 Notice:
-- Once `map_book_author` exists in between, both original tables preserve their original relationship with the `map_book_author` table, but the `map_book_author` uses a [One-to-Many](/database/_basic-concepts/relationship-types/one-to-many.md), making the relation be much more specific between the data.
-- `map_book_author` table is using a composite key built-up by both Primary Keys that compose the mapping table.
-
----
-## Convention name:
-This "extra" table that *Many-to-Many* relationships demand has, by convention, some options for its prefix name:
-
-- Mapping
-- Junction
-- Cross-reference
-- Join
+- Once `map_book_author` (*Map Table*) exists in between, both original tables only preserve their relationship with the opposite table;
+- *Map Table* always tied itself to original tables using a [One-to-Many](/database/_basic-concepts/relationship-types/one-to-many.md) relation;
+- *Map Table* is a good opportunity to use *Composite Key* to build its Primary Key based on both original tables' PK.
 
 ---
 ## Logic behind the mapping table creation:
@@ -38,14 +33,19 @@ This "extra" table that *Many-to-Many* relationships demand has, by convention, 
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-1.png)
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-2.png)
 ![](database/_basic-concepts/relationship-types/imgs/erd_many-to-many_juction-eg1-3.png)
+## Convention name well-acceptable:
+I like to use `map_` for this extra table that *Many-to-Many* relationships demand, but by convention here you see other options for a prefix of table's name:
+
+- Junction
+- Mapping
+- Cross-reference
+- Join
+- Bridge
+
+---
 ## Other examples of many-to-many:
 
-- A book can be associated with many categories. For example, _Dia 922, Uma longa história sobre estrada_, a 2021 book by Aldo Lammel (me), is linked to different shelf categories: Road diaries, Portuguese literature, Non-fictional. Each of those categories are linked to many other books.
+- A book can be associated with many categories. Each category is tied to many other books.
 - The members of a family can own many pets.
 - Recipes have multiple ingredients, and an ingredient can be used in many recipes.
 - A doctor has many patients, and some patients see multiple doctors.
-- A worker can be responsible for many tasks, and each task can be handled by many workers.
-- Many customers can buy multiple products.
-- Each class has multiple students; each teacher teaches multiple classes.
-- A salesperson can have many clients, and each client might have many salespeople (especially if they are larger clients). 
-- A Twitter user probably is followed by many people and follows many others; those two groups won’t necessarily match.

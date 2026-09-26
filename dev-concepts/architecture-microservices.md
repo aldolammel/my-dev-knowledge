@@ -5,11 +5,6 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: MICROSERVICE
     In software engineering, a microservice architecture is an architectural pattern that organizes an application into a collection of loosely coupled, fine-grained services that communicate through lightweight protocols. This pattern is characterized by the ability to develop and deploy services independently, improving modularity, scalability, and adaptability. 
     
     However, it introduces additional complexity, particularly in managing distributed systems and inter-service communication, making the initial implementation more challenging compared to a monolithic architecture.
-    
-    Charts:
-        ./architecture-microservices-even-driven-1.png
-        ./architecture-microservices-even-driven-2.png
-        ./architecture-microservices-even-driven-3.png
 
     Benefits:
         - Modularity: easier to understand, develop, test, more resilient to architecture erosion;
@@ -21,7 +16,16 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: MICROSERVICE
         - Additional complexity during the implementation;
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+![](dev-concepts/imgs/architecture-microservices-even-driven-3.png)
+
+![](dev-concepts/imgs/architecture-microservices-even-driven-1.png)
+
+![](dev-concepts/imgs/architecture-microservices-even-driven-2.png)
+
+
+
+---
+
 
 
 >> ARCHITECTURE: CLIENT-SERVER

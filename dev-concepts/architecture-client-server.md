@@ -17,6 +17,11 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: CLIENT-SERVER
         - Networks traffic blocking is one of the problems related to the client-server model;
         - If one server fail, clients’ requests cannot be served (except if P2P model);
 
+![](dev-concepts/imgs/architecture-client-server.png)
+
+![](dev-concepts/imgs/architecture-client-server-using-api.png)
+
+
 ---
 
 > > ARCHITECTURE: MICROSERVICES
