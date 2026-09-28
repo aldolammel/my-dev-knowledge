@@ -1,6 +1,7 @@
+#### Database > PostgreSQL
+# Starting & Stopping the service
 
-POSTGRESQL: STARTING AND STOPPING THE SERVICE
-
+---
 
     UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     

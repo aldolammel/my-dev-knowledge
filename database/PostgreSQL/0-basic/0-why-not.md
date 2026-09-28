@@ -1,6 +1,7 @@
+#### Database > PostgreSQL
+# Why this db could NOT be the right one
 
-
-DATABASE > POSTGRESQL: WHY THIS DB COULD NOT BE THE RIGHT ONE
+---
 
 
     1) When you need massive horizontal write scaling - - - - - - - - - - - - - - - - - - - - - - -
@@ -159,4 +160,6 @@ DATABASE > POSTGRESQL: WHY THIS DB COULD NOT BE THE RIGHT ONE
             - tunable consistency vs performance trade-offs
             
         
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+---
+## Supported data types:
+[/database/PostgreSQL/data-types-supported](/database/PostgreSQL/data-types-supported.md)

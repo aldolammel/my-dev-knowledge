@@ -1,4 +1,9 @@
-POSTGRESQL: INSTALLATION (It's NOT a db creation)
+#### Database > PostgreSQL
+# Installing & Integrating
+
+---
+
+==It's NOT a db creation!==
 
     >> Reminder: for updating
         ./updating.md
@@ -146,8 +151,7 @@ POSTGRESQL: INSTALLATION (It's NOT a db creation)
         Ask yourself if you need to update some .env file in a specific project! If so, remember what to do in that file:
             /environment-variables/
 
+
 ---
-
-> > Database creation:
-
-    .../PostgreSQL/creating-db-locally.txt
+## Database creation:
+[/database/PostgreSQL/creating-db-locally](/database/PostgreSQL/creating-db-locally.md)

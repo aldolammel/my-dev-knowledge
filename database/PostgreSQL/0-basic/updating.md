@@ -1,4 +1,8 @@
-POSTGRESQL: UPDATING
+#### Database > PostgreSQL
+# Updating
+
+---
+
 
     UBUNTU - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

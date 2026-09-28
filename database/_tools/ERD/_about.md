@@ -80,7 +80,7 @@ When your ERD also describe the business rule of each relationship, your documen
 ---
 
 ## Creating an ERD (roadmap):
-[/database/\_tools/ERD/\_creating-a-erd](/database/_tools/ERD/_creating-a-erd.md)
+[/database/\_tools/ERD/\_creating-an-erd](database/_tools/ERD/_creating-an-erd.md)
 
 ## Generating/Exporting ERD from Django projects:
 [/python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django](/python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django.md)
