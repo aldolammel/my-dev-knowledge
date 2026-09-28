@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="4RZHisvK9bcT0zWU20EE">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="-164" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -49,7 +49,7 @@
         <mxCell id="juPH2gd52tmBDHXgb_Ie-11" parent="juPH2gd52tmBDHXgb_Ie-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="210.00000000000045" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="juPH2gd52tmBDHXgb_Ie-12" parent="juPH2gd52tmBDHXgb_Ie-11" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
+        <mxCell id="juPH2gd52tmBDHXgb_Ie-12" parent="juPH2gd52tmBDHXgb_Ie-11" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="FK" vertex="1">
           <mxGeometry height="30" width="60" as="geometry">
             <mxRectangle height="30" width="60" as="alternateBounds" />
           </mxGeometry>
@@ -72,8 +72,12 @@
             <mxRectangle height="30" width="150.00000000000045" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="juPH2gd52tmBDHXgb_Ie-17" edge="1" parent="juPH2gd52tmBDHXgb_Ie-1" source="juPH2gd52tmBDHXgb_Ie-11" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERzeroToMany;rounded=1;strokeWidth=1;startSize=10;endSize=10;sourcePerimeterSpacing=5;targetPerimeterSpacing=5;endFill=0;startFill=0;" target="juPH2gd52tmBDHXgb_Ie-2" value="&lt;i&gt;managed&lt;/i&gt;">
+        <mxCell id="juPH2gd52tmBDHXgb_Ie-17" edge="1" parent="juPH2gd52tmBDHXgb_Ie-1" source="juPH2gd52tmBDHXgb_Ie-11" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERzeroToMany;rounded=1;strokeWidth=1;startSize=10;endSize=10;sourcePerimeterSpacing=5;targetPerimeterSpacing=5;endFill=0;startFill=0;" target="juPH2gd52tmBDHXgb_Ie-2" value="&lt;i&gt;manages&lt;/i&gt;">
           <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <Array as="points">
+              <mxPoint x="320.03" y="135" />
+              <mxPoint x="320.03" y="45" />
+            </Array>
             <mxPoint x="450" y="140" as="sourcePoint" />
             <mxPoint x="320" y="80" as="targetPoint" />
           </mxGeometry>

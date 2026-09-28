@@ -1,15 +1,22 @@
-#### Database > Basic concepts > Relationship types
+#### Database > Tools > ERD > Relationship types
 # One-to-Many / Many-to-One
+---
+
+**Before:**
+1. [What is ERD and its basic](/database/_tools/ERD/_about.md)
+
 ---
 
 Shorthand: `1:N`
 
 This is the most common relationship type. In this relationship, there is one record on one side of the relationship, and zero, one, or many on the other. From the linked table, the one-to-many relationship becomes a many-to-one relationship. For example, a biological mom can have many children, but each child can only have one biological mom.
 
-![](database/_basic-concepts/relationship-types/imgs/erd_one-to-many.png)
+![](database/_tools/ERD/imgs/erd_one-to-many.png)
 
-==CRITICAL==
-The "many" side is always here the *ForeignKey* (`something_id`) lies.
+**Notice:**
+- The publisher publishes `none or many` books.
+- The "many" (Crow's foot symbol) side always requires to be connected directly in a FK (commonly something like `something_id`).
+- Cardinality descriptions always are from the PK perspective to the FK, e.g., "Publisher publishes the book".
 
 ## Other examples of one-to-many:
 

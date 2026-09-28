@@ -1,19 +1,25 @@
-#### Database > Basic concepts > Relationship types
+#### Database > Tools > ERD > Relationship types
 # One-to-One
+---
+
+**Before:**
+1. [What is ERD and its basic](/database/_tools/ERD/_about.md)
+
 ---
 
 Shorthand: `1:1`
 
 This the least common type of relationship, but it’s the easiest to visualize. In this relationship, there is one and only one record on each side of the relationship. Each row in a table is connected to a single row in another table. The only crucial detail to be aware is about the business rule: if a relationship-end is mandatory, define which one is mandatory.
 
-![](database/_basic-concepts/relationship-types/imgs/erd_one-to-one.png)
+![](database/_tools/ERD/imgs/erd_one-to-one.png)
 
 Notice:
-- `person` entity (table, class) has zero or one `identity_card` instance related.
-- `identity_card` (table, class) has one and only one `person` instance related.
+- The person has `none or one` ID card.
+- The ID card belongs to `one` person (mandatory).
 - Foreign key (FK) of this relationship must be always in the side that demands a mandatory data.
 	- In a CMS, the `person` instance form will NOT show a `identity_card` field.
 	- In a CMS, the `identity_card` instance form WILL show a `person` field for selection/edition.
+- Cardinality descriptions always are from the PK perspective to the FK, e.g., "Person has an ID card".
 
 ## Other examples of one-to-one:
 

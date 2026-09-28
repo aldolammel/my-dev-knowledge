@@ -15,20 +15,14 @@ It's a visual representation of the logical structure of a database. It maps out
 ---
 ## *Crow's Foot notation* pattern (recommended):
 
-![](database/_tools/ERD/imgs/erd_hospital-management.png)
+![](database/_tools/ERD/imgs/erd_general_example.png)
 
 **Reading the ERD above:**
-- Patient is treated by `one and only one` doctor.
-- Patient has `at least one or many` appointments.
-- Patient is cared by `one and only one` hospital ward.
-- Doctor treats `none, one or many` patients.
-- Doctor attends `none, one, or many` appointments.
-- Appointment is attended by `one and only one` doctor.
-- Appointment has `one and only one` patient.
-- Appointment is admitted by `one and only one` ward.
-- Ward cares `none, one or many` patients.
-- Ward cares `none, one or many` appointments.
-- (Optional) You can add a text in the cardinality line to indicate what kind of relation is that.
+- A doctor treats `none or many` patients.
+- A doctor attends `none or many` appointments.
+- A patient has `one or many` appointments.
+- A ward (small sector of a hospital) cares n`one or many` patients.
+- A ward admits `none or many` appointments.
 
 ---
 ## Structure:
@@ -43,25 +37,28 @@ It's a visual representation of the logical structure of a database. It maps out
 	- Represented by listed inside the entity box.
 - **Cardinality/Relationship:**
 	- How entity interact or connect with one another (e.g., a `User` places an `Order`).
-	- Represented by connecting lines with cardinality markers (like [One-to-One](/database/\_basic-concepts/relationship-types/one-to-one.md), [One-to-Many](/database/\_basic-concepts/relationship-types/one-to-many.md), or [Many-to-Many](/database/\_basic-concepts/relationship-types/many-to-many.md)).
+	- Represented by connecting lines with cardinality markers (like [One-to-One](/database/_tools/ERD/one-to-one.md), [One-to-Many](/database/_tools/ERD/one-to-many.md), or [Many-to-Many](/database/_tools/ERD/many-to-many.md)).
+	- The word "cardinality" in the image can be replaced by a small description about the relation between the tables's ID with the other table's FK.
 
 ---
 ## Relationship types:
 
-- One-to-One
-- One-to-Many
-- Many-to-Many
-- Self-referential
-
-[/database/\_basic-concepts/relationship-types/\_types](database/_basic-concepts/relationship-types.md)
+- [One-to-One](/database/_tools/ERD/one-to-one.md)
+- [One-to-Many](/database/_tools/ERD/one-to-many.md)
+- [Many-to-Many](/database/_tools/ERD/many-to-many.md)
+- [Self-referential](/database/_tools/ERD/self-referential.md)
+- [Supertype/Subtype (inheritance)](/database/_tools/ERD/inheritance.md)
 
 ---
 ## Relationship cardinalities:
 
-### Without business rule
+### Without business rule (don't use this shit)
 ![](database/_tools/ERD/imgs/relationship-cardinality.png)
-### With business rule
-==RECOMMENDED!==
+
+- **Vertical line** ............................ can have only one related instance.
+- **Crow's foot** ............................. can have many related instance.
+
+### With business rule (RECOMMENDED)
 ![](database/_tools/ERD/imgs/relationship-cardinality-with-business-rule.png)
 
 - **Duo vertical line** ............................ must have exactly one related instance - mandatory.
@@ -69,7 +66,7 @@ It's a visual representation of the logical structure of a database. It maps out
 - **Vertical line + Crow's foot**  ......... must have one or more related instances.
 - **Circle + Crow's foot** ...................... may have zero or more related instances.
 
-Text version of *Crow's Foot Notation*:
+Text version of *Crow's Foot Notation* (read those 'single vertical lines as duo ones):
 ![](database/_tools/ERD/imgs/relationship-in-text.png)
 
 ---
@@ -81,5 +78,9 @@ When your ERD also describe the business rule of each relationship, your documen
 
 
 ---
+
+## Creating an ERD (roadmap):
+[/database/\_tools/ERD/\_creating-a-erd](/database/_tools/ERD/_creating-a-erd.md)
+
 ## Generating/Exporting ERD from Django projects:
 [/python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django](/python/web-development/django/3-1-models-database/5-ERD/1-exporting-directly-from-django.md)
