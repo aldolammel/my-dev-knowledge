@@ -7,30 +7,6 @@
       "key": "-"
     }
   ],
-  "editor:set-heading-1": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Numpad1"
-    }
-  ],
-  "editor:set-heading-2": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Numpad2"
-    }
-  ],
-  "editor:set-heading-3": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Numpad3"
-    }
-  ],
   "editor:insert-codeblock": [
     {
       "modifiers": [
@@ -127,6 +103,30 @@
         "Mod"
       ],
       "key": "Home"
+    }
+  ],
+  "editor:set-heading-1": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad1"
+    }
+  ],
+  "editor:set-heading-3": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad3"
+    }
+  ],
+  "editor:set-heading-2": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "2"
     }
   ]
 }

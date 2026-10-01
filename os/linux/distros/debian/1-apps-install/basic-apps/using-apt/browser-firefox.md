@@ -1,41 +1,57 @@
 #### OS > Linux > Debian > apt
-
 # Internet tool > Mozilla Firefox browser
 
-    Since Ubuntu 22.04, Canonical decided to ship Firefox only as a Snap in the main repository. The .deb version is maintained separately by the Mozilla Team PPA.
+---
 
+Since Ubuntu 22.04, Canonical decided to ship Firefox only as a Snap in the main repository. The `.deb` version is maintained separately by the Mozilla Team PPA.
 
-    1) Ubuntu already comes with Firefox ("sandboxed" one) but not the .deb one (faster). It comes with the sandboxed "SNAP" version. So, at first, delete that version:
+---
+## 1) Removing Snap version
 
-        $ sudo apt remove firefox
+Ubuntu already comes with Firefox ("sandboxed" one) but not the .deb one (faster). It comes with the sandboxed "SNAP" version. So, at first, delete that version:
 
+[/os/linux/distros/debian/1-apps-install/basic-apps/using-snap/\_uninstall-snap-apps](/os/linux/distros/debian/1-apps-install/basic-apps/using-snap/_uninstall-snap-apps.md)
 
-    2) Force Ubuntu APT just consider the .deb version from "mozillateam PPA", blocking the app in SNAP version from official Ubuntu repos:
+---
+## 2) Force the APT consider .deb version only
 
-        $ sudo nano /etc/apt/preferences.d/mozilla-firefox
+Force Ubuntu APT just consider the .deb version from "mozillateam PPA", blocking the app in SNAP version from official Ubuntu repos:
 
-            Package: firefox*
-            Pin: release o=LP-PPA-mozillateam
-            Pin-Priority: 1001
+```
+sudo nano /etc/apt/preferences.d/mozilla-firefox
+```
+ 
+```
+Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
 
-            Package: firefox*
-            Pin: release o=Ubuntu
-            Pin-Priority: -1
+Package: firefox*
+Pin: release o=Ubuntu
+Pin-Priority: -1
+```
 
+---
+## 3) Update the system, but first:
 
-    3) Update the system, but first:
+**3.1) Check if the app repo is been considered by APT:**
 
-        3.1) Check if the app repo is been considered by APT:
-                .../1-apps-install/checking-app-is-in-repo-list.md
+[/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
 
-            # If not, add it as repository:
-                $ sudo add-apt-repository ppa:mozillateam/ppa
+If not, add it as repository:
+```
+sudo add-apt-repository ppa:mozillateam/ppa
+```
 
-        3.2) Run $ sudo apt update;
+**3.2) Run it:**
+```
+sudo apt update
+```
 
-
-    4) Install it:
-        $ sudo apt install -y firefox
+**4) Install it:**
+```
+sudo apt install -y firefox
+```
 
 ---
 

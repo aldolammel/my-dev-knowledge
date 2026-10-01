@@ -1,26 +1,29 @@
 #### OS > Linux > Debian
+# Finding APT installed apps
 
-# Finding installed apps
+---
 
-        # Finding all:
-            $ apt list --installed
+Finding all:
+```
+apt list --installed
+```
 
+Finding all with 'adobe' in the name:
+```
+apt list --installed | grep adobe             <-- or "with quotes" for composed names.
+```
 
-        # Finding all with 'adobe' in the name:
+Finding all with some 'obe' in the name:
+```
+apt list --installed | grep obe               <-- It'll find all Adobe stuff.
+```
 
-            $ apt list --installed | grep adobe             <-- or "with quotes" for composed names.
-
-
-        # Finding all with some 'obe' in the name:
-
-            $ apt list --installed | grep obe               <-- It'll find all Adobe stuff.
-
-
-        # Finding all the initial letters are 'web':
-
-            $ apt list --installed | grep ^web
+Finding all the initial letters are 'web':
+```
+apt list --installed | grep ^web
+```
 
 ---
 
 CHECK CURRENT REPO LIST:
-./checking-app-is-in-repo-list.md
+[checking-app-is-in-repo-list](os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
