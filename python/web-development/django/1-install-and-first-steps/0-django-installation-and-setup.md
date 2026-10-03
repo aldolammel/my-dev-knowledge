@@ -3,20 +3,20 @@
 
 ---
 ## Before:
-- Case this machine and IDE are ready for Django projects, BUT I'm just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
+1. [x] Case this machine and IDE are ready for Django projects, BUT you're just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
 
 ---
 ## 1) Preparing it to everything about Django:
 
 **Before:**
-1. [ ] Python interpreter (if needed): [/python/1-python-installation/\_install](/python/1-python-installation/_install.md)
-2. [ ] Create the project folder, and get it:
+1. [x] Python interpreter (if needed): [/python/1-python-installation/\_install](/python/1-python-installation/_install.md)
+2. [x] Create the project folder, and get it:
 ```
 $ mkdir <project_folder>
 $ cd <project_folder>
 ```
-3. [ ] DON'T create the `.venv` yet (so is NOT need to activate environ for now)!
-4. [ ] IDE, select through the IDE GUI which User Profile this project demands!
+3. [x] DON'T create the `.venv` yet (so is NOT need to activate environ for now)!
+4. [x] IDE, select through the IDE GUI which *User Profile* this project demands!
 ```
 # Aldo's profile backups:
 /ide/vscode/user-profiles-bkp/
@@ -26,7 +26,7 @@ $ cd <project_folder>
 	- VSCode: [/python/ide/vscode/basic-for-python](/python/ide/vscode/basic-for-python.md)
 	- PyCharm: [/python/ide/pycharm/basic-for-python](/python/ide/pycharm/basic-for-python.md)
 
-- [ ] **1.1) IDE, framework setup:**
+- [x] **1.1) IDE, framework setup:**
 - VSCode: [/python/web-development/django/ide/vscode/basic-for-django](/python/web-development/django/ide/vscode/basic-for-django.md)
 - PyCharm: [/python/web-development/django/ide/pycharm/basic-for-django](/python/web-development/django/ide/pycharm/basic-for-django.md)
 

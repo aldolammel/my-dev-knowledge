@@ -3,7 +3,8 @@
 
 ---
 ## Before:
-1. After to install the desired database: [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/\_define-the-database](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.md)
+
+1. You already installed the right db for the project: [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/\_define-the-database](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/_define-the-database.md)
 
 ---
 ## 1) Let's perform the database basic tasks:
@@ -28,6 +29,8 @@ uv run manage.py createsuperuser
 
 ---       
 # 3) Now, try to login, making sure the application is running:
-[http://localhost:8000/admin/](http://localhost:8000/admin/)
+
+1. Run the local server: [\_running-app](python/web-development/django/_running-app.md)
+2. Test the admin login: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 ---

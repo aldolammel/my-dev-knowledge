@@ -1,9 +1,10 @@
-DJANGO: ENVIRONMENT VARIABLE MANAGERS
+#### Python > Django
+# Environment Variable Managers
 
-    xxxxxx
+---
 
-    >> Djanto-Environ:
-        /python/web-development/django/env-var-managers/django-environ/_about.md
+**Django-Environ:** [/python/web-development/django/Env-Var-Managers/django-environ/installation-and-integration](/python/web-development/django/Env-Var-Managers/django-environ/installation-and-integration.md)
 
-    >> xxxxxx:
-        /xxxxxxx
+
+
+

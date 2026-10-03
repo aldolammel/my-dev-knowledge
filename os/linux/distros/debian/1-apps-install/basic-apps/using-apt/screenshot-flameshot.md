@@ -1,23 +1,25 @@
 #### OS > Linux > Debian > apt
-
 # Office tool > Flameshot (screenshots)
 
-    Tool that provides smart screenshots.
-
-    >> Install:
-
-        >> By terminal (may not the latest version):
-            $ sudo apt install -y flameshot
-
-        >> Or by .deb file (latest version):
-            https://github.com/flameshot-org/flameshot
+---
 
 
+Tool that provides smart screenshots.
 
-    >> Integration (CRITICAL):
+Install:
 
-        Problematic versions in Ubuntu using GUI wayland and multi-monitors. Best/fastest version:
-        Flameshot v12.1.0. I tried the v13.3.0 and that was absolute chaos!
+By terminal (may not the latest version):
+```
+sudo apt install -y flameshot
+```
+
+Or by .deb file (latest version): https://github.com/flameshot-org/flameshot
+
+---
+
+Integration (CRITICAL):
+
+Problematic versions in Ubuntu using GUI wayland and multi-monitors. Best/fastest version: `Flameshot v12.1.0`. I tried the v13.3.0 and that was absolute chaos!
 
         1) DON'T set to start with system;
 

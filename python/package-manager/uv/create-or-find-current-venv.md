@@ -27,7 +27,13 @@ uv venv <venv_folder_name>
 ---
 
 ## 2) Still in the project root folder, active the virtual environment:
-
-/python/3-virtual-environment/activate-and-deactivate.txt
+[/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
 ---
+
+## 3) Check if the venv is empty or with installed modules:
+
+[/python/package-manager/uv/listing-installed-modules](/python/package-manager/uv/listing-installed-modules.md)
+
+---
+

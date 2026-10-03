@@ -5,55 +5,76 @@
 
 Initializes a new Git repository in the current directory.
 
-
->> Creating a new repository (by terminal):
+---
+## Creating a new repository (by terminal):
 		
-	# Creating the project folder:
-		$ mkdir <project-name>
-
-	# Copy the .gitignore file to the project folder root:
-		./.gitignore
+Creating the project folder:
+```
+mkdir <project-name>
+```
 	
-	# In the project folder:
+**In the project folder:**
 
-		# Initialize Git versioning for this folder:
-			$ git init
+Initialize Git versioning for this folder:
+```
+git init
+```
+
+Copy the `.gitignore` file to the project folder root:
+(If you need to generate it from zero: [gitignore-file](/versioning/git/gitignore-file.md))
+
+E.g. `/.gitignore`
+
+Telling git this project has something to versioning:
+```
+git add --all
+git commit -m "first commit"
+```
 		
-		# Telling git this project has something to versioning:
-			$ git add --all
-			$ git commit -m "first commit"
+Defining which branch the versioning will work now:
+```
+git branch -M main
+```
 		
-		# Defining which branch the versioning will work now:
-			$ git branch -M main
-		
-		# (if applicable) Install the gh dependency:
-			$ sudo apt install -y gh
+(if applicable) Install the `gh` dependency:
+```
+sudo apt install -y gh
+```
 			
-			# Authenticate the dependency:
-				$ gh auth login
+Authenticate the dependency:
+```
+gh auth login
+```
 					
-					1) GitHub.com
-					2) HTTPS
-					3) GitHub Credentials
-					4) Login with a web browser
-					5) Copy the pre-code validation
-					6) Use the 2-factor to validate!
-					7) Done!
+1) GitHub.com
+2) HTTPS
+3) GitHub Credentials
+4) Login with a web browser
+5) Copy the pre-code validation
+6) Use the 2-factor to validate!
+7) Done!
 
+---
 # Create the remote repository on GitHub:
 For company account:
 ```
-gh repo create abcoo-ideias/<project_simpler_name> --private
+gh repo create <organization_name>/<project_simpler_name> --private
 ```
 or for personal account:
 ```
 gh repo create <project_simpler_name> --private
 ```
 # Connect the new remote repo to the local one:
+To the company account:
 ```
-git remote add origin https://github.com/abcoo-ideias/<project_simpler_name>.git
+git remote add origin https://github.com/<organization_name>/<project_simpler_name>.git
+```
+or to your personal account:
+```
+git remote add origin https://github.com/<your_username>/<project_simpler_name>.git
 ```
 
+And then:
 ```
 git push -u origin main
 ```

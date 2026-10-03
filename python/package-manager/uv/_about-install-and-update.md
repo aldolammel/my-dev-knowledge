@@ -5,7 +5,7 @@
 
 Extremely fast Python package installer and resolver designed as a drop-in replacement for pip and pip-tools workflows. Official docs: https://docs.astral.sh/uv/getting-started/installation/
 
-When you ask to UV to initiate a project, a _uv.lock_ file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a _Docker_).
+When you ask to UV to initiate a project, a `uv.lock` file is created automatically, guaranteeing that all copies of this project will have the same dependencies (like a _Docker_).
 
 ---
 ## 1) Installing:

@@ -1,22 +1,16 @@
-DJANGO: RUNNING AN APP
+#### Python > Django:
+# Running an app
 
-    PRE.1) Keep it in mind: this app is using local db or a cloud one? Case local, is the db service running properly?
+---
+## Before:
 
+1. Keep it in mind: this app is using local db or a cloud one? Case local, is the db service running properly?
+2. Assuming you're in the project folder on Terminal;
+3. Assuming you got the project's environment activated: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
+4. (If applicable) Assuming you're in the right Git branch: [command-branch](/versioning/git/command-branch.md) and [command-checkout](/versioning/git/command-checkout.md)
 
-    PRE.2) Assuming you're in the project folder on Terminal;
-
-
-    PRE.3) Assuming you got the project's environment activated:
-        /python/3-virtual-environment/activate-and-deactivate.txt
-
-
-    PRE.4) (If applicable)
-        Assuming you're in the right Git branch;
-            /versioning/git/command-branch.txt
-            /versioning/git/command-checkout.txt
-
-
-    4) Run the app:
+---
+## 1) Run the app:
 
         # Using UV:
             # Regular:
@@ -30,7 +24,6 @@ DJANGO: RUNNING AN APP
             # With no auto-reload (avoid server auto-update and instability):
                 $ python manage.py runserver --noreload
 
-
-    5) Check the app through the browser:
-        http://localhost:8000/
-        http://127.0.0.1:8000/
+---
+## 2) Check the app through the browser:
+http://localhost:8000/ or http://127.0.0.1:8000/

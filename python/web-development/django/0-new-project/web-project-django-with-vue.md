@@ -2,10 +2,15 @@
 # Django as back-end + Vue as front-end
 
 ---
+## Before:
+1. [ ] To read: *Software Requirements Specification* (*SRS*) document.
+2. [ ] To read: *Technical Design Document* (*TDD*) document.
+3. [x] To read: project *System ERD* document.
+4. [x] To read: project *Sitemap* document.
 ## 1) Setup:
 
 ### 1.1) Database
-1. [ ] What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
+1. [x] What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
 ### 1.2) Back-end
 1. [ ] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end

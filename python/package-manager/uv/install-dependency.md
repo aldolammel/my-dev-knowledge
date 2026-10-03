@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-1. What is it:  [[_about-install-and-update]] 
+1. What is UV:  [[_about-install-and-update]] 
 2. Avoid to use *uv pip install <package_name>* once this command doesn't automatically update crucial files in a project like *uv.lock* and *pyproject.toml*.
 
 ---

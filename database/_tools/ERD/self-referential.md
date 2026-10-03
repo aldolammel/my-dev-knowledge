@@ -20,3 +20,7 @@ A self-referential (also known as recursive) relationship is one that links to a
 
 ==Important:==
 The attribute/field that will refer to the same table is always a foreignkey not differing from other relations simply because it points to the same table.
+
+## Is it possible a Self-Referential relationship be many-to-many?
+I don't think so!
+

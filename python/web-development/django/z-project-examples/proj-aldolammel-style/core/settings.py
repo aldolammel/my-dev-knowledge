@@ -27,8 +27,8 @@ if DEBUG:
     DB_CONN_TIMEOUT = 0  # It always reuses the same connection.
 
 # Application definition:
-# ABCOO - Engineering Data document about this project:
-# TODO: <Product Engineering Data Document link here (not public access)!>
+# ABCOO - Technical Design Document (TDD) about this project:
+# TODO: <TDD link here (not public access)!>
 INSTALLED_APPS = [
     # DJANGO DEFAULT SUB-APPS:
     "django.contrib.admin",

@@ -6,7 +6,7 @@
 
 [project]
 name = "xxxxxxxxxxxxxxxxxx"
-version = "0.1.0"  # There is a way to make it dynamic with repository!!!
+version = "0.1.0"  # There is a way to make it dynamic with repository!
 description = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 readme = "README.md"
 requires-python = ">=3.13, <=3.14"

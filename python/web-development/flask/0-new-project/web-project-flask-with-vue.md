@@ -1,6 +1,13 @@
 #### Python > Flask > Project types
 # Flask as back-end + Vue as front-end
 
+
+## Before:
+1. [ ] To read: *Software Requirements Specification* (*SRS*) document.
+2. [ ] To read: *Technical Design Document* (*TDD*) document.
+3. [ ] To read: project *System ERD* document.
+4. [ ] To read: project *Sitemap* document.
+
     >> Back-end:
 
         1) IDE, language setup:

@@ -5,29 +5,39 @@
 
 ==It's NOT a db creation!==
 
-    >> Reminder: for updating
-        ./updating.md
+Reminder: for updating
 
+[/database/PostgreSQL/0-basic/updating](/database/PostgreSQL/0-basic/updating.md)
 
+---
+## Before:
     PRE.1) Make sure you got the postgresql repository installed:
 
         UBUNTU:
 
             # This package provides the infrastructure for managing PostgreSQL installations:
 
-                $ sudo apt install -y postgresql-common
+```
+sudo apt install -y postgresql-common
+```
 
             # This script automatically configures the official PostgreSQL Apt repository, adding the repo to your system's software sources and imports the GPG key:
 
-                $ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+```
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+```
 
             # Test it:
 
-                $ sudo apt update
+```
+sudo apt update
+```
 
                 # If you get a annoying message about i386 architecture, just do it to force postgresql doesn't look for other than not amd64 one:
 
-                    $ sudo nano /etc/apt/sources.list.d/pgdg.sources
+```
+sudo nano /etc/apt/sources.list.d/pgdg.sources
+```
 
                         Types: deb
                         URIs: ...
@@ -41,25 +51,32 @@
 
         UBUNTU:
             1.1) With NO virtual environment activated, type:
-                $ psql --version
-                $ apt list -a postgresql
+```
+psql --version
+apt list -a postgresql
+```
 
         WINDOWS:
             1.1) With NO virtual environment activated, type:
-                $ psql --version
+```
+psql --version
+```
             1.2) If the command is not recognized, open the Task Manager > Services;
             1.3) Look for 'postgres'. If nothing, let's install, skipping the next step;
             1.4) If you have it, forget this roadmap and let's updating it with another:
-                ./updating.md
+[updating](/database/PostgreSQL/0-basic/updating.md)
 
 
 
-    1) Installation:
+---
+## 1) Installation:
 
         # Make sure which version do you wanna for your project(s), and do it:
 
             E.g.
-                $ sudo apt install -y -t noble-pgdg postgresql-17 postgresql-client-17
+```
+sudo apt install -y -t noble-pgdg postgresql-17 postgresql-client-17
+```
 
             IMPORTANT:
                 You can install different versions simultaneously, each one running in a specific port.
@@ -71,7 +88,9 @@
 
             UBUNTU:
                 1.1) Install the module CURL if needed:
-                    $ sudo apt install curl
+```
+sudo apt install curl
+```
 
                 1.2) Install the public key for the repository (if not done previously):
                     Check the command in the site!
@@ -81,7 +100,9 @@
 
                 1.4) Install the pgadmin-desktop ONLY to prevent to user apache to run the web
                     version:
-                        $ sudo apt install -y pgadmin4-desktop
+```
+sudo apt install -y pgadmin4-desktop
+```
 
                 1.5) In your app list, run the manager!
 
@@ -90,14 +111,19 @@
                 1.2) After app installation, go to start and search by 'pgAdmin';
                 1.3) Make sure the Windows Terminal and main environment will recognize the Postgres commands:
                         # Test it:
-                            $ psql --version
+```
+psql --version
+```
                         # If not recognized, do it but changing the version and path based on your current postgres version:
-                            $ $env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+```
+$env:PATH += ";G:\Program Files\PostgreSQL\16\bin"
+```
                         >> Test it again!
 
 
 
-    2) Integration:
+---
+## 2) Integration:
 
         Connect the PgAdmin to the postgreSQL now. In pgAdmin app!
 
@@ -118,34 +144,40 @@
         2.4) Don't save anything yet, and go to terminal. Make sure PostgreSQL is running:
 
             UBUNTU:
-                $ systemctl status postgresql
-                # if not:
-                $ sudo systemctl start postgresql
+```
+systemctl status postgresql
+```
+if not:
+```
+sudo systemctl start postgresql
+```
 
         2.5) Let's use the root user (postgres) now:
 
             UBUNTU:
-                $ sudo -u postgres psql
+```
+sudo -u postgres psql
+```
 
         2.6) Already using the PostgreSQL user, if the Postgres warns you about
             database version, do it:
-            $ ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
+```
+ALTER DATABASE postgres REFRESH COLLATION VERSION;     <--- type that ; too!
+```
 
         2.7) Already using the PostgreSQL user, do it:
-            $ ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';  <--- type that ; too!
-            $ exit
+```
+ALTER USER postgres WITH PASSWORD 'myNewPasswordWithQuotes';  <--- type that ; too!
+exit
+```
 
         2.8) Again in pgAdmin app, in Connection tab, set the password and ask the app to
             remember the password;
         2.9) Save the changes finally! You're connected.
 
-
-
     3) (Optional)
         Define if PostgreSQL shouldn't run at the OS starts:
-            ./starting-and-stopping.md
-
-
+[/database/PostgreSQL/0-basic/starting-and-stopping](/database/PostgreSQL/0-basic/starting-and-stopping.md)
 
     4) (If applicable)
         Ask yourself if you need to update some .env file in a specific project! If so, remember what to do in that file:

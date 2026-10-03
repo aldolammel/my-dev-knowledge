@@ -2,6 +2,13 @@
 
 # Flask as back and front-end
 
+
+## Before:
+1. [ ] To read: *Software Requirements Specification* (*SRS*) document.
+2. [ ] To read: *Technical Design Document* (*TDD*) document.
+3. [ ] To read: project *System ERD* document.
+4. [ ] To read: project *Sitemap* document.
+
 1.  SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     > > Database:
