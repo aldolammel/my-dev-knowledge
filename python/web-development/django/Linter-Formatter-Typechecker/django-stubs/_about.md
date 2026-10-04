@@ -2,17 +2,17 @@
 
 DJANGO > TYPE CHECKER: DJANGO STUBS
 
+---
 
-    It's a package contains type stubs and a custom mypy plugin to provide more precise static types
-    and type inference for Django framework. Django uses some Python "magic" that makes having
-    precise types for some code patterns problematic. This is why we need this project. The final
-    goal is to be able to get precise types for most common patterns.
+It's a package contains type stubs and a custom MyPy plugin to provide more precise static types and type inference for Django framework. Django uses some Python "magic" that makes having precise types for some code patterns problematic. This is why we need this project. The final goal is to be able to get precise types for most common patterns.
 
-    https://github.com/typeddjango/django-stubs
+https://github.com/typeddjango/django-stubs
+
+---
+## Installation and Integration: 
+[installation](/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/installation.md)
 
 
-    >> Installation and Integration:
-        ./installation.md
 
 
 

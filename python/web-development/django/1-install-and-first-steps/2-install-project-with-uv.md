@@ -13,11 +13,11 @@
 2. [x] Make sure you already installed all Python versions for this project:
 
 Check which Python versions you got installed:
-```
+```bash
 uv python list
 ```
 E.g. you want to install more than one Python version:
-```
+```bash
 uv python install 3.11 3.12 3.13
 ```
 You'll select the right one later!
@@ -61,7 +61,7 @@ Never copy a `pyproject.toml` file from other project because it would bring dep
 The next command can override a few files if you skip steps and put other files in the project root folder!
 
 That said, do it:
-```
+```bash
 uv init
 ```
 
@@ -87,12 +87,12 @@ Check the `.python-version` file (if you don't have one, no worries, the command
 - [x] 4.6) Install Django in this project:
 
 Install a specific version (recommended):
-```
+```bash
 uv add django==5.2.9
 ```
 
 Or the latest version:
-```
+```bash
 uv add django
 ```
 
@@ -103,8 +103,8 @@ uv add django
 
 - [x] 4.8.1) Create the Django Project structure, going to the project root folder and asking the package manager to create the 'core' folder:
 
-```
-uv run django-admin startproject core .              <-- This dot's important!
+```bash
+uv run django-admin startproject core .     # This dot's important!
 ```
 
 ==Observation about SQLite file==
@@ -119,31 +119,34 @@ Even though you are not using SQLite for this project, this previous step create
 ### 5) (Optional) Installing the dependencies
 Based on the project's *Technical Design Document (TDD)*, install all dependencies: [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
 
-- [ ] 5.1) Installing Core dependencies.
-- [ ] 5.2) Installing Development dependencies.
-- [ ] 5.3) The *Technical Design Document* link must be registered in the Django core `settings.py` file!
+- [x] 5.1) Installing Core dependencies.
+- [x] 5.2) Installing Development dependencies.
+- [x] 5.3) The *Technical Design Document* URL must be added into the Django `settings.py` file!
 
-
-- [ ] 6) (Optional) If you have multilingual support in your project:
-
-With Gettext module installed:
-```
+---
+## 6) (Optional) Multilingual support:
+- [x] **Before:** [Gettext](/python/component-libraries/gettext/0-gettext.md) installed.
+- [x] Run both commands:
+```bash
 uv run manage.py makemessages --all
 uv run manage.py compilemessages
 ```
 
-- [ ] 7) (If applicable) Make sure you got your .gitignore updated with Django, environment and other things: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
+---
+## 7) (If applicable) .gitignore configure:
+- [x] Make sure you got the project `.gitignore` updated with Django, environment and other things: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
 
-- [ ] 8) Check Django installation and setup: [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
+---
+## 8) Django tests:
+- [x] Check Django installation and setup: [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
 
 ---
 
-        Since this point, you might execute basic tests without the follow steps once your goal
-                            would be to test something basic on Django.
+==Since this point, you might execute basic tests without the follow steps once your goal would be to test something basic on Django.==
 
 ---
 
-- [ ] 9) (If applicable) Commit files in your versioning service (e.g. GitHub)!
+- [x] 9) (If applicable) Commit files in your versioning service (e.g. GitHub)!
 
 - [ ] 10) Let's setup the new project: [/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup](/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup.md)
 

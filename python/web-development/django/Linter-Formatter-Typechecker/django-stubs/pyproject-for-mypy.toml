@@ -10,7 +10,7 @@ disable_error_code = [
     "var-annotated", # Stop MyPy to demand Type Annotations for, e.g., model fields w/ M2M relationships.
 ]
 
-# Django-stubs plugin configuration
+# Django-stubs plugin configuration:
 [tool.django-stubs]
 django_settings_module = "core.settings"
 # For Wagtail projects, replace the django_settings_module above by this one below:

@@ -5,7 +5,7 @@
 ## 1) Setup the internationalization project:
 
 - [ ] 1.1) Install basic modules:
-- Gettext Module (to translate the content itself): [/python/component-libraries/gettext/0-gettext](/python/component-libraries/gettext/0-gettext.md)
+- Gettext (to translate the content itself): [/python/component-libraries/gettext/0-gettext](/python/component-libraries/gettext/0-gettext.md)
 - Rosetta app (include an admin sub-app to manage translations): [/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta](/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta.md)
 
 - [ ] 1.2) In `settings.py`, add the `LocaleMiddleware` between `Session` and `Common` middlewares:
