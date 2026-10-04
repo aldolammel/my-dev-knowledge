@@ -3,7 +3,7 @@
 
 ---
 
-THIS FILE NAME: /.agents/instructions.md (to place on the project root!)
+==THIS FILE NAME: /.agents/instructions.md (to place on the project root!)==
 # Development mindset
 
 **Role:**
@@ -34,7 +34,7 @@ THIS FILE NAME: /.agents/instructions.md (to place on the project root!)
 - No. The code (class, functions, variables) is written in English, but the verbose names (what the visitors see) must be in Brazilian Portuguese.
 
 **Back-end heads-up:**
-- not yet.
+- UV as package manager.
 
 **Front-end heads-up:** 
 - `SPA` project;
@@ -42,12 +42,13 @@ THIS FILE NAME: /.agents/instructions.md (to place on the project root!)
 - I'm coding in vanilla JavaScript, and Vue code approach preference is Composition API with syntactic sugar.
 - Don't spend resources creating CSS code unless I explicitly ask for it.
 
-**Environment:**
-- Ubuntu VPS.
+**Environments:**
+- In development phase: Ubuntu local machine.
+- In production: Ubuntu VPS.
 
 **Settings preferences:**
-- `settings.py` is stored in the `core` folder;
-- Django apps are in the `apps` folder;
+- Django core folder: /project_root/core/settings.py.
+- Django apps folder: /project_root/apps/.
 - It's using `pyproject.toml` file.
 
 **Current project phase:**

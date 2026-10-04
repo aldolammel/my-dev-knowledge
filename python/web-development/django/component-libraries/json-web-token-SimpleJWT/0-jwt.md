@@ -3,10 +3,9 @@
 
 ---
 
-    It's an authentication plugin designed for use with the Django REST Framework. It provides a
-    robust and extensible solution for implementing token-based authentication in Django-powered APIs.
+It's an authentication plugin designed for use with the Django REST Framework. It provides a robust and extensible solution for implementing token-based authentication in Django-powered APIs.
 
-    https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
 
 ---
 

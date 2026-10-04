@@ -29,4 +29,8 @@ WEB-SERVER > APACHE: INSTALLING
     2) Integration:
     
         2.1) Be aware with possible firewalls on the server! Web-servers demand be allowed by firewalls.
-        
+
+
+---
+## Case Nginx and Apache conflict and you need to keep both, check this out:
+[/server/web-server/apache-and-nginx-at-same-time](/server/web-server/apache-and-nginx-at-same-time.md)

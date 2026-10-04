@@ -117,9 +117,7 @@ Even though you are not using SQLite for this project, this previous step create
 
 ---
 ### 5) (Optional) Installing the dependencies
-Based on you already know or in the *Technical Design Document (TDD)* of the project, install all project dependencies:
-
-[/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
+Based on the project's *Technical Design Document (TDD)*, install all dependencies: [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
 
 - [ ] 5.1) Installing Core dependencies.
 - [ ] 5.2) Installing Development dependencies.

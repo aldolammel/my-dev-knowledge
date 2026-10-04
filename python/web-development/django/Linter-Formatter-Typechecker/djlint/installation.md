@@ -1,15 +1,18 @@
-LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
+#### Python > Linter, Formatter & Type checker
+# DjLint: Installation and integration
 
-    >> WHAT IS IT:
-        ./_about.md
+---
 
+## Before:
 
-    1) INSTALLING:
+1. What is DjLint: [About](/python/web-development/django/Linter-Formatter-Typechecker/djlint/_about.md)
 
-        PRE) Assuming you already got a virtual environment for the project, active it:
-            /python/3-virtual-environment/activate-and-deactivate.txt
+---
+## Installing:
 
-        1.1) Install the djlint as development dependency:
+PRE) Assuming you already got a virtual environment for the project, active it: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
+
+1.1) Install the djlint as development dependency:
 
             >> Using UV:
                 $ uv add --optional dev djlint
@@ -26,24 +29,28 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
                         "djlint>=1.36.4",
                     ]
 
-    2) INTEGRATION:
+---
+## Integration:
 
-        2.1) Still in pyproject.toml file, add these lines:
-            # Django template Linter and Formatter:
-            [tool.djlint]
-            profile="django"
-            max_line_length = 100
-            preserve_blank_lines = true
-            close_void_tags = true
+2.1) Still in `pyproject.toml` file, add these lines:
+```toml
+# Django template Linter and Formatter:
+[tool.djlint]
+profile="django"
+max_line_length = 100
+preserve_blank_lines = true
+close_void_tags = true
+```
 
-            # If Prettier or other CSS/JS formatter is ON in this project:
-            format_css = false  # false = Prettier should take care of it!
-            format_js = false  # false = Prettier should take care of it!
+If Prettier or other CSS/JS formatter is ON in this project:
+```toml
+format_css = false  # false = Prettier should take care of it!
+format_js = false  # false = Prettier should take care of it!
+```
 
+2.2) And manually install the DjLint extension for your Code IDE.
 
-        2.2) And manually install the DjLint extension for your Code IDE.
-
-        2.3) DjLint configuration on IDE:
+2.3) DjLint configuration on IDE:
 
             >> Using VSCode:
 
@@ -52,11 +59,16 @@ LINTER AND FORMATER DJLINT: INSTALLATION AND INTEGRATION
 
                 >> In /project/.vscode/settings.json, add the lines:
 
-                    // PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                    ...
-                    // DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                    ...
-                    "[django-html]": {
-                        "editor.defaultFormatter": "monosans.djlint", // DjLint
-                        ...
-                    },
+```json
+// PYTHON SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+...
+// DJANGO SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+...
+"[django-html]": {
+	"editor.defaultFormatter": "monosans.djlint", // DjLint
+	...
+},
+```
+
+---
+

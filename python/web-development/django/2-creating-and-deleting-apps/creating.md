@@ -102,8 +102,6 @@ CREATING DJANGO APPS\*:
                 'django.contrib.staticfiles',
                 # DJANGO ADDITIONAL SUB-APPS:
                 # Reserved space...
-                # THIRD-PARTY SUB-APPS:
-                # Reserved space...
                 # APP ORIGINAL SUB-APPS:
                 'apps.<project_subapp1_name>',
                 'apps.<project_subapp2_name>',

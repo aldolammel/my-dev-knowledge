@@ -4,40 +4,39 @@
 ---
 ## Before:
 1. What is UV:  [[_about-install-and-update]] 
-2. Avoid to use *uv pip install <package_name>* once this command doesn't automatically update crucial files in a project like *uv.lock* and *pyproject.toml*.
+2. Avoid to use `uv pip install <package_name>` once this command doesn't automatically update crucial files in a project like `uv.lock` and `pyproject.toml`.
 
 ---
 ## 1) Installing dependencies:
 
 **Make a choice:**
-- 1A) Installing dependencies when the project has a pyproject.toml or similar;
-- 1B) Installing dependencies freely.****
-### 1A) Installing dependencies when the project has a pyproject.toml or similar
+- 1A) Installing dependencies when the project has a `pyproject.toml` or similar;
+- 1B) Installing dependencies freely.
+### 1A) Installing dependencies when the project has a `pyproject.toml` or similar
 
 Installing mandatory dependency:
-```
+```bash
 uv add <package_name>
+# E.g. $ uv add django
 ```
 Installing optional dependency:
-```
+```bash
 uv add --optional <sub-group> <package_name>
-```
-E.g.
-```
-uv add --optional dev ruff
+# E.g. $ uv add --optional dev ruff
 ```
 Checking installed ones:
-```
+```bash
 uv pip list
 ```
 ### 1B) Installing dependencies freely:
 
-Installing dependency:
-```
+Installing dependency (no matter if mandatory or optional):
+```bash
 uv pip install <package_name>
+# E.g. $ uv pip install django
 ```
 Checking installed ones:
-```
+```bash
 uv pip list
 ```
 

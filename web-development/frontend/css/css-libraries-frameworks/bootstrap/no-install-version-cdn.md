@@ -1,17 +1,13 @@
-<!--
+#### Web-development > CSS > Libraries & Frameworks > Bootstrap
+# Non-installed version (CDN)
 
-    BOOTSTRAP HTML RECOMMENDED
+---
 
-        With Django template tags version: 
-            /python/web-development/django/3-3-frontend-templates/bootstrap-with-template.html
+**1) Go to:** https://getbootstrap.com/
+**2) Find the example of the html for start.**
 
-        
-        1) Go to https://getbootstrap.com/
-
-        2) Find the example of the html for start;
-
--->
-
+E.g. for an HTML using the Bootstrap CDN version:
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -34,3 +30,9 @@
     ></script>
   </body>
 </html>
+```
+Pay attention about the `<link>` and `<script>` tags with the specific version: `.../bootstrap@5.3.3/...`
+
+---
+## Installed version with Django: 
+[python/web-development/django/3-3-frontend-templates/template-bootstrap-installation](python/web-development/django/3-3-frontend-templates/template-bootstrap-installation.md)

@@ -1,14 +1,13 @@
+#### Python > Linter, Formatter & Type checkers
+# Ruff installation and integration
 
+---
+## Before:
 
-RUFF: INSTALLATION AND INTEGRATION
+1. What is Ruff: [About](/python/linter-formatter-typechecker/ruff/_about.md)
 
-
-    PRE) What is it:
-        ./_about.md
-
-
-
-    1) INSTALLING:
+---
+## 1) Installation:
 
         1.1) Define with Package manager you will use for:
 
@@ -35,11 +34,8 @@ RUFF: INSTALLATION AND INTEGRATION
                 >> Add manually the xxxxxx in the pyproject optional dependencies:
                     xxxxxxxxxxxxxxxxxxxxxxx
 
-
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    
-    
-    2) INTEGRATION:
+---
+## 2) Integration:
 
         1) (Optional)
             If using .gitignore file, add these lines:
@@ -80,4 +76,5 @@ RUFF: INSTALLATION AND INTEGRATION
                 }
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
+

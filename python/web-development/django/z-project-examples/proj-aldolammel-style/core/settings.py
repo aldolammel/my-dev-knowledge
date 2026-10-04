@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # DJANGO ADDITIONAL SUB-APPS:
     #"django.contrib.postgres",  # TODO: uncomment if POSTGRES DB!
     #"django_extensions",  # to use the show_url command in shell!
-    "adminsortable2",
+    #"adminsortable2",  # cms accepting drag and drop feature!
     # THIRD-PARTY SUB-APPS:
     #"polymorphic", # TODO: uncomment if Pagex available!
     #"corsheaders", # TODO: uncomment if Pagex available!

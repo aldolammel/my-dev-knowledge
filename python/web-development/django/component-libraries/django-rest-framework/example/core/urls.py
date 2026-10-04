@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework import routers
 from .views import UserViewSet
 
@@ -10,8 +10,14 @@ router.register(r'users', UserViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    # DJANGO:
     path('', include(router.urls)),
+
+    # APIs:
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+
+    # THIRD-PARTY:
+    # Reserved space...
 ]
 
 # You can now open the API in your browser at http://127.0.0.1:8000/, and view your new 'users' API.

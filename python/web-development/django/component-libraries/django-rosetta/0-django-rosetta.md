@@ -3,9 +3,7 @@
 
 ---
 
-DJANGO LIB: DJANGO-ROSETTA
-
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
     >> Installation:
@@ -26,9 +24,9 @@ DJANGO LIB: DJANGO-ROSETTA
 
         In core/settings.py:
             Installed_Apps:
-                # THIRD-PARTY SUB-APPS:
+                # DJANGO ADDITIONAL SUB-APPS:
                 “rosetta”,
 
 
-        Check this file:
-            /python/web-development/django/8-translate-and-internationalization/1-starting-translation.txt
+Check this file: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
+

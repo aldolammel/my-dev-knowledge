@@ -17,12 +17,12 @@ Psycopg is a Python library that acts as an adapter (connector) between Python a
 https://www.psycopg.org
         
 Using UV:
-```
+```bash
 uv add psycopg[binary]         # It will automatically update your pyproject.toml file!
 ```
 
 Or using PIP:
-```
+```bash
 python3 -m pip install psycopg
 ```
 You should manually update the `pyproject.toml` file or the `requirements.txt`!
@@ -31,16 +31,15 @@ You should manually update the `pyproject.toml` file or the `requirements.txt`!
 ## 2) Integration:
 
 In `/core/settings.py` file:
-```
+```python
 INSTALLED_APPS = [
 	# DJANGO DEFAULT SUB-APPS:
-	...
+	# ...
 	# DJANGO ADDITIONAL SUB-APPS:
 	"django.contrib.postgres",  # Expands the postgres options.
-	# THIRD-PARTY SUB-APPS:
-	...
+	# ...
 	# APP ORIGINAL SUB-APPS:
-	...
+	# ...
 ]
 ```
 

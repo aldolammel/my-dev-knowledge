@@ -16,7 +16,7 @@
 ### 1.3) Front-end
 1. [ ] IDE, framework setup:  [VSCode for Vue](/javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.md) or [PyCharm for Vue](/javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.md).
 2. [ ] Vue installation (and its dependencies): [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
-3. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](/web-development/frontend/css/css-libraries-frameworks/bootstrap/_about.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
+3. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
 
 ---
 ## 2) Development:

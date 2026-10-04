@@ -3,13 +3,10 @@
 
 ---
 
+Django-Parler is a third-party application for Django that provides a clean, flexible way to add multilingual content to your Django models. It allows you to translate specific fields in your database models, manage those translations in the admin interface, and retrieve content in the appropriate language automatically.
 
-DJANGO LIB: DJANGO-PARLER:
-
-    Django-Parler is a third-party application for Django that provides a clean, flexible way to add multilingual content to your Django models. It allows you to translate specific fields in your database models, manage those translations in the admin interface, and retrieve content in the appropriate language automatically.
-
-
-    1) Installation:
+---
+## 1) Installation:
 
         # Using UV:
             $ uv add django-parler
@@ -17,13 +14,13 @@ DJANGO LIB: DJANGO-PARLER:
         # Or using PIP:
             $ python3 -m pip install django-parler
 
-
-    2) Integration:
+---
+## 2) Integration:
 
         2.1) In core/settings.py:
             
             Installed_Apps:
-                # THIRD-PARTY SUB-APPS:
+                # DJANGO ADDITIONAL SUB-APPS:
                 “parler”,
 
         2.1) Still through settings.py, add in 'Internationalization' section:

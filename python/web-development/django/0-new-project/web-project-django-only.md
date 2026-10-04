@@ -17,7 +17,7 @@
 
 **Front-end:**
 1. [ ] Front-end solution (Django): Use it as reference - [/python/web-development/django/django-project-folder-structure](/python/web-development/django/django-project-folder-structure.md)
-2. [ ] (Optional) Front-end CSS Framework: [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/_about.md) / [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md) / [Bootstrap](/web-development/frontend/css/css-libraries-frameworks/bootstrap/_about.md)
+2. [ ] (Optional) Front-end CSS Framework: [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/_about.md) / [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md) / [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md)
 
 ---
 ## 2) Development:

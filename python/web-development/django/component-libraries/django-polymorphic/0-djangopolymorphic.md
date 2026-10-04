@@ -25,16 +25,16 @@ E.g.
 
 LINUX:
 PIP:
-```
+```bash
 pip install django-polymorphic
 ```
 Or UV:
-```
+```bash
 uv add django-polymorphic
 ```
 
 WINDOWS:
-```
+```shell
 soon...
 ```
 
@@ -45,11 +45,11 @@ soon...
 
 In your Django core settings:
 
-```
+```python
 INSTALLED_APPS = [
 	# DJANGO DEFAULT SUB-APPS:
 	'django.contrib.contenttypes',
-	# THIRD-PARTY SUB-APPS:
+	# DJANGO ADDITIONAL SUB-APPS:
 	'polymorphic',
 ]
 ```
