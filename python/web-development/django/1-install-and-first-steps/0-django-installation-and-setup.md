@@ -36,8 +36,8 @@ cd <project_folder>
 
 ---
 ## 2) Make a decision:
-
 Once Django project's already installed, let's ask again about the current case:
+
 - This machine and IDE are already for Django projects, and I got a brand new project, so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-install-new-project](/python/web-development/django/1-install-and-first-steps/1-install-new-project.md)
 - Or this machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
 

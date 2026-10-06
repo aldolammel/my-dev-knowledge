@@ -8,7 +8,7 @@ NODE.JS: HOW TO UNINSTALL
         A) Just a NPM component;
         B) The entire Node;
 
-        - - - - - - 
+......................................
 
         A) Just a NPM component - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -32,6 +32,7 @@ NODE.JS: HOW TO UNINSTALL
                         e.g.
                             $ npm uninstall -g naive-ui       <-- without '@' and version numbers
 
+......................................
 
         B) The entire Node - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -43,7 +44,7 @@ NODE.JS: HOW TO UNINSTALL
                 BK) Uninstall Node previously installed globally;
                 BL) Uninstall only a specific Node version previously installed;
 
-                - - - - 
+..........
 
                 BK) Uninstall Node previously installed globally - - - - - - - - - - - - - - - - - -
 
@@ -75,7 +76,8 @@ NODE.JS: HOW TO UNINSTALL
                                     $ sudo rm -rf /etc/apt/sources.list.d/nodesource.list*
                                 # Close the current Terminal, and check everything once again!
                                 
-                
+..........
+
                 BL) Uninstall only a specific Node version - - - - - - - - - - - - - - - - - - - - -
 
                     
@@ -84,7 +86,7 @@ NODE.JS: HOW TO UNINSTALL
                         BLZ) NVM;
                         BLX) Docker;
 
-                        - - - - - -
+..........
 
                         BLZ) NVM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -99,6 +101,7 @@ NODE.JS: HOW TO UNINSTALL
                             BLZ.2) Uninstall a specific Node version:
                                 $ nvm uninstall <version>            <-- can be 23 or exact 23.11.0.
 
+..........
 
                         BLX) Docker - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

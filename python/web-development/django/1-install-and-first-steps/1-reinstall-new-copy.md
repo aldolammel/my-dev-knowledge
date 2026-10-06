@@ -8,11 +8,13 @@ Which scenario is your case:
 - 1A) Re-installing Django dependency in an existing project;
 - 1B) Re-installing an entire existing project;
 
+......................................
 ### 1A) Re-installing Django dependency in an existing project
 
 - Using UV: [/python/web-development/django/1-install-and-first-steps/3-re-install-only-django-with-uv](/python/web-development/django/1-install-and-first-steps/3-re-install-only-django-with-uv.md)
 - Or using PIP: [/python/web-development/django/1-install-and-first-steps/3-re-install-only-django-with-pip](/python/web-development/django/1-install-and-first-steps/3-re-install-only-django-with-pip.md)
 
+......................................
 ### 1B) Re-installing an entire existing project
 
 - Using UV: [/python/web-development/django/1-install-and-first-steps/3-re-install-project-with-uv](/python/web-development/django/1-install-and-first-steps/3-re-install-project-with-uv.md)

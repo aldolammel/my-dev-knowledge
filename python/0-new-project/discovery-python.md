@@ -2,56 +2,69 @@
 # Discovery
 
 ---
+## Before:
 
-Group of action to figure out a Python project settings and features:
+1. Did you collected every pain-point from the IT leader/stakeholder of this product?
+2. It could be great if you would have access to the product's *Technical Design Document* (TDD) or, at least, to the *ERD* document (how really complex is this back-end product)! 
 
-        x) Current Python version installed:
+---
+## 1) Python version installed:
 
-            >> xxxx
+**Make a decision:**
 
-            >> Using UV
+- A) Using UV.
+- B) Using Python/PIP.
 
-                # All python version installed:
-                    $ uv python list
+......................................
 
-                # Checking which Python version the project must use:
-                    $ uv pin
-                    # take a note!
+**A) Using UV:**
 
-        x) Check if project main requirement file has the same python version declared:
+A1) Assuming you already got UV installed: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
-            >> Using vanilla python / pip
-                - .python-version
-                - requirements.txt!
-                # Take a note!
+A2) Make sure the project is using Python globally or locally!
 
-            >> Using UV:
-                - .python-version
-                - pyproject.toml
-                - uv.lock
-                # Take a note!
+A3) List all Python version installed:
+```bash
+uv python list
+```
 
+A4) Checking which version the project must use:
+```bash
+uv pin
+# And take a note!
+```
 
-        x) Check the project dependencies:
+A5) Checking if project main requirement file has the same version declared:
+- `.python-version`
+- `pyproject.toml`
+- `uv.lock`
 
-            # The installed ones:
+......................................
 
-                # Using xxxxxxxxxxxxxx
-                    $ xxxxxxxxxxxxxxxx
-                    # Take a note!
+**B) Using Python/PIP:**
 
-                # Using UV:
-                    $ uv pip list
-                    # Take a note!
+B1) Make sure the project is using Python globally or locally!
 
-            # Those define by requirement files!
-                # Take a note!
+B2) What Python version is installed?
 
-        x) xxxxxx
+B3) Checking if project main requirement file has the same version declared:
+	- `.python-version`
+	- `requirements.txt`
+
+---
+## 2) (If applicable) To update/upgrade:
+
+==CRITICAL==
+Any update/upgrade is NOT recommended until the discovery of the whole project layers (back-end + front-end) to be finished.
+
+[/python/0-new-project/3-update-python-version-in-a-project](/python/0-new-project/3-update-python-version-in-a-project.md)
+
+---
+## 3) Discovery of project's Python framework:
+
+- If it runs **Django**: [/python/web-development/django/0-new-project/discovery-django](/python/web-development/django/0-new-project/discovery-django.md)
+- If it runs **Flask**: xxxxxxxxxxxxx
+- If it runs **Fast-API**: xxxxxxxxxxxxxxx
 
 ---
 
-DISCOVERY OF PYTHON FRAMEWORKS:
-
-    >> Django:
-        /python/web-development/django/0-new-project/discovery-django.md

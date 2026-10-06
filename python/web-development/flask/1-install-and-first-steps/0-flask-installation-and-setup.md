@@ -19,7 +19,7 @@ FLASK: INSTALLING AND SETUP
             >> Keep yourself in this roadmap file!
 
 
-        - - - - -
+......................................
 
 
         1C) This machine (or IDE) is new! Preparing it to everything about Flask - - - - - - - - -
@@ -55,7 +55,7 @@ FLASK: INSTALLING AND SETUP
                     ./2-install-project-with-pip.md
 
 
-        - - - - -
+......................................
 
 
     2) Once Flask project already installed, let's ask us again about the current case:

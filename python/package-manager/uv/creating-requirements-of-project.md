@@ -23,9 +23,9 @@ They are packages NOT required to run an app, but they make tasks easier:
 - **Sub-group _test_:** Often a subset of dev focused purely on testing.
 - **Sub-group _docs_:** Tools for building documentation.
 
-The file _pyproject.toml_ (PEP 621) manages all dependencies (including the optional ones) of a specific project:
+The file `pyproject.toml` (PEP 621) manages all dependencies (including the optional ones) of a specific project:
 
-E.g. /python/web-development/pyproject.toml
+E.g. [/python/web-development/pyproject](/python/web-development/pyproject.md)
 
 ---
 
@@ -35,6 +35,7 @@ E.g. /python/web-development/pyproject.toml
 - 1B) Or I am building a new project;
 - 1C) Or someone ask me for the _requirements.txt_ file from the project I'm working on;
 
+......................................
 ### 1A) I am the new developer in an existing project
 
 A.1) After you clone the project's repo, the pyproject.toml should be in the project's root;
@@ -47,10 +48,11 @@ The next step using 'sync' already will create the environment!
 A.3) Make sure the the pyproject.toml file in on the project's root, so then install the project requirements, creating also the virtual environment for them:
 [[auto-installation-with-sync]]
 
+......................................
 ### 1B) I am building a new project
 
 **B.1) Once in the project root:**
-Ask UV to create the virtual environment folder: [[/python/package-manager/uv/create-or-find-current-venv]]
+Ask UV to create the virtual environment folder: [[python/package-manager/uv/create-or-recreate-venv]]
 
 **B.2) Ask UV to install the minimal Python project scaffolding files:**
 
@@ -83,6 +85,7 @@ E.g.
 uv add --optional dev ruff
 ```
 
+......................................
 ### 1C) Someone ask me for the _requirements.txt_ file from the project I'm working on
 
 Ask them to clone the project's repository if (recommended) the _pyproject.toml_ is there!

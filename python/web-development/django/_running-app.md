@@ -12,18 +12,27 @@
 ---
 ## 1) Run the app:
 
-        # Using UV:
-            # Regular:
-                $ uv run manage.py runserver
-            # With no auto-reload (avoid server auto-update and instability):
-                $ uv run manage.py runserver --noreload
+**Using UV:**
+Regular:
+```bash
+uv run manage.py runserver
+```
+With no auto-reload (avoid server auto-update and instability):
+```bash
+uv run manage.py runserver --noreload
+```
 
-        # Or using PIP:
-            # Regular:
-                $ python manage.py runserver
-            # With no auto-reload (avoid server auto-update and instability):
-                $ python manage.py runserver --noreload
+**Or using PIP:**
+Regular:
+```bash
+python manage.py runserver
+```
+With no auto-reload (avoid server auto-update and instability):
+```bash
+python manage.py runserver --noreload
+```
 
 ---
 ## 2) Check the app through the browser:
 http://localhost:8000/ or http://127.0.0.1:8000/
+

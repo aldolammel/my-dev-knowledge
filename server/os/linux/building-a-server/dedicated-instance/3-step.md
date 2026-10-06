@@ -2,9 +2,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
 
     PRE.1) Assuming you have finished the previous steps!
 
-
     PRE.2) You're in the VPS terminal!
-
 
     PRE.3) (If applicable)
         You're in as admin user, and not as root!

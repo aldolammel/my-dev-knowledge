@@ -48,9 +48,9 @@ dev = [
 ## Integration:
 
 ### Before
-1. [x] Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject.toml](/python/web-development/pyproject.toml)
+1. [x] Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject](/python/web-development/pyproject.md)
 ### 1) Add lines in `pyproject.toml`:
-- [x] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject.toml](/python/linter-formatter-typechecker/MyPy/pyproject.toml)
+- [x] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject](/python/linter-formatter-typechecker/MyPy/pyproject.md)
 
 - [ ] 1.2) (If applicable / Optional) For Django projects, install the *django-stubs* for better Django type hints: [python/web-development/django/Linter-Formatter-Typechecker/django-stubs/_installation](python/web-development/django/Linter-Formatter-Typechecker/django-stubs/_installation.md)
 

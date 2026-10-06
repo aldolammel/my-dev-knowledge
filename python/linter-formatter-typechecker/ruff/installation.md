@@ -44,7 +44,7 @@
 
         2) Create or edit the pyproject.toml file of your project:
             # If needed, model file:
-                /python/web-development/pyproject.toml
+                /python/web-development/pyproject.md
 
             # Apply these configs in your project pyproject.toml file:
                 ./pyproject.toml

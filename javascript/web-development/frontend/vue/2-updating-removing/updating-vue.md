@@ -14,11 +14,12 @@ E.g. /app_root_folder/frontend/
 
 
 ---
-
 ## 2) Make a choice, which Node package manager are you using:
+
 - 2A) Using NPM;
 - 2B) Using Yarn;
 
+......................................
 ### 2A) Using NPM
 
 **2A.1)  Check the Vue version:**
@@ -48,21 +49,17 @@ npm install vue@latest
 ==Remember!==
 If you're using [Vite](/javascript/build-tools/vite/0-vite.md), no worries, Vite is NOT a package manager.
 
+......................................
 ### 2B) Using Yarn
 
 Soon...
 
-
 ---
-
 ## 3) Make sure package.json was updated:
 
 Once you update Vue in your project, */frontend/package.json* file must be updated about Vue version for this project. But *package-lock.json* and *yarn.lock*, for example, are auto-regenerated so don't touch them.
 
-
 ---
-
-
 ## 4) (Optional / If applicable) AI prompts update:
 
 Update the stack information of the app in its AI prompts;

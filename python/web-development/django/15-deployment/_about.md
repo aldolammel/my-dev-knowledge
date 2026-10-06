@@ -36,3 +36,9 @@ This command will copy all static files (including the Django admin CSS) into th
 Since `DEBUG=False`, Django relies on the web server to serve static files, and you must  ensure all static files (including admin CSS) are collected into the `STATIC_ROOT` directory by running `collecstatic` command already shown above.
 
 The very first time to run the `collectstatic` command in a Django project is typically just before deploying your project to a production environment. This is when you need to gather all static files from the various apps and locations into a single directory that can be easily served by your web server (such as Nginx or Apache).
+
+---
+## In case you are using UV:
+There is a protection command to avoid DEV dependencies and desync updates for products on production: [/python/package-manager/uv/production-with-uv](/python/package-manager/uv/production-with-uv.md)
+
+---

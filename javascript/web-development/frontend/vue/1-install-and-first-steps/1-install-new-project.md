@@ -63,7 +63,7 @@ VUE: INSTALLING A NEW PROJECT
                         .../vue/vue-knowledge/_running-app.txt
 
 
-        - - - - -
+......................................
 
 
     2) Return to the main Vue roadmap and keep going:

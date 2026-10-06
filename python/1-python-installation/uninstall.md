@@ -16,16 +16,17 @@ PYTHON: UNINSTALLING
         1A) Uninstall to reinstall as soon as possible;
         1B) Uninstall to remove Python at all, including system-wide configuration files;
         
-        - - - - -
+......................................
         
         1A) Uninstall, preserving system-wide configuration for Python - - - - - - - - - - - - - - -
         
             $ sudo apt -y remove python3.15 
             $ sudo apt -y autoremove
-        
+
+......................................
+
         1B) Uninstall, deleting also the system-wide configuration for Python - - - - - - - - - - - 
         
             $ sudo apt -y purge python3.15
             $ sudo apt -y autoremove
             
-        - - - - -

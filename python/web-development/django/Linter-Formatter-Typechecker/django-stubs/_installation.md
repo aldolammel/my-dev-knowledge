@@ -48,7 +48,7 @@ $ xxxxxxxxxxxx
 ## 2) Integration:
 
 - [ ] **Before:**
-	1. Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject.toml](/python/web-development/pyproject.toml)
+	1. Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject](/python/web-development/pyproject.md)
 
 - [ ] **2.1) Include/edit these lines in your `pyproject.toml`:**
 	- For MyPy: [/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml](/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml)

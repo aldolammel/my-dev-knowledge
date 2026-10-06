@@ -10,7 +10,7 @@ It's a Music player app based on Python.
 
 **1.1) Create a venv:** 
 - Using Python built-in solution: [/python/3-virtual-environment/creating-virtual-environment](/python/3-virtual-environment/creating-virtual-environment.md)
-- Using `uv`: [/python/package-manager/uv/create-or-find-current-venv](/python/package-manager/uv/create-or-find-current-venv.md)
+- Using `uv`: [python/package-manager/uv/create-or-recreate-venv](python/package-manager/uv/create-or-recreate-venv.md)
 
 **1.2) Install Python 3.12;**
 

@@ -10,6 +10,8 @@
 **Make a choice:**
 - 1A) Using UV, install Python by project (RECOMMENDED);
 - 1B) Or using UV too, but install Python globally;
+
+......................................
 ### 1A) Using UV, install Python by project
 Most professional and long-term approach, once it's easier to update Python in case the VPS would gain new apps in parallel, for example.
 
@@ -34,6 +36,8 @@ uv run python --version
 nano .python-version
 ```
 If not, fix it doing this: [/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
+
+......................................
 ### 1B) Or using UV too, but install Python globally
 This approach will install Python outside any project. For single-purpose servers, it could be an option but can be risky in long-term.
 

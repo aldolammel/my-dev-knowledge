@@ -1,5 +1,9 @@
 #### Python > Package Manager > UV
-# Installing Dependencies
+# Installing Dependencies (`uv add` command)
+
+---
+
+Once this command is used to add a new dependency, automatically UV includes the dependency in the [pyproject.toml](/python/web-development/pyproject.md) dependency list and execute the `uv sync` behind the scene, updating the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
 
 ---
 ## Before:
@@ -12,6 +16,8 @@
 **Make a choice:**
 - 1A) Installing dependencies when the project has a `pyproject.toml` or similar;
 - 1B) Installing dependencies freely.
+
+......................................
 ### 1A) Installing dependencies when the project has a `pyproject.toml` or similar
 
 Installing mandatory dependency:
@@ -28,6 +34,8 @@ Checking installed ones:
 ```bash
 uv pip list
 ```
+
+......................................
 ### 1B) Installing dependencies freely:
 
 Installing dependency (no matter if mandatory or optional):

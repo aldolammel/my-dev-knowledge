@@ -10,6 +10,8 @@
 
 ==Info!==
 The *uv pin* command will auto-update the *.python-version* file!
+
+......................................
 ### 1A) For just one version accepted
 ```
 uv python pin <python-version>
@@ -18,6 +20,8 @@ E.g.
 ```
 uv python pin 3.13.9
 ```
+
+......................................
 ### 1B) For multiple versions accepted
 ```
 uv python pin "<python-version>"

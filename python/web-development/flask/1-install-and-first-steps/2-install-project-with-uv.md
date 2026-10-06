@@ -66,10 +66,11 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
         4) Creating new project:
 
             4.1) Create the virtual environment folder:
-                /python/package-manager/uv/create-or-find-current-venv.md
+
+[/python/package-manager/uv/create-or-recreate-venv](/python/package-manager/uv/create-or-recreate-venv.md)
 
                 >> Do you need a pyproject.toml model?
-                    /python/web-development/pyproject.toml
+                    /python/web-development/pyproject.md
 
             4.2) (If applicable)
                 If what you're building is a real project (not just an API, for example), create the minimum Python project scaffolding:
@@ -99,7 +100,7 @@ FLASK > PROJECT INSTALLATION: USING UV AS PACKAGE MANAGER
                 >> Check if the Python version on that file is correct!
                     If NOT okay, fix it!
                         E.g.
-                            requires-python = ">=3.13,<3.14"
+                            requires-python = ">=3.13,<3.14"  # or "==3.13.9"
 
                 >> Check the .python-version file:
 

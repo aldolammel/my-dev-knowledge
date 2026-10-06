@@ -13,14 +13,11 @@ It's important the UV be installed globally in your local machine!
 
 ## 1) Upgrading:
 It should update the UV for use in all local projects!
-```
+```bash
 uv self update
 ```
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-**UPGRADE PROJECT DEPENDENCIES WITH UV:**
-
-[[upgrade-dependencies]]
+## UPGRADE PROJECT DEPENDENCIES WITH UV:
+[upgrade-dependencies](/python/package-manager/uv/upgrade-dependencies.md)

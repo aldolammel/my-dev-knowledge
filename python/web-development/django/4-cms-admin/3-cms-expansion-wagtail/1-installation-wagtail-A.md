@@ -49,7 +49,7 @@ DJANGO CUSTOM CMS > WAGTAIL INSTALLATION: ROADMAP A
         # Using UV:
             $ uv init
         # Or manually creating the pyproject.toml file:
-            /python/web-development/pyproject.toml
+            /python/web-development/pyproject.md
 
 
     2) Already in the project virtual envinronment, install the Wagtail (contains Django embedded):

@@ -14,6 +14,7 @@
 - 1A) By pgAdmin;
 - 1B) By terminal;
 
+......................................
 ### 1A) Using PgAdmin
 
 1A.PRE) Make sure you've done the "INTEGRATION" step at once in the current machine:
@@ -34,11 +35,13 @@ Never use the database called "postgres". This is the default db and it cannot b
                     G) By PostgreSQL prompt;
                     H) By PgAdmin;
 
-                    - - - -
+..........
 
                     G) By PostgreSQL prompt - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                         xxxxxxxxxxxxxxxxxxxxxxxxx
+
+..........
 
                     H) By PgAdmin - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -75,6 +78,8 @@ Never use the database called "postgres". This is the default db and it cannot b
 [collation-updating](/database/PostgreSQL/collation-updating.md)
 
                                 H.3.5) Open again the PgAdmin, and now you should be able to create a new db!
+
+......................................
 
 ### 1B) Using Terminal
 

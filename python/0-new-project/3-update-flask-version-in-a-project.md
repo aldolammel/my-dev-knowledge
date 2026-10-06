@@ -1,4 +1,4 @@
-#### Python > Project types
+#### Python > Project types > Discovery
 # Updating Flask version in an existing project
 
 ---

@@ -1,4 +1,4 @@
-#### Python > Project types
+#### Python > Project types > Discovery
 # Updating Django version in an existing project
 
 ---

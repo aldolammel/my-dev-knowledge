@@ -10,7 +10,7 @@ DJANGO: INSTALLING A NEW PROJECT
         1C) Re-installing an entire existing project (skip this roadmap);
         1D) Install Flask in a new project;
 
-        - - - - - 
+......................................
 
         1A) Installing Flask project for the first time in this machine/IDE - - - - - - - - - - - -
         
@@ -39,7 +39,7 @@ DJANGO: INSTALLING A NEW PROJECT
                 ./2-install-project-with-pip.md
 
 
-        - - - - - 
+......................................
 
 
     2) Return to the main Flask roadmap and keep going:

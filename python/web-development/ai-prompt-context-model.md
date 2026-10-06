@@ -34,7 +34,7 @@
 - No. The code (class, functions, variables) is written in English, but the verbose names (what the visitors see) must be in Brazilian Portuguese.
 
 **Back-end heads-up:**
-- UV as package manager.
+- UV v0.12.23 (maybe newer) as package manager.
 
 **Front-end heads-up:** 
 - `SPA` project;

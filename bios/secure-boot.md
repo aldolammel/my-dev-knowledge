@@ -8,13 +8,13 @@ The entire Secure Boot roadmap below might change a few BIOS areas based in your
 
 ==(Example using a Gigabyte B450 AORUS M with bios version F67)==
 
-
 ---
-
 ## 1) Make a choice:
+
 - 1A) I will start the system formatting;
 - 1B) I've finished the system formatting;
 
+......................................
 ### 1A) I will start the system formatting
 
 1A.1) Acessar a BIOS - Reinicie o seu computador e pressione a tecla Delete repetidamente assim que o computador for ligar para entrar na configuração da BIOS.
@@ -38,7 +38,8 @@ Após restaurar as chaves, o sistema provavelmente exibirá uma mensagem para re
 1A.6) Ativar o Secure Boot - Após a reinicialização, entre na BIOS mais uma vez. Volte ao menu Boot > Secure Boot. Agora você verá que a opção principal Secure Boot (ou o status dela) poderá ser alterada. Mude-a para Enabled (Ativado) . O status final correto deve ser algo como "Active" (Ativo) e o "System Mode" (Modo do Sistema) como "User" (Usuário).
 
 A.7) Salvar e Sair - Vá até a aba Save & Exit (Salvar e Sair) e selecione Save Changes and Reset (Salvar Alterações e Reiniciar).
- 
+
+......................................
 ### 1B) I've finished the system formatting 
 
 ==Important!==
@@ -51,8 +52,6 @@ If you will install more than one OS, first install all of them before to procee
 1B.3) (If applicable) Re-check your boot devices' order, putting the Ubuntu and other possible OS devices in the order of priority for boot. 
 
 1B.4) Save it and reboot. Done!
-
-
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 

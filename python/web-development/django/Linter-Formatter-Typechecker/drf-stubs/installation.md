@@ -16,14 +16,14 @@ From the same team of [Django-Stubs](/python/web-development/django/Linter-Forma
 
 Using UV:
 ```bash
-uv add --optional dev "djangorestframework-stubs[compatible-mypy]"
+uv add --optional dev "djangorestframework-stubs"
 # Check the version:
 uv pip show djangorestframework-stubs
 ```
 
 Using PIP:
 ```bash
-pip install "djangorestframework-stubs[compatible-mypy]"
+pip install "djangorestframework-stubs"
 # Check the version:
 pip show djangorestframework-stubs
 ```
@@ -34,7 +34,7 @@ pip show djangorestframework-stubs
 [project.optional-dependencies]
 dev = [
 	# ...
-	"djangorestframework-stubs[compatible-mypy]>=1.4.0", # Make sure this version is the right one!
+	"djangorestframework-stubs>=1.4.0", # Recommended to define with a newer version!
 ]
 ```
 

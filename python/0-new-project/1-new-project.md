@@ -5,9 +5,9 @@
 ## 1) Make a choice of a project roadmap:
 
 - **Updating:**
-	- 1A) To update Python in an existent product: [/python/0-new-project/3-update-python-version-in-a-project](/python/0-new-project/3-update-python-version-in-a-project.md)
-	- 1B) To update Django in an existent product: [/python/web-development/django/0-new-project/update-django-version](/python/web-development/django/0-new-project/update-django-version.md)
-	- 1C) To update Flask in an existing product: [/python/web-development/flask/0-new-project/update-flask-version](/python/web-development/flask/0-new-project/update-flask-version.md)
+	- 1A) To update Python in an existent product: [/python/0-new-project/discovery-python](/python/0-new-project/discovery-python.md)
+	- 1B) To update Django in an existent product: [/python/web-development/django/0-new-project/discovery-django](/python/web-development/django/0-new-project/discovery-django.md)
+	- 1C) To update Flask in an existing product: [/python/web-development/flask/0-new-project/update-flask-version](/python/web-development/flask/0-new-project/update-flask-version.md) (To edit: it should be a discovery first as rule)
 - **API:**
 	- 1D) To develop an API with pure Python: [/python/0-new-project/api](/python/0-new-project/api.md)
 	- 1E) To develop an API with Django only: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)

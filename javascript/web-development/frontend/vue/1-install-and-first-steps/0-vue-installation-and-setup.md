@@ -23,7 +23,7 @@ VUE: INSTALLING AND SETUP
                 1C.1A) Node locally (RECOMMENDED);
                 1C.1B) Using CDN (Content Delivery Network);
 
-                - - - - -
+......................................
 
                 1C.1A) Node locally - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -66,7 +66,7 @@ VUE: INSTALLING AND SETUP
                     >> Project example using CDN solution:
                         .../vue/vue-knowledge/using-options-api/z-examples/using-cdn-example/
 
-                - - - - -
+......................................
 
             1C.2) Install Vue in the project:
                 ./1-install-new-project.md

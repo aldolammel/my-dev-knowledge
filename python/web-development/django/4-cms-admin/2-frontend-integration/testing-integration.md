@@ -17,7 +17,7 @@ LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
         1A) Development mode;
         1B) Or Production-like mode;
 
-        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.........................................
 
 
         1A) DEVELOPMENT MODE:
@@ -37,7 +37,7 @@ LOCAL: TESTING DJANGO INTEGRATION WITH AN EXTERNAL FRONTEND SOLUTION
                         $ cd frontend
                         $ npm run dev
 
-
+......................................
 
         1B) Or PRODUCTION-LIKE MODE:
 

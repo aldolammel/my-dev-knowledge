@@ -1,84 +1,90 @@
-#### Python > Project types
+#### Python > Project types > Discovery
 # Updating Python version in an existing project
 
 ---
+## Before:
 
-==Critical!==
-Are you really sure the Python version you need to install is compatible with other techs of the project stack? For example, the back-end framework you are using supports this new Python version? If so, keep going!
-
+1. [ ] Assuming you have finished Python discovery: [/python/0-new-project/discovery-python](/python/0-new-project/discovery-python.md)
+2. [ ] Did you obtain approval for this update/upgrade from the IT product lead/product leader through an official channel?
+3. [ ] Assuming you already have done the system backup!
+	- [Backup on PostgreSQL](/database/PostgreSQL/backup-on-postgresql.md)
+	- [Backup on MariaDB](/database/MariaDB/backup-on-maria.md)
+	- [Backup on MySQL](/database/MySQL/backup-on-mysql.md)
+	- [Backup on SQLite](/database/SQLite/backup-on-sqlite.md)
+	- [Backup on CassandraDB](/database/CassandraDB/backup-on-cassandra.md)
+4. [ ] Assuming you already have done the files backup!
 
 ---
-
 ## 1) Make a choice, which tool are you using:
-- 1A) Using Python only;
-- 1B) Using UV package manager;
 
-### 1A) Using Python only
+- 1A) Using UV package manager;
+- 1B) Using Python only;- 
 
-**Before:**
-1. xxxxx
-
-**A.1) xxxxxxxxxxxx**
-
-**A.2) xxxxxxxxxxxx**
-
-### 1B) Using UV
+................................
+### 1A) Using UV
 
 **Before:**
-1. Assuming you already got UV installed: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
+1. [ ] Assuming you already got UV installed: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
-**1B.1) Check the current Python versions installed and install that you need:**
+**A.1) Check the current Python versions installed and install that you need:**
 
-In your global local environment, check it:
-```
+- [ ] In your global local environment, check it, and add the new one:
+```bash
 uv python list
-```
-Add the new one, e.g.:
-```
+# Adding a new one, e.g.:
 uv python install 3.13.9
 ```
 
+**A.2) In your project folder/environment, set up:**
 
-1**B.2) In your project folder/environment, set up:**
+- [ ] Before: defining to UV which Python version the project must run, e.g.: [/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
 
-Defining to UV which Python version the project must run, e.g.:
-
-[/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
-
-1B.2.1) (If applicable) In *pyproject.toml* file, update Python version:
-```
+- [ ] A.2.1) (If applicable) In `pyproject.toml` file, update Python version:
+```toml
 [project]
 ...
 requires-python = "==3.13.9"  # Or ">=3.13.7,<3.14"
 ```
-1B.2.2) (If applicable) In *pyproject.toml* file, if using *Ruff*:
-```
+
+- [ ] A.2.2) (If applicable) In `pyproject.toml` file, if using [Ruff](/python/linter-formatter-typechecker/ruff/_about.md):
+```toml
 [tool.ruff]
 ...
 target-version = "py313"  # Python (py313 means newest of 3.13 = 3.13.9) <------
 ```
-1B.2.3) (If applicable) In *pyproject.toml* file, if using *MyPy*:
-```
+
+- [ ] A.2.3) (If applicable) In `pyproject.toml` file, if using *MyPy*:
+```toml
 [tool.mypy]
 ...
 python_version = "3.13"  # 3.13 means newest of 3.13 = 3.13.9  <----------------
 ```
-1B.2.4) Sync the environment (UV will recreate *venv* with new Python):
 
-[/python/package-manager/uv/auto-installation-with-sync](/python/package-manager/uv/auto-installation-with-sync.md)
+- [ ] A.2.4) Sync the environment (UV will recreate `venv` with new Python): [/python/package-manager/uv/auto-installation-with-sync](/python/package-manager/uv/auto-installation-with-sync.md)
 
-1B.2.5) Deactivate and active the project environment:
+- [ ] A.2.5) Deactivate and active the project environment: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
-[/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
-
-1B.2.6) Verify the Python version in the environment:
-```
+- [ ] A.2.6) Verify the Python version in the environment:
+```bash
 uv run python --version
 ```
 
-**1B.3) (Optional) Uninstall unwanted Python versions:**
+**A.3) (Optional) Uninstalling trash:**
 
-[/python/package-manager/uv/uninstall-python-old-version](/python/package-manager/uv/uninstall-python-old-version.md)
+ - [ ] Removing unwanted Python versions: [/python/package-manager/uv/uninstall-python-old-version](/python/package-manager/uv/uninstall-python-old-version.md)
 
+......................................
+### 1B) Using Python only
+
+**Before:**
+1. xxxxx
+
+**B1) xxxxxxxxxxxx**
+
+**B2) xxxxxxxxxxxx**
+
+---
+## 2) Once the Python is updated:
+Finish this roadmap asking yourself if a Python framework shouldn't be updated/upgraded too: [/python/0-new-project/discovery-python](/python/0-new-project/discovery-python.md)
 
 ---

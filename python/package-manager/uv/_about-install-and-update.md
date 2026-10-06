@@ -12,76 +12,56 @@ When you ask to UV to initiate a project, a `uv.lock` file is created automatica
 
 **Before:**
 1. Assuming you are activated in a project venv;
-2. Check if you already got UV in your machine: $ uv --version
+2. Check if you already got UV in your machine: `$ uv --version`
 	1. If you got, skip the entire 1 step and its sub-steps and [update UV if needed](/python/package-manager/uv/upgrade-uv.md), going to step 2 next.
 
 **1.1) Choose the OS and install it:**
 
 **Linux/Mac:**
 Downloading using _wget_ (bundled on _Debian_ distros):
-```
+```bash
 wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 Or downloading using CURL:
-```
+```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 **Windows:**
-```
+```bash
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 And:
-```
+```bash
 winget install --id=astral-sh.uv  -e
 ```
 
 **1.2) Restart your terminal to include definitely UV stuff in the local machine $PATH!**
 
 **1.3) Test it:**
-```
+```bash
 uv --version
 ```
 
-**1.4) (If applicable) If needed, update it:** [/python/package-manager/uv/upgrade-uv](/python/package-manager/uv/upgrade-uv.md)
+---
+## (If applicable) Updating it:
+[/python/package-manager/uv/upgrade-uv](/python/package-manager/uv/upgrade-uv.md)
 
 ---
 ## 2) Using UV:
 
 **Make a choice:**
-- 2A) You are starting a new project from scratch;
-- 2B) Your project already has development or production files;
+- 2A) You are starting a new project from scratch.
+- 2B) Your project already has development or production files.
+
+......................................
 ### 2A) You are starting a new project from scratch
+- [/python/package-manager/uv/new-project-with-uv](/python/package-manager/uv/new-project-with-uv.md)
 
-**Make one more choice:**
-- 2A.1A) Create a project with pyproject.toml dependencies and tools control;
-- 2A.1B) I just need the venv and nothing else;
-
-**2A.1A) Create a project with *pyproject.toml* dependencies and tools control, and *Git* repository-ready:**
-
-Create the minimal Python project scaffolding. It creates automatically some files like _pyproject.toml_. Don't use this for existing projects with these files already:
-```
-uv init
-```
-And then create the venv:
-```
-uv venv
-```
-
-**2A.1B) I just need the venv and nothing else:**
-```
-uv venv
-```
-
+......................................
 ### 2B) Your project already has development or production files
-
-**2B.1) Create or recreate (or even find the current) venv in the project folder:** 
-
-[/python/package-manager/uv/create-or-find-current-venv](/python/package-manager/uv/create-or-find-current-venv.md)
-
-**2B.2) (If applicable) Updating or restoring Python, and project dependencies (existing projects ongoing):**
-
-[/python/package-manager/uv/auto-installation-with-sync](/python/package-manager/uv/auto-installation-with-sync.md)
+- 2B.1) Create or recreate venv in the project folder: [/python/package-manager/uv/create-or-recreate-venv](/python/package-manager/uv/create-or-recreate-venv.md)
+- 2B.2) (If applicable) Updating or restoring Python, and project dependencies (existing projects ongoing): [/python/package-manager/uv/auto-installation-with-sync](/python/package-manager/uv/auto-installation-with-sync.md)
 
 ---
 ## Install Python version with UV:

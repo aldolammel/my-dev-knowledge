@@ -47,7 +47,7 @@ Dataflow of a real Vue Pinia usage:
         1A) Using Vue-CLI;
         1B) Using Vue-Vite;
 
-        - - - - -
+......................................
 
         1A) Using Vue-CLI - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -76,7 +76,7 @@ Dataflow of a real Vue Pinia usage:
                     $ npm list
 
 
-        - - - - -
+......................................
 
 
     2) Integration:

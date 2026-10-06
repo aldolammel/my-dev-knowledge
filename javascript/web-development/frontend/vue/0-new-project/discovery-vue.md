@@ -14,17 +14,16 @@ Group of action to figure out a Vue project settings and features:
 
 	x) xxxxxxxxxxxxxx
 
+
 ---
+## X) (If applicable) To update/upgrade:
 
-DISCOVERY OF RELATED VUE PROJECT'S FRAMEWORKS
+==CRITICAL==
+Any update/upgrade is NOT recommended until the discovery of the whole project layers (back-end + front-end) to be finished.
 
-    >> Django:
-        /python/web-development/django/0-new-project/discovery-django.md
+Updating/Upgrading:
+```bash
+xxxxxxxxx
+```
 
-DISCOVERY OF OTHER JS FRAMEWORKS:
-
-    >> React:
-        /xxxxxxxxxxxxxx
-
-    >> Angular:
-        /xxxxxxxxxxxxxxxxxxxxxxx
+---

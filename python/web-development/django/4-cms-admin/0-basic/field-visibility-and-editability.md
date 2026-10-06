@@ -9,7 +9,7 @@ FIELD VISIBILITY AND EDITABILITY:
     D) Partialy hidden, visible only in Detail View;
     E) Context visibility and editability, only if another option is chosen;
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+......................................
 
     A) VISIBLE BUT LOCKED (NOT EDITABLE)
 
@@ -31,7 +31,7 @@ FIELD VISIBILITY AND EDITABILITY:
                             ignored by your CMS;
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+......................................
 
     B) COMPLETELY HIDDEN
 
@@ -53,7 +53,7 @@ FIELD VISIBILITY AND EDITABILITY:
                             list_display = ('<the_field_shouldnt_be_here>',)
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+......................................
 
     C) PARTIALY HIDDEN: VISIBLE ONLY IN LIST VIEW
 
@@ -73,7 +73,7 @@ FIELD VISIBILITY AND EDITABILITY:
                             list_display = ('<the_field_must_be_here>',)
 
     
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+......................................
 
     D) PARTIALY HIDDEN: VISIBLE ONLY IN DETAIL VIEW
 
@@ -95,7 +95,7 @@ FIELD VISIBILITY AND EDITABILITY:
                             list_display = ('<the_field_shouldnt_be_here>',)
 
 
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+......................................
 
     E) CONTEXT VISIBILITY AND EDITABILITY: ONLY IF ANOTHER OPTION IS CHOSEN
 

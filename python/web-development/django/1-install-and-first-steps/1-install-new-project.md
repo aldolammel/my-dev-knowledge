@@ -10,6 +10,7 @@ Which scenario is your case:
 - 1C) Re-installing an entire existing project (skip this roadmap, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md));
 - 1D) Install Django in a new project;
 
+......................................
 ### 1D) Install Django in a new project
 
 - Using UV: [/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv](/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.md)

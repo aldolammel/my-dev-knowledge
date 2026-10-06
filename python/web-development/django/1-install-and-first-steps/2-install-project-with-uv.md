@@ -53,7 +53,7 @@ Python basics:
 ==CRITICAL== 
 Never copy a `pyproject.toml` file from other project because it would bring dependencies that this project won't need!
 
-- [x] 4.1) Create the virtual environment folder: [/python/package-manager/uv/create-or-find-current-venv](/python/package-manager/uv/create-or-find-current-venv.md)
+- [x] 4.1) Create the virtual environment folder: [python/package-manager/uv/create-or-recreate-venv](python/package-manager/uv/create-or-recreate-venv.md)
 
 - [x] 4.2) (Optional) Create the minimum Python project scaffolding:
 
@@ -67,7 +67,7 @@ uv init
 
 - [x] 4.3) Once UV created a new `pyproject.toml` file, carefully, check this model below and bring the `[project.urls]` and other data to your empty project `.toml` file:
 
-[/python/web-development/pyproject.toml](/python/web-development/pyproject.toml)
+[/python/web-development/pyproject](/python/web-development/pyproject.md)
 
 - [x] 4.4) Once you now got a `.venv` folder, active the project's virtual environment:
 
@@ -135,7 +135,7 @@ uv run manage.py compilemessages
 ```
 
 ---
-## 7) (If applicable) .gitignore configure:
+## 7) (If applicable) `.gitignore` configure:
 - [x] Make sure you got the project `.gitignore` updated with Django, environment and other things: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
 
 ---

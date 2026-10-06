@@ -34,7 +34,7 @@ JAVASCRIPT BUILD-TOOL: VITE
             2.1A) Install Vite for the first time in a new front-end project (scaffolding tool);
             2.1B) Re-install Vite in an existing front-end project;
 
-            - - - -
+......................................
 
             2.1A) Install Vite for the first time in a new front-end project - - - - - - - - - - - -
 
@@ -90,7 +90,7 @@ JAVASCRIPT BUILD-TOOL: VITE
                         $ yarn add vite@^7
 
 
-            - - - -
+......................................
 
 
         2.2) Plugins for your linter:

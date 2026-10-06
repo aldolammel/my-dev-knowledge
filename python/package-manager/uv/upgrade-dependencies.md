@@ -1,9 +1,9 @@
 #### Python > Package Manager > UV
-# Updating dependencies (command --upgrade)
+# Updating dependencies
 
 ---
 
-The _uv --upgrade_ command automatically check if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
+The `uv --upgrade` command automatically check if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
 
 ---
 
@@ -18,6 +18,7 @@ The _uv --upgrade_ command automatically check if the dependency involved is com
 - 1A) Update just a specific app dependency;
 - 1B) Update all app dependencies (listed in pyproject.toml);
 
+......................................
 ### 1A) Individual update
 
 **Before:**
@@ -28,22 +29,23 @@ The _uv --upgrade_ command automatically check if the dependency involved is com
 
 Mandatory ones, e.g.:
 
-```
+```bash
 uv add "django-admin-sortable2>=2.2.7" --upgrade
 ```
 
 Dev dependency ones, e.g.:
 
-```
+```bash
 uv add "django-stubs[compatible-mypy]>=5.2.3" --upgrade --dev
 ```
 
 A dependency from other sub-group, e.g.:
 
-```
+```bash
 uv add "something>=3.0" --upgrade --subgrouphere
 ```
 
+......................................
 ### 1B) Update everything listed in _pyproject.toml_
 
 **Before:**
@@ -56,25 +58,25 @@ uv add "something>=3.0" --upgrade --subgrouphere
 
 It removes all dependencies, and then install latest version of mandatory dependencies and dev ones as well:
 
-```
+```bash
 uv sync --extra dev --upgrade
 ```
 
 It removes all dependencies, and then install latest version of mandatory dependencies w/ multiple sub-grous:
 
-```
+```bash
 uv sync --extra dev --extra test --upgrade
 ```
 
 It removes all dependencies, and then install latest version of mandatory dependencies only (WARNING):
 
-```
+```bash
 uv sync --upgrade
 ```
 
 ---
 
-## 2) Check the _pyproject.toml_ if it looks fine!
+## 2) Check the `pyproject.toml` if it looks fine!
 
 ---
 
@@ -82,11 +84,8 @@ uv sync --upgrade
 
 ---
 
-**INSTALL DEPENDENCY:**
-
+## INSTALL DEPENDENCY:
 [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
-
-**UNINSTALL DEPENDENCY:**
-
+## UNINSTALL DEPENDENCY:
 [/python/package-manager/uv/uninstall-dependency](/python/package-manager/uv/uninstall-dependency.md)
 
