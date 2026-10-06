@@ -1,35 +1,22 @@
+#### Python > Django > Authenticated Users
+# User setup
 
-
-USERS SETUP:
-
-    CRUCIAL:
-        What is the difference to call the Django user using...
-            
-            # JUST FOR SPECIFIC CASES:
-            "from django.contrib.auth.models import User"
-
-        ...and using?
-            
-            # DJANGO RECOMMENDATION:
-            from django.contrib.auth import get_user_model
-            User = get_user_model()
-
-        Answer:
-            Both methods access Django's user model, but there's an important architectural difference. When you "import User", you are importing the Django default model that has no potential project customizations within. The "import get_user_model" you dynamically retrieve whatever user model is configured in the core settings, much more future-proof.
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-    >> SIMPLEST:
+---
+## Simplest approach
     
-        If you need just user registration for the CMS/ADMIN only, without the necessity of profile pages on the application front-end, so use this simplest default solution:
+If you need just user registration for the CMS/ADMIN only, without the necessity of profile pages on the application front-end, so use this simplest default solution:
             
-            ./1-basic-users-only-for-cms.txt
-    
+[1-basic-users-only-for-cms](/python/web-development/django/3-1-models-database/3-users/1-basic-users-only-for-cms.md)
 
-    >> EXTENDING USER POSSIBILITIES:
+## Or extended user profile approach:
 
-        If your project needs to show User Profile on the application front-end, or even a simple user creation form also on the application front-end, you must use these settings!
-        
-            ./2-extending-users.txt
+If your project needs to show User Profile on the application front-end, or even a simple user creation form also on the application front-end, you must use these settings!
+
+[2-extending-users](/python/web-development/django/3-1-models-database/3-users/2-extending-users.md)
+
+---
+## How should I import a user:
+[/python/web-development/django/3-1-models-database/3-users/importing-users](/python/web-development/django/3-1-models-database/3-users/importing-users.md)
+
+---
+

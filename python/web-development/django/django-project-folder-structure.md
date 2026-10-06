@@ -19,7 +19,7 @@ my_project_name/
 │   ├── urls.py                  # Main URL configuration for the entire project.
 │   └── wsgi.py                  # xxxxxxxx.
 │
-├── apps/
+├── apps/                   # 'sub-app' package folder.
 │   ├── app1/               # Example of a 'sub-app' of the main-app (project folder).
 │   │   ├── migrations/     # Folder where all db logic/structure changes are tracked.
 │   │   │   └── ...
@@ -49,7 +49,7 @@ my_project_name/
 │   ├── app.../
 │   │   └── ...
 │   │
-│   └── __init__.py        # Makes Apps folder to be a package of apps.
+│   └── __init__.py        # Makes apps folder to be a package of apps.
 │
 ├── media/                 # xxxxx
 │

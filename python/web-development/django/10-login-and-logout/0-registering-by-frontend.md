@@ -12,79 +12,83 @@ LOGIN AND LOGOUT: WORKING WITH USERS IN FRONT-END (WITH REGISTER FORM TOO)
 
     3) Still in the 'accounts' folder, edit the views.py file with:
 
-        from django.contrib.auth import login
-        from django.contrib.auth.views import PasswordChangeView
-        from django.contrib.auth.forms import UserCreationForm
-        from django.shortcuts import render, redirect
-        from .forms import CustomUserCreationForm
+```python
+from django.contrib.auth import login
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from .forms import CustomUserCreationForm
 
-        def register(request):
-            # Escape if logged-in:
-            if request.user.is_authenticated:
-                # There the user will be filtered in Personal or Business:
-                return redirect('in:home_view')
-            # Otherwise:
-            else:
-                if request.method == 'POST':
-                    form = CustomUserCreationForm(request.POST)
-                    if form.is_valid():
-                        new_user = form.save()
-                        # Automatic log-in after registration:
-                        login(request, new_user)
-                        return redirect('in:home_view')
-                else:
-                    form = CustomUserCreationForm()
-                # Defining what send to the template:
-                context = {
-                    'page_title': lng.S_G_REG_TTL,
-                    'form': form,
-                    'bt_have_account': lng.BT_REG_HAVE_ACCOUNT,
-                    'bt_submit': lng.BT_REG_SUBMIT,
-                    'bt_back': lng.BT_BACK,
-                }
-                # Load template:
-                return render(request, 'registration/register.html', context)
+def register(request):
+	# Escape if logged-in:
+	if request.user.is_authenticated:
+		# There the user will be filtered in Personal or Business:
+		return redirect('in:home_view')
+	# Otherwise:
+	else:
+		if request.method == 'POST':
+			form = CustomUserCreationForm(request.POST)
+			if form.is_valid():
+				new_user = form.save()
+				# Automatic log-in after registration:
+				login(request, new_user)
+				return redirect('in:home_view')
+		else:
+			form = CustomUserCreationForm()
+		# Defining what send to the template:
+		context = {
+			'page_title': lng.S_G_REG_TTL,
+			'form': form,
+			'bt_have_account': lng.BT_REG_HAVE_ACCOUNT,
+			'bt_submit': lng.BT_REG_SUBMIT,
+			'bt_back': lng.BT_BACK,
+		}
+		# Load template:
+		return render(request, 'registration/register.html', context)
 
 
-        class CustomPasswordChangeView(PasswordChangeView):
-            template_name = 'accounts/pwd_change.html'
+class CustomPasswordChangeView(PasswordChangeView):
+	template_name = 'accounts/pwd_change.html'
 
-            def form_valid(self, form):
-                messages.success(self.request, lng.TX_FDBK_PROFILE_SUCC_PWD_UPDATED)
-                return redirect('accounts:profile_view', username=self.request.user.username)  # type: ignore
+	def form_valid(self, form):
+		messages.success(self.request, lng.TX_FDBK_PROFILE_SUCC_PWD_UPDATED)
+		return redirect('accounts:profile_view', username=self.request.user.username)  # type: ignore
 
-            def get_context_data(self, **kwargs):
-                # Definitions:
-                user = self.request.user
-                profile_type = TX_PROFILE_1 if user.profile_type == '1' else TX_PROFILE_2  # type: ignore
-                context = super().get_context_data(**kwargs)
-                # Building context:
-                context['page_title'] = f'{S_I_PROFILE_PWD_TTL}: {user.username} ({profile_type})'  # type: ignore
-                context['header'] = lng.S_I_PROFILE_PWD_TTL
-                context['bt_back'] = lng.BT_BACK
-                context['bt_submit'] = lng.BT_PROFILE_PWD_SUBMIT
-                return context
+	def get_context_data(self, **kwargs):
+		# Definitions:
+		user = self.request.user
+		profile_type = TX_PROFILE_1 if user.profile_type == '1' else TX_PROFILE_2  # type: ignore
+		context = super().get_context_data(**kwargs)
+		# Building context:
+		context['page_title'] = f'{S_I_PROFILE_PWD_TTL}: {user.username} ({profile_type})'  # type: ignore
+		context['header'] = lng.S_I_PROFILE_PWD_TTL
+		context['bt_back'] = lng.BT_BACK
+		context['bt_submit'] = lng.BT_PROFILE_PWD_SUBMIT
+		return context
+```
 
 
 
     4) Still in the 'accounts' sub-app, create the urls.py file and fill it with:
 
-        from django.urls import path, include
-        from . import views
+```python
+from django.urls import path, include
+from . import views
 
-        # Namespace:
-        app_name = 'accounts'
+# Namespace:
+app_name = 'accounts'
 
-        urlpatterns = [
-            # http://127.0.0.1:8000/accounts/register/
-            path('register/', views.register, name='register_view'),
-            # http://127.0.0.1:8000/accounts
-            # I'm saying that all user accounts must be handle by django that automatically includes
-            # pattern-names as 'login' and 'logout':
-            path('', include('django.contrib.auth.urls')),
-            # http://127.0.0.1:8000/accounts/aldolammel/pwd/
-            path('pwd/', views.CustomPasswordChangeView.as_view(), name='pwd_change_view'),
-        ]
+urlpatterns = [
+	# http://127.0.0.1:8000/accounts/register/
+	path('register/', views.register, name='register_view'),
+	# http://127.0.0.1:8000/accounts
+	# I'm saying that all user accounts must be handle by django that automatically includes
+	# pattern-names as 'login' and 'logout':
+	path('', include('django.contrib.auth.urls')),
+	# http://127.0.0.1:8000/accounts/aldolammel/pwd/
+	path('pwd/', views.CustomPasswordChangeView.as_view(), name='pwd_change_view'),
+]
+```
 
 
     5) Open the register.html file and customize it:

@@ -106,8 +106,9 @@
 
                     $ django-admin startproject core .                     <-- This dot's important!
 
-
-                4.6.2) (If applicable)
+                4.6.2) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
+                
+                4.6.3) (If applicable)
                     Case you need an admin user:
                         .../django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.txt
 

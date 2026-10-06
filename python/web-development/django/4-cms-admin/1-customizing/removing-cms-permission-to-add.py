@@ -13,11 +13,9 @@ from django.contrib import admin
 from .models import UserProfile
 
 
+@admin.register(UserProfile)
 class UserProfileCMS(admin.ModelAdmin):
 
     def has_add_permission(self, request):
         """This built-in method should return True if adding obj's allowed."""
         return False
-
-
-admin.site.register(UserProfile, UserProfileCMS)

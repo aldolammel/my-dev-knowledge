@@ -10,9 +10,11 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
 
     1) In the HTML where is or should be the form, replace entirely the current <form> tag content to:
 
-        {% csrf_token %}
-        {{ form }}
-        <button>Upload</button>
+```html
+{% csrf_token %}
+{{ form }}
+<button>Upload</button>
+```
 
 
     2) Go to the app views.py file and create a view class that inherits CreateView's features:
@@ -21,15 +23,17 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
             /python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py
 
         E.g.
-            from django.views.generic.edit import CreateView
-            from .models import UserProfile
+```python
+from django.views.generic.edit import CreateView
+from .models import UserProfile
 
-            class CreateProfileView(CreateView):
-                template_name = "profiles/create_profile.html"
-                # Model tied used to populate it:
-                model = UserProfile
-                fields = "__all__"  # Automatically remove fields editable=False!
-                success_url = "/profiles"
+class CreateProfileView(CreateView):
+	template_name = "profiles/create_profile.html"
+	# Model tied used to populate it:
+	model = UserProfile
+	fields = "__all__"  # Automatically remove fields editable=False!
+	success_url = "/profiles"
+```
 
             # IMPORTANT: in this way, you don't need any Django custom form in forms.py!
 
@@ -37,15 +41,17 @@ DJANGO: HOW TO UPLOAD IMAGE FILES (SIMPLEST WAY)
         3) Go to the app urls.py and add:
 
             E.g.
-                from django.urls import path
-                from . import views
+```python
+from django.urls import path
+from . import views
 
-                urlpatterns = [
-                    path("", views.CreateProfileView.as_view())
-                ]
+urlpatterns = [
+	path("", views.CreateProfileView.as_view())
+]
+```
 
 ---
 
 EXTRA INFO: CONTEXT PROCESSORS
 
-    If you want to use {{ MEDIA_URL }} in your templates, add 'django.template.context_processors.media' in the 'context_processors' option of TEMPLATES.
+If you want to use {{ MEDIA_URL }} in your templates, add 'django.template.context_processors.media' in the 'context_processors' option of TEMPLATES.

@@ -11,9 +11,9 @@
 **Before:**
 1. [x] Python interpreter (if needed): [/python/1-python-installation/\_install](/python/1-python-installation/_install.md)
 2. [x] Create the project folder, and get it:
-```
-$ mkdir <project_folder>
-$ cd <project_folder>
+```bash
+mkdir <project_folder>
+cd <project_folder>
 ```
 3. [x] DON'T create the `.venv` yet (so is NOT need to activate environ for now)!
 4. [x] IDE, select through the IDE GUI which *User Profile* this project demands!

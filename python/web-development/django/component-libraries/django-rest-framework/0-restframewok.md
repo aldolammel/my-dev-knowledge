@@ -12,11 +12,11 @@ Django REST framework is a powerful and flexible toolkit for building Web APIs. 
 - Extensive documentation, and great community support.
 - Used and trusted by internationally recognized companies including Mozilla, Red Hat, Heroku, and Eventbrite.
 
-    https://www.django-rest-framework.org/
+https://www.django-rest-framework.org/
 
 **More about API:**
-- API:          /api/_about.md
-- Serializers:  /api/serializers.txt
+- API: [/api/\_about](/api/_about.md)
+- Serializers: [/api/serializers](/api/serializers.md)
 
 Data-flow of a real Django REST Framework usage: [/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
@@ -75,20 +75,17 @@ REST_FRAMEWORK = {
 }
 ```
 
-2.3) If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to your core `urls.py` file:
+2.3) If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to the `core/urls.py` file:
 
 ```python
 from django.urls import include
 
+# DJANGO BASIC:
 urlpatterns = [
-	# DJANGO:
+	# CMS:
 	#...
-
-	# APIs:
+	# SUB-APPs, APIs:
 	path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-
-	# THIRD-PARTY:
-	#...
 ]
 ```
 
@@ -101,10 +98,9 @@ Example:
 - [.../django-rest-framework/example/core/views.py](/python/web-development/django/component-libraries/django-rest-framework/example/core/views.py)
 
 ---
-
-## DRF POWER-UPS: CREATING APIs
-[1-serializers](/python/web-development/django/component-libraries/django-rest-framework/1-serializers.md)
-
-## EXPANDING DJANGO REST FRAMEWORK: JSON WEB TOKEN (JWT) PLUGIN
-[0-jwt](/python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.md)
-
+## DRF power-ups: creating APIs
+[/python/web-development/django/component-libraries/django-rest-framework/1-serializers](/python/web-development/django/component-libraries/django-rest-framework/1-serializers.md)
+## Expanding DRF: JSON Web Token (JWT) plugin:
+[/python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt](/python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.md)
+## Type Checker for DRF:
+[/python/web-development/django/Linter-Formatter-Typechecker/drf-stubs/installation](/python/web-development/django/Linter-Formatter-Typechecker/drf-stubs/installation.md)

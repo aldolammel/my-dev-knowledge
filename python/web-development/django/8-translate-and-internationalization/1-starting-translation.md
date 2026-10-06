@@ -74,16 +74,17 @@ TIME_INPUT_FORMATS = [
 FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
 ```
 
-- [ ] 1.4) Still in the core folder, edit the main `urls.py` file:
+- [ ] 1.4) Still in the core folder, edit the main `core/urls.py` file:
 ```python
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 
+# DJANGO BASIC:
 urlpatterns = i18n_patterns(
-	# DJANGO:
+	# CMS:
 	path('admin/', admin.site.urls),
-	# THIRD-PARTY:
+	# SUB-APPs, APIs:
 	path('rosetta/', include('rosetta.urls')),
 	# PRODUCT:
 	# path('<virtual_folder>/', include('<subapp_name>.urls')),

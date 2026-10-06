@@ -51,8 +51,10 @@
 
 
             1.2) Add in settings.py:
-                LANGUAGE_COOKIE_NAME = 'user_language'
-                LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
+```python
+LANGUAGE_COOKIE_NAME = 'user_language'
+LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
+```
 
 
             1.3) Be sure you have registered (in settings.py 'middlewares' list) middleware that
@@ -65,15 +67,17 @@
 
                     That said, do it:
 
-                    MIDDLEWARE = [
-                        ...
-                        "django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
-                        ...
-                    ]
+```python
+MIDDLEWARE = [
+	...
+	"django.middleware.locale.LocaleMiddleware",  # Django additional built-in language features (need to be after Session).
+	...
+]
 
-                    LANGUAGES = [
-                        <your languages options>
-                    ]
+LANGUAGES = [
+	<your languages options>
+]
+```
 
 
         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -85,12 +89,14 @@
 
             2.1) Through the core-folder file "urls.py", turn True the prefix:
 
-                    urlpatterns = i18n_patterns(
-                        ...,
-                        ...,
-                        ...,
-                        prefix_default_language=False,
-                    )
+```python
+urlpatterns = i18n_patterns(
+	...,
+	...,
+	...,
+	prefix_default_language=False,
+)
+```
 
                     >> CRUCIAL! It will force the language prefix to be always on the URL! If you don't want
                         that, just turn it False but test a lot before Prodution! Not sure my
@@ -105,11 +111,13 @@
 
                 That said, do it:
 
-                MIDDLEWARE = [
-                    ...
-                    "core.middlewares.UserLanguageMiddleware",  # Advanced language features (need to be after the Locale and Authentication)!
-                    ...
-                ]
+```python
+MIDDLEWARE = [
+	...
+	"core.middlewares.UserLanguageMiddleware",  # Advanced language features (need to be after the Locale and Authentication)!
+	...
+]
+```
 
             2.3) In core folder, create the file called "middlewares.py":
 
@@ -122,14 +130,16 @@
                 /python/web-development/django/3-2-views-and-API/4-user-profile-view/profile-view.txt
 
                     E.g.
-                        # Update the session language to match the new preference:
-                        # Important: keep it before the messages.success() to translate the message according to
-                        # the new language if the user has changed it.
-                        if 'language' in form.cleaned_data and form.cleaned_data['language']:
-                            # Get the ISO code from the Language model instance:
-                            language_code = form.cleaned_data['language'].iso_code
-                            # Set the new language in the session:
-                            translation.activate(language_code)
-                            request.session['_language'] = language_code
-                        # Feedback message:
-                        messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
+```python
+# Update the session language to match the new preference:
+# Important: keep it before the messages.success() to translate the message according to
+# the new language if the user has changed it.
+if 'language' in form.cleaned_data and form.cleaned_data['language']:
+	# Get the ISO code from the Language model instance:
+	language_code = form.cleaned_data['language'].iso_code
+	# Set the new language in the session:
+	translation.activate(language_code)
+	request.session['_language'] = language_code
+# Feedback message:
+messages.success(request, lng.TX_FDBK_PROFILE_SUCC_UPDATED)
+```

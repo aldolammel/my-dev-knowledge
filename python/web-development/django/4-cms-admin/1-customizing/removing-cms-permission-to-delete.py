@@ -14,6 +14,7 @@ from django.contrib import admin
 from .models import UserProfile
 
 
+@admin.register(UserProfile)
 class UserProfileCMS(admin.ModelAdmin):
 
     def get_actions(self, request):
@@ -31,5 +32,3 @@ class UserProfileCMS(admin.ModelAdmin):
             return request.user.is_superuser  # True if superuser!
         return False
 
-
-admin.site.register(UserProfile, UserProfileCMS)

@@ -27,45 +27,50 @@ https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
 
             2.1) Open the core settings.py in your Django project, and add these lines:
 
-                INSTALLED_APPS = [
-                    ...
-                    'rest_framework',  // mandatory for JWT plugin.
-                    'rest_framework_simplejwt',
-                ]
+```python
+INSTALLED_APPS = [
+	...
+	'rest_framework',  // mandatory for JWT plugin.
+	'rest_framework_simplejwt',
+]
+```
 
             2.2) Still in settings.py, add these lines too:
 
-                from datetime import timedelta
+```python
+from datetime import timedelta
 
-                SIMPLE_JWT = {
-                    'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
-                    'REFRESH_TOKEN_LIFETIME': timedelta(days=180),
-                    'ROTATE_REFRESH_TOKENS': False,
-                }
+SIMPLE_JWT = {
+	'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
+	'REFRESH_TOKEN_LIFETIME': timedelta(days=180),
+	'ROTATE_REFRESH_TOKENS': False,
+}
+```
 
             2.3) Still in settings.py, let say to Rest Framework to work with JWT, editing it:
 
-                REST_FRAMEWORK = {
-                    'DEFAULT_AUTHENTICATION_CLASSES': (
-                        'rest_framework_simplejwt.authentication.JWTAuthentication',
-                    )
-                    //...
-                }
+```python
+REST_FRAMEWORK = {
+	'DEFAULT_AUTHENTICATION_CLASSES': (
+		'rest_framework_simplejwt.authentication.JWTAuthentication',
+	)
+	//...
+}
+```
 
             2.4) Now, in your Django core urls.py file (or any other url config), include routes
                 for Simple JWT:
 
-                    from django.url import path
-                    from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+```python
+from django.url import path
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-                    urlpatterns = [
-                        # DJANGO:
-                        #...
-
-                        # APIs:
-                        path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-                        path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
-                        # THIRD-PARTY:
-                        #...
-                    ]
+# DJANGO BASIC:
+urlpatterns = [
+	# CMS:
+	#...
+	# SUB-APPs, APIs:
+	path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+	path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+]
+```

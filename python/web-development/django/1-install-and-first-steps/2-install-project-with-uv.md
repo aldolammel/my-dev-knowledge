@@ -112,7 +112,9 @@ Even though you are not using SQLite for this project, this previous step create
 
 - [x] 4.8.2) Carefully, bring to the new Django Core `settings.py` file those notations you find in this model (don't get concerned with DB stuff yet if this project need a non-SQLite db): [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
 
-- [x] 4.8.3) (If applicable) Case you need an admin user:
+- [x] 4.8.3) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
+      
+- [x] 4.8.4) (If applicable) Case you need an admin user:
 [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
 
 ---

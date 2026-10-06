@@ -11,28 +11,30 @@ DJANGO USEFUL APPS > PAGEX: INTEGRATION WITH VUE
 
         Tells Django that Pagex uses Django router-base for its own routes:
 
-            from django.views.generic import TemplateView
+```python
+from django.views.generic import TemplateView
 
-            # DJANGO BASIC:
-            urlpatterns = [
-                ...
-                # SUB-APPs, APIs:
-                ...
-            ]
+# DJANGO BASIC:
+urlpatterns = [
+	...
+	# SUB-APPs, APIs:
+	...
+]
 
-            # DJANGO > ONLY WHEN DEBUG TRUE:
-            ...
+# DJANGO > ONLY WHEN DEBUG TRUE:
+...
 
-            # THIRD-PARTY:
-            ...
+# THIRD-PARTY:
+...
 
-            # FRONTEND:
-            urlpatterns += [
-                # This index path's defined in settings > template > dir:
-                path("", TemplateView.as_view(template_name="index.html"), name="vue-app"),
-                path(
-                    "<path:path>",
-                    TemplateView.as_view(template_name="index.html"),
-                    name="vue-app-paths",
-                ),
-            ]
+# FRONTEND:
+urlpatterns += [
+	# This index path's defined in settings > template > dir:
+	path("", TemplateView.as_view(template_name="index.html"), name="vue-app"),
+	path(
+		"<path:path>",
+		TemplateView.as_view(template_name="index.html"),
+		name="vue-app-paths",
+	),
+]
+```

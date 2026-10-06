@@ -1,20 +1,27 @@
+#### Python > Django > Authenticated Users
+# Very basic user solution
 
+---
 
-VERY BASIC USER SOLUTION:
+If you need user registration through CMS/ADMIN only, without the necessity of creating or updating users from app front-end, so use this simplest default solution:
 
-    If you need user registration through CMS/ADMIN only, without the necessity of creating or updating users from app front-end, so use this simplest default solution:
+---
+## Before:
 
+1. [ ] Make sure you DON'T need an extended user management approach: [/python/web-development/django/3-1-models-database/3-users/0-users-setup](/python/web-development/django/3-1-models-database/3-users/0-users-setup.md)
+2. [ ] Make sure you know how to import a user: [/python/web-development/django/3-1-models-database/3-users/importing-users](/python/web-development/django/3-1-models-database/3-users/importing-users.md)
 
-    PRE) Make sure you understand this:
-        ./0-users-setup.txt
+---       
+## 1) Define the `AUTH_USER_MODEL`:
 
+- [ ] Explicit define who is the `AUTH_USER_MODEL` for the app through Core `settings.py` file:
+```python
+# Authentication
+AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
 
-    1) Let's explicity define who is the AUTH_USER_MODEL for the app through Core settings.py file:
+# OR if you have a custom user model in apps/accounts/models.py:
 
-        # Authentication
-        AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
-        # OR if you have a custom user model in apps/accounts/models.py:
-        # AUTH_USER_MODEL = 'accounts.CustomUser'  # Format: 'app_label.ModelName'
+```
     
     
     2) Calling the AUTH_USER_MODEL wherever you want, e.g. apps/your_app/models.py:

@@ -3,8 +3,8 @@
 
 ---
 ## Before:
-1. [ ] To read: *Software Requirements Specification* (*SRS*) document.
-2. [ ] To read: *Technical Design Document* (*TDD*) document.
+1. [x] To read: *Software Requirements Specification* (*SRS*) document.
+2. [x] To read: *Technical Design Document* (*TDD*) document.
 3. [x] To read: project *System ERD* document.
 4. [x] To read: project *Sitemap* document.
 ## 1) Setup:
