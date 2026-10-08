@@ -3,18 +3,13 @@
 
 Python is a high-level, general-purpose programming language known for its readability and versatility. It is widely used in various domains, including web development, data science, machine learning, artificial intelligence, automation, and software development.
 
-**Python conventions:**
+**Create a project:** [/python/0-new-project/1-new-project](/python/0-new-project/1-new-project.md)
 
-[[_conventions-py.md]]
+---
+## Python conventions:
+[/python/python-knowledge/\_conventions-py.md](python/python-knowledge/_conventions-py.md)
+## To declare variables, you got these ways:
+[/python/python-knowledge/variables-using-multiple-ones.py](/python/python-knowledge/variables-using-multiple-ones.py)
+## Creating a class and then an object:
+[/python/python-knowledge/classes/\_class-basic.py](/python/python-knowledge/classes/_class-basic.py)
 
-**To declare variables, you got these ways:**
-
-[[variables-using-multiple-ones.py]]
-
-**Creating a class and then an object:**
-
-[[_class-basic.py]]
-
-**Create a project:**
-
-[[/python/0-new-project/1-new-project]]

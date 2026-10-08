@@ -4,6 +4,11 @@ Here below you find NOT the entire content, but a few examples of what you can f
 ## Before:
 
 1. What is this repo: [README](README.md)
+
+## New project
+
+- New project in a perfect world: [/0-new-project/new-project](/0-new-project/new-project.md)
+
 ## Web development projects
 
 - Back-end:

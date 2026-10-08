@@ -10,11 +10,11 @@
 ## Install and uninstall apps:
 
 ==Important!==
-When you run *sudo apt install <package_name>*, APT searches through its package index (a db of all available packages from repositories you've already added to your system). This index is created and updated when you run "sudo apt update".
+When you run `sudo apt install <package_name>`, APT searches through its package index (a db of all available packages from repositories you've already added to your system). This index is created and updated when you run `sudo apt update`.
 ### Installing
 
 **From a repository (MOST USED):**
-```
+```bash
 sudo apt install -y <package_name>        # -y skips install question!
 ```
 
@@ -23,18 +23,19 @@ Finding a package name installed: [/os/linux/distros/debian/1-apps-install/findi
 Check apt-update repo list: [/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list](/os/linux/distros/debian/1-apps-install/checking-app-is-in-repo-list.md)
 
 **From a local file:**
-```
-# Go to the installation file current folder and:
+```bash
+# 1. Go to the installation file folder.
+# 2. Do it:
 sudo apt install ./<file_name>.<file_extension>
 ```
 E.g.
-```
+```bash
 sudo apt install ./obsidian.deb
 ```
 ### Removing
 
 **.deb:**
-```
+```bash
 sudo apt remove <package_name>
 
 # Clean up APT cache:
@@ -44,7 +45,7 @@ sudo apt autoclean
 sudo apt autoremove
 ```
 **Snap:**
-```
+```bash
 sudo snap remove <app_name> || true
 ```
 

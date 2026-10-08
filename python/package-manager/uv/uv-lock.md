@@ -8,7 +8,7 @@ Once the [pyproject.toml](/python/web-development/pyproject.md) declares what th
 
 ---
 ## Try to use `uv sync`, not `uv lock`
-Basically, 99% of your time updating `pyproject.toml` (using `uv add` or `uv remove` commands or version limitations manually) will be through the [uv sync](/python/package-manager/uv/auto-installation-with-sync.md) command once `uv sync` is more useful generally. 
+Basically, 99% of your time updating `pyproject.toml` (using `uv add` or `uv remove` commands or version limitations manually) will be through the [uv sync](/python/package-manager/uv/uv-sync.md) command once `uv sync` is more useful generally. 
 
 |                                               | `uv lock` | `uv sync` |
 | --------------------------------------------- | --------- | --------- |

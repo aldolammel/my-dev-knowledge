@@ -8,10 +8,10 @@
 ---
 ## Best AI prompt to install things:
 
-```
-Shortly, I'm on Ubuntu <24.04 Noble>.
+```prompt
+Shortly, I'm on Ubuntu --26.04.1 resolute--.
 
-Installation of <app-name> (<short description when app is too specialized>).
+Installation of --App-Name-- (--short description when app is too specialized--).
 
 Requirements:
 - Use the OS terminal and the APT command.

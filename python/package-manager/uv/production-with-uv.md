@@ -3,6 +3,11 @@
 
 ---
 
+**Before:**
+
+1. What is Production: [/dev-concepts/environment-production-prod](/dev-concepts/environment-production-prod.md)
+
+
 Deploy script on the VPS should consider it. Put it in the deploy script, CI config, *Dockerfile* or *Makefile*, so it lives with the project:
 ```bash
 uv sync --locked --no-dev
