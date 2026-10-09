@@ -30,21 +30,16 @@ cd <project_folder>
 - VSCode: [/python/web-development/django/ide/vscode/basic-for-django](/python/web-development/django/ide/vscode/basic-for-django.md)
 - PyCharm: [/python/web-development/django/ide/pycharm/basic-for-django](/python/web-development/django/ide/pycharm/basic-for-django.md)
 
-- [ ] **1.2) Install Django for a specific project:**
+- [x] **1.2) Install Django for a specific project:**
 - Using UV (recommended, smarter): [/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv](/python/web-development/django/1-install-and-first-steps/2-install-project-with-uv.md)
 - Or using PIP (Django built-in solution): [/python/web-development/django/1-install-and-first-steps/2-install-project-with-pip](/python/web-development/django/1-install-and-first-steps/2-install-project-with-pip.md)
 
 ---
-## 2) Make a decision:
-Once Django project's already installed, let's ask again about the current case:
-
-- This machine and IDE are already for Django projects, and I got a brand new project, so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-install-new-project](/python/web-development/django/1-install-and-first-steps/1-install-new-project.md)
-- Or this machine and IDE are ready for Django projects, and I'm just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
-
----
-## Make sure you already finished one of these roadmaps:
+## 2) Once Django is ready, return to the main Django roadmap based in your case:
 
 - DJANGO as back and front-end: [/python/web-development/django/0-new-project/web-project-django-only](/python/web-development/django/0-new-project/web-project-django-only.md)
 - Django with VUE as front-end: [/python/web-development/django/0-new-project/web-project-django-with-vue](/python/web-development/django/0-new-project/web-project-django-with-vue.md)
 - Django with REACT as front-end: [/python/web-development/django/0-new-project/web-project-django-with-react](/python/web-development/django/0-new-project/web-project-django-with-react.md)
 - Django with ANGULAR as front-end: soon...
+
+---

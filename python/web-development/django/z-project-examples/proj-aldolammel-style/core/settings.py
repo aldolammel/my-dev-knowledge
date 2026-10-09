@@ -81,18 +81,15 @@ TEMPLATES = [
         "OPTIONS": {
             "context_processors": [
                 # DJANGO DEFAULT GLOBAL CONTEXTS:
-                "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 # DJANGO ADDITIONAL GLOBAL CONTEXTS:
-                # Reserved space...
-                # THIRD-PARTY GLOBAL CONTEXTS:
-                # Reserved space...
-                # APP CUSTOM GLOBAL CONTEXTS:
                 "core.context_processors.data_to_cms_template_only",
                 # TODO: uncomment if multilingual:
-                #"core.context_processors.languages",
+                # "core.context_processors.languages",
+                # THIRD-PARTY GLOBAL CONTEXTS:
+                # Reserved space...
             ],
         },
     },
@@ -148,47 +145,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # REST Framework:
 # Reserved space...
 
-# TODO: uncomment (and make USE_IE8N 'True') if multilingual:
 # Internationalization
 USE_I18N = False  # 'True' for multi-language support!
-"""
-# Available languages:
-# LANG_CODE_PT = "pt"
-LANG_CODE_PTBR = "pt-br"
-LANG_CODE_ES = "es"
-# LANG_CODE_ESMX = "es-mx"
-# LANG_CODE_EN = "en"
-LANG_CODE_ENUS = "en-us"
-LANGUAGES = [
-    # (LANG_CODE_PT, "Português (PT)"),
-    (LANG_CODE_PTBR, "Português (BR)"),
-    (LANG_CODE_ES, "Español (ES)"),
-    # (LANG_CODE_ESMX, "Español (MX)"),
-    # (LANG_CODE_EN, "English (UK)"),
-    (LANG_CODE_ENUS, "English (US)"),
-]
-# App default language:
-LANGUAGE_CODE = LANG_CODE_PTBR
-LOCALE_PATHS = [BASE_DIR / "locale"]
-# PARLER_DEFAULT_LANGUAGE_CODE = LANGUAGE_CODE  # Not needed because 'fallbacks' is set manually.
-PARLER_LANGUAGES = {
-    None: (
-        {"code": LANG_CODE_PTBR},
-        {"code": LANG_CODE_ENUS},
-        {"code": LANG_CODE_ES},
-    ),
-    "default": {
-        "fallbacks": [
-            LANG_CODE_ENUS,
-            LANG_CODE_PTBR,
-            LANG_CODE_ES,
-        ],  # Cascade fallbacks
-        "hide_untranslated": False,
-    },
-}
-LANGUAGE_COOKIE_NAME = "user_language"
-LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
-"""
 
 # Timezone-aware
 # TODO: make USE_TZ 'True' for multilingual support:
@@ -240,9 +198,3 @@ EMAIL_USE_TLS = env("EMAIL_USE_TLS", default=True)
 EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
-
-# TODO: If pagex available:
-# PAGEX SUB-APP:
-# PAGEX_BACK_URL = BACK_URL1
-# PAGEX_FRONT_URL = FRONT_URL1
-# PAGEX_PROD_URL = PROD_BASE_URL

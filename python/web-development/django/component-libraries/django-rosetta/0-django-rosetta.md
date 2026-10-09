@@ -3,30 +3,39 @@
 
 ---
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Django-Rosetta is a Django third-party package that provides a web-based interface for managing Django translation files (`.po` files).
 
+---
+## Before:
 
-    >> Installation:
+1. Assuming you have it installed on the server: [/web-development/components-libraries-server-level/gettext/0-gettext](/web-development/components-libraries-server-level/gettext/0-gettext.md)
 
-        PRE) Probably you will need this:
-            /python/component-libraries/gettext/0-gettext.txt
+---
+## 1) Installation:
 
-        1) Installation:
+Using UV:
+```bash
+uv add django-rosetta
+```
 
-            # Using UV:
-                $ uv add django-rosetta
+Or using PIP:
+```bash
+xxxxxxxxxxxxxxxxxxxxx
+```
 
-            # Or using PIP:
-                $ xxxxxxxxxxxxxxxxxxxxx
+---
+## 2) Integration:
 
+In `/core/settings.py`:
+```python
+INSTALLED_APPS = [
+	# DJANGO DEFAULT SUB-APPS:
+	# ...
+	# DJANGO ADDITIONAL SUB-APPS:
+	# ...
+	“rosetta”,
+```
 
-    >> Integration:
-
-        In core/settings.py:
-            Installed_Apps:
-                # DJANGO ADDITIONAL SUB-APPS:
-                “rosetta”,
-
-
-Check this file: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
-
+---
+## Django web project translation roadmap:
+[/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)

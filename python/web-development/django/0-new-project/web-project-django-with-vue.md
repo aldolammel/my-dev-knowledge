@@ -12,7 +12,7 @@
 ### 1.1) Database
 1. [x] What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
 ### 1.2) Back-end
-1. [ ] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
+1. [x] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end
 1. [ ] IDE, framework setup:  [VSCode for Vue](/javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.md) or [PyCharm for Vue](/javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.md).
 2. [ ] Vue installation (and its dependencies): [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
@@ -30,7 +30,7 @@
 ### 2.3) Back-end
 1. [ ] Build up the database of the product xxxxxxxxxxxxxxxxx
 2. [ ] xxx
-3. [ ] xxx
+3. [ ] (If applicable) If not yet, complete the translation roadmap: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
 ### 2.4) Final touches
 1. [ ] Back-end > xxxx
 2. [ ] Back-end > xxxx

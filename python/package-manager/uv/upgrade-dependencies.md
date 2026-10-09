@@ -3,89 +3,88 @@
 
 ---
 
-The `uv --upgrade` command automatically check if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
+The `--upgrade` flag in UV command automatically checks if the dependency involved is compatible with, for example, the Django version you are using, avoiding those dependency versions that got known compatible issues.
 
 ---
 
 ## Before:
 
 1. Upgrade UV itself: [/python/package-manager/uv/upgrade-uv](/python/package-manager/uv/upgrade-uv.md)
+2. Assuming you are in the project root folder.
+3. Open the project `pyproject.toml` and check if all dependencies (core and dev) have their limit versions correct!
+4. Remember: `pyproject.toml` only sets limits. The real list of which versions are installed is in `uv.lock` file (automatically edited by UV commands).
 
 ---
+## 1) Check those dependencies that have update available:
+This will show just the current installed version versus the latest version available:
+```bash
+# Simplify view:
+uv tree --outdated --depth 1 --all-groups
+# Or complete view:
+uv tree --outdated --all-groups
+```
 
-## 1) Make a choice:
+---
+## 2) Make a choice:
 
-- 1A) Update just a specific app dependency;
-- 1B) Update all app dependencies (listed in pyproject.toml);
+- 2A) Update a specific app-level installed (core or dev) dependency.
+- 2B) Update all app-level installed (core and dev) dependencies.
+- 2C) Update only app-level installed core dependencies.
 
 ......................................
-### 1A) Individual update
+### 2A) Update a specific app-level installed (core or dev) dependency
 
-**Before:**
-
-1. Open the project _pyproject.toml_ and check what you want to update next!
-
-**1) Update the desired dependency:**
-
-Mandatory ones, e.g.:
-
+Updating a core dependency, e.g.:
 ```bash
-uv add "django-admin-sortable2>=2.2.7" --upgrade
+uv add "django-admin-sortable2>=2.2.7" --upgrade  # To define a specific version, you can use ==.
 ```
 
-Dev dependency ones, e.g.:
-
+Updating a dev dependency, e.g.:
 ```bash
-uv add "django-stubs[compatible-mypy]>=5.2.3" --upgrade --dev
+uv add "django-stubs[compatible-mypy]>=5.2.3" --upgrade --dev  # To define a specific version, you can use ==.
 ```
 
-A dependency from other sub-group, e.g.:
-
+Updating a dependency from another sub-group, e.g.:
 ```bash
-uv add "something>=3.0" --upgrade --subgrouphere
+uv add "something>=3.0" --upgrade --subgrouphere  # To define a specific version, you can use ==.
 ```
 
 ......................................
-### 1B) Update everything listed in _pyproject.toml_
+### 2B) Update all app-level installed (core or dev) dependencies
 
-**Before:**
-
-1. Only for Linux! Update and Upgrade your system:
-	1. Debian/Ubuntu: [/os/linux/distros/debian/2-updates/update](/os/linux/distros/debian/2-updates/update.md)
-	2. Fedora: [/os/linux/distros/fedora/2-updates/update](/os/linux/distros/fedora/2-updates/update.md)
-
-**1B.1) Update all dependencies:**
-
-It removes all dependencies, and then install latest version of mandatory dependencies and dev ones as well:
-
+Removes and re-installs all core and dev dependencies in their latest versions or highest versions you've defined via `pyproject.toml` allows them:
 ```bash
 uv sync --extra dev --upgrade
 ```
 
-It removes all dependencies, and then install latest version of mandatory dependencies w/ multiple sub-grous:
-
+Example if you need to update more sub-groups than dev only:
 ```bash
 uv sync --extra dev --extra test --upgrade
 ```
 
-It removes all dependencies, and then install latest version of mandatory dependencies only (WARNING):
+......................................
+### 2C) Update only app-level installed core dependencies
 
+Removes and re-installs all core dependencies only in their latest versions or highest versions you've defined via `pyproject.toml` allows them:
 ```bash
 uv sync --upgrade
 ```
 
 ---
+## 3) Final double-checks:
 
-## 2) Check the `pyproject.toml` if it looks fine!
+3.1) Open the pyproject.toml and make sure everything about dependencies make sense for your;
+
+3.2) Even though [uv sync command](/python/package-manager/uv/uv-sync.md) already executes the [uv lock command](/python/package-manager/uv/uv-lock.md) behind the scene, run it manually:
+```bash
+uv lock --check
+```
+
+3.3) Test your Python app to check if everything is going well: [/python/web-development/django/\_running-app](/python/web-development/django/_running-app.md)
 
 ---
-
-## 3) Test your Python app to check if everything is going well.
-
----
-
-## INSTALL DEPENDENCY:
+## Installing an app-level dependency:
 [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
-## UNINSTALL DEPENDENCY:
+## Uninstalling an app-level dependency:
 [/python/package-manager/uv/uninstall-dependency](/python/package-manager/uv/uninstall-dependency.md)
 

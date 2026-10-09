@@ -43,6 +43,8 @@ E.g. `.env`,  `.venv`.
 It allows you to search and replace text from everywhere in your vault, and not just in the current file as the native Obsidian feature does today.
 ### Extension: Omnisearch by Simon Cambier
 A better search engine to replace this dummy native search system in Obsidian.
+### Extension: LanguageTool Integration by clemens-e
+Obvious reasons.
 ### Obsidian shortcuts
 [/\_basic-obidian-shortcuts](/_basic-obidian-shortcuts.md)
 

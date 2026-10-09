@@ -9,17 +9,15 @@ If you are NOT using an external front-end solution and need a CONTEXT callable 
 If you are using Pagex in your Django, you don't need this roadmap once the Pagex already manage it for you.
 
 ---
-## 1) Create a `consts.py` file in your core-folder (Recommended):
+## 1) Create `/core/consts.py` file:
 [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py)
 
 ---
-## 2) In a core-folder, create a file called `context_processors.py`:
+## 2) Create `/core/context_processors.py` file:
 [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/context_processors.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/context_processors.py)
 
 ---
-## 3) (Skip it if you'll use an existent `settings.py` model later)
-
-In `settings.py` file, find 'TEMPLATES' section and add:
+## 3) In `/core/settings.py`:
 ```python
 TEMPLATES = [
 	{
@@ -29,25 +27,23 @@ TEMPLATES = [
 				# DJANGO DEFAULT GLOBAL CONTEXTS:
 				# ...
 				# DJANGO ADDITIONAL GLOBAL CONTEXTS:
-				# ...
+				"core.context_processors.data_to_cms_template_only",  # <-------- add this!
 				# THIRD-PARTY GLOBAL CONTEXTS:
-				# ...
-				# APP CUSTOM GLOBAL CONTEXTS:
-				"core.context_processors.app_info",
+				# Reserved space...
 			],
 		},
 	},
 ]
 ```
 
-
 ---
-
 ## 4) Now, call your global context wherever you want on templates:
 
 E.g. 
 ```html
 <a href="mailto:{{ BRAND_EMAIL }}?subject={{ BRAND_NAME }}: Contact from website" target="_blank">Contact us</a>
 ```
+
+Remember: in case you are using Pagex, use the `/core/context_processors.py` limited to the CMS interface once the [Pagex](/python/web-development/django/useful-sub-apps/pagex/_install-and-integration.md) has a wide and easier support to app front-end information.
 
 ---

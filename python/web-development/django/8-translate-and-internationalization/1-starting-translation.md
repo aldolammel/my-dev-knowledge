@@ -4,11 +4,11 @@
 ---
 ## 1) Setup the internationalization project:
 
-- [ ] 1.1) Install basic modules:
-- Gettext (to translate the content itself): [/python/component-libraries/gettext/0-gettext](/python/component-libraries/gettext/0-gettext.md)
-- Rosetta app (include an admin sub-app to manage translations): [/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta](/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta.md)
+- [x] 1.1) Install basic modules:
+	- (Server level) Gettext (to translate the content itself): [/web-development/components-libraries-server-level/gettext/0-gettext](/web-development/components-libraries-server-level/gettext/0-gettext.md)
+	- (App level) Rosetta app (include an admin sub-app to manage translations): [/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta](/python/web-development/django/component-libraries/django-rosetta/0-django-rosetta.md)
 
-- [ ] 1.2) In `settings.py`, add the `LocaleMiddleware` between `Session` and `Common` middlewares:
+- [x] 1.2) In `settings.py`, add the `LocaleMiddleware` between `Session` and `Common` middlewares:
 ```python
 MIDDLEWARE = [
 	"django.contrib.sessions.middleware.SessionMiddleware",
@@ -17,35 +17,36 @@ MIDDLEWARE = [
 ]
 ```
 
-                    >> Crucial: middleware order matters! So double-check with these guidelines:
-                        >> Make sure it’s one of the first middleware installed;
-                        >> It should come after SessionMiddleware, because LocaleMiddleware makes
-                            use of session data;
-                        >> It should come before CommonMiddleware because CommonMiddleware needs an
-                            activated language in order to resolve the requested URL;
-                        >> If you use CacheMiddleware, put LocaleMiddleware after it;
+==Crucial:== middleware order matters! So double-check with these guidelines:
+- Make sure it’s one of the first middleware installed.
+- It should come after `SessionMiddleware`, because `LocaleMiddleware` makes use of session data.
+- It should come before `CommonMiddleware` because `CommonMiddleware` needs an activated language in order to resolve the requested URL.
+- If you use `CacheMiddleware`, put `LocaleMiddleware` after it;
 
-- [ ] 1.3) Still in `settings.py`, in 'internationalization' section:
+- [x] 1.3) Still in `settings.py`, in `internationalization` section:
 ```python
 # Internationalization
-USE_I18N = True
+USE_I18N = True  # 'True' for multi-language support!
 # Available languages:
-LANG_CODE_PTBR = 'pt-br'
-LANG_CODE_ES = 'es'
-LANG_CODE_ENUS = 'en'  # for big translation projects, it's better to use 'en-us'.
+LANG_CODE_PT = "pt"
+# LANG_CODE_PTBR = "pt-br"  # In case it will be a big translation projects, maybe it's better to use specific language codes!
+LANG_CODE_ES = "es"
+# LANG_CODE_ESMX = "es-mx"  # In case it will be a big translation projects, maybe it's better to use specific language codes!
+LANG_CODE_EN = "en"
+# LANG_CODE_ENUS = "en-us"  # In case it will be a big translation projects, maybe it's better to use specific language codes!
 LANGUAGES = [
-	(LANG_CODE_PTBR, 'Português (BR)'),
+	(LANG_CODE_PT, 'Português (PT)'),
 	(LANG_CODE_ES, 'Español (ES)'),
-	(LANG_CODE_ENUS, 'English (US)'),
+	(LANG_CODE_EN, 'English (US)'),
 ]
-# Default language:
-LANGUAGE_CODE = LANG_CODE_PTBR
+# App default language:
+LANGUAGE_CODE = LANG_CODE_PT
 LOCALE_PATHS = [BASE_DIR / 'locale']
 LANGUAGE_COOKIE_NAME = 'user_language'
 LANGUAGE_COOKIE_AGE = 2592000  # 30 days.
 
 # Timezone-aware
-USE_TZ = True
+USE_TZ = True  # 'True' for multi-language support compatibility!
 TIME_ZONE = 'America/Sao_Paulo'  # 'UTC'
 
 # FORMATS
@@ -74,25 +75,23 @@ TIME_INPUT_FORMATS = [
 FIRST_DAY_OF_WEEK = 1  # 0 = Sunday
 ```
 
-- [ ] 1.4) Still in the core folder, edit the main `core/urls.py` file:
+- [x] 1.4) Still in the core folder, edit the main `core/urls.py` file:
 ```python
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 
 # DJANGO BASIC:
 urlpatterns = i18n_patterns(
 	# CMS:
 	path('admin/', admin.site.urls),
 	# SUB-APPs, APIs:
-	path('rosetta/', include('rosetta.urls')),
-	# PRODUCT:
-	# path('<virtual_folder>/', include('<subapp_name>.urls')),
-	# path('<virtual_folder>/', include('<subapp_name>.urls')),
+	# ...
+	path('rosetta/', include('rosetta.urls')),  # Keep it like that (without 'apps.'), even you're using an apps package folder.
 )
 ```
 
-- [ ] 1.5) (Optional) If you want your URL's, if through default language, without the language prefix, do this:
+- [x] 1.5) (Optional) If you want your URL's, if through default language, without the language prefix, do this:
 ```python
 urlpatterns = i18n_patterns(
 	# ...,
@@ -101,22 +100,23 @@ urlpatterns = i18n_patterns(
 	prefix_default_language=False,
 )
 ```
+==Be aware:== maybe for advanced language settings, you'll need to use it as True!
 
-                    >> Obs.: maybe for advanced language settings, you'll need to use it as True!
+- [x] 1.6) (Optional) Create the `/core/lang.py` file:
+	- [/python/web-development/django/8-translate-and-internationalization/language-file-example.py](/python/web-development/django/8-translate-and-internationalization/language-file-example.py)
+	- [/python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions](/python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.md)
 
-- [ ] 1.6) (Optional) Create the `lang.py` file in your config-folder:
-- [/python/web-development/django/8-translate-and-internationalization/language-file-example.py](/python/web-development/django/8-translate-and-internationalization/language-file-example.py)
-- [/python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.py](/python/web-development/django/8-translate-and-internationalization/translate-dynamic-compositions.py)
-
-- [ ] 1.7) (Optional????) IDE configs:
-
-If VSCode:
-- In `.vscode/settings.json,` add these lines:
-
-`settings.py`:
-```python
+- [x] 1.7) (If applicable / Optional) IDE configs, on the VSCode, set this in the project `.vscode/settings.json` file:
+```json
+// DJANGO SETTINGS
 "django.i18n": true, // Activates the i18n features for snippets (eg.: _(""))
+// ...
 ```
+
+---
+
+## ==Weight if you should keep going in the current development phase:==
+Don't invest more time with the below steps once your project just started. It could be safer and better only to go to the next steps of this roadmap after you got a good development evolution of your project. If you have it, keep going, otherwise, return to the roadmap that brings you here. Further other roadmaps will remember to call you to check this steps again.
 
 ---
 ## 2) Defining which text-contents are translatable:
@@ -136,28 +136,26 @@ class Product(models.Model):
 	)
 ```
 
-                >> CRUCIAL: after translate your models, remember to run 'makemigrations'
-                            and 'migrate' commands.
-
+==CRUCIAL:== After translate your models, remember to run `makemigrations` and `migrate` commands.
 
 - [ ] 2.2) Method to translate Templates:
 
 Call this in the FIRST line on each html file that's using translation benefits, EXCEPT if the template is calling the template-tag 'extends':
+```html
+{% extends "base.html" %}     <!-- Always the first line! -->
+{% load i18n %}
+```
 
-                        {% extends "base.html" %}     <-- Always the first line!
-                        {% load i18n %}
+==Crucial:== 
+The 'load' must be called even in 'includes'.
 
-                    >> Crucial: the 'load' must be called even in 'includes'.
+Translating the HTML content itself:
+```html
+<h1>{% trans "Welcome" %}</h1>
+<p>{% trans "I am Aldo Lammel" %}.</p>
+```
 
-
-                >> Translating the HTML content itself:
-
-                        <h1>{% trans "Welcome" %}</h1>
-                        <p>{% trans "I am Aldo Lammel" %}.</p>
-
-                    >> Sometimes you can easy translate the text directly in the View, sending the
-                        translate to template through Context. It's up to you.
-
+Sometimes you can easy translate the text directly in the View, sending the translate to template through Context. It's up to you.
 
 - [ ] 2.3) Finishing the definition process:
 
@@ -176,17 +174,16 @@ Call this in the FIRST line on each html file that's using translation benefits,
 
                         >> Be carefull because <html lang="THIS_ATTRIBUTE"> accepts only 2 characters!
 
-                >> Create all language files (.PO):
+Create all language files (`.PO`):
+```bash
+django-admin makemessages --all
+```
+Or, if you are using UV:
+```bash
+uv run manage.py makemessages --all
+```
 
-                    $ django-admin makemessages --all
-
-                    Or, if you are using UV:
-
-                    $ uv run manage.py makemessages --all
-
-
-                    >> Gettext Module automatically will set each .PO file in the right folder.
-
+Gettext Module automatically will set each .PO file in the right folder.
 
 ---
 ## 3) Non-database Translation process:
@@ -246,72 +243,67 @@ http://localhost:8000/es/
 ---
 ## 5) Language switching on the interface:
 
-5.1) Create a global-context file called `context_processors.py` in 'general' sub-app:
+- [ ] 5.1) Create a global-context file called `context_processors.py` in 'general' sub-app:
 ```python
-from django.conf import settings as stt
+from django.conf import settings
 
 def languages(request):
-	"""
-	Add LANGUAGES and current LANGUAGE_CODE to the context globally.
-	"""
+	"""Add LANGUAGES and current LANGUAGE_CODE to the context globally."""
 	return {
-		'LANGUAGES': stt.LANGUAGES,  # Available languages!
+		'LANGUAGES': settings.LANGUAGES,  # Available languages!
 		'LANGUAGE_CODE': request.LANGUAGE_CODE,  # Currently active language!
 	}
 ```
 
-5.2) In `settings.py`, include that new global-context:
+- [ ] 5.2) In `settings.py`, include that new global-context:
 ```python
 TEMPLATES = [
 	{
-		...
+		# ...
 		'OPTIONS': {
 			'context_processors': [
 				# DJANGO DEFAULT GLOBAL CONTEXTS:
-				...
+				# ...
 				# DJANGO ADDITIONAL GLOBAL CONTEXTS:
-				'general.context_processors.languages',
+				# ...
+				'general.context_processors.languages',  # <-------- add this!
 				# THIRD-PARTY GLOBAL CONTEXTS:
-				...
-				# APP CUSTOM GLOBAL CONTEXTS:
-				...
+				# Reserved space...
 			],
 		},
 	},
 ]
 ```
 
-5.3) On `/core/urls.py` file:
+- [ ] 5.3) On `/core/urls.py` file:
 ```python
 # DJANGO:
-path('i18n/', include('django.conf.urls.i18n')),
+path('i18n/', include('django.conf.urls.i18n')), # set_language view for lang change request.
 ```
 
-This will enable Django's 'set_language' view, which processes the language change request.
+This will enable Django's `set_language` view, which processes the language change request.
 
-5.4) On your base.html template:
+- [ ] 5.4) On your `base.html` template:
 
-                E.g.
-                    <html lang="{{ LANGUAGE_CODE }}">
+E.g.
+```html
+<html lang="{{ LANGUAGE_CODE }}">
+```
 
+To use a template-variable "{{ }}" globally:
 
-                >> To use a template-variable "{{ }}" globally:
+**Using Pagex**, look for "Structure Content": [/python/web-development/django/useful-sub-apps/pagex/\_install-and-integration](/python/web-development/django/useful-sub-apps/pagex/_install-and-integration.md)
 
-                    Web-development\backend\python\django\3-2-backend-views\1-building-views-context\global-context.txt
+Or using Django native `/core/context_processors.py` solution: [/python/web-development/django/3-2-views-and-API/1-building-views-context/global-context](/python/web-development/django/3-2-views-and-API/1-building-views-context/global-context.md)
 
-
-5.5) Still on templates, a language-selector, language-switch:
-
-                \Web-development\backend\python\django\8-translate-and-internationalization\language-selector.html
-
+- [ ] 5.5) Still on templates, a language-selector, language-switch: [/python/web-development/django/8-translate-and-internationalization/language-selector.html](/python/web-development/django/8-translate-and-internationalization/language-selector.html)
 
 ---
 ## 6) Final touch:
 
-6.1) Check each translation to fix all 'fuzzy' flag that means the translation needs translator attention!
+- [ ] 6.1) Check each translation to fix all 'fuzzy' flag that means the translation needs translator attention!
 
-6.2) (I never needed) Database: If your database contains any content that will be translated, ensure your PostgreSQL database is set up with UTF-8 encoding, which is necessary for handling multi-language content.
-
+- [ ] 6.2) (I never needed) Database: If your database contains any content that will be translated, ensure your PostgreSQL database is set up with UTF-8 encoding, which is necessary for handling multi-language content.
 ```bash
 psql -U yourusername -d yourdbname -c
 ```

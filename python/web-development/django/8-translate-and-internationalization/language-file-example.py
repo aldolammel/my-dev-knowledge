@@ -1,3 +1,5 @@
+# FILE: /core/lang.py
+
 from django.utils.translation import gettext_lazy as _
 
 # Reminder: gettext_lazy doesn't work with dynamic compositions _(str) % {dict}, so don't in here!
@@ -6,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 '''Summary:
     _NAME = Official section name callable in the content;
     _TTL = Exclusive text for page title;
-    _NAV = Exclusive text for navegation;
+    _NAV = Exclusive text for navigation;
     _DT = Detail page;    
 '''
 # General Sections (S_G_):

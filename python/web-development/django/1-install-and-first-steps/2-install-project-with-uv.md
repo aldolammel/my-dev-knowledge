@@ -65,13 +65,9 @@ That said, do it:
 uv init
 ```
 
-- [x] 4.3) Once UV created a new `pyproject.toml` file, carefully, check this model below and bring the `[project.urls]` and other data to your empty project `.toml` file:
+- [x] 4.3) Once UV created a new `pyproject.toml` file, carefully, check this model below and bring the `[project.urls]` and other data to your empty project `.toml` file: [/python/web-development/pyproject](/python/web-development/pyproject.md)
 
-[/python/web-development/pyproject](/python/web-development/pyproject.md)
-
-- [x] 4.4) Once you now got a `.venv` folder, active the project's virtual environment:
-
-[/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
+- [x] 4.4) Once you now got a `.venv` folder, active the project's virtual environment: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
 - [x] 4.5) (Optional) Advanced IDE configure for this framework in this project:
 
@@ -116,30 +112,22 @@ Even though you are not using SQLite for this project, this previous step create
       
 - [x] 4.8.4) (If applicable) Case you need an admin user:
 [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
-
----
 ### 5) (Optional) Installing the dependencies
 Based on the project's *Technical Design Document (TDD)*, install all dependencies: [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
 
 - [x] 5.1) Installing Core dependencies.
 - [x] 5.2) Installing Development dependencies.
 - [x] 5.3) The *Technical Design Document* URL must be added into the Django `settings.py` file!
-
----
-## 6) (Optional) Multilingual support:
-- [x] **Before:** [Gettext](/python/component-libraries/gettext/0-gettext.md) installed.
+### 6) (Optional) Multilingual support
+- [x] **Before:** [Gettext](web-development/components-libraries-server-level/gettext/0-gettext.md) installed.
 - [x] Run both commands:
 ```bash
 uv run manage.py makemessages --all
 uv run manage.py compilemessages
 ```
-
----
-## 7) (If applicable) `.gitignore` configure:
+### 7) (If applicable) `.gitignore` configure
 - [x] Make sure you got the project `.gitignore` updated with Django, environment and other things: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
-
----
-## 8) Django tests:
+### 8) Django tests
 - [x] Check Django installation and setup: [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
 
 ---
@@ -147,11 +135,11 @@ uv run manage.py compilemessages
 ==Since this point, you might execute basic tests without the follow steps once your goal would be to test something basic on Django.==
 
 ---
-
-- [x] 9) (If applicable) Commit files in your versioning service (e.g. GitHub)!
-
-- [ ] 10) Let's setup the new project: [/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup](/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup.md)
+### 9) (If applicable) Time to save a copy of your initial app:
+- [x] Commit files in your versioning service (e.g. GitHub)!
+### 10) Setup the new application:
+- [x] Let's setup the new project: [/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup](/python/web-development/django/1-install-and-first-steps/2.2-installed-project-setup.md)
 
 ---
-## MAKE SURE YOU FINISHED ALL THESE STEPS:
+## Once you are here, make sure you have finished all this steps:
 [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)

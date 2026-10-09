@@ -45,3 +45,5 @@ uv lock --check  # Optional 'cuz, after the sync command, it's almost impossible
 ```
 
 ---
+## `uv sync` also is used to update multiple dependencies at once:
+[/python/package-manager/uv/upgrade-dependencies](/python/package-manager/uv/upgrade-dependencies.md)

@@ -1,7 +1,9 @@
-#### Python > Components & Libraries
+#### Web-development > Components & Libraries
 # Gettext
 
 ---
+
+Server-level app.
 
 It's the standard toolkit for translations across many languages (Python, Perl, Ruby, Lua) and frameworks. The Gettext module is a core part of Python's standard library that provides internationalization (i18n) and localization (l10n) services for Python apps.
 
@@ -33,8 +35,6 @@ pip install xxxxxx
 ```
 
 ---
-## Integration:
+## Python, Django web project translation roadmap:
 [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
-
----
 

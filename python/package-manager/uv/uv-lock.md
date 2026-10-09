@@ -17,5 +17,12 @@ Basically, 99% of your time updating `pyproject.toml` (using `uv add` or `uv rem
 | Creates `.venv` if missing                    | No        | Yes       |
 
 ---
+## What `uv lock` with `--check` flag do: 
+It verifies that `uv.lock` matches the dependency requirements declared in `pyproject.toml`:
+```bash
+uv lock --check
+```
+
+---
 ## When it can be a better choice (Advanced):
 In case you wanna update the `uv.lock` file but NOT the `.venv` folder (for special reasons), you would use `uv lock` command. 

@@ -47,6 +47,6 @@ Find & Replace in file (`Ctrl + H`);
 
 Find and replace globally (`Ctrl + Shift + H`), by add-on;
 
-Find In-file (`Alt + Home`), by Omnisearch;
+Find In-file (`Ctrl + Alt + Home`), by Omnisearch;
 
-Find globally (`Ctrl + Home`), by Omnisearch;
+Find globally (`Alt + Home`), by Omnisearch;
