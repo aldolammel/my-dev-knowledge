@@ -1,64 +1,52 @@
 #### Python > Linter, Formatter & Type checkers
-# Ruff installation and integration
+# Ruff
 
 ---
-## Before:
 
-1. What is Ruff: [About](/python/linter-formatter-typechecker/ruff/_about.md)
+Ruff is a high-performance [linter](/dev-concepts/tool-linter.md) and code [formatter](/dev-concepts/tool-formatter.md) for Python, developed by Astral. It's notable for its exceptional speed, largely attributed to being written in Rust. 
+
+**If checks:**
+- Python syntax errors.
+- Import sorting.
+- Code style (PEP 8).
+- Bugs.
+- Complexity.
+- Etc.
+
+TIP: Ruff is developed by the same company of the UV Package manager, so both are completely integrated: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
 ---
 ## 1) Installation:
 
-        1.1) Define with Package manager you will use for:
+- [ ] **Before:**
+1.  You are in the right `.venv`.
 
-            1.1A) Using UV;
-            1.1B) Or using PIP;
-
-            - - - - - - - 
-
-            1.1A) Using UV - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-                PRE) UV already installed:
-                    /python/package-manager/uv.txt
-
-                >> Already in the right virtual env, add it as dev dependency only:
+- [ ] **Installing:**
 ```bash
+# Using UV:
 uv add --group dev ruff
 ```
 
-            1.1B) Using PIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-                PRE) Basic about PIP:
-                    /python/package-manager/pip/_about.md
-
-                >> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-                >> Add manually the xxxxxx in the pyproject optional dependencies:
-                    xxxxxxxxxxxxxxxxxxxxxxx
+Or using PIP:
+```bash
+xxxxxxxxxxxxxxxxxxxxxx
+```
+In this case, don't forget to add this dependency in the project [requirements-dev.txt](python/requirements-dev-txt.md).
 
 ---
 ## 2) Integration:
 
-        1) (Optional)
-            If using .gitignore file, add these lines:
+- [ ] 2.1) (Optional) If using `.gitignore` file, add these lines:
 ```txt
 ### Python Linter/Formatter ###
 .ruff_cache/
 ```
 
-        2) Create or edit the pyproject.toml file of your project:
-            # If needed, model file:
-                /python/web-development/pyproject.md
+- [ ] 2.2) (If applicable) If your project is using `pyproject.toml` instead of `requirements-dev.txt`, include these configures in there: [/python/linter-formatter-typechecker/ruff/pyproject.toml](/python/linter-formatter-typechecker/ruff/pyproject.toml)
 
-            # Apply these configs in your project pyproject.toml file:
-                ./pyproject.toml
+- [ ] 2.3) (Optional) Install the Ruff extension for your favorite code IDE!
 
-        3) (Optional)
-            Install the Ruff extension for your favorite code IDE!
-
-        4) (If applicable)
-            In .vscode/settings.json, add this:
-
+- [ ] 2.4) (If applicable) In `/project_root/.vscode/settings.json`, add this:
 ```json
 // PYTHON SETTINGS
 ...

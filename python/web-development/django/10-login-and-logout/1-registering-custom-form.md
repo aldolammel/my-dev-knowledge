@@ -1,23 +1,21 @@
 REGISTERING: CUSTOMIZING THE FRONT-END FORM
 
-    0) Very basic to use Django built-in user features:
+---
 
-        /python/web-development/django/3-1-models-database/3-users/extending-users-basic.txt
+This is part of this roadmap to extend the user management: [/python/web-development/django/3-1-models-database/3-users/2-extending-users](/python/web-development/django/3-1-models-database/3-users/2-extending-users.md)
 
+---
 
-    1) Create or open the forms.py file in 'accounts' sub-app:
-
+Create or open the `/apps/accounts/forms.py`:
 ```python
-from django.conf import settings as stgs
+from django.conf import settings
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import UserProfile
+from . import models
 
 
 class CustomUserCreationForm(UserCreationForm):
-	"""
-	Only the additional fields to be shown in the original Django Registering page on front-end.
-	"""
+	"""Customizing the Django User Registration form for front-end."""
 
 	# Adding additional fields not originally present in the built-in User class:
 	# signals.py: these fields are declared in the signals.py too! If updated, check that out!
@@ -33,7 +31,7 @@ class CustomUserCreationForm(UserCreationForm):
 	)
 
 	class Meta:
-		model = stgs.AUTH_USER_MODEL
+		model = settings.AUTH_USER_MODEL
 		# Specify the fields to include in the form, in the order you want:
 		fields = [
 			'profile_type',  # additional field!
@@ -71,7 +69,7 @@ class UserProfileForm(forms.ModelForm):
 
 	class Meta:
 		# Connecting the form with the model/table it will populate:
-		model = UserProfile
+		model = models.UserProfile
 		# Defining which model class (from models.py) fields will be associated to this form:
 		fields = [
 			# 'user',
@@ -121,15 +119,7 @@ class UserProfileForm(forms.ModelForm):
 ```
 
 
-
-    2) Create the signal to create the UserProfile automatically when a new user is
-        created in Django:
-
-        /python/web-development/django/7-middlewares-and-signals/signals/signals-user-expansion.txt
-
-
-
-    3) html's for register and profile forms:
+html's for register and profile forms:
 
             /python/web-development/django/9-forms/frontend-user-register-form.txt
             /python/web-development/django/9-forms/frontend-user-profile-form.txt
@@ -138,12 +128,11 @@ class UserProfileForm(forms.ModelForm):
     4) views.py in account sub-app too:
 
 ```python
-from django.conf import settings as stgs
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import UserProfile
-from .forms import CustomUserCreationForm, UserProfileForm
+from . import forms, models
 
 # CONSTANTS:
 BT_UPDATE = 'Update'
@@ -156,14 +145,14 @@ def register(request):
 	# Otherwise, if not authenticated:
 	else:
 		if request.method == 'POST':
-			form = CustomUserCreationForm(request.POST)
+			form = forms.CustomUserCreationForm(request.POST)
 			if form.is_valid():
 				new_user = form.save()
 				# Log the user in after successful registration (optional):
 				login(request, new_user)
 				return redirect('in:home_view')
 		else:
-			form = CustomUserCreationForm()  # built-in class.
+			form = forms.CustomUserCreationForm()  # built-in class.
 		#
 		context = {'form': form}
 		return render(request, 'registration/register.html', context)
@@ -172,7 +161,7 @@ def register(request):
 @login_required
 def user_profile(request, username):
 	# Fetch the UserProfile by the User's username:
-	user = get_object_or_404(stgs.AUTH_USER_MODEL, username=username)
+	user = get_object_or_404(settings.AUTH_USER_MODEL, username=username)
 	instance = get_object_or_404(UserProfile, user=user)
 
 	if request.user != instance.user:
@@ -184,14 +173,14 @@ def user_profile(request, username):
 			# instance.delete_instance()
 			return redirect('general:home_view')
 		# Defining the object of the current form, passing also the user object:
-		form = UserProfileForm(request.POST, instance=instance, user=request.user)
+		form = forms.UserProfileForm(request.POST, instance=instance, user=request.user)
 		if form.is_valid():
 			instance = form.save()
 			# Redirect using username instead of pk:
 			return redirect('accounts:profile_view', username=user.username)
 	# When the form doesn't change any, just populate it with existing data (GET method):
 	else:
-		form = UserProfileForm(instance=instance, user=request.user)
+		form = forms.UserProfileForm(instance=instance, user=request.user)
 
 	# Defining what will be sent to the front-end/template:
 	context = {

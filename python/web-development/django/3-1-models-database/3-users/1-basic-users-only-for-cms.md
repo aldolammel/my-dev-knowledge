@@ -27,7 +27,7 @@ AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
     2) Calling the AUTH_USER_MODEL wherever you want, e.g. apps/your_app/models.py:
 
         E.g.    
-            from django.conf import settings as stgs
+            from django.conf import settings
 
             class AuditBase(models.Model):
                 """Stores who and when things were changed."""
@@ -41,7 +41,7 @@ AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
                     verbose_name="Atualizado em",
                 )
                 updated_by = models.ForeignKey(
-                    stgs.AUTH_USER_MODEL,
+                    settings.AUTH_USER_MODEL,
                     editable=False,
                     related_name="%(app_label)s_%(class)s_updated_by",
                     on_delete=models.SET_NULL,

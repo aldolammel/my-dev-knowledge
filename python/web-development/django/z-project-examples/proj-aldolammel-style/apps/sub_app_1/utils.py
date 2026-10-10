@@ -1,7 +1,7 @@
-# from django.conf import settings as stgs
+# from django.conf import settings
 # from . import consts, lang
 
 
 # A few @aldolammel's solution:
-#       /python/web-development/django/utils/
+# https://github.com/aldolammel/my-dev-knowledge/tree/main/python/web-development/django/utils/
     

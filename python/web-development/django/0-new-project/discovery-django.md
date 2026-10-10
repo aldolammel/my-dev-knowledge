@@ -34,25 +34,7 @@ xxxxxxxxx
 
 ---
 ## 2) Test current Django:
-
-**Before:**
-1. Assuming the product's database is running.
-
-2.1) Check if there is any running issue:
-```bash
-uv run manage.py check
-# Or:
-python manage.py check
-```
-
-2.2) Check if the migration historic is fine:
-```bash
-uv run manage.py makemigrations --check --dry-run
-# Or:
-python manage.py makemigrations --check --dry-run
-```
-
-2.3) Check if the application is running: [/python/web-development/django/\_running-app](/python/web-development/django/_running-app.md)
+[/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
 
 ---
 ## 3) (If applicable) To update/upgrade:

@@ -1,16 +1,11 @@
 # This file is a model of Ruff configuration in pyproject.toml
 
-# [dependency-groups]
-# Don't use it 'coz it's not compatible with many tools!
-# That said, keep using [project.optional-dependencies].
-
-[project.optional-dependencies]
+# App-level Non-Core Dependencies:
+[dependency-groups]
 dev = [
-    ...
-    "ruff>=0.15.5",
+    # ...
+    "ruff>=0.16.10",
 ]
-test = []
-docs = []
 
 # Python Linter and Formatter:
 [tool.ruff]
@@ -35,7 +30,7 @@ select = [
     "E7",
     "E9",
     "W",  # pycodestyle warnings
-    "F",  # Pyflakes
+    # "F",  # Pyflakes, detects and delete imported modules or names that are not used.
     "I",  # isort
     "N",  # pep8-naming
     "Q",  # flake8-quotes.

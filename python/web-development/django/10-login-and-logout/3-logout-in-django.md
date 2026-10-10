@@ -1,23 +1,22 @@
     LOGOUT IN DJANGO:
 
+---
 
-    >> Make sure you already have these routes (urls.py):
+==Crucial:==
+It's mandatory to use the POST method to execute the logout through Django:
 
-        /python/web-development/django/10-login-and-logout/0-registering-by-frontend.txt
+In `/accounts/templates/registration/logout.html`:
+```html
+<form action="{% url 'accounts:logout' %}" method="post">
+
+	{% csrf_token %}
+
+	<button type="submit">
+		Log out
+	</button>
+
+</form>
+```
 
 
-    >> You don't need to create additional routes specific for login or logout;
-
-
-    >> It's mandatory to use the POST method to execute the logout through Django:
-
-
-        <form action="{% url 'accounts:logout' %}" method="post">
-
-            {% csrf_token %}
-
-            <button type="submit">
-                Log out
-            </button>
-
-        </form>
+---

@@ -3,7 +3,7 @@
 
 ---
 
-[/python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile](/python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile.md)
+[python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile-DELETE](python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile-DELETE.md)
 
 ```html
 {% extends "base.html" %} {% load i18n %} {% block title %} {{ page_title }} {% endblock title %} {%

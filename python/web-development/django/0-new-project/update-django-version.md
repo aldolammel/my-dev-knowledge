@@ -42,17 +42,7 @@ Check the `pyproject.toml` file if the new version was correctly declared!
 
 1A.4) Update all dependencies to ensure compatibility with new Django version: [/python/package-manager/uv/upgrade-dependencies](/python/package-manager/uv/upgrade-dependencies.md)
 
-1A.5) Test Django, checking if there is any running issue:
-```bash
-uv run manage.py check
-```
-
-1A.6) Test Django, checking if the migration historic is fine:
-```bash
-uv run manage.py makemigrations --check --dry-run
-```
-
-1A.7) (If applicable) Execute the migration:
+1A.5) (If applicable) Execute the migration:
 ```bash
 uv run manage.py migrate
 ```
@@ -71,7 +61,7 @@ uv run manage.py migrate
 
 ---
 ## 2) Test it:
-Run Django: [/python/web-development/django/\_running-app](/python/web-development/django/_running-app.md)
+[/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
 
 ---
 ## 3) Once the Django is updated:

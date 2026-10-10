@@ -26,11 +26,11 @@ You want to connect all authenticated users from your app in another table:
 In app models.py, import the django User table, and build up the new table with the attribute that connect with your users:
             
 ```python
-from django.conf import settings as stgs
+from django.conf import settings
 
 Class Team(models.Model):
 	name = models.CharField(max_length=40)
-	users = models.ManyToMany(stgs.AUTH_USER_MODEL)
+	users = models.ManyToMany(settings.AUTH_USER_MODEL)
 ```
 
 More about ManyToMany relationship: [relation-many-to-many](/python/web-development/django/3-1-models-database/relation-many-to-many.md)
