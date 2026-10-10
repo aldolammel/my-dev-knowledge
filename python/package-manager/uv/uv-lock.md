@@ -4,7 +4,7 @@
 ---
 
 ==Critical to understand:==
-Once the [pyproject.toml](/python/web-development/pyproject.md) declares what the project needs, the `uv.lock` file (automatically created by [uv init](/python/package-manager/uv/uv-init.md) command) records exactly what was resolved/installed into the `.venv` folder. It's crucial to have `uv.lock` file synced with `pyproject.toml` file, so every version adjusted in there must be followed by running `uv sync` in order to get the `uv.lock` file and `.venv` folder updated!
+The `uv lock` command exists to be used after the [pyproject.toml](python/pyproject-toml.md) manual edition by a developer. The command edits the `uv.lock` file (automatically created by [uv init command](/python/package-manager/uv/uv-init.md)) without to change what is installed in `.venv` folder, unlike [uv sync command](/python/package-manager/uv/uv-sync.md) that update the `uv.lock` file and the `.venv` folder.
 
 ---
 ## Try to use `uv sync`, not `uv lock`
@@ -25,4 +25,4 @@ uv lock --check
 
 ---
 ## When it can be a better choice (Advanced):
-In case you wanna update the `uv.lock` file but NOT the `.venv` folder (for special reasons), you would use `uv lock` command. 
+In case you wanna update the `uv.lock` file but NOT the `.venv` folder (for special reasons), you would use only `uv lock` command, never `uv sync`.

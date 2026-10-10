@@ -16,7 +16,7 @@ https://mypy-lang.org/
 
 Using UV:
 ```bash
-uv add --optional dev mypy
+uv add --group dev mypy
 # Check version:
 uv pip show mypy
 ```
@@ -29,7 +29,8 @@ pip show mypy
 ```
 Case you used PIP, include it manually (adjusting the right MyPy version) in the project `pyproject.toml` file:
 ```toml
-[project.optional-dependencies]
+# App-level Non-Core Dependencies:
+[dependency-groups]
 dev = [
 	...
 	"mypy>=1.17.1",  # Make sure this version make sense!
@@ -48,7 +49,7 @@ dev = [
 ## Integration:
 
 ### Before
-1. [x] Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject](/python/web-development/pyproject.md)
+1. [x] Assuming you already got the `pyproject.toml` in your project: [python/pyproject-toml](python/pyproject-toml.md)
 ### 1) Add lines in `pyproject.toml`:
 - [x] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject](/python/linter-formatter-typechecker/MyPy/pyproject.md)
 

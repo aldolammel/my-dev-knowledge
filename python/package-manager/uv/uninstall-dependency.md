@@ -3,24 +3,21 @@
 
 ---
 
-Once this command is used to remove a dependency, automatically UV deletes the dependency from the [pyproject.toml](/python/web-development/pyproject.md) dependency list and execute the `uv sync` behind the scene, updating the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
+Once this command is used to remove a dependency, automatically UV deletes the dependency from the [pyproject.toml](python/pyproject-toml.md) dependency list and execute the `uv sync` behind the scene, updating the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
 
 ---
 ## Before:
 1. What is it: [/python/package-manager/uv/\_about-install-and-update](/python/package-manager/uv/_about-install-and-update.md)
 
 ---
-## 1) Remove the package from everywhere, regardless it's mandatory or optional:
+## 1) Removing a dependency from everywhere, regardless it's core or not:
 ```bash
 uv remove <package_name>
 ```
-Remove the package from a specific group of optionals:
+Remove the dependency from a specific group:
 ```bash
-uv remove --optional <sub-group> <package_name>
-```
-E.g. 
-```bash
-uv remove --optional dev ruff
+uv remove --group <sub-group> <package_name>
+# E.g. uv remove --group dev ruff
 ```
 
 ---

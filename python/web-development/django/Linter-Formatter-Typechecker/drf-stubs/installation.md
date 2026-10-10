@@ -16,7 +16,7 @@ From the same team of [Django-Stubs](/python/web-development/django/Linter-Forma
 
 Using UV:
 ```bash
-uv add --optional dev "djangorestframework-stubs"
+uv add --group dev "djangorestframework-stubs"
 # Check the version:
 uv pip show djangorestframework-stubs
 ```
@@ -31,7 +31,8 @@ pip show djangorestframework-stubs
 
 - [ ] (If applicable) Only for who's working with PIP as package installer/manager, and `pyproject.toml` file:
 ```toml
-[project.optional-dependencies]
+# App-level Non-Core Dependencies:
+[dependency-groups]
 dev = [
 	# ...
 	"djangorestframework-stubs>=1.4.0", # Recommended to define with a newer version!

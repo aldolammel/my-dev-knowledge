@@ -6,7 +6,5 @@
   "shouldAutoCheck": false,
   "autoCheckDelay": 3000,
   "pickyMode": false,
-  "apiKeyStorage": "local",
-  "staticLanguage": "en-US",
-  "motherTongue": "pt-BR"
+  "apiKeyStorage": "secret"
 }

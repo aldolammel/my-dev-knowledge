@@ -8,15 +8,15 @@ What is ERD: [/database/\_tools/ERD/\_about](database/_tools/ERD/_about.md)
 
 **1) Make sure you got GraphViz installed (not-in-virtual-env):**
 Windows:
-```
+```shell
 xxxxx
 ```
 Linux:
-```
+```bash
 sudo apt install graphviz
 ```
 Mac:
-```
+```shell
 xxxxx
 ```
 
@@ -30,11 +30,11 @@ xxxxx
 ---
 ## 2) Now, install the PyDotPlus for graph generation:
 Using UV:
-```
-uv add --optional dev pydotplus
+```bash
+uv add --group dev pydotplus
 ```
 Or use pip:
-```
+```bash
 python3 -m pip install pydotplus
 ```
 And then add manually this to the dev sub-group in pyproject.toml file!
@@ -43,15 +43,15 @@ And then add manually this to the dev sub-group in pyproject.toml file!
 ## 3) Generate ERD:
 
 For all your DB tables:
-```
+```bash
 python manage.py graph_models -a -o myapp_models.png
 ```
 For specific apps:
-```
+```bash
 python manage.py graph_models <app_name_1> <app_name_2> -o myapp_models.png
 ```
 E.g.
-```
+```bash
 python manage.py graph_models auth -o myapp_models.png
 ```
 myapp_models.png example:

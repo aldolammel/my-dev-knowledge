@@ -20,7 +20,7 @@ https://github.com/typeddjango/django-stubs
 For MyPy compatibility:
 Using UV:
 ```bash
-uv add --optional dev 'django-stubs[compatible-mypy]'
+uv add --group dev 'django-stubs[compatible-mypy]'
 ```
 Or using PIP:
 ```bash
@@ -32,7 +32,7 @@ $ xxxxxxxxxxxx
 For PyRight compatibility:
 Using UV:
 ```bash
-uv add --optional dev 'django-stubs[compatible-pyright]'
+uv add --group dev 'django-stubs[compatible-pyright]'
 ```
 Or using PIP:
 ```bash
@@ -48,7 +48,7 @@ $ xxxxxxxxxxxx
 ## 2) Integration:
 
 - [ ] **Before:**
-	1. Assuming you already got the `pyproject.toml` in your project: [/python/web-development/pyproject](/python/web-development/pyproject.md)
+	1. Assuming you already got the `pyproject.toml` in your project: [python/pyproject-toml](python/pyproject-toml.md)
 
 - [ ] **2.1) Include/edit these lines in your `pyproject.toml`:**
 	- For MyPy: [/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml](/python/web-development/django/Linter-Formatter-Typechecker/django-stubs/pyproject-for-mypy.toml)

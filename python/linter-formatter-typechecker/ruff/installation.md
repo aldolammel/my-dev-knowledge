@@ -22,7 +22,9 @@
                     /python/package-manager/uv.txt
 
                 >> Already in the right virtual env, add it as dev dependency only:
-                    $ uv add --optional dev ruff
+```bash
+uv add --group dev ruff
+```
 
             1.1B) Using PIP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -39,8 +41,10 @@
 
         1) (Optional)
             If using .gitignore file, add these lines:
-                ### Python Linter/Formatter ###
-                .ruff_cache/
+```txt
+### Python Linter/Formatter ###
+.ruff_cache/
+```
 
         2) Create or edit the pyproject.toml file of your project:
             # If needed, model file:
@@ -55,25 +59,27 @@
         4) (If applicable)
             In .vscode/settings.json, add this:
 
-                // PYTHON SETTINGS
-                ...
-                "[python]": {
-                    "editor.defaultFormatter": "charliermarsh.ruff", // Ruff Linter/Formatter
-                    "editor.codeActionsOnSave": {
-                        "source.fixAll.ruff": "always", // Ruff Linter/Formatter
-                        "source.organizeImports.ruff": "always", // Ruff Linter/Formatter
-                    }
-                },
+```json
+// PYTHON SETTINGS
+...
+"[python]": {
+	"editor.defaultFormatter": "charliermarsh.ruff", // Ruff Linter/Formatter
+	"editor.codeActionsOnSave": {
+		"source.fixAll.ruff": "always", // Ruff Linter/Formatter
+		"source.organizeImports.ruff": "always", // Ruff Linter/Formatter
+	}
+},
 
-                // FILES
-                "files.exclude": {
-                    ...,
-                    "**/.ruff_cache": true,
-                },
-                "search.exclude": {
-                    ...,
-                    "**/.ruff_cache": true,
-                }
+// FILES
+"files.exclude": {
+	...,
+	"**/.ruff_cache": true,
+},
+"search.exclude": {
+	...,
+	"**/.ruff_cache": true,
+}
+```
 
 
 ---

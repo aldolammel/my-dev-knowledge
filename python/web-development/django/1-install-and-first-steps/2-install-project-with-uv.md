@@ -65,7 +65,7 @@ That said, do it:
 uv init
 ```
 
-- [x] 4.3) Once UV created a new `pyproject.toml` file, carefully, check this model below and bring the `[project.urls]` and other data to your empty project `.toml` file: [/python/web-development/pyproject](/python/web-development/pyproject.md)
+- [x] 4.3) Once UV created a new `pyproject.toml` file, carefully, check this model below and bring the `[project.urls]` and other data to your empty project `.toml` file: [python/pyproject-toml](python/pyproject-toml.md)
 
 - [x] 4.4) Once you now got a `.venv` folder, active the project's virtual environment: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 

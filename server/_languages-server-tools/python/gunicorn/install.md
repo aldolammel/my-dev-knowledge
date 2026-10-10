@@ -5,6 +5,8 @@
 
 Gunicorn is a Python WSGI HTTP server (Web Server Gateway Interface). It's the bridge between your Python app and the outside world (internet):
 
+So it's a [production-only](/dev-concepts/environment-production-prod.md) server.
+
 `Internet      ->    Webserver   ->   HTTP server  ->   App server/language`
 It's the same to say:
 `User Browser  ->    Nginx       ->   Gunicorn     ->   Python`
@@ -16,19 +18,34 @@ It's the same to say:
 - 1A) Installation by project (RECOMMENDED).
 - 1B) Global installation.
 
+......................................
+
 ### 1A) By project
         
 - [ ] **Before:**
-1. Assuming you are in the app venv!
+1. Assuming you are working in the [prod environment](/dev-concepts/environment-production-prod.md) server.
+2. Assuming you are in the app venv!
         
 - [ ] **Installation:**
-- Using UV: `$ uv add gunicorn` (In this way it's automatically included to the project requirement list file!)
-- Or using PIP: `$ sudo pip install gunicorn` (Don't forget to add this dependency in the project requirement list file!) 
+
+Using UV: 
+```bash
+uv add --group prod gunicorn
+```
+
+Or using PIP:
+```bash
+sudo pip install gunicorn  
+```
+And make sure you have this in your `requirements-prod.txt` or in the prod group in `pyproject.toml`.
+
+......................................
 
 ### 1B) Globally
         
 - [ ] **Before:**
-1. Assuming you are NOT in a app venv!
+1. Assuming you are working in the [prod environment](/dev-concepts/environment-production-prod.md) server.
+2. Assuming you are NOT in a app venv!
 
 - [ ] **Installation:**
 - Using a distro built-in package manager:

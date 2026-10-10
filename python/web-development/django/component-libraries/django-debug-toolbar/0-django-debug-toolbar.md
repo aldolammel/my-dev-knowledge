@@ -10,7 +10,9 @@
        PRE) Assuming you already are in the project environment!
 
        # Using UV:
-            $ uv add --optional dev django-debug-toolbar
+```bash
+uv add --group dev django-debug-toolbar
+```
         
         # Or using PIP:
             $ xxxxxxxxxxxxxxxxxxx
