@@ -13,21 +13,30 @@ This command clears all data from all tables in our Django database, preserving 
 ---
 ## 1) Flushing the db:
 
-Common:
-```
-python manage.py flush
-python manage.py createsuperuser
-```
-Or Using UV:
-```
+Using UV:
+```bash
 uv run manage.py flush
-uv run manage.py createsuperuser
+```
+Or using Python only:
+```bash
+python manage.py flush
 ```
 
 ---
-## 2) Test the app!
+## 2) Probably you should delete all migration files from `migrations` folders!
 
 ---
-## Case you realize you do need to recreate the database from zero:
+## 3) Run `makemigrations` and `migrate` commands again!
+
+---
+## 4) Create your admin user again:
+[/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
+
+---
+## 5) Test it:
+Check if Django is okay: [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
+
+---
+## Case you realize you do need to recreate the database from scratch:
 [/python/web-development/django/3-1-models-database/1-recreate-database/\_recreating-db](/python/web-development/django/3-1-models-database/1-recreate-database/_recreating-db.md)
 

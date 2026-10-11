@@ -1,4 +1,4 @@
-#### Python > Django > Models > Attribute types
+#### Python > Django > Models > Field Classes (Attribute types)
 # PositiveIntegerField()
 
 ---
@@ -12,14 +12,20 @@ Signed Range:
 0 to 2,147,483,647 (It's "unsigned" in practice, enforced by Django, not the database)
 
 Example:
+```python
 xxxxxxxxxxxxxxxxxx
 
----
+	verbose_name="xxxxxx",
+	help_text="",
+```
 
-> > Other related options:
+---
+## Other related options:
 
     >> Positive Big Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.txt
 
     >> Positive Small Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.txt
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

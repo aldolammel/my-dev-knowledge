@@ -51,7 +51,7 @@ python manage.py startapp <subapp_name> <destination_path>
 Add the `apps` package folder in the name, otherwise Django won't find this sub-app:
 ```python
 class AccountConfig(AppConfig):
-    default_auto_field = ...
+    # ...
     name = 'apps.<subapp_name>'  # E.g. 'apps.accounts'
 ```
 

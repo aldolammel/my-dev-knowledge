@@ -33,8 +33,8 @@ Python basics:
 
 ### 1) Folder structure
 
-1. [ ] Create only the project root folder, e.g. `.../projects/my_new_project/`
-2. [ ] Just for your information, a Django project further will be like this but don't create anything now: [/python/web-development/django/django-project-folder-structure](/python/web-development/django/django-project-folder-structure.md)
+1. [ ] Create only the project root folder, e.g. `/projects/my_new_django_project/`
+2. [ ] Just for your information, a Django project further will be like this but don't create manually anything for now: [/python/web-development/django/django-project-folder-structure](/python/web-development/django/django-project-folder-structure.md)
 ### 2) IDE steps
 
 - [ ] 2.1) Select through the IDE GUI which User Profile this project demands!
@@ -44,27 +44,27 @@ Python basics:
 /ide/pycharm/xxxxxxxxxxxxxxxx/
 ```
 
-- [ ] 2.2) Open this new folder in your IDE;
+- [ ] 2.2) Open this new project folder in your IDE;
 ### 3) (If applicable) Project versioning
 
 - [ ] Create a repository or use an existing one: [/versioning/git/command-init](/versioning/git/command-init.md)
 ### 4) Creating new project with UV
 
 ==CRITICAL== 
-Never copy a `pyproject.toml` file from other project because it would bring dependencies that this project won't need!
+Never copy a `pyproject.toml` or `requirements.txt` file from other project because it would bring dependencies that this project won't need!
 
 - [ ] 4.1) Create the virtual environment folder: [/python/package-manager/uv/create-or-recreate-venv](/python/package-manager/uv/create-or-recreate-venv.md)
 
 - [ ] 4.2) (Optional) Create the minimum Python project scaffolding: [/python/package-manager/uv/uv-init](/python/package-manager/uv/uv-init.md)
 
-- [ ] 4.3) Once UV has been created a new `pyproject.toml` file, carefully bring the `[project.urls]` and comments from the `.toml` model: [pyproject.toml](/python/pyproject-toml.md).
+- [ ] 4.3) Once UV has been created a new `pyproject.toml` file, carefully bring the `[project.urls]` and those notes/comments from the `.toml` model: [pyproject.toml](/python/pyproject-toml.md).
 
-- [ ] 4.4) Once you now got a `.venv` folder, active the project's virtual environment: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
+- [ ] 4.4) Once you got a `.venv` folder, active the project's virtual environment: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
 - [ ] 4.5) Check the `.python-version` file (if you don't have one, no worries, the command below would create it):
-- In case this file has the wrong Python version, don't edit the file directly. Use the `uv pin`: [/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
+- In case this file has the wrong Python version, don't edit the file directly. Use the `uv pin` command: [/python/package-manager/uv/pin-python-version](/python/package-manager/uv/pin-python-version.md)
 
-- [ ] 4.6) (Optional) Advanced IDE configure for this framework in this project:
+- [ ] 4.6) (Optional) Advanced IDE configure for this framework:
 	- Django basics:
 		- For project: `.../django/ide/vscode/examples/.vscode/`
 		- For API only: `.../django/ide/vscode/examples/.vscode-for-api-only/`
@@ -85,19 +85,24 @@ uv add django
 
 **4.9) After Django installation:**
 
-- [ ] 4.9.1) Create a very basic [Django project structure](/python/web-development/django/django-project-folder-structure.md) automatically, going to the project's root folder and asking the package manager to create the `core` sub-app (folder):
+- [ ] 4.9.1) Create the Django core folder, going to the project's root folder and:
 ```bash
-uv run django-admin startproject core .     # This dot's important!
+uv run django-admin startproject core .     # This dot is important!
 ```
 
 ==Observation about SQLite file==
 Even though you are not using SQLite for this project, this previous step created a SQLite file in your project root folder. Don't worry about it. It will be managed further.
 
-- [ ] 4.9.2) Carefully, bring to the new Django Core `settings.py` file those notations you find in this model (don't get concerned with DB stuff yet if this project need a non-SQLite db): [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
+- [ ] 4.9.2) Carefully, bring to the new Django `/core/settings.py`  those notes you'll find in this next model (don't get concerned with DB stuff yet if this project need a non-SQLite db): [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
 
-- [ ] 4.9.3) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
+- [ ] 4.9.3) (Optional) For your `core` folder, bring from these files below the main notes/comments that can help you for future use:
+	- [consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py)
+	- models.py with auditmixin???????????
+	- [lang.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/lang.py)
 
-- [ ] 4.9.4) (Optional) For each sub-app, bring from these files below the main notes/comments that can help you for future use:
+- [ ] 4.9.4) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
+
+- [ ] 4.9.5) (Optional) For each `/apps/subapp/`, bring from these files below the main notes/comments that can help you for future use:
 	- [consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/consts.py)
 	- [models.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/models.py)
 	- [admin.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/admin.py)
@@ -105,8 +110,9 @@ Even though you are not using SQLite for this project, this previous step create
 	- [forms.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/forms.py)
 	- [utils.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/utils.py)
 	- [serializers.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/serializers.py)
+	- [lang.py](/)
 
-- [ ] 4.9.5) (If applicable) Case you need an admin user:
+- [ ] 4.9.6) (If applicable) Case you need an admin user:
 [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
 ### 5) (Optional) Installing the dependencies
 Based on the project's *Technical Design Document* (TDD), install all dependencies: [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)

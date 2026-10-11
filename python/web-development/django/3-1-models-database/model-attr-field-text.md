@@ -1,4 +1,4 @@
-#### Python > Django > Models > Attribute types
+#### Python > Django > Models > Field Classes (Attribute types)
 # TextField()
 
 ---
@@ -10,19 +10,23 @@ Field look-like on front-end:
 
 E.g.
 Basic:
-```
+```python
 book_chapter_content = models.TextField(
 	blank=False,
+	verbose_name="xxxxxx",
+	help_text="",
 	validators=[
 		MinLengthValidator(140),
 	],
 )
 ```
 Limiting size for core-business and db-size-protection:
-```
+```python
 seo_desc = models.TextField(
 	max_length=consts.VAL_SEO_DESC_MAX,
 	blank=True,
+	verbose_name="xxxxxx",
+	help_text="",
 	validators=[
 		MinLengthValidator(consts.VAL_SEO_DESC_MIN),
 		MaxLengthValidator(consts.VAL_SEO_DESC_MAX),
@@ -31,6 +35,7 @@ seo_desc = models.TextField(
 ```
 
 ---
-
 ## Other related options:
 - CharField: [/python/web-development/django/3-1-models-database/model-attr-field-char](/python/web-development/django/3-1-models-database/model-attr-field-char.md)
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

@@ -1,4 +1,4 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: NULL BOOLEAN FIELD (DEPRECATED!)
+DJANGO MODEL CLASS > Field Classes (Attribute types): NULL BOOLEAN FIELD (DEPRECATED!)
 
     Deprecated:
         As of Django 3.1, NullBooleanField is deprecated. Its usage should be replaced with BooleanField with the appropriate null=True setting. It remains in the documentation for backward compatibility but will be removed in a future release.

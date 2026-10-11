@@ -1,5 +1,5 @@
-#### Python > Django > Models
-# Attribute type: IntegerField
+#### Python > Django > Models > Field Classes (Attribute types)
+# IntegerField()
 
 ---
 
@@ -15,12 +15,13 @@
 
 General-purpose integers where the value is unlikely to exceed 2 billion. Examples: counts (e.g., page_views, likes), ages, small system IDs, choices from a limited set, and ForeignKey fields (on databases that use integer-based keys).
 
-E.g. in *models.py*:
-```
+E.g. in `models.py`:
+```python
 class Product(...):
-	...
+	# ...
     quantity = models.IntegerField(default=0)
-    ...
+	verbose_name="xxxxxx",
+	help_text="",
 ```
 
 **Common *IntegerField* options:**
@@ -36,14 +37,15 @@ class Product(...):
 ## More examples:
 
 With validation:
-```
+```python
 # models.py:
-
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Student(...):
     ...
     age = models.IntegerField(
+        verbose_name="xxxxxx",
+		help_text="",
         validators=[
             MinValueValidator(0),
             MaxValueValidator(120),
@@ -52,7 +54,7 @@ class Student(...):
     ...
 ```
 Example using *choices*:
-```
+```python
 # models.py
 
 class Order(...):
@@ -74,7 +76,7 @@ class Order(...):
 
 ---
 ## Other related options:
-
 - Big Integer Field: [/python/web-development/django/3-1-models-database/model-attr-field-bigInteger](/python/web-development/django/3-1-models-database/model-attr-field-bigInteger.md)
-
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 

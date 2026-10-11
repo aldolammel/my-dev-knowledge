@@ -1,24 +1,25 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: DURATION FIELD
+DJANGO MODEL CLASS > Field Classes (Attribute types): DURATION FIELD
 
-    Common Usage:
-        Storing periods of time, represented in Python as a datetime.timedelta object. The underlying database storage is different for each database (e.g., an INTERVAL in PostgreSQL, a BIGINT of microseconds in SQLite). Perfect for the length of a video or audio track; the total time spent on a task or project; the time difference between two events.
+Common Usage:
+Storing periods of time, represented in Python as a datetime.timedelta object. The underlying database storage is different for each database (e.g., an INTERVAL in PostgreSQL, a BIGINT of microseconds in SQLite). Perfect for the length of a video or audio track; the total time spent on a task or project; the time difference between two events.
 
-    Field look-like on front-end:
-        - Single field with a time value (originally in microseconds)*
-        - Only the value
+Field look-like on front-end:
+- Single field with a time value (originally in microseconds)*
+- Only the value
 
-    Example:
-
-        duration = models.DurationField()  # *
-
-        (*) datetime.timedelta object is powerfull. It represents the duration value can be easily extracted and formated into any unit you want (days, hours, seconds).
+Example:
+```python
+duration = models.DurationField()  # *
+```
+(`*`) `datetime.timedelta` object is powerfull. It represents the duration value can be easily extracted and formated into any unit you want (days, hours, seconds).
 
 ---
+## Other related options:
 
-> > Other related options:
+>> Date Field:
+/python/web-development/django/3-1-models-database/model-attr-field-date.txt
 
-    >> Date Field:
-        /python/web-development/django/3-1-models-database/model-attr-field-date.txt
-
-    >> Date Time Field:
-        /python/web-development/django/3-1-models-database/model-attr-field-dateTime.txt
+>> Date Time Field:
+/python/web-development/django/3-1-models-database/model-attr-field-dateTime.txt
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

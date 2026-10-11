@@ -119,9 +119,9 @@ DATABASES = {
     }
 }
 
-# Default primary key field type
-# For models of all sub-apps that don’t have a field with primary_key=True:
-# DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+# Default primary key field type:
+# For models of all sub-apps that will suppressed their primary keys.
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'  # Auto-increment range: 1 to 2,147,483,647.
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

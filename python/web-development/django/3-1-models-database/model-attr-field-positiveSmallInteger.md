@@ -1,5 +1,5 @@
-#### Python > Django > Models > Attribute types
-# SmallIntegerField()
+#### Python > Django > Models > Field Classes (Attribute types)
+# PositiveSmallIntegerField()
 
 ---
 
@@ -12,18 +12,16 @@ Signed Range:
 0 to 32,767 (It uses the same 2-byte storage as SmallIntegerField but restricts values to positive numbers and zero, enforced by Django).
 
 E.g.
-```
+```python
 pos_on_menu = models.PositiveSmallIntegerField(
 	default=0,
+	verbose_name="xxxxxx",
+	help_text="",
 )
 ```
 
 ---
-
-> > Other related options:
-
-    >> Positive Integer Field
-        /python/web-development/django/3-1-models-database/model-attr-field-positiveInteger.txt
-
-    >> Positive Big Integer Field
-        /python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.txt
+## Other related options:
+Small Integer: [/python/web-development/django/3-1-models-database/model-attr-field-smallInteger](/python/web-development/django/3-1-models-database/model-attr-field-smallInteger.md)
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

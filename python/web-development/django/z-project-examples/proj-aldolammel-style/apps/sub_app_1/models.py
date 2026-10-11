@@ -1,6 +1,6 @@
 # from django.conf import settings as stgs
 from django.db import models
-# from . import consts
+# from . import consts, lang
 
 """
 Model class model:

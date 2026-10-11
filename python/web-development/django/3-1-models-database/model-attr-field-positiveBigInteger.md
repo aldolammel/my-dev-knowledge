@@ -1,25 +1,31 @@
-#### Python > Django > Models > Attribute types
+#### Python > Django > Models > Field Classes (Attribute types)
 # PositiveBigIntegerField()
 
 ---
 
 Any (but large) integer value that should never be negative. Examples: stock quantities of a large business, a count of items, or any other number where a negative value would be invalid or nonsensical, but for when the values might be extremely large and exceed its 2.1 billion limit.
 
-    Typical Size:
-        8 bytes (64-bit)
+Typical Size:
+8 bytes (64-bit)
 
-    Signed Range:
-        0 to 9,223,372,036,854,775,807 (Effectively unsigned, enforced by Django)
-        
-    Example:
-        xxxxxxxxxxxxxxxxxx
+Signed Range:
+0 to 9,223,372,036,854,775,807 (Effectively unsigned, enforced by Django)
+
+Example:
+```python
+xxxxxxxxxxxxxxxxxx
+
+	verbose_name="xxxxxx",
+	help_text="",
+```
 
 ---
-
-> > Other related options:
+## Other related options:
 
     >> Positive Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveInteger.txt
 
     >> Positive Small Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.txt
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

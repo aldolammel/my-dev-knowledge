@@ -1,4 +1,4 @@
-#### Python > Django > Models > Attribute fields
+#### Python > Django > Models > Field Classes (Attribute types)
 # CharField()
 
 ---
@@ -11,19 +11,23 @@ Field look-like on front-end:
 **Examples:**
 
 Basic:
-```
+```python
 first_name = models.CharField(
 	max_length=25,
 	blank=True,
 	default="",                   # or None, but avoid to use 'null=True' if blank=True!
+	verbose_name="xxxxxx",
+	help_text="",
 )
 ```
 Advanced:
-```
+```python
 first_name = models.CharField(
 	max_length=25,
 	blank=True,
 	default="",                   # or None, but avoid to use 'null=True' if blank=True!
+	verbose_name="xxxxxx",
+	help_text="",
 	validators=[
 		MinLengthValidator(2),
 		MaxLengthValidator(25),
@@ -32,11 +36,13 @@ first_name = models.CharField(
 )
 ```
 Drop-down field:
-```
+```python
 front_type = models.CharField(
 	max_length=35,  # Database level checking.
 	choices=consts.CHOICES_FRONTEND,
 	default=consts.VAL_FRONT_TOOL_DEFAULT,
+	verbose_name="xxxxxx",
+	help_text="",
 )
 ```
 
@@ -47,5 +53,6 @@ front_type = models.CharField(
 - URL Field: [/python/web-development/django/3-1-models-database/model-attr-field-url](/python/web-development/django/3-1-models-database/model-attr-field-url.md)
 - Slug Field: [/python/web-development/django/3-1-models-database/model-attr-field-slug](/python/web-development/django/3-1-models-database/model-attr-field-slug.md)
 - Binary Field: [/python/web-development/django/3-1-models-database/model-attr-field-binary](/python/web-development/django/3-1-models-database/model-attr-field-binary.md)
-
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 

@@ -1,4 +1,4 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: BIG INTEGER FIELD
+DJANGO MODEL CLASS > Field Classes (Attribute types): BIG INTEGER FIELD
 
     Typical Size:
         8 bytes (64-bit)

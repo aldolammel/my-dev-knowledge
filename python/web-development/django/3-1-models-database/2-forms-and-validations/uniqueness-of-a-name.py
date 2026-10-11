@@ -18,7 +18,7 @@ from django.core.exceptions import ValidationError
 def clean_checker_txt_uniqueness(
     model, obj, f_name: str, f_current_value: str, is_formatted: bool, format_type: str
 ):
-    """Function to be used with clean() method! It checks if Django and db have exactly the same txt field value. It must be used only with txt fields (char/slug/url) that are using UNIQUE TRUE.
+    """Function to be used with clean() method! It detects duplicates in app-level (as well as Django full_clean() method automatic does), but with extra cares about normalization (strips whitespace and formatting) and case-insensitive uniqueness. Use it only with limited txt fields (char/slug/url) that are using UNIQUE TRUE (db-level constraint).
 
     REMINDER:
     In case of the field to be checked has been formatted (with .title() or something else) after the clean() method, it's crucial this function be set as 'is_formatted' TRUE, and 'format_type' as exactly the same way the database expect. Otherwise, existent entries might get IntegrityError if different formatting is tried, e.g., 'Market' to 'market' or 'MARKET'.

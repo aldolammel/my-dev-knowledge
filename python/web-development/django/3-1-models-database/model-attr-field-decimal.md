@@ -1,4 +1,4 @@
-#### Python > Django > Models > Attribute types
+#### Python > Django > Models > Field Classes (Attribute types)
 # DecimalField()
 
 ---
@@ -12,7 +12,7 @@ Signed Range:
 Configurable, with exact precision.
 
 E.g.
-```
+```python
 from decimal import Decimal
 from django.core.validators import MinValueValidator
 

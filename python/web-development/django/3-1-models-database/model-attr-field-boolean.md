@@ -1,5 +1,5 @@
-#### Python > Django > Model Class
-# Attribute type: BooleanField
+#### Python > Django > Model Class > Field Classes (Attribute types)
+# BooleanField()
 
 ---
 
@@ -10,14 +10,16 @@ Representing a True/False or On/Off state.
 - Checkbox field.
 
 E.g.
-```
+```python
 is_published = models.BooleanField(
 	default=True,
+	verbose_name="xxxxxx",
+	help_text="",
 )
 ```
 
 ---
-
 ## Other related options:
-
 Null Boolean Field ==(Deprecated)==: [/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean](/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.md)
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

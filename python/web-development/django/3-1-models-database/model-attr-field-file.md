@@ -1,20 +1,26 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: FILE FIELD
-
-    Common Usage:
-        Handling file uploads.
-
-    Field look-like on front-end:
-        - Single upload field.
-
-    Example:
-        xxxxxxxxxxxx
+#### Python > Django > Models > Field Classes (Attribute types)
+# FileField()
 
 ---
 
-> > Other related options:
+**Common Usage:**
+Handling file uploads.
 
-    >> Image Field:
-        /python/web-development/django/3-1-models-database/model-attr-field-image.txt
+**Field look-like on front-end:**
+- Single upload field.
 
-    >> Binary Field:
-        /python/web-development/django/3-1-models-database/model-attr-field-binary.txt
+Example:
+```python
+class Plane(models.Model):
+    manual = models.FileField(
+        upload_to="planes/manuals/",
+        blank=True,
+        verbose_name="xxxxxx",
+        help_text="",
+    )
+```
+
+---
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
+

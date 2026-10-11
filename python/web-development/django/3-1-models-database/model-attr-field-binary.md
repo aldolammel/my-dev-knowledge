@@ -1,4 +1,4 @@
-DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
+DJANGO MODEL CLASS > Field Classes (Attribute types): BINARY FIELD
 
     Common Usage:
         Storing raw binary data (e.g., bytes, bytearray, memoryview). It's important to note that storing large binary data in the database is generally not recommended for performance reasons; the standard practice is to store the file in a storage system (e.g., S3, filesystem) and store its path in a CharField or FileField. Use BinaryField for very small amounts of data. Good for encrypted secret or token, storing a user's picture as a byte stream (not recommended for large images), very specific use cases where the data must be in the database and is not a separate file.
@@ -70,3 +70,5 @@ DJANGO MODEL CLASS > ATTRIBUTE TYPE: BINARY FIELD
 
     >> File Field:
         /python/web-development/django/3-1-models-database/model-attr-field-file.txt
+## All Django field class (class attribute):
+[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

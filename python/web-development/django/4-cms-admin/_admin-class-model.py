@@ -1,3 +1,12 @@
+"""
+    WHICH ADMIN CLASS TEMPLATE YOU WANT?
+        1. For common class.
+        x. Mixin class.
+
+"""
+
+# 1. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 @admin.register(models.ExampleModel)
 class ExampleModelAdmin(admin.ModelAdmin):
     '''Customizing the management of xxxxxxxxxxxxxxxxx'''
@@ -30,13 +39,25 @@ class ExampleModelAdmin(admin.ModelAdmin):
         # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
 
     # If you have audit fields like 'created_by' or 'updated_by' you need save_model method:
-    def save_model(self, request, obj, form, change):
+    # def save_model(self, request, obj, form, change):
         '''Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface.'''
         # Sending to models.py the current user in CMS:
-        obj.save(user=request.user)
+        # obj.save(user=request.user)
 
     # Custom method fields:
     # Reserved space...
 
     # Defining custom method field labels:
     # Reserved space...
+
+
+# x. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+class SaveUserMixin:
+    """Mixin class that automatically passes the current user to the model's save method."""
+
+    def save_model(self, request, obj, form, change):
+        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
+        # Sending to models.py the current user in CMS:
+        obj.save(user=request.user)
+

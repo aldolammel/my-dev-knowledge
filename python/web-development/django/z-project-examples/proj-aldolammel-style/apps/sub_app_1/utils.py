@@ -2,6 +2,6 @@
 # from . import consts, lang
 
 
-# A few @aldolammel's solution:
-# https://github.com/aldolammel/my-dev-knowledge/tree/main/python/web-development/django/utils/
+# Some @aldolammel solutions listed in here:
+#   https://github.com/aldolammel/my-dev-knowledge/tree/main/python/web-development/django/utils/
     

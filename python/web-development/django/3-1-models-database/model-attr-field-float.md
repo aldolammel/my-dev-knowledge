@@ -1,4 +1,4 @@
-#### Python > Django > Models > Attribute types
+#### Python > Django > Models > Field Classes (Attribute types)
 # FloatField()
 
 ---

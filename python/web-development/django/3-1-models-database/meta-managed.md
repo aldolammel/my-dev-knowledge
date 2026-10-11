@@ -1,26 +1,31 @@
+#### Python > Django > Model matters
+# Meta class: Managed
+
+---
+
+**Before:**
+1. What is Model meta: [/python/web-development/django/3-1-models-database/meta](/python/web-development/django/3-1-models-database/meta.md)
+
+---
+
+Controls database table management by Django's migration system.
+
+What is meta in this context: [meta](python/web-development/django/3-1-models-database/meta.md)
+
+**When to use "managed = False":**
+- When working with legacy databases or tables created outside Django;
+- When you want Django to read from but not manage the table;
+- Requires you to manually define fields matching the existing table structure;
+- Django will:
+	- NOT create the table via migrations;
+	- NOT modify/alter the table schema;
+	- Still allow querying via ORM;
+	- Still generate serializers, admin, etc.
 
 
-DJANGO MODEL > META CLASS: MANAGED
-
-    Controls database table management by Django's migration system.
-
-    >> When to use "managed = False":
-        - When working with legacy databases or tables created outside Django;
-        - When you want Django to read from but not manage the table;
-        - Requires you to manually define fields matching the existing table structure;
-        - Django will:
-            - NOT create the table via migrations;
-            - NOT modify/alter the table schema;
-            - Still allow querying via ORM;
-            - Still generate serializers, admin, etc.
-
-
-        E.g.
-            ./creating-virtual-model.txt
-
+E.g.
+[/python/web-development/django/3-1-models-database/creating-virtual-model](/python/web-development/django/3-1-models-database/creating-virtual-model.md)
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-WHAT IS MODEL META:
-    ./meta.md
