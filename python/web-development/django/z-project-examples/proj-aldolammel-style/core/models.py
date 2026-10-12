@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-from . import consts, lang
+from . import lang
 
 
 class AuditBase(models.Model):  # Abstract model!

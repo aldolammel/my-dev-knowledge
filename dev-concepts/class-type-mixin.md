@@ -3,16 +3,21 @@
 
 ---
 
-It's a class that provides a specific set of methods and properties to be inherited or composed by other classes, without being a standalone base class itself. It is designed to add reusable functionality through inheritance or composition, promoting code reuse without forcing a rigid hierarchical structure.
+Use a Model Mixin for an independent, reusable capability that multiple models can incorporate. It's a class that provides a specific set of methods and properties to be inherited or composed by other classes, without being a standalone base class itself. It is designed to add reusable functionality through inheritance or composition, promoting code reuse without forcing a rigid hierarchical structure.
+
+### Mixin class is not a Base class:
+
+| Aspect         | Mixin class                               | **[Base Model class](/dev-concepts/class-type-base.md)**                                                    |
+| -------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Purpose        | Provides reusable fields or functionality | Establishes a common foundation for a model hierarchy                                                       |
+| Inheritance    | Often shared across unrelated models      | Usually inherited by models within the same hierarchy                                                       |
+| Abstract?      | Typically yes                             | Can be [abstract](/dev-concepts/class-type-abstract.md) or [concrete](/dev-concepts/class-type-concrete.md) |
+| Database table | Usually none                              | Depends on whether it is abstract                                                                           |
+| Example        | `AuditMixin`, `TimestampMixin`            | `VehicleBase`, `PersonBase`                                                                                 |
 
 ---
-## Programming Context (Python & General OOP):
-
-In languages supporting multiple inheritance (like Python), mixins allow a class to inherit features from multiple orthogonal sources.
-
-E.g. using Python: 
-
-[/python/web-development/django/4-cms-admin/model-type-mixin.py](/python/web-development/django/4-cms-admin/model-type-mixin.py)
+## Python example:
+[python/web-development/django/3-1-models-database/model-type-mixin](python/web-development/django/3-1-models-database/model-type-mixin.md)
 
 ---
 ## Database Context:
@@ -20,7 +25,7 @@ E.g. using Python:
 In modern ORMs (like Django's ORM or SQLAlchemy), mixins are used to share common database fields, behaviors, or constraints across multiple models.
 
 E.g. using Python:
-```
+```python
 from datetime import datetime
 from sqlalchemy import Column, DateTime
 

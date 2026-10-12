@@ -3,29 +3,31 @@
 
 
 # PATHS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#PATH_API_GLOBAL = "api/global"  # It's also declared in /frontend/src/stores/global.js
-#PATH_API_PAGES = "api/pages"  # It's also declared in /frontend/src/stores/pages.js
+#PATH_API_SOMETGHING = "api/something"  # It's also declared in /frontend/src/stores/global.js
 #PATH_JSON_CATS = "c"  # It's also declared in /frontend/src/router/router.js
-#PATH_IMG = "pagex/images/"
-#PATH_FILE = "pagex/to_download/"
+#PATH_IMG = "something/images/"
+#PATH_FILE = "something/to_download/"
 
 # DATA FOR DATABASE (WARNING!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # If values are changed without maintenance on database, multiple errors will raise up!
-#VAL_FRONT_TOOL_DJANGO = "django"
-#VAL_FRONT_TOOL_VUE = "vue"
-#CHOICES_FRONTEND = (
-    #(VAL_FRONT_TOOL_DJANGO, "Django Templates (default)"),
-    #(VAL_FRONT_TOOL_VUE, "Vue.js 3"),
-    # (VAL_FRONT_TOOL_REACT, 'React Native'),
-    # (VAL_FRONT_TOOL_ANGULAR, 'Angular.js'),
+#VAL_SOMETHING_A = "a"
+#VAL_SOMETHING_B = "b"
+#VAL_SOMETHING_C = "c"
+#CHOICES_CLASSREFEXAMPLE = (
+    #(VAL_SOMETHING_A, 'Example A (default)'),
+    #(VAL_SOMETHING_B, 'Example B'),
+    #(VAL_SOMETHING_C, 'Example C'),
 #)
 
 # OTHERS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # REL_ for 'related_name' on models!
 # VAL_ for constant values!
-#VAL_BRAND_MIN = 1
-#VAL_BRAND_MAX = 20
-#VAL_BRAND_LONG_MAX = 3 * VAL_BRAND_MAX
+VAL_GENERIC_MIN = 3
+VAL_GENERIC_MAX = 40
+VAL_SLUG_ADD_LIMIT = 5
+VAL_CLASSREFEXAMPLE_ATTREXAMPLE_MIN = VAL_GENERIC_MIN
+VAL_CLASSREFEXAMPLE_ATTREXAMPLE_MAX = VAL_GENERIC_MAX
+
 
 # DEBUG FOR TERMINAL ONLY - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Unlike those debug-tags from 'lang.py' file, these ones accept colors to be displayed on terminal.

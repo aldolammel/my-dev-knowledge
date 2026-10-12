@@ -2,7 +2,7 @@ DJANGO FORMS: STEP BY STEP (USING FORMS BASED IN MODELS)
 
 ---
 ## Before:
-1. Make sure you already have a models.py class created that will create the model to the template/front-end form: /python/web-development/django/3-1-models-database/_creating_db_table.py
+1. Make sure you already have a `models.py` class created that will create the model to the template/front-end form: [\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
 
 ---
 ## 1) In the same sub-app folder of your models.py, create a file called 'forms.py';

@@ -1,9 +1,9 @@
 """
-    WHICH MODEL CLASS TEMPLATE YOU WANT?
-        1. Concrete common/Parent class.
-        2. Concrete child class.
-        3. Abstract AuditBase class.
-        4. Concrete common with AuditBase inheritance
+    GET A MODEL CLASS TEMPLATE:
+        1. Concrete Parent/Base class.
+        2. Concrete Parent/Base with AuditMixin inheritance (RECOMMENDED!)
+        3. Concrete Child class.
+        4. Abstract Mixin class.
         5. Virtual model class.
 """
 
@@ -11,9 +11,18 @@
 
 from django.db import models
 from django.utils.text import slugify
-from . import consts
+from . import consts, lang
+#from django.core.validators import MinLengthValidator,MaxLengthValidator
+#from django.db.models.functions import Length
+#models.CharField.register_lookup(Length)
 
-class ExampleModel(models.Model):
+"""
+Model class model:
+https://...
+"""
+
+
+class ExampleModel(models.Model):  # If it's a base model class, use in its class name a "Base" suffix!
     '''Stores xxxxxxxxxxxxxxxxxxxxxxx.'''
 
     id = models.SmallAutoField(
@@ -21,23 +30,23 @@ class ExampleModel(models.Model):
         unique=True,
         editable=False,
     )
-    name_xxxxxx = models.CharField(
-        max_length=consts.VAL_XXXXXXXXX_MAX,
+    name = models.CharField(
+        max_length=consts.VAL_GENERIC_MAX,
         unique=True,
-        verbose_name="XXXXXXX",
+        verbose_name="Name",
         help_text="",
         validators=[
-            MinLengthValidator(consts.VAL_XXXXXXX_MIN),
-            MaxLengthValidator(consts.VAL_XXXXXXXXXX_MAX),
+            # MinLengthValidator(consts.VAL_GENERIC_MIN),
+            # MaxLengthValidator(consts.VAL_GENERIC_MAX),
             # validators.validate_chars_spaces_enabled,  # Freedom for this!
         ],
     )
     slug = models.SlugField(
-        max_length=consts.VAL_PAGE_TITLE_MAX + consts.VAL_SLUG_ADD_LIMIT,
+        max_length=consts.VAL_GENERIC_MAX + consts.VAL_SLUG_ADD_LIMIT,
         unique=True,
         db_index=True,
         editable=False,
-        verbose_name="xxxxx",
+        verbose_name="Slug",
         help_text="",
     )
 
@@ -49,14 +58,14 @@ class ExampleModel(models.Model):
         """constraints = [
             models.CheckConstraint(
                 condition=models.Q(
-                    xxxxxxx__length__range=(consts.VAL_XXXXXXX_MIN, consts.VAL_XXXXXXXXXX_MAX)
+                    <attrname>__length__range=(consts.VAL_GENERIC_MIN, consts.VAL_GENERIC_MAX)
                 ),
-                name="xxxxxxx_length",
+                name="<classname>_<attrname>_length",
             ),
         ]"""
 
     def __str__(self):
-        return self.xxxxxxxx
+        return self.name
 
     def save(self, *args, **kwargs):
         """Built-in Model method that's executed when the db entry saving runs."""
@@ -64,8 +73,10 @@ class ExampleModel(models.Model):
         # Runs full validation before saving:
         self.full_clean()
 
-        if self.name_xxxxxx:
-            self.slug = slugifier(self.name_xxxxxx)
+        if self.name:
+            # Creating the slug based in another field:
+            self.slug = slugify(self.name)
+            # Saving:
             super().save(*args, **kwargs)
 
     def clean(self):
@@ -73,14 +84,23 @@ class ExampleModel(models.Model):
         # Nothing yet.
 
 
-
 # 2. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from django.db import models
 from django.utils.text import slugify
-from . import consts
+from core.models import AuditMixin
+from . import consts, lang
+#from django.core.validators import MinLengthValidator,MaxLengthValidator
+#from django.db.models.functions import Length
+#models.CharField.register_lookup(Length)
 
-class ExampleModel(models.Model):
+"""
+Model class model:
+https://...
+"""
+
+
+class ExampleModel(AuditMixin):  # If it's a base model class, use in its class name a "Base" suffix!
     '''Stores xxxxxxxxxxxxxxxxxxxxxxx.'''
 
     id = models.SmallAutoField(
@@ -88,42 +108,124 @@ class ExampleModel(models.Model):
         unique=True,
         editable=False,
     )
-    name_xxxxxx = models.CharField(
-        max_length=consts.VAL_XXXXXXXXX_MAX,
-        unique=True,
-        verbose_name="XXXXXXX",
+    name = models.CharField(
+        max_length=consts.VAL_GENERIC_MAX,
+        verbose_name="name",
         help_text="",
         validators=[
-            MinLengthValidator(consts.VAL_XXXXXXX_MIN),
-            MaxLengthValidator(consts.VAL_XXXXXXXXXX_MAX),
+            # MinLengthValidator(consts.VAL_GENERIC_MIN),
+            # MaxLengthValidator(consts.VAL_GENERIC_MAX),
             # validators.validate_chars_spaces_enabled,  # Freedom for this!
         ],
     )
     slug = models.SlugField(
-        max_length=consts.VAL_PAGE_TITLE_MAX + consts.VAL_SLUG_ADD_LIMIT,
+        max_length=consts.VAL_GENERIC_MAX + consts.VAL_SLUG_ADD_LIMIT,
         unique=True,
         db_index=True,
         editable=False,
-        verbose_name="xxxxx",
-        help_text=""
+        verbose_name="Slug",
+        help_text="",
     )
 
     class Meta:
-        db_table = "pagex_xxxxxxxx"
+        db_table = "xxxxxxxx"
         ordering = ["xxxxxx"]
         verbose_name = "x. xxxxxxx"
         verbose_name_plural = "x. xxxxxxxxxxxxxxx"
         """constraints = [
             models.CheckConstraint(
                 condition=models.Q(
-                    xxxxxxx__length__range=(consts.VAL_XXXXXXX_MIN, consts.VAL_XXXXXXXXXX_MAX)
+                    <attrname>__length__range=(consts.VAL_GENERIC_MIN, consts.VAL_GENERIC_MAX)
                 ),
-                name="xxxxxxx_length",
+                name="<classname>_<attrname>_length",
             ),
         ]"""
 
     def __str__(self):
-        return self.xxxxxxxx
+        return self.name
+
+    def save(self, *args, **kwargs):
+        """Built-in Model method that's executed when the db entry saving runs."""
+        
+        # Runs full validation before saving:
+        self.full_clean()
+
+        if self.name:
+            # Creating the slug based in another field:
+            self.slug = slugify(self.name)
+            # Tracking the current user:
+            user = kwargs.pop("user", None)
+            if user and user.is_authenticated:
+                if not self.created_by:
+                    self.created_by = user
+                else:
+                    self.updated_by = user
+            # Saving:
+            super().save(*args, **kwargs)
+
+    def clean(self):
+        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
+        # Nothing yet.
+
+
+# 3. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+from django.db import models
+from django.utils.text import slugify
+from . import consts, lang
+#from django.core.validators import MinLengthValidator,MaxLengthValidator
+#from django.db.models.functions import Length
+#models.CharField.register_lookup(Length)
+
+"""
+Model class model:
+https://...
+"""
+
+class ExampleChildModel(ExampleModel):
+    '''Stores xxxxxxxxxxxxxxxxxxxxxxx.'''
+
+    id = models.SmallAutoField(
+        primary_key=True,
+        unique=True,
+        editable=False,
+    )
+    name = models.CharField(
+        max_length=consts.VAL_GENERIC_MAX,
+        unique=True,
+        verbose_name="Name",
+        help_text="",
+        validators=[
+            MinLengthValidator(consts.VAL_GENERIC_MIN),
+            MaxLengthValidator(consts.VAL_GENERIC_MAX),
+            # validators.validate_chars_spaces_enabled,  # Freedom for this!
+        ],
+    )
+    slug = models.SlugField(
+        max_length=consts.VAL_GENERIC_MAX + consts.VAL_SLUG_ADD_LIMIT,
+        unique=True,
+        db_index=True,
+        editable=False,
+        verbose_name="Slug",
+        help_text=""
+    )
+
+    class Meta:
+        db_table = "xxxxxxxx"
+        ordering = ["xxxxxx"]
+        verbose_name = "x. xxxxxxx"
+        verbose_name_plural = "x. xxxxxxxxxxxxxxx"
+        """constraints = [
+            models.CheckConstraint(
+                condition=models.Q(
+                    <attrname>__length__range=(consts.VAL_GENERIC_MIN, consts.VAL_GENERIC_MAX)
+                ),
+                name="<classname>_<attrname>_length",
+            ),
+        ]"""
+
+    def __str__(self):
+        return self.name
 
     def save(self, *args, **kwargs):
         """Built-in Model method that's executed when the db entry saving runs."""
@@ -139,11 +241,16 @@ class ExampleModel(models.Model):
         # Reserved space for child validations...
 
 
-# 3. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 4. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from django.conf import settings
 
-class AuditBase(models.Model):  # Abstract model!
+"""
+Model class model:
+https://...
+"""
+
+class AuditMixin(models.Model):  # Abstract model!
     """Stores who and when things were changed."""
 
     created_at = models.DateTimeField(
@@ -176,68 +283,6 @@ class AuditBase(models.Model):  # Abstract model!
     class Meta:
         abstract = True  # Flags to the db that no tables should be created from this.
 
-
-# 4. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-from django.db import models
-from django.utils.text import slugify
-from . import consts
-
-class ExampleModel(AuditBase):
-    '''Stores xxxxxxxxxxxxxxxxxxxxxxx.'''
-
-    id = models.SmallAutoField(
-        primary_key=True,
-        unique=True,
-        editable=False,
-    )
-    xxxxxx = models.CharField(
-        max_length=consts.VAL_XXXXXXXXX_MAX,
-        verbose_name="XXXXXXX",
-        help_text="",
-        validators=[
-            MinLengthValidator(consts.VAL_XXXXXXX_MIN),
-            MaxLengthValidator(consts.VAL_XXXXXXXXXX_MAX),
-            # validators.validate_chars_spaces_enabled,  # Freedom for this!
-        ],
-    )
-
-    class Meta:
-        db_table = "xxxxxxxx"
-        ordering = ["xxxxxx"]
-        verbose_name = "x. xxxxxxx"
-        verbose_name_plural = "x. xxxxxxxxxxxxxxx"
-        """constraints = [
-            models.CheckConstraint(
-                condition=models.Q(
-                    xxxxxxx__length__range=(consts.VAL_XXXXXXX_MIN, consts.VAL_XXXXXXXXXX_MAX)
-                ),
-                name="xxxxxxx_length",
-            ),
-        ]"""
-
-    def __str__(self):
-        return self.xxxxxx
-
-    def save(self, *args, **kwargs):
-        """Built-in Model method that's executed when the db entry saving runs."""
-        
-        # Runs full validation before saving:
-        self.full_clean()
-
-        if self.xxxxxx:
-            # Tracking the current user:
-            user = kwargs.pop("user", None)
-            if user and user.is_authenticated:
-                if not self.created_by:
-                    self.created_by = user
-                else:
-                    self.updated_by = user
-            super().save(*args, **kwargs)
-
-    def clean(self):
-        """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
-        # Nothing yet.
 
 
 # 5. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -11,7 +11,7 @@ Django is divided in 3 main parts: models, views, and templates. Models are resp
 
 ---
 ## Model-class example:
-Django Model-class example that is used to create database structure: [/python/web-development/django/3-1-models-database/\_creating_db_table](/python/web-development/django/3-1-models-database/_creating_db_table.py)
+Django Model-class example that is used to create database structure: [/python/web-development/django/3-1-models-database/\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
 
 ---
 ## Common attribute-types:

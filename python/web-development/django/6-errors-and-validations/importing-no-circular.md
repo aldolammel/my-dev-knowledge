@@ -56,7 +56,7 @@ More about *Signals*: [/python/web-development/django/7-middlewares-and-signals/
 ---
 ## 5) Restructure with a shared/common app:
 
-If two apps depend on each other's models, that's often a sign a shared concept (e.g., a base model or [mixin](/python/web-development/django/3-1-models-database/model-type-mixin.md)) should live in its own app that both import from, avoiding the cross-dependency altogether.
+If two apps depend on each other's models, that's often a sign a shared concept (e.g., a base model or [mixin](python/web-development/django/4-cms-admin/model-type-mixin.md)) should live in its own app that both import from, avoiding the cross-dependency altogether.
 
 ---
 ## 6) Use `TYPE_CHECKING` for type hints only:

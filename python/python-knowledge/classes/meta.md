@@ -1,6 +1,6 @@
 
 
-DJANGO MODEL > META CLASS: 
+Python > Meta class: 
 
 class Meta inside a model is an inner class used to provide metadata about the model beyond its database fields. It lets you configure various aspects of the model’s behavior without adding actual database columns.
 
@@ -18,7 +18,7 @@ class MyExample (models.Model):
 ---
 ## Meta configurations available
 
-Abstract (avoid the table creation on db): [/python/web-development/django/3-1-models-database/meta-abstract](/python/web-development/django/3-1-models-database/meta-abstract.md)
+Abstract (avoid the table creation on db): [python/python-knowledge/classes/meta-abstract](python/python-knowledge/classes/meta-abstract.md)
 
 Managed (turn off the table management by db): [/python/web-development/django/3-1-models-database/meta-managed](/python/web-development/django/3-1-models-database/meta-managed.md)
 
