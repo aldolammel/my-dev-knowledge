@@ -13,14 +13,17 @@ Signed Range:
 
 Example:
 ```python
-xxxxxxxxxxxxxxxxxx
-
-	verbose_name="xxxxxx",
-	help_text="",
+class Something(...):
+	stock = models.PositiveIntegerField(
+		default=0,
+		blank=True,
+		verbose_name="xxxxxx",
+		help_text="",
+	)
 ```
 
 ---
-## Other related options:
+## Similar field classes:
 
     >> Positive Big Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveBigInteger.txt

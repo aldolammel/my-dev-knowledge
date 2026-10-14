@@ -2,65 +2,74 @@
 
 VUE COMPONENTS:
 
+---
 
-    >> A component in Vue.js is a reusable, self-contained piece of code that encapsulates HTML
-        template, JS logic, and CSS styling into a single unit. Think of it as a custom HTML element that you can use throughout your app.
-
-
-    >> Each component is a sub-app (child) inside an app (parent);
+>> A component in Vue.js is a reusable, self-contained piece of code that encapsulates HTML
+template, JS logic, and CSS styling into a single unit. Think of it as a custom HTML element that you can use throughout your app.
 
 
-    >> A component can be global or local, depends how often it will be shown:
-        ./5-using-component-global-or-local.txt
-
-    
-    >> Parent can send data to its children, but children CANNOT send data to their parents.
-        This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
-            
-        ./5.1-props.txt
-        ./5.2-emits.txt
+>> Each component is a sub-app (child) inside an app (parent);
 
 
-    >> Parent can send HTML to its children, using slots:
-        ./5.4-slot.txt
-    
+>> A component can be global or local, depends how often it will be shown:
+./5-using-component-global-or-local.txt
 
-    >> Convention:
-        Components' names must be written using PascalCase, it means no space or special character, just first letter upper, and all first letters if it composed by two or more words. 
 
-            E.g.
-                MyComp, UserContact, HeroHome, FaqSection, H2Title.
+>> Parent can send data to its children, but children CANNOT send data to their parents.
+This concept is called One-way-data-flow, and it can be better managed by Props and Emits:
 
-            E.g. importing:
-                import MyComp from './components/MyComp.vue'
+./5.1-props.txt
+./5.2-emits.txt
 
-            E.g. calling it:
-                <MyComp>...</MyComp>
-                <!-- or -->
-                <MyComp />
+
+>> Parent can send HTML to its children, using slots:
+./5.4-slot.txt
+
+
+>> Convention:
+Components' names must be written using PascalCase, it means no space or special character, just first letter upper, and all first letters if it composed by two or more words. 
+
+E.g.
+	MyComp, UserContact, HeroHome, FaqSection, H2Title.
+
+E.g. importing:
+```js
+import MyComp from './components/MyComp.vue'
+```
+
+E.g. calling it:
+```vue
+<MyComp>...</MyComp>
+<!-- or -->
+<MyComp />
+```
         
-        
-        Alternatively:
-            You can use kebap-case as well. A good example of component named with kebab-case:
 
-                E.g.
-                    my-comp, user-contact, hero-home, faq-section, h2-title.
+Alternatively:
+You can use kebap-case as well. A good example of component named with kebab-case:
+
+E.g.
+	my-comp, user-contact, hero-home, faq-section, h2-title.
                 
-                E.g. importing:
-                    import my-comp from './components/my-comp.vue'
+E.g. importing:
+```js
+import my-comp from './components/my-comp.vue'
+```
 
-                E.g. calling it:
-                    <my-comp>...</my-comp>  <!-- it's NOT possible to close like using only '/>'.
+E.g. calling it:
+```vue
+<my-comp>...</my-comp>  <!-- it's NOT possible to close like using only '/>'.
+```
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 >> HOW TO CREATE A COMPONENT:
 
-    >> With dedicated files approach (Recommended):
-        ./5-creating-component-professional.txt
-    
-    >> Single file approach (NOT recommended, for your information only):
-        ./5-creating-component-simplified.txt
+>> With dedicated files approach (Recommended):
+./5-creating-component-professional.txt
+
+>> Single file approach (NOT recommended, for your information only):
+./5-creating-component-simplified.txt
 
     

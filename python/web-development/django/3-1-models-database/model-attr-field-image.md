@@ -18,7 +18,7 @@ img_highlight = models.ImageField(
 ```
 
 ---
-## Other related options:
+## Similar field classes:
 File Field:
         /python/web-development/django/3-1-models-database/model-attr-field-file.txt
 ## All Django field class (class attribute):

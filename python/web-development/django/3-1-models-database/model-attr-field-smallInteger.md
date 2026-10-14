@@ -14,14 +14,17 @@ Storing small integers to save database space. Ideal for fields with a known, li
 
 Example:
 ```python
-class Example(models.Model):
-    temperature = models.SmallIntegerField()
-	verbose_name="xxxxxx",
-	help_text="",
+class Something(...):
+    temperature = models.SmallIntegerField(
+	    default=0,
+	    blank=False,
+	    verbose_name="xxxxxx",
+		help_text="",
+    )
 ```
 
 ---
-## Other related options:
+## Similar field classes:
 Positive Small Integer:
 [/python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger](/python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.md)
 ## All Django field class (class attribute):

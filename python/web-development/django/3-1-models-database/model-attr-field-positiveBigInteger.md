@@ -20,7 +20,7 @@ xxxxxxxxxxxxxxxxxx
 ```
 
 ---
-## Other related options:
+## Similar field classes:
 
     >> Positive Integer Field
         /python/web-development/django/3-1-models-database/model-attr-field-positiveInteger.txt

@@ -14,7 +14,7 @@ duration = models.DurationField()  # *
 (`*`) `datetime.timedelta` object is powerfull. It represents the duration value can be easily extracted and formated into any unit you want (days, hours, seconds).
 
 ---
-## Other related options:
+## Similar field classes:
 
 >> Date Field:
 /python/web-development/django/3-1-models-database/model-attr-field-date.txt

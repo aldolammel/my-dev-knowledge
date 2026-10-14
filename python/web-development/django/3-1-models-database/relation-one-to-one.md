@@ -3,6 +3,11 @@
 
 ---
 
+**Before:**
+1. What is OneToOne in a database: [/database/\_tools/ERD/one-to-one](/database/_tools/ERD/one-to-one.md)
+
+---
+
 In Django, a One-to-One relationship is a type of database relationship where each record in one model is linked to exactly one record in another model, and vice versa. This is represented in Django using the OneToOneField. This relationship is typically used when  you want to extend the functionality of an existing model by adding additional fields in a separate model, but with a one-to-one correspondence between the two models.
 
 E.g. If you want to record a phone for a user, we know the phone is unique by user so it's never share with more than one user, but can be transferred:

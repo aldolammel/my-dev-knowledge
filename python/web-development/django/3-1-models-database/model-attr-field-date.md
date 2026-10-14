@@ -15,7 +15,7 @@ Example:
 ```
 
 ---
-## Other related options:
+## Similar field classes:
 
 >> Date Time Field:
 /python/web-development/django/3-1-models-database/model-attr-field-dateTime.txt

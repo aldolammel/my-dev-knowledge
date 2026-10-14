@@ -13,7 +13,7 @@ Python is used throughout, even for settings, files, and data models. Django als
 - **Views** are responsible for manage what data the user will see through a template. 
 - **Templates** are responsible for display the data to the user through a text or layout file such as an HTML page.
 
-![](python/web-development/django/data-flow.png)
+![](python/web-development/django/django-dataflow-simplified-by-aldolammel.png)
 
 ---
 ## HOW TO INSTALL A DJANGO PROJECT:

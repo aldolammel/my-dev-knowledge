@@ -18,7 +18,7 @@ Currently, this is the solution: [/python/web-development/django/7-middlewares-a
 
 1. Open the generated migration file for create_system_elements (e.g. /apps/pagex/migrations/0002_create_system_elements.py);
 2. Add the function below before the `class Migration(migrations.Migration)` declaration;
-```
+```python
 def create_system_elements(apps, schema_editor):
 	PagexElmLinkIntPage = apps.get_model(
 		"pagex",

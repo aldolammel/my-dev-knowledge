@@ -3,12 +3,17 @@
 
 ---
 
+**Before:**
+1. What is ManyToMany in a database: [/database/\_tools/ERD/many-to-many](/database/_tools/ERD/many-to-many.md)
+
+---
+
 This attribute type is used to create a many-to-many relationship where Django automatically creates an intermediary table (bridge) to manage the many-to-many relationship. This table contains two foreign keys: one pointing to each of the related models. This intermediary table is not directly visible in the models but is present in the database schema.
 
 If you need an attribute contains one or maybe many id's in, you must use a *ManyToMany* relationship.
 
 E.g.
-```
+```python
 # models.py
 
 class Publication(...):

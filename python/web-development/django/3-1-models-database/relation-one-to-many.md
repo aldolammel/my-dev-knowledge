@@ -3,10 +3,14 @@
 
 ---
 
+**Before:**
+1. What is ForeignKey in a database: [/database/\_tools/ERD/one-to-many](/database/_tools/ERD/one-to-many.md)
+
+---
 ## 1) Meanwhile an author has one or more books, a book usually has only one author. Here we got a perfect example of one-to-many relationship.
 
 Building up both needed classes for our example in models.py file, remembering in this case we use 'ForeignKey' model:
-```
+```python
 class Author(models.Model):
 	name = ...
 
@@ -26,13 +30,12 @@ MORE ABOUT ON_DELETE:
 [/python/web-development/django/3-1-models-database/2-model-arguments](/python/web-development/django/3-1-models-database/2-model-arguments.md)
 
 ## 2) Still in the same sub-app, in admin.py file:
-```
+```python
 from .models import Author, Book
 
 admin.site.register(Author)
 admin.site.register(Book)
 ```
-
 
 ## 3) Run the CMS and check the if everything is fine.
 

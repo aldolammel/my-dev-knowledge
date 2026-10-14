@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="ejVrzHiggYW84qDQujur">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="836" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,7 +47,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-11" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;swimlaneFillColor=none;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="IDENTITY_CARD" vertex="1">
-          <mxGeometry height="150" width="210.00000000000045" x="730" y="450" as="geometry" />
+          <mxGeometry height="120" width="210.00000000000045" x="730" y="450" as="geometry" />
         </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-12" parent="l37rcTFWyAAdQefQlm9Q-11" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
           <mxGeometry height="30" width="210.00000000000045" y="30" as="geometry" />
@@ -62,21 +62,8 @@
             <mxRectangle height="30" width="150.00000000000045" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-15" parent="l37rcTFWyAAdQefQlm9Q-11" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="210.00000000000045" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-16" parent="l37rcTFWyAAdQefQlm9Q-15" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="FK" vertex="1">
-          <mxGeometry height="30" width="60" as="geometry">
-            <mxRectangle height="30" width="60" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-17" parent="l37rcTFWyAAdQefQlm9Q-15" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="person_id (int)" vertex="1">
-          <mxGeometry height="30" width="150.00000000000045" x="60" as="geometry">
-            <mxRectangle height="30" width="150.00000000000045" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-18" parent="l37rcTFWyAAdQefQlm9Q-11" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="210.00000000000045" y="90" as="geometry" />
+          <mxGeometry height="30" width="210.00000000000045" y="60" as="geometry" />
         </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-19" parent="l37rcTFWyAAdQefQlm9Q-18" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
           <mxGeometry height="30" width="60" as="geometry">
@@ -89,7 +76,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-21" parent="l37rcTFWyAAdQefQlm9Q-11" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="210.00000000000045" y="120" as="geometry" />
+          <mxGeometry height="30" width="210.00000000000045" y="90" as="geometry" />
         </mxCell>
         <mxCell id="l37rcTFWyAAdQefQlm9Q-22" parent="l37rcTFWyAAdQefQlm9Q-21" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" value="" vertex="1">
           <mxGeometry height="30" width="60" as="geometry">
@@ -101,14 +88,14 @@
             <mxRectangle height="30" width="150.00000000000045" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-24" edge="1" parent="1" source="l37rcTFWyAAdQefQlm9Q-2" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;rounded=1;strokeWidth=1;startSize=10;endSize=10;sourcePerimeterSpacing=5;targetPerimeterSpacing=5;endFill=0;startFill=0;fontColor=light-dark(#000000,#FFFFFF);strokeColor=light-dark(#000000,#FFFFFF);" target="l37rcTFWyAAdQefQlm9Q-15" value="">
+        <mxCell id="l37rcTFWyAAdQefQlm9Q-24" edge="1" parent="1" source="l37rcTFWyAAdQefQlm9Q-2" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;rounded=1;strokeWidth=1;startSize=10;endSize=10;sourcePerimeterSpacing=5;targetPerimeterSpacing=5;endFill=0;startFill=0;fontColor=light-dark(#000000,#FFFFFF);strokeColor=light-dark(#000000,#FFFFFF);" target="l37rcTFWyAAdQefQlm9Q-12" value="">
           <mxGeometry height="100" relative="1" width="100" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="520" y="460" as="sourcePoint" />
             <mxPoint x="560" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-25" connectable="0" parent="l37rcTFWyAAdQefQlm9Q-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="&lt;i&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;has&lt;/font&gt;&lt;/i&gt;" vertex="1">
+        <mxCell id="l37rcTFWyAAdQefQlm9Q-25" connectable="0" parent="l37rcTFWyAAdQefQlm9Q-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;i&gt;owns&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0069" y="2" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -230,7 +217,7 @@
             <mxPoint x="560" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-50" connectable="0" parent="l37rcTFWyAAdQefQlm9Q-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="&amp;nbsp;&lt;i&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;has&amp;nbsp;&lt;/font&gt;&lt;/i&gt;" vertex="1">
+        <mxCell id="l37rcTFWyAAdQefQlm9Q-50" connectable="0" parent="l37rcTFWyAAdQefQlm9Q-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;i&gt;owns&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0069" y="2" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -238,7 +225,7 @@
         <mxCell id="l37rcTFWyAAdQefQlm9Q-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#FFFF66);" value="&lt;div&gt;WRONG!&lt;/div&gt;&lt;div&gt;If you define&amp;nbsp;(FK)&amp;nbsp;a relationship existence between two entities in both sides, you are storing the same information twice on the db. And its NOT good at all.&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="270" x="460" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="l37rcTFWyAAdQefQlm9Q-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;div&gt;RIGHT!&lt;br&gt;FK of this relationship must always be on the side that demands mandatory data. Once the &quot;identity_card&quot; needs to be tied to a &quot;person&quot; instance, the FK must be declared on the &quot;identity_card&quot; side.&lt;/div&gt;" vertex="1">
+        <mxCell id="l37rcTFWyAAdQefQlm9Q-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;div&gt;RIGHT!&lt;br&gt;Once this relationship is one-to-one, no ForeignKey is needed.&lt;br&gt;Remember: ERD draws the database relationships, not a back-end class architecture specifically.&lt;/div&gt;" vertex="1">
           <mxGeometry height="120" width="270" x="460" y="350" as="geometry" />
         </mxCell>
       </root>

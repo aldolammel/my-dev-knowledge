@@ -24,6 +24,8 @@ class Aircraft(models.Model):
 ```
 
 ---
+## Similar field classes:
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ## All Django field class (class attribute):
 [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 

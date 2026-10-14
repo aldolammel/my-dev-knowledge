@@ -97,7 +97,7 @@ Even though you are not using SQLite for this project, this previous step create
 
 - [ ] 4.9.3) (Optional) For your `core` folder, bring from these files below the main notes/comments that can help you for future use:
 	- /core/[consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py)
-	- /core/[models.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/models.py) (E.g. to store AuditBase model class)
+	- /core/[models.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/models.py) (E.g. to store AuditMixin model class)
 	- /core/[lang.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/lang.py)
 
 - [ ] 4.9.4) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
@@ -109,7 +109,7 @@ Even though you are not using SQLite for this project, this previous step create
 	- /apps/subapp_name/[validators.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/validators.py)
 	- /apps/subapp_name/[forms.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/forms.py)
 	- /apps/subapp_name/[utils.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/utils.py)
-	- /apps/subapp_name/[serializers.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/serializers.py)
+	- /apps/subapp_name/[serializers.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/serializers.py) (If applicable: demands a REST module)
 	- /apps/subapp_name/[lang.py](/)
 
 - [ ] 4.9.6) (If applicable) Case you need an admin user:

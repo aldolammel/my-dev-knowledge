@@ -24,5 +24,7 @@ home_page = models.OneToOneField(
 
 ---
 
+## Similar field classes:
+xxxxxxxxxxxxxxxx
 ## All Django field class (class attribute):
 [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)

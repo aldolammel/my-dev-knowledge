@@ -18,6 +18,7 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 ### 1.2) Back-end
 1. [x] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end
+If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now.
 1. [ ] IDE, framework setup:  [VSCode for Vue](/javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.md) or [PyCharm for Vue](/javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.md).
 2. [ ] Vue installation (and its dependencies): [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 3. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
@@ -36,9 +37,11 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 2. [ ] Code the entire navigation;
 3. [ ]  Integrate back-end with front-end: [/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/\_integration-using-pagex](_integration-using-pagex.md)
 ### 2.4) Back-end
-1. [ ] Build up the main classes from *Django Architecture Design* document.
-2. [ ] xxx
-3. [ ] (If applicable) If not yet, complete the translation roadmap: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
+1. [ ] Build up the main classes from *Django Architecture Design* document:
+	- List of model class 'templates':  [/python/web-development/django/3-1-models-database/\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
+		- List of field classes for your classes: [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
+	- List of admin class 'templates': [/python/web-development/django/4-cms-admin/\_admin-class-model.py](/python/web-development/django/4-cms-admin/_admin-class-model.py)
+2. [ ] (If applicable) If not yet, complete the translation roadmap: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
 ### 2.5) Final touches
 1. [ ] Back-end > xxxx
 2. [ ] Back-end > xxxx

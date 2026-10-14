@@ -21,7 +21,7 @@ DJANGO MODEL CLASS > Field Classes (Attribute types): BIG INTEGER FIELD
 
 ---
 
-> > Other related options:
+## Similar field classes:
 
     >> Integer Field:
         /python/web-development/django/3-1-models-database/model-attr-field-integer.txt

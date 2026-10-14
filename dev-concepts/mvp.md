@@ -1,0 +1,1 @@
+MVP = Minimum Viable Product

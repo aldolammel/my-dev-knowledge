@@ -16,5 +16,5 @@ xxxxxxxxxxxxxxxxxx
 
 ---
 
-## Other related options:
+## Similar field classes:
 - DecimalField: [/python/web-development/django/3-1-models-database/model-attr-field-decimal](/python/web-development/django/3-1-models-database/model-attr-field-decimal.md)

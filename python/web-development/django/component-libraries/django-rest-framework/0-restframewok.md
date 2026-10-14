@@ -20,6 +20,9 @@ https://www.django-rest-framework.org/
 
 Data-flow of a real Django REST Framework usage: [/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
+Another example:
+![](python/web-development/django/django-dataflow-simplified-by-aldolammel.png)
+
 ---
 ## 1) Install:
 

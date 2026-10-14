@@ -1,5 +1,5 @@
 #### Python > Django > Models > Arguments
-# related_name
+# `related_name`
 
 ---
 
@@ -8,10 +8,10 @@ The `related_name` is a powerful feature for optimizing database access by manag
 The name you choose becomes the attribute name on the related model instance! Be specific!
 
 ---
-## WITHOUT related_name
+## WITHOUT `related_name`
 
 E.g.
-```
+```python
 class Book(models.Model):
 	author = models.ForeignKey(
 		Author,
@@ -19,16 +19,16 @@ class Book(models.Model):
 	)
 ```
 Calling reverse relation:
-```
+```python
 <foreignKeyAttribute>.<current_model>_set.all()
 # E.g.: author.book_set.all()
 ```
 
 ---
-## WITH related_name
+## WITH `related_name`
 
 E.g.
-```
+```python
 class Book(models.Model):
 	author = models.ForeignKey(
 		Author,
@@ -38,7 +38,7 @@ class Book(models.Model):
 ```
                 
 Calling reverse relation:
-```
+```python
 author.books.all()
 ```
 
@@ -46,13 +46,13 @@ author.books.all()
 ## SPECIAL: Avoiding related_name conflicts
 
 E.g.
-```
-class AuditBase(models.Model):  # Abstract model!
+```python
+class AuditMixin(models.Model):  # Abstract model!
 	...
 	created_by = models.ForeignKey(
 		stgs.AUTH_USER_MODEL,
 		related_name="%(app_label)s_%(class)s_created_by",                     # <----
-			# Output: "appName_modelName_modelInhiretedAuditbase_created_by"   # <----
+			# Output: "appName_modelName_modelInhiretedAuditmixin_created_by"   # <----
 		...,
 	)
 ```
@@ -64,5 +64,5 @@ class AuditBase(models.Model):  # Abstract model!
 - Can be used in prefetch_related() for optimization: [/python/web-development/django/3-1-models-database/method-prefetch_related.py](/python/web-development/django/3-1-models-database/method-prefetch_related.py)
 
 ---
-## MODEL FOREIGN KEY:
-[/python/web-development/django/3-1-models-database/model-attr-foreignKey](/python/web-development/django/3-1-models-database/model-attr-foreignKey.md)
+## Field class > ForeignKey():
+[python/web-development/django/3-1-models-database/model-attr-field-foreignKey](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)

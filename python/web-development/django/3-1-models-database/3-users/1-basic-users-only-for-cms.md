@@ -29,7 +29,7 @@ AUTH_USER_MODEL = 'auth.User'  # Addressing the Django default solution.
         E.g.    
             from django.conf import settings
 
-            class AuditBase(models.Model):
+            class AuditMixin(models.Model):
                 """Stores who and when things were changed."""
 
                 created_at = models.DateTimeField(

@@ -1,10 +1,12 @@
 #### Python > Django > Structure
-# Serializers.py
+# `serializers.py` file
 
 ---
 
 **Before:**
 1. What is it: [/dev-concepts/serialization](/dev-concepts/serialization.md)
+2. The data-flow when Django's using serializers:
+![](python/web-development/django/django-dataflow-simplified-by-aldolammel.png)
 
 ---
 ## Creating the API

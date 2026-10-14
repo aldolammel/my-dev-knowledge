@@ -15,7 +15,7 @@ DJANGO MODEL CLASS > Field Classes (Attribute types): NULL BOOLEAN FIELD (DEPREC
 
 ---
 
-> > Other related options:
+## Similar field classes:
 
     >> Boolean Field:
         /python/web-development/django/3-1-models-database/model-attr-field-boolean.txt
