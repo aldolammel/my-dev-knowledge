@@ -3,7 +3,10 @@
 
 ---
 
-In Django, a QuerySet is a collection of database queries that represents a set of objects from your database. It's one of the most powerful and fundamental concepts in Django's ORM (Object-Relational Mapper).
+In Django, a QuerySet (`qs` commonly used) is a collection of database queries that represents a set of objects from your database. It's one of the most powerful and fundamental concepts in Django's ORM (Object-Relational Mapper).
+
+==Are you sure?==
+Sometimes you can use the relationship directly between model classes to request a data, without to create a `qs`:  [/python/web-development/django/3-1-models-database/Inheriting-attributes](/python/web-development/django/3-1-models-database/Inheriting-attributes.md)
 
 ---
 ## Key Characteristics:
@@ -12,7 +15,7 @@ In Django, a QuerySet is a collection of database queries that represents a set 
 QuerySets don't hit the db 'til you actually need the data.
 
 E.g.
-```
+```python
 # No database query executed here
 users = User.objects.all()
 
@@ -29,7 +32,7 @@ for user in users:
 You can chain multiple methods together.
 
 E.g. Chain multiple filters:
-```
+```python
 active_adults = User.objects.filter(
 	is_active=True
 ).filter(
@@ -43,7 +46,7 @@ active_adults = User.objects.filter(
 Each chain operation returns a new QuerySet.
 
 E.g.
-```
+```python
 qs1 = User.objects.all()
 qs2 = qs1.filter(is_active=True)  # New QuerySet
 # qs1 remains unchanged
@@ -52,10 +55,8 @@ qs2 = qs1.filter(is_active=True)  # New QuerySet
 ---
 ## Common QuerySet Operations: 
    
-**Filtering:**
-
-E.g.
-```
+### Filtering
+```python
 # Basic filtering
 active_users = User.objects.filter(is_active=True)
 
@@ -64,42 +65,28 @@ users_over_30 = User.objects.filter(age__gt=30)
 users_named_john = User.objects.filter(username__startswith='john')
 ```
 
-**More filtering examples:**
-
-[/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py](/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py)
-
-**Excluding:**
-
-E.g.
-```
+**More filtering examples:** [/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py](/python/web-development/django/3-1-models-database/4-querysets/qs-filtering.py)
+### Excluding
+```python
 # Exclude certain records
 non_staff_users = User.objects.exclude(is_staff=True)
 ```
-
-**Ordering:**
-
-E.g.
-```
+### Ordering
+```python
 # Order by specific fields
 users_ordered = User.objects.all().order_by('last_name', 'first_name')
 reverse_order = User.objects.all().order_by('-date_joined')  # Descending
 ```
-
-**Slicing:**
-
-E.g.
-```
+### Slicing
+```python
 # Get first 10 users
 first_10 = User.objects.all()[:10]
 
 # Get users 11-20
 next_10 = User.objects.all()[10:20]
 ```
-
-**Aggregation:**
-
-E.g.
-```
+### Aggregation
+```python
 from django.db.models import Count, Avg
 
 # Count active users
@@ -112,12 +99,10 @@ avg_age = User.objects.aggregate(Avg('age'))
 users_by_city = User.objects.values('city').annotate(count=Count('id'))
 ```
 
-**More aggregation examples:**
-
-[/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py](/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py)
+**More aggregation examples:** [/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py](/python/web-development/django/3-1-models-database/4-querysets/qs-aggregation.py)
 
 ---
-## Usign QuerySets with Foreigner Keys:
+## Using QuerySets with Foreigner Keys:
 [/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys](/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md)
 
 ## Usign QuerySets with Many-to-Many:

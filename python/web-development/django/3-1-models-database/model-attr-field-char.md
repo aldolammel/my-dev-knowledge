@@ -12,38 +12,41 @@ Field look-like on front-end:
 
 Basic:
 ```python
-first_name = models.CharField(
-	max_length=25,
-	blank=True,
-	default="",                   # or None, but avoid to use 'null=True' if blank=True!
-	verbose_name="xxxxxx",
-	help_text="",
-)
+class Something(...):
+	first_name = models.CharField(
+		max_length=consts.VAL_GENERIC_MAX,
+		blank=True,
+		default="",  # or None, but avoid to use 'null=True' if blank=True!
+		verbose_name="xxxxxx",
+		help_text="",
+	)
 ```
 Advanced:
 ```python
-first_name = models.CharField(
-	max_length=25,
-	blank=True,
-	default="",                   # or None, but avoid to use 'null=True' if blank=True!
-	verbose_name="xxxxxx",
-	help_text="",
-	validators=[
-		MinLengthValidator(2),
-		MaxLengthValidator(25),
-		# validators.validate_chars_spaces_enabled,
-	],
-)
+class Something(...):
+	first_name = models.CharField(
+		max_length=consts.VAL_GENERIC_MAX,
+		default="",  # or None, but avoid to use 'null=True' if blank=True!
+		blank=True,
+		verbose_name="xxxxxx",
+		help_text="",
+		validators=[
+			MinLengthValidator(consts.VAL_GENERIC_MIN),
+			MaxLengthValidator(consts.VAL_GENERIC_MAX),
+			# validators.validate_chars_spaces_enabled,
+		],
+	)
 ```
 Drop-down field:
 ```python
-front_type = models.CharField(
-	max_length=35,  # Database level checking.
-	choices=consts.CHOICES_FRONTEND,
-	default=consts.VAL_FRONT_TOOL_DEFAULT,
-	verbose_name="xxxxxx",
-	help_text="",
-)
+class Something(...):
+	front_type = models.CharField(
+		max_length=consts.VAL_GENERIC_MAX,  # Database level checking.
+		choices=consts.CHOICES_SOMETHING,
+		default=consts.VAL_SOMETHING_DEF,
+		verbose_name="xxxxxx",
+		help_text="",
+	)
 ```
 
 ---

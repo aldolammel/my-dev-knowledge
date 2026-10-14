@@ -12,6 +12,7 @@
 from django.db import models
 from django.utils.text import slugify
 from . import consts, lang
+#from django.forms import ValidationError
 #from django.core.validators import MinLengthValidator,MaxLengthValidator
 #from django.db.models.functions import Length
 #models.CharField.register_lookup(Length)
@@ -90,6 +91,7 @@ from django.db import models
 from django.utils.text import slugify
 from core.models import AuditMixin
 from . import consts, lang
+#from django.forms import ValidationError
 #from django.core.validators import MinLengthValidator,MaxLengthValidator
 #from django.db.models.functions import Length
 #models.CharField.register_lookup(Length)
@@ -173,6 +175,7 @@ class ExampleModel(AuditMixin):  # If it's a base model class, use in its class 
 from django.db import models
 from django.utils.text import slugify
 from . import consts, lang
+#from django.forms import ValidationError
 #from django.core.validators import MinLengthValidator,MaxLengthValidator
 #from django.db.models.functions import Length
 #models.CharField.register_lookup(Length)

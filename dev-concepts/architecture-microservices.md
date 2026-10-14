@@ -16,11 +16,11 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: MICROSERVICE
         - Additional complexity during the implementation;
 
 
-![](dev-concepts/imgs/architecture-microservices-even-driven-3.png)
+![](dev-concepts/z_imgs/architecture-microservices-even-driven-3.png)
 
-![](dev-concepts/imgs/architecture-microservices-even-driven-1.png)
+![](dev-concepts/z_imgs/architecture-microservices-even-driven-1.png)
 
-![](dev-concepts/imgs/architecture-microservices-even-driven-2.png)
+![](dev-concepts/z_imgs/architecture-microservices-even-driven-2.png)
 
 
 

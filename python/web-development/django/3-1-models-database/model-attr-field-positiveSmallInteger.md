@@ -20,6 +20,22 @@ pos_on_menu = models.PositiveSmallIntegerField(
 	help_text="",
 )
 ```
+Using `choices` argument:
+```python
+class Something(...):
+    # Recommended to set this in app's consts.py:
+    STATUS_CHOICES = [
+        (1, "Pending"),
+        (2, "Active"),
+        (3, "Completed"),
+    ]
+    # Using the choices argument in a class attribute:
+    status = models.PositiveSmallIntegerField(
+	    choices=STATUS_CHOICES,
+	    # default=1,  # Uncomment it if you wanna force a default value (already selected).
+	    blank=False,
+	)
+```
 
 ---
 ## Similar field classes:

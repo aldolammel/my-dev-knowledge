@@ -16,7 +16,7 @@ Pwd:                  Hash func:          Hash:
 "pass123"     ->      md5(pwd)     ->     32250170a0dca92d53ec9624f336ca24
 ```
 
-![](dev-concepts/imgs/password-1-90s-hash.png)
+![](dev-concepts/z_imgs/password-1-90s-hash.png)
 
     
 >> Late 90's - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,7 +34,7 @@ Make the checking loop hard for crackers, appending a "salt" not-secret-string t
                 Pwd:                 Hash func + salt:           Hash:
                 "pass123"     ->     md5(pwd . salt)     ->      5dabc7b296808978d06c2e3c40a008d6
 
-![](dev-concepts/imgs/password-2-90s-hash-salt.png)
+![](dev-concepts/z_imgs/password-2-90s-hash-salt.png)
 
 
 >> Late 2000's - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -55,9 +55,9 @@ Force the decryption to be slow, make not possible to check too much passwords p
                                               $12
                                               $oX0lTMOuJa0cfbj4e92Btei2mzw7zFRHarmsBiLHR242JQG8vCcgi
 
-![](dev-concepts/imgs/password-3-2000s-bcrypt.png)
+![](dev-concepts/z_imgs/password-3-2000s-bcrypt.png)
 
-![](dev-concepts/imgs/password-4-2000s-bcrypt-detail.png)
+![](dev-concepts/z_imgs/password-4-2000s-bcrypt-detail.png)
 
 
 
@@ -80,9 +80,9 @@ Basically, the new solution force the hash test stay around 3 tests by GPU per s
                                                     $YVJhbmRvbVN0cmluZ1RvQWRkQXNQd2RTdWZmaXg
                                                     $Z6sv5rzK+GmYNkEBWaqknw
 
-![](dev-concepts/imgs/password-5-2010s-argon.png)
+![](dev-concepts/z_imgs/password-5-2010s-argon.png)
 
-![](dev-concepts/imgs/password-6-2010s-argon-detail.png)
+![](dev-concepts/z_imgs/password-6-2010s-argon-detail.png)
 
 
 

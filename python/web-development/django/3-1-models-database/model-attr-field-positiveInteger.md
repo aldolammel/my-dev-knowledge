@@ -22,6 +22,9 @@ class Something(...):
 	)
 ```
 
+Using `choices` argument:
+- Probably you won't use choices with this field class! Try something like [PositiveSmallIntegerField()](/python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.md).
+
 ---
 ## Similar field classes:
 

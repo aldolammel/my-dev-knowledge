@@ -13,6 +13,7 @@ Basic:
 ```python
 class Something(...):
 	book_chapter_content = models.TextField(
+		default="",
 		blank=False,
 		verbose_name="xxxxxx",
 		help_text="",
@@ -26,6 +27,7 @@ Limiting size for core-business and db-size-protection:
 class Something(...):
 	seo_desc = models.TextField(
 		max_length=consts.VAL_GENERIC_DESC_MAX,
+		default="",
 		blank=True,
 		verbose_name="xxxxxx",
 		help_text="",

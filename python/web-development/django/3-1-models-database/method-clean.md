@@ -1,26 +1,26 @@
+#### Python > Django > Models > Methods
+# `clean()` model method
+
+---
+
+It's a method in Django models used for model-level validation. So it does:
+
+- Called automatically during full_clean() and form/model-form validation;
+- Validates multiple fields together (unlike field validators which validate single fields);
+- Raises ValidationError if validation fails;
+- Used for complex validation logic that depends on multiple fields;
+- Not automatically called when calling save() directly - you need to call full_clean() first;
+- If everything alright, clean() will return none; otherwise, you should raise a message.
+
+The clean() method for Models is NOT the same of clean() for Forms: [/python/web-development/django/9-forms/method-clean.py](/python/web-development/django/9-forms/method-clean.py)
 
 
-"""
-    DJANGO MODELS > METHODS: CLEAN()
-
-    It's a method in Django models used for model-level validation. So it does:
-
-    - Called automatically during full_clean() and form/model-form validation;
-    - Validates multiple fields together (unlike field validators which validate single fields);
-    - Raises ValidationError if validation fails;
-    - Used for complex validation logic that depends on multiple fields;
-    - Not automatically called when calling save() directly - you need to call full_clean() first;
-    - If everything alright, clean() will return none; otherwise, you should raise a message.
-
-    >> The clean() method for Models is NOT the same of clean() for Forms:
-        .../9-forms/method-clean.py
-"""
-
-# Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
+## Structure:
+```python
 # For parent classes (common):
 class ExampleModel(models.Model):
-    ...
+    # ...
     def clean(self):
         """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
 
@@ -28,7 +28,7 @@ class ExampleModel(models.Model):
 
 # For child classes:
 class ChildExampleModel(ExampleModel):
-    ...
+    # ...
     def clean(self):
         """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
         
@@ -38,9 +38,17 @@ class ChildExampleModel(ExampleModel):
         # 2. And then clean validations for this child runs.
 
 
-# Common example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+```
+
+---
+## Common example:
+```python
 def clean(self):
     """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
     # Ensure start date is before end date
     if self.start_date > self.end_date:
         raise ValidationError("Start date must be before end date")
+```
+
+---
+

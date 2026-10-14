@@ -33,6 +33,9 @@ class Something(...):
 ==Don't follow the ERD convention:==
 Meanwhile ERD brings *ManyToMany* relationships among column names of db tables using, e.g., `plane_seat_id`, it changes when it's used in classes attribute names. It means the right convention to be used for ManyToMany as class attribute is always in plural like, e.g., `plane_seats`.
 
+---
+# Using Self-Referential:
+[python/web-development/django/3-1-models-database/relation-self-referential](python/web-development/django/3-1-models-database/relation-self-referential.md)
 
 ---
 ## Similar field classes:

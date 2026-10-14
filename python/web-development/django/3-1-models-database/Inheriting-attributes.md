@@ -1,39 +1,10 @@
-DJANGO > MODELS: INHERITING ATTRIBUTES
+**Mixin model type:**
+- A great way to share attributes among many classes: [/python/web-development/django/3-1-models-database/model-type-mixin](/python/web-development/django/3-1-models-database/model-type-mixin.md)
 
-    >> What is attribute:
-        /dev-concepts/oop-class-attribute.md
-
-
-    >> Imagine you re-using common attributes almost are used in all your tables
-        like 'created_at', 'updated_at' and 'created_by'. Check this out:
-
-
-        class CommonBase(models.Model):  # This 'Base' in the name is convention!
-            created_at = ...
-            created_by = ...
-            updated_at = ...
-            updated_by = ...
-
-            class Meta:
-                abstract = True  # Flags for no table be created from this.
-
-
-        class Post(CommonBase):
-            title = ...
-            content = ...
-
-
-        class Comment(CommonBase):
-            message = ...
-
-
-    >> CRITICAL: to avoid errors, remove any foreign key or many-to-many attribute
-        from your abstracted/inherited class!
+**Base model type:**
+- Also a way to share attributes among many classes: [/python/web-development/django/3-1-models-database/model-type-base](/python/web-development/django/3-1-models-database/model-type-base.md)
 
 ---
+## Or Getting ForeignKey data freely in the current Model class:
+[/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
 
-MORE ABOUT CLASS META > ABSTRACT:
-./meta-abstract.txt
-
-MORE ABOUT INHERITANCE FOR METHODS:
-/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

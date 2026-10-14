@@ -65,7 +65,7 @@ Make sure your DB supports:
 
 ---
 ## About Model clean() method:
-If you are thinking to use Model `clean()` method to validate database, remember: `clean()` method is used just to custom validates in app-level, never in db-level: [/python/web-development/django/3-1-models-database/method-clean.py](/python/web-development/django/3-1-models-database/method-clean.py)
+If you are thinking to use Model `clean()` method to validate database, remember: `clean()` method is used just to custom validates in app-level, never in db-level: [/python/web-development/django/3-1-models-database/method-clean](/python/web-development/django/3-1-models-database/method-clean.md)
 
 ---
 ## Other validation levels:

@@ -46,11 +46,41 @@ Read more about:
 - Argument `on_delete`: [/python/web-development/django/3-1-models-database/arg-on_delete](/python/web-development/django/3-1-models-database/arg-on_delete.md)
 
 ---
+## Getting ForeignKey data freely in the current Model class:
+Let's say we have a House object that we should fill its `full_address` by our own but, in case we leave it empty, the Python must fill that with the Street name. Once the street is a Foreign Key, all we need to do is to use the benefit the data already exists. And how both classes has a directly relationship (because the FK), we definitely  DONT need QuerySet in here.
+```python
+# models.py
+
+class Street(models.Model):
+    name = models.CharField(max_length=100)
+
+
+class House(models.Model):
+    street = models.ForeignKey(
+	    Street,
+	    on_delete=models.CASCADE
+	)
+	full_address = models.CharField(
+		...
+	)
+	
+	def save(...):
+		# Follow the relationship from House to Garage:
+		if not self.garage and self.garage and self.garage.name:
+			self.garage_name = self.garage.name
+```
+
+---
+## Importing model from another sub-app:
+[/python/web-development/django/3-1-models-database/importing-model-from-other-subapp](/python/web-development/django/3-1-models-database/importing-model-from-other-subapp.md)
+
+---
+# Using Self-Referential:
+[python/web-development/django/3-1-models-database/relation-self-referential](python/web-development/django/3-1-models-database/relation-self-referential.md)
+
+---
 ## Similar field classes:
 Many-To-Many Field: [/python/web-development/django/3-1-models-database/model-attr-field-many-to-many](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)
 ## All Django field class (class attribute):
 [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 
-
-
-    

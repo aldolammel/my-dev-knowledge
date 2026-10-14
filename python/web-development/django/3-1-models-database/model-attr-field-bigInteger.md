@@ -1,24 +1,28 @@
 DJANGO MODEL CLASS > Field Classes (Attribute types): BIG INTEGER FIELD
 
-    Typical Size:
-        8 bytes (64-bit)
+Typical Size:
+8 bytes (64-bit)
 
-    Signed Range:
-        -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+Signed Range:
+-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 
-    Common Usage:
-        Storing very large numbers that exceed the IntegerField range. Examples: large counts (e.g., YouTube view counts), scientific data, monetary values in the smallest unit (e.g., storing dollars as cents to avoid floating-point issues), or legacy database IDs from other systems.
+Common Usage:
+Storing very large numbers that exceed the IntegerField range. Examples: large counts (e.g., YouTube view counts), scientific data, monetary values in the smallest unit (e.g., storing dollars as cents to avoid floating-point issues), or legacy database IDs from other systems.
 
-    Example:
+Example:
 
-        legacy_id = models.BigIntegerField(
-            unique=True,
-        )
+```python
+class Something(...):
+	legacy_id = models.BigIntegerField(
+		unique=True,
+	)
+	massive_view_count = models.BigIntegerField(
+		default=0,
+	)
+```
 
-        massive_view_count = models.BigIntegerField(
-            default=0,
-        )
-
+Using `choices` argument:
+- Probably you won't use choices with this field class! Try something like [PositiveSmallIntegerField()](/python/web-development/django/3-1-models-database/model-attr-field-positiveSmallInteger.md).
 ---
 
 ## Similar field classes:

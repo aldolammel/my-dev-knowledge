@@ -15,6 +15,7 @@ Most common field classes you got to build every class attributes (db columns of
 | [BooleanField()](/python/web-development/django/3-1-models-database/model-attr-field-boolean.md)                                                          | `<input type="checkbox">`                  |
 | [OneToOneField()](/python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md)                                                      | `<select>`                                 |
 | OnToManyField() doesn't exist. The Many side always uses [ForeignKey()](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) |                                            |
+| [ForeignKey()](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)                                                          | `<select>`                                 |
 | [ManyToManyField()](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)                                                  | `<select multiple>`                        |
 | ManyToManyField(MyModel, blank=True) with `CheckboxSelectMultiple` widget                                                                                 | `<input type="checkbox">` (one per choice) |
 | [DateField(auto_now_add=True)](/python/web-development/django/3-1-models-database/model-attr-field-date.md)                                               | `<input type="date">`                      |
@@ -38,7 +39,6 @@ Most common field classes you got to build every class attributes (db columns of
 | [DurationField()](/python/web-development/django/3-1-models-database/model-attr-field-duration.md)                                                        | `<input type="time">`                      |
 | [URLField()](/python/web-development/django/3-1-models-database/model-attr-field-url.md)                                                                  | `<input type="url">`                       |
 | [SlugField()](/python/web-development/django/3-1-models-database/model-attr-field-slug.md)                                                                | `<input type="text">`                      |
-| [ForeignKey()](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)                                                          | `<select>`                                 |
 | [JSONField()](/python/web-development/django/3-1-models-database/model-attr-field-json.md)                                                                | `<textarea>`                               |
 | [BinaryField()](/python/web-development/django/3-1-models-database/model-attr-field-binary.md)                                                            |                                            |
 | IPAddressField()                                                                                                                                          | `<input type="text">`                      |
