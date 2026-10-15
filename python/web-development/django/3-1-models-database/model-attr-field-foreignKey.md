@@ -33,7 +33,7 @@ A common use example:
 class Something(...):
 	plane_seat_type = models.ForeignKey(
 		PlaneSeatType,  # or "PlaneSeatType" (between quotes if model comes later).
-		related_name="<WhatExactlyModelOwnedHere+s>",
+		related_name="<WhatExactlyModelOwnedHere+s>",  # "somethings"
 		on_delete=models.SET_NULL,
 		null=True,
 		blank=False,

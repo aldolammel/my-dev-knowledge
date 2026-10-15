@@ -6,7 +6,7 @@
 In Django, a QuerySet (`qs` commonly used) is a collection of database queries that represents a set of objects from your database. It's one of the most powerful and fundamental concepts in Django's ORM (Object-Relational Mapper).
 
 ==Are you sure?==
-Sometimes you can use the relationship directly between model classes to request a data, without to create a `qs`:  [/python/web-development/django/3-1-models-database/Inheriting-attributes](/python/web-development/django/3-1-models-database/Inheriting-attributes.md)
+Sometimes you can use the relationship directly between model classes to request a data, without to create a `qs`:  [/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
 
 ---
 ## Key Characteristics:

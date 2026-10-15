@@ -15,6 +15,7 @@ class User(models.Model):
 	# ...
 	friends = models.ManyToManyField(
 		'self',
+		# ...
 	) 
 ```
 
@@ -28,6 +29,8 @@ class User(AbstractUser):
 		related_name='updated_users',
 		on_delete=models.SET_NULL,  # if the user-updater is deleted, the updated_by field is null.
 		null=True,
+		verbose_name='name',
+		help_text='',
 	)
 ```
 
