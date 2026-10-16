@@ -7,8 +7,9 @@
 - A) Django as entire solution for back and front-end;
 - B) Or Django as back-end only (for external frontend solution);
 ### A) Django as ENTIRE solution for back and front-end
-```
+```python
 my_project_name/
+├── .agents/                     # Critical context documents and/or instructions to help you with AI assistance.
 ├── .venv/                       # Virtual env folder where Django things are installed.
 │
 ├── core/                        # Django core folder.
@@ -76,7 +77,7 @@ my_project_name/
 └── pyproject.toml         # List of all Django project's (backend) dependencies.
 ```
 ### B) Django as back-end only (for external frontend solution)
-```
+```python
 my_project_name/
 ├── .venv/                 
 │

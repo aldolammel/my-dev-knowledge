@@ -14,6 +14,8 @@ It's a visual representation of the logical structure of a database. It maps out
 
 ---
 ## *Crow's Foot notation* pattern (recommended):
+- ERD document template: [/database/document-templates/erd](/database/document-templates/erd.md)
+- Other ERD notation patterns: [/database/\_tools/ERD/imgs/erd-notation-patterns.png](/database/_tools/ERD/imgs/erd-notation-patterns.png)
 
 ![](database/_tools/ERD/imgs/erd_general_example.png)
 

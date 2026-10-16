@@ -30,7 +30,7 @@
 
 ### 2.1) Before
 
-1. Create the AI basic context prompt for the project: [/python/web-development/ai-prompt-context-model](/python/web-development/ai-prompt-context-model.md)
+1. Create the AI basic context prompt for the project: [python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
 
 ### 2.2) Front-end
 

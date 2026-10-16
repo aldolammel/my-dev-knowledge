@@ -8,8 +8,8 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 ---
 ## Before:
 1. [x] To read: *Software Requirements Specification* (SRS) document.
-2. [x] To read: *Technical Design Document* (*TDD*) document.
-3. [x] To read: project *System ERD* document.
+2. [x] To read: [Technical Design Document (TDD)](/python/web-development/django/document-templates/tdd.md) document.
+3. [x] To read: project [System ERD](/database/document-templates/erd.md) document.
 4. [x] To read: project *Sitemap* document.
 ## 1) Setup:
 
@@ -27,11 +27,11 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 ## 2) Development:
 
 ### 2.1) Before
-1. [ ] Create the AI assistance basic instruction (context prompt) for the project: [/python/web-development/ai-prompt-context-model](/python/web-development/ai-prompt-context-model.md)
+1. [ ] Create the AI assistance basic instruction (context prompt) for the project: [python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
 ### 2.2) Non-stop control:
-1. Update the *Project Dashboard*.
-2. Update the *Technical Design Document* (TDD).
-3. Update the *Django Architecture Design* document.
+1. Update *Project Dashboard*.
+2. Update *Technical Design Document* (TDD).
+3. Create and keep updating [Django Architecture Design](/python/web-development/django/document-templates/django-architecture-design.md) document.
 ### 2.3) Front-end
 1. [ ] Convert the HTML template to Vue templates/components;
 2. [ ] Code the entire navigation;

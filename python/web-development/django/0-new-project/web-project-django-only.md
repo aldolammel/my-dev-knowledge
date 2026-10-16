@@ -23,7 +23,7 @@
 ## 2) Development:
 
 **Before:**
-1. [ ] Create the AI context prompt for the project: [/python/web-development/ai-prompt-context-model](/python/web-development/ai-prompt-context-model.md)
+1. [ ] Create the AI context prompt for the project: [python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
 
 **Front-end:**
 1. [ ] Convert the HTML template to Django Template; 

@@ -1,4 +1,4 @@
-#### Python > Web development
+#### Python > Django > Document templates
 # AI prompt context
 
 ---

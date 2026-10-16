@@ -13,8 +13,7 @@ Django is divided in 3 main parts: models, views, and templates. Templates are r
 Built-in template tags and filters: https://docs.djangoproject.com/en/5.0/ref/templates/builtins/
 
 ---
-
-**OTHER DJANGO PARTS:**
+## Other Django structural parts:
 - Views: [/python/web-development/django/3-2-views-and-API/\_about](/python/web-development/django/3-2-views-and-API/_about.md)
 - Models: [/python/web-development/django/3-1-models-database/1-models-knowledge](/python/web-development/django/3-1-models-database/1-models-knowledge.md)
 

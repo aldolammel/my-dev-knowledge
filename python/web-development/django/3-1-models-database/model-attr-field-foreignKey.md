@@ -46,8 +46,8 @@ Read more about:
 - Argument `on_delete`: [/python/web-development/django/3-1-models-database/arg-on_delete](/python/web-development/django/3-1-models-database/arg-on_delete.md)
 
 ---
-## Getting ForeignKey data freely in the current Model class:
-Let's say we have a House object that we should fill its `full_address` by our own but, in case we leave it empty, the Python must fill that with the Street name. Once the street is a Foreign Key, all we need to do is to use the benefit the data already exists. And how both classes has a directly relationship (because the FK), we definitely  DONT need QuerySet in here.
+## Getting data from other model classes through ForeignKey:
+Let's say we have a `House` object that we should fill its `full_address` by our own but, in case we leave it empty, the Python must fill that with the `Street` name. Once the street is a Foreign Key, all we need to do is to use the benefit the data already exists. And how both classes has a directly relationship (because the FK), we definitely  DONT need QuerySet in here.
 ```python
 # models.py
 
@@ -68,6 +68,13 @@ class House(models.Model):
 		# Follow the relationship from House to Garage:
 		if not self.garage and self.garage and self.garage.name:
 			self.garage_name = self.garage.name
+```
+
+---
+## Avoid related_name argument error using ForeignKey in Mixin Model classes:
+```python
+related_name="%(class)s_<your_current_related_name_here>",
+# This "%(class)s_" will be automatically replaceb by the model class that's inheriting the Mixin model class.
 ```
 
 ---

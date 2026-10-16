@@ -7,21 +7,20 @@ In Django, a model mixin is an [abstract](/dev-concepts/class-type-abstract.md) 
 
 **Mixin concept:** [/dev-concepts/class-type-mixin](/dev-concepts/class-type-mixin.md)
 
-==Important==
+==Important 1==
 Once pretty often mixin is an abstract class, abstract models SHOULDN'T have a primary key!
+
+==Important 2==
+Mixin model classes demand special attention when they are using [ForeignKey()](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) field class. The [related_name](/python/web-development/django/3-1-models-database/arg-related_name.md) argument will clash is the same name is applied for more than one model class that inherits it. To result in its name: `%(app_label)s_` or `%(class)s_` or both, e.g., `related_name="%(class)s_steps"`.
 
 ---
 ## In `models.py`:
 Example of a mixin widely called through an entire app (through is sub-apps):
 ```python
-# /core/models.py:
+# /core/models.py: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 class AuditMixin(models.Model): # Abstract model!
-	"""Stores who and when things were changed. Those classes that inherited this mixin must send the user via `admin.py` save_model() method!"""
-	created_at = models.DateTimeField(
-		auto_now_add=True,
-		editable=False,
-		verbose_name=lang.lbl_created_at,
-	)
+	"""Creates attributes commonly used by those model classes that demand audit control. Classes that inherited this mixin class must send the user via admin class' save_model() method!"""
+	# ...
 	created_by = models.ForeignKey(
 		settings.AUTH_USER_MODEL,
 		related_name="%(app_label)s_%(class)s_created_by",
@@ -31,16 +30,17 @@ class AuditMixin(models.Model): # Abstract model!
 		verbose_name=lang.lbl_created_by,
 	)
 	# ...
-	
+
 	class Meta:
 		abstract = True # Flags to the db that no tables should be created from this.
 		
 
-# /apps/subapp_name/models.py:
+# /apps/subapp_name/models.py: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 from core.models import AuditMixin
 class Post(AuditMixin):
 	# ...
 ```
+A complete example of `AuditMixin` model class you take here: [/python/web-development/django/3-1-models-database/\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
 
 ---
 ## In `admin.py`:
@@ -48,7 +48,6 @@ Same logic for cases using `models.py` or `serializers.py`.
 ```python
 class SaveUserMixin:
     """Automatically passes the current user to the model's save method."""
-
     def save_model(self, request, obj, form, change):
         """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
@@ -102,5 +101,6 @@ class PagexStructureSerializer(ContentMixin, serializers.ModelSerializer):
 ```
 
 ---
-
+## Otherwise, in case you wanna benefits of a Base Model class:
+[/python/web-development/django/3-1-models-database/model-type-base](/python/web-development/django/3-1-models-database/model-type-base.md)
 

@@ -3,4 +3,4 @@
 
 Example:
 
-[/python/web-development/ai-prompt-context-model](/python/web-development/ai-prompt-context-model.md)
+[python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)

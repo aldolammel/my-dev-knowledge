@@ -20,8 +20,7 @@ Django is divided in 3 main parts: models, views, and templates. Views are respo
 Once Views and API concepts share similarities, they are NOT the same even though both are responsible to send data from back-end to front-end, for example.
 
 ---
-
-**OTHER DJANGO PARTS:**
+## Other Django structural parts:
 - Models: [/python/web-development/django/3-1-models-database/1-models-knowledge](/python/web-development/django/3-1-models-database/1-models-knowledge.md)
 - Templates: [/python/web-development/django/3-3-frontend-templates/\_about](/python/web-development/django/3-3-frontend-templates/_about.md)
 

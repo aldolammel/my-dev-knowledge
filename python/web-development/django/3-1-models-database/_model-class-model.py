@@ -254,7 +254,7 @@ https://...
 """
 
 class AuditMixin(models.Model):  # Abstract model!
-    """Stores who and when things were changed."""
+    """Creates attributes commonly used by those model classes that demand audit control. Classes that inherited this mixin class must send the user via admin class' save_model() method!"""
 
     created_at = models.DateTimeField(
         auto_now_add=True,
