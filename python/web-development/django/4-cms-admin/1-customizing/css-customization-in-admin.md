@@ -17,12 +17,12 @@ E.g.
 ## 2) Add the Media class in your admin class:
 
 Add this class inside your admin class that will use that CSS customization:
-```
+```python
 class Media:
 	css = {"all": ("<your-subapp>/css/admin_<scope-of-this>.css",)}
 ```
 E.g.
-```
+```python
 class PagexPageContentInline(admin.StackedInline):
 	model = ...
 	form = ...
@@ -35,14 +35,13 @@ class PagexPageContentInline(admin.StackedInline):
 
 ---
 ## 3) (If applicable) Run collectstatic on prod:
-
-If your app is in development phase (`DEBUG = True` in *settings.py*), just ignore it, but if it's already on production, you should run:
-```
+If your app is in development phase (`DEBUG = True` in `settings.py`), just ignore it, but if it's already on production, you should run:
+```bash
 python manage.py collectstatic
 # or with UV:
 uv run manage.py collectstatic
 ```
-The *collectstatic* is only needed for production, where static files must be gathered into a single directory for the web server (nginx, etc.) to serve.
+The `collectstatic` is only needed for production, where static files must be gathered into a single directory for the [web-server](/dev-concepts/web-server.md) (nginx, etc.) to serve.
 
 
 ---

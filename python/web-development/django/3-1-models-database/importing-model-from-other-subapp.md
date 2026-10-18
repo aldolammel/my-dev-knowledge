@@ -10,3 +10,7 @@ apps.<subapp_name>.models import <ModelYouWannaImport>
 ```
 
 ---
+## Packages and Modules with Python / How to import them:
+[/python/python-knowledge/1-importing-modules-and-packages/1-packages-vs-modules](/python/python-knowledge/1-importing-modules-and-packages/1-packages-vs-modules.md)
+
+

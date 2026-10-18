@@ -26,14 +26,14 @@ Limiting size for core-business and db-size-protection:
 ```python
 class Something(...):
 	seo_desc = models.TextField(
-		max_length=consts.VAL_GENERIC_DESC_MAX,
+		max_length=consts.INT_GENERIC_DESC_MAX,
 		default="",
 		blank=True,
 		verbose_name="xxxxxx",
 		help_text="",
 		validators=[
-			MinLengthValidator(consts.VAL_GENERIC_DESC_MIN),
-			MaxLengthValidator(consts.VAL_GENERIC_DESC_MAX),
+			MinLengthValidator(consts.INT_GENERIC_DESC_MIN),
+			MaxLengthValidator(consts.INT_GENERIC_DESC_MAX),
 		],
 	)
 ```

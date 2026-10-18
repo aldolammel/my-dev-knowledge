@@ -17,7 +17,7 @@ It's a visual representation of the logical structure of a database. It maps out
 - ERD document template: [/database/document-templates/erd](/database/document-templates/erd.md)
 - Other ERD notation patterns: [/database/\_tools/ERD/imgs/erd-notation-patterns.png](/database/_tools/ERD/imgs/erd-notation-patterns.png)
 
-![](database/_tools/ERD/imgs/erd_general_example.png)
+![](/database/_tools/ERD/imgs/erd_general_example.png)
 
 **Reading the ERD above:**
 - A doctor treats `none or many` patients.
@@ -29,7 +29,7 @@ It's a visual representation of the logical structure of a database. It maps out
 ---
 ## Structure:
 
-![](database/_tools/ERD/imgs/erd_structure.png)
+![](/database/_tools/ERD/imgs/erd_structure.png)
 
 - **Entity:** 
 	- Object or concept that store data (e.g., `User`, `Product`, `Order`).
@@ -55,13 +55,13 @@ It's a visual representation of the logical structure of a database. It maps out
 ## Relationship cardinalities:
 
 ### Without business rule (don't use this shit)
-![](database/_tools/ERD/imgs/relationship-cardinality.png)
+![](/database/_tools/ERD/imgs/relationship-cardinality.png)
 
 - **Vertical line** ............................ can have only one related instance.
 - **Crow's foot** ............................. can have many related instance.
 
 ### With business rule (RECOMMENDED)
-![](database/_tools/ERD/imgs/relationship-cardinality-with-business-rule.png)
+![](/database/_tools/ERD/imgs/relationship-cardinality-with-business-rule.png)
 
 - **Duo vertical line** ............................ must have exactly one related instance - mandatory.
 - **Circle + Vertical line** ..................... may have zero or max of one related instance.
@@ -69,14 +69,14 @@ It's a visual representation of the logical structure of a database. It maps out
 - **Circle + Crow's foot** ...................... may have zero or more related instances.
 
 Text version of *Crow's Foot Notation* (read those 'single vertical lines as duo ones):
-![](database/_tools/ERD/imgs/relationship-in-text.png)
+![](/database/_tools/ERD/imgs/relationship-in-text.png)
 
 ---
 
 ## Business rules:
 When your ERD also describe the business rule of each relationship, your document is much more powerful for the project planing.
 
-![](database/_tools/ERD/imgs/erd_business-rule.png)
+![](/database/_tools/ERD/imgs/erd_business-rule.png)
 
 
 ---

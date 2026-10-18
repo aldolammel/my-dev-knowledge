@@ -37,7 +37,7 @@ class PagexCategory(models.Model):
 		# ...
 		constraints = [
 			models.CheckConstraint(
-				condition=models.Q(cat__length__range=(consts.VAL_TITLE_MIN, consts.VAL_TITLE_MAX)),
+				condition=models.Q(cat__length__range=(consts.INT_TITLE_MIN, consts.INT_TITLE_MAX)),
 				name="category_cat_length",
 			),
 		]

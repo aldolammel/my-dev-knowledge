@@ -10,25 +10,35 @@
 
 # DATA FOR DATABASE (WARNING!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # If values are changed without maintenance on database, multiple errors will raise up!
-#VAL_SOMETHING_A = "a"
-#VAL_SOMETHING_B = "b"
-#VAL_SOMETHING_C = "c"
+# DIC_ for dictionary.
+# INT_ for integer.
+# LST_ for list.
+# STR_ for string.
+# TPL_ for tuple.
+#INT_SOMETHING_A = 1
+#INT_SOMETHING_B = 2
+#INT_SOMETHING_C = 3
+#INT_SOMETHING_DEF = INT_SOMETHING_A  # default
 #CHOICES_CLASSREFEXAMPLE = (
-    #(VAL_SOMETHING_A, 'Example A (default)'),
-    #(VAL_SOMETHING_B, 'Example B'),
-    #(VAL_SOMETHING_C, 'Example C'),
+    #(INT_SOMETHING_A, 'Example A (default)'),
+    #(INT_SOMETHING_B, 'Example B'),
+    #(INT_SOMETHING_C, 'Example C'),
 #)
 
 # OTHERS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# REL_ for 'related_name' on models!
-# VAL_ for constant values!
-VAL_GENERIC_MIN = 3
-VAL_GENERIC_MAX = 40
-VAL_GENERIC_DESC_MIN = 20
-VAL_GENERIC_DESC_MAX = 140
-VAL_SLUG_ADD_LIMIT = 5
-VAL_CLASSREFEXAMPLE_ATTREXAMPLE_MIN = VAL_GENERIC_MIN
-VAL_CLASSREFEXAMPLE_ATTREXAMPLE_MAX = VAL_GENERIC_MAX
+# DIC_ for constant dictionary.
+# INT_ for constant integer.
+# LST_ for constant list.
+# REL_ for 'related_name' on models.
+# STR_ for constant string.
+# TPL_ for constant tuple.
+INT_GENERIC_MIN = 3
+INT_GENERIC_MAX = 40
+INT_GENERIC_DESC_MIN = 20
+INT_GENERIC_DESC_MAX = 140
+INT_SLUG_ADD_LIMIT = 5
+INT_CLASSREFEXAMPLE_ATTREXAMPLE_MIN = INT_GENERIC_MIN
+INT_CLASSREFEXAMPLE_ATTREXAMPLE_MAX = INT_GENERIC_MAX
 
 
 # DEBUG FOR TERMINAL ONLY - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -3,8 +3,7 @@
 
 ---
 ## Before:
-
-What is ERD: [/database/\_tools/ERD/\_about](database/_tools/ERD/_about.md)
+- What is ERD: [/database/\_tools/ERD/\_about](database/_tools/ERD/_about.md)
 
 **1) Make sure you got GraphViz installed (not-in-virtual-env):**
 Windows:
@@ -24,7 +23,6 @@ xxxxx
 
 ---
 ## 1) Install django-extensions:
-
 [/python/web-development/django/component-libraries/django-extensions/0-django-extensions](/python/web-development/django/component-libraries/django-extensions/0-django-extensions.md)
 
 ---
@@ -55,4 +53,5 @@ E.g.
 python manage.py graph_models auth -o myapp_models.png
 ```
 myapp_models.png example:
-![/python/web-development/django/3-1-models-database/5-ERD/myapp_models.png](/python/web-development/django/3-1-models-database/5-ERD/myapp_models.png)
+![](/python/web-development/django/3-1-models-database/5-ERD/myapp_models.png)
+

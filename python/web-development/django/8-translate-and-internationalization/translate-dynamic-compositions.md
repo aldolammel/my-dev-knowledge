@@ -8,7 +8,7 @@ You can build smart translations for all types of sentence through any language 
 E.g. in `/core/consts.py`:
 More about: [/python/web-development/django/3-1-models-database/\_constants-map](/python/web-development/django/3-1-models-database/_constants-map.md)
 ```python
-VAL_PROFILE_NAME_MAXLNGH = 20
+INT_PROFILE_NAME_MAXLNGH = 20
 ```
 
 E.g. in `/core/lang.py`:
@@ -24,12 +24,12 @@ from core import consts, lang
 
 class Profile(models.ModelForm):
 	name = models.CharField(
-		max_length=consts.VAL_PROFILE_NAME_MAXLNGH,
+		max_length=consts.INT_PROFILE_NAME_MAXLNGH,
 		verbose_name = lang.LB_PROFILE_NAME,
 		error_messages={
 			'max_length': lang.TX_ERRO_PROFILE_NAME_MAXLNGH % {
 				'txt': lang.LB_PROFILE_NAME,
-				'val': consts.VAL_PROFILE_NAME_MAXLNGH,
+				'val': consts.INT_PROFILE_NAME_MAXLNGH,
 			},
 		},
 	)
@@ -41,7 +41,7 @@ Unfortunately, you cannot make all translations directly on the `/core/lang.py` 
 # Never do this (directly using `gettext_lazy` aside):
 TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.') % {
 	'txt': lng.LB_PROFILE_NAME,
-	'val': VAL_PROFILE_NAME_MAXLNGH,
+	'val': INT_PROFILE_NAME_MAXLNGH,
 },
 ```
 

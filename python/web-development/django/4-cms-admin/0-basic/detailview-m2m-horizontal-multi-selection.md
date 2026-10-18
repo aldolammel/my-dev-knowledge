@@ -4,7 +4,7 @@
 ---
 
 ## What:
-![](/python/web-development/django/4-cms-admin/0-basic/detailview-m2m-horizontal-multi-selection.jpg)
+![](python/web-development/django/4-cms-admin/z_imgs/detailview-m2m-horizontal-multi-selection.jpg)
    
 ## In admin.py:
 

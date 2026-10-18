@@ -15,10 +15,10 @@ As an additional tool for any Python linter/formatter and any Django code linter
 ## 1) Installing:
 
 **Before:**
-- [x] Assuming you already got a virtual environment for the project, active it: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
+- [ ] Assuming you already got a virtual environment for the project, active it: [/python/3-virtual-environment/activate-and-deactivate](/python/3-virtual-environment/activate-and-deactivate.md)
 
 **1.1) Installing the tool:**
-- [x] Install the DjLint as development dependency:
+- [ ] Install the DjLint as development dependency:
 
 Using UV:
 ```bash
@@ -43,7 +43,7 @@ dev = [
 ---
 ## 2) Integration:
 
-- [x] 2.1) Still in `pyproject.toml` file, add these lines:
+- [ ] 2.1) Still in `pyproject.toml` file, add these lines:
 ```toml
 # Django template Linter and Formatter:
 [tool.djlint]
@@ -54,13 +54,13 @@ close_void_tags = true
 ```
 If this project is using [Prettier](/javascript/linter-formatter-typechecker/prettier/_about.md) or other CSS/JS formatter:
 ```toml
-format_css = false  # false = Prettier should take care of it!
-format_js = false  # false = Prettier should take care of it!
+format_css = true  # false = If using Prettier, Prettier should take care of it!
+format_js = true  # false = If using Prettier, Prettier should take care of it!
 ```
 
-- [x] 2.2) And manually install the DjLint extension for your Code IDE.
+- [ ] 2.2) And manually install the DjLint extension for your Code IDE.
 
-- [x] 2.3) DjLint configuration on IDE:
+- [ ] 2.3) DjLint configuration on IDE:
 
 Using VSCode:
 1. Assuming you already have: [/python/web-development/django/ide/vscode/examples/.vscode/settings.json](/python/web-development/django/ide/vscode/examples/.vscode/settings.json)

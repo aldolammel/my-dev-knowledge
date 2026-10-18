@@ -42,8 +42,8 @@ class Product(models.Model):
 			models.CheckConstraint(
 				condition=models.Q(
 					name__length__range=(
-						consts.VAL_TITLE_MIN,
-						consts.VAL_TITLE_MAX
+						consts.INT_TITLE_MIN,
+						consts.INT_TITLE_MAX
 					)
 				),
 				name="product_name_length",  # If this constraint looks only to the minimum length, the name could be more specific like "product_name_min_length".
@@ -53,7 +53,7 @@ class Product(models.Model):
 ```
 
 ==Critical!==
-For all validations above to run correctly, your model `save()` method must manually invoke the `self.full_clean`: [/python/web-development/django/3-1-models-database/method-save.py](/python/web-development/django/3-1-models-database/method-save.py)
+For all validations above to run correctly, your model `save()` method must manually invoke the `self.full_clean`: [/python/web-development/django/3-1-models-database/method-save](/python/web-development/django/3-1-models-database/method-save.md)
 
 ---
 ## Exploring more db constraint possibilities:

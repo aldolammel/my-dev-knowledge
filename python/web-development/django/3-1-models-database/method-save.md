@@ -1,28 +1,26 @@
+#### Python > Django > Models > Methods
+# `save()` model method
 
+---
 
-"""
-    DJANGO MODELS > METHODS: SAVE()
+In short, the `save()` method in Django models.py persists model instances to the database. It creates a new record if the object doesn't exist yet, or updates an existing record if it does. So it does:
 
-    In short, the save() method in Django models.py persists model instances to the database. It creates a new record if the object doesn't exist yet, or updates an existing record if it does. So it does:
+- Creates new records or updates existing ones.
+- Works directly with database operations.
+- Called on model instances: my_object.save().
 
-    - Creates new records or updates existing ones.
-    - Works directly with database operations.
-    - Called on model instances: my_object.save().
+**Keep in mind:**
+- Use `save_model()` for admin-specific logic that needs request context.
+- Use model's `save()` for business logic that should apply everywhere.
+- Use form's `save()` for form-specific data processing.
 
-    >> Keep in mind:
-    - Use save_model() for admin-specific logic that needs request context.
-    - Use model's save() for business logic that should apply everywhere.
-    - Use form's save() for form-specific data processing.
+The `save()` for Django Models is NOT the same of [save() for Django Forms](/python/web-development/django/9-forms/method-save.py)!
 
-    >> The save() for Django Models is NOT the same of save() for Django Forms:
-        /python/web-development/django/9-forms/method-save.py
+The `save()` for Django Models is NOT the same of [save_model() for Admin Models](/python/web-development/django/4-cms-admin/method-save_model.py)!
 
-    >> The save() for Django Admin Models is the save_model() method:
-        /python/web-development/django/4-cms-admin/method-save_model.py
-"""
-
-# Structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+---
+# Structure
+```python
 # Django automatically provides this save() method, but if you need override the original one (probably), basic structure:
 
 # For parent classes (common):
@@ -53,8 +51,11 @@ class ChildExampleModel(ExampleModel):
         # 3. Saving data (including changes in parent via this child) in the db:
         super().save(*args, **kwargs)
 
+```
 
-# Common example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+---
+# Common example:
+```python
 
 from django.db import models
 from django.utils import timezone
@@ -101,3 +102,7 @@ class ExampleModel2(models.Model):
         user.name = "Jane"
         # UPDATE database:
         user.save()  # if you're using a custom clean() and your save() has full_clean() declared, this is execute the clean() validation before saving and then, if no validation errors, save it!
+```
+
+---
+

@@ -1,21 +1,12 @@
-RELATION: CIRCULAR
+## RELATION: CIRCULAR
 
-    >> Two models that have a circular relationship:
+Using:
+- [ForeignKey()](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
+- [ManyToManyField()](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)
 
-        class Product(models.Model):
-            ...
-            last_buyer = models.ForeignKey('User')
-
-        class User(models.Model):
-            ...
-            created_products = models.ManyToManyField('Product')
-
-            >> In this example, we have multiple relationships between the same two models.
-                Hence we might need to define them in both models. By using the model name as
-                a string instead of a direct reference, Django is able to resolve such dependencies.
+---
+## How to avoid circular import issue:
+[/python/web-development/django/6-errors-and-validations/importing-no-circular](/python/web-development/django/6-errors-and-validations/importing-no-circular.md)
 
 
 
-    >> Is an itself relationship?
-
-        /python/web-development/django/3-1-models-database/relation-itself.md

@@ -15,18 +15,18 @@ This is the most flexible relationship type. There is zero, one, or many records
 ### Wrong usage
 Applying *Many-To-Many* directly:
 
-![](database/_tools/ERD/imgs/erd_many-to-many-wrong.png)
+![](/database/_tools/ERD/imgs/erd_many-to-many-wrong.png)
 
 It's impossible to store multiple `author` IDs in just one `book` table's row on the db. That's why a *Map Table* is needed.
 
 ==Crucial!==
 When two tables have a *Many-to-Many* relationship, this relation demands a *Map Table* (also known as *Junction Table* and *Bridge Table*) in between!
-Once it's impossible to manage precisely data directly in *Many-To-Many* relations, *Map Table* is an intermediate table that forces original tables to use other type of relation more precise between them.
+Once it's impossible to manage precisely data directly in *Many-To-Many* relations, *Map Table* is an intermediate table that forces original tables to use other type of relation more precise between them. 
 
-### Right usage
+### Right usage (using a bridge table)
 Creating the bridge in between:
 
-![](database/_tools/ERD/imgs/erd_many-to-many.png)
+![](/database/_tools/ERD/imgs/erd_many-to-many.png)
 
 **Notice:**
 - The book was written by `one or many` authors.
@@ -40,9 +40,9 @@ Creating the bridge in between:
 ---
 ## Logic behind the mapping table creation:
 
-![](database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-1.png)
-![](database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-2.png)
-![](database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-3.png)
+![](/database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-1.png)
+![](/database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-2.png)
+![](/database/_tools/ERD/imgs/erd_many-to-many_juction-eg1-3.png)
 ## Convention name well-acceptable:
 I like to use `map_` for this extra table that *Many-to-Many* relationships demand, but by convention here you see other options for a prefix of table's name:
 

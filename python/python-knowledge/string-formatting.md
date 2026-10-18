@@ -1,3 +1,4 @@
+```python
 text = "Hello World"
 print(text.upper())  # HELLO WORLD
 
@@ -38,3 +39,11 @@ print(text.swapcase())  # hELLO wORLD
 
 mixed = "PyThOn"
 print(mixed.swapcase())  # pYtHoN
+```
+
+---
+# String method to help in string lists:
+[join()](/python/python-knowledge/join.md)
+
+
+

@@ -12,7 +12,7 @@ It's a method in Django models used for model-level validation. So it does:
 - Not automatically called when calling save() directly - you need to call full_clean() first;
 - If everything alright, clean() will return none; otherwise, you should raise a message.
 
-The clean() method for Models is NOT the same of clean() for Forms: [/python/web-development/django/9-forms/method-clean.py](/python/web-development/django/9-forms/method-clean.py)
+The clean() method for Models is NOT the same of clean() for Forms: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
 
 
 ---

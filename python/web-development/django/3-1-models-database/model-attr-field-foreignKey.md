@@ -3,13 +3,16 @@
 
 ---
 
-In a [One-to-Many](/python/web-development/django/3-1-models-database/relation-one-to-many.md) relationship, the *ForeignKey()* field class stays only in the many side. The attibute name is always singular.
+In a [One-to-Many](/database/_tools/ERD/one-to-many.md) relationship, the *ForeignKey()* stays only in the many side. The attibute name is always singular.
 
 **Common Usage:**
-Defining a many-to-one relationship between two models. It creates a database foreign key from one table to another's primary key.
+It creates a database foreign key from one table to another's primary key.
+
+**Field look-like on Django CMS:**
+![](/python/web-development/django/4-cms-admin/z_imgs/foreignkey-on-django-cms.png)
 
 **Field look-like on front-end:**
-`<select>`
+`<select>` (single-selection only)
 
 E.g.:
 ```python
@@ -46,6 +49,19 @@ Read more about:
 - Argument `on_delete`: [/python/web-development/django/3-1-models-database/arg-on_delete](/python/web-development/django/3-1-models-database/arg-on_delete.md)
 
 ---
+## Creating a circular relationship:
+
+In this example, we have multiple relationships between the same two models. Hence we might need to define them in both models. By using the model name as a string instead of a direct reference, Django is able to resolve such dependencies. Two models that have a circular relationship:
+```python
+class Product(models.Model):
+	last_buyer = models.ForeignKey('User')
+
+class User(models.Model):
+	created_products = models.ManyToManyField('Product')
+```
+In case you need a self-referential relationship instead: [/python/web-development/django/3-1-models-database/relation-self-referential](/python/web-development/django/3-1-models-database/relation-self-referential.md)
+
+---
 ## Getting data from other model classes through ForeignKey:
 Let's say we have a `House` object that we should fill its `full_address` by our own but, in case we leave it empty, the Python must fill that with the `Street` name. Once the street is a Foreign Key, all we need to do is to use the benefit the data already exists. And how both classes has a directly relationship (because the FK), we definitely  DONT need QuerySet in here.
 ```python
@@ -71,7 +87,7 @@ class House(models.Model):
 ```
 
 ---
-## Avoid related_name argument error using ForeignKey in Mixin Model classes:
+## Avoid `related_name` argument error using ForeignKey in Mixin Model classes:
 ```python
 related_name="%(class)s_<your_current_related_name_here>",
 # This "%(class)s_" will be automatically replaceb by the model class that's inheriting the Mixin model class.
@@ -84,6 +100,11 @@ related_name="%(class)s_<your_current_related_name_here>",
 ---
 # Using Self-Referential:
 [python/web-development/django/3-1-models-database/relation-self-referential](python/web-development/django/3-1-models-database/relation-self-referential.md)
+
+---
+
+## CMS customizing: Removing permissions to show ForeignKey field buttons:
+[/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey](/python/web-development/django/4-cms-admin/1-customizing/removing-cms-permission-to-add-for-foreignKey.md)
 
 ---
 ## Similar field classes:

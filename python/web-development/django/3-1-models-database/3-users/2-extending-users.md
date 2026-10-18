@@ -284,7 +284,7 @@ class CustomUserAdmin(UserAdmin):
 	"""
 	
 	def get_readonly_fields(self, request, obj=None):
-		"""Built-in method to extend the 'readonly_fields' power."""
+		'''Built-in CMS method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object.'''
 		if obj:
 			# If the user exists (obj), make some fields field read-only on detail-view,
 			# but still editable on the CMS Add User form:

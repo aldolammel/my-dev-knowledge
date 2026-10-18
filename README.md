@@ -1,6 +1,8 @@
 # WHAT IS IT
 
-This is a limited text-based database of programming matters written and maintained by _@aldolammel_ as part of his studies and experiences. All data here is structured to be read as action roadmaps, and not as a official documentations or wiki alternatives.
+This is a limited text-based database of programming matters written and maintained by _@aldolammel_ as part of his studies and experiences. All data here is structured to be read as action roadmaps, and not as a official documentations or wiki alternatives. The image below shows how huge and organized the knowledge is in here.
+
+![](/repo-content-size.png)
 
 ## Start here:
 
@@ -10,7 +12,7 @@ Or check the example further below to understand how it's organized.
 
 ## How to use it:
 1. Clone this repo in your machine;
-2. Open the repo folder in your favorite markdown IDE (e.g. VSCode, Obsidian, or other PKM app);
+2. Open the repo folder in your favorite markdown IDE (e.g. [VSCode](https://code.visualstudio.com), [Obsidian](https://obsidian.md), or other PKM app);
 3. Use the PKM search tool, and be happy!
 
 ## Suggest improvements and fixes:
@@ -62,7 +64,7 @@ Coffee is a ...
 
 **Read more about:**
 
-[water](#) (pretending this is a link for a file called 'water.md')
+[water](#) (pretending this is a link for a file called `water.md`)
 
 ---
 

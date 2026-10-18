@@ -4,13 +4,15 @@
 ---
 ## 1) Use string references for model relationships:
 
-Instead of importing a model directly for [ForeignKey](/python/web-development/django/3-1-models-database/relation-one-to-many), [OneToOneField](/python/web-development/django/3-1-models-database/relation-one-to-one), or [ManyToManyField](/python/web-development/django/3-1-models-database/relation-many-to-many), reference it as a string:
-```
-# app_a/models.py
-class MyClass(...):
+Model field classes like [ForeignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md), [OneToOneField](/python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md), or [ManyToManyField](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md) have the ability to call other model classes, but to avoid the circular issue, you should build their relationship with other models declaring other models between quotes (as string, not as object):
+```python
+# /apps/subapp_a/models.py file:
+from apps.subapp_b.models import AnotherClass    # <---- importing a model as object as it is!
+
+class Something(...):
     my_attribute = models.ForeignKey(
-	    'app_b.AnotherClass',
-	    ...
+	    'AnotherClass',                          # <---- but calling that as string!
+	    # ...
 	)
 ```
 
@@ -20,7 +22,7 @@ Django resolves these lazily at app-loading time, so `app_a` and `app_b` never n
 ## 2) Import inside functions/methods (local imports):
 
 When you genuinely need the class itself (not just a relation), defer the import to where it's used:
-```
+```python
 def some_function():
     from app_b.models import AnotherClass       # imported only when called
     ...
@@ -32,7 +34,7 @@ This is common in `save()` overrides, signal handlers, and management commands.
 ## 3) Use `apps.get_model()` for dynamic lookups:
 
 Useful in migrations, signals, or utility functions where you don't want a hard import dependency at all:
-```
+```python
 from django.apps import apps
 
 def get_another_model():
@@ -43,7 +45,7 @@ def get_another_model():
 ## 4) Move signals to a dedicated `signals.py` and connect them in `AppConfig.ready()`:
 
 Signal handlers are a classic source of circularity because they often need to import models from other apps. Isolating them avoids polluting `models.py`:
-```
+```python
 # app_a/apps.py
 class AppAConfig(AppConfig):
     name = 'app_a'
@@ -62,7 +64,7 @@ If two apps depend on each other's models, that's often a sign a shared concept 
 ## 6) Use `TYPE_CHECKING` for type hints only:
 
 If the only reason you're importing a model is for a type annotation, guard it so it doesn't execute at runtime:
-```
+```python
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from app_b.models import Customer

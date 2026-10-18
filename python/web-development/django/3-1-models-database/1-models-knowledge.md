@@ -18,12 +18,17 @@ Django Model-class example that is used to create database structure: [/python/w
 Most common attribute-types you will use to build up every class fields/db columns: [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 
 ---
+
 ## Form fields, including widget fields:
 [/python/web-development/django/9-forms/\_forms_knowledge](/python/web-development/django/9-forms/_forms_knowledge.md)
 
 ---
 ## Understanding the model field arguments (parameters):
 E.g. `<some-attr-name> = models.<some-field-class>(arg1, arg2, ...)`: [/python/web-development/django/3-1-models-database/2-model-arguments](/python/web-development/django/3-1-models-database/2-model-arguments.md)
+
+---
+## Modifying a `models.py` as safe as possible:
+[/python/web-development/django/3-1-models-database/migrating-updating-modifying](/python/web-development/django/3-1-models-database/migrating-updating-modifying.md)
 
 ---
 ## Renaming a class model:

@@ -1,20 +1,22 @@
-#### Python > Django > Admin (CMS)
-# What kind of form do you need: "B" 
+#### Python > Django > Admin (CMS) > Form soluctions
+# Adding an instance with multi-step form
 
 ---
 
 **What kind of form do you need (summary):** 
-[/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
-
----
+- [/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
 
 For new objects, through the adding detail-view, select an option first (using a radio or drop-down menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
-## B1) Install the dependency 'PolymorphicModel':
+
+---
+## 1) Make sure the project has `django-polymorphic` as an app-level core dependency:
 [/python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic](/python/web-development/django/component-libraries/django-polymorphic/0-djangopolymorphic.md)
-## B2) In models.py, add 'PolymorphicModel' inheritance to each model class you wanna consider as specific form in CMS:
+
+---
+## 2) In `models.py`, add `PolymorphicModel` inheritance to each model class you wanna consider as specific form in CMS:
 
 E.g.
-```
+```python
 class CommonForPeople(PolymorphicModel, models.Model):  # type: ignore[django-manager-missing]  # If MyPy warning it!
 	name = ...
 class OnlyForMale(CommonForPeople):  # CMS reads it as a specific form for men.
@@ -22,10 +24,12 @@ class OnlyForMale(CommonForPeople):  # CMS reads it as a specific form for men.
 class OnlyForFemale(CommonForPeople):  # Same logic here.
 	pms_cases_by_year = ...
 ```
-## B3) In *admin.py*:
+
+---
+## 3) In `admin.py`:
 
 E.g.
-```
+```python
 from polymorphic.admin import (
 	PolymorphicParentModelAdmin,
 	PolymorphicChildModelAdmin,
@@ -33,7 +37,7 @@ from polymorphic.admin import (
 ```
 
 **Child:**
-```
+```python
 @admin.register(models.OnlyForMale)
 class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
 	base_model = models.OnlyForMale  # Declared here too only for Polymorphic purpose!
@@ -47,7 +51,7 @@ class OnlyForMaleAdmin(PolymorphicChildModelAdmin):
 And so on for all form options...
 
 **Parent:**
-```
+```python
 @admin.register(models.CommonForPeople)
 class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
 	base_model = models.CommonForPeople  # Declared here too only for Polymorphic purpose!
@@ -63,8 +67,7 @@ class CommonForPeopleAdmin(PolymorphicParentModelAdmin):
 		obj.save(user=request.user)
 ```
 
-
 ---
-
 ## CSS customization in Django Admin:
 [/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin](/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md)
+

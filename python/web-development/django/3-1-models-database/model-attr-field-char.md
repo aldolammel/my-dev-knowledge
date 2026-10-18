@@ -14,7 +14,7 @@ Basic:
 ```python
 class Something(...):
 	first_name = models.CharField(
-		max_length=consts.VAL_GENERIC_MAX,
+		max_length=consts.INT_GENERIC_MAX,
 		blank=True,
 		default="",  # or None, but avoid to use 'null=True' if blank=True!
 		verbose_name="xxxxxx",
@@ -25,14 +25,14 @@ Advanced:
 ```python
 class Something(...):
 	first_name = models.CharField(
-		max_length=consts.VAL_GENERIC_MAX,
+		max_length=consts.INT_GENERIC_MAX,
 		default="",  # or None, but avoid to use 'null=True' if blank=True!
 		blank=True,
 		verbose_name="xxxxxx",
 		help_text="",
 		validators=[
-			MinLengthValidator(consts.VAL_GENERIC_MIN),
-			MaxLengthValidator(consts.VAL_GENERIC_MAX),
+			MinLengthValidator(consts.INT_GENERIC_MIN),
+			MaxLengthValidator(consts.INT_GENERIC_MAX),
 			# validators.validate_chars_spaces_enabled,
 		],
 	)
@@ -41,9 +41,9 @@ Drop-down field:
 ```python
 class Something(...):
 	front_type = models.CharField(
-		max_length=consts.VAL_GENERIC_MAX,  # Database level checking.
+		max_length=consts.INT_GENERIC_MAX,  # Database level checking.
 		choices=consts.CHOICES_SOMETHING,
-		default=consts.VAL_SOMETHING_DEF,
+		default=consts.INT_SOMETHING_DEF,
 		verbose_name="xxxxxx",
 		help_text="",
 	)
