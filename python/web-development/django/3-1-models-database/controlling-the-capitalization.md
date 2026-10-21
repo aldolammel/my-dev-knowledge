@@ -1,27 +1,29 @@
+#### Python > Django > Validations
+# Controlling the capitalization
 
+---
+## Before:
+- String formatting on Python: [/python/python-knowledge/string-formatting](/python/python-knowledge/string-formatting.md)
 
-CONTROLLING THE CAPITALIZATION:
+---
 
+If you want to force each string entry to be lowercase or other format, you need to override the Django `save()` method on each class you want to customize how django will save the data on the database:
 
-    >> If you want to force each string entry to be lowercase or other format,
-        you need to override the Django save() method on each class you want
-        to customize how django will save the data on the database:
+```python
+class Movie(models.Model):
+	name = ...
+	
+	def save(self, *args, **kwargs):
+		# Runs full validation before saving:
+		self.full_clean()
+		
+		# Forcing the name to be lowercase on db:
+		self.name = self.name.lower()  
+		super().save(*args, **kwargs)
 
-            class Movie(models.Model):
-                name = ...
-                
-                def save(self, *args, **kwargs):
-                    # Runs full validation before saving:
-                    self.full_clean()
-                    # Forcing the name to be lowercase on db:
-                    self.name = self.name.lower()  
-                    super().save(*args, **kwargs)
+```
 
+But if you want to make it capitalized on the CMS list views, do it:   xxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    >> But if you want to make it capitalized on the CMS list views, do it:
-
-        xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-    >> If you want to make it capitalized on the front-end, use CSS!
+If you want to make it capitalized on the front-end, use CSS!
     

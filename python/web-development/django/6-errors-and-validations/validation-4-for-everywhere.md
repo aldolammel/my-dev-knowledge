@@ -12,7 +12,7 @@ DJANGO FORMS VALIDATIONS: FOR ALL LEVELS (MIXING SOLUTIONS)
                 ./models-validators-built-in.txt
             
             >> clean() method:
-                ./2-clean-differences-between-model-and-form.py
+                ./2-clean-differences-between-model-and-form.md
             
         
     >> Or I'm NOT using Django as template solution:

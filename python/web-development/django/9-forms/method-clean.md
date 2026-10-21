@@ -10,12 +10,12 @@ Django's `clean()` form method performs form-wide validation after individual fi
 
 The `clean()` method for Forms is NOT the same of [clean() for Models](/python/web-development/django/3-1-models-database/method-clean.md)!
 
-Model clean() VS Form clean(): [/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py)
+Model clean() VS Form clean(): [/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.md](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.md)
 
 ---
 ## Structure:
+E.g. `clean_fieldname(self)`:
 ```python
-
 def clean_<fieldname>(self):
     """Built-in Form method to validate an individual form field before the main clean method."""
     
@@ -26,8 +26,9 @@ def clean_<fieldname>(self):
     
     # Otherwise, warning message:
     raise forms.ValidationError("warning message here")  # Once it's an individual-field-clean(), NEVER use ValidationError as dict!
-
-
+```
+E.g. `clean(self)`:
+```python
 def clean(self):
     """Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
     
@@ -40,7 +41,6 @@ def clean(self):
     
     return cleaned_data  # Always return cleaned_data!
 ```
-
 ---
 ## Common example:
 ```python
@@ -59,5 +59,6 @@ def clean(self):
 ```
 
 ---
-
+## Get to know: `_post_clean()` form method:
+[/python/web-development/django/9-forms/method-\_post_clean](/python/web-development/django/9-forms/method-_post_clean.md)
 

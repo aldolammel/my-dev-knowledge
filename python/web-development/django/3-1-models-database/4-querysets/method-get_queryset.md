@@ -1,12 +1,12 @@
-#### Python > Django > Model matters
-# QuerySets: the built-in get_queryset() method
+#### Python > Django > Models > QuerySets
+# Built-in `get_queryset()` method
 
 ---
 ## Before:
 1. What is it: [/python/web-development/django/3-1-models-database/4-querysets/\_what-is-queryset](/python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md)
 
 ---
-## You can use *get_queryset()* in:
+## You can use `get_queryset()` in:
 
 - Admin classes (*admin.py*);
 - Class-Based Views (*views.py*);
@@ -25,7 +25,7 @@ E.g.
 For example, if you're working in an Admin class, you could set the ordering through the Meta class and via *get_queryset* as well, but this approach is absolutely a bad practice:
 
 BAD:
-```
+```python
 class Meta:
 	ordering = ["order"]
 	
@@ -36,12 +36,12 @@ def get_queryset(self, request):
 	return qs.order_by("order")
 ```
 GOOD:
-```
+```python
 class Meta:
 	ordering = ["order"]
 ```
 
 ---
-## QuerySets in Forms.py:
-[/python/web-development/django/9-forms/form-queryset-filtering-dropdown.py](/python/web-development/django/9-forms/form-queryset-filtering-dropdown.py)
+## QuerySets in `forms.py`:
+[/python/web-development/django/9-forms/form-queryset-filtering-dropdown](/python/web-development/django/9-forms/form-queryset-filtering-dropdown.md)
 

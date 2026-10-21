@@ -28,3 +28,6 @@ DEV_URL = "https://xxxxxxxxxxxxx"
 
 # PAGEX USERS:
 # Pagex is not allowed to provide context_processors to Django CMS interface yet, so keep this information above updated too!
+
+# CMS CUSTOMIZATIONS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Reserved space...

@@ -1,6 +1,9 @@
-DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
+#### Server > OS > Linux > Building up a VPS server
+# Defining a root user and OS
 
-    PRE.1) Warnings!
+---
+
+PRE.1) Warnings!
 
         VPS CONCEPT & STRATEGIES:
             /dev-concepts/server-vps.md
@@ -13,9 +16,11 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
                 https://us.norton.com/feature/password-generator
 
 
-    PRE.2) VPS reinstallation?
+PRE.2) VPS reinstallation?
         ./dedicated-instance/_reinstalling-a-server.txt
 
+
+---
 
     1) Connect to the server:
         Usually, you receive an email with the credentials required to connect it by terminal. Open your local terminal and:
@@ -32,8 +37,12 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
                         /root/.ssd/known_hosts
 
 
+---
+
     2) Double-check: make sure what OS the VPS got installed:
         $ lsb_release -a
+
+---
 
 
     3) Update the server to its last components and dependencies versions:
@@ -56,6 +65,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
                 /os/os/linux/distros/fedora/2-updates/changing-LTS-version.md
 
 
+---
+
     4) Restart the VPS:
         $ reboot
 
@@ -63,5 +74,5 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEFINING ROOT USER AND OS
 
 ---
 
-    NEXT STEP:
-        ./2-step.txt
+## NEXT STEP:
+[/server/os/linux/building-a-server/dedicated-instance/2-step](/server/os/linux/building-a-server/dedicated-instance/2-step.md)

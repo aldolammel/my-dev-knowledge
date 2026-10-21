@@ -1,18 +1,16 @@
-DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
+#### Server > OS > Linux > Building up a VPS server
+# Late configurations
 
-    PRE.1) Assuming you have finished the previous steps!
-
-
-    PRE.2) Assuming you're in the VPS terminal, and in the app folder!
-
-
-    PRE.3) Assuming you're using the right venv!
-
-
-    PRE.4) Remember the code language port for your case:
+---
+## Before:
+PRE.1) Assuming you have finished the previous steps!
+PRE.2) Assuming you're in the VPS terminal, and in the app folder!
+PRE.3) Assuming you're using the right venv!
+PRE.4) Remember the code language port for your case:
         >> Python = 5000
         >> xxxxxxx = xxxx
 
+---
 
     1) WSGI configuration:
 
@@ -105,6 +103,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
                         # And after the reboot time and reconnection:
                             $ systemctl status <simplified_app_name>
 
+---
 
     2) Configuring Nginx as a reverse proxy:
         Lets make the traffic to hit port 80 (and later 443) and to get forwarded to Gunicorn on code language port (e.g. 5000 for Python).
@@ -170,6 +169,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
             $ sudo systemctl reload nginx
 
 
+---
+
     3) DNS settings:
 
         3.PRE) Assuming you got the app official domain!
@@ -188,6 +189,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
         3.3) After positive result, edit the DNS entry's TTL to 1800 (RECOMMENDED)!
 
 
+---
+
     4) Secure Protocol configuration (HTTPS):
         /web-development/domain/ssl-certification.md
 
@@ -197,5 +200,9 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: LATE CONFIGURATIONS
 
 ---
 
-HOW TO UPDATE YOUR APP:
-/server/os/linux/updating-web-application-via-git.md
+## HOW TO UPDATE YOUR APP:
+[/server/os/linux/updating-web-app-via-git](/server/os/linux/updating-web-app-via-git.md)
+
+
+
+

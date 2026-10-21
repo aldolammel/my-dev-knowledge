@@ -1,12 +1,17 @@
-DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
+#### Server > OS > Linux > Building up a VPS server
+# Deploying a Web App
 
-    PRE.1) Assuming you have finished the previous steps!
+---
 
-    PRE.2) You're in the VPS terminal!
+## Before:
 
-    PRE.3) (If applicable)
-        You're in as admin user, and not as root!
+PRE.1) Assuming you have finished the previous steps!
+PRE.2) You're in the VPS terminal!
+PRE.3) (If applicable)
+	You're in as admin user, and not as root!
 
+
+---
 
     1) VPS projects main folder:
 
@@ -38,6 +43,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
             2 - DON'T CREATE ANY .VENV FOLDER YET!
 
 
+---
+
     2) Clone the web application (based in an existing Git repository) on prod:
 
         2.PRE.1) Assuming you're in VPS project folder now!
@@ -59,6 +66,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
 
             # GitHub will ask for the Public Key password!
 
+
+---
 
     3) Installing the app dependencies on VPS:
 
@@ -101,6 +110,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
                         # Check if all app dependencies were installed:
                             $ pip list
 
+---
+
 
     4) Install Python, and its crucial tools:
 
@@ -122,6 +133,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
                 /python/1-python-installation/_install.md
 
 
+---
+
     5) Installing the database:
 
         >> Using SQLite3 (Python bundled db solution):
@@ -130,6 +143,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
         >> Using Postgresql:
             /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+
+---
 
     6) WSGI installing, building the bridge between the Webserver and the app's code language:
 
@@ -175,6 +190,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
                     $ sudo ufw status verbose
 
 
+---
+
     7) Environment variables on Production (VPS):
 
         7.1) (If applicable) Once your project is on prod, set the VPS environ vars:
@@ -197,6 +214,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
                 $ <connect again>
                 $ printenv
 
+
+---
 
     8) Testing the app:
 
@@ -236,5 +255,7 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: DEPLOYING A WEB APP
 
 ---
 
-    NEXT STEP:
-        ./4-step.txt
+## NEXT STEP:
+[/server/os/linux/building-a-server/dedicated-instance/4-step](/server/os/linux/building-a-server/dedicated-instance/4-step.md)
+
+

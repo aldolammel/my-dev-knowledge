@@ -10,6 +10,9 @@
 ```python
 my_project_name/
 ├── .agents/                     # Critical context documents and/or instructions to help you with AI assistance.
+│   ├── architecture-design.md   # Where the basic Django architecture design is written during the development.
+│   └── instructions.md          # Basic instruction of this system for AI assistance.
+│
 ├── .venv/                       # Virtual env folder where Django things are installed.
 │
 ├── core/                        # Django core folder.
@@ -21,7 +24,7 @@ my_project_name/
 │   └── wsgi.py                  # xxxxxxxx.
 │
 ├── apps/                   # 'sub-app' package folder.
-│   ├── app1/               # Example of a 'sub-app' of the main-app (project folder).
+│   ├── subapp1/            # Example of a 'sub-app' of the main-app (project folder).
 │   │   ├── migrations/     # Folder where all db logic/structure changes are tracked.
 │   │   │   └── ...
 │   │   │
@@ -54,7 +57,7 @@ my_project_name/
 │
 ├── media/                 # xxxxx
 │
-├── static/                # xxxxx
+├── static/                # Django needs for collectstatic's command.
 │   ├── js/                # xxxxx
 │   ├── css/               # xxxxx
 │   └── dist/              # xxxxx
@@ -73,35 +76,26 @@ my_project_name/
 │
 ├── .env                   # Exclusive back-end environment variables.
 ├── .gitignore             # For Git repository untrack specific files and folders.
+├── .python-version        # xxxxxxxxxxxxx
 ├── manage.py              # Command-line utility for Django core.
 └── pyproject.toml         # List of all Django project's (backend) dependencies.
 ```
 ### B) Django as back-end only (for external frontend solution)
 ```python
 my_project_name/
+├── .agents/
+│   └── ...           # Same files as structure "A". 
+│
 ├── .venv/                 
 │
-├── core/                  
-│   ├── __init__.py        
-│   ├── consts.py       
-│   ├── settings.py        
-│   ├── urls.py            
-│   └── wsgi.py            
+├── core/                            
+│   └── ...           # Same files as structure "A".           
 │
 ├── frontend/         # Where the front-end solution will be installed.
 │
 ├── apps/
-│   ├── app1/              
-│   │   ├── migrations/    
-│   │   ├── __init__.py    
-│   │   ├── admin.py       
-│   │   ├── apps.py        
-│   │   ├── forms.py
-│   │   ├── models.py      
-│   │   ├── serializers.py  
-│   │   ├── tests.py       
-│   │   ├── urls.py 
-│   │   └── views.py       
+│   ├── subapp1/              
+│   │   └── ...       # Same files as structure "A".     
 │   │
 │   ├── app.../
 │   │
@@ -109,16 +103,13 @@ my_project_name/
 │
 ├── media/ 
 │
-├── static/                # keep it empty once Django needs for collectstatic's command.
+├── static/           # keep it empty once Django needs for collectstatic's command.
 │
 ├── templates/              
 │   └── admin/  
 │       └── base_site.html     
 │
-├── .env
-├── .gitignore
-├── manage.py
-└── pyproject.toml         # List of all Django project's (backend) dependencies.
+└── ...               # Same root files as structure "A". 
 ```
 
 

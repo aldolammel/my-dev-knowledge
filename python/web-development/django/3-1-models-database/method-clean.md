@@ -5,14 +5,14 @@
 
 It's a method in Django models used for model-level validation. So it does:
 
-- Called automatically during full_clean() and form/model-form validation;
-- Validates multiple fields together (unlike field validators which validate single fields);
-- Raises ValidationError if validation fails;
-- Used for complex validation logic that depends on multiple fields;
-- Not automatically called when calling save() directly - you need to call full_clean() first;
-- If everything alright, clean() will return none; otherwise, you should raise a message.
+- Not automatically called when calling `save()` directly - you need to call `full_clean()` first.
+- Called automatically during `full_clean()` and form/model-form validation.
+- Validates multiple fields together (unlike field validators which validate single fields).
+- If everything alright, `clean()` will return none; otherwise, you should raise a message.
+- Raises `ValidationError` if validation fails.
+- Used for complex validation logic that depends on multiple fields. 
 
-The clean() method for Models is NOT the same of clean() for Forms: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
+The `clean()` method for Models is NOT the same of `clean()` for Forms: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
 
 
 ---
@@ -43,11 +43,16 @@ class ChildExampleModel(ExampleModel):
 ---
 ## Common example:
 ```python
-def clean(self):
-    """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
-    # Ensure start date is before end date
-    if self.start_date > self.end_date:
-        raise ValidationError("Start date must be before end date")
+from django.core.exceptions import ValidationError
+
+class Something(...):
+	# ...
+	
+	def clean(self):
+	    """Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
+	    # Ensure start date is before end date
+	    if self.start_date > self.end_date:
+	        raise ValidationError("Start date must be before end date")
 ```
 
 ---

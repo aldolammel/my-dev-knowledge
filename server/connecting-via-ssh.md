@@ -1,16 +1,18 @@
+#### Server
+# Connection using a SSH
 
+---
 
-SERVER: USING A SSH CONNECTION
-
-
-    KEEP IN MIND:
-        Your password!
+KEEP IN MIND:  Your password!
         
+Default command:
+```bash
+ssh <user>@<server-ip>
+```
         
-    # Default command:
-        $ ssh <user>@<server-ip>
-        
-        
-    # Using a custom port:
-        $ ssh -p <port> <user@<server-ip>
+Using a custom port:
+```bash
+ssh -p <port> <user@<server-ip>
+```
     
+

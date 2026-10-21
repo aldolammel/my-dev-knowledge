@@ -1,1 +1,3 @@
-[/database/constraint-for-db](/database/constraint-for-db.md)
+[/database/\_basic-concepts/constraint-for-db](/database/_basic-concepts/constraint-for-db.md)
+
+

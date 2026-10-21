@@ -50,16 +50,16 @@ uv add "something>=3.0" --upgrade --subgrouphere  # To define a specific version
 ```
 
 ......................................
-### 2B) Update all app-level installed (core or dev) dependencies
+### 2B) Update all app-level installed (core and dev) dependencies
 
-Removes and re-installs all core and dev dependencies in their latest versions or highest versions you've defined via `pyproject.toml` allows them:
+Removes and re-installs all Core and Dev dependencies in their latest versions or highest versions you've defined via `pyproject.toml` allows them:
 ```bash
-uv sync --extra dev --upgrade
+uv sync --upgrade
 ```
 
-Example if you need to update more sub-groups than dev only:
+Example if you need to update more sub-groups than Dev only:
 ```bash
-uv sync --extra dev --extra test --upgrade
+# ??????????????????????????
 ```
 
 ......................................
@@ -67,7 +67,7 @@ uv sync --extra dev --extra test --upgrade
 
 Removes and re-installs all core dependencies only in their latest versions or highest versions you've defined via `pyproject.toml` allows them:
 ```bash
-uv sync --upgrade
+uv sync --no-dev --upgrade
 ```
 
 ---

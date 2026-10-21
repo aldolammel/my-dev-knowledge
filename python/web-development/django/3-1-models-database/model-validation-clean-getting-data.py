@@ -54,4 +54,42 @@ class MyModel(models.Model):
         # In this example, you see I'm calling data from this model (MyModel) itself using 'self', and calling data from another model (MyModelMoreData) through a queryset.
 
 
+
+# AN EXAMPLE OF EXTENSIVE USE OF QUERYSETS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# /apps/my_app/models.py:
+
+class Event(models.Model):
+    id = ...
+    platform = ...
+    event_type = ...
+    event_title = ...
+
+    def clean(self):
+        # Case an event_title has the same name of other instance where the instance also has the same event_type and (if selected) the same platform, warn it:
+        if self.event_title:
+
+            # Filtering:
+            qs_type = Event.objects.filter(
+                event_title=self.event_title,
+                event_type=self.event_type,
+                platform=self.platform,
+            ).exclude(pk=self.id)
+            qs_plat = Event.objects.filter(
+                event_title=self.event_title,
+                platform=self.platform,
+            ).exclude(pk=self.id)
+
+            # Checking:
+            if qs_type.exists():
+                t = (
+                    consts.STR_EVENT_TYPE_PLAT
+                    if self.event_type == consts.INT_EVENT_TYPE_PLAT
+                    else consts.STR_EVENT_TYPE_RDIO
+                )
+                raise ValidationError(f"This event already exists as {t}.")
+            if qs_plat.exists():
+                raise ValidationError(f"This event already exists for {self.platform}.")
+
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+

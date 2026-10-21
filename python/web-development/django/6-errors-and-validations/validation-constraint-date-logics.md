@@ -37,3 +37,10 @@ DJANGO FORM VALIDATIONS > DB CONSTRAINTS > DATE: PROTECTING DATE LOGIC
         WHAT WILL TAKE PLACE IN DB:
 
             xxxxxxxxx
+
+---
+## Other db-level constraint types:
+[/python/web-development/django/6-errors-and-validations/validation-1-for-database](/python/web-development/django/6-errors-and-validations/validation-1-for-database.md)
+## This constraint type on SQL:
+[/database/constraint-type-check](/database/constraint-type-check.md)
+

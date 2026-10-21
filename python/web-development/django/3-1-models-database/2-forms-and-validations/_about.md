@@ -1,22 +1,17 @@
-
-
 DJANGO DATABASE MANAGEMENT: VALIDATIONS (DB CONSTRAINTS)
 
-    What is it:
+What is it:
         /dev-concepts/database-constraints.md
     
-    Creating a solid db validation level:
+Creating a solid db validation level:
         .../django/6-errors-and-validations/validation-1-for-database.txt
 
+---
+
+## VALIDATION FOR OTHER LEVELS:
     
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-VALIDATION FOR OTHER LEVELS:
-    
-    >> CMS-LEVEL:
+CMS-LEVEL:
         .../django/6-errors-and-validations/validation-3-for-CMS-forms.txt
 
-    >> APP-LEVEL:
+APP-LEVEL:
         .../django/6-errors-and-validations/validation-2-for-app-forms.txt

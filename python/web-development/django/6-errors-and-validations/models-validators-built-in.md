@@ -1,4 +1,4 @@
-#### Python > Django > Forms > Validators
+#### Python > Django > Validators
 # Built-in validators
 
 ---
@@ -8,9 +8,8 @@ Django Forms fields support use of utility functions and classes known as valida
 ==Crucial!==
 Validators run at the Python/Django level (forms and models, and CMS if the form is associated with the admin-class), BUT NEVER at the db-level. So they help prevent invalid data from being saved, however validators DON'T replace database constraints!
 
-
-**In */apps/my_app/models.py* file, example:**
-```
+**In `/apps/my_app/models.py` file, example:**
+```python
 class ExampleModel(models.Model):
 	attribute_example = models.CharField(
 		...
@@ -21,8 +20,8 @@ class ExampleModel(models.Model):
 	)
 ```
 
-**In */apps/my_app/forms.py* file, the same validator example:**
-```
+**In `/apps/my_app/forms.py` file, the same validator example:**
+```python
 class ExampleForm(forms.Form):
 	attribute_example = forms.CharField(
 		...

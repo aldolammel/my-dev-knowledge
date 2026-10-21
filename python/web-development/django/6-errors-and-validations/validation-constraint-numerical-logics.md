@@ -1,53 +1,57 @@
-
-
 DJANGO FORM VALIDATIONS > DB CONSTRAINTS: PROTECTING NUMERICAL LOGIC
-    
-    
-    >> Number greater or equal to another number - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
-        # FILE: /apps/my_app/models.py
-        from django.db import models
 
-        class Product(models.Model):
-            ...
-            stock = models.IntegerField()
+---
 
-            class Meta:
-                constraints = [
-                    models.CheckConstraint(
-                        condition=models.Q(stock__gte=0),                         # greater or equal
-                        name="stock_non_negative"
-                    )
-                ]
+Number greater or equal to another number
+```python
+# FILE: /apps/my_app/models.py
+from django.db import models
 
+class Product(models.Model):
+	...
+	stock = models.IntegerField()
 
-        WHAT WILL TAKE PLACE IN DB:
-        
-            ALTER TABLE "product"
-            ADD CONSTRAINT "stock_non_negative"
-            CHECK ("stock" >= 0);
+	class Meta:
+		constraints = [
+			models.CheckConstraint(
+				condition=models.Q(stock__gte=0),                         # greater or equal
+				name="stock_non_negative"
+			)
+		]
+```
+WHAT WILL TAKE PLACE IN DB:
+```sql
+ALTER TABLE "product"
+ADD CONSTRAINT "stock_non_negative"
+CHECK ("stock" >= 0);
+```
 
+Number must be inside a specific range
+```python
+class Employee(models.Model):
+	...
+	salary = models.DecimalField(max_digits=10, decimal_places=2)
 
+	class Meta:
+		...
+		constraints = [
+			models.CheckConstraint(
+				condition=models.Q(salary__gte=3000) & Q(salary__lte=9000),     # less equal
+				name="salary_range"
+			)
+		]
+```
+WHAT WILL TAKE PLACE IN DB:
+```sql
+ALTER TABLE "employee"
+ADD CONSTRAINT "salary_range"
+CHECK ("salary" >= 3000 AND "salary" <= 9000);
+```
 
-    >> Number must be inside a specific range - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
+## Other db-level constraint types:
+[/python/web-development/django/6-errors-and-validations/validation-1-for-database](/python/web-development/django/6-errors-and-validations/validation-1-for-database.md)
+## This constraint type on SQL:
+[/database/constraint-type-check](/database/constraint-type-check.md)
 
-        class Employee(models.Model):
-            ...
-            salary = models.DecimalField(max_digits=10, decimal_places=2)
-
-            class Meta:
-                ...
-                constraints = [
-                    models.CheckConstraint(
-                        condition=models.Q(salary__gte=3000) & Q(salary__lte=9000),     # less equal
-                        name="salary_range"
-                    )
-                ]
-
-
-        WHAT WILL TAKE PLACE IN DB:
-
-            ALTER TABLE "employee"
-            ADD CONSTRAINT "salary_range"
-            CHECK ("salary" >= 3000 AND "salary" <= 9000);
 

@@ -22,9 +22,10 @@ While commonly used in Django Admin for CMS customization, `get_form()` is avail
 ## Structure:
 ```python
 class MyModelAdmin(admin.ModelAdmin):
-    def get_form(self, request, obj=None, **kwargs):
+	# ...
+    def get_form(self, request, obj=None, change=False, **kwargs):
         '''Built-in CMS method to customize the form that's displayed in the interface.'''
-        form = super().get_form(request, obj, **kwargs)
+        form = super().get_form(request, obj, change, **kwargs)
         # Admin-specific customizations
         return form
 
@@ -34,12 +35,15 @@ class MyModelAdmin(admin.ModelAdmin):
 ## Common example:
 ```python
 from django import forms as f
+from . import models
 
+@admin.register(models.PagexPost)
 class PagexPostAdmin(admin.ModelAdmin):
+	# ...
     def get_form(self, request, obj=None, change=False, **kwargs):
         '''Built-in CMS method to customize the form that's displayed in the interface.'''
         form = super().get_form(request, obj, change, **kwargs)
-        ...
+        # ...
         # Customizing the dropdown-menu "blog" foreignkey field:
         if "blog" in form.base_fields:
             # Removing default add/remove buttons, applying the simple ModelChoiceField:

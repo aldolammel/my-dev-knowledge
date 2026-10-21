@@ -1,11 +1,14 @@
-DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
+#### Server > OS > Linux > Building up a VPS server
+# The basic
 
-    PRE.1) Assuming you have finished the previous steps!
-
-
-    PRE.2) Assuming you are already connected on the server via terminal:
+---
+## Before:
+PRE.1) Assuming you have finished the previous steps!
+PRE.2) Assuming you are already connected on the server via terminal:
         /server/connecting-via-ssh.txt
 
+
+---
 
     1) (Optional) Customizing the ssh_config file:
 
@@ -73,6 +76,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                     For client-side, no need to restart any service once the local SSH 'config' is read automatically for every new SSH connection called on local terminal.
 
 
+---
+
     2) Configuring the firewall:
 
         2.PRE.1) Assuming you are already connected on the server via terminal!
@@ -95,6 +100,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
         2.3) Test the SSH connection after:
             Log out, then log in again to ensure you can still connect to the server!
 
+
+---
 
     3) For security reasons, change SSH Port:
 
@@ -139,10 +146,12 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                 /server/connecting-via-ssh.txt
 
 
+---
+
     4) (Optional - HIGHLY RECOMMENDED) For security reasons, create a <new_user> with a sudo privilege:
 
-        WHY:
-            It' NOT a good decision because a bad manipulation can cause significant damage, and - MAINLY - any exploitation of your app could grant root access to the server and take the root and VPS control.
+WHY:
+It' NOT a good decision because a bad manipulation can cause significant damage, and - MAINLY - any exploitation of your app could grant root access to the server and take the root and VPS control.
 
         4.PRE) Assuming you still using the root user, and you are in /root folder!
 
@@ -176,30 +185,32 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
 
         4.4) (Optional - NOT recommended) For security reasons, deactivating the root user access:
 
-            CRITICAL INFO:
-                If you block the root user of SSH connections (by dev terminal, for example), if a config to demand root user, you should use the terminal by the VPS provider web console, and there - SOMETIMES - Brazilian keyboards are not correctly accepted. To test it, go in there and try to type "/", ":", "-". If everything is okay, keep going! If not, I - @aldolammel - never could make this shit works properly, making me to reinstall the entire VPS once I couldn't restore the root user permission because remove-ssh was not possible by my machine and the provider-terminal didn't accept my "/" keyboard key to type commands to restore the root! So I had to reinstall the VPS just because that!
+==CRITICAL INFO:==
+If you block the root user of SSH connections (by dev terminal, for example), if a config to demand root user, you should use the terminal by the VPS provider web console, and there - SOMETIMES - Brazilian keyboards are not correctly accepted. To test it, go in there and try to type "/", ":", "-". If everything is okay, keep going! If not, I - @aldolammel - never could make this shit works properly, making me to reinstall the entire VPS once I couldn't restore the root user permission because remove-ssh was not possible by my machine and the provider-terminal didn't accept my "/" keyboard key to type commands to restore the root! So I had to reinstall the VPS just because that!
 
-            INFO:
-                But first, ask yourself: if you will create a public key for your root, through the hosting iframe you won't be able to ctrl+c things, so you're not able to take the public key to register in GitHub, making you need to connect via your local terminal with root user just to take that key with ctrl+c.
+==INFO:==
+But first, ask yourself: if you will create a public key for your root, through the hosting iframe you won't be able to ctrl+c things, so you're not able to take the public key to register in GitHub, making you need to connect via your local terminal with root user just to take that key with ctrl+c.
 
-            4.4.PRE.1) Only do it after to create a <new_user> user!!!
+4.4.PRE.1) Only do it after to create a <new_user> user!!!
 
-            4.4.PRE.2) Logged in VPS terminal using the <new_user>!
+4.4.PRE.2) Logged in VPS terminal using the <new_user>!
 
-            4.4.1) Update the SSHD_CONFIG file:
+4.4.1) Update the SSHD_CONFIG file:
                 $ sudo nano /etc/ssh/sshd_config
                 Change the text "PermitRootLogin yes" to "PermitRootLogin no". And then save it (ctrl+s) and exit (ctrl+x).
 
-            4.4.2) Restart the ssh service:
+4.4.2) Restart the ssh service:
                 $ sudo systemctl restart ssh
 
-            4.4.3) Test it:
+4.4.3) Test it:
                 # Logout the VPS terminal:
                 $ exit
                     # And test the SSH connection again but using the root!
                     # You must see a message like "Access denied".
 
-            4.4.4) Reconnect with your non-root-user and keep going with that user!
+4.4.4) Reconnect with your non-root-user and keep going with that user!
+
+---
 
 
     5) Define the human language rules acceptable for this server:
@@ -254,6 +265,8 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
             # Fix the warnings commenting this line:
                 #SendEnv LANG LC_*
 
+---
+
 
     6) Install a Web server:
 
@@ -286,85 +299,20 @@ DEBIAN/UBUNTU > BUILDING UP A VPS: THE BASIC
                     $ sudo systemctl start nginx
                     $ sudo systemctl status nginx
 
+---
+
 
     7) (Optional) Security reasons, create a private key for GitHub/GitLab access to the VPS:
 
-        IMPORTANT:
-            This is NOT to create a Public Key to replace the SSH connection password!
+==IMPORTANT:==
+This is NOT to create a Public Key to replace the SSH connection password!
 
-        >> Which type of key you want:
+[versioning/git/private-key](versioning/git/private-key.md)
 
-            >> Ed25519:
-                A more modern algorithm with a smaller standard key size of 256 bits. It is just as secure and efficient as an RSA key due to its strong cryptographic properties. The compatibility is lower, but newer operating systems support it.
-
-            >> RSA:
-                An SSH RSA key is considered highly secure as it has typically larger key sizes, often 2048 or 4096 bits. It's also more compatible with older OS.
-
-        7.PRE) Assuming you're in VPS terminal!
-
-        7.1) Generate the key:
-            >> Using an Ed25519 (GitHub recommended standard, 2026):
-                $ ssh-keygen -t ed25519 -C "<admin_user_here>@<vps_name_here>"
-                    E.g.
-                        $ ssh-keygen -t ed25519 -C "ayrtonsenna@vps666"
-
-            >> Or using an RSA:
-                $ xxxxxxxxxxxxxxxxxxxxxxx
-                    E.g.
-                        $ xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-        7.2) After that, the key generator should ask you to choose a location to store the keys. Just press ENTER to confirm the key location on VPS!
-            E.g.
-                /home/<your_user>/.ssh/id_ed25519
-                Or
-                /home/<your_user>/.ssh/id_rsa
-
-        7.3) The key generator window will ask you to create an SSH key passphrase to access your private key. Set the same admin user password OR use Norton Generated Password to create it:
-            https://us.norton.com/feature/password-generator
-
-            INFO:
-                This pass you will used when you GIT CLONE the app repo in production, for example!
-
-        7.4) Once the key is created, ignore all the terminal output and just copy and save what the terminal prints here:
-            >> Using Ed25519:
-                $ cat ~/.ssh/id_ed25519.pub
-            >> Using RSA:
-                $ cat ~/.ssh/id_rsa.pub
-
-
-    8) Prepare the server to receive clones from GitHub repositories:
-
-        8.1) On GitHub, go to:
-
-            >> Settings >> SSH and GPG Keys >> New SSH Key;
-
-                Title example = <vps_name>-<vps_username>
-                    e.g. vps666-kornuser
-
-                Key type = Auth Key
-
-                Key = Set here the key you previously saved (step 7.4)
-
-                And then "Add SSH key"!
-                Now you are prepared to clone private GitHub repos into the server.
-
-        8.2) On the VPS terminal, test it:
-            $ ssh -T git@github.com
-
-                Output e.g.
-                    The authenticity of host 'github.com (1.111.11.111)' can't be established.
-                    ED25519 key fingerprint is xyxyxyxyxyxyxyxyxyxyxyxy.
-                    This key is not known by any other names.
-                    Are you sure you want to continue connecting (yes/no/[fingerprint])?
-
-                # Say "yes" for the very first connection!
-
-                    # Confirm with your Private Key password and done!
-
-        8.3) Install Git globally on VPS:
-            /versioning/git/_basic.md
 
 ---
 
-    NEXT STEP:
-        ./3-step.txt
+## NEXT STEP:
+[/server/os/linux/building-a-server/dedicated-instance/3-step](/server/os/linux/building-a-server/dedicated-instance/3-step.md)
+
+

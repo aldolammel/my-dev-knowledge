@@ -95,14 +95,14 @@ Even though you are not using SQLite for this project, this previous step create
 
 - [ ] 4.9.2) Carefully, bring to the new Django `/core/settings.py`  those notes you'll find in this next model (don't get concerned with DB stuff yet if this project need a non-SQLite db): [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)
 
-- [ ] 4.9.3) (Optional) For your `core` folder, bring from these files below the main notes/comments that can help you for future use:
+- [ ] 4.9.3) (Optional) For your `core` folder, bring from these files below the notes/comments that can help you further:
 	- /core/[consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/consts.py)
 	- /core/[models.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/models.py) (E.g. to store AuditMixin model class)
 	- /core/[lang.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/lang.py)
 
 - [ ] 4.9.4) Create the `apps` package folder: [/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation](/python/web-development/django/2-creating-and-deleting-apps/apps-package-creation.md)
 
-- [ ] 4.9.5) (Optional) For each `/apps/subapp/`, bring from these files below the main notes/comments that can help you for future use:
+- [ ] 4.9.5) (Optional) For each `/apps/subapp/`, bring from these files below the main notes/comments that can help you further:
 	- /apps/subapp_name/[consts.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/consts.py)
 	- /apps/subapp_name/[models.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/models.py)
 	- /apps/subapp_name/[admin.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/admin.py)
@@ -112,8 +112,8 @@ Even though you are not using SQLite for this project, this previous step create
 	- /apps/subapp_name/[serializers.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/apps/sub_app_1/serializers.py) (If applicable: demands a REST module)
 	- /apps/subapp_name/[lang.py](/)
 
-- [ ] 4.9.6) (If applicable) Case you need an admin user:
-[/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
+- [ ] 4.9.6) (If applicable) Case you need to re-order the apps on CMS sidebar, do it: [/python/web-development/django/4-cms-admin/1-customizing/sidebar-subapps-order](/python/web-development/django/4-cms-admin/1-customizing/sidebar-subapps-order.md)
+- [ ] 4.9.7) (If applicable) Case you need an admin user: [/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user](/python/web-development/django/3-1-models-database/0-installing-and-adminUser/creating-admin-user.md)
 ### 5) (Optional) Installing the dependencies
 Based on the project's *Technical Design Document* (TDD), install all dependencies: [/python/package-manager/uv/install-dependency](/python/package-manager/uv/install-dependency.md)
 

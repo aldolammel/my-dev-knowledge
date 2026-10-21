@@ -4,7 +4,7 @@
 ---
 ## Learn the basic:
 - Basic validations: [/python/web-development/django/6-errors-and-validations/1-validation-basic](/python/web-development/django/6-errors-and-validations/1-validation-basic.md)
-- Clean method: [/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.py)
+- Clean method: [/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.md](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.md)
 - Error messages itself: [/python/web-development/django/6-errors-and-validations/3-error-messages](/python/web-development/django/6-errors-and-validations/3-error-messages.md)
 
 ---

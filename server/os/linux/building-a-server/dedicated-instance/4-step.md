@@ -1,7 +1,12 @@
-DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING THE DATABASE
+#### Server > OS > Linux > Building up a VPS server
+# Deploying the database
 
-    PRE) Assuming you have finished the previous steps!
+---
+## Before:
 
+PRE) Assuming you have finished the previous steps!
+
+---
 
     1) Which db you wanna deploy:
 
@@ -12,8 +17,11 @@ DEBIAN/UBUNTU > BUILDING UP A SERVER: DEPLOYING THE DATABASE
             /database/PostgreSQL/deploy/_deploy.txt
 
 
-
 ---
 
-    NEXT STEP:
-        ./5-step.txt
+## NEXT STEP:
+[/server/os/linux/building-a-server/dedicated-instance/5-step](/server/os/linux/building-a-server/dedicated-instance/5-step.md)
+
+
+
+

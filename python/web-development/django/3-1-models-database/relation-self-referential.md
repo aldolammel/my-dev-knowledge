@@ -41,4 +41,6 @@ The special self keyword (used as a string value) tells Django that it should fo
 [/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
 ## Using `ManyToManyField()` field class:
 [/python/web-development/django/3-1-models-database/model-attr-field-many-to-many](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)
+## Excluding the self-referential instance from drop-down menus:
+[/python/web-development/django/9-forms/form-queryset-filtering-dropdown](/python/web-development/django/9-forms/form-queryset-filtering-dropdown.md)
 

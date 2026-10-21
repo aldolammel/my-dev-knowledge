@@ -1,5 +1,6 @@
-
-
 DATABASE CONSTRAINTS: PRIMARY KEY
 
-    A combo of NOT NULL + UNIQUE. Identifies each row uniquely.
+---
+
+A combo of NOT NULL + UNIQUE. Identifies each row uniquely.
+

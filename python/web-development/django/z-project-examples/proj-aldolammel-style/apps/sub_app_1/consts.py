@@ -8,6 +8,12 @@
 #PATH_IMG = "something/images/"
 #PATH_FILE = "something/to_download/"
 
+# LABELS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# STR_ for string.
+STR_SOMETHING_A = "Aldo Lammel"
+STR_SOMETHING_B = "Bob Dilan"
+STR_SOMETHING_C = "Charlie Brown"
+
 # DATA FOR DATABASE (WARNING!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # If values are changed without maintenance on database, multiple errors will raise up!
 # DIC_ for dictionary.
@@ -20,9 +26,9 @@
 #INT_SOMETHING_C = 3
 #INT_SOMETHING_DEF = INT_SOMETHING_A  # default
 #CHOICES_CLASSREFEXAMPLE = (
-    #(INT_SOMETHING_A, 'Example A (default)'),
-    #(INT_SOMETHING_B, 'Example B'),
-    #(INT_SOMETHING_C, 'Example C'),
+    #(INT_SOMETHING_A, f'{STR_SOMETHING_A} (default)'),
+    #(INT_SOMETHING_B, STR_SOMETHING_B),
+    #(INT_SOMETHING_C, STR_SOMETHING_C),
 #)
 
 # OTHERS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -33,7 +33,10 @@ class Something(...):
     status = models.PositiveSmallIntegerField(
 	    choices=STATUS_CHOICES,
 	    # default=1,  # Uncomment it if you wanna force a default value (already selected).
+	    null=True,
 	    blank=False,
+	    verbose_name="xxxxxxxxx",
+		help_text="",
 	)
 ```
 

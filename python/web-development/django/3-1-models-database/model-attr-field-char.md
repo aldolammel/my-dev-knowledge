@@ -10,7 +10,7 @@ Field look-like on front-end:
 
 **Examples:**
 
-Basic:
+Basic: `CharField()` field class the default value is an empty string (`''`) and `null=True` should be avoided.
 ```python
 class Something(...):
 	first_name = models.CharField(

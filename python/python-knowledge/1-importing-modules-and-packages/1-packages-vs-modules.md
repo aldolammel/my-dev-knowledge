@@ -2,11 +2,10 @@
 # What are Packages and Modules
 
 ---
-## PACKAGE
-        
-Package is a collection of multiple modules organized in a directory. So 'Packages' on Python is the same of 'libraries' in other languages!
-- Must contain a special file called __init__.py (can be empty);
-- Creates a namespace for related modules;
+## Package
+Package is a collection of multiple modules organized in a directory. So *Packages* on Python is the same of libraries in other languages!
+- Must contain a special file called `__init__.py` (can be empty).
+- Creates a namespace for related modules.
 
 Structure, e.g.:
 ```python
@@ -28,8 +27,7 @@ import requests         # HTTP library package
 ```
 
 ---
-## MODULE
-        
+## Module
 A module is a single Python file (`.py`) that contains code - variables, functions, and classes that you can reuse.
 
 Structure, e.g.:
@@ -71,6 +69,8 @@ module3.some_another_function(...)
 ```
 
 ---
+# How to create your own package and module:
+[/python/python-knowledge/1-importing-modules-and-packages/custom_module](/python/python-knowledge/1-importing-modules-and-packages/custom_module.md)
 ## How to import things on Django:
 [/python/web-development/django/3-1-models-database/importing-model-from-other-subapp](/python/web-development/django/3-1-models-database/importing-model-from-other-subapp.md)
 

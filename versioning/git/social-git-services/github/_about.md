@@ -1,0 +1,10 @@
+#### Versioning
+# GitHub
+
+---
+
+It's a web-based platform used for version control and collaboration in software development. It's built on Git, a distributed version control system created by Linus Torvalds. GitHub provides a centralized place where developers can store, manage, and share their code.
+
+Basic Git commands: [/versioning/git/\_basic](/versioning/git/_basic.md)
+
+
