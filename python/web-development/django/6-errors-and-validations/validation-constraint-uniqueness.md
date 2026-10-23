@@ -6,7 +6,7 @@
 You can define a field is unique or a combination of them to create the uniqueness. Let's see both cases.
 
 ---
-## Using `unique=True` for basic:
+## A) Using `unique=True` for basic:
 ```python
 # models.py:
 class Something(...):
@@ -21,7 +21,7 @@ class Something(...):
 - **ModelForm & Admin level:** Django automatically generates validation rules for forms and the admin panel, catching duplicates _before_ saving and displaying a clean form error rather than a database integrity crash.
 - **Template level:** Templates only render the error messages passed down by the form.
 ---
-## Using `UniqueConstraint()` to create combined uniqueness
+## B) Using `UniqueConstraint()` to create combined uniqueness
 The individual fields don't need to be unique. Only their combination does. This constraint means that the combination of `platform`, `proc_type` and `created_by` must be unique.
 ```python
 # models.py:
@@ -43,6 +43,7 @@ class Procedure(models.Model):
             ),
         ]
 ```
+Now, run `makemigrations` and `migrate` commands.
 ### Are you getting `IntegrityError`?
 If so, it's because you're using in `fields=[]` a class attribute/field that uses `editable=False`, what means this attribute is excluded and not delivered to the form (in this case, `created_by` is `editable=False`). At ModelForm `clean()` time the form has no idea who the logged-in user is, because forms don’t have access to `request` by default. To pass the user to the form’s `clean()`, first, let's create a custom form that will figure out who is the current user:
 

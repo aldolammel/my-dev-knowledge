@@ -103,7 +103,7 @@ class ExampleClassCMS(admin.ModelAdmin):
 
 If you want to make a specific field visible and unlocked in CMS only if another field with a specific value is chosen, and clean and lock the same field if another else is chosen, this is for you.
 
-A solid solution done, using this logic: [/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection-with-no-dependency](/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection-with-no-dependency.md)
+A solid solution done, using this logic: [python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session](python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md)
 
 But if you wanna build up something simpler, look it below:
 

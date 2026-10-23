@@ -2,21 +2,29 @@
 # Checking and fixing errors
 
 ---
-    
-HOW TO CHECK CODE ERRORS:
+## Checking code errors (lint):
 ```bash
+# General scan:
 uv run ruff check
+# Or only in a specific folder:
+uv run ruff check apps/subapp_name/
+# Or only in a specific file:
+uv run ruff check apps/subapp_name/models.py
 ```
-
-HOW TO FIX CODE ERRORS AUTOMATICALLY:
+## Automatic fixing (lint):
+Just include the flag `--fix`.
 ```bash
+# General fix:
 uv run ruff check --fix
+# Or only in a specific folder:
+uv run ruff check apps/subapp_name/ --fix
+# Or only in a specific file:
+uv run ruff check apps/subapp_name/models.py --fix
 ```
-
-HOW TO FIX CODE FORMATTING:
+## Only focusing in to be formatter:
 ```bash
-uv run ruff format                      # Format all files in project-folder (except files like .venv/, dist/, build/, .vscode/, .git/, etc).
-uv run ruff format path/to/code/        # Format all files in `path/to/code` (and any subdirectories).
-uv run ruff format path/to/file.py      # Format a single file.
+uv run ruff format                             # Format all files in project-folder (except files like .venv/, dist/, build/, .vscode/, .git/, etc).
+uv run ruff format apps/subapp_name/           # Format all folder content.
+uv run ruff format apps/subapp_name/models.py  # Format a single file.
 ```
 

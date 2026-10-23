@@ -19,8 +19,8 @@ For new objects, you click over the add button and then, through the adding deta
 
 For new objects, through the adding detail-view, select an option first (using a radio or drop-down menu), and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads its specific form based in a specific model (with its unique fields);
 
-- Solution without any dependency: [/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection-with-no-dependency](/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection-with-no-dependency.md)
-- Solution with `django-polymorphic`: [/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection](/python/web-development/django/4-cms-admin/1-customizing/cms-views-based-on-selection.md)
+- Solution using session (no depedency): [python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session](python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md)
+- Solution (dependency: `django-polymorphic`): [python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding](python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding.md)
 
 ---
 ## C) Detail-view listing inline entries from another model class:

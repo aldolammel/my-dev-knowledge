@@ -116,6 +116,10 @@ More boolean examples: [/python/web-development/django/3-1-models-database/4-que
 [/python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many](/python/web-development/django/3-1-models-database/4-querysets/qs-with-many-to-many.md)
 
 ---
+## Using QuerySets through `forms.py` fields:
+[/python/web-development/django/9-forms/querysets-examples/\_what-is-it](/python/web-development/django/9-forms/querysets-examples/_what-is-it.md)
+
+---
 ## Loading Admin/CMS fields already filtered:
 - Method `get_queryset()`: [/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
 - [/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data](/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.md)

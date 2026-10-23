@@ -3,7 +3,7 @@
 
 ---
 
-In a [One-to-Many](/database/_tools/ERD/one-to-many.md) relationship, the *ForeignKey()* stays only in the many side. The attibute name is always singular.
+In a [One-to-Many](/database/_tools/ERD/one-to-many.md) relationship, the *ForeignKey()* stays only in the *Many* side of a cardinality. The attribute name should be always singular.
 
 **Common Usage:**
 It creates a database foreign key from one table to another's primary key.
@@ -36,7 +36,7 @@ A common use example:
 class Something(...):
 	plane_seat_type = models.ForeignKey(
 		PlaneSeatType,  # or "PlaneSeatType" (between quotes if model comes later).
-		related_name="<WhatExactlyModelOwnedHere+s>",  # "somethings"
+		related_name="<WhatExactlyModelOwnedHere+s>",  # "somethings", or if you got other FKs created in this class, just copy what they're using.
 		on_delete=models.SET_NULL,
 		null=True,
 		blank=False,
@@ -47,6 +47,10 @@ class Something(...):
 Read more about:
 - Argument `related_name`: [/python/web-development/django/3-1-models-database/arg-related_name](/python/web-development/django/3-1-models-database/arg-related_name.md)
 - Argument `on_delete`: [/python/web-development/django/3-1-models-database/arg-on_delete](/python/web-development/django/3-1-models-database/arg-on_delete.md)
+
+---
+# Under the hood to improve performance
+When you creates an attribute calling a *ForeignKey*, Django creates automatically (and not visible in your model class) a new attribute called `<fk_obj_name>_id` (e.g. `plane_seat_type_id`) that stores the selected object `id` in the current object instance. Read more: [/python/web-development/django/3-1-models-database/4-querysets/attname](/python/web-development/django/3-1-models-database/4-querysets/attname.md)
 
 ---
 ## Creating a circular relationship:

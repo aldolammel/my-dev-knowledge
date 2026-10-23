@@ -15,8 +15,8 @@ Basic: `CharField()` field class the default value is an empty string (`''`) and
 class Something(...):
 	first_name = models.CharField(
 		max_length=consts.INT_GENERIC_MAX,
-		blank=True,
 		default="",  # or None, but avoid to use 'null=True' if blank=True!
+		blank=True,
 		verbose_name="xxxxxx",
 		help_text="",
 	)

@@ -20,11 +20,16 @@ It's a visual representation of the logical structure of a database. It maps out
 ![](/database/_tools/ERD/imgs/erd_general_example.png)
 
 **Reading the ERD above:**
-- A doctor treats `none or many` patients.
-- A doctor attends `none or many` appointments.
-- A patient has `one or many` appointments.
-- A ward (small sector of a hospital) cares n`one or many` patients.
-- A ward admits `none or many` appointments.
+- `Doctor` treats none or many `Patient`.
+- `Doctor` attends none or many `Appointment`.
+- `Patient` has one or many `Appointment`.
+- `Patient` is treated by one `Doctor`.
+- `Patient` is cared by one `Ward`.
+- `Ward` (small sector of a hospital) cares none, one or many `Patient`.
+- `Ward` admits none, one or many `Appointment`.
+- `Appointment` is attended by one `Doctor`.
+- `Appointment` belongs to one `Patient`.
+- `Appointment` is admitted by one `Ward`.
 
 ---
 ## Structure:

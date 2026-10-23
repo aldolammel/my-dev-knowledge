@@ -27,3 +27,8 @@ This is the most common relationship type. In this relationship, there is one re
 - A customer can make many orders from a vendor, and each order can have multiple products.
 - One student can be registered in many classes.
 - An album (usually) contains many songs.
+
+---
+## All One-to-Many relationship, for a database perspective, creates a ForeignKey:
+[/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
+

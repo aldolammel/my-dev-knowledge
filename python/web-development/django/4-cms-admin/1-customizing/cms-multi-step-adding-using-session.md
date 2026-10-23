@@ -1,5 +1,5 @@
 #### Python > Django > Admin (CMS) > Form soluctions
-# Adding an instance with multi-step form (with no dependency usage)
+# Adding an instance with multi-step form flow (using session)
 
 ---
 
@@ -7,13 +7,17 @@
 - [/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
 
 For new objects, through the adding detail-view, select options that will define the next form screen, and then Django loads the specific form (still in detail-view) based on the previous selection. For existing entries through the list-view, each listed entry, if clicked, loads fields as expected, preserving those `readonly_fields` if they exist.
+### E.g.
+**Screen 1/2:**
+- All field values from here are saved in request.session, doesn't creating any draft or `pk` on the db.
+- The focus of the fields in the initial screen is to keep here all fields that can affect what fields come next.
 
-**Example:**
-
-Screen 1/2:
 ![](/python/web-development/django/4-cms-admin/z_imgs/adding-form-using-steps_step-1.png)
 
-Screen 2/2:
+**Screen 2/2:**
+- For new instance: until the user click in "Save" button, the context fields coming from request.session, not from db.
+- For existing instance: there is `pk`, so the data is stored in the.
+
 ![](/python/web-development/django/4-cms-admin/z_imgs/adding-form-using-steps_step-2.png)
 
 ---

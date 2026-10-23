@@ -21,6 +21,7 @@ LBL_UPDATED_BY = "Updated by"
 # HTXT_BRAND_NAME_SHORT = "Nome mais comercial da marca desta aplicação."
 # HTXT_BRAND_NAME_LONG = f"Versão alternativa para '{LBL_BRAND_NAME_SHORT}' como, por exemplo, sua versão mais longa, se houver."
 # HTXT_CATS = "Selecione uma ou mais categorias as quais esta página pertence. Se preferir, pode deixar em branco."
+HTXT_FIELD_AUTO_UPDATED = "Field updated automatically."
 
 # DEFAULT VALUES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # STR_DEF_BRAND_NAME_SHORT = "Um Novo App"
