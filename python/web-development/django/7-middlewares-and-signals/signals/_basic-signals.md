@@ -7,12 +7,12 @@
 Signal handlers are a classic source of circularity because they often need to import models from other apps. Isolating them avoids polluting `models.py`:
 
 E.g.
-```
+```python
 # /apps/my_subapp/apps.py
 from django.apps import AppConfig
 
 class MySubappConfig(AppConfig):
-	...
+	# ...
 	name = 'apps.my_subapp'
 
 	def ready(self):

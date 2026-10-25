@@ -2,7 +2,7 @@
 # Clean the database using `flush` command:
 
 ---
-   
+
 This command clears all data from all tables in our Django database, preserving the tables and columns only:
 
 ---

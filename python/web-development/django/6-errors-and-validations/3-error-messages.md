@@ -10,7 +10,7 @@
 ## CMS level
 
 - Basic about: [/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms](/python/web-development/django/6-errors-and-validations/validation-3-for-CMS-forms.md)
-- How to use any kind of error messages on CMS:  [/python/web-development/django/6-errors-and-validations/raise-ValidationError.py](/python/web-development/django/6-errors-and-validations/raise-ValidationError.py)
+- How to use any kind of error messages on CMS:  [/python/web-development/django/6-errors-and-validations/raise-ValidationError](/python/web-development/django/6-errors-and-validations/raise-ValidationError.md)
 - How to validate just the field's value added and not the field itself: [/python/web-development/django/6-errors-and-validations/models-validators-built-in](/python/web-development/django/6-errors-and-validations/models-validators-built-in.md)
 
 ---

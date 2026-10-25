@@ -1,14 +1,16 @@
+#### Python > Django:
+# Clean a specific table:
 
+---
 
-CLEAN A SPECIFIC TABLE:
+To delete all data from a specific table:
 
-    >> To delete all data from a specific table:
+Open the shell:        
+```bash
+python manage.py shell
 
-        Open the shell;
-        
-            $ python manage.py shell
+>>> from <subapp_name>.models import <ClassName>
+>>> <ClassName>.objects.all().delete()
+```
 
-            >>> from <subapp_name>.models import <ClassName>
-            >>> <ClassName>.objects.all().delete()
-
-            Output will be the amount of data deleted in that table. 
+Output will be the amount of data deleted in that table. 

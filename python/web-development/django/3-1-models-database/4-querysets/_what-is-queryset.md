@@ -109,7 +109,7 @@ More boolean examples: [/python/web-development/django/3-1-models-database/4-que
 
 ---
 ## Using QuerySets with Foreigner Keys:
-[/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys](/python/web-development/django/3-1-models-database/4-querysets/qs-with-foreigner-keys.md)
+[python/web-development/django/3-1-models-database/4-querysets/qs-with-foreign-keys](python/web-development/django/3-1-models-database/4-querysets/qs-with-foreign-keys.md)
 
 ---
 ## Usign QuerySets with Many-to-Many:

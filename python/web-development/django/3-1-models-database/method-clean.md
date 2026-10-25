@@ -1,5 +1,5 @@
 #### Python > Django > Models > Methods
-# `clean()` model method
+# Model `clean()` method
 
 ---
 
@@ -12,8 +12,7 @@ It's a method in Django models used for model-level validation. So it does:
 - Raises `ValidationError` if validation fails.
 - Used for complex validation logic that depends on multiple fields. 
 
-The `clean()` method for Models is NOT the same of `clean()` for Forms: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
-
+The `clean()` method for Models is NOT the same of [clean() for Forms](/python/web-development/django/9-forms/method-clean.md)!
 
 ---
 ## Structure:
@@ -56,4 +55,10 @@ class Something(...):
 ```
 
 ---
+## Differences between Model `clean()` and Form `clean()`:
+[/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form](/python/web-development/django/6-errors-and-validations/2-clean-differences-between-model-and-form.md)
+## Useful Model `clean()` examples:
+[/python/web-development/django/3-1-models-database/2-forms-and-validations/clean-model-examples/\_about](/python/web-development/django/3-1-models-database/2-forms-and-validations/clean-model-examples/_about.md)
+
+
 

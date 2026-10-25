@@ -11,18 +11,26 @@ In these examples, consider each queryset is asking data to a model called `Reci
 ```python
 from . import models
 
-r_first = models.Recipe.objects.first()
+models.Recipe.objects.first()
 ```
-### Showing the entry with pk/id = 4
+### Filtering by a specific object's attribute value:
 ```python
 from . import models
 
-r_specific = models.Recipe.objects.get(id=4)
+models.Recipe.objects.filter(category="fancy")
+```
+### Filtering by more than one specific object's attribute value:
+```python
+from . import models
+
+models.Recipe.objects.filter(category__in=["fancy", "summer"])
 ```
 ### Showing all objects in a specific table (Recipe)
 ```python
 from . import models
 
+r_all = models.Recipe.objects
+# Or:
 r_all = models.Recipe.objects.all()
 ```
 ### Showing a specific number of entries

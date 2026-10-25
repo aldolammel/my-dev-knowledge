@@ -2,6 +2,8 @@
 """
     DJANGO > DUNDER METHODS: __INIT__
 
+    This dunder bases: /python/python-knowledge/dunders/__init__.py
+
     This dunder method is called 'constructor' that runs automatically when a class instance is created.
 
     More about Python Dunder methods:

@@ -33,9 +33,9 @@ STR_MULTI_STEP_URL_PARAM = "screen" # <adding-something-with-multi-step-screen__
 ```python
 # OTHERS
 # ...
-STR_STEP_COMMON_SESSION_KEY = "step_common_session"  # It must be unique for each multi-step form feature.
-TPL_STEP_COMMON_READONLY_FIELDS = (
-	# About forms.py StepCommonInitialStepForm fields:
+STR_SOMETHING_SESSION_KEY = "class_name_here_session"  # It must be unique for each multi-step form feature.
+TPL_SOMETHING_READONLY_FIELDS = (
+	# About forms.py SomethingInitialStepForm fields:
 	# Once the screen 1 is completed, these fields below cannot be changed!
 	"platform",
 	"language",
@@ -53,18 +53,19 @@ from typing import Any
 from django import forms
 from . import consts, models
 
-class StepCommonInitialStepForm(forms.ModelForm):
+class SomethingInitialStepForm(forms.ModelForm):
     """Screen 1. Never saved; only validated and stored in the session."""
 
     class Meta:
-        model = models.StepCommon
-        fields = consts.TPL_STEP_COMMON_READONLY_FIELDS
+        model = models.Something
+        fields = consts.TPL_SOMETHING_READONLY_FIELDS
     
     def _post_clean(self):
 		"""Built-in Form method that performs additional model-level cleaning and validation after the form's standard fields and form-wide clean methods have executed."""
 		# Skip Model.full_clean() to avoid Model Classes using clean() get stuck in screen 1 related their fields visible only through next screens.
 		pass
 ```
+In case you need to `clean()` fields right in the initial screen, use the form `clean()`: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
 
 ---
 ## 4) In `/core/utils.py`:
@@ -92,8 +93,8 @@ from core.utils import build_multi_screen_instance
 from . import consts, forms, models
 
 
-@admin.register(models.StepCommon)
-class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
+@admin.register(models.Something)
+class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
     """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"""
     
     # ... If applicable, keep your list_display, list_filter, filter_horizontal, search_fields, readonly_fields.
@@ -102,7 +103,7 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
     fieldsets = (
         (
 	        "Context",
-	        {"fields": consts.TPL_STEP_COMMON_READONLY_FIELDS},
+	        {"fields": consts.TPL_SOMETHING_READONLY_FIELDS},
         ),
         (
 	        "Step details",
@@ -124,7 +125,7 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
 		"""Built-in CMS method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
 		readonly = [
 			*super().get_readonly_fields(request, obj),
-			*consts.TPL_STEP_COMMON_READONLY_FIELDS,
+			*consts.TPL_SOMETHING_READONLY_FIELDS,
 		]
 
 		# Defining fields of the initial screen that will be used to create conds for the next one:
@@ -132,8 +133,8 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
 			step_type = obj.step_type
 			step_hierarchy = obj.step_hierarchy
 		else:
-			step_type = request.session.get(consts.STR_STEP_COMMON_SESSION_KEY, {}).get("step_type")
-			step_hierarchy = request.session.get(consts.STR_STEP_COMMON_SESSION_KEY, {}).get("step_hierarchy")
+			step_type = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_type")
+			step_hierarchy = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_hierarchy")
 		
 		# Conds to convert regular fields to read-only based on what was selected in initial screen:
 		if (
@@ -165,7 +166,7 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
 	    """Built-in CMS method that allows you to add or customize URL patterns."""
         custom = [
             path(
-                "add/stepcommon/",
+                "add/something/",
                 self.admin_site.admin_view(self.add_step_init_view),
                 name=f"{self.opts.app_label}_{self.opts.model_name}_adding_step_init",
             ),
@@ -181,10 +182,10 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
             raise PermissionDenied
 
         if request.method == "POST":
-            form = forms.StepCommonInitialStepForm(request.POST)
+            form = forms.SomethingInitialStepForm(request.POST)
             if form.is_valid():
                 # Model instances -> pks, so the session stays JSON-serializable.
-                request.session[consts.STR_STEP_COMMON_SESSION_KEY] = {
+                request.session[consts.STR_SOMETHING_SESSION_KEY] = {
                     name: getattr(value, "pk", value)
                     for name, value in form.cleaned_data.items()
                 }
@@ -194,8 +195,8 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
                 return HttpResponseRedirect(f"{add_url}?{core_consts.STR_MULTI_STEP_URL_PARAM}=2")
         else:
             # Prefills when coming back from screen 2.
-            form = forms.StepCommonInitialStepForm(
-                initial=request.session.get(consts.STR_STEP_COMMON_SESSION_KEY)
+            form = forms.SomethingInitialStepForm(
+                initial=request.session.get(consts.STR_SOMETHING_SESSION_KEY)
             )
 
         context = {
@@ -205,14 +206,14 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
             "form": form,
         }
         return TemplateResponse(
-            request, "admin/procedures/stepcommon/adding_screen_1.html", context
+            request, "admin/procedures/something/adding_screen_1.html", context
         )
 
 
     # Screen 2 (Native Django adding detail-view):
     def add_view(self, request, form_url="", extra_context=None):
 		'''Built-in Django admin method that handles the view logic and form processing for adding a new model instance in the admin interface.'''
-        has_data = consts.STR_STEP_COMMON_SESSION_KEY in request.session
+        has_data = consts.STR_SOMETHING_SESSION_KEY in request.session
         if request.GET.get(core_consts.STR_MULTI_STEP_URL_PARAM) != "2" or not has_data:
             if request.GET.get(core_consts.STR_MULTI_STEP_URL_PARAM) == "2":
                 messages.info(request, "Choose the basic of Step Common first.")
@@ -228,13 +229,13 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
         if obj is not None:
             return form
 
-        locked = request.session.get(consts.STR_STEP_COMMON_SESSION_KEY, {})
+        locked = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {})
 
         class MultiStepForm(form):  # type: ignore[valid-type, misc]
             def __init__(self, *args, **kw):
                 # Admin passes no instance on add (GET or POST).
                 if kw.get("instance") is None:
-	                kw["instance"] = build_multi_screen_instance(models.StepCommon, locked)
+	                kw["instance"] = build_multi_screen_instance(models.Something, locked)
 				super().__init__(*args, **kw)
 
         return MultiStepForm
@@ -242,7 +243,7 @@ class StepCommonAdmin(SaveUserMixin, admin.ModelAdmin):
 
     def response_add(self, request, obj, post_url_continue=None):
 	    '''Built-in CMS method that determines the HTTP response after a new model instance is successfully added.'''
-        request.session.pop(consts.STR_STEP_COMMON_SESSION_KEY, None)
+        request.session.pop(consts.STR_SOMETHING_SESSION_KEY, None)
         return super().response_add(request, obj, post_url_continue)
 ```
 (If applicable) In case you don't need to convert regular fields to read-only, simplify the `get_readonly_fields()`:
@@ -252,7 +253,7 @@ def get_readonly_fields(self, request, obj=None):
 		"""..."""
 		readonly = [
 			*super().get_readonly_fields(request, obj),
-			*consts.TPL_STEP_COMMON_READONLY_FIELDS,
+			*consts.TPL_SOMETHING_READONLY_FIELDS,
 		]
 
 		# Defining fields of the initial screen that will be used to create conds for the next one:
@@ -267,7 +268,7 @@ def get_readonly_fields(self, request, obj=None):
 ```
 ---
 ## 6) Template matters:
-6.1) Create the first step of your adding form, e.g., `/apps/procedures/templates/admin/procedures/stepcommon/adding_screen_1.html:`
+6.1) Create the first step of your adding form, e.g., `/apps/procedures/templates/admin/procedures/something/adding_screen_1.html:`
 ```html
 {% extends "admin/base_site.html" %}
 {% load i18n admin_urls %}
@@ -299,7 +300,7 @@ def get_readonly_fields(self, request, obj=None):
   {% if not original %}
     <p>
       Screen: 2 of 2 —
-      <a href="{% url 'admin:procedures_stepcommon_adding_step_init' %}">Back to previous screen</a>
+      <a href="{% url 'admin:procedures_something_adding_step_init' %}">Back to previous screen</a>
     </p>
   {% endif %}
 {% endblock %}

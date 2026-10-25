@@ -15,13 +15,13 @@ from django.utils.text import slugify
 class Movie(models.Model):
 	name = models.CharField(...)
 	slug = models.SlugField(
-		unique=True,  # Db-level constraint
+		# unique=True,  # Db-level constraint - Only turn this arg on if the slug will be created manually (not based in other attr).
 		max_length=200, 
 		default='', 
 		editable=False,  # Auto-generated in save().
 		blank=True,  # Once it's auto-generated in save(), it'll pass empty for clean().
 		null=False, 
-		db_index=True,  # Extremely recommeded for this field class!
+		db_index=True,  # Extremely recommended for this field class!
 		verbose_name="xxxxxx",
 		help_text="",
 	)

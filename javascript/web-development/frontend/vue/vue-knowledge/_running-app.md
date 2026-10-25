@@ -1,6 +1,9 @@
-VUE: RUNNING THE FRONT-END APP
+#### JavaScript > Vue
+# Running the app
 
-    PRE) Assuming you already installed a Vue project in your machine:
+---
+
+PRE) Assuming you already installed a Vue project in your machine:
         .../vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
 
 

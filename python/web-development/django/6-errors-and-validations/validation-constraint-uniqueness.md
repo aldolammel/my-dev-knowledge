@@ -37,7 +37,7 @@ class Procedure(models.Model):
         constraints = [
             models.UniqueConstraint(
                 fields=["platform", "proc_type", "created_by"],  # No limit for combination!
-                name="unique_procedure_type_and_platform_per_user",  # be specific, be accurated to name it!
+                name="unique_procedure_type_and_platform_per_user",  # be specific, be accurate to name it!
                 nulls_distinct=False, # Django 5.0+, PostgreSQL 15+
                 violation_error_message="You already created this procedure type associated with the current platform.",
             ),
@@ -62,7 +62,7 @@ class ProcedureAdminForm(forms.ModelForm):
 	
 	def clean(self):
 		"""Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
-		cleaned_data = super().clean()
+		cleaned_data = super().clean() or {}
 		keys = ("platform", "proc_type")
 		
 		if any(key in self.errors for key in keys):

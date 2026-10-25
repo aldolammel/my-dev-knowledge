@@ -1,9 +1,12 @@
-class ModelNameForm(forms.ModelForm):
+from django.core.exceptions import ValidationError
+
+
+class SomethingAdminForm(forms.ModelForm):
     '''Customizing the xxxxxxxxxxxxxxx detail-view in the CMS.'''
 
     class Meta:
         # Model tied used to populate it:
-        model = models.ModelName
+        model = models.Something
         # Bringing specific fields from the model:
         # Django rule: to be called here, the field CANNOT be 'editable=False', nor custom method. If the field is editable but for the form it should be readonly_fields, no problem, call it!
         fields = '__all__' # Automatically remove fields editable=False!
@@ -18,20 +21,25 @@ class ModelNameForm(forms.ModelForm):
     # Extra form fields (Not tied to the model):
     # Reserved space...
 
+    # def __init__(self, *args: Any, **kwargs: Any) -> None:
+        # """Dunder method called 'constructor' that runs automatically when a class instance is created."""
+        # super().__init__(*args, **kwargs)
+		# some_attr_from_model = self.fields["some_attr_from_model"]
+		# if isinstance(some_attr_from_model, forms.ModelChoiceField):
+			# some_attr_from_model.queryset = models.Something.objects.filter(...)
+
     # def save(self, commit=True): (RECOMMEND NOT USE IT ONCE YOU GOT THE SAVE() METHOD FROM THE TIED MODEL!)
         # """Built-in Form method persists form data to the db."""
         # More about: /python/web-development/django/9-forms/method-save.py
     
-    def clean_<fieldname>(self):
-        '''Built-in Form method to validate an individual form field before the main clean method.'''
-        something = self.cleaned_data['<fieldname>']
-        # Make some individual field validation here!
-        return something
+    # def clean_<fieldname>(self):
+        # '''Built-in Form method to validate an individual form field before the main clean method.'''
+        # something = self.cleaned_data['<fieldname>']
+        # # Make some individual field validation here!
+        # return something
     
-    def clean(self):
-    '''Form-level validation that runs after individual field validations if available.'''
-        cleaned_data = super().clean()  # Get already validated field data!
-
-        xxxxxxxxxx
-
-        return cleaned_data
+    # def clean(self):
+        # '''Form-level validation that runs after individual field validations if available.'''
+        # cleaned_data = super().clean()  # Get already validated field data!
+        # <cross-field-logic-here>
+        # return cleaned_data

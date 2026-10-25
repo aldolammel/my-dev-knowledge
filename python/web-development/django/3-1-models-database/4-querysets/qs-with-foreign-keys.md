@@ -1,6 +1,6 @@
 
 
-QUERYSETS: WITH FOREIGNER KEYS
+QUERYSETS: WITH FOREIGN KEYS
 
     Use select_related() for Foreign Keys:
 

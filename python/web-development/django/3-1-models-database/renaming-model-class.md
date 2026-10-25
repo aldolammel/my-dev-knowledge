@@ -23,3 +23,10 @@ uv run manage.py makemigrations
 uv run manage.py migrate
 ```
 
+Done.
+
+---
+## Renaming a sub-app:
+[/python/web-development/django/3-1-models-database/renaming-subapp](/python/web-development/django/3-1-models-database/renaming-subapp.md)
+
+

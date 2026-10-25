@@ -36,12 +36,11 @@ class SomethingAdminForm(...):
             if isinstance(sold_veh, forms.ModelChoiceField): # Basically you likely will use this field type in here!
                 sold_veh.queryset = models.Vehicle.objects.filter(brand=seller.brand)
             
-		# Extra fields, pre-populating:
+		# __init__ extra fields, pre-populating:
 		# Unlike fields from tied model, extra fields must be manually linked!
 		# Reserved space...
             
-	# Extra form fields (Not tied to the model):
-	# Reserved space...
+	# ...
 ```
 ### Another example when you wanna exclude the current instance when the model is self-referential:
 ```python
@@ -60,6 +59,12 @@ class SomethingAdminForm(...):
 		comp_ref = self.fields["comp_ref"]
 		if isinstance(comp_ref, forms.ModelChoiceField):
 			comp_ref.queryset = models.CompBase.objects.exclude(pk=self.instance.id)
+			
+		# __init__ extra fields, pre-populating:
+		# Unlike fields from tied model, extra fields must be manually linked!
+		# Reserved space...
+			
+	# ...
 ```
 What is self-referential model: [/python/web-development/django/3-1-models-database/relation-self-referential](/python/web-development/django/3-1-models-database/relation-self-referential.md)
 ### One more example, commonly used to filter a form field depending its previous form selection:
@@ -85,6 +90,12 @@ class SomethingAdminForm(...):
 			plane_seat = self.fields["plane_seat"]
 			if isinstance(plane_seat, forms.ModelChoiceField):
 				plane_seat.queryset = models.PlaneSeat.objects.filter(plane_model_id=plane_model_id)
+		
+		# __init__ extra fields, pre-populating:
+		# Unlike fields from tied model, extra fields must be manually linked!
+		# Reserved space...
+	
+	# ...
 ```
 
 ---

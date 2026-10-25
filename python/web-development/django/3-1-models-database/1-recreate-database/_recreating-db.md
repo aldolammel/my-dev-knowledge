@@ -40,10 +40,10 @@ If your app is multilingual and are using prefix_language mandatory, your new db
 
 1. [ ] Edit your `.env` file as needed (the new db name, for example);
 2. [ ] BE AWARE: close all Terminals/Prompts you ran with the old `.env` before (it avoids issues with old environment variables)
-3. [ ] Run `makemigrations` for each sub-app, and then run `migrate` for them;
+3. [ ] Run `makemigrations` for every sub-apps, and then run `migrate` for them;
 4. [ ] (If applicable) If you'll use the CMS, run `createsuperuser` command;
 5. [ ] (If applicable) For multilingual apps, and have `prefix_language` mandatory, add manually at least one language in the language table for you are allowed to use the CMS;
-6. [ ] Run `runserver` to test Django!
+6. [ ] Test Django: [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
 
 ---
 ## How to re-install only Django:

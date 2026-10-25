@@ -3,15 +3,12 @@
 
 ---
 ## raise ValidationError(): 
-
-[/python/web-development/django/6-errors-and-validations/raise-ValidationError.py](/python/web-development/django/6-errors-and-validations/raise-ValidationError.py)
+[/python/web-development/django/6-errors-and-validations/raise-ValidationError](/python/web-development/django/6-errors-and-validations/raise-ValidationError.md)
 ## raise ModelClass.DoesNotExist():
-
 [/python/web-development/django/6-errors-and-validations/raise-Model-DoesNotExists.py](/python/web-development/django/6-errors-and-validations/raise-Model-DoesNotExists.py)
 
 ---
 ## More about native Python errors:
-
 [/python/python-knowledge/errors/\_errors-most-common.py](/python/python-knowledge/errors/_errors-most-common.py)
 
 - raise Exception()
