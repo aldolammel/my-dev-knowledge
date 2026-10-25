@@ -57,13 +57,18 @@ class SomethingInitialStepForm(forms.ModelForm):
     """Screen 1. Never saved; only validated and stored in the session."""
 
     class Meta:
+        # Model tied used to populate it:
         model = models.Something
+        # Bringing specific fields from the model:
         fields = consts.TPL_SOMETHING_READONLY_FIELDS
-    
+
     def _post_clean(self):
 		"""Built-in Form method that performs additional model-level cleaning and validation after the form's standard fields and form-wide clean methods have executed."""
 		# Skip Model.full_clean() to avoid Model Classes using clean() get stuck in screen 1 related their fields visible only through next screens.
 		pass
+	
+	# Extra form fields (Not tied to the model):
+    # Reserved space...
 ```
 In case you need to `clean()` fields right in the initial screen, use the form `clean()`: [/python/web-development/django/9-forms/method-clean](/python/web-development/django/9-forms/method-clean.md)
 
@@ -97,7 +102,10 @@ from . import consts, forms, models
 class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
     """xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"""
     
-    # ... If applicable, keep your list_display, list_filter, filter_horizontal, search_fields, readonly_fields.
+    # Custom form:
+	# Reserved space ONLY for screen 2 customization (if needed) cuz, for multi-step case, screen 1 (custom) is called by custom method further below.
+    
+	# add_fieldsets = () # DON'T use it here 'cuz this adding form is a custom one in forms.py!!!
     
     # All fields exclusively for the CMS' EXISTING object detail-view:
     fieldsets = (
@@ -106,20 +114,19 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
 	        {"fields": consts.TPL_SOMETHING_READONLY_FIELDS},
         ),
         (
-	        "Step details",
+	        "<NAME OF THIS OBJECT> details",
 	        {
 	            "fields": (
-					"sub_step_of",
-					"comp_loc_area",
-					"component",
-					"what_to_do",
-					"plane_seat",
-					"applicabilities",
+					"xxxxxxx",
+					"xxxxxxx",
+					"xxxxxxx",
+					"xxxxxxx",
+					"xxxxxxx",
+					"xxxxxxx",
 	            ),
 	        },
         ),
     )
-
 
     def get_readonly_fields(self, request, obj=None):
 		"""Built-in CMS method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
@@ -128,35 +135,37 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
 			*consts.TPL_SOMETHING_READONLY_FIELDS,
 		]
 
+		# - - - - - STARTS EXAMPLE READONLY FIELDS CUSTOMIZATION - - OPTIONAL - - - - - - - - 
 		# Defining fields of the initial screen that will be used to create conds for the next one:
-		if obj is not None:
-			step_type = obj.step_type
-			step_hierarchy = obj.step_hierarchy
-		else:
-			step_type = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_type")
-			step_hierarchy = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_hierarchy")
+		#if obj is not None:
+		#	step_type = obj.step_type
+		#	step_hierarchy = obj.step_hierarchy
+		#else:
+		#	step_type = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_type")
+		#	step_hierarchy = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}).get("step_hierarchy")
 		
 		# Conds to convert regular fields to read-only based on what was selected in initial screen:
-		if (
-			step_type == consts.INT_STEP_TYPE_ACTION and
-			step_hierarchy == consts.INT_STEP_COMMON_HIER_NORMAL
-		):
-			readonly.append("comp_loc_area")
-		if (
-			step_type == consts.INT_STEP_TYPE_ACTION and
-			step_hierarchy == consts.INT_STEP_COMMON_HIER_GROUP
-		):
-			readonly.extend(["sub_step_of", "what_to_do", "plane_seat", "applicabilities"])
-		if (
-			step_type == consts.INT_INT_TYPE_INFO and
-			step_hierarchy == consts.INT_STEP_COMMON_HIER_NORMAL
-		):
-			readonly.extend(["comp_loc_area", "component", "plane_seat"])
-		if (
-			step_type == consts.INT_STEP_TYPE_INFO and
-			step_hierarchy == consts.INT_STEP_COMMON_HIER_GROUP
-		):
-			readonly.extend(["sub_step_of", "comp_loc_area", "component", "plane_seat"])
+		#if (
+		#	step_type == consts.INT_STEP_TYPE_ACTION and
+		#	step_hierarchy == consts.INT_STEP_COMMON_HIER_NORMAL
+		#):
+		#	readonly.append("comp_loc_area")
+		#if (
+		#	step_type == consts.INT_STEP_TYPE_ACTION and
+		#	step_hierarchy == consts.INT_STEP_COMMON_HIER_GROUP
+		#):
+		#	readonly.extend(["sub_step_of", "what_to_do", "plane_seat", "applicabilities"])
+		#if (
+		#	step_type == consts.INT_INT_TYPE_INFO and
+		#	step_hierarchy == consts.INT_STEP_COMMON_HIER_NORMAL
+		#):
+		#	readonly.extend(["comp_loc_area", "component", "plane_seat"])
+		#if (
+		#	step_type == consts.INT_STEP_TYPE_INFO and
+		#	step_hierarchy == consts.INT_STEP_COMMON_HIER_GROUP
+		#):
+		#	readonly.extend(["sub_step_of", "comp_loc_area", "component", "plane_seat"])
+		# - - - - - ENDS EXAMPLE READONLY FIELDS CUSTOMIZATION - - OPTIONAL - - - - - - - - 
 		
 		# Returning:
 		return tuple(readonly)
@@ -168,7 +177,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
             path(
                 "add/something/",
                 self.admin_site.admin_view(self.add_step_init_view),
-                name=f"{self.opts.app_label}_{self.opts.model_name}_adding_step_init",
+                name=f"{self.opts.app_label}_{self.opts.model_name}_add_step_init",  # This 'step' = stage = screen ;)
             ),
         ]
         # Custom URLs must come first, or "<path:object_id>/" swallows them.
@@ -202,11 +211,11 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
         context = {
             **self.admin_site.each_context(request),
             "opts": self.opts,
-            "title": "Adding Step Common (1 of 2)",
+            "title": "Adding Something (1 of 2)",
             "form": form,
         }
         return TemplateResponse(
-            request, "admin/procedures/something/adding_screen_1.html", context
+            request, "admin/subappname/something/adding_screen_1.html", context
         )
 
 
@@ -218,7 +227,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
             if request.GET.get(core_consts.STR_MULTI_STEP_URL_PARAM) == "2":
                 messages.info(request, "Choose the basic of Step Common first.")
             return HttpResponseRedirect(
-				reverse(f"admin:{self.opts.app_label}_{self.opts.model_name}_adding_step_init")
+				reverse(f"admin:{self.opts.app_label}_{self.opts.model_name}_add_step_init")  # This 'step' = stage = screen ;)
 			)
         return super().add_view(request, form_url, extra_context)
 
@@ -268,7 +277,7 @@ def get_readonly_fields(self, request, obj=None):
 ```
 ---
 ## 6) Template matters:
-6.1) Create the first step of your adding form, e.g., `/apps/procedures/templates/admin/procedures/something/adding_screen_1.html:`
+6.1) Create the first step of your adding form, e.g., `/apps/subapp_name/templates/admin/subapp_name/something/adding_screen_1.html:`
 ```html
 {% extends "admin/base_site.html" %}
 {% load i18n admin_urls %}
@@ -300,7 +309,7 @@ def get_readonly_fields(self, request, obj=None):
   {% if not original %}
     <p>
       Screen: 2 of 2 —
-      <a href="{% url 'admin:procedures_something_adding_step_init' %}">Back to previous screen</a>
+      <a href="{% url 'admin:suappname_something_add_step_init' %}">Back to previous screen</a>
     </p>
   {% endif %}
 {% endblock %}

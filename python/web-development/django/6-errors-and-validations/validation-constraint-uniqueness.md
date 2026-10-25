@@ -36,7 +36,11 @@ class Procedure(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["platform", "proc_type", "created_by"],  # No limit for combination!
+                fields=[
+	                "platform",
+	                "proc_type",
+	                "created_by",  # created_by demands this model admin form actions!
+				],
                 name="unique_procedure_type_and_platform_per_user",  # be specific, be accurate to name it!
                 nulls_distinct=False, # Django 5.0+, PostgreSQL 15+
                 violation_error_message="You already created this procedure type associated with the current platform.",
@@ -44,44 +48,67 @@ class Procedure(models.Model):
         ]
 ```
 Now, run `makemigrations` and `migrate` commands.
+
+Done!
 ### Are you getting `IntegrityError`?
-If so, it's because you're using in `fields=[]` a class attribute/field that uses `editable=False`, what means this attribute is excluded and not delivered to the form (in this case, `created_by` is `editable=False`). At ModelForm `clean()` time the form has no idea who the logged-in user is, because forms don’t have access to `request` by default. To pass the user to the form’s `clean()`, first, let's create a custom form that will figure out who is the current user:
+If so, it's because you're using, in *UniqueConstraint* `fields=[]`, one or more class attributes/fields using `editable=False` argument, what means these attributes are excluded and not deliver to the form (in this case, `created_by` is `editable=False`). Once the ModelForm `clean()` runs, the form has no idea who the logged-in user is. It happens because forms don’t have access to `request` by default. To pass the current user to the form’s `clean()`, first, let's create a custom form that will figure out who is the current user. Do it:
 
 In `forms.py`:
 ```python
 class ProcedureAdminForm(forms.ModelForm):
-	class Meta:
-		model = models.Procedure
-		fields = "__all__"
+	"""..."""
 	
+	class Meta:
+		# Model tied used to populate it:
+		model = models.Procedure
+		# Bringing specific fields from the model:
+		fields = "__all__"
+
 	def __init__(self, *args, request=None, **kwargs):
 		"""Dunder method called 'constructor' that runs automatically when a class instance is created."""
 		super().__init__(*args, **kwargs)
-		# In order to tell the ProcedureAdmin form who is the current user without to depend of the save_model() method (too late for this case):
+		# Why I'm using this dunder init + request to extract the current user:
+		# Once created_by is editable=False, it doesn't exist to the form, making clean() blocked to validate that field. Unfortunately, neither save_model() cannot tell me which user is here because the UniqueConstraints validation trigger first, creating an error on screen. To to create a friendly message on the form (app-level) with a field not present originally, I need to request the user from other way (this one below):
 		self.request = request
+		
+		# __init__ extra fields, pre-populating:
+		# Unlike fields from connected model, extra fields must be manually linked!
+		# Reserved space...
 	
 	def clean(self):
 		"""Built-in Form method to cross-field custom validations at the form level that runs after individuals' clean. Reminder: any clean isn't allowed directly in admin.py."""
 		cleaned_data = super().clean() or {}
-		keys = ("platform", "proc_type")
 		
+		# Those model UniqueConstraint fields, except the editable=False ones:
+		keys = ("platform", "proc_type")
 		if any(key in self.errors for key in keys):
 			return cleaned_data
 		
-		# Once now finally we know who is the current user, let's tell it even if the instance doesn't exist yet:
+		# Once we know who's the current user, let's keep the data even though no obj instance yet:
 		author = self.instance.created_by if self.instance.pk else self.request.user
-		# If current procedure and type exists for the user (now we know who is it), warn them:
+		
+		# If current instance is violating the model UniqueConstraint rule per user, warn it:
 		if (
 			models.Procedure.objects.filter(
 				created_by=author,
 				# dict comprehension:
-				**{key: cleaned_data.get(key) for key in keys},  # Type: ignore[union-attr]
+				**{
+					key: (
+						cleaned_data[key]
+						if key in cleaned_data
+						else getattr(self.instance, f"{key}_id")
+					)
+					for key in keys
+				},
 			)
 			.exclude(pk=self.instance.pk)
 			.exists()
 		):
 			raise forms.ValidationError("You already created this procedure type associated with the current platform.")
 		return cleaned_data
+		
+	# Extra form fields (Not tied to the model):
+	# Reserved space...
 ```
 
 After that, tie the custom form in the right admin model:
@@ -95,7 +122,10 @@ class ProcedureAdmin(...):
 	form = forms.ProcedureAdminForm
 	
 	# ...
-	
+```
+
+Still in `admin.py`, if you are NOT using [multi-step adding detail-view](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md), do it below, otherwise, take the further `get_form()` solution:
+```python
     def get_form(self, request, obj=None, change=False, **kwargs):
 		"""Built-in CMS method to customize the form that's displayed in the interface."""
 		form = super().get_form(request, obj, change, **kwargs)
@@ -107,7 +137,26 @@ class ProcedureAdmin(...):
 			
 		return RequestForm
 ```
-Done! The combined `UniqueConstraint` with a non-form field has friendly warn message if something wrong.
+Or this solution for [multi-step adding detail-view](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md):
+```python
+	def get_form(self, request, obj=None, change=False, **kwargs):
+		"""..."""
+		form = super().get_form(request, obj, change=change, **kwargs)
+		locked = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}) if obj is None else {}
+		
+		class MultiStepForm(form): # type: ignore[valid-type, misc]
+			def __init__(self, *args, **kw):
+				"""..."""
+				# Admin passes no instance on add (GET or POST).
+				if obj is None and kw.get("instance") is None:
+					kw["instance"] = build_multi_screen_instance(models.ProcTypeGroup, locked)
+				kw["request"] = request
+				super().__init__(*args, **kw)
+		
+		return MultiStepForm
+```
+
+Done! The combined `UniqueConstraint` with one or more fields using `editable=False` argument will work fine.
 
 ---
 ## Conditional example - demands `UniqueConstraint()`

@@ -31,12 +31,11 @@ At first, create it in `validators.py` file:
 ```python
 from django.core.exceptions import ValidationError
 
-def validate_user_agreement(instance):
+def validate_user_agreement(is_superuser: bool = False, accepted_terms: bool = False):
 	"""Server-side validation for ordinary users to accept the app's terms."""
-	if not instance.is_superuser and not instance.accepted_terms:
+	if not is_superuser and not accepted_terms:
 		raise ValidationError(
-			"To use our services, you must read and accept our terms.",
-			code="required",
+			{"accepted_terms": "To use our services, you must read and accept our terms."}
 		)
 ```
 
@@ -73,7 +72,7 @@ class User(AbstractUser):
 	email = models.EmailField(
 		blank=True,
 	)
-	# Above, those original fields (from AbstractUser) that are not overridden, they'll be working normally!
+	# Except fields right above, those original fields from AbstractUser are not been overridden, so they're working as expected!
 	# Below, new fields to extending the User features:
 	accepted_terms = models.BooleanField(
 		default=False,
@@ -100,7 +99,7 @@ class User(AbstractUser):
 	def clean(self):
 		"""Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
 		super().clean() # preserves Django’s built-in model cleaning!
-		validators.validate_user_agreement(self)
+		validators.validate_user_agreement(self.is_superuser, self.accepted_terms)
 
 class UserProfile(models.Model):
 	"""This provides a reusable one-to-one profile model. A profile wont be created automatically by this model. To create one during registration or when the front end first needs it, such as with UserProfile.objects.get_or_create(user=user)."""
