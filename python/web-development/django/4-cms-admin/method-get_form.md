@@ -24,7 +24,7 @@ While commonly used in Django Admin for CMS customization, `get_form()` is avail
 class MyModelAdmin(admin.ModelAdmin):
 	# ...
     def get_form(self, request, obj=None, change=False, **kwargs):
-        '''Built-in CMS method to customize the form that's displayed in the interface.'''
+        '''Built-in admin method to customize the form that's displayed in the interface.'''
         form = super().get_form(request, obj, change, **kwargs)
         # Admin-specific customizations
         return form
@@ -41,7 +41,7 @@ from . import models
 class PagexPostAdmin(admin.ModelAdmin):
 	# ...
     def get_form(self, request, obj=None, change=False, **kwargs):
-        '''Built-in CMS method to customize the form that's displayed in the interface.'''
+        '''Built-in admin method to customize the form that's displayed in the interface.'''
         form = super().get_form(request, obj, change, **kwargs)
         # ...
         # Customizing the dropdown-menu "blog" foreignkey field:

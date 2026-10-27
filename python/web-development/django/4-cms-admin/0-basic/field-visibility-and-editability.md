@@ -131,7 +131,7 @@ def get_fields(self, request, obj=None):
 	return fields
 
 def get_readonly_fields(self, request, obj=None):
-	"""Built-in CMS method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
+	"""Built-in admin method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
 	if obj and obj.<another_field> condition:
 		return ['<field_to_clean_and_lock>']
 	return []

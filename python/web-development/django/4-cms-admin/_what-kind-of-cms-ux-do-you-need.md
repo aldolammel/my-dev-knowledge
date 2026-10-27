@@ -24,10 +24,8 @@ For new objects, through the adding detail-view, select an option first (using a
 
 ---
 ## C) Detail-view listing inline entries from another model class:
-
-Regardless new or existing object, you wanna see an *inline* table where every row comes from another model class object. You must add and/or remove each row if needed;
-
-[/python/web-development/django/4-cms-admin/1-customizing/detailview-inline-data-from-another-model.py](/python/web-development/django/4-cms-admin/1-customizing/detailview-inline-data-from-another-model.py)
+Regardless new or existing object, you wanna see an *inline* table where every row comes from another model class object. You must add and/or remove each row if needed:
+[/python/web-development/django/4-cms-admin/1-customizing/detailview-inline-data-from-another-model](/python/web-development/django/4-cms-admin/1-customizing/detailview-inline-data-from-another-model.md)
 
 ---
 ## D) xxxxxxxxx

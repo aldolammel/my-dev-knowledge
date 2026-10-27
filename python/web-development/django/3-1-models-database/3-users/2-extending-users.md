@@ -57,12 +57,6 @@ class User(AbstractUser):
 	# Below, new fields to extending the User features:
 	
 	# This attribute can be invisible once the reason behind the hood is to make this more flexible, depending the project:
-	profile_type = models.PositiveSmallIntegerField(
-		default=1,
-		blank=False,
-		verbose_name="Profile type",
-		help_text="",
-	)
 	accepted_terms = models.BooleanField(
 		default=False,
 		verbose_name="Accepted Terms",
@@ -88,7 +82,7 @@ class User(AbstractUser):
 		
 	def clean(self):
 		"""Built-in Model method to cross-field custom validations at the model-level once the code explicit calls full_clean() before save() the instance."""
-		super().clean() # preserves Django’s built-in model cleaning!
+		super().clean()
 		validators.validate_user_agreement(self.is_superuser, self.accepted_terms)
 
 class UserProfile(models.Model):
@@ -97,6 +91,13 @@ class UserProfile(models.Model):
 		settings.AUTH_USER_MODEL,
 		on_delete=models.CASCADE,  # Del the UserProfile if the User is deleted.
 		related_name="profile",
+	)
+	profile_type = models.PositiveSmallIntegerField(
+		# This attr can be ignored in CMS and front-end case you don't need, but keep its value 1!
+		default=1,
+		blank=False,
+		# verbose_name="Profile Type",
+		# help_text="",
 	)
 	platform = models.ForeignKey(
 		Platform,
@@ -180,8 +181,6 @@ SESSION_COOKIE_AGE = 2419200  # a month
 LOGIN_URL = 'accounts:login'  # It's built-in.
 LOGIN_REDIRECT_URL = 'accounts:profile'
 LOGOUT_REDIRECT_URL = 'accounts:login'
-# Development: password reset emails print to the terminal running runserver:
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ```
 
 ---
@@ -245,6 +244,7 @@ class ProfileForm(forms.ModelForm):
         model = models.UserProfile
         # Ordering fields on the form:
         fields = (
+	        # "profile_type",
 	        "platform",
 	        "lang_writing",
 	        "bio",
@@ -291,7 +291,6 @@ Why: Reset email template - django’s default email template reverses `password
 
 In `/apps/accounts/admin.py`:
 ```python
-# /apps/accounts/admin.py
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 #from django.utils.translation import gettext_lazy as _
@@ -300,12 +299,14 @@ from . import forms, models
 
 
 class UserProfileInline(admin.StackedInline):
+	'''xxxxxxxxxxxxxxxxxxxxxxxx'''
     model = models.UserProfile
     fk_name = "user"  # required: UserProfile has two FKs to User (user and updated_by)
     can_delete = False  # the profile lives and dies with its user
     extra = 0
     max_num = 1
     fields = (
+	    # "profile_type",
 	    "platform",
 		"lang_writing",
 		"bio",
@@ -320,10 +321,11 @@ class UserProfileInline(admin.StackedInline):
 	)
 
 
-@admin.register(User)
+@admin.register(models.User)
 class UserAdmin(DjangoUserAdmin):
+	'''xxxxxxxxxxxxxxxxxxxxxxxx'''
     form = forms.AdminUserChangeForm
-    add_form = AdminUserCreationForm
+    add_form = forms.AdminUserCreationForm
     inlines = [UserProfileInline]
 
     list_display = (
@@ -379,24 +381,26 @@ class UserAdmin(DjangoUserAdmin):
 	        "Audit", {
 				"fields": (
 					"updated_at",
-					"updated_by".
+					"updated_by",
 				)
 			}
 		),
     )
 
     def get_inline_instances(self, request, obj=None):
-        # On the add page there is no user yet. The post_save signal creates the profile,
-        # so showing the inline here would try to create a second one (unique violation).
+	    '''Built-in admin method that returns the inline model admin instances to be displayed on the model's admin page.'''
+        # On the add page there is no user yet. The post_save signal creates the profile, so showing the inline here would try to create a second one (unique violation).
         if obj is None:
             return []
         return super().get_inline_instances(request, obj)
 
     def save_model(self, request, obj, form, change):
+	    '''Built-in admin method that allows you to customize what happens when a model is saved through the Django CMS interface.'''
         obj.updated_by = request.user
         super().save_model(request, obj, form, change)
 
     def save_formset(self, request, form, formset, change):
+	    '''Built-in admin method that customizes the saving objs submitted via inline formset.'''
         instances = formset.save(commit=False)
         for instance in instances:
             instance.updated_by = request.user
@@ -404,16 +408,19 @@ class UserAdmin(DjangoUserAdmin):
         formset.save_m2m()
 
 
-@admin.register(UserProfile)
+@admin.register(models.UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
+	'''xxxxxxxxxxxxxxxxxxxxxxxx'''
     list_display = (
 	    "user",
+	    # "profile_type",
 	    "platform",
 	    "lang_writing",
 	    "created_at",
 	    "updated_at",
 	)
     list_filter = (
+		# "profile_type",
 		"platform",
 		"lang_writing",
 	)
@@ -425,6 +432,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 	)
     fields = (
 	    "user",
+	    # "profile_type",
 	    "platform",
 	    "lang_writing",
 	    "bio",
@@ -451,7 +459,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 		return False  # delete the User instead; the profile cascades.
 
     def save_model(self, request, obj, form, change):
-	    """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
+	    """Built-in admin method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         obj.updated_by = request.user
         super().save_model(request, obj, form, change)
 
@@ -530,6 +538,7 @@ class OwnProfileMixin(LoginRequiredMixin):
 
     def get_object(self, queryset=None):
         return get_object_or_404(
+	        # TODO Should you include profile_type?
             models.UserProfile.objects.select_related("user", "platform", "lang_writing", "bio"),
             user=self.request.user,
         )
@@ -617,10 +626,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 ---
 ## X) Test it:
 [/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing](/python/web-development/django/1-install-and-first-steps/2.1-installed-project-testing.md)
-
----
-## X) (If applicable) User profile page (front-end):
-[python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile-DELETE](python/web-development/django/3-1-models-database/3-users/3-extending-users-with-profile-DELETE.md)
 
 ---
 

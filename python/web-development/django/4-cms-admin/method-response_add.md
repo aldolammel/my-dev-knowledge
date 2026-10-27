@@ -13,7 +13,7 @@ xxxxx. So it does:
 ## Structure:
 ```python
 def response_add(self, request, obj, post_url_continue=None):
-	'''Built-in CMS method that determines the HTTP response after a new model instance is successfully added.'''
+	'''Built-in admin method that determines the HTTP response after a new model instance is successfully added.'''
 	xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
@@ -26,7 +26,7 @@ WIZARD_SESSION_KEY = "step_common_wizard"
 
 # As a method of a admin model class:
 def response_add(self, request, obj, post_url_continue=None):
-	'''Built-in CMS method that determines the HTTP response after a new model instance is successfully added.'''
+	'''Built-in admin method that determines the HTTP response after a new model instance is successfully added.'''
 	request.session.pop(WIZARD_SESSION_KEY, None)
 	return super().response_add(request, obj, post_url_continue)
 ```

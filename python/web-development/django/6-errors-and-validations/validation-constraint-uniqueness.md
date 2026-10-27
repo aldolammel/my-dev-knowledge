@@ -127,7 +127,7 @@ class ProcedureAdmin(...):
 Still in `admin.py`, if you are NOT using [multi-step adding detail-view](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md), do it below, otherwise, take the further `get_form()` solution:
 ```python
     def get_form(self, request, obj=None, change=False, **kwargs):
-		"""Built-in CMS method to customize the form that's displayed in the interface."""
+		"""Built-in admin method to customize the form that's displayed in the interface."""
 		form = super().get_form(request, obj, change, **kwargs)
 		
 		class RequestForm(form):  # Type: ignore[valid-type]

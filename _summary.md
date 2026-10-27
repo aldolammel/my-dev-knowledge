@@ -59,11 +59,11 @@ Here below you find NOT the entire content, but a few examples of what you can f
 
 - What is it: [/environment-variables/_about](/environment-variables/_about.md)
 - .env for **local** development:
-	- In back-end, example: [/environment-variables/env-for-local/in-backend/.env](/environment-variables/env-for-local/in-backend/.env)
-	- In front-end, example: [/environment-variables/env-for-local/in-frontend/.env](/environment-variables/env-for-local/in-frontend/.env)
+	- In back-end, example: [/environment-variables/env-for-local/in-backend/env](/environment-variables/env-for-local/in-backend/env.md)
+	- In front-end, example: [/environment-variables/env-for-local/in-frontend/env](/environment-variables/env-for-local/in-frontend/env.md)
 - .env for **cloud** development:
-	- In back-end, example: [/environment-variables/env-for-cloud/in-backend/.env](/environment-variables/env-for-cloud/in-backend/.env)
-	- In front-end, example: [/environment-variables/env-for-cloud/in-frontend/.env](/environment-variables/env-for-cloud/in-frontend/.env)
+	- In back-end, example: [/environment-variables/env-for-cloud/in-backend/env](/environment-variables/env-for-cloud/in-backend/env.md)
+	- In front-end, example: [/environment-variables/env-for-cloud/in-frontend/env](/environment-variables/env-for-cloud/in-frontend/env.md)
 - Using environment vars:
 	- On Django: [/python/web-development/django/3-1-models-database/env-vars-on-django](/python/web-development/django/3-1-models-database/env-vars-on-django.md)
 	- On Vue: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/utils/env.js)

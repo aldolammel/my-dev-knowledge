@@ -1,3 +1,4 @@
+```python
 # REMEMBER: .ENV FILES ONLY FOR DEVELOPMENT/STAGING ENVIRONMENTS! NEVER IN PRODUCTION!
 # FRONTEND SETTINGS:
 # ATTENTION: replace 'FRONT_' for 'VITE_' if you're using Vue with Vite build-tool.
@@ -12,3 +13,4 @@ FRONT_PROD_BASE_URL=https://product-main-domain.com
 # Under Production, replace it by VITE_PROD_BASE_URL value!
 #VITE_BASE_URL=http://localhost:8000
 #VITE_ROUTER_BASE=/
+```

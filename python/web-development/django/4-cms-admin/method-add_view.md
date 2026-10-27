@@ -26,7 +26,7 @@ WIZARD_STEP_PARAM = "step"
 
 # screen 2:
 def add_view(self, request, form_url="", extra_context=None):
-	'''Built-in CMS method that handles the view logic and form processing for adding a new model instance in the admin interface.'''
+	'''Built-in admin method that handles the view logic and form processing for adding a new model instance in the admin interface.'''
 	
 	has_data = WIZARD_SESSION_KEY in request.session
 	if request.GET.get(WIZARD_STEP_PARAM) != "2" or not has_data:

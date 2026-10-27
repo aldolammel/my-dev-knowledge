@@ -1,3 +1,4 @@
+```python
 # REMEMBER: .ENV FILES ONLY FOR DEVELOPMENT/STAGING ENVIRONMENTS! NEVER IN PRODUCTION!
 # PROJECT SETTINGS:
 DEBUG=True
@@ -15,9 +16,5 @@ ALLOWED_HOSTS=.exampledomain.com,localhost,127.0.0.1
 # Sometimes, database_url can be replaced by its public value version.
 DATABASE_URL=postgresql://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # EMAIL SETTINGS:
-# Reserved space  # /python/web-development/django/13-email/config-settings.txt
-# Other e-mails are in /core/consts.py!
-#EMAIL_HOST_USER=abcoo.ideias@gmail.com
-# https://myaccount.google.com/apppasswords
-#EMAIL_HOST_PASSWORD=password_generated_by_gmail_for_example
-#DEFAULT_FROM_EMAIL=abcoo.ideias@gmail.com
+# Reserved space
+```

@@ -1,42 +1,37 @@
+#### Python > Django > E-email
+# Configuring e-mail service in Django
+
+---
+## 1) In `settings.py`:
+```python
+# ...
+
+# Email settings:
+EMAIL_BACKEND = env('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=True)
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+```
+
+---
+## 2) Update your `.env` file:
+```python
+# ...
+
+# EMAIL SETTINGS:
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+# ...
+# Include this note in there: Other e-mails can be listed in /core/consts.py!
+```
+Model of local back-end .env: [env](/environment-variables/env-for-local/in-backend/env.md)
+
+---
+## In `/core/consts.py:`
+Sometimes can exist more emails to list or listed in here: `/core/consts.py`!
+
+---
 
 
-CONFIGURING EMAIL SERVICE IN DJANGO
-
-    1) In settings.py:
-
-        # Email settings
-        EMAIL_BACKEND = env('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
-        EMAIL_HOST = env('EMAIL_HOST')
-        EMAIL_PORT = env('EMAIL_PORT')
-        EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=True)
-        EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-        EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-        DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
-
-
-    2) Update your .env file:
-    
-        >> E.g. using Gmail settings:
-
-            # EMAIL SETTINGS:
-            EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-            EMAIL_HOST=smtp.gmail.com
-            EMAIL_PORT=587
-            EMAIL_USE_TLS=True
-            # Other e-mails are in core/consts.py!
-            EMAIL_HOST_USER=abcoo.ideias@gmail.com
-            EMAIL_HOST_PASSWORD=password_generated_by_gmail # https://myaccount.google.com/apppasswords
-            DEFAULT_FROM_EMAIL=abcoo.ideias@gmail.com
-
-
-            2.1) How to generate a password by Gmail:
-                https://myaccount.google.com/apppasswords
-                
-                Or:
-                >> Google Account -> Security -> 2-Step Verification -> App Passwords -> Select App -> Generate
-
-                If App Passwords option is not available, make sure you have enabled 
-                "2-Step Verification is enabled".
-
-                After that, go to Security home and, through the search bar, search for "App Passwords".
-            

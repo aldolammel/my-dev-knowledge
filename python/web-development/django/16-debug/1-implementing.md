@@ -5,7 +5,7 @@
 ## Basic:
 
 **1) Create your environment variables, and add `DEBUG=True` in there:**
-[/environment-variables/env-for-local/in-backend/.env](/environment-variables/env-for-local/in-backend/.env)
+[/environment-variables/env-for-local/in-backend/env](/environment-variables/env-for-local/in-backend/env.md)
 
 **2) In `core/settings.py`, store that environment variable in a `DEBUG` var:**
 [/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py](/python/web-development/django/z-project-examples/proj-aldolammel-style/core/settings.py)

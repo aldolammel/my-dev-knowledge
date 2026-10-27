@@ -49,7 +49,7 @@ Same logic for cases using `models.py` or `serializers.py`.
 class SaveUserMixin:
     """Automatically passes the current user to the model's save method."""
     def save_model(self, request, obj, form, change):
-        """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
+        """Built-in admin method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
 

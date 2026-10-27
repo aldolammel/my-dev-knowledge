@@ -3,10 +3,15 @@
 
 ---
     
-PROMPT: In the Python Django context, what does the XXXXXXXXX method do in short terms? Is it exclusive usage for Models?
+PROMPT 1:
+In the Python Django context, what does the XXXXXXXXX method do in short terms? Is it exclusive usage for Models (models.py)?
 
-xxxxx. So it does:
+PROMPT 2:
+Right. So, shortly and in a few bullets, what does it do?
 
+The `xxxxxxxxxxxxx()` is a built-in model method that xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+So, it does:
 - xxxxx
 
 ---

@@ -16,7 +16,7 @@ from django.urls import path
 
 class MyModelAdmin(admin.ModelAdmin):
 	def get_urls(self):
-		'''Built-in CMS method that allows you to add or customize URL patterns.'''
+		'''Built-in admin method that allows you to add or customize URL patterns.'''
 		urls = super().get_urls()
 		custom_urls = [
 			path(

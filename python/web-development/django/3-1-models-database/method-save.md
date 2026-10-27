@@ -16,7 +16,7 @@ In short, the `save()` method in Django models.py persists model instances to th
 
 The `save()` for Django Models is NOT the same of [save() for Django Forms](/python/web-development/django/9-forms/method-save.py)!
 
-The `save()` for Django Models is NOT the same of [save_model() for Admin Models](/python/web-development/django/4-cms-admin/method-save_model.py)!
+The `save()` for Django Models is NOT the same of [save_model() for Admin Models](/python/web-development/django/4-cms-admin/method-save_model.md)!
 
 ---
 # Structure

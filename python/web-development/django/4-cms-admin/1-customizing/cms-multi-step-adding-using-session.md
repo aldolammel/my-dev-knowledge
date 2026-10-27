@@ -129,7 +129,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
     )
 
     def get_readonly_fields(self, request, obj=None):
-		"""Built-in CMS method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
+		"""Built-in admin method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object."""
 		readonly = [
 			*super().get_readonly_fields(request, obj),
 			*consts.TPL_SOMETHING_READONLY_FIELDS,
@@ -172,7 +172,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
 		
 		
     def get_urls(self):
-	    """Built-in CMS method that allows you to add or customize URL patterns."""
+	    """Built-in admin method that allows you to add or customize URL patterns."""
         custom = [
             path(
                 "add/something/",
@@ -233,7 +233,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
 
 
     def get_form(self, request, obj=None, change=False, **kwargs):
-	    '''Built-in CMS method to customize the form that's displayed in the interface.'''
+	    '''Built-in admin method to customize the form that's displayed in the interface.'''
         form = super().get_form(request, obj, change=change, **kwargs)
         if obj is not None:
             return form
@@ -251,7 +251,7 @@ class SomethingAdmin(SaveUserMixin, admin.ModelAdmin):
 
 
     def response_add(self, request, obj, post_url_continue=None):
-	    '''Built-in CMS method that determines the HTTP response after a new model instance is successfully added.'''
+	    '''Built-in admin method that determines the HTTP response after a new model instance is successfully added.'''
         request.session.pop(consts.STR_SOMETHING_SESSION_KEY, None)
         return super().response_add(request, obj, post_url_continue)
 ```
