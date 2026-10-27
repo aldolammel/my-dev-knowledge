@@ -1,10 +1,24 @@
 #### Python > Django:
-# Re-creating the project database
+# Re-creating the database
 
 ---
 ## If the db structure is good, and you just wanna erase its stored data:
 
 If it's okay to preserve tables and columns of the current database, just do a `flush` on it: [/python/web-development/django/3-1-models-database/1-recreate-database/clean-database](/python/web-development/django/3-1-models-database/1-recreate-database/clean-database.md)
+
+---
+## Re-creating just a sub-app table on the database:
+
+Before:
+1. Delete all migrations files: [/python/web-development/django/3-1-models-database/1-recreate-database/deleting-all-migrations](/python/web-development/django/3-1-models-database/1-recreate-database/deleting-all-migrations.md)
+
+==NEVER TESTED!==
+```bash
+# recreate the database (adjust name/user to yours)
+dropdb <subapp_name> && createdb <subapp_name_again>
+```
+
+And then run `makemigrations` and `migrate` commands.
 
 ---
 ## If you need to re-create your db from the beginning:
@@ -34,6 +48,7 @@ If your app is multilingual and are using prefix_language mandatory, your new db
             
 **4) Delete all migration-folder content (except the dunder init):**
 
+- [ ] Delete all migrations files: [/python/web-development/django/3-1-models-database/1-recreate-database/deleting-all-migrations](/python/web-development/django/3-1-models-database/1-recreate-database/deleting-all-migrations.md)
 - [ ] Check if you are visualizing the `__pycache__` folder. It should be deleted too, but the project settings could be hidden them!
 
 **5) And keep going:**

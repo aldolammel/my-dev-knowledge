@@ -44,6 +44,7 @@ class Product(models.Model):
 	# ...
 
 	class Meta:
+		# ...
 		constraints = [
 			models.CheckConstraint(
 				condition=models.Q(
@@ -55,9 +56,23 @@ class Product(models.Model):
 				name="product_name_length",  # If this constraint looks only to the minimum length, the name could be more specific like "product_name_min_length".
 			),
 		]
-	# ...
 ```
+Other example:
+```python
+from django.db.models.functions import Lower
 
+class Something(...):
+	email = ...
+	
+	class Meta:
+		# ...
+		constraints = [
+			models.UniqueConstraint(
+				Lower("email"),
+				name="user_unique_email_lowered",
+			),
+		]
+```
 ==Critical!==
 For all validations above to run correctly, your model `save()` method must manually invoke the `self.full_clean`: [/python/web-development/django/3-1-models-database/method-save](/python/web-development/django/3-1-models-database/method-save.md)
 

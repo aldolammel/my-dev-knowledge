@@ -1,9 +1,12 @@
 LOGIN AND LOGOUT: USING THE CMS
 
-    To login using CMS, Django already brings it to you:
+To login using CMS, Django already brings it to you:
 
-        http://127.0.0.1:8000/admin/
+http://127.0.0.1:8000/admin/
+
+If you are in trouble, read it: [/python/web-development/django/\_running-app](/python/web-development/django/_running-app.md)
 
 
-        If you are in trouble, read it:
-            /python/web-development/django/1-install-and-first-steps/installing-the-project.txt
+
+
+
