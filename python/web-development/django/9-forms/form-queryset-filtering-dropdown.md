@@ -18,28 +18,54 @@ class SomethingAdminForm(...):
     # ...
     
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        '''Dunder method called 'constructor' that runs automatically when a class instance is created.'''
-        
-        # 'seller' is the authenticated User that I need for specific example:
-        seller = kwargs.pop('seller', None)
-        super().__init__(*args, **kwargs)
-        
-        # Once the user exists and they got a brand attribute:
-        if seller and seller.brand:
-			# Now, I am replacing the original data associated with these fields below by a new filtered data:
+		"""Dunder method called 'constructor' that runs automatically when a class instance is created."""
+		super().__init__(*args, **kwargs)
+		
+		# REMEMBER WHY to use 'attrname_id' instead of attrname.pk or .id:
+		# /python/web-development/django/3-1-models-database/4-querysets/attname.md
+		
+		# The family comes from the current instance (or from request.session if a new adding):
+		family_id = self.instance.family_id
+		# If the aircraft exists:
+		if family_id is not None:
+			# COMP_SHAPE QUERY:
+			# comp_shape offering only its shapes that are compatible (comp_concept_type) with the selected comp_concept on the form.
+			# Defining the field:
+			comp_shape = self.fields["comp_shape"]
+			# Creating the QuerySet:
+			if isinstance(comp_shape, forms.ModelChoiceField):
+				available_shapes = models.CompShape.objects.filter(
+					# Filtering shapes to be only those with the same type of selected comp_concept:
+					comp_concept_type=self.instance.comp_concept.comp_concept_type
+				)
+				# For existing instance (non-session):
+				if self.instance.pk is not None:
+					# Remove this instance from used_concepts to keep it as current value on field:
+					available_shapes = available_shapes.exclude(pk=self.instance.pk)
+				# Finally, offer (.queryset) only the right comp_concept instances:
+				comp_shape.queryset = available_shapes
 			
-            ## (Simplest version):
-            self.fields['sold_vehicle'].queryset = models.Vehicle.objects.filter(brand=seller.brand)  # type: ignore[attr-defined]
-            
-            ## (Safier version):
-            sold_veh = self.fields["sold_vehicle"]
-            if isinstance(sold_veh, forms.ModelChoiceField): # Basically you likely will use this field type in here!
-                sold_veh.queryset = models.Vehicle.objects.filter(brand=seller.brand)
-            
+			# COMP_REF QUERY:
+			# In comp_ref field, exclude itself from the drop-down menu options (because this model if self-referential), and exclude those components that don't belong the same aircraft:
+			# Defining the field:
+			comp_ref = self.fields["comp_ref"]
+			# Creating the QuerySet:
+			if isinstance(comp_ref, forms.ModelChoiceField):
+				available_comps = models.CompBase.objects.filter(
+					# CompBase instances using the same aircraft:
+					family_id=family_id
+				)
+				# For existing instance (non-session):
+				if self.instance.pk is not None:
+					# Remove this instance from comp_ref to keep it as current value on field:
+					available_comps = available_comps.exclude(pk=self.instance.pk)
+				# Finally, offer (.queryset) only the right comp_ref instances:
+				comp_ref.queryset = available_comps
+				
 		# __init__ extra fields, pre-populating:
 		# Unlike fields from tied model, extra fields must be manually linked!
 		# Reserved space...
-            
+		
 	# ...
 ```
 ### Another example when you wanna exclude the current instance when the model is self-referential:

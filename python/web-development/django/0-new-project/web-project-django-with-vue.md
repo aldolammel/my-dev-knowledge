@@ -42,7 +42,7 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 		- List of field classes for your classes: [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
 	- List of admin class templates: [/python/web-development/django/4-cms-admin/\_admin-class-model.py](/python/web-development/django/4-cms-admin/_admin-class-model.py)
 2. [ ] (If applicable) Multi-step adding detail-view or similar: [/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
-3. [ ] Develop and test validations for each model (app-level + db-level): [/python/web-development/django/6-errors-and-validations/1-validation-basic](/python/web-development/django/6-errors-and-validations/1-validation-basic.md)
+3. [ ] Creating validation for every model, admin and form (app-level + db-level): [/python/web-development/django/6-errors-and-validations/1-validation-basic](/python/web-development/django/6-errors-and-validations/1-validation-basic.md)
 4. [ ] (If applicable) If not yet, complete the translation roadmap: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
 ### 2.5) Final touches
 1. [ ] Back-end > xxxx

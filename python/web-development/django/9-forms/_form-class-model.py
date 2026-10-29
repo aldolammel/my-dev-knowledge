@@ -29,7 +29,7 @@ class SomethingAdminForm(forms.ModelForm):
 			# some_attr_from_model.queryset = models.Something.objects.filter(...)
 
     # def save(self, commit=True): (RECOMMEND NOT USE IT ONCE YOU GOT THE SAVE() METHOD FROM THE TIED MODEL!)
-        # """Built-in Form method persists form data to the db."""
+        # '''Built-in Form method persists form data to the db.'''
         # More about: /python/web-development/django/9-forms/method-save.py
     
     # def clean_<fieldname>(self):

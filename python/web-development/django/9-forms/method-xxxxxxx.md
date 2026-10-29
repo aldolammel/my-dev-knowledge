@@ -4,7 +4,7 @@
 ---
     
 PROMPT 1:
-In the Python Django context, what does the XXXXXXXXX method do in short terms? Is it exclusive usage for ModelForms (forms.py)?
+In the Python Django context, what does the XXXXXXXXX method do in short terms? Is it exclusive to the ModelForms (forms.py)?
 
 PROMPT 2:
 Right. So, shortly and in a few bullets, what does it do?

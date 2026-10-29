@@ -40,22 +40,27 @@ from django.db import models
 from django.db.models.functions import Lower
 from . import validators
 
+
 class User(AbstractUser):
 	"""Overriding the original fields just to custom them (as translating, for example)."""
-	first_name = models.CharField(
-		max_length=150,
-		blank=True,
-	)
-	last_name = models.CharField(
-		max_length=150,
-		blank=True,
-	)
+	
 	email = models.EmailField(
-		blank=True,
+		max_length=255,
+		unique=True,
+		blank=False,
+		verbose_name="E-mail",
+		help_text="",
 	)
 	# Except fields right above, those original fields from AbstractUser are not been overridden, so they're working as expected!
-	# Below, new fields to extending the User features:
 	
+	# Below, new fields to extending the User features:
+	profile_type = models.PositiveSmallIntegerField(
+		# This attr can be ignored in CMS and front-end case you don't need, but keep its value 1!
+		default=1,
+		blank=False,
+		# verbose_name="Profile Type",
+		# help_text="",
+	)
 	# This attribute can be invisible once the reason behind the hood is to make this more flexible, depending the project:
 	accepted_terms = models.BooleanField(
 		default=False,
@@ -85,19 +90,13 @@ class User(AbstractUser):
 		super().clean()
 		validators.validate_user_agreement(self.is_superuser, self.accepted_terms)
 
+
 class UserProfile(models.Model):
-	"""This provides a reusable one-to-one profile model. A profile isn't created automatically by this model. To create an instance in registration, UserProfile.objects.get_or_create(user=user)."""
+	"""A reusable one-to-one profile model. A profile isn't auto-created by this model. To create an instance in registration: UserProfile.objects.get_or_create(user=user)."""
 	user = models.OneToOneField(
 		settings.AUTH_USER_MODEL,
 		on_delete=models.CASCADE,  # Del the UserProfile if the User is deleted.
 		related_name="profile",
-	)
-	profile_type = models.PositiveSmallIntegerField(
-		# This attr can be ignored in CMS and front-end case you don't need, but keep its value 1!
-		default=1,
-		blank=False,
-		# verbose_name="Profile Type",
-		# help_text="",
 	)
 	platform = models.ForeignKey(
 		Platform,
@@ -222,6 +221,7 @@ class RegistrationForm(UniqueEmailMixin, UserCreationForm):
         model = models.User
         # Ordering fields on the form:
         fields = (
+	        # "profile_type",
 	        "username",
 	        "email",
 	        "accepted_terms",
@@ -244,7 +244,6 @@ class ProfileForm(forms.ModelForm):
         model = models.UserProfile
         # Ordering fields on the form:
         fields = (
-	        # "profile_type",
 	        "platform",
 	        "lang_writing",
 	        "bio",
@@ -306,7 +305,6 @@ class UserProfileInline(admin.StackedInline):
     extra = 0
     max_num = 1
     fields = (
-	    # "profile_type",
 	    "platform",
 		"lang_writing",
 		"bio",
@@ -332,12 +330,18 @@ class UserAdmin(DjangoUserAdmin):
         "username",
         "email",
         "lang_ui",
+        # "profile_type",
         "accepted_terms",
         "is_staff",
         "is_active",
         "date_joined",
     )
-    list_filter = DjangoUserAdmin.list_filter + ("lang_ui", "accepted_terms")
+    list_filter = (
+	    *DjangoUserAdmin.list_filter,
+	    "lang_ui",
+	    "profile_type",
+	    "accepted_terms",
+	)
     list_select_related = ("lang_ui",)
     search_fields = (
 	    "username",
@@ -346,6 +350,7 @@ class UserAdmin(DjangoUserAdmin):
 	    "last_name",
 	)
     readonly_fields = (
+	    "profile_type",
 	    "updated_at",
 	    "updated_by",
 	)
@@ -368,10 +373,11 @@ class UserAdmin(DjangoUserAdmin):
         ),
     )
     
-    fieldsets = DjangoUserAdmin.fieldsets + (
+    fieldsets = tuple(DjangoUserAdmin.fieldsets or ()) + (
         (
 	        "Service", {
 		        "fields": (
+			        "profile_type",
 			        "lang_ui",
 			        "accepted_terms",
 				)
@@ -446,30 +452,25 @@ class UserProfileAdmin(admin.ModelAdmin):
 	    "updated_at",
 	    "updated_by",
 	)
-
+		
     def has_add_permission(self, request):
 	    """This built-in method should return True if adding obj's allowed."""
         return False  # profiles are created by the signal, never by hand.
 
     def has_delete_permission(self, request, obj=None):
-	    """This built-in method should return True if deleting obj is permitted."""
-	    # Prevent deletion of profile from the CMS, except when User is deleted:
-	    if request.path.startswith("/admin/auth/user/"): # or '/admin/accounts/user/'
-			return request.user.is_superuser # True if superuser!
-		return False  # delete the User instead; the profile cascades.
+		"""This built-in method should return True if deleting obj is permitted."""
+		# If no superuser or if in the userprofile list-view/detail-view, don't allow deletion:
+		if not request.user.is_superuser or request.path.startswith(
+			"/admin/accounts/userprofile/" # or '/admin/auth/userprofile/'
+		):
+			return False
+		# Otherwise, if through other sections like deleting the user itself, it's okay:
+		return super().has_delete_permission(request, obj)
 
     def save_model(self, request, obj, form, change):
 	    """Built-in admin method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         obj.updated_by = request.user
         super().save_model(request, obj, form, change)
-
-	def get_actions(self, request):
-		"""This built-in method can conditionally enable or disable CMS actions, returning a dictionary of actions allowed."""
-		# Remove the delete action from the list-view:
-		actions = super().get_actions(request)
-		if "delete_selected" in actions:
-			del actions["delete_selected"]
-		return actions
 ```
 
 ---
