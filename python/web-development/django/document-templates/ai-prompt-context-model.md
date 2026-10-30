@@ -35,6 +35,7 @@
 
 **Back-end heads-up:**
 - UV v0.12.23 (maybe newer) as package manager.
+- Don't spend resources creating `tests.py` classes if not extremely necessary.
 
 **Front-end heads-up:** 
 - `SPA` project;
@@ -47,8 +48,8 @@
 - In production: Ubuntu VPS.
 
 **Settings preferences:**
-- Django core folder: /project_root/core/settings.py.
-- Django apps folder: /project_root/apps/.
+- Django core folder: `/project_root/core/settings.py`.
+- Django apps folder: `/project_root/apps/`.
 - It's using `pyproject.toml` file.
 
 **Current project phase:**
