@@ -55,7 +55,7 @@ If so, it's because you're using, in *UniqueConstraint* `fields=[]`, one or more
 
 In `forms.py`:
 ```python
-class ProcedureAdminForm(forms.ModelForm):
+class ProcedureForm(forms.ModelForm):
 	"""..."""
 	
 	class Meta:
@@ -64,12 +64,11 @@ class ProcedureAdminForm(forms.ModelForm):
 		# Bringing specific fields from the model:
 		fields = "__all__"
 
-	def __init__(self, *args, request=None, **kwargs):
+	def __init__(self, *args, **kwargs):
 		"""Dunder method called 'constructor' that runs automatically when a class instance is created."""
+		# Access the request attached via admin get_form():
+		self.request = kwargs.pop("request", getattr(self, "request", None))
 		super().__init__(*args, **kwargs)
-		# Why I'm using this dunder init + request to extract the current user:
-		# Once created_by is editable=False, it doesn't exist to the form, making clean() blocked to validate that field. Unfortunately, neither save_model() cannot tell me which user is here because the UniqueConstraints validation trigger first, creating an error on screen. To to create a friendly message on the form (app-level) with a field not present originally, I need to request the user from other way (this one below):
-		self.request = request
 		
 		# __init__ extra fields, pre-populating:
 		# Unlike fields from connected model, extra fields must be manually linked!
@@ -119,7 +118,7 @@ In `admin.py`:
 class ProcedureAdmin(...):
     
     # Custom form:
-	form = forms.ProcedureAdminForm
+	form = forms.ProcedureForm
 	
 	# ...
 ```
@@ -128,20 +127,19 @@ Still in `admin.py`, if you are NOT using [multi-step adding detail-view](/pytho
 ```python
     def get_form(self, request, obj=None, change=False, **kwargs):
 		"""Built-in admin method to customize the form that's displayed in the interface."""
+		# Sending the 'request' object to the form:
 		form = super().get_form(request, obj, change, **kwargs)
+		form.request = request  # type: ignore[attr-defined]
 		
-		class RequestForm(form):  # Type: ignore[valid-type]
-			def __init__(self, *args, **inner_kwargs):
-				"""Dunder method called 'constructor' that runs automatically when a class instance is created."""
-				super().__init__(*args, request=request, **inner_kwargs)
-			
-		return RequestForm
+		return form
 ```
 Or this solution for [multi-step adding detail-view](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md):
 ```python
 	def get_form(self, request, obj=None, change=False, **kwargs):
 		"""..."""
 		form = super().get_form(request, obj, change=change, **kwargs)
+		# If request is not coming by get_form argument, use this line below:
+		# form.request = request # type: ignore[attr-defined]
 		locked = request.session.get(consts.STR_SOMETHING_SESSION_KEY, {}) if obj is None else {}
 		
 		class MultiStepForm(form): # type: ignore[valid-type, misc]
@@ -150,7 +148,7 @@ Or this solution for [multi-step adding detail-view](/python/web-development/dja
 				# Admin passes no instance on add (GET or POST).
 				if obj is None and kw.get("instance") is None:
 					kw["instance"] = build_multi_screen_instance(models.ProcTypeGroup, locked)
-				kw["request"] = request
+				kw["request"] = request  # Or form.request
 				super().__init__(*args, **kw)
 		
 		return MultiStepForm

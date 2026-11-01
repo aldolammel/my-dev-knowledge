@@ -37,7 +37,7 @@ class Fruit(...):
 ```
 In `forms.py`:
 ```python
-class FruitAdminForm(forms.ModelForm):
+class FruitForm(forms.ModelForm):
 	#...
 	
 	def __init__(...):

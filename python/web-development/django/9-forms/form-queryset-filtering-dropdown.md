@@ -14,7 +14,7 @@ from typing import Any
 from django import forms 
 from . import models
 
-class SomethingAdminForm(...):
+class SomethingForm(...):
     # ...
     
     def __init__(self, *args: Any, **kwargs: Any) -> None:
@@ -74,7 +74,7 @@ from typing import Any
 from django import forms 
 from . import models
 
-class SomethingAdminForm(...):
+class SomethingForm(...):
     # ...
 
 	def __init__(self, *args: Any, **kwargs: Any) -> None:
@@ -99,7 +99,7 @@ from typing import Any
 from django import forms 
 from . import models
 
-class SomethingAdminForm(...):
+class SomethingForm(...):
     # ...
 
 	def __init__(self, *args: Any, **kwargs: Any) -> None:
@@ -133,7 +133,7 @@ from . import forms, models
 class SomethingAdmin(admin.ModelAdmin):
     
     # Custom form:
-    form = forms.SomethingAdminForm
+    form = forms.SomethingForm
     
     # ...
 ```

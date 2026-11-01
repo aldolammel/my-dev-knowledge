@@ -24,7 +24,7 @@ class CompConcept(...):
 ## Solution:
 ```python
 # forms.py
-class SomethingAdminForm(forms.ModelForm):
+class SomethingForm(forms.ModelForm):
 	#...
 	
 	def __init__(...):

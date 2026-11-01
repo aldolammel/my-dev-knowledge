@@ -21,7 +21,7 @@ class Fruit(...):
 ## Solution:
 ```python
 # forms.py
-class FruitAdminForm(forms.ModelForm):
+class FruitForm(forms.ModelForm):
 	#...
 	
 	def __init__(...):
