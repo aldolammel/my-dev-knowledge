@@ -25,6 +25,8 @@ The `get_readonly_fields()` method determines which fields should be read-only i
 ## Common example:
 ```python
 class MyModelAdmin(admin.ModelAdmin):
+	# ...
+	
     def get_readonly_fields(self, request, obj=None):
 	    '''Built-in admin method that allows you to dynamically specify which fields are read-only ('readonly_fields') based on the request or object.'''
         # Get the class-level readonly_fields:
@@ -33,6 +35,12 @@ class MyModelAdmin(admin.ModelAdmin):
         if obj:
             return current + ["element_type"]
         return current
+        
+	# Custom method fields:
+	# Reserved space...
+
+	# Defining custom method field labels:
+	# Reserved space...
 ```
 
 ---

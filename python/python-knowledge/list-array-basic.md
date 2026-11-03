@@ -79,6 +79,6 @@ xxxxxxxxxxxxxxxx
 ## Using List Comprehension
 [/python/python-knowledge/list-comprehension](/python/python-knowledge/list-comprehension.py)
 ## Converting a list:
-[/python/python-knowledge/list-conversion](/python/python-knowledge/list-conversion.py)
+[/python/python-knowledge/list-conversion](/python/python-knowledge/list-conversion.md)
 
 

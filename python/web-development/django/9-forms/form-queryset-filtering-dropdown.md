@@ -31,7 +31,7 @@ class SomethingForm(...):
 			# COMP_SHAPE QUERY:
 			# comp_shape offering only its shapes that are compatible (comp_concept_type) with the selected comp_concept on the form.
 			# Defining the field:
-			comp_shape = self.fields["comp_shape"]
+			comp_shape = self.fields.get("comp_shape")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 			# Creating the QuerySet:
 			if isinstance(comp_shape, forms.ModelChoiceField):
 				available_shapes = models.CompShape.objects.filter(
@@ -48,7 +48,7 @@ class SomethingForm(...):
 			# COMP_REF QUERY:
 			# In comp_ref field, exclude itself from the drop-down menu options (because this model if self-referential), and exclude those components that don't belong the same aircraft:
 			# Defining the field:
-			comp_ref = self.fields["comp_ref"]
+			comp_ref = self.fields.get("comp_ref")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 			# Creating the QuerySet:
 			if isinstance(comp_ref, forms.ModelChoiceField):
 				available_comps = models.CompBase.objects.filter(
@@ -82,7 +82,7 @@ class SomethingForm(...):
 		super().__init__(*args, **kwargs)
 
 		# Exclude itself from the drop-down menu options (because this model if self-referential):
-		comp_ref = self.fields["comp_ref"]
+		comp_ref = self.fields.get("comp_ref")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 		if isinstance(comp_ref, forms.ModelChoiceField):
 			comp_ref.queryset = models.CompBase.objects.exclude(pk=self.instance.id)
 			
@@ -113,7 +113,7 @@ class SomethingForm(...):
 			# Taking the procedure plane_model's ID:
 			plane_model_id = procedure.plane_model_id if procedure else None
 			# Finally, loading only those PlaneSeat instances that the plane_model are the same of the procedure plane_model already selected on the form:
-			plane_seat = self.fields["plane_seat"]
+			plane_seat = self.fields.get("plane_seat")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 			if isinstance(plane_seat, forms.ModelChoiceField):
 				plane_seat.queryset = models.PlaneSeat.objects.filter(plane_model_id=plane_model_id)
 		

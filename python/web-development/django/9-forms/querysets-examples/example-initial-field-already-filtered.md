@@ -29,7 +29,7 @@ class FruitForm(forms.ModelForm):
 		
 		# PLANET QUERY
 		# If a planet is not active, remove it from the initial field options:
-		planet = self.fields["planet"]
+		planet = self.fields.get("planet")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 		# Creating the QuerySet:
 		if isinstance(planet, forms.ModelChoiceField):
 			# No matter if new or existing instance, do it:

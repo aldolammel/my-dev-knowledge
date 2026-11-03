@@ -45,10 +45,10 @@ class ExampleModelAdmin(admin.ModelAdmin):
     # readonly_fields = ()
     # All fields exclusively for the CMS' ADDING new object detail-view:
     # add_fieldsets = ()  # If you to use this, it demands get_fieldsets:
-        # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
+        # /python/web-development/django/4-cms-admin/method-get_fieldsets.md
     # All fields exclusively for the CMS' EXISTING object detail-view:
     # fieldsets = ()  # If you to use this, it demands get_fieldsets:
-        # /python/web-development/django/4-cms-admin/method-get_fieldsets.py
+        # /python/web-development/django/4-cms-admin/method-get_fieldsets.md
 
     # If you have audit fields like 'created_by' or 'updated_by' you need save_model method:
     # def save_model(self, request, obj, form, change):

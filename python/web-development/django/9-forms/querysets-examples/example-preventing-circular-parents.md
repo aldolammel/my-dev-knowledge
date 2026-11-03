@@ -44,7 +44,7 @@ class FruitForm(forms.ModelForm):
 		super().__init__(...)
 		
 		# OWNER_OF QUERY:
-		owner_of = self.fields["owner_of"]
+		owner_of = self.fields.get("owner_of")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 		# Creating the QuerySet:
 		if isinstance(owner_of, forms.ModelChoiceField):
 			# Reserved space for logic for brand new fruit instance... For this example, it's not needed once this is a new instance been created, making it unknown for any other instance yet:

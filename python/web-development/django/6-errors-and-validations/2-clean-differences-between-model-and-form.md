@@ -42,7 +42,11 @@ class ExampleModelOne(model.Model):
 			
 			# Option 1) For messages that are not tied to a specific field. Recommended to use NON_FIELD_ERRORS as key for Django and any DRF serializer get a clear use for this validation.
 			raise ValidationError(
-				{NON_FIELD_ERRORS: 'The field One and Two cannot be the same.'}
+				{
+					NON_FIELD_ERRORS: 'The field One and Two cannot be the same.',
+					'string_one_field': '',  # This will highlight the field with no message on it, nice to take the user attention (optional)
+					'string_two_field': '',  # This will highlight the field with no message on it, nice to take the user attention (optional)
+				}
 			)
 			
 			# Option 2) Example to tie the message to a specific field:

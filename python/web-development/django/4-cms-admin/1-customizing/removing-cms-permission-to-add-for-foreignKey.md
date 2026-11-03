@@ -82,7 +82,7 @@ class PagexContentForm(forms.ModelForm):
 			self.fields["element"].widget.can_add_related = False
 			
 		# Smarter option - Remove more than one icon:
-		widget = self.fields["element_content"].widget
+		widget = self.fields["element_content"].widget  # Not sure if it's possible to use a safer way: self.fields.get("element_content").widget
 		for attr in ("can_delete_related", "can_add_related", "can_change_related"):
 			if hasattr(widget, attr):
 				setattr(widget, attr, False)

@@ -28,7 +28,7 @@ class FruitForm(forms.ModelForm):
 		
 		# FRUIT QUERY
 		# If fruit is not from a specific family, remove it from the initial field options:
-		fruit = self.fields["fruit"]
+		fruit = self.fields.get("fruit")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 		# Creating the QuerySet:
 		if isinstance(fruit, forms.ModelChoiceField):
 			variety = self.instance.variety_id if self.instance and self.instance.variety_id else None

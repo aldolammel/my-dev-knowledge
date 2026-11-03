@@ -35,7 +35,7 @@ class SomethingForm(forms.ModelForm):
 		
 			# 2) Creating the QuerySet (filtering):
 			# Defining which form field demands a new query:
-			comp_ref = self.fields["comp_ref"]
+			comp_ref = self.fields.get("comp_ref")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 			if isinstance(comp_ref, forms.ModelChoiceField):
 				available_comps = models.CompBase.objects.filter(
 					# CompBase instances using the same plane:

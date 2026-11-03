@@ -128,7 +128,7 @@ if "plane_seat" in self.fields:
 	# Taking the procedure plane_model's ID:
 	plane_model_id = procedure.plane_model_id if procedure else None
 	# Finally, loading only those PlaneSeat instances that the plane_model are the same of the procedure plane_model already selected on the form:
-	plane_seat = self.fields["plane_seat"]
+	plane_seat = self.fields.get("plane_seat")  # Don't use self.fields["something"]! get() method avoids KeyError if it's a readonly_Field!
 	if isinstance(plane_seat, forms.ModelChoiceField):
 		plane_seat.queryset = models.PlaneSeat.objects.filter(plane_model_id=plane_model_id)
 ```
