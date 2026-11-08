@@ -17,6 +17,10 @@ What is API: [/api/\_about](/api/_about.md)
 | Protocol Buffers | High-performance binary serialization | protobuf (Google)           |
 | YAML             | Human-readable configs                | PyYAML, ruamel.yaml         |
 | MessagePack      | Compact binary alternative to JSON    | msgpack                     |
+**Django: *Serializers* VS *Views*:**
+- Why not to create JSON directly with [Views](/python/web-development/django/3-2-views-and-API/_about.md)?
+	- A serializer is a single, declarative place that owns the contract between your models and the JSON, in both directions.
+	- Building JSON by hand in *views* works for one endpoint, but it scales badly for non-super-simple apps.
 ### When to use
 - When building APIs (e.g., REST/gRPC);
 - When saving/loading application state;

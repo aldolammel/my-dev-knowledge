@@ -11,7 +11,7 @@ If you wanna take only the field names of a form, try the `get_fields()` method:
 ## Structure
 ```python
 readonly_fields = (
-	# If you are using add_fieldsets tuple and/or fieldsets tuple, in readonly_fields tuple you MUST include all NON-editable attributes of your model, otherwise Django prints out an error!
+	# If you are using add_fieldsets tuple and/or fieldsets tuple, in readonly_fields tuple you MUST include all NON-editable attributes of your model (and eventually your custom method fields), otherwise Django prints out an error!
     "slug",
     "created_at",
     "updated_at",

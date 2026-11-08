@@ -12,10 +12,21 @@ Important: both models are tied for the database.
 For example where data is not tied between each other:  /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (PagexPage and its PagexContent instances - for future example!)
 
 ---
-# In `models.py`:
-```python
-# Example context: each movie detail-view has a list of its casting actors. For new movies, the casting list has a button to add them. If a movie is deleted, nothing happen with actors. If an actor is permanently removed from the db, all movies that actor was tied lost that relation.
+## Creating a basic Inline:
+1. Create the admin TabularInline class that should inherit `admin.TabularInline`, e.g., `class SomethingInline(admin.TabularInline)`.
+2. In the admin class scope where the TabularInline list should be shown, add the line `inlines = [SomethingInline]`.
+3. Important: Django auto-create the admin fieldset for this list in CMS.
+**Adding the sortable feature for the inline:**
+4. Install the [django-admin-sortable2](/python/web-development/django/component-libraries/django-admin-sortable2/0-django-admin-sortable2.md).
+5. Integrate the `django-admin-sortable2` in `/core/settings.py`'s `INSTALLED_APPS` list.
+6. Import the module in your `admin.py` file: `from adminsortable2.admin import SortableAdminBase, SortableInlineAdminMixin`.
+7. ==SOON...==
 
+---
+## Example:
+### In `models.py`
+Context: each movie detail-view has a list of its casting actors. For new movies, the casting list has a button to add them. If a movie is deleted, nothing happen with actors. If an actor is permanently removed from the db, all movies that actor was tied lost that relation.
+```python
 class Movie(models.Model):
     title = models.CharField(max_length=80)
 
@@ -43,9 +54,7 @@ class Casting(models.Model):
 
 
 ```
-
----
-# In `forms.py`:
+### In `forms.py`
 ```python
 class CastingForm(forms.ModelForm):
     class Meta:
@@ -56,21 +65,17 @@ class CastingForm(forms.ModelForm):
 
 
 ```
-
----
-# In `admin.py`:
+### In `admin.py`
 ```python
 @admin.register(models.Actor)
 class ActorAdmin(admin.ModelAdmin):
-    ...
-
+    # ...
 
 class MovieCastingInline(admin.StackedInline):
     model = models.Casting
     fk_name = "actor"  # to flag what Foreignkey (attr) is the the main one for this inline class case the model class has more than one foreignekey.
     form = forms.CastingForm
     extra = 0
-
 
 @admin.register(models.Movie)
 class MovieAdmin(admin.ModelAdmin):

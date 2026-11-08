@@ -319,7 +319,7 @@ def get_readonly_fields(self, request, obj=None):
 ## QuerySets:
 [/python/web-development/django/3-1-models-database/4-querysets/\_what-is-queryset](/python/web-development/django/3-1-models-database/4-querysets/_what-is-queryset.md)
 ## Loading CMS fields already filtered (Not recommended):
-[/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
+[/python/web-development/django/4-cms-admin/method-get_queryset](/python/web-development/django/4-cms-admin/method-get_queryset.md)
 ## CSS customization in Django Admin:
 [/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin](/python/web-development/django/4-cms-admin/1-customizing/css-customization-in-admin.md)
 

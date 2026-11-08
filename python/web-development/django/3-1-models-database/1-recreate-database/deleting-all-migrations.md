@@ -3,9 +3,7 @@
 
 ---
 
-==I never test it!==
-
-Important: assuming you got all subapps in your application `/apps/` folder:
+Important: assuming you got all sub-apps in your application `/apps/` folder:
 
 ```bash
 # delete all migration files except __init__.py, in every app

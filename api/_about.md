@@ -11,7 +11,7 @@ An API (Application Programming Interface) is a set of rules, protocols, and too
 
 **Web API core layers:**
 - **Endpoint** is the URL route and the HTTP method (e.g., `POST /api/v1/users/`) that receives the request and sends back the response. It is the *doorway*.
-- **Serializer** is the mechanism (commonly found in frameworks like Django REST Framework) that converts complex data types like model instances into native Python datatypes that can easily be rendered into JSON, and vice versa. It is the **translator and gatekeeper** that handles validation and formatting.
+- **Serializer** is the mechanism (commonly found in frameworks like Django REST Framework) that converts complex data types like model instances into native Python datatypes that can easily be rendered into JSON, and vice versa. It's the translator and gatekeeper that handles validation and formatting.
 - **Views / Controllers:** The business logic that takes the request from the endpoint, processes it (often using the serializer), and decides what response to return.
 - **Models / ORM (Database):** The structure and connection to where your data is actually stored and retrieved.
 - **Authentication & Permissions:** The security layer that verifies _who_ the user is and _what_ actions they are allowed to perform.
@@ -59,10 +59,7 @@ Sometimes you'll need to use these methods to manipulate the data from an API
 - DELETE
 
 ---
-## How to plan your API:
-[/api/\_how-to-plan-an-api](/api/_how-to-plan-an-api.md)
+## Creating an API:
+- Using Python/Django: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
 
----
-## How to convert objects to a JSON, for example:
-Read more about Serializers: [/api/serializers](/api/serializers.md)
 

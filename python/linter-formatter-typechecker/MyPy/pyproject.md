@@ -1,4 +1,10 @@
-# This file is a model of MyPy configuration in pyproject.toml
+#### Python > Linter, Formatter & Type checker > MyPy
+# `pyproject.toml` for MyPy
+
+---
+
+```toml
+# ...
 
 # Python static type checker:
 [tool.mypy]
@@ -25,3 +31,5 @@ exclude = [
 [[tool.mypy.overrides]]  # Django-specific mypy settings
 module = "*.migrations.*"
 ignore_errors = true
+```
+

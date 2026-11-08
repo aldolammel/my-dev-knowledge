@@ -1,5 +1,12 @@
-# IN VIEWS.PY FILE:
+#### Python > Django > Views > Class-based
+# View class basic implementation example
+---
+## Before:
+- About this implementation: [/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/\_views-class-basic](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-basic.md)
 
+---
+## In `/apps/subapp/views.py`:
+```python
 from django.shortcuts import render
 from django.views import View
 from .models import Recipe  # hypothetical class just for example purposes.
@@ -26,10 +33,11 @@ class RecipeView(View):
         }
         return render(request, 'recipes/detail.html', context)
 
+```
 
-
-# IN URLS.PY FILE: ---------------------------------------------------------------------------------
-
+---
+## In `/apps/subapp/urls.py`:
+```python
 from django.urls import path
 from . import views
 
@@ -42,14 +50,13 @@ urlspatterns = [
     path('<int:pk>', views.RecipeView.as_view(), name='detail_view'),
     # Crucial: this 'name' argument above is the 'pattern name' you'll use to build URL's in templates.
 ]
+```
 
-
-
-# IN LIST-TEMPLATE (list.html): --------------------------------------------------------------------
-
+---
+## In `/apps/subapp/templates/xxxxx/list.html` (list-template):
+```python
 <html>
     <body>
-    
         # checking if there's some recipe in the View Context of this URL:
         {% if recipes %}
         
@@ -64,14 +71,14 @@ urlspatterns = [
             <p>There is no any recipe recorded yet!</p>
         
         {% endif %}
-        
     </body>
 </html>
 
+```
 
-
-# IN DETAIL-TEMPLATE (detail.html): ----------------------------------------------------------------
-
+---
+## In `/apps/subapp/templates/xxxxx/detail.html` (detail-template):
+```html
 <html>
     <body>
     
@@ -83,3 +90,9 @@ urlspatterns = [
     
     </body>
 </html>
+```
+
+---
+
+
+

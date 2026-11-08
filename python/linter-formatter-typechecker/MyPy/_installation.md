@@ -12,7 +12,7 @@ https://mypy-lang.org/
         
 ### 1) Installing as development dependency
 
-- [x] In the project folder, install the MyPy as development dependency:
+- [ ] In the project folder, install the MyPy as development dependency:
 
 Using UV:
 ```bash
@@ -39,19 +39,19 @@ dev = [
 
 ### 2) In your IDE
 
-- [x] Install the 'MyPy Type Checker' extension (by Microsoft);
+- [ ] Install the 'MyPy Type Checker' extension (by Microsoft);
 
 ### 3) (If applicable / Optional) For Django projects, install the django-stubs
 
-- [x] For Django projects, further you should install the django-stubs for better Django type hints! (We will see this in Integration steps!)
+- [ ] For Django projects, further you should install the django-stubs for better Django type hints! (We will see this in Integration steps!)
     
 ---
 ## Integration:
 
 ### Before
-1. [x] Assuming you already got the `pyproject.toml` in your project: [python/pyproject-toml](python/pyproject-toml.md)
+1. [ ] Assuming you already got the `pyproject.toml` in your project: [python/pyproject-toml](python/pyproject-toml.md)
 ### 1) Add lines in `pyproject.toml`:
-- [x] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject](/python/linter-formatter-typechecker/MyPy/pyproject.md)
+- [ ] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject](/python/linter-formatter-typechecker/MyPy/pyproject.md)
 
 - [ ] 1.2) (If applicable / Optional) For Django projects, install the *django-stubs* for better Django type hints: [python/web-development/django/Linter-Formatter-Typechecker/django-stubs/_installation](python/web-development/django/Linter-Formatter-Typechecker/django-stubs/_installation.md)
 

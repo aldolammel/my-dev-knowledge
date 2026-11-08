@@ -36,6 +36,7 @@
 **Back-end heads-up:**
 - UV v0.12.23 (maybe newer) as package manager.
 - Don't spend resources creating `tests.py` classes if not extremely necessary.
+- Django views should use preferably CBVs.
 
 **Front-end heads-up:** 
 - `SPA` project;

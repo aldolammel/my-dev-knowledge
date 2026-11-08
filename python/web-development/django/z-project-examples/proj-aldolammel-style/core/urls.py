@@ -1,23 +1,28 @@
+# from django.conf import settings
+# from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-from django.urls import path
-from django.views.generic.base import RedirectView
+from django.urls import path, include
+# from django.views.generic.base import RedirectView
 
-# DJANGO BASIC:
+# CORE ENDPOINTS DECLARATION:
 urlpatterns = [
-    # CMS:
-    path("admin/", admin.site.urls),
-    path("admin", RedirectView.as_view(url="/admin/")),
-    path("wp-admin/", RedirectView.as_view(url="/admin/")),
-    path("wp-admin", RedirectView.as_view(url="/admin/")),
-    # SUB-APPs, APIs:
-    # Reserved space...
+    path('admin/', admin.site.urls),  # http://localhost:8000/admin/
+    # APPLICATION:
+    path('subappname/', include('apps.subappname.urls')),
+    # OTHERS:
+    # Remember to check the /urls_api.py!
+    # path("", include("core.urls_api")),
 ]
 
 # DJANGO > ONLY WHEN DEBUG TRUE:
 # Reserved space...
 
 # THIRD-PARTY:
-# Reserved space...
+# urlpatterns += [
+#     Reserved space...
+# ]
 
 # FRONTEND:
-# Reserved space...
+# urlpatterns += [
+#     Reserved space...
+# ]

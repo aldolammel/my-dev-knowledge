@@ -121,7 +121,7 @@ More boolean examples: [/python/web-development/django/3-1-models-database/4-que
 
 ---
 ## Loading Admin/CMS fields already filtered:
-- Method `get_queryset()`: [/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
+- Method `get_queryset()`: [/python/web-development/django/4-cms-admin/method-get_queryset](/python/web-development/django/4-cms-admin/method-get_queryset.md)
 - [/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data](/python/web-development/django/4-cms-admin/1-customizing/detailview-filtering-any-data.md)
 
 

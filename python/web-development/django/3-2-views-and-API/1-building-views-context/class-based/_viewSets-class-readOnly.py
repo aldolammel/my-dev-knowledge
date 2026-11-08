@@ -11,16 +11,18 @@
 
 # Example - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# apps/my_app/models.py:
+# apps/subapp/models.py:
 class ExampleModel(...):
     ...
 
-# apps/my_app/serializers.py:
+# apps/subapp/serializers.py:
 class ExampleModelSerializer(...):
     ...
 
-# apps/my_app/views.py:
-from django.views import View
+# apps/subapp/views.py:
+from rest_framework import viewsets
+from . import models
+from . import serializers as serial
 
 class ExampleModelViewSet(viewsets.ReadOnlyModelViewSet):
     """Read-only endpoint exposing XXXXXXXXXXXXXXXXX to <<<<<<<Vue Router>>>>>."""

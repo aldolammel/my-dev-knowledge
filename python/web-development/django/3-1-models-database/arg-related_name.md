@@ -65,6 +65,6 @@ related_name="%(class)s_...",
 ## More special use:
 
 - related_name='+' (Disables the reverse relation entirely!)
-- Can be used in `prefetch_related()` for optimization: [/python/web-development/django/3-1-models-database/method-prefetch_related.py](/python/web-development/django/3-1-models-database/method-prefetch_related.py)
+- Can be used in `prefetch_related()` for optimization: [/python/web-development/django/3-1-models-database/method-prefetch_related](/python/web-development/django/3-1-models-database/method-prefetch_related.md)
 
 ---

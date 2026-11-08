@@ -3,37 +3,41 @@
 
 ---
 ## Before:
-- Assuming you are following Django serialization roadmap: [/python/web-development/django/3-2-views-and-API/serializer](/python/web-development/django/3-2-views-and-API/serializer.md)
+- Assuming you are following Django API roadmap: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
 - Assuming your project is using *Django Rest Framework* (DRF): [/python/web-development/django/component-libraries/django-rest-framework/0-restframewok](/python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md)
 
 ---
 
-When you create a serializer class, you are building up a crucial core layer of [API](/api/_about.md).
+Serialization is a crucial core layer of [API](/api/_about.md) responsible for converting the model data to JSON, making it easier to be sent/transmitted to out there. A view class (`views.py`) could make the same, but with much more code lines and awful scalability. Then use serializer to help view with the JSON task.
 
 ---
-
+## Serializer basic template:
 In `/apps/subapp_name/serializers.py`:
 ```python
 from rest_framework import serializers
 from . import models
 
 class ExampleModelSerializer(serializers.ModelSerializer):
-    """Serializer for XXXXXXXXXXX content entries."""
+    """Converting xxxxxxxxxxxxxx model instances to JSON data."""
 
     # Custom Fields (directly based on another serializer class) declaration:
     # Reserved space...
 
     # Custom Method Fields (SerializerMethodField) declaration:
-    # my_serial_method = serializers.SerializerMethodField()  # Auto-calls get_my_serial_method()
+    # (These declarations call their get_something() automatically)
+    # Reserved space...
 
     class Meta:
         # Which model class the data's coming from:
         model = models.ExampleModel
         # Which fields (attributes) specifically:
         fields = [
-            "xxxxxx_field_1",
-            "xxxxxx_field_2",
-            # "reserved_space",  # Custom field
+            "xxxxxxxxx_1",
+            "xxxxxxxxx_2",
+            "xxxxxxxxx_3",
+            "xxxxxxxxx_4",
+            # Custom field:
+            # Reserved space...
         ]
 
     # Custom Method Fields:
@@ -42,7 +46,7 @@ class ExampleModelSerializer(serializers.ModelSerializer):
 ```
 
 ---
-## Creating custom fields directly in a serializer class
+## Creating custom fields directly in a serializer class:
 When you create a serializer class, you are building up an API endpoint, and, if needed, with custom fields to extract even more data to complement your API.
  
  Every `serializers.py` file demands:
@@ -50,7 +54,7 @@ When you create a serializer class, you are building up an API endpoint, and, if
  from rest_framework import serializers
 ```
 
-**There are 2 ways to extract more data through a serializer class:**
+**There are 2 ways to extract data from models using a serializer class:**
 - A) **Custom Method Field:** uses a method-automatically-called to extract data elsewhere.
 	- You extract external data, creating a method to filtering data with a queryset.
 - B) **Custom Field**: uses another endpoint (serializer class) to collect more data.
@@ -79,29 +83,34 @@ In `serializers.py`:
 For *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
 ```python
 class PostSerializer(serializers.ModelSerializer):
-	blog_name = serializers.SerializerMethodField()  # Auto calls the method with this name: get_blog_name()
-	created_by_name = serializers.SerializerMethodField()  # Auto calls the method with this name: get_created_by_name()
+
+	# ...
+	
+	# Custom Method Fields (SerializerMethodField) declaration:
+	# (These declarations call their get_something() automatically)
+	blog_name = serializers.SerializerMethodField()
+	created_by_name = serializers.SerializerMethodField()
 
 	class Meta:
 		model = models.Post
 		fields = [
-			# "blog", # Output: e.g. 1 (id of the Page's obj, and not a blog name)
-			"blog_name", # Custom method field.
-			# "created_by", # Output: e.g. 3 (id of the User's obj, and not a name or username)
-			"created_by_name", # Custom method field.
+			# "blog",  # It would bring the blog ID (e.g. 1) and not the blog name.
+			"blog_name",  # Custom method field.
+			# "created_by",  # It would bring the user ID (e.g. 1) and not the username.
+			"created_by_name",  # Custom method field.
 		]
 
 	def get_blog_name(self, obj):
 		if obj.blog:
 			return obj.blog.title # Output: e.g. "My Blog Name"
-		return None
+		return ""
 	
 	def get_created_by_name(self, obj):
 		if obj.created_by:
 			if obj.created_by.get_full_name():
 				return obj.created_by.get_full_name() # Output: e.g. "John Doe"
 			return obj.created_by.username # Output: e.g. "johndoe1984"
-		return None
+		return ""
 
 ```
 
@@ -126,14 +135,16 @@ class PgCategory(models.Model):
 class PgKeyword(models.Model):
 	name = ...
 ```
-
 In `serializers.py`:
 Remember: for *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
 ```python
 class PgSerializer(serializers.ModelSerializer):
-	is_active = serializers.SerializerMethodField()  # Auto calls the method with this name: get_is_active()
-	pg_categories = serializers.SerializerMethodField()  # Auto calls the method with this name: get_pg_categories()
-	pg_keywords = serializers.SerializerMethodField()  # Auto calls the method with this name: get_pg_keywords()
+
+	# Custom Method Fields (SerializerMethodField) declaration:
+	# (These declarations call their get_something() automatically)
+	is_active = serializers.SerializerMethodField()
+	pg_categories = serializers.SerializerMethodField()
+	pg_keywords = serializers.SerializerMethodField()
 
 class Meta:
 	model = models.Pg
@@ -180,11 +191,11 @@ class PageCategory(models.Model):
 	name = ...
 	slug = ...
 ```
-
 In `serializers.py`:
 Remember once more: for *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
 ```python
 class CategoryDetailSerializer(serializers.ModelSerializer): # serializer used to detail something
+
 	class Meta:
 		model = models.Page
 		fields = [
@@ -195,7 +206,10 @@ class CategoryDetailSerializer(serializers.ModelSerializer): # serializer used t
 
 
 class CategorySerializer(serializers.ModelSerializer):  # main serializer what will be the endpoint!
-	related_pages = serializers.SerializerMethodField()  # Auto calls get_related_pages()
+
+	# Custom Method Fields (SerializerMethodField) declaration:
+	# (These declarations call their get_something() automatically)
+	related_pages = serializers.SerializerMethodField()
 	
 	class Meta:
 		model = models.PageCategory
@@ -219,41 +233,51 @@ Unlike the *custom method field* that uses a filtered data from another endpoint
 
 Context (`models.py`):
 ```python
-class MenuLink(models.Model):
+class Menu(...):
+	"""It manages which Menus exist through the app."""
+	# ...
+	
+class MenuLink(...):
 	"""Each instance is a link in the app menus."""
 	menu = models.ForeignKey(
-		"Menu",
-		on_delete=models.CASCADE,
+		Menu,
 		related_name="menu_links",
+		# ...
 	)
 
 	# ...
-
-class Menu(models.Model):
-	"""It manages which Menus exist through the app."""
-	# ...
 ```
-
 In `serializers.py`:
 ```python
 class MenuLinkSerializer(serializers.ModelSerializer):
 	"""It packages all links of a menu to be used by MenuSerializer."""
 	# ...
 
-class Meta:
-	model = models.MenuLink
-	# ...
+	class Meta:
+		model = models.MenuLink
+		# ...
 
 class MenuSerializer(serializers.ModelSerializer):
 	"""Creating the Pagex Menu API where all menus data is converted to JSON format."""
 
 	# Custom Fields (directly based on another serializer class):
-	links = PagexMenuLinkSerializer(many=True, read_only=True, source="menu_links")
+	links = MenuLinkSerializer(many=True, read_only=True, source="menu_links")
+	
 	class Meta:
+		# Which model class the data's coming from:
 		model = models.Menu
+		# Which fields (attributes) specifically:
 		fields = [
 			# ...
 			"links", # Custom field
 		]
 	# ...
 ```
+
+
+---
+## Creating API roadmap:
+[/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
+
+
+

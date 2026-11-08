@@ -15,7 +15,7 @@ Sometimes, the best way to do this is edit the custom form of that admin class o
 ## Filtering directly in `admin.py`:
 
 Solutions:
-- Filtering objects directly from the database (Not recommended): [/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
+- Filtering objects directly from the database (Not recommended): [/python/web-development/django/4-cms-admin/method-get_queryset](/python/web-development/django/4-cms-admin/method-get_queryset.md)
 - Filtering from a field/attribute (drop-down): [/python/web-development/django/4-cms-admin/method-formfield_for_foreignkey](/python/web-development/django/4-cms-admin/method-formfield_for_foreignkey.md)
 
 ---

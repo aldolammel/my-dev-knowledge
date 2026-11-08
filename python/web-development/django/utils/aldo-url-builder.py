@@ -6,7 +6,7 @@
 
 from . import consts
 
-def pagex_url_builder(obj: object, builder: int, option: str | None = None):
+def url_builder(obj: object, builder: int, option: str | None = None):
     """Builds front-end and back-end URLs for front-end-previews or API/JSON-visualizers.
     Args:
         obj: Target object that must have a slug or identifier attribute.

@@ -13,7 +13,7 @@ The `formfield_for_foreignkey()` method lets you customize the form field used f
 - Modify queryset, label, or other field properties.
 - Apply custom filtering or ordering to dropdown options.
 
-In case of a traditional queryset usage: [/python/web-development/django/4-cms-admin/method-get_queryset.py](/python/web-development/django/4-cms-admin/method-get_queryset.py)
+In case of a traditional queryset usage: [/python/web-development/django/4-cms-admin/method-get_queryset](/python/web-development/django/4-cms-admin/method-get_queryset.md)
 
 Some stuff you could set in here, actually you can use `get_form()` method too: [/python/web-development/django/3-2-views-and-API/method-get_form.py](/python/web-development/django/3-2-views-and-API/method-get_form.py)
 

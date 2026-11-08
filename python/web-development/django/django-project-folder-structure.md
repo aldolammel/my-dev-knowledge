@@ -21,6 +21,7 @@ my_project_name/
 │   ├── context_processors.py    # Data/context to make available to the entire project.
 │   ├── settings.py              # Main configuration file of the entire project.
 │   ├── urls.py                  # Main URL configuration for the entire project.
+│   ├── urls_api.py              # Custom URL focused to keep only API endpoints.
 │   └── wsgi.py                  # xxxxxxxx.
 │
 ├── apps/                   # 'sub-app' package folder.
@@ -50,7 +51,7 @@ my_project_name/
 │   │   ├── validators.py   # Custom validators to validate things through the sub-app.
 │   │   └── views.py        # Data/context from this app to send to the template.
 │   │
-│   ├── app.../
+│   ├── subapp.../
 │   │   └── ...
 │   │
 │   └── __init__.py        # Makes apps folder to be a package of apps.
@@ -94,10 +95,10 @@ my_project_name/
 ├── frontend/         # Where the front-end solution will be installed.
 │
 ├── apps/
-│   ├── subapp1/              
-│   │   └── ...       # Same files as structure "A".     
+│   ├── subapp1/
+│   │   └── ...         # Same files as structure "A".     
 │   │
-│   ├── app.../
+│   ├── subapp.../
 │   │
 │   └── __init__.py  
 │

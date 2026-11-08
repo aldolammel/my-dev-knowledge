@@ -1,16 +1,17 @@
 from django.conf import settings
 from django.db import models
 
-from . import lang
+# from . import lang
 
 
-class AuditBase(models.Model):  # Abstract model!
-    """Stores who and when things were changed."""
+class AuditMixin(models.Model):  # Abstract model!
+    """Those models that inherit this will be allowed to store who (user) has changed model instances."""
 
     created_at = models.DateTimeField(
         auto_now_add=True,
         editable=False,
-        verbose_name=lang.lbl_created_at,
+        verbose_name="Created at",
+        # verbose_name=lang.lbl_created_at,
     )
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -18,12 +19,14 @@ class AuditBase(models.Model):  # Abstract model!
         editable=False,
         on_delete=models.SET_NULL,
         null=True,
-        verbose_name=lang.lbl_created_by,
+        verbose_name="Created by",
+        # verbose_name=lang.lbl_created_by,
     )
     updated_at = models.DateTimeField(
         auto_now=True,
         editable=False,
-        verbose_name=lang.lbl_updated_at,
+        verbose_name="Updated at",
+        # verbose_name=lang.lbl_updated_at,
     )
     updated_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -31,7 +34,8 @@ class AuditBase(models.Model):  # Abstract model!
         editable=False,
         on_delete=models.SET_NULL,
         null=True,
-        verbose_name=lang.lbl_updated_by,
+        verbose_name="Updated by",
+        # verbose_name=lang.lbl_updated_by,
     )
 
     class Meta:

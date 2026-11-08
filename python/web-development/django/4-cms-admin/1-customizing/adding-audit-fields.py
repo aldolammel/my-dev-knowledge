@@ -8,14 +8,14 @@
 
 # FILE: /core/settings.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    # /python/web-development/django/3-1-models-database/3-users/0-users-setup.txt
+    # /python/web-development/django/3-1-models-database/3-users/0-users-setup.md
 
 
 # FILE: /apps/my_app/models.py - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from django.conf import settings as stgs
 
-class AuditBase(models.Model):
+class AuditMixin(models.Model):
     """Stores who and when things were changed."""
 
     created_at = models.DateTimeField(
@@ -44,12 +44,12 @@ class AuditBase(models.Model):
     class Meta:
         abstract = True  # Flags the db to don't create this table!
 
-class PageModel(AuditBase):
+class PageModel(AuditMixin):
     attr_1 = ...
     attr_2 = ...
 
     # How model inheritance works:
-    # /python/web-development/django/3-1-models-database/Inheriting-attributes.txt
+    # /python/web-development/django/3-1-models-database/inheriting-attributes.md
 
     def save(self, *args, **kwargs):
         """Built-in method that's executed when the entry saving runs."""
@@ -86,6 +86,3 @@ class PageModelAdmin(admin.ModelAdmin):
         """Built-in CMS method that allows you to customize what happens when a model is saved through the Django CMS interface."""
         # Sending to models.py the current user in CMS:
         obj.save(user=request.user)
-
-    # If you expect to use audit in more than two admin classes, it's recommended to use Mixin class to simplify maintanance:
-    #   /python/web-development/django/4-cms-admin/model-type-mixin.py
