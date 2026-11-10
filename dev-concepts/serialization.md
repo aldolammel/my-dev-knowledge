@@ -33,7 +33,7 @@ What is API: [/api/\_about](/api/_about.md)
 - Convert database models (e.g., Python objects) to JSON/XML for HTTP responses.
 - Parse incoming JSON/XML data into Python objects for processing.
 
-E.g. with Python + Django: [/python/web-development/django/3-2-views-and-API/serializer](/python/web-development/django/3-2-views-and-API/serializer.md)
+E.g. with Python + Django: [python/web-development/django/3-2-views-and-API/api](python/web-development/django/3-2-views-and-API/api.md)
 ### Data Storage
 - Save objects to files (e.g., as JSON, YAML, or binary formats like Protocol Buffers).
 

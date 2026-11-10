@@ -23,7 +23,7 @@ It's where endpoints logic is developed. Views are responsible for manage what d
 Once Views and [API](/api/_about.md) concepts share similarities, they are NOT the same even though both are responsible to send data from back-end to front-end, for example.
 
 ***Serializers* VS *Views*:**
-Why not to create JSON directly with Views? A [serializer](/python/web-development/django/3-2-views-and-API/serializer.md) is a single, declarative place that owns the contract between your models and the JSON, in both directions. Building JSON by hand in *views* works for one endpoint, but it scales badly for non-super-simple apps.
+Why not to create JSON directly with Views? A [api](python/web-development/django/3-2-views-and-API/api.md) is a single, declarative place that owns the contract between your models and the JSON, in both directions. Building JSON by hand in *views* works for one endpoint, but it scales badly for non-super-simple apps.
 
 ---
 ## Other Django structural parts:

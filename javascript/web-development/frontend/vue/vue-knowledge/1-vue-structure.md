@@ -1,22 +1,17 @@
+#### JavaScript > Vue > Structure
+# Files & Folder Structure
 
+---
 
-VUE.JS: ITS FILES AND FOLDER STRUCTURE
+==IMPORTANT==: 
+If you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
 
+More about compilation time: [/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation](/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation.md)
 
-    IMPORTANT: 
-        If you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
-
-        More about compilation time:
-            ./90-go-live-compilation.txt
-
-
->> Vue folder structure - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-Structure to copy:
-    .../vue/z-example-structure/aldolammel-style/
-
-
+---
+## Vue folder structure:
+Initial structure to copy: (folder) [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/)
+```python
 my_project/
 ├── frontend/
 │   ├── node_modules/        # stores all dependencies of the project and node.js stuff.
@@ -97,12 +92,12 @@ my_project/
 │
 ├── .nvmrc                    # File used to load the correct project Node version!
 └── ...
+```
 
-        >> Example of a Django folder project with Vue:
-            .../vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+Example of a Django folder project with Vue:             .../vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
 
 
-    >> A Vue.js app file (.vue) divide itself by 3 layers:
+A Vue.js app file (.vue) divide itself by 3 layers:
         1) Script
         2) Template
         3) Style
@@ -138,6 +133,8 @@ my_project/
                         ...
                     </style>
 
+
+---
 
 
 >> MORE ABOUT:

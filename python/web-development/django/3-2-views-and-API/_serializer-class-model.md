@@ -12,15 +12,18 @@ Serialization is a crucial core layer of [API](/api/_about.md) responsible for c
 
 ---
 ## Serializer basic template:
-In `/apps/subapp_name/serializers.py`:
+In `/apps/subapp/serializers.py`:
 ```python
 from rest_framework import serializers
 from . import models
 
-class ExampleModelSerializer(serializers.ModelSerializer):
-    """Converting xxxxxxxxxxxxxx model instances to JSON data."""
+class SomethingSerializer(serializers.ModelSerializer):
+    """Converting xxxxxxxxSomethingModelClassxxxxxxxx model instances to JSON data."""
 
-    # Custom Fields (directly based on another serializer class) declaration:
+    # Explicit Fields declaration:
+    # Reserved space...
+    
+    # Nested Fields (other serializer-based) declaration:
     # Reserved space...
 
     # Custom Method Fields (SerializerMethodField) declaration:
@@ -29,16 +32,18 @@ class ExampleModelSerializer(serializers.ModelSerializer):
 
     class Meta:
         # Which model class the data's coming from:
-        model = models.ExampleModel
+        model = models.Something
         # Which fields (attributes) specifically:
-        fields = [
+        fields = "__all__"  # Make this first to reveal all the potential forgotten/inherited fields that are available!
+        """fields = [
             "xxxxxxxxx_1",
             "xxxxxxxxx_2",
             "xxxxxxxxx_3",
             "xxxxxxxxx_4",
-            # Custom field:
+            # - - - - - - - Custom field - - - - - - -
             # Reserved space...
-        ]
+        ]"""
+        
 
     # Custom Method Fields:
     # Reserved space...
@@ -46,72 +51,143 @@ class ExampleModelSerializer(serializers.ModelSerializer):
 ```
 
 ---
-## Creating custom fields directly in a serializer class:
-When you create a serializer class, you are building up an API endpoint, and, if needed, with custom fields to extract even more data to complement your API.
+## Creating fields directly in the serializer class:
+When you create a serializer class, you are building up an API endpoint, and, if needed, you can create new fields to extract even more data to complement the API. Below, check the available ways to do that.
  
  Every `serializers.py` file demands:
 ```python
  from rest_framework import serializers
 ```
 
-**There are 2 ways to extract data from models using a serializer class:**
-- A) **Custom Method Field:** uses a method-automatically-called to extract data elsewhere.
-	- You extract external data, creating a method to filtering data with a queryset.
-- B) **Custom Field**: uses another endpoint (serializer class) to collect more data.
-	- You extract external data too, but without create any method or a queryset.
+**3 ways to pack data in JSON:**
+- A) **Explicit Field:** use it when you can retrieve the information directly from a model field or a related model field.
+	- Perfect when the data already is in the target model of your serializer.
+- B) **Nested Field**: use it when you want to include data from another serializer in the current one.
+	- Perfect when you already got another serialized model and wanna represent that into your current serializer structure.
+- C) **Custom Method Field:** use it when the returned value requires custom logic.
+	- Perfect when you need Python to figure out what the data should be (using conditions, querysets).
 
 ......................................
-### A) Custom method field
-You extract external data, creating a method to filtering data with a queryset.
 
-**Example 1/3:**
-A very basic custom method field creation where the entire data-flow's shown below.
+### A) Explicit field
+Use them when you can retrieve the information directly from a model field or a related model field. For example, *DRF* already knows how to retrieve model attributes and relationships. You don't need to write a method (option C) just to access them.
+Context (`models.py`):
+```python
+class Something(...):
+	platform = models.ForeignKey(Platform, ...)
+	created_by = models.ForeignKey(User, ...)
+```
+In `serializers.py`:
+```python
+class SomethingSerializer(serializers.ModelSerializer):
+
+    # Explicit Fields declaration:
+    platform = serializers.CharField(
+        source="platform.name",  # Instead of the original value (id)
+        read_only=True,
+    )
+    created_by = serializers.CharField(
+        source="created_by.username",  # Instead of the original value (id)
+        read_only=True,
+    )
+	
+	# ...
+	
+    class Meta:
+        # ...
+        fields = [
+            "platform",
+            "created_by",
+        ]
+```
+
+......................................
+
+### B) Nested field
+Use it when you want to include data from another serializer in the current one.
 
 Context (`models.py`):
 ```python
-class Page(models.Model):
-	title = ...
-	is_blog = ...
+class Menu(...):
+	# ...
+	
+class MenuLink(...):
+	menu = models.ForeignKey(Menu, related_name="menu_links")
+```
+In `serializers.py`:
+```python
+class MenuLinkSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.MenuLink
+		# ...
 
-class Post(models.Model):
-	blog = ...  # menu drop-down to select some Page that is_blog = True
-	title = ...
-	created_by = models.ForeignKey(settings.AUTH_USER_MODEL, ...)
+class MenuSerializer(serializers.ModelSerializer):
+	# ...
+	
+	# Nested Fields (other serializer-based) declaration:
+	links = MenuLinkSerializer(
+		many=True,
+		source="menu_links",
+		read_only=True,
+	)
+	
+	# ...
+	
+	class Meta:
+		# Which model class the data's coming from:
+		model = models.Menu
+		# Which fields (attributes) specifically:
+		fields = [
+			# ...
+			"links", # Custom field
+		]
+	# ...
 ```
 
-In `serializers.py`:
-For *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
+......................................
+
+### C) Custom method field
+Use it when the returned value requires custom Python logic. You extract external data, creating a method to filtering data with a queryset.
+
+==Be aware:== `SerializerMethodField` is read-only!
+
+**Example 1/3:**
+
+Context (`models.py`):
 ```python
-class PostSerializer(serializers.ModelSerializer):
+class User(...):
+	username = ...
+	f_name = ...
+	l_name = ...
+
+class Something(models.Model):
+	# ...
+	created_by = models.ForeignKey(User, ...)
+```
+In `serializers.py`:
+```python
+class SomethingSerializer(serializers.ModelSerializer):
 
 	# ...
 	
 	# Custom Method Fields (SerializerMethodField) declaration:
 	# (These declarations call their get_something() automatically)
-	blog_name = serializers.SerializerMethodField()
 	created_by_name = serializers.SerializerMethodField()
 
 	class Meta:
-		model = models.Post
+		model = models.Something
 		fields = [
-			# "blog",  # It would bring the blog ID (e.g. 1) and not the blog name.
-			"blog_name",  # Custom method field.
-			# "created_by",  # It would bring the user ID (e.g. 1) and not the username.
+			# ...
+			# "created_by",  # It would bring the user ID (e.g. 1) and not the username or user full name.
 			"created_by_name",  # Custom method field.
 		]
-
-	def get_blog_name(self, obj):
-		if obj.blog:
-			return obj.blog.title # Output: e.g. "My Blog Name"
-		return ""
 	
 	def get_created_by_name(self, obj):
 		if obj.created_by:
-			if obj.created_by.get_full_name():
-				return obj.created_by.get_full_name() # Output: e.g. "John Doe"
-			return obj.created_by.username # Output: e.g. "johndoe1984"
+			if obj.created_by.f_name and obj.created_by.l_name:
+				return f"{obj.created_by.f_name} {obj.created_by.l_name}"  # Output: e.g. "John Doe"
+			return obj.created_by.username  # Output: e.g. "johndoe1984"
 		return ""
-
 ```
 
 **Example 2/3:**
@@ -136,10 +212,11 @@ class PgKeyword(models.Model):
 	name = ...
 ```
 In `serializers.py`:
-Remember: for *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
 ```python
 class PgSerializer(serializers.ModelSerializer):
 
+	# ...
+	
 	# Custom Method Fields (SerializerMethodField) declaration:
 	# (These declarations call their get_something() automatically)
 	is_active = serializers.SerializerMethodField()
@@ -183,8 +260,8 @@ class Page(models.Model):
 	slug = ...
 	is_published = ...
 	categories = models.ManyToManyField(
-	"PageCategory",
-	related_name="related_page_categories",
+		"PageCategory",
+		related_name="related_page_categories",
 	)
 
 class PageCategory(models.Model):
@@ -192,7 +269,6 @@ class PageCategory(models.Model):
 	slug = ...
 ```
 In `serializers.py`:
-Remember once more: for *custom method field*, you'll only use the *field-class* `SerializerMethodField` for every attribute.
 ```python
 class CategoryDetailSerializer(serializers.ModelSerializer): # serializer used to detail something
 
@@ -225,55 +301,6 @@ class CategorySerializer(serializers.ModelSerializer):  # main serializer what w
 		return CategoryDetailSerializer(qs_published_pages, many=True).data
 
 ```
-
-......................................
-
-### B) Custom fields
-Unlike the *custom method field* that uses a filtered data from another endpoint (serializer), using this *custom field* (not method) you can extract external data too, but without a custom queryset:
-
-Context (`models.py`):
-```python
-class Menu(...):
-	"""It manages which Menus exist through the app."""
-	# ...
-	
-class MenuLink(...):
-	"""Each instance is a link in the app menus."""
-	menu = models.ForeignKey(
-		Menu,
-		related_name="menu_links",
-		# ...
-	)
-
-	# ...
-```
-In `serializers.py`:
-```python
-class MenuLinkSerializer(serializers.ModelSerializer):
-	"""It packages all links of a menu to be used by MenuSerializer."""
-	# ...
-
-	class Meta:
-		model = models.MenuLink
-		# ...
-
-class MenuSerializer(serializers.ModelSerializer):
-	"""Creating the Pagex Menu API where all menus data is converted to JSON format."""
-
-	# Custom Fields (directly based on another serializer class):
-	links = MenuLinkSerializer(many=True, read_only=True, source="menu_links")
-	
-	class Meta:
-		# Which model class the data's coming from:
-		model = models.Menu
-		# Which fields (attributes) specifically:
-		fields = [
-			# ...
-			"links", # Custom field
-		]
-	# ...
-```
-
 
 ---
 ## Creating API roadmap:

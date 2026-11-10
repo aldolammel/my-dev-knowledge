@@ -49,4 +49,4 @@ http://localhost:8000/api/subappnamehere/
 
 ---
 ## Django serialization roadmap:
-[/python/web-development/django/3-2-views-and-API/serializer](/python/web-development/django/3-2-views-and-API/serializer.md)
+[python/web-development/django/3-2-views-and-API/api](python/web-development/django/3-2-views-and-API/api.md)

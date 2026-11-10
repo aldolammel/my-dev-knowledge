@@ -9,7 +9,7 @@
 
 ---
 
-Views are the place where all Django model data is declared to be sent externally, using or not a [serializer](/python/web-development/django/3-2-views-and-API/serializer.md).
+Views are the place where all Django model data is declared to be sent externally, using or not a [api](python/web-development/django/3-2-views-and-API/api.md).
 
 In `/apps/subapp/views.py`:
 ```python
@@ -18,17 +18,18 @@ from . import models
 from . import serializers as serial
 
 class ExampleModelViewSet(viewsets.ReadOnlyModelViewSet):
-    """Read-only endpoint exposing XXXXXXXXXXXXXXXXX to Vue Router."""
+    """Read-only endpoint exposing xxxxxxxxSerializerNamexxxxxxx to Vue Router."""
     
     queryset = models.ExampleModel.objects.prefetch_related("one_related_field_from_foreignkey")
     serializer_class = serial.ExampleModelSerializer
     lookup_field = "slug"
     lookup_value_regex = "[^/]+" # Handles slugs with hyphens or underscores correctly.
 
-    def get_queryset(self):
-        """Built-in method to customize even more the qs."""
-        return models.ExampleModel.objects.filter(is_published=True)
+    # def get_queryset(self):
+    #     """Built-in method to customize even more the qs."""
+    #     pass
 ```
+More about `get_queryset()` method: [/python/web-development/django/3-2-views-and-API/method-get_queryset.py](/python/web-development/django/3-2-views-and-API/method-get_queryset.py)
 
 ---
 ## Django API creating roadmap:

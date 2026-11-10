@@ -1,5 +1,5 @@
 #### Versioning > Git
-# File .gitignore
+# File `.gitignore`
 
 ---
 ## 1) Create the .gitignore file in the repo root:
