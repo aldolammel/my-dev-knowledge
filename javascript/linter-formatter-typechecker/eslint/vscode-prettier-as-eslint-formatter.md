@@ -1,5 +1,6 @@
+FILE: `/project/.vscode/settings.json`:
+```json
 // PRETTIER AS ESLINT FORMATTER (VSCODE)
-// FILE: /project/.vscode/settings.json:
 {
     // PROJECT SETTINGS
     "editor.codeActionsOnSave": { // ESLint
@@ -12,20 +13,29 @@
         //"vue", // Add this only if the project is using Vue!
     ],
     "editor.formatOnSave": true,
+    //...
+    
     // JAVASCRIPT SETTINGS
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
     },
+    //...
+    
     // JSON SETTINGS
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
     },
+    //...
+    
     // CSS SETTINGS
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
     },
+    //...
+    
     // VUE SETTINGS
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier NOT RECOMMENDED FOR VUE!
     },
 }
+```

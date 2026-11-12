@@ -1,4 +1,5 @@
-PRETTIER FORMATTER: INTEGRATION
+#### JavaScript > Linter, Formatter & Type checker
+# Prettier formatter: installation/integration
 
 ---
 
@@ -55,9 +56,8 @@ If you're integrating [ESLint](/javascript/linter-formatter-typechecker/eslint/_
 },
 ```
 
-        3) (Optional)
+**3) (Optional) Add the Prettier config file in your frontend folder:**
 
-Add the Prettier config file in your frontend folder: `.prettierrc`
 In `/your_project_root/frontend/.prettierrc`:
 ```js
 {
@@ -68,9 +68,8 @@ In `/your_project_root/frontend/.prettierrc`:
 }
 ```
         
-        4) (If applicable) 
+**4) (If applicable) For Python projects, make sure the `pyproject.toml` has Prettier basic settings:**
 
-For Python projects, make sure the `pyproject.toml` has Prettier basic settings:                
 In `pyproject.toml`:
 ```toml
 # Prettier formatter settings:
@@ -84,3 +83,8 @@ useTabs = false
 bracketSpacing = true
 arrowParens = "avoid"
 ```
+
+---
+
+
+

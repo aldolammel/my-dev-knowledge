@@ -12,7 +12,11 @@
 - [x] 1.3) (optional) Install the Vue extension in your IDE: [For VSCode](https://marketplace.visualstudio.com/items?itemName=Vue.volar) / For PyCharm
 
 ---
-## 2) Install the Vue build-tool and Create the Vue.js (framework) project:
+## 2) Define how you will switch Node version between projects:
+[/javascript/nodejs/2.2-automating-switch-process](/javascript/nodejs/2.2-automating-switch-process.md)
+
+---
+## 3) Install the Vue build-tool and Create the Vue.js (framework) project:
 [/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project](/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project.md)
 
 ---

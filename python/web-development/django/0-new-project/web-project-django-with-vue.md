@@ -55,7 +55,8 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 ## 3) Deployment:
 
 ### Before
-1. [ ] Check the deployment heads-up: [/python/web-development/django/15-deployment/\_about](/python/web-development/django/15-deployment/_about.md)
+1. [ ] Check the deployment Django heads-up: [/python/web-development/django/15-deployment/\_about](/python/web-development/django/15-deployment/_about.md)
+2. [ ] Check the deployment Vue heads-up: [/javascript/web-development/frontend/vue/6-go-live-production/\_about](/javascript/web-development/frontend/vue/6-go-live-production/_about.md)
 ### 3.1) Xxxxxx
 1. [ ] xxxxxxxxxxxxxxxxxxxxxx
 2. [ ] xxxxxxxxxxxxxxxxxxxxx

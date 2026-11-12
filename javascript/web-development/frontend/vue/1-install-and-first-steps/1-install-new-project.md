@@ -1,5 +1,5 @@
 #### JavaScript > Project types > Vue
-# Installing a new project
+# Installing Vue as a new project
 
 ---
 ## 1) Which scenario you are:

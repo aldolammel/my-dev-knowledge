@@ -1,4 +1,3 @@
-
 #### Python > Components & Libraries
 # Psycopg
 

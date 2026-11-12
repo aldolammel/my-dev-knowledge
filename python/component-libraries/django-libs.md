@@ -1,9 +1,8 @@
+#### Python > Components & Libraries
+# For Python frameworks
 
+---
 
-/python/web-development/django/component-libraries/
+For Django: (folder) [/python/web-development/django/component-libraries/](/python/web-development/django/component-libraries/)
 
-E.g.
-- django-cors-headers
-- django-parler
-- django-rosetta
-- django-polymorphic
+For xxxxxxxxx: /xxxxxxxxxxxxxx

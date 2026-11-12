@@ -4,13 +4,13 @@
 ---
 
 ==IMPORTANT==: 
-If you are using Vite as Built-tool, it already will manage the SCSS files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the css files in /public/ folder!
+If you are using Vite as Built-tool, it already will manage the `.scss` files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the `.css` files in `/public/` folder!
 
 More about compilation time: [/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation](/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation.md)
 
 ---
 ## Vue folder structure:
-Initial structure to copy: (folder) [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/)
+If you will use [Vite](/javascript/build-tools/vite/0-vite.md) as your JS Build-tool, DON'T copy anything to your project without to install Vite first! Otherwise, if your Vite is installed or you are by your own, here is an initial frontend template to copy: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/) (folder)
 ```python
 my_project/
 ├── frontend/
@@ -21,16 +21,16 @@ my_project/
 │   │   ├── manifest.json    # for PWA configuration.
 │   │   ├── robots.txt       # xxxxx.
 │   │   ├── sitemap.xml      # xxxxx.
-│   |   └── ...
+│   │   └── ...
 │   │
 │   ├── src/                   # Where Vue project is. Vite build-tool watches this folder!
 │   │   ├── assets/            # Those files that aren't public.
-│   |   |   ├── imgs/          # Images that need optimization or processing.
-│   |   |   |   ├── logo.svg
-│   |   |   |   ├── bg.jpg
-│   |   |   |   └── ...
-│   |   |   |
-│   |   │   ├── styles/                  # Files to imported in components or main.js.
+│   │   │   ├── imgs/          # Images that need optimization or processing.
+│   │   │   │   ├── logo.svg
+│   │   │   │   ├── bg.jpg
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── styles/                  # Files to imported in components or main.js.
 │   │   │   │   ├── app.scss             # Everything about this project product styling.
 │   │   │   │   ├── css-framework.scss   # It imports CSS framework installed.
 │   │   │   │   └── ...
@@ -38,47 +38,47 @@ my_project/
 │   │   │   └── ...
 │   │   │
 │   │   ├── components/
-│   |   |   ├── common/               # Reusable dumb components (Button, Modal).
+│   │   │   ├── common/               # Reusable dumb components (Button, Modal).
 │   │   │   │   ├── BestProducts.vue  
 │   │   │   │   ├── Newsletter.vue       
 │   │   │   │   ├── Testimonials.vue  
 │   │   │   │   └── ...
 │   │   │   │
-│   |   |   ├── layout/               # Layout components (AppHeader, Navigation).
+│   │   │   ├── layout/               # Layout components (AppHeader, Navigation).
 │   │   │   │   ├── SiteHeader.vue
 │   │   │   │   ├── SiteFooter.vue
 │   │   │   │   ├── NavMain.vue
 │   │   │   │   └── ...
 │   │   │   │
-│   |   |   └── pages/                # Components specific to a page/route.
-│   |   |       ├── Home.vue
+│   │   │   └── pages/                # Components specific to a page/route.
+│   │   │       ├── Home.vue
 │   │   │       ├── ListByCategory.vue
 │   │   │       ├── LoadBlog.vue
 │   │   │       ├── LoadBlogPost.vue
 │   │   │       └── ...
 │   │   │
 │   │   ├── composables/              # Reusable functions for Composition API.
-│   |   |   ├── useErrorHandler.js
-│   |   |   ├── useLoadingState.js
-│   |   |   ├── usePage.js
-│   |   |   └── ...
+│   │   │   ├── useErrorHandler.js
+│   │   │   ├── useLoadingState.js
+│   │   │   ├── usePage.js
+│   │   │   └── ...
 │   │   │
 │   │   ├── hooks/                # For custom Composition API functions (hooks).
-│   |   |   ├── useAuth.js
-│   |   |   └── ...
+│   │   │   ├── useAuth.js
+│   │   │   └── ...
 │   │   │
 │   │   ├── libs/                 # Where all main library files are. Things connected to the world.
-│   |   |   ├── bootstrap.js
-│   |   |   └── ...
+│   │   │   ├── bootstrap.js
+│   │   │   └── ...
 │   │   │
 │   │   ├── router/           # Where routes and lazy-load pages are defined.
-│   |   |   ├── router.js     # Router config file.
+│   │   │   ├── router.js     # Router config file.
 │   │   │   └── routes.js     # Where routes are defined.
-│   |   |
+│   │   │
 │   │   ├── stores/           # Where things are caching from APIs.
 │   │   │   ├── menus.js      # Caching/storing data from menus managed by back-end.
 │   │   │   └── pages.js      # Caching/storing data from pages managed by back-end.
-│   |   |
+│   │   │
 │   │   ├── utils/            # Tiny, pure funcs that do one thing, but not lib or Vue reactivity.
 │   │   │   ├── env.js        # Calling front-end environment vars.
 │   │   │   └── tinyslider-testimonial.js
@@ -94,10 +94,13 @@ my_project/
 └── ...
 ```
 
-Example of a Django folder project with Vue:             .../vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt
+---
+## Back-end framework structures working with Vue:
+- Django folder project with Vue: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django.md)
 
+---
 
-A Vue.js app file (.vue) divide itself by 3 layers:
+A Vue.js app file (`.vue`) divide itself by 3 layers:
         1) Script
         2) Template
         3) Style

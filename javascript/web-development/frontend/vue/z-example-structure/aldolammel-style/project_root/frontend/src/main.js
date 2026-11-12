@@ -1,4 +1,4 @@
-// Importing for SPA:
+// Importing:
 import { createApp } from "vue";
 import App from "@/App.vue";
 import { createHead } from "@unhead/vue/client";

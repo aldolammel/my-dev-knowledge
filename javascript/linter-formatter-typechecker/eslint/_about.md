@@ -1,4 +1,7 @@
-LINTER: ESLINT
+#### JavaScript > Linter, Formatter & Type checker
+# ESLint linter
+
+---
 
 ESLint is a static code analysis tool for JS. Its primary purpose is to find and fix problems in your code. It doesn't run your code; instead, it scans your source files and flags issues based on a set of predefined rules.
 

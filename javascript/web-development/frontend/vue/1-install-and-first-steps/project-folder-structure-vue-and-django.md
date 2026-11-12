@@ -22,7 +22,7 @@ Don't install Vue in Django's templates folder! It would create process renderin
 ### 1A) Recommendation for MPA project
 ```python
 my_project/         # If needed, check the Django folder structure!
-└── frontend/
+└── frontend/       # It's NOT needed to created it now!
 ```
 Vue project folder (e.g. `/frontend/`) must be created in the root of Django project folder (e.g. `/my_project/frontend/`).
 
@@ -31,13 +31,13 @@ Vue project folder (e.g. `/frontend/`) must be created in the root of Django pro
 ### 1B) Recommendation for SPA project
 ```python
 my_project/         # If needed, check the Django folder structure!
-└── frontend/
+└── frontend/       # It's NOT needed to created it now!
 ```
 Vue project folder (e.g. `/frontend/`) must be created in the root of Django project folder (e.g. `/my_project/frontend/`).
 
 ---
 ## 2) Vue `/frontend/` folder structure:
-[/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
+Just take a look, but ==DON'T== create anything because Vue will create it automatically during its installation: [/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
 
 ---
 ## 3) Once you have decided with structure to follow, return to the main guide for Vue installation you are following!

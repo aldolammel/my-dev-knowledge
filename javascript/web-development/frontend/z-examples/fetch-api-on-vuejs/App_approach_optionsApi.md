@@ -1,3 +1,5 @@
+File: `App_approach_optionsApi.vue`:
+```js
 <!-- Using the 'Composition API' logic to build-up this app, instead of the 'Options API' -->
 <script setup>
 // Example of using Fetch API in a Vue.js component
@@ -125,3 +127,5 @@ onMounted(() => {
     }
   }
 </style>
+
+```

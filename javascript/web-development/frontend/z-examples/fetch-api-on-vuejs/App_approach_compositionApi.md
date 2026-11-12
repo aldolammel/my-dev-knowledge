@@ -1,3 +1,5 @@
+File: `App_approach_compositionApi.vue`:
+```js
 <!-- Using the 'Options API' logic to build-up this app, instead of the 'Composition API' -->
 <script>
   // It prevents the external API to inject malicious scripts in this app:
@@ -131,3 +133,5 @@
     }
   }
 </style>
+
+```

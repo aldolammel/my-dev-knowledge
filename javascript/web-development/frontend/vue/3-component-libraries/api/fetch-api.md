@@ -1,3 +1,3 @@
-API SOLUTION: FETCH API (JS native solution)
+[/javascript/js-knowledge/api](/javascript/js-knowledge/api.md)
 
-    /javascript/api.md
+

@@ -1,5 +1,6 @@
+FILE: `/project/.vscode/settings.json`:
+```json
 // ESLINT AS FORMATTER (VSCODE)
-// FILE: /project/.vscode/settings.json:
 {
     // PROJECT SETTINGS
     "editor.codeActionsOnSave": { // ESLint
@@ -15,3 +16,5 @@
         "frontend" // ESLint working directories (ONLY if it's in a subfolder of frontend installed)
     ],
 }
+```
+

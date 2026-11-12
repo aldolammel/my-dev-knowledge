@@ -1,6 +1,2 @@
-/python/component-libraries/
+[/python/component-libraries/](/python/component-libraries/) (folder)
 
-E.g.
-- gettext
-- pillow
-- psycopg

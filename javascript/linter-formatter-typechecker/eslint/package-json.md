@@ -1,4 +1,5 @@
-// FILE: /project/package.json
+FILE: `/project/package.json`:
+```json
 //...
 "scripts": {
     // other scripts...,
@@ -6,3 +7,10 @@
     "lint:check": "eslint ."
 },
 //...
+```
+
+---
+
+
+
+

@@ -11,9 +11,7 @@
 2. [x] Check which back-end paths Vue must keep away to avoid conflicts:
 	- Using Django as back-end: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django.md)
 	- Using Flask as back-end: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-flask](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-flask.md)
-3. [x] Assuming you already decided which Vue project type you wanna build up: [/javascript/web-development/frontend/vue/vue-knowledge/SPA-vs-MPA](/javascript/web-development/frontend/vue/vue-knowledge/SPA-vs-MPA.md)
-4. [x] Create an exclusive `.env` file to set the front-end environment variables: [/environment-variables/env-for-local/in-frontend/env](/environment-variables/env-for-local/in-frontend/env.md)
-	- (Optional) Make sure this new `.env` is ignored by Git. This line should be there: `frontend/.env`
+3. [x] Assuming you already decided which Vue project approach you wanna build up: [/javascript/web-development/frontend/vue/vue-knowledge/SPA-vs-MPA](/javascript/web-development/frontend/vue/vue-knowledge/SPA-vs-MPA.md)
 
 ---
 ## 1) Choosing the scaffolding and build-tool for Vue projects:
@@ -24,12 +22,16 @@
 
 ### 1A) Using Vite
 
-1A.1) Install Vite: [/javascript/build-tools/vite/0-vite](/javascript/build-tools/vite/0-vite.md)
+- [x] 1A.1) Install Vite: [/javascript/build-tools/vite/0-vite](/javascript/build-tools/vite/0-vite.md)
 
-1A.2) Install every front-end's dependencies of this front-end's project (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)).
-- How to install dependencies: [/javascript/nodejs/3-installing-new-components](/javascript/nodejs/3-installing-new-components.md)
+- [x] 1A.2) Edit the current `/src/main.js` (or `/src/main.ts`) with the my style version: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version.md)
 
-1A.3) (Optional) Configure Vite to recognize "@" in paths and more (Recommended):
+- [x] 1A.3) Run Vue to test it: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
+
+- [ ] 1A.4) Install every front-end's dependencies of this front-end's project (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)).
+	- How to install dependencies: [/javascript/nodejs/3-installing-new-components](/javascript/nodejs/3-installing-new-components.md)
+
+- [ ] 1A.5) (Optional) Configure Vite to recognize "@" in paths and more (Recommended):
 
 The at ("@") in Vite projects mean the path starts from `./src` folder, no matter how deep is the caller file is in Vue project folder structure. And `publicDir` you're defining what folder the Vite will compile the project when it's ready to production environment.
 
@@ -51,12 +53,12 @@ export default defineConfig({
 });
 ```
 
-1A.4) (If applicable / Optional) In case the SCSS/SASS on the project, make Vite to recognize SCSS global vars importable: [/web-development/frontend/css/scss/variables-global](/web-development/frontend/css/scss/variables-global.md)
- - More SCSS integration we will see later!
+- [ ] 1A.6) (If applicable / Optional) In case the SCSS/SASS on the project, make Vite to recognize SCSS global vars importable: [/web-development/frontend/css/scss/variables-global](/web-development/frontend/css/scss/variables-global.md)
+	 - More SCSS integration we will see later!
 
-1A.5) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
-- Router (Vue official solution): [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/\_vue-router](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/_vue-router.md)
-- CSS Pre-processors (Vite built-in solutions): [/web-development/frontend/css/scss/vue-integration](/web-development/frontend/css/scss/vue-integration.md)
+- [ ] 1A.7) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
+	- Router (Vue official solution): [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/\_vue-router](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/_vue-router.md)
+	- CSS Pre-processors (Vite built-in solutions): [/web-development/frontend/css/scss/vue-integration](/web-development/frontend/css/scss/vue-integration.md)
 
 ......................................
 
@@ -145,7 +147,12 @@ Uninstall Vue-cli:
 	
 
 ---
-## 2) Make sure you already got configured your code quality shields for Vue:
+## 2) Create the front-end's `.env` file:
+- [ ] 2.1) Create an exclusive `.env` file to set the front-end environment variables: [/environment-variables/env-for-local/in-frontend/env](/environment-variables/env-for-local/in-frontend/env.md)
+- [ ] 2.2) (Optional) Make sure this new `.env` is ignored by Git. This line should be there: `frontend/.env`
+
+---
+## 3) Make sure you already got configured your code quality shields for Vue:
 - Linter for Vue: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/\_linter/vue-options](/javascript/web-development/frontend/vue/linter-formatter-typechecker/_linter/vue-options.md)
 - Formatter for Vue: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/\_formatter/vue-options](/javascript/web-development/frontend/vue/linter-formatter-typechecker/_formatter/vue-options.md)
 - Type-checker for Vue: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/\_type-checker/vue-options](/javascript/web-development/frontend/vue/linter-formatter-typechecker/_type-checker/vue-options.md)

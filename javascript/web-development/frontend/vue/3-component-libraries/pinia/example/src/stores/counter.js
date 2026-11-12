@@ -1,3 +1,5 @@
+// JAVASCRIPT VERSION:
+
 import { defineStore } from "pinia";
 
 // For asynchronous cases (step 1/2):

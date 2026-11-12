@@ -1,14 +1,11 @@
-/* 
-    
-    LIFECYCLE HOOKS
-    It is a group of phases that the javascript has when some action if called.
+LIFECYCLE HOOKS
+It is a group of phases that the javascript has when some action if called.
 
-    The cycle is:
-        /javascript/vuejs_lifecycle_hooks.png
+The cycle is:
+![](/javascript/js-knowledge/vuejs_lifecycle_hooks.png)
 
-*/
-
-// Usage on Vue.Js, for example:
+```js
+// Usage on Vue.js, for example:
 const AppName = {
   data() {
     //...
@@ -41,3 +38,5 @@ const AppName = {
     console.log("Here is the updated() Lifecycle hook.");
   },
 };
+```
+
