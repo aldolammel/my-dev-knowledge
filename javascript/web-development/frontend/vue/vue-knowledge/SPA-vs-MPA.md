@@ -1,4 +1,4 @@
-#### JavaScript > Vue
+#### JavaScript > Vue > Project types
 # Project approach: SPA vs MPA
 
 ---
@@ -18,5 +18,5 @@
 - Full compatible with link previews (sharing content).
 
 ---
-
-
+## Single-File-Component (SFC) concept:
+/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

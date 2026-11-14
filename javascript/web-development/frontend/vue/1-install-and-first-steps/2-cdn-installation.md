@@ -1,3 +1,8 @@
+#### JavaScript > Vue > Project types > Initial roadmap
+# Using CDN installation
+
+---
+
 CAUTION: With CDN, you must define your components as JS objects 'coz browser doesn't understand
 .vue files. Use CDN 'installation' only for very simple Vue solutions.
 

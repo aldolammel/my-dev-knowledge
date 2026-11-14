@@ -60,5 +60,8 @@ sudo apt install -y git
 - Deleting the local repo:
 	-  Delete the .git folder;
 	-  Or inside the project folder, use this command: [/versioning/git/command-rm](/versioning/git/command-rm.md)
+### Ignoring
+- Create a `.gitignore` file to avoid unnecessary files and folders in my project: [/versioning/git/gitignore-file](/versioning/git/gitignore-file.md)
+- Ignoring a folder or file from now on: [/versioning/git/ignoring-folder-or-file-from-now-on](/versioning/git/ignoring-folder-or-file-from-now-on.md)
 
 ---

@@ -1,17 +1,12 @@
-TYPE-CHECKER FOR TYPESCRIPT: OPTIONS
+#### JavaScript > Linter, Formatter & Type checker
+# Type-checker options for TS
 
-    >> What is it:
-        /dev-concepts/tool-formatter.md
+---
+## Before:
+- What is type-checker: [/dev-concepts/tool-typechecker](/dev-concepts/tool-typechecker.md)
 
-    >> Need this but for vanilla JS?
-        /javascript/linter-formatter-typechecker/_type-checker/js-options.txt
+---
+## Options:
+- vue-tsc ( specific for Vue projects): [/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/installation](/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/installation.md)
+- Flow (by Facebook / Good for React projects): [/javascript/linter-formatter-typechecker/flow/\_about](/javascript/linter-formatter-typechecker/flow/_about.md)
 
-
-    >> Options:
-
-        >> Flow (by Facebook)
-            /javascript/linter-formatter-typechecker/flow/_about.md
-
-        >> xxxx
-
-        >> xxxxx

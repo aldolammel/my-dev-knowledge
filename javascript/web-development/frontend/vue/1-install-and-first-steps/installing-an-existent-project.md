@@ -1,4 +1,7 @@
-INSTALLING AN EXISTENT VUE PROJECT:
+#### JavaScript > Vue > Project types > Initial roadmap
+# Installing an existing Vue project
+
+---
 
     >> On terminal, go to the vue-project-folder;
 

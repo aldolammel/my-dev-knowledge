@@ -10,7 +10,8 @@ More about compilation time: [/javascript/web-development/frontend/vue/vue-knowl
 
 ---
 ## Vue folder structure:
-If you will use [Vite](/javascript/build-tools/vite/0-vite.md) as your JS Build-tool, DON'T copy anything to your project without to install Vite first! Otherwise, if your Vite is installed or you are by your own, here is an initial frontend template to copy: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/) (folder)
+For TypeScript, most of the `.js` files will be `.ts`. In the right moment of the Vue installation roadmaps, when it's asked, you can take file examples to your `/frontend/src/` from:
+[/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/) (folder)
 ```python
 my_project/
 ├── frontend/
@@ -59,7 +60,6 @@ my_project/
 │   │   │
 │   │   ├── composables/              # Reusable functions for Composition API.
 │   │   │   ├── useErrorHandler.js
-│   │   │   ├── useLoadingState.js
 │   │   │   ├── usePage.js
 │   │   │   └── ...
 │   │   │
@@ -99,50 +99,34 @@ my_project/
 - Django folder project with Vue: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django.md)
 
 ---
-
-A Vue.js app file (`.vue`) divide itself by 3 layers:
-        1) Script
-        2) Template
-        3) Style
-
-        Important basic knowledge about each one:
-
-
-        >> <SCRIPT> layer:
-            
-            >> There are 2-ways to code components, using 'Options API' or 'Component API' but both
-                use JavaScript (TypeScript is optional) to be written:
-                
-                    ./3-approaches-to-code.txt
-
-
-        >> <TEMPLATE> layer:
-
-            >> Templates is basically pure HTML, and each template can be fragmented in infinite
-                other small pieces, using Vue Component structure associated with Vue Slots:
-
-                    ./5-components.txt
-                    ./5.4-slot.txt
-
-
-        >> <STYLE> layer:
-
-            >> Each component (.vue file, for example) can have its own <style> tag where all the
-                style coded in there can be glogal (for the parent component and its child ones) or
-                local so the style tag is restricted only to the component the style tag belongs.
-
-                    <!-- if 'scoped', the style is only local for the current component -->
-                    <style scoped>
-                        ...
-                    </style>
-
+## A Vue app file (`.vue`) is divided by 3 layers:
+1) `<script>`
+2) `<template>`
+3) `<style>`
+### `<script>` layer
+There are 2-ways to code components, using 'Options API' or 'Component API' but both use JavaScript (TypeScript is optional) to be written:
+- [/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md)
+### `<template>` layer
+Templates is basically pure HTML, and each template can be fragmented in infinite other small pieces, using Vue Component structure associated with Vue Slots:   
+- [/javascript/web-development/frontend/vue/vue-knowledge/5-components](/javascript/web-development/frontend/vue/vue-knowledge/5-components.md)
+- [/javascript/web-development/frontend/vue/vue-knowledge/5.4-slot](/javascript/web-development/frontend/vue/vue-knowledge/5.4-slot.md)
+### `<style>` layer
+Each component (.vue file, for example) can have its own `<style>` tag where all the style coded in there can be global (for the parent component and its child ones) or local so the style tag is restricted only to the component the style tag belongs.
+```js
+<!-- if 'scoped', the style is only local for the current component -->
+<style scoped>
+...
+</style>
+```
 
 ---
+## MORE ABOUT:
+[/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge](/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge.md)
+## INSTALL A VUE PROJECT:
+[/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 
 
->> MORE ABOUT:
-    ./0-overview-deep-knowledge.txt
 
 
->> INSTALL A VUE PROJECT:
-    .../vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
+
+

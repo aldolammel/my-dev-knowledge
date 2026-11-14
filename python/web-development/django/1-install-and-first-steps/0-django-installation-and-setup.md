@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-1. [ ] Case this machine and IDE are ready for Django projects, BUT you're just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
+- [ ] Case this machine and IDE are ready for Django projects, BUT you're just re-installing Django for an existing app (or re-installing the entire project), so skip this file, and go to: [/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy](/python/web-development/django/1-install-and-first-steps/1-reinstall-new-copy.md)
 
 ---
 ## 1) Preparing it to everything about Django:

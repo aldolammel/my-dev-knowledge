@@ -1,6 +1,5 @@
 FILE: `/project/.vscode/settings.json`:
 ```json
-// PRETTIER AS ESLINT FORMATTER (VSCODE)
 {
     // PROJECT SETTINGS
     "editor.codeActionsOnSave": { // ESLint

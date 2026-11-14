@@ -1,35 +1,26 @@
 FORMATTER TOOL: WHAT IS IT
 
-    Consistency & Readability!
-
-    It checks the consistent code style and its visual presentation. So it automatically rewrites
-    your code to adhere to a predefined set of stylistic rules. It operates purely on the syntax
-    (the structure of the code) without understanding its semantics (the meaning of the code).
-
-    >> Primary Purpose:
-        To enforce a consistent code style and visual presentation.
-
-    >> Output:
-        Rewrites the code!
-
-    >> Tool's rules examples:
-        - Indentation (spaces vs. tabs, how many);
-        - Line length (wrapping at 80/100/120 characters);
-        - Use of quotes (single vs. double);
-        - Adding/removing trailing commas;
-        - Placement of braces and parentheses;
-
-    >> Formatter for Python:
-        /python/linter-formatter-typechecker/
-
-    >> Formatter for JavaScript:
-        /javascript/linter-formatter-typechecker/
-
-    >> xxxxxx
-
 ---
 
-> > More about:
+Consistency & Readability!
 
-    Type-checker tools: /dev-concepts/tool-typechecker.md
-    Linter tools:       /dev-concepts/tool-linter.md
+It checks the consistent code style and its visual presentation. So it automatically rewrites your code to adhere to a predefined set of stylistic rules. It operates purely on the syntax (the structure of the code) without understanding its semantics (the meaning of the code).
+### Primary Purpose
+- To enforce a consistent code style and visual presentation.
+### Output
+- Rewrites the code!
+### Tool's rules examples
+- Indentation (spaces vs. tabs, how many);
+- Line length (wrapping at 80/100/120 characters);
+- Use of quotes (single vs. double);
+- Adding/removing trailing commas;
+- Placement of braces and parentheses;
+### Formatter options by language
+- For Python: [/python/linter-formatter-typechecker/\_formatter/python-options](/python/linter-formatter-typechecker/_formatter/python-options.md)
+- For JavaScript / TypeScript: [/javascript/linter-formatter-typechecker/\_formatter/js-options](/javascript/linter-formatter-typechecker/_formatter/js-options.md)
+
+---
+## More about:
+- Type-checker tools: [/dev-concepts/tool-typechecker](/dev-concepts/tool-typechecker.md)
+- Linter tools: [/dev-concepts/tool-linter](/dev-concepts/tool-linter.md)
+

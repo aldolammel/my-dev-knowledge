@@ -1,14 +1,11 @@
-// FILE: /frontend/src/main.js
+// FILE: /frontend/src/main.js or .ts
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router' // Import your router config (/frontend/src/router/index.js)
+// ...
+import router from './router' // Import your router config (/frontend/src/router/index.xx)
 
-// Create Vue application instance
-const app = createApp(App)
+//...
 
-// Use the router plugin
+// Installing Vue plugins:
 app.use(router)
 
-// Mount the application
-app.mount('#app')
+//...

@@ -1,13 +1,9 @@
-FORMATTER FOR JAVASCRIPT: OPTIONS
+#### JavaScript > Linter, Formatter & Type checker
+# Formatter options for JS/TS
 
-    >> What is it:
-        /dev-concepts/tool-formatter.md
+---
+### Before
+- What is a formatter: [/dev-concepts/tool-formatter](/dev-concepts/tool-formatter.md)
+### Options
+- Prettier: (also formatter to `.vue`, `.ts`, `.css`, `.scss`, `.less`, `.html`, `.json`): [/javascript/linter-formatter-typechecker/prettier/installation](/javascript/linter-formatter-typechecker/prettier/installation.md)
 
-    >> Options:
-
-        >> Prettier:
-            (also formatter to Vue, JS, CSS/SCSS/LESS, HTML, JSON):
-            /javascript/linter-formatter-typechecker/prettier/_about.md
-
-        >> xxxxx:
-            /xxxxx

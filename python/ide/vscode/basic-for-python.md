@@ -26,5 +26,9 @@ Basic for run Python:
 You are using Profiles for Python that demand .py files configuration to fold classes automatically. For Django projects, your current profile is already set fine!
 
 ---
-## VSCODE USER PROFILES:
-/ide/vscode/user-profiles-bkp/
+## VsCode, Pyhton user profiles:
+- Pure Python: [/ide/vscode/user-profiles-bkp/Python.code-profile](/ide/vscode/user-profiles-bkp/Python.code-profile)
+- Python + Django: [/ide/vscode/user-profiles-bkp/Python+Django.code-profile](/ide/vscode/user-profiles-bkp/Python+Django.code-profile)
+- Python + Django + Vue: [/ide/vscode/user-profiles-bkp/Python+Django+Vue.code-profile](/ide/vscode/user-profiles-bkp/Python+Django+Vue.code-profile)
+- Python + Flask: [/ide/vscode/user-profiles-bkp/Python+Flask.code-profile](/ide/vscode/user-profiles-bkp/Python+Flask.code-profile)
+

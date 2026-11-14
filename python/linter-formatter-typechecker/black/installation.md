@@ -1,0 +1,9 @@
+#### Python > Linter, Formatter & Type checkers
+# Black formatter
+
+---
+
+The uncompromising code formatter. It is by far the most popular and opinionated formatter. Its philosophy is to provide strict, uniform formatting so developers never have to argue 
+about style again.
+
+

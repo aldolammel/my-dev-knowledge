@@ -106,4 +106,4 @@ Example:
 ## Expanding DRF: JSON Web Token (JWT) plugin:
 [/python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt](/python/web-development/django/component-libraries/json-web-token-SimpleJWT/0-jwt.md)
 ## Type Checker for DRF:
-[/python/web-development/django/Linter-Formatter-Typechecker/drf-stubs/installation](/python/web-development/django/Linter-Formatter-Typechecker/drf-stubs/installation.md)
+[python/web-development/django/linter-formatter-typechecker/drf-stubs/installation](python/web-development/django/linter-formatter-typechecker/drf-stubs/installation.md)

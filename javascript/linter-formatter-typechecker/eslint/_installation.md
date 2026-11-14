@@ -3,48 +3,55 @@
 
 ---
 ## Before:
-- What is it: [/javascript/linter-formatter-typechecker/eslint/\_about](/javascript/linter-formatter-typechecker/eslint/_about.md)
+- What is ESLint: [/javascript/linter-formatter-typechecker/eslint/\_about](/javascript/linter-formatter-typechecker/eslint/_about.md)
 
 ---
-## 1) Installation 
+## 1) Installation:
+Installing with ESLint scaffolding:
 
-Before:
-- Assuming you are in the `/frontend/` folder.
-
-- [x] 1.1) Installing ESLint core and its configuration package only as DEV dependencies:
-
-Using NPM:
+- [x] 1.1) Installing and starting the scaffolding:
 ```bash
-npm install -D eslint @eslint/js   # -D means it's a DEV dependency!
+# Using NPM:
+# 'init' always will install ESLint as dev-dependency, and then start the scaffolding automatically.
+npm init @eslint/config@latest
 ```
-Or using xxx:
-```bash
-xxxxxxx
-```
+
+- [x] 1.2) Scaffolding selections based on the project:
+
+| Scaffolding questions                              | Vue + TypeScript project selections                                   |
+| -------------------------------------------------- | --------------------------------------------------------------------- |
+| What do you want to lint?                          | *JavaScript* (no more options in here)                                |
+| How would you like to use ESLint?                  | *"To check syntax and find problems"*                                 |
+| What type of modules does your project use?        | *"JavaScript modules (import/export)"*                                |
+| Which framework does your project use?             | Select what the project demands!                                      |
+| Does your project use TypeScript?                  | Select what the project demands!                                      |
+| Where does your code run?                          | *"Browser"*                                                           |
+| What format do you want your config file to be in? | *"JavaScript"* (more conservative and widely supported for this case) |
 Check if everything's right on the front-end folder's `package.json` file!
 
-- [x] 1.2) Install `globals` that's an ESLint configuration package to provide global vars for different environments (browser, node, etc) to ESLint:
-```bash
-npm install -D globals
-```
+- [x] 1.3) (If applicable) Issues with vulnerabilities? When *MODERATE* or lower severity, during the development phase, it's not a big deal. Try to update Node components: [/javascript/nodejs/3.1-updating-component](/javascript/nodejs/3.1-updating-component.md)
 
-- [x] 1.3) Install the ESLint extension (by Microsoft) in your IDE;
+- [x] 1.4) (If applicable) Install the ESLint extension (by Microsoft) in your IDE (Tip: [related it to a VSCode profile](/ide/vscode/_vscode-knowledge.md)).
 
 ---
-## 2) Integration
+## 2) Integration:
+- [x] 2.1) In `/frontend/` folder, make sure the ESLint config file structure respect this presets from the file template below:
+	- For `eslint.config.js`: [/javascript/linter-formatter-typechecker/eslint/eslint.config-js](javascript/linter-formatter-typechecker/eslint/eslint-config-js.md)
+	- For `eslint.config.ts`: not recommended.
 
-- [x] 2.1) Check in `front-end` folder root if you have the `eslint.config.js` file. If not, create it: [/javascript/linter-formatter-typechecker/eslint/eslint.config-js](/javascript/linter-formatter-typechecker/eslint/eslint.config-js.md)
+- [x] 2.2) (If applicable) For TypeScript projects, add/edit these lines: [/javascript/linter-formatter-typechecker/eslint/eslint-config-for-typescript-support](/javascript/linter-formatter-typechecker/eslint/eslint-config-for-typescript-support.md)
 
-- [x] 2.2) Basic IDE integration for ESLint:
-- For VSCode: [/javascript/linter-formatter-typechecker/eslint/vscode-eslint-as-formatter](/javascript/linter-formatter-typechecker/eslint/vscode-eslint-as-formatter.md)
+- [x] 2.3) (If applicable) For Vue projects, add/edit these lines: [/javascript/linter-formatter-typechecker/eslint/eslint-config-for-vue-support](/javascript/linter-formatter-typechecker/eslint/eslint-config-for-vue-support.md)
 
-- [x] 2.3) (If applicable) Case you are using Vite as your JS Build-tool, make Vite recognize the ESLint work: [/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint](/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint.md)
+- [x] 2.4) ESLint integration with the IDE:
+	- For VSCode: [javascript/linter-formatter-typechecker/eslint/vscode-eslint](javascript/linter-formatter-typechecker/eslint/vscode-eslint.md)
 
-- [x] 2.4) (If applicable) In case the project's demanding Prettier (formatter), make the ESLint doesn't conflict with that: [/javascript/linter-formatter-typechecker/eslint/integrating-prettier-and-eslint](/javascript/linter-formatter-typechecker/eslint/integrating-prettier-and-eslint.md)
+- [x] 2.5) (If applicable) Make the project build-tool recognizes the ESLint work:
+	- For Vite: [/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint](/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint.md)
 
-- [x] 2.5) (Optional) Add the ESLint as a script in `package.json` file in the `frontend` folder to make ESLint terminal commands available: [/javascript/linter-formatter-typechecker/eslint/package-json](/javascript/linter-formatter-typechecker/eslint/package-json.md)
+- [x] 2.6) (Optional) Add the ESLint as a script in `package.json` file in the `/frontend/` folder to make ESLint terminal commands available: [/javascript/linter-formatter-typechecker/eslint/package-json](/javascript/linter-formatter-typechecker/eslint/package-json.md)
 
-- [x] 2.6) (If applicable) In case of Git versioning, add it in your `.gitignore` file:
+- [x] 2.7) (If applicable) In case of Git versioning, add it in your `.gitignore` file:
 ```txt
 ### Node.js ###
 ...
@@ -52,13 +59,19 @@ npm install -D globals
 .eslintcache
 ```
 
-- [x] 2.7) (If applicable / Optional) In case your project has a Python back-end, open the `pyproject.toml` file and include this note in there:
-```python
+- [x] 2.8) (If applicable / Optional) In case your project has a Python back-end, open the `pyproject.toml` file and include this note in there:
+```toml
+...
+
 # ESLint linter settings:
-# All settings of that is in `/frontend/eslint.config.js`
+# Some IDE behaviors for ESLint you find in /.vscode/settings.json
+# All core settings of ESLint you find in /frontend/eslint.config.js
 ```
 
+Done!
+
 ---
+
 
 
 

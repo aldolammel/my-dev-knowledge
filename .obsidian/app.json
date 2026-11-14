@@ -14,5 +14,6 @@
   "showLineNumber": false,
   "showIndentGuide": false,
   "rightToLeft": false,
-  "useTab": true
+  "useTab": true,
+  "propertiesInDocument": "visible"
 }

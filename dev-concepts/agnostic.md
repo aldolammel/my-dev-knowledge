@@ -2,6 +2,6 @@
 
 DEV CONCEPTS: AGNOSTIC
 
-    In programming, "make your content agnostic" means designing your system so that content (data, UI components, text, media, etc.) is separated from the logic, presentation, and underlying technology that uses it.
+In programming, *make your content agnostic* means designing your system so that content (data, UI components, text, media, etc.) is separated from the logic, presentation, and underlying technology that uses it.
 
-    The goal is to ensure content can be reused, reformatted, and delivered to different platforms, devices, or interfaces without being tied to any specific one.
+The goal is to ensure content can be reused, reformatted, and delivered to different platforms, devices, or interfaces without being tied to any specific one.

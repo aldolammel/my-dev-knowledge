@@ -26,7 +26,7 @@ export async function initDynamicRoutes() {
 
   // Fetch each page and add their slug as a new route, storing them as Props, not as parameters:
   pages.forEach((page) => {
-    const componentLoader = componentRegistry[page.vue_component];
+    const componentLoader = componentRegistry[page.vue_pag_cmp];
     if (componentLoader) {
       // Adding the page slug as a new route:
       router.addRoute({
@@ -42,14 +42,14 @@ export async function initDynamicRoutes() {
         });
       }
     } else {
-      console.error(`FRONTEND ERROR > router.js: there's NO '${page.vue_component}' component!`);
+      console.error(`FRONTEND ERROR > router.js: there's NO '${page.vue_pag_cmp}' component!`);
     }
   });
 
   // Add category routes dynamically for each category:
   categories.forEach((category) => {
     router.addRoute({
-      path: `/c/${category.slug}`, // It's also partially declared in /apps/pagex/consts.py
+      path: `/c/${category.slug}`, // It's also partially declared in /apps/pagex/constants.py
       component: componentRegistry["ListByCategory"],
       props: { categorySlug: category.slug },
     });
@@ -58,7 +58,7 @@ export async function initDynamicRoutes() {
   // Add tag routes dynamically for each tag:
   tags.forEach((tag) => {
     router.addRoute({
-      path: `/t/${tag.slug}`, // It's also partially declared in /apps/pagex/consts.py
+      path: `/t/${tag.slug}`, // It's also partially declared in /apps/pagex/constants.py
       component: componentRegistry["ListByTag"],
       props: { tagSlug: tag.slug },
     });
@@ -87,7 +87,7 @@ export async function initDynamicRoutes() {
   if (env.isDebug) {
     console.debug(
       "FRONTEND DEBUG > router.js > Routes (statics + dynamics) available:",
-      router.getRoutes(),
+      router.getRoutes()
     );
   }
 }

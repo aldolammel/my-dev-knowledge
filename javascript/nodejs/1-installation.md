@@ -1,99 +1,98 @@
-#### JavaScript > Environment > Node
-# Node.js installation
+#### JavaScript > Node
+# Installing Node.js locally
+
+---
+
+==FUNDAMENTAL AND CRITICAL==
+Node.js itself always will be installed isolated in your system, never tied to a specific project. What you can (MUST) tied to a specific project folder are Node dependencies that your project requires. In other words, what defines if a Node.js installation is LOCAL or GLOBAL is where and how Node dependencies were installed, and not where Node itself is installed on the OS.
+
+**Installing Node itself:**
+- **With** version control: using a version manager command, like `nvm`, it also isolates the installation only for the current OS user.
+- **Without** version control: using the OS binary installer, like Ubuntu's `apt`, the installation is available for all OS users.
+
+**Installing Node dependencies:**
+- **Local** dependencies installation (using a Node package manager like `npm`): dependencies will be installed in a project's `/node_modules/` folder.
+- **Global** dependencies installation (using Node package manager like `npm` with `-g` flag): dependencies will be installed directly in the OS system folders, not tied to a specific project.
 
 ---
 ## Before:
-- What is Node: [/javascript/nodejs/\_about](/javascript/nodejs/_about.md)
+- [x] What is Node.js: [/javascript/nodejs/\_about](/javascript/nodejs/_about.md)
+- [x] Assuming you know the specific version your Node.js project demands (it should be crystal clear in the project's [TDD](/python/web-development/django/document-templates/tdd.md)).
+- [x] You DON'T need to be in a project folder at all.
 
 ---
-## 1) Installing Node:
+## 1) Check if you already have it:
 
-- [ ] **1.1) Check if you already got Node installed:**
-
-Locally:
-```bash
-node -v
-```
-If you already have it, leave this roadmap through this one: [/javascript/nodejs/2-updating](/javascript/nodejs/2-updating.md)
-
-Globally:
+- [x] **1.1) Looking for installed Node without version control:**
 ```bash
 which nodejs
 ```
-If this returned something, it extremely advised to uninstall it: [/javascript/nodejs/4-uninstall](/javascript/nodejs/4-uninstall.md)
+If this returned something, it extremely recommended to uninstall it: [/javascript/nodejs/4-uninstall](/javascript/nodejs/4-uninstall.md)
 
-- [ ] **1.2) Installation approach:**
-	- A) Globally, WITHOUT the any version manager (NOT recommended);
-	- B) By project, using NVM as Node version manager;
-	- C) By project, using Docker instead of NVM;
+- [x] **1.2) Looking for installed Node with version control:**
+1.2.1) Check any Node with version control:
+```bash
+node -v
+```
+1.2.2) Check if you have installed the Node Version Manager:
+```bash
+nvm list node
+```
+1.2.3) Possible outputs:
+- If nothing happened, stay in this current roadmap!
+- If  the desired Node version is not listed between others, stay in this current roadmap!
+- If you already have it, the target version is on the list, but not selected, active it: [/javascript/nodejs/activating-node-specific-version](/javascript/nodejs/activating-node-specific-version.md)
+- If you already have it, and it already attempt your project, skip the Node installation itself, but check the next steps in this roadmap!
+
+---
+## 2) Installing Node:
+- [x] **Make a decision:**
+	- A) Install Node with version control.
+	- B) Install Node with Docker.
+	- C) Install Node WITHOUT version control (NOT recommended): [javascript/nodejs/install-node-without-version-control](javascript/nodejs/install-node-without-version-control.md)
 
 ......................................
 
-### A) Globally, WITHOUT the NVM (NOT recommended)
-                
-==To think:==
-If you prefer or is planning to use the NVM (Node Version Manager), you should take the 'B' path, skipping the entire 'A';
+### A) Installing Node with version control
 
-Installing globally:
-No matter where you are in Terminal, installing Node.js and its NPM (Node Package Manager):
+- [x] A1) (If applicable) Download and install NVM (Node Version Manager):
 ```bash
-sudo apt install nodejs npm
-```
-Make sure Node is installed globally:
-```bash
-which nodejs    # It nothing returns, something got wrong!
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash  # link last updated 2026-11 (https://nodejs.org)
 ```
 
-......................................
-
-### B) By project, using NVM
-
-==CRUCIAL:==
-Node.js with NVM is NOT installed by project but user. You can define which installed Node.js version should run for each project folder (you'll see it further).
-
-**B.1) Installing NVM (it brings Node + NPM):**
-
-RECOMMENDED:
-Check if the installation steps below keeps true: https://nodejs.org
-
-- [ ] B.1.1) Download and install NVM:
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-```
-
-- [ ] B.1.2) In lieu of restarting the shell
+- [x] A2) Active NVM immediately without restarting your terminal:
 ```shell
 \. "$HOME/.nvm/nvm.sh"
 ```
 
-- [ ] B.1.3) Download and install Node.js (it brings the NPM):
+- [x] A3) Download and install Node.js (it brings the NPM - Node Package Manager):
 ```bash
-nvm install 24
+# Latest LTS version:
+nvm install --lts
+# Or a specific one:
+nvm install 26.13.1
 ```
 
-- [ ] B.1.4) Verify versions:
-```bash
-node -v
-npm -v
-```
-If Node version is not what you want, no worries, keep going!
+- [x] A4) (If applicable) In case more than one Node version installed, active the right one: [/javascript/nodejs/activating-node-specific-version](/javascript/nodejs/activating-node-specific-version.md)
 
-- [ ] B.1.5) Define which version you wanna work: [/javascript/nodejs/2.1-switch-versions](/javascript/nodejs/2.1-switch-versions.md)
+- [x] A5) (If applicable / Optional) Defining Node version as the default one for your OS user: [/javascript/nodejs/defining-default-node-version](/javascript/nodejs/defining-default-node-version.md)
+
+- [x] A6) (If applicable / Optional) Automating the switch process by project: [javascript/nodejs/2.1-automating-switch-process](javascript/nodejs/2.1-automating-switch-process.md)
 
 ......................................
 
-### C) By project, using Docker instead of NVM as node version manager
+### B) Installing Node with Docker
 Soon!
 
 ---
 ## 2) (If applicable / Optional) Make sure you got the `.gitignore` updated:
-[/javascript/nodejs/node-gitignore](/javascript/nodejs/node-gitignore.md)
+- [x] [/javascript/nodejs/node-gitignore](/javascript/nodejs/node-gitignore.md)
 
----
-## 3) Installing Node packages/components for your project:
-[/javascript/nodejs/3-installing-new-components](/javascript/nodejs/3-installing-new-components.md)
+Done
 
 ---
 ## Uninstalling:
 [/javascript/nodejs/4-uninstall](/javascript/nodejs/4-uninstall.md)
+## Installing Node components for a project (Local dependencies):
+[/javascript/nodejs/3-installing-new-components](/javascript/nodejs/3-installing-new-components.md)
 

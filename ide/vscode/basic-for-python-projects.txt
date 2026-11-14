@@ -1,3 +1,0 @@
-
-
-/python/ide-softwares/vscode/basic-for-python.txt

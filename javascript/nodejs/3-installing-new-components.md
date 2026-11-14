@@ -1,49 +1,51 @@
-#### JavaScript > Environment > Node
+#### JavaScript > Node
 # Installing new Node components
 
 ---
 
 ==REMEMBER:==
-Unlike NVM, the NPM is watching the folder you are running the terminal!
+While `nvm` takes care of Node.js versions, the `npm` takes care of project's dependencies, watching what you do in the project's folder (where the `/node_modules/` is).
 
 ---
 ## Before:
-- Assuming you got NPM (Node Package Manager) installed. Otherwise: [/javascript/nodejs/1-installation](/javascript/nodejs/1-installation.md)
-- Go to the project folder (often, in frontend folder). ??????????????????????????????????????????????????????????????????????????????????????????????????????
+- Case you want to re-sync/rebuild the `/node_modules/` folder based on the project's `package.json`, skip to: [/javascript/nodejs/syncing-node_modules](/javascript/nodejs/syncing-node_modules.md)
+- Assuming you already has Node installed (that automatically brings the Node Package Manager, `npm`): [/javascript/nodejs/1-installation](/javascript/nodejs/1-installation.md)
 
 ---
 ## 1) Installing a new component:
 
-A) Globally;
-B) Locally (STRONGLY RECOMMENDED);
+- A) Local dependencies installation, using `npm` (STRONGLY RECOMMENDED).
+- B) Global dependencies installation, using `npm` with `-g` flag.
 
 ......................................
 
-### A) Globally (NOT recommended)
-In the project folder, check the current packages are installed on this project:
+### A) Local dependencies installation (STRONGLY RECOMMENDED)
+
+**Before:**
+- Assuming you already used a build-tool (like [Vite](/javascript/build-tools/vite/0-vite.md)) to define where the project's `/node_modules/` folder will be placed.
+- Assuming you're in the same folder level where the project's `/node_modules/` folder is.
+
+Check which current project's Node dependencies are installed:
 ```bash
 npm list
 ```
-No matter where you are, install the desired package/component globally (-g):
-```bash
-npm install -g <package_name>
-```
-
-......................................
-
-### B) Locally (RECOMMENDED)
-In your user root folder, check the current packages are installed on this machine:
-```bash
-npm list
-```
-So, again, in the project folder, install the desired package/component:
+Then, install what you need:
 ```bash
 npm install <package_name>
 ```
 
+......................................
+
+### B) Global dependencies installation
+No matter where you are on the terminal:
+```bash
+npm list
+```
+Install what you want, using `-g` flag:
+```bash
+npm install -g <package_name>
+```
+
 ---
-
-
-
 
 

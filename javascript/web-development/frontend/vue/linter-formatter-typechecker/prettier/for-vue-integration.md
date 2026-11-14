@@ -1,28 +1,26 @@
-PRETTIER: VUE INTEGRATION
-
-    WHAT IS PRETTIER:
-        ./_about.md
-
-
-    >> Using VSCode as IDE:
-
-        PRE) Assuming you already installed Prettier in your IDE/project:
-            /javascript/linter-formatter-typechecker/prettier/installation.md
-
-        1)  (NOT RECOMMENDED USE PRETTIER AS VUE FORMATTER)
-            If you wanna a better formatter for Vue, use the ESLint for VUE, otherwise, use prettier:
-
-            Edit your VSCode profile that you are using Vue and:
-
-            // VUE SETTINGS
-            "[vue]": {
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                "editor.tabSize": 2,
-                "editor.indentSize": "tabSize",
-                "editor.insertSpaces": true,
-            },
+#### JavaScript > Vue > Linter, Formatter & Type checker > Prettier
+# Prettier integration for Vue
 
 ---
 
-BETTER VUE FORMATTER:
-.../linter-formatter-typechecker/eslint-plugin-vue/
+Prettier - installation and integration: [/javascript/linter-formatter-typechecker/prettier/installation](/javascript/linter-formatter-typechecker/prettier/installation.md)
+
+---
+## Before:
+1. If you wanna a better formatter for Vue, use *ESLint-plugin-for-Vue*: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/\_about](javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/installation.md)
+2. Case you're using VSCode as IDE, assuming you already installed Prettier in your IDE/project: [/javascript/linter-formatter-typechecker/prettier/installation](/javascript/linter-formatter-typechecker/prettier/installation.md)
+
+---
+## 1) Using Prettier as Vue formatter (Not recommended):
+In `/.vscode/settings.json`:
+```json
+// VUE SETTINGS
+"[vue]": {
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.tabSize": 2,
+	"editor.indentSize": "tabSize",
+	"editor.insertSpaces": true,
+},
+```
+
+---

@@ -15,4 +15,5 @@ Prepare the `/frontend/.env` file:
 - Case you are using [Vite](/javascript/build-tools/vite/0-vite.md):
 	- Change the `VITE_BASE_URL` value.
 
-
+## X) If using Vite:
+x.1) In `/frontend/vite.config.js` (or `frontend/vite.config.ts`), check which folder (`publicDir`) Vite will compile its file when ready to production.

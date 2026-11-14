@@ -1,17 +1,13 @@
+#### Python > Linter, Formatter & Type checkers
+# Type-checker for Python
 
+---
+## Before:
+- What is type-checker: [/dev-concepts/tool-typechecker](/dev-concepts/tool-typechecker.md)
 
-TYPE-CHECKER FOR PYTHON: OPTIONS
+---
+## Options:
+- MyPy: [/python/linter-formatter-typechecker/MyPy/\_installation](python/linter-formatter-typechecker/MyPy/installation.md)
+- PyRight: [/python/linter-formatter-typechecker/PyRight/installation](/python/linter-formatter-typechecker/PyRight/installation.md)
+- Pyre: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    >> What is it:
-        /dev-concepts/tool-typechecker.md
-
-    >> Options:
-
-        >> MyPy:
-            /python/Linter-Formatter-Typechecker/MyPy/_about.md
-
-        >> PyRight:
-            /python/Linter-Formatter-Typechecker/PyRight/_about.md
-
-        >> Pyre:
-            /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

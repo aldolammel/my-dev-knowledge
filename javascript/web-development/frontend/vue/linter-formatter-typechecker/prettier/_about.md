@@ -1,17 +1,8 @@
-PRETTIER FOR VUE:
+#### JavaScript > Vue > Linter, Formatter & Type checker > Prettier
+# Prettier for Vue
 
-    ATTENTION!
-        For TYPESCRIPT Vue projects, Vue-Volar is more recommended to use with Vue:
-            .../linter-formatter-typechecker/vue-volar/
+---
 
+Installation and integration: [/javascript/linter-formatter-typechecker/prettier/installation](/javascript/linter-formatter-typechecker/prettier/installation.md)
 
-    About:
-        /javascript/linter-formatter-typechecker/prettier/_about.md
-
-
-    Installation & Integration:
-        /javascript/linter-formatter-typechecker/prettier/installation.md
-
-
-    For Vue integration:
-        ./for-vue-integration.txt
+Prettier for Vue integration: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/prettier/for-vue-integration](/javascript/web-development/frontend/vue/linter-formatter-typechecker/prettier/for-vue-integration.md)

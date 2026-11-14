@@ -3,7 +3,7 @@
 
 ---
 
-Vue Router is the official client-side routing solution for Vue. Client-side routing is used by single-page apps (SPAs) to tie the browser URL to the content seen by the user. As users navigate around the app, the URL updates accordingly, but the page doesn't need to be reloaded from the server.
+Vue Router is the official client-side routing solution for Vue. Client-side routing is used by single-page apps ([SPA](/javascript/web-development/frontend/vue/vue-knowledge/SPA-vs-MPA.md)) to tie the browser URL to the content seen by the user. As users navigate around the app, the URL updates accordingly, but the page doesn't need to be reloaded from the server.
 
 https://router.vuejs.org/
 
@@ -42,7 +42,7 @@ E.g.
 ```
 
 ---
-## Dataflow of a real Vue-Router usage in Django project:
+## Data-flow diagram of a real Vue-Router usage in Django project:
 [/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
 
 ---

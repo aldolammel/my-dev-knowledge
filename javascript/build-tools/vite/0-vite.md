@@ -3,93 +3,75 @@
 
 ---
 
-Vite (pronounced "veet", and from the same creator of Vue.JS) is a JS build tool and a front-end development server running over Node.JS (engine), and it's used in JS and TypeScript projects.
-
 https://vite.dev/
 
-It's used primarily to solve the performance and experience problems that come with traditional build tools like Webpack when projects grow large.
-
-And Vite is framework-agnostic so through its plugins, Vite can support Vue, React, Svelte, Solid, for example.
+Vite (pronounced "veet", and from the same creator of Vue.js) is a JS build-tool and a front-end development server running over Node.js (engine), and it's used in JS and TypeScript projects. It's used primarily to solve the performance and experience problems that come with traditional build-tools like [Webpack](/javascript/build-tools/webpack/_about.md) when projects grow large. And Vite is [framework-agnostic](/dev-concepts/agnostic.md) so through its plugins, Vite can support Vue, React, Svelte, Solid, for example.
 
 ---
-## 1) Figure out if Vite is installed and/or update Vite:
+## 1) Checking if the project have Vite installed:
+- [x] **Make a choice:**
+	- 1A) This project has NO `/node_modules/` folder yet.
+	- 1B) This project already got the `/node_modules/` folder.
 
-**Before:**
-- On terminal, if you already have the `/frontend/` (or similar), go in there. If you don't have one, no worries, Vite will create one.
+......................................
 
-1.1) (If applicable) In cause you have Vite installed, check it:
+### 1A) This project has NO `/node_modules/` folder yet
+- [x] Info: when Vite is correctly installed in a project, Vite belongs to the `/node_modules/` folder. If this folder doesn't exist yet, there's no Vite installed at all.
+
+......................................
+
+### 1B) This project already got the `/node_modules/` folder
+
+- [ ] **Before:** 
+	- Assuming you're in the same folder level of the `/node_modules/` one.
+
+- [ ] **1.1) Check it:**
 ```bash
 npm list vite
+# Output: if no vite on list, no vite install.
 ```
 
-1.2) (If applicable) Updating Vite: [/javascript/build-tools/vite/updating](/javascript/build-tools/vite/updating.md)
+- [ ] **1.2) (If applicable) Updating/Reinstalling Vite:** [javascript/build-tools/vite/updating-reinstalling-vite](javascript/build-tools/vite/updating-reinstalling-vite.md)
+	- 1.2.1) After that, skip only the installation steps.
 
 ---
 ## 2) Install Vite:
-Which method do you wanna use:
-- 2A) Install Vite for the first time in a new front-end project (scaffolding tool);
-- 2B) Re-install Vite in an existing front-end project;
+- [x] Make a decision:
+	- 2A) Install Vite for the first time in a new project, and start the scaffolding tool.
+	- 2B) Re-install Vite in an existing project: [/javascript/build-tools/vite/updating-reinstalling-vite](/javascript/build-tools/vite/updating-reinstalling-vite.md)
 
 ......................................
 
-### 2A) Install Vite for the first time in a new front-end project
-- [ ] 2A.1) On terminal, go to project's back-end folder (NOT the `/frontend/` folder)!
-- [ ] 2A.2) (If applicable) If you already have a `/frontend/` folder, rename it temporarily (e.g. `/_frontend/`).
-- [ ] 2A.3) Install Vite locally (without -g) and start the project creation:
-
+### 2A) Install Vite for the first time in a new project, and start the scaffolding tool
+- [x] 2A.1) On terminal, make sure you are in the project folder root (back-end folder)!
+- [x] 2A.2) (If applicable) If you already have a `/frontend/` folder, rename it temporarily (e.g. `/_frontend/`).
+- [x] 2A.3) Install Vite and start the project constructor (scaffolding tool):
 ```bash
 npm create vite@latest
+# Using 'create', it will install Vite, set it as a dev-dependency on the package.json, and start the project creation scaffolding!
 ```
 
-This process will create the Vue project folder, asking you the folder's name soon! Follow the prompt:
-
+**Vite scaffolding:**
 - Project name = by convention, use `frontend` (or if you couldn't rename your `frontend` folder, restart the Vite installation and then use "." as the project name).
-- Framework = Vue
+- Framework = Select what you need for this project like Vue, React, etc...
 - Variant = TypeScript or JavaScript
 - Install with NPM now = Yes
-- In case it's asked:
-	- Router? In case of SPA project, yes, but later!  (and MPA projects ??????????????). Vite has NO standard solution, but Vue does (Vue-Router)!
-	- CSS Pre-processors? Yes but later!	Vite 6+ has native support for: .scss, .sass, .less, .styl, .stylus!
+- (Old questions) In case it's asked:
+	- Router? In case of SPA project, yes. Vite has NO standard solution, but Vue does (Vue-Router)!
+	- CSS Pre-processors? Yes but later!	Vite 6+ has native support for: `.scss`, `.sass`, `.less`, `.styl`, `.stylus`!
 	- Babel? No: Vite already convert JS code for all browsers;
-	- Linter/Formatter? Yes but later! Vite has NO standard solution;
+	- Linter and formatter? Yes but later! Vite has NO standard solution;
 
-- [ ] 2A.4) (If applicable) After the installation, move the files you got in that renamed/old `frontend` folder to the new one, carefully!
-
-......................................
-
-### 2B) Re-install Vite in an existing front-end project
-
-TIP:
-Do you need uninstall Vite first? [/javascript/build-tools/vite/uninstall](/javascript/build-tools/vite/uninstall.md)
-
-2B.1) Go to the front-end project folder, e.g.,  `/my_project/frontend/`
-
-2B.2) Re-install Vite:
-
-Using NPM:
-	- Install a specific major version (recommended for stability)
-```bash
-npm install vite@^7    # means the latest version of v7.
-```
-If you run `vite@latest`, probably you'll face compatible errors with [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/_about.md) or other frameworks that depends of Vite plugins and are not ready for Vite latest version.
-
-Install the absolute latest version (may cause compatibility issues)
-```bash
-npm install vite@latest
-```
-		
-Using YARN:
-```bash
-yarn add vite@^7
-```
+- [x] 2A.4) (If applicable) After the Vite installation and the front-end project folder creation (with a `/node_modules/` in), move files you got in that (renamed) `_frontend` folder to the new one, carefully!
 
 ---
-## 3) About some boilerplate files:
-3.1) Personally, I (@aldolammel) don't like to use `.gitignore` inside the `/frontend/` folder, so my back-end `.gitignore` file already has those critical front-end ignore stuff.
+## 3) (Optional) About some boilerplate files:
+Personally, I (@aldolammel) don't like a few Vite front-end config files isolated in the `/frontend/` folder:
 
----
-## 4) Plugins for your linter:
-Case you're using (or will):
-- ESLint: [/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint](/javascript/linter-formatter-typechecker/eslint/vite-plugin-eslint.md)
+- [x] 3.1) Delete the `/frontend/.gitignore` because that configs already are in the `/.gitignore` file (root).
+
+- [x] 3.2) Delete that folder `/frontend/.vscode/` and its content (no worries about its content, it will be review further in other roadmap)
+
+Done!
 
 ---

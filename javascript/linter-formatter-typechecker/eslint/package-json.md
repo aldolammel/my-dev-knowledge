@@ -1,4 +1,4 @@
-FILE: `/project/package.json`:
+FILE: `/frontend/package.json`:
 ```json
 //...
 "scripts": {

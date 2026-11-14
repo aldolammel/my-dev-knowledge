@@ -9,7 +9,8 @@
     "vue",
     "html",
     "css",
-    "scss"
+    "scss",
+    "less"
   ],
   "folding": true,
   "lineNumbers": true,

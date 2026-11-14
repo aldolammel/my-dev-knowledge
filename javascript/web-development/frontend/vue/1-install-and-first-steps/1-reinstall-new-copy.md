@@ -1,6 +1,9 @@
-VUE: RE-INSTALLING A NEW COPY (OF VUE OR ENTIRE PROJECT)
+#### JavaScript > Vue > Project types > Initial roadmap
+# Re-installing Vue as a new copy (or its entire project)
 
-    1) Which scenario you are:
+---
+
+## 1) Which scenario you are:
 
         1A) Installing Vue project for the first time in this machine/IDE (skip this roadmap);
         1B) Install Vue in a new project (skip this roadmap);

@@ -1,5 +1,6 @@
+#### JavaScript > Vue > Project types > Initial roadmap
+# Project folder structure: Vue with Flask as back-end
 
+---
 
-VUE: WITH FLASK BACK-END
-
-    >> Soon...
+Soon...

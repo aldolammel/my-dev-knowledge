@@ -3,6 +3,8 @@
 
 ---
 
-For Django: (folder) [/python/web-development/django/component-libraries/](/python/web-development/django/component-libraries/)
+For Django: [/python/web-development/django/component-libraries/](/python/web-development/django/component-libraries/) (folder)
 
-For xxxxxxxxx: /xxxxxxxxxxxxxx
+For Flask (folder): /xxxxxxxxxxxxxx
+
+For FastAPI (folder): /xxxxxxxxxxxxxx

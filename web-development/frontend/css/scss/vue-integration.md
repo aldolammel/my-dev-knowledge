@@ -1,84 +1,47 @@
+#### Web development > Front-end > CSS > SCSS
+# `.scss`/`.sass` integrated with Vue projects
 
+---
 
-SCSS/SASS: VUE INTEGRATION WITH THIS CSS PRE-PROCESSORS
+Vue SFC (`.vue` files) supports `<style>` blocks with pre-processors like `.sass`/`.scss`. 
 
-    Vue SFC (.vue files) support <style> blocks with preprocessors like Sass/SCSS. After installing this package below, you can write like this in .vue files:
+After installing this package below, you can write like this in `.vue` files, e.g.:
+```html
+<style lang="scss" scoped>
+.container {
+	.title {
+		color: blue;
+		
+		&:hover {
+			color: red;
+		}
+	}
+}
+</style>
+```
 
-        E.g.
-            <style lang="scss" scoped>
-            .container {
-                .title {
-                    color: blue;
-                    
-                    &:hover {
-                        color: red;
-                    }
-                }
-            }
-            </style>
+---
+## 1) Install the SASS/SCSS Compiler:
+[/web-development/frontend/css/scss/\_installing-scss-compiler](/web-development/frontend/css/scss/_installing-scss-compiler)
 
-    
-    INFO) This is compatible with front-end projects using:
-        - Vite
-        - Webpack (Vue CLI)
-        - Nuxt
-        - No bundler (directly in Node scripts)
+---
+## 2) Integrate it with the project build-tool:
+- For Vite: [web-development/frontend/css/scss/build-tool-vite-integration](web-development/frontend/css/scss/build-tool-vite-integration.md)
+- For Vue-CLI: /xxxxxxxxxxx
+- For Nuxt: /xxxxxxxxxx
 
-        
-    1) Install the SASS Compiler (only for dev environment):
-        
-        $ npm install -D sass-embedded                                        <-- -D dev dependency!
-            
-            # Verify your SASS dependency in package.json!
+---
+## 3) (If applicable) In all Vue components (`.vue`) using CSS, include the language in `<style>` tag:
+E.g., `.scss`/`.sass`:
+```html
+<style lang="scss" scoped>
+```
+No worries about this if you don't reach this part of the front-end's development yet.
 
-
-    2) In front-end folder, open the vite.config.js file:
-
-        export default defineConfig({
-            //...
-            build: {
-                //...
-            },
-            plugins: [
-                //...
-            ],
-            resolve: {
-                //...
-            },
-            publicDir: "public",
-            css: {
-                preprocessorOptions: {
-                    scss: {
-                        //...
-                        quietDeps: true, // Handling deprecation warnings!
-                        sassOptions: {
-                            quietDeps: true, // Belt and suspenders approach!
-                        },
-                    },
-                },
-            },
-            server: {
-                //...
-            },
-        });
-        
-        
-    3) (Optional)
-        Enable the use of global variables through SCSS/SASS files:
-            ./variables-global.txt
-                
-
-    4) In all Vue components (.vue) using CSS, include the language in Style tag:
-        
-        E.g.:
-            # .scss/.sass
-            <style lang="scss" scoped>
+---
 
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
->> For .less (an alternative Vite built-in solution too):
-    .../css/less/vue-integration.txt
 

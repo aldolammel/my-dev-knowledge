@@ -18,10 +18,9 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 ### 1.2) Back-end
 1. [x] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
 ### 1.3) Front-end
-If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now.
-1. [ ] IDE, framework setup:  [VSCode for Vue](/javascript/web-development/frontend/vue/ide/vscode/basic-for-vue.md) or [PyCharm for Vue](/javascript/web-development/frontend/vue/ide/pycharm/basic-for-vue.md).
-2. [ ] Vue installation (and its dependencies): [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
-3. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
+If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now. Otherwise:
+1. [ ] Vue installation options: [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
+2. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
 
 ---
 ## 2) Development:
@@ -52,7 +51,7 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 4. [ ] Front-end > xxxx
 
 ---
-## 3) Deployment:
+## 3) Prod deployment:
 
 ### Before
 1. [ ] Check the deployment Django heads-up: [/python/web-development/django/15-deployment/\_about](/python/web-development/django/15-deployment/_about.md)
