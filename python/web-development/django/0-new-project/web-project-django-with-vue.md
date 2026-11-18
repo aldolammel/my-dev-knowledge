@@ -1,4 +1,4 @@
-#### Python > Django > Project types
+#### Python > Back-end > Django > Project types
 # Django as back-end + Vue as front-end
 
 ---
@@ -17,9 +17,12 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 1. [x] What db should be used: [/database/principles-pacelc](/database/principles-pacelc.md)
 ### 1.2) Back-end
 1. [x] Django install options: [/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup](/python/web-development/django/1-install-and-first-steps/0-django-installation-and-setup.md)
+2. [x] Node.js preparation options:
+	- A) Install Node (RECOMMENDED): [/javascript/web-development/backend/nodejs/1-installation](/javascript/web-development/backend/nodejs/1-installation.md)
+	- B) Or use Node via CDN: [/javascript/web-development/frontend/vue/1-install-and-first-steps/using-node-cdn-for-vue](/javascript/web-development/frontend/vue/1-install-and-first-steps/using-node-cdn-for-vue.md)
 ### 1.3) Front-end
 If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now. Otherwise:
-1. [ ] Vue installation options: [0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
+1. [ ] Vue installation options: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 2. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
 
 ---

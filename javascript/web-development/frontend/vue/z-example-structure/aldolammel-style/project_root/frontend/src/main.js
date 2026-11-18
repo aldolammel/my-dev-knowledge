@@ -27,10 +27,13 @@ app.use(head);
     // Initialize global info store first:
     const globalStore = useGlobalStore();
     await globalStore.initializeGlobal();
+
     // Wait for dynamic routes after global data is ready:
     await initDynamicRoutes();
+
     // Installing the router plugin:
     app.use(router);
+    
     // Finally, allowing app to be mounted in HTML:
     app.mount("#app");
   } catch (error) {

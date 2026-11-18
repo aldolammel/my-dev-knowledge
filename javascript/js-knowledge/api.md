@@ -11,7 +11,7 @@ For simple needs, this is the best option is the [FetchAPI](/javascript/web-deve
 
 ---
 ## For Node.js, you got Axios API:
-[/javascript/nodejs/component-libraries/axios-api/axios](/javascript/nodejs/component-libraries/axios-api/axios.md)
+[javascript/web-development/backend/nodejs/component-libraries/axios-api/axios](javascript/web-development/backend/nodejs/component-libraries/axios-api/axios.md)
 
 
 

@@ -1,4 +1,4 @@
-#### Python > Django > Structure
+#### Python > Back-end > Django > Structure
 # `Models.py` file
 
 ---

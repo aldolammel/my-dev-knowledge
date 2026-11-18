@@ -1,4 +1,4 @@
-#### Python > Django > Project types > Discovery
+#### Python > Back-end > Django > Project types > Discovery
 # Updating Django in a finished product
 
 ---

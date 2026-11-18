@@ -3,15 +3,21 @@
 
 ---
 
-==If you are using Vue-CLI==
-If you already created your project via Vue-CLI (default), you probably already have the Router once it was an Vue-CLI option during the project creation process. Make sure about checking it through the Vue project folder:
-```bash
-npm list
-```
-If you don't see any router stuff, keep with the installation and integration processes below, otherwise skip this roadmap!
+==For MPA project: DON'T!==
+In a MPA architecture, the browser handles navigation by requesting a completely new HTML page from the back-end on every link click. Because there is only one page active at any given moment, client-side routing (Vue Router) is unnecessary!
 
 ---
 ## 1) Installing:
+
+==If using the build-tool Vue-CLI==
+If you already created your project via Vue-CLI (default), you probably already have the Router once it was an Vue-CLI option during the project creation process. Make sure about checking it through the Vue project folder:
+```bash
+npm list
+# or:
+npm list vue-router
+```
+If you don't see any router stuff, keep with the installation and integration processes below, otherwise skip this roadmap!
+
 - [ ] To install Vue-Router:
 ```bash
 # Specific version:
@@ -33,42 +39,19 @@ Uninstall (if needed): [/javascript/web-development/frontend/vue/3-component-lib
 
 ---
 ## 3) Integration:
-- SPA) For Single-Page-Application (SPA).
-- MPA) Or for Multi-Pages-Application (MPA).
 
-......................................
+**Before:**
+- [ ] Assuming you defined this project's app architecture is SPA: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
 
-### SPA) For SPA project
-
-- [ ] SPA.1) In the `/frontend/.env` file, create these env vars if not yet: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/env_example](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/env_example.md)
-- [ ] SPA.2) Import the router in the `main.js` (or `main.ts`) file: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js)
-- [ ] SPA.3) Create the router-config file and setup its options:
+**Integrating:**
+- [ ] 3.1) In the `/frontend/.env` file, create these env vars if not yet: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/env_example](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/env_example.md)
+- [ ] 3.2) Import the router in the `main.js` (or `main.ts`) file: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js)
+- [ ] 3.3) Create the router-config file and setup its options:
 	- Case using JS: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-js](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-js.md)
 	- Case using TS: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-ts](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-ts.md)
-- [ ] SPA.4) Make sure you already have all views ("pages") in the `/frontend/src/pages/` folder. E.g.:
-	- Home.vue
-	- About.vue
-	- Contact.vue
-- [ ] SPA.5) Define where all views ("pages") must be rendered in your front-end template:
-Add this where each View must be loaded: `<RouterView />`
-E.g.: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue)
-- [ ] SPA.6) Define each link option (`<RouterLink>`) for the main navigation menu of the app. E.g.: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue)
-
-......................................
-            
-### MPA) For MPA project
-
-            <MPA needs ROUTER ????????????????????????????????>
-
-            MPA.1) xxxxxxxxxxxxxxxxxxxx
-
-            MPA.2) xxxxxxxxxxxxxxxxxxxx
-
-            MPA.3) xxxxxxxxxxxxxxxxxxxx
-
-            MPA.4) xxxxxxxxxxxxxxxxxxxx
-
-            MPA.5) xxxxxxxxxxxxxxxxxxxx
+- [ ] 3.4) (If applicable) Make sure you already have all views ("pages") in the `/frontend/src/pages/` folder.
+- [ ] 3.5) Define where all views ("pages") must be rendered in your front-end template, adding this where each View must be loaded: `<RouterView />` (e.g., [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue)).
+- [ ] 3.6) Define each link option (`<RouterLink>`) for the main navigation menu of the app. E.g.: [/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue](/javascript/web-development/frontend/vue/3-component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue)
 
 ---
 ## 4) Testing:

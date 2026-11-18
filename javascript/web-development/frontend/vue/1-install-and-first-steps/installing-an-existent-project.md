@@ -1,4 +1,4 @@
-#### JavaScript > Vue > Project types > Initial roadmap
+#### JavaScript > Front-end > Vue > Project types > Initial roadmap
 # Installing an existing Vue project
 
 ---

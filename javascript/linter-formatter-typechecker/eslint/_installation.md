@@ -29,7 +29,7 @@ npm init @eslint/config@latest
 | What format do you want your config file to be in? | *"JavaScript"* (more conservative and widely supported for this case) |
 Check if everything's right on the front-end folder's `package.json` file!
 
-- [x] 1.3) (If applicable) Issues with vulnerabilities? When *MODERATE* or lower severity, during the development phase, it's not a big deal. Try to update Node components: [/javascript/nodejs/3.1-updating-component](/javascript/nodejs/3.1-updating-component.md)
+- [x] 1.3) (If applicable) Issues with vulnerabilities? When *MODERATE* or lower severity, during the development phase, it's not a big deal. Try to update Node components: [javascript/web-development/backend/nodejs/3.1-updating-component](javascript/web-development/backend/nodejs/3.1-updating-component.md)
 
 - [x] 1.4) (If applicable) Install the ESLint extension (by Microsoft) in your IDE (Tip: [related it to a VSCode profile](/ide/vscode/_vscode-knowledge.md)).
 

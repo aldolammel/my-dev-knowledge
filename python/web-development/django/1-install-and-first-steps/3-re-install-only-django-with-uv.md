@@ -1,4 +1,4 @@
-#### Python > Django
+#### Python > Back-end > Django
 # Django re-installation: using UV as package manager
 
 ---

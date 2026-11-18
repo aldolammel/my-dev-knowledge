@@ -1,4 +1,4 @@
-#### Python > Django > Project types
+#### Python > Back-end > Django > Project types
 # Django as back and front-end
 
 ---

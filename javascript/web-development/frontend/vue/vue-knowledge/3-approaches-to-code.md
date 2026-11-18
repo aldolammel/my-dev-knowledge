@@ -1,45 +1,57 @@
-
-
 COMPONENT APPROACH: 2-WAYS TO CODE A COMPONENT
 
+---
 
-    >> There are 2 ways to create Vue scripts, and them are called 'Options API'
-        and 'Composition API':
+There are 2 ways to create Vue scripts, and them are called **Options API** and **Composition API**. Beyond the code changes, also the order of the Vue layers in the `.vue` files changes too:
 
+**Options API** approach uses:
+1. `<template>`
+2. `<script>`
+3. `<style>`
 
-        >> OPTIONS API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            It's a way to define Vue components using an object with predefined option properties.
-            The code is organized by options (data, methods, computed, etc.). It's the best way for
-            Vue beginners.
-
-            Conventions:
-                - Component layers follow the order: template, script, style;
-
-            Examples:
-                ./3-example1-using-options-api.vue
-                ./3-example2-using-options-api.vue
-
-            More about:
-                ./using-options-api/
+**Composition API** approach uses:
+1. `<script>`
+2. `<template>`
+3. `<style>`
 
 
-        >> COMPOSITION API - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+---
+## OPTIONS API:
 
-            The modern script syntax that is more concise and recommended approach for Vue 3,
-            bringing flexibility for mid and large projects. It's much more close to the JS;
+It's a way to define Vue components using an object with predefined option properties. The code is organized by options (data, methods, computed, etc.). It's the best way for Vue beginners.
 
-                - The reactivity of template layer's elements need to be declared on script layer;
-                - xxxxxx
-                - xxxxxxxx
+Conventions:
+- Component layers follow the order: template, script, style;
 
-            Conventions:
-                - Component layers follow the order: script, template, style;
-                - ref() only for primitives, reactive() only for objects;
+Examples:
+./3-example1-using-options-api.vue
+./3-example2-using-options-api.vue
 
-            Examples:
-                ./3-example1-using-composition-api.vue
-                ./3-example2-using-composition-api.vue
-            
-            More about:
-                ./using-composition-api/
+More about:
+./using-options-api/
+
+---
+## COMPOSITION API:
+
+The modern script syntax that is more concise and recommended approach for Vue 3, bringing flexibility for mid and large projects. It's much more close to the JS;
+
+- The reactivity of template layer's elements need to be declared on script layer;
+- xxxxxx
+- xxxxxxxx
+
+Conventions:
+- Component layers follow the order: script, template, style;
+- ref() only for primitives, reactive() only for objects;
+
+Examples:
+./3-example1-using-composition-api.vue
+./3-example2-using-composition-api.vue
+
+More about:
+./using-composition-api/
+
+---
+
+
+
+

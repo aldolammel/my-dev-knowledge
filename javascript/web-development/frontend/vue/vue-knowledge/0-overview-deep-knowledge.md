@@ -1,107 +1,115 @@
+#### JavaScript > Vue
+# Vue knowledge
+
+---
+## Before:
+- What is Vue: [/javascript/web-development/frontend/vue/vue-knowledge/\_about](/javascript/web-development/frontend/vue/vue-knowledge/_about.md)
+
+---
+## App architecture:
+For every Vue project, it's crucial define which app architecture you will follow once it impacts the development needs: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
+
+---
+## Two main Vue cores:
+In Vue, part of the work is done in JS file, and another part in the HTML file.
+
+**Declarative Rendering:** 
+Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
+
+**Reactivity:**
+Vue automatically tracks JS state changes and efficiently updates the DOM (Document Object Model) when changes happen.
+
+---
+## Vue core: Declarative Rendering:
+It's the same as 'Template variable' in Django Templates, for example. You can use this only in HTML elements/tags, but never in their attributes (more about it, next).
+
+E.g. 
+```html
+{{ my_template_var }}
+```
 
 
-VUE.JS DEEPER KNOWLEDGE
+>> DECLARATIVE RENDERING: FOR DYNAMIC ATTRIBUTES
+If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
+Declarative Rendering {{ }} but ":" as suffix of the attribute name. Like this example:
 
-    >> What is Vue:
-        ./_about.md
+>> context:
+You're using a for-loop that wanna call an image from db. Each product has an 'image' attribute with the string value:
+"/img/<nameImage.fileType>"
+```
 
-    >> Two options for the product's structure with Vue.js: SPA vs MPA:
-        ./SPA-vs-MPA.txt
+<div v-for="p in products">
+	<img src="/img/anyimage.gif">
+</div>
+```
+		
+>> from this:
+```
+<img src="/img/anyimage.gif">
+```
+		
+>> to this:
 
-        >> About both strategies, examples of their folder's structures:
-            .../vue/1-install-and-first-steps/project-folder-structure-vue-and-django.txt 
-    
-    >> Two main Vue-cores:
+			wrong:
+```
+<img src={{ p.image }}>
+<img src="{{ p.image }}">
+```
+
+right (using v-bind abbreviation ":" before html-tag's attribute):
+```
+<img :src="p.image">
+```
+
+
+>> CONDITIONAL DECLARATIVE RENDERING
+
+```
+{{ book.isReady ? "I'm ready" : 'NOT READY YET' }}
+```
+
+---
+## Single-File Components (SFC), `.vue`:
         
-        1) Declarative Rendering:
-            Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.
+`<script>`: 
+- Where the Vue.js methods and other functions stuff is set. In a `.vue` file, it is represented by a `<script>` tag.
 
-        2) Reactivity:
-            Vue automatically tracks JS state changes and efficiently updates the DOM (Document Object Model) when changes happen.
+`<template>`:
+- Where the user interacts with the web application. In a `.vue` file, it is represented by a `<template>` tag.
 
-    
-    >> Vue development files (.vue) is splitted in 3 layers:
-        
-        1) Script: 
-            Where the Vue.js methods and other functions stuff is set.
-                In a .vue file, it is represented by a <script> tag.
+`<style>`:
+- Where CSS classes used by Vue.js will be stored. In a `.vue` file, it is represented by a `<style>` tag.
 
-        2) Template:
-            Where the user interacts with the web application.
-                In a .vue file, it is represented by a <template> tag.
+```vue
+<script setup>
+import { ref } from 'vue'
+const greeting = ref('Hello World!')
+</script>
 
-        3) Style:
-            Where CSS classes used by Vue.js will be stored.
-                In a .vue file, it is represented by a <style> tag.
+<template>
+  <p class="greeting">{{ greeting }}</p>
+</template>
 
-        >> Convention about layer's order in component/app files:
-            
-            >> For "Options API" approach:
-                1. template;
-                2. script;
-                3. style.
+<style>
+.greeting {
+  color: red;
+  font-weight: bold;
+}
+</style>
+```
+Convention layers orders in a `.vue` file based on the used code approach: [/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md)
 
-            >> For "Composition API" approach:
-                1. script;
-                2. template;
-                3. style.
-    
+---
+## Vue folder structure:
+[/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
 
-    >> Vue logic structure:
-        ./1-vue-structure.txt
+---
 
-    
-    >> With Vue.js, part of the work is done in JS file, and another part in the HTML file.
+>> VUE DIRECTIVES:
+./2-directives.txt
 
 
-    >> To create a Vue.js project, you need a Build-Tool. Here is some options:
-        ./1-build-tools.txt
+>> VUE APPs AND THEIR COMPONENTS
+./5-components.txt
 
 
-    >> DECLARATIVE RENDERING
-        It's the same as 'Template variable' in Django Templates, for example. You can use this only in HTML elements/tags, but never in their attributes (more about it, next).
-
-            E.g. 
-                {{ my_template_var }}
-
-
-        >> DECLARATIVE RENDERING: FOR DYNAMIC ATTRIBUTES
-            If you need to use a Directive (more about it, next) in a HTML attribute, you cannot use
-            Declarative Rendering {{ }} but ":" as sufix of the attribute name. Like this example:
-
-                >> context:
-                    You're using a for-loop that wanna call an image from db. Each product has an 'image' attribute with the string value:
-                        "/img/<nameImage.fileType>"
-
-                    <div v-for="p in products">
-                        <img src="/img/anyimage.gif">
-                    </div>
-                
-                >> from this:
-                    <img src="/img/anyimage.gif">
-                
-                >> to this:
-
-                    wrong:
-                        <img src={{ p.image }}>
-                        <img src="{{ p.image }}">
-
-                    right (using v-bind abbreviation ":" before html-tag's attribute):
-                        <img :src="p.image">
-
-
-        >> CONDITIONAL DECLARATIVE RENDERING
-
-            {{ book.isReady ? "I'm ready" : 'NOT READY YET' }}
-
-    
-    
-    >> VUE DIRECTIVES:
-        ./2-directives.txt
-    
-    
-    >> VUE APPs AND THEIR COMPONENTS
-        ./5-components.txt
-
-
-    

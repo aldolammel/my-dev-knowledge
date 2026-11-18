@@ -27,3 +27,7 @@ PROGRAMMING CONCEPTS > ARCHITECTURE: CLIENT-SERVER
 > > ARCHITECTURE: MICROSERVICES
 
     ./architecture-microservices_.md
+
+## Web-development's Application architecture
+[/dev-concepts/web-dev-app-architecture](/dev-concepts/web-dev-app-architecture.md)
+

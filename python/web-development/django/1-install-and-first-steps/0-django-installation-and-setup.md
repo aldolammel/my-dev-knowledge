@@ -1,4 +1,4 @@
-#### Python > Django
+#### Python > Back-end > Django
 #  Installing Django project for the first time in this machine/IDE
 
 ---

@@ -1,8 +1,13 @@
-#### Python > Flask > Project types
+#### Python > Back-end > Flask > Project types
 
 # Flask as back and front-end
 
+---
 
+==DO YOU NEED CMS?==
+If your project demands CMS, you can use a ultra-lightweight solution [Flask-Admin](/python/web-development/flask/cms/flask-admin.md). CMS for Flask is rare because its nature, but Flask-Admin is a cool solution for a minimum friendly content management in a Flask project. 
+
+---
 ## Before:
 1. [ ] To read: *Software Requirements Specification* (*SRS*) document.
 2. [ ] To read: *Technical Design Document* (*TDD*) document.

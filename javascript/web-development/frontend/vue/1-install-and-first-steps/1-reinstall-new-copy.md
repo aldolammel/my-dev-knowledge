@@ -1,4 +1,4 @@
-#### JavaScript > Vue > Project types > Initial roadmap
+#### JavaScript > Front-end > Vue > Project types > Initial roadmap
 # Re-installing Vue as a new copy (or its entire project)
 
 ---

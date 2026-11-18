@@ -1,4 +1,4 @@
-#### Python > Django
+#### Python > Back-end > Django
 # Installing a new project
 
 ---

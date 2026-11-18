@@ -1,4 +1,4 @@
-#### Python > Django > Project types
+#### Python > Back-end > Django > Project types
 # Discovery in Django
 
 ---

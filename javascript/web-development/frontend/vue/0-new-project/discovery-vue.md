@@ -1,4 +1,4 @@
-#### JavaScript > Vue > Project types
+#### JavaScript > Front-end > Vue > Project types
 # Discovery on Vue
 
 

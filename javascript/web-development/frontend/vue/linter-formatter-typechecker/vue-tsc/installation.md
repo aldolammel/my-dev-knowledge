@@ -8,7 +8,7 @@ A command-line type checking tool for Vue, based on a `tsc` wrapper, enabling th
 ## 1) Installation:
 
 ==Vite users:==
-The `vue-tsc` is already installed when you have built the Vue project using [Vite](/javascript/build-tools/vite/0-vite.md) scaffolding and selected the TypeScript as its language. If your case, skip the installation step, going to the integration directly! You can make it sure checking the dev dependencies in `/frontend/package.json` file.
+The `vue-tsc` is already installed when you have built the Vue project using [Vite](javascript/build-tools/vite/_install.md) scaffolding and selected the TypeScript as its language. If your case, skip the installation step, going to the integration directly! You can make it sure checking the dev dependencies in `/frontend/package.json` file.
 
 For non-Vite project, on the `/frontend/` folder, do it:
 ```bash

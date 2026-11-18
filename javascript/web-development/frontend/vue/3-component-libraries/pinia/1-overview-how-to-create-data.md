@@ -11,41 +11,51 @@
 If you are using JavaScript, `/src/main.js`. If TypeScript, `/src/main.ts`:
 ```js
 // Importing:
-...
+// ...
 import { createPinia } from "pinia";
 
 // Declarations:
-...
+// ...
 const pinia = createPinia();
 
 // Installing Vue plugins:
-...
+// ...
 app.use(pinia);
 
-...
+// ...
 ```
 
 ---
 ## 2) Creating the `/stores/` folder:
-Create the `/frontend/src/stores/` folder.
+In case you didn't yet, do it, creating the `/frontend/src/stores/` folder.
 
 ---
 ## 3) Creating the data work-flow:
 ### Step 1/4 - State
-Declare the state property and its initial value in `/store/index.js` (frontend db):
-E.g.
+Declare the state property and its initial value in `/store/index.ts`:
+E.g., coding with [Composition API](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md) approach:
 ```js
-import { createStore } from 'vuex'
-export default createStore({
-	// State means data for VueX:
-	state: {
-		products = [],  // this is the declaration of 'products' state/data!
-		cart = [],      // this is another declaration.
-	},
-	actions: {}
-	mutations: {}
-	modules: {}
-})
+import { defineStore } from "pinia";
+import { ref } from "vue";
+
+export const useProductsStore = defineStore("products", () => {
+  // State:
+  const products = ref<unknown[]>([]);
+  const cart = ref<unknown[]>([]);
+
+  // Getters:
+
+  // Actions:
+
+  return {
+    products,
+    cart,
+  };
+});
+```
+Or using `/store/index.js`:
+```js
+// soon...
 ```
 
 ......................................
@@ -54,9 +64,10 @@ export default createStore({
 In a component `.vue` file or in the app `.vue` main file, the component (view) need to be linked with its state and dispatch:
 
 **View:**
-At first, let's allow the view to display the state/data:
+At first, let's allow the view to display the state/data.
 
 When the view is a component `.vue` file:
+WROOOOOOOOOOOOOOOOOOOONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 ```js
 // Importing a Vuex Helper to handle states:
 import { mapState } from 'vuex'
@@ -103,7 +114,7 @@ On `<template>` layer:
 ```html
 <button
 	type="button"
-	@click="btCartAddProd(prod)"  <!-- considering 'prod' comes from a for-loop -->
+	@click="btCartAddProd(prod)"   <!-- considering 'prod' comes from a for-loop -->
 >
 	Add to Cart
 </button>
@@ -132,7 +143,7 @@ export default {
 Back to the `/store/index.js`, create an action that will execute a mutation (next step) to update a specific state/data when called.
 When the data must be loaded directly from an API/JSON:
 - Using FetchAPI (native of JavaScript): [/javascript/web-development/frontend/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi](/javascript/web-development/frontend/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.md)
-- Using Node.js Axios: [/javascript/nodejs/component-libraries/axios-api/axios](/javascript/nodejs/component-libraries/axios-api/axios.md)
+- Using Node.js Axios: [javascript/web-development/backend/nodejs/component-libraries/axios-api/axios](javascript/web-development/backend/nodejs/component-libraries/axios-api/axios.md)
 
 When the data is already in a state, but can be updated by another action:
 ```js

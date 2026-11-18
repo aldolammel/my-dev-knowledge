@@ -1,4 +1,6 @@
-<script setup>
+<script setup lang="ts">
+// DOES THIS PROJECT USING TYPESCRIPT (lang='ts')?
+
 import { useHead } from "@unhead/vue";
 // Layout components:
 import AppHeader from "@/components/layout/AppHeader.vue";
@@ -25,4 +27,6 @@ useHead({
   <AppFooter />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+// DOES THIS PROJECT USING SCSS (lang='scss')?
+</style>

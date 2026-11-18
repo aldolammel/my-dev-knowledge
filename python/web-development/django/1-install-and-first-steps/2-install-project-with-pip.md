@@ -1,4 +1,4 @@
-#### Python > Django
+#### Python > Back-end > Django
 # Project installation: using PIP as package manager (Python built-in solution)
 
 ---

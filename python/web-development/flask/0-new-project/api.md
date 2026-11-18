@@ -1,4 +1,4 @@
-#### Python > Flask > Project types
+#### Python > Back-end > Flask > Project types
 # API with Flask
 
     TO THINK:

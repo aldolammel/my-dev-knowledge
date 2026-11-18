@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-- Assuming you already installed Axios: [/javascript/nodejs/component-libraries/axios-api/axios](/javascript/nodejs/component-libraries/axios-api/axios.md)
+- Assuming you already installed Axios: [javascript/web-development/backend/nodejs/component-libraries/axios-api/axios](javascript/web-development/backend/nodejs/component-libraries/axios-api/axios.md)
 
 ---
 ## 1) Integration: 

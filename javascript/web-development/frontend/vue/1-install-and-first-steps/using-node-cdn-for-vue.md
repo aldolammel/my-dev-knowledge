@@ -1,4 +1,4 @@
-#### JavaScript > Vue
+#### JavaScript > Front-end > Vue
 # Using Node via CDN
 
 ---

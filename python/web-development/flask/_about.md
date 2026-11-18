@@ -1,9 +1,7 @@
 #### Python > Web Framework
 # Flask
 
-Flask is a microframework that uses Jinja2 engine to work under the hood. 
-
-Even Flask it's a single solution, it's possible to expand features using additional libs:
+Flask is a microframework that uses Jinja2 (template engine, exactly what Django Template is for Django) to work under the hood. Even Flask it's a single solution, it's possible to expand features using additional libs:
 
 >> For ORM:
 		e.g. SQLAlchemy

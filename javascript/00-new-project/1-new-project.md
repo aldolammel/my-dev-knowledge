@@ -16,8 +16,8 @@
 	- Pure:
 		- Pure JS? Why?
 	- **Vue**:
-		- 1F) To develop a web app with Vue as front-end: [/javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front](/javascript/web-development/frontend/vue/0-new-project/web-project-vue-only-front.md)
-		- 1G) To develop a web app with Vue as full-stack: [/javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front](/javascript/web-development/frontend/vue/0-new-project/web-project-vue-as-back-and-front.md)
+		- 1F) To develop a web app with Vue as front-end: [javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
+		- 1G) To develop a web app with Vue as full-stack: [javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only.md)
 	- **React**:
 		- xxx
 	- **Angular**:

@@ -1,4 +1,4 @@
-#### Python > Django
+#### Python > Back-end > Django
 # Re-installing a new copy (of Django or entire project)
 
 ---

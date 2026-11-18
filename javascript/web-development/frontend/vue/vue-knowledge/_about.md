@@ -1,30 +1,20 @@
+#### JavaScript > Front-end
+# Vue front-end framework
 
+---
 
-VUE.JS: WHAT IS IT
+Vue.js (pronounced "view JS" or just "view") is a JavaScript framework that makes building interactive and reactive web front-ends. It's a progressive and open-source way to build client-side web apps. Vue uses the benefits of JavaScript available in the user browser to create actions and interactions without to download HTML pages and more from a the server/host.
 
-Vue.js (pronounced "view JS" or just "view") is a JavaScript framework that makes building interactive and reactive web front-ends. It's a progressive and open-source way to build client-side web apps.
+Vue varnames and function names should respect the JS convention: to use camelCase.
 
->> Vue uses the benefits of JavaScript available in the user browser to create actions and
-		interations without to download HTML pages and more from a the server/host;
+Deep knowledge about Vue: [/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge](/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge.md)
 
->> With Vue, the developer doesn't need to recreate the wheel, nor to create a
-		code-philosophy for each new project if they would use only raw JavaScript;
-
->> Vue core library is focused on the view layer only. Advanced features required for
-		complex apps such as routing, state management and build tooling are offered via
-		officially maintained supporting libraries and packages;
-
->> Vue varnames and function names should respect the JS convention: to use camelCase.
-
->> Deep knowledge about Vue:
-		./0-overview-deep-knowledge.txt
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-**How to install Vue:**  .../vue/1-install-and-first-steps/0-vue-installation-and-setup.txt
-
-**About Vue.JS language, the JavaScript:** [/javascript/\_about](/javascript/_about.md)
+---
+## How to install Vue:
+[/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
+## How to run a Vue app:
+[/javascript/web-development/frontend/vue/vue-knowledge/_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
+## JavaScript, Vue's language:
+[/javascript/\_about](/javascript/_about.md)
 
 

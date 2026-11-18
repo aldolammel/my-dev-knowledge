@@ -1,5 +1,5 @@
-#### Python > Web Framework
-# Django
+#### Python > Back-end
+# Django full-stack framework
 
 ---
 
