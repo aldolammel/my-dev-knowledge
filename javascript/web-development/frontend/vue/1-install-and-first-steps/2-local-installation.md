@@ -32,7 +32,7 @@
 }
 ```
       
-- [x] 1A.3) Edit the current `/frontend/src/main.js` (or `/frontend/src/main.ts`) with my style version: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version.md)
+- [x] 1A.3) Edit the current `/frontend/src/main.js` (or `/frontend/src/main.ts`) with my style version: [javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version](javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version.md)
 
 - [x] 1A.4) Run Vue to test it: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
 
@@ -55,7 +55,7 @@ export default defineConfig({
 ```
 
 - [x] 1A.6) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
-	- CSS Pre-processors (Vite built-in solutions): [/web-development/frontend/css/scss/vue-integration](/web-development/frontend/css/scss/vue-integration.md)
+	- CSS Pre-processors (Vite built-in solutions): [web-development/css/scss/vue-integration](web-development/css/scss/vue-integration.md)
 
 ......................................
 

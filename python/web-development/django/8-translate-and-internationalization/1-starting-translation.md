@@ -232,7 +232,7 @@ http://localhost:8000/es/
 ---
 ## 4) Database Translation process:
 
-- [ ] 4.1) Install and integrate Parler Module: [/python/web-development/django/component-libraries/django-parler/0-django-parler](/python/web-development/django/component-libraries/django-parler/0-django-parler.md)
+- [ ] 4.1) Install and integrate Parler Module: [python/web-development/django/component-libraries/django-parler/install](python/web-development/django/component-libraries/django-parler/install.md)
 
 - [ ] 4.2) For Models: [/python/web-development/django/8-translate-and-internationalization/translate-models](/python/web-development/django/8-translate-and-internationalization/translate-models.md)
 

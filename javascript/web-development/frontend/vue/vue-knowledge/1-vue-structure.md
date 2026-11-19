@@ -3,14 +3,23 @@
 
 ---
 
-==IMPORTANT==: 
-If you are using Vite as built-tool, it will manage the `.scss` files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the `.css` files in `/public/` folder!
-
-More about compilation time: [/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation](/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation.md)
+==IMPORTANT ABOUT CSS==: 
+If you are using Vite as built-tool, it will manage the `.scss` files compilation as well as other files compilation. So try do NOT customize compilation paths, like to force the `.css` files in `/public/` folder! More about compilation time: [/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation](/javascript/web-development/frontend/vue/vue-knowledge/90-go-live-compilation.md)
 
 ---
-## Vue folder structure:
-If the project is defined to use TypeScript, most of `.js` files below must be considered as `.ts`:
+
+==DON'T CREATE FOLDERS BEFORE BUILD-TOOL INSTALL==
+When a Vue roadmap explicit asks you to copy folders and files, you should take them from here:
+- For SPA:
+	- Using `.js`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/`
+	- Using `.ts`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/`
+- For MPA:
+	- Using `.js`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/mpa/project_root_using_js/`
+	- Using `.ts`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/mpa/project_root_using_ts/`
+
+---
+## Vue folder structure for SPA architecture
+If the project is defined to use TypeScript, most of `.js` files must be considered as `.ts`:
 ```python
 my_project/
 ├── frontend/
@@ -18,12 +27,17 @@ my_project/
 │   │
 │   ├── public/              # Use it for static assets you reference by absolute path.
 │   │   ├── favicon.ico
-│   │   ├── manifest.json    # for PWA configuration.
+│   │   ├── manifest.json    # for PWA configuration, if functionality implemented.
 │   │   ├── robots.txt       # xxxxx.
 │   │   ├── sitemap.xml      # xxxxx.
 │   │   └── ...
 │   │
 │   ├── src/                   # Where Vue project is. Vite build-tool watches this folder!
+│   │   ├── api/               # Axios layer. Views/stores never call Axios directly.
+│   │   │   ├── http.ts        # Axios instance (baseURL, interceptors, CSRF/token).
+│   │   │   ├── auth.api.ts
+│   │   │   └── ...
+│   │   │
 │   │   ├── assets/            # Those files that aren't public.
 │   │   │   ├── imgs/          # Images that need optimization or processing.
 │   │   │   │   ├── logo.svg
@@ -34,70 +48,211 @@ my_project/
 │   │   │   │   ├── app.scss             # Everything about this project product styling.
 │   │   │   │   ├── css-framework.scss   # It imports CSS framework installed.
 │   │   │   │   └── ...
-│   │   │   │   
+│   │   │   │
+│   │   │   ├── icons/
+│   │   │   │   └── ...
+│   │   │   │
 │   │   │   └── ...
 │   │   │
-│   │   ├── components/
-│   │   │   ├── common/               # Reusable dumb SFCs, blocks of a page, for example.
-│   │   │   │   ├── BestProducts.vue  
-│   │   │   │   ├── Newsletter.vue       
-│   │   │   │   ├── Testimonials.vue  
+│   │   ├── components/               # Reusable, NON-routed SFCs.
+│   │   │   ├── common/               # Generic blocks to be used in views (pages).
+│   │   │   │   ├── Newsletter.vue
 │   │   │   │   └── ...
 │   │   │   │
-│   │   │   ├── layout/               # SFCs for layout (app's header, app's navbars).
-│   │   │   │   ├── AppHeader.vue
-│   │   │   │   ├── AppFooter.vue
-│   │   │   │   ├── NavMain.vue
+│   │   │   ├── nav/                  
+│   │   │   │   ├── MainMenu.vue  
+│   │   │   │   ├── FooterMenu.vue       
+│   │   │   │   ├── LangSwitcher.vue
 │   │   │   │   └── ...
 │   │   │   │
-│   │   │   └── pages/                # SFCs for pages. Commonly NOT used in SPA.
-│   │   │       ├── Home.vue
-│   │   │       ├── ListByCategory.vue
-│   │   │       ├── LoadBlog.vue
-│   │   │       ├── LoadBlogPost.vue
-│   │   │       └── ...
+│   │   │   └── ...
 │   │   │
 │   │   ├── composables/              # Reusable functions for Composition API.
-│   │   │   ├── useErrorHandler.js
-│   │   │   ├── usePage.js
+│   │   │   ├── useAuth.ts
+│   │   │   ├── useErrorHandler.ts
 │   │   │   └── ...
 │   │   │
-│   │   ├── hooks/                # For custom Composition API functions (hooks).
-│   │   │   ├── useAuth.js
+│   │   ├── layout/               # Shells that wrap routed views via <RouterView />.
+│   │   │   ├── PublicLayout.vue
+│   │   │   ├── LoggedLayout.vue
 │   │   │   └── ...
 │   │   │
 │   │   ├── libs/                 # Where main library files are. Things connected to the world.
-│   │   │   ├── bootstrap.js
+│   │   │   ├── bootstrap.ts
+│   │   │   ├── i18n.ts
 │   │   │   └── ...
 │   │   │
-│   │   ├── router/           # Where routes & lazy-load pages are defined. NOT used in MPA.
-│   │   │   ├── router.js     # Router config file.
-│   │   │   └── routes.js     # Where routes are defined.
+│   │   ├── locales/              # Translations for multiligual projects.
+│   │   │   ├── en.json
+│   │   │   ├── pt-BR.json
+│   │   │   └── ...
 │   │   │
-│   │   ├── stores/           # Where things are caching from APIs.
-│   │   │   ├── menus.js      # Caching/storing data from menus managed by back-end.
-│   │   │   └── pages.js      # Caching/storing data from pages managed by back-end.
+│   │   ├── router/           # NOT used in MPA.
+│   │   │   ├── index.ts      # Router config + lazy-loaded views.
+│   │   │   ├── routes.ts     # Route definitions (public / authenticated / system).
+│   │   │   └── guards.ts     # beforeEach: meta.requiresAuth, 403 redirect.
+│   │   │
+│   │   ├── stores/           # Pinia: where things are caching from APIs.
+│   │   │   ├── auth.ts       # Caching/storing data about authentication.
+│   │   │   └── ...
+│   │   │
+│   │   ├── types/            # Only in case using TypeScript: TS definitions
+│   │   │   └── ...
 │   │   │
 │   │   ├── utils/            # Tiny, pure funcs that do one thing, but not lib or Vue reactivity.
-│   │   │   ├── env.js        # Calling front-end environment vars.
-│   │   │   └── tinyslider-testimonial.js
+│   │   │   ├── env.ts        # Calling front-end environment vars.
+│   │   │   └── ...
 │   │   │
-│   │   ├── App.vue           # Root component page (main-vue-app).  <---------------
-│   │   └── main.js           # Vue app init.
+│   │   ├── views/                   # In Vue, 'views' means 'pages'. One file per route.
+│   │   │   ├── public/              # Views available for everyone (visitors).
+│   │   │   │   ├── HomeView.vue
+│   │   │   │   ├── LoginView.vue
+│   │   │   │   ├── RegisterView.vue
+│   │   │   │   ├── AboutView.vue
+│   │   │   │   ├── TermsView.vue
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── logged/               # Views available only for authenticated users.
+│   │   │   │   ├── HomeView.vue
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   └── sys/
+│   │   │       ├── PasswordForgottenView.vue
+│   │   │       ├── EmailConfirmedView.vue
+│   │   │       ├── ForbiddenView.vue            # Error 403
+│   │   │       ├── NotFoundView.vue             # Error 404
+│   │   │       └── ...
+│   │   │
+│   │   ├── App.vue           # Root component: just <RouterView />.  <---------------
+│   │   └── main.ts           # Single Vue app init (Pinia, router, i18n).
 │   │
 │   ├── .env                  # Exclusive front-end environment variables. 
 │   ├── index.html            # Run it to see the app on the browser. 
-│   └── package.json
+│   └── package.json          # Collection of front-end dependencies.
 │
-├── .nvmrc                    # File used to load the correct project Node version!
+├── .nvmrc                    # File used to load the right project's Node version.
 └── ...
 ```
 
-When a Vue roadmap explicit ask you to copy folders and files, you should take them from here:
-`/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/`.
-
-Tip: for the very beginning of the front-end development, use this `main.js` (or `main.ts`) initial version:
-[/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/project_root/frontend/src/main-initial-version.md)
+---
+## Vue folder structure for MPA architecture
+If the project is defined to use TypeScript, most of `.js` files must be considered as `.ts`:
+```python
+my_project/
+├── frontend/
+│   ├── node_modules/
+│   │
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   ├── manifest.json 
+│   │   ├── robots.txt
+│   │   ├── sitemap.xml
+│   │   └── ...
+│   │
+│   ├── src/
+│   │   ├── api/
+│   │   │   ├── http.ts
+│   │   │   ├── auth.api.ts
+│   │   │   └── ...
+│   │   │
+│   │   ├── assets/
+│   │   │   ├── imgs/
+│   │   │   │   ├── logo.svg
+│   │   │   │   ├── bg.jpg
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── styles/
+│   │   │   │   ├── app.scss
+│   │   │   │   ├── css-framework.scss
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── icons/
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   └── ...
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Newsletter.vue
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── nav/                  
+│   │   │   │   ├── MainMenu.vue  
+│   │   │   │   ├── FooterMenu.vue       
+│   │   │   │   ├── LangSwitcher.vue
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   └── ...
+│   │   │
+│   │   ├── composables/
+│   │   │   ├── useAuth.ts
+│   │   │   └── ...
+│   │   │
+│   │   ├── guards/                       # For MPA, it replaces router guards: called by each page entry.
+│   │   │   ├── requireAuth.ts            # Redirects visitors to login.html.
+│   │   │   └── requireGuest.ts           # Redirects authenticated users away from login.
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── PublicLayout.vue
+│   │   │   ├── LoggedLayout.vue
+│   │   │   └── ...
+│   │   │
+│   │   ├── libs/
+│   │   │   ├── createPageApp.ts          # Shared bootstrap: createApp + Pinia + i18n.
+│   │   │   ├── bootstrap.ts
+│   │   │   ├── i18n.ts
+│   │   │   └── ...
+│   │   │
+│   │   ├── locales/
+│   │   │   ├── en.json
+│   │   │   ├── pt-BR.json
+│   │   │   └── ...
+│   │   │
+│   │   ├── pages/                        # Replaces views/ and router/: one folder per HTML entry.
+│   │   │   ├── home/
+│   │   │   │   ├── main.ts               # Calls createPageApp(HomePage).
+│   │   │   │   └── HomePage.vue
+│   │   │   │
+│   │   │   ├── login/
+│   │   │   │   ├── main.ts
+│   │   │   │   └── LoginPage.vue
+│   │   │   │
+│   │   │   ├── about/
+│   │   │   │   ├── main.ts
+│   │   │   │   └── AboutPage.vue
+│   │   │   │
+│   │   │   ├── terms/
+│   │   │   │   ├── main.ts
+│   │   │   │   └── TermsPage.vue
+│   │   │   │
+│   │   │   └── ...
+│   │   │
+│   │   ├── stores/          # Pinia: state DOESN'T survive pg loads, so persist what matters in storage/cookies.
+│   │   │   ├── auth.ts
+│   │   │   └── ...
+│   │   │
+│   │   ├── types/
+│   │   │   └── ...
+│   │   │
+│   │   └── utils/
+│   │       ├── env.ts
+│   │       └── ...
+│   │
+│   ├── index.html                   # One HTML entry per page.
+│   ├── login.html                   # If using Vite, vite.config.ts > build.rollupOptions.input.
+│   ├── register.html                # One HTML entry per page.
+│   ├── about.html                   # One HTML entry per page.
+│   ├── terms.html                   # One HTML entry per page.
+│   ├── ...
+│   │
+│   ├── .env
+│   ├── vite.config.ts               # If using Vite, lists every .html in build.rollupOptions.input.
+│   ├── package.json
+│   └── ...
+│
+├── .nvmrc
+└── ...
+```
 
 ---
 ## Back-end framework structures working with Vue:

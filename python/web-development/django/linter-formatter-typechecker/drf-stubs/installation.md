@@ -3,7 +3,7 @@
 
 ---
 
-From the same team of [Django-Stubs](python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md), DRF Stubs adds type information for [Django REST Framework](/python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md), since DRF doesn't ship its own type hints.
+From the same team of [Django-Stubs](python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md), DRF Stubs adds type information for [Django REST Framework](python/web-development/django/component-libraries/django-rest-framework/_install.md), since DRF doesn't ship its own type hints.
 
 **What it does on DRF:**
 

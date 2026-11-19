@@ -8,7 +8,6 @@ The behind-the-scenes engine that powers the application. It handles business lo
 ---
 ## What's front-end:
 [/dev-concepts/end-frontend](/dev-concepts/end-frontend.md)
-
-
-
+## What's full-stack:
+[/dev-concepts/end-fullstack](/dev-concepts/end-fullstack.md)
 

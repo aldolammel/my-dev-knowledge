@@ -18,32 +18,39 @@ Assuming you are the greatest developer with absolute power to create everything
 ## 2) Ecosystem decision:
 
 - Web-development:
-	- Back-end language:
-		- [Python](/python/_about.md) framework:
+	- Back-end:
+		- [Python](/python/_about.md) language:
 			- [Django](/python/web-development/django/_about.md)
 			- [Flask](/python/web-development/flask/_about.md)
 			- [Fast-API](/python/web-development/fast-api/_about.md)
-		- [Node.js](/web-development/backend/with-nodejs.md)
-	- Front-end language:
-		- Python framework:
+		- [JavaScript/TypeScript](/javascript/_about.md) language:
+			- [Node.js](web-development/1-backend/nodejs.md)
+			- [Nuxt.js](/javascript/web-development/backend/nuxtjs/_about.md)
+			- [Next.js](/javascript/web-development/backend/nextjs/_about.md)
+	- Front-end:
+		- Python language:
 			- [Django Template](/python/web-development/django/3-3-frontend-templates/_about.md)
-		- JavaScript/TypeScript framework:
-			- [Vue](/web-development/frontend/vue/_about.md)
-			- [React](/web-development/frontend/react/_about.md)
-			- [Angular](/web-development/frontend/angular/_about.md)
+			- Jinja2 ([Flask](/python/web-development/flask/_about.md) uses Jinja2 as its template-engine)
+		- JavaScript/TypeScript language:
+			- [Vue](web-development/1-frontend/frameworks/vue/_about.md) ([Nuxt.js](/javascript/web-development/backend/nuxtjs/_about.md) uses Vue as its front-end framework)
+			- [React](web-development/1-frontend/frameworks/react/_about.md) ([Next.js](/javascript/web-development/backend/nextjs/_about.md) uses React as its front-end framework)
+			- [Angular](web-development/1-frontend/frameworks/angular/_about.md)
 	- Front-end CSS framework/library:
-		- [Bootstrap](/web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md)
-		- [Awesome](/web-development/frontend/css/css-libraries-frameworks/awesome/_about.md)
-		- [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md)
-		- [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/_about.md)
-		- [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md)
+		- [Bootstrap](web-development/css/libraries-frameworks/bootstrap/_about-and-installation.md)
+		- [Awesome](web-development/css/libraries-frameworks/awesome/_about.md)
+		- [Bulma](web-development/css/libraries-frameworks/bulma/_about.md)
+		- [Tailwind](web-development/css/libraries-frameworks/tailwind/_about.md)
+		- [Vuetify](web-development/css/libraries-frameworks/vuetify/_about.md)
 
 ---
 ## 3) Documents to create:
 
-- Technical Design Document (TDD).
-- Entity-Relationships Diagram (ERD).
-- Back-end Architecture Design.
+**Web-development:**
+- Sitemap diagram: [/web-development/document-templates/sitemap](/web-development/document-templates/sitemap.md)
+- Sitemap text-based: [web-development/document-templates/sitemap-text-based](web-development/document-templates/sitemap-text-based.md)
+- Technical Design Document (TDD): [/web-development/document-templates/tdd](/web-development/document-templates/tdd.md)
+- Entity-Relationships Diagram (ERD): [/web-development/document-templates/erd](/web-development/document-templates/erd.md)
+- Back-end Architecture Design: [/web-development/document-templates/backend-architecture-design](/web-development/document-templates/backend-architecture-design.md)
 
 ---
 ## 4) Project roadmap:

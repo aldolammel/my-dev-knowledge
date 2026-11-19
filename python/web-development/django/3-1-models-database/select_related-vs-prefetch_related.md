@@ -43,6 +43,6 @@ Calling `.filter()`, `.order_by()`, `.exclude()` etc. on an already-prefetched r
 
 ---
 ## Debugging
-Use `django-debug-toolbar` or `assertNumQueries` to confirm the query count.
+Use [django-debug-toolbar](/python/web-development/django/component-libraries/django-debug-toolbar/install.md) or `assertNumQueries` to confirm the query count.
 
 ---

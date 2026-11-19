@@ -41,7 +41,7 @@ Each navigation typically requests a new HTML document from the server. For exam
 Some technologies that support this architecture:
 - [Django](/python/web-development/django/_about.md)
 - Next.js
-- [Nuxt.js](/javascript/web-development/frontend/vue/3-component-libraries/nuxt/_about.md)
+- [Nuxt.js](javascript/web-development/frontend/vue/component-libraries/nuxt/_about.md)
 
 ..........
 

@@ -13,7 +13,7 @@ If you're creating a project just to build up an API, be sure you will use *Djan
 3. [ ] The data-flow when Django's using serializers:
 ![](python/web-development/django/django-dataflow-simplified-by-aldolammel.png)
 4. [ ] Django: assuming you have your Django project running with its database!
-5. [ ] Toolkit: assuming you have already an Web API toolkit like *Django REST Framework*: [/python/web-development/django/component-libraries/django-rest-framework/0-restframewok](/python/web-development/django/component-libraries/django-rest-framework/0-restframewok.md)
+5. [ ] Toolkit: assuming you have already an Web API toolkit like *Django REST Framework*: [python/web-development/django/component-libraries/django-rest-framework/_install](python/web-development/django/component-libraries/django-rest-framework/_install.md)
 
 ---
 ## Creating the API

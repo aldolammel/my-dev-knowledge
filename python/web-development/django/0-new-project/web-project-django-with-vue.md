@@ -23,17 +23,20 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 ### 1.3) Front-end
 If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now. Otherwise:
 1. [ ] Vue installation options: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
-2. [ ] (Optional) CSS Framework: [Vuetify](/web-development/frontend/css/css-libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/frontend/css/css-libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/frontend/css/css-libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/frontend/css/css-libraries-frameworks/bulma/_about.md).
+2. [ ] (Optional) CSS Framework: [Vuetify](web-development/css/libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/css/libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](web-development/css/libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](web-development/css/libraries-frameworks/bulma/_about.md).
 
 ---
 ## 2) Development:
 
 ### 2.1) Before
-1. [x] Create the AI assistance basic instruction (context prompt) for the project: [python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
+1. [x] Create the AI assistance basic instruction (context prompt) for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](/python/web-development/django/document-templates/ai-prompt-context-model.md)
+2. [x] Create the [Django Architecture Design](/python/web-development/django/document-templates/django-architecture-design.md) document.
+3. [x] Create the [Sitemap text-based](web-development/document-templates/sitemap-text-based.md) document.
 ### 2.2) Non-stop control:
 1. Update *Project Dashboard*.
 2. Update *Technical Design Document* (TDD).
-3. Create and keep updating [Django Architecture Design](/python/web-development/django/document-templates/django-architecture-design.md) document.
+3. Update *Django Architecture Design* document.
+4. Update  *Sitemap text-based* document.
 ### 2.3) Front-end
 1. [ ] Convert the HTML template to Vue templates/components;
 2. [ ] Code the entire navigation;

@@ -15,7 +15,7 @@ Never install Vue in Django's `/templates/` folder! It would create process rend
 
 ---
 ## 1) Get to know specifics folder structure based on the app architecture:
-==Currently, there is no folder difference between app architectures!==
+==For both cases, `/frontend/` should be right in the back-end folder root level.==
 
 - 1A) For MPA architecture.
 - 1B) For SPA architecture.
@@ -29,6 +29,8 @@ my_project/         # Django root / back-end root / project root
 └── frontend/       # Vue root / front-end root
 ```
 
+Th biggest difference between app architectures relays how the `/frontend/` folder is structured. Check this out, but ==DON'T== create anything once it'll be created later: [/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
+
 ......................................
 
 ### 1B) For SPA architecture
@@ -38,12 +40,10 @@ my_project/         # Django root / back-end root / project root
 └── frontend/       # Vue root / front-end root
 ```
 
----
-## 2) Vue `/frontend/` full folder structure:
-Just take a look, but ==DON'T== create anything once it'll be created later: [/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
+Th biggest difference between app architectures relays how the `/frontend/` folder is structured. Check this out, but ==DON'T== create anything once it'll be created later: [/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
 
 ---
-## 3) Return to the previous Vue roadmap:
+## 2) Return to the previous Vue roadmap:
 Once you have decided with structure to follow, return to the main guide for Vue installation you are following!
 
 ---

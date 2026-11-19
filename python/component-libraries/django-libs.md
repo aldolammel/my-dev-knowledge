@@ -3,7 +3,7 @@
 
 ---
 
-For Django: [/python/web-development/django/component-libraries/](/python/web-development/django/component-libraries/) (folder)
+For Django: `/python/web-development/django/component-libraries/`
 
 For Flask (folder): /xxxxxxxxxxxxxx
 

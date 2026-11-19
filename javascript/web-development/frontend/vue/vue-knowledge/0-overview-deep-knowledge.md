@@ -104,12 +104,9 @@ Convention layers orders in a `.vue` file based on the used code approach: [/jav
 [/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure](/javascript/web-development/frontend/vue/vue-knowledge/1-vue-structure.md)
 
 ---
-
->> VUE DIRECTIVES:
-./2-directives.txt
-
-
->> VUE APPs AND THEIR COMPONENTS
-./5-components.txt
+## VUE DIRECTIVES:
+[/javascript/web-development/frontend/vue/vue-knowledge/2-directives](/javascript/web-development/frontend/vue/vue-knowledge/2-directives.md)
+## VUE APPs AND THEIR COMPONENTS
+[/javascript/web-development/frontend/vue/vue-knowledge/5-components](/javascript/web-development/frontend/vue/vue-knowledge/5-components.md)
 
 

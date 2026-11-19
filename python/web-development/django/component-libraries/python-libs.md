@@ -1,2 +1,3 @@
-[/python/component-libraries/](/python/component-libraries/) (folder)
+Folder: `/python/component-libraries/`
+
 

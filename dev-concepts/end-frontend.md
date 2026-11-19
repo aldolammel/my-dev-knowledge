@@ -8,4 +8,5 @@ Everything the user sees, clicks, and interacts with directly in their web brows
 ---
 ## What's back-end:
 [/dev-concepts/end-backend](/dev-concepts/end-backend.md)
-
+## What's full-stack:
+[/dev-concepts/end-fullstack](/dev-concepts/end-fullstack.md)
