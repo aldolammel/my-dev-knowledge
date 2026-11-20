@@ -41,13 +41,10 @@ In `pyproject.toml`:
 ```
 
 ---
-## Check errors on terminal:
-On the `/frontend/` folder:
-```bash
-vue-tsc --noEmit
-# Or:
-npx vue-tsc --noEmit
-```
+## Checking type-checker errors:
+[javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors.md)
 
 ---
+
+
 

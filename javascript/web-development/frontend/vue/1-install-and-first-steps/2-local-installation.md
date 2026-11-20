@@ -36,25 +36,7 @@
 
 - [x] 1A.4) Run Vue to test it: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
 
-- [x] 1A.5) Vite fine configs (recommended), in `/frontend/vite.config.js` (or `.ts`) file:
-```js
-//...
-import path from "path";
-
-export default defineConfig({
-	plugins: [...],
-	resolve: {
-		alias: {
-			// "@" in Vite means the path starts from ./src folder, no matter how deep's the caller:
-			"@": path.resolve(path.dirname(new URL(import.meta.url).pathname), "./src"),
-		},
-	},
-	// Defining what folder Vite will compile the project when it's ready to production environment:
-	publicDir: "public",
-});
-```
-
-- [x] 1A.6) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
+- [x] 1A.5) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
 	- CSS Pre-processors (Vite built-in solutions): [web-development/css/scss/vue-integration](web-development/css/scss/vue-integration.md)
 
 ......................................
@@ -166,7 +148,7 @@ Please, only consider in this stage of the roadmap to install what I am saying. 
 
 ---
 ## 6) Install all front-end's dependencies:
-- [ ] Install every front-end's core and dev dependencies (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)).
+- [x] Install every front-end's core and dev dependencies (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)).
 	- How to install dependencies: [javascript/web-development/backend/nodejs/3-installing-new-components](javascript/web-development/backend/nodejs/3-installing-new-components.md)
 
 ---

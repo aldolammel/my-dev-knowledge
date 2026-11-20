@@ -1,32 +1,21 @@
 <script setup lang="ts">
-// DOES THIS PROJECT USING TYPESCRIPT (lang='ts')?
-
 import { useHead } from "@unhead/vue";
-// Layout components:
-import AppHeader from "@/components/layout/AppHeader.vue";
-import AppFooter from "@/components/layout/AppFooter.vue";
-// Common components:
+
+// Components:
+import MainMenu from "@/components/navigation/MainMenu.vue";
+import FooterMenu from "@/components/navigation/FooterMenu.vue";
+
+// Custom HTML <head>:
 // Reserved space...
-useHead({
-  meta: [
-    {
-      name: "author",
-      content: "@aldolammel",
-    },
-    // Other meta declarations like description and keywords are in each page component.
-  ],
-});
 </script>
 
 <template>
-  <AppHeader />
+  <MainMenu />
 
   <!-- Where router loads each route defined in its RouterLink's: -->
   <RouterView />
 
-  <AppFooter />
+  <FooterMenu />
 </template>
 
-<style lang="scss" scoped>
-// DOES THIS PROJECT USING SCSS (lang='scss')?
-</style>
+<style lang="scss" scoped></style>

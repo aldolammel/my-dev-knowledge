@@ -65,12 +65,46 @@ npm create vite@latest
 - [x] 2A.4) (If applicable) After the Vite installation and the front-end project folder creation (with a `/node_modules/` in), move files you got in that (renamed) `_frontend` folder to the new one, carefully!
 
 ---
-## 3) (Optional) About some boilerplate files:
+## 3) Vite extra integration:
+- [x] 3.1) In `/frontend/vite.config.js` (or `.ts`) file:
+```js
+//...
+import path from "path";
+
+export default defineConfig({
+	plugins: [...],
+	resolve: {
+		alias: {
+			// "@" in Vite means the path starts from ./src folder, no matter how deep's the caller:
+			"@": path.resolve(path.dirname(new URL(import.meta.url).pathname), "./src"),
+		},
+	},
+	// Defining what folder Vite will compile the project when it's ready to production environment:
+	publicDir: "public",
+});
+```
+- [x] 3.2) (If applicable) For projects using TypeScript, teach this `@` alias also to TypeScript and Vue itself, editing `/frontend/tsconfig.app.json`:
+```js
+{
+	//...
+	"compilerOptions": {
+	  "paths": {
+	    "@/*": ["./src/*"]
+	  },
+	  //...
+	},
+	//...
+}
+```
+---
+## 4) (Optional) About some boilerplate files:
 Personally, I (@aldolammel) don't like a few Vite front-end config files isolated in the `/frontend/` folder:
 
-- [x] 3.1) Delete the `/frontend/.gitignore` because that configs already are in the `/.gitignore` file (root).
+- [x] 3.1) Delete the `/frontend/README.md` because you that need this. The project details should be documented in a [TTD](/web-development/document-templates/tdd.md). 
 
-- [x] 3.2) Delete that folder `/frontend/.vscode/` and its content (no worries about its content, it will be review further in other roadmap)
+- [x] 3.2) Delete the `/frontend/.gitignore` because that configs already are in the `/.gitignore` file (root).
+
+- [x] 3.3) Delete that folder `/frontend/.vscode/` and its content (no worries about its content, it will be review further in other roadmap)
 
 Done!
 

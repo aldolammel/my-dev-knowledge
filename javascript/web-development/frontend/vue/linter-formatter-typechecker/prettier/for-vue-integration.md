@@ -7,7 +7,7 @@ Prettier - installation and integration: [/javascript/linter-formatter-typecheck
 
 ---
 ## Before:
-1. If you wanna a better formatter for Vue, use *ESLint-plugin-for-Vue*: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/\_about](javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/installation.md)
+1. If you wanna a better formatter for Vue, use *ESLint-plugin-for-Vue*: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/\_about](javascript/web-development/frontend/vue/linter-formatter-typechecker/eslint-plugin-vue/_installation.md)
 2. Case you're using VSCode as IDE, assuming you already installed Prettier in your IDE/project: [/javascript/linter-formatter-typechecker/prettier/installation](/javascript/linter-formatter-typechecker/prettier/installation.md)
 
 ---

@@ -16,15 +16,16 @@
 
 ---
 ## 2) Install Vue in the project:
-- [ ] [/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project](/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project.md)
+- [x] [/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project](/javascript/web-development/frontend/vue/1-install-and-first-steps/1-install-new-project.md)
 
 ---
 ## 3) Make sure you've finished one of them:
-- [ ] **Double-check:**
-	- VUE as front-end and no backend at all: [javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
-	- VUE as back and front-end: [javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only.md)
-	- VUE as front-end of Django: [/javascript/web-development/frontend/vue/0-new-project/web-project-django-with-vue](/javascript/web-development/frontend/vue/0-new-project/web-project-django-with-vue.md)
-	- VUE as front-end of Flask: [/javascript/web-development/frontend/vue/0-new-project/web-project-flask-with-vue](/javascript/web-development/frontend/vue/0-new-project/web-project-flask-with-vue.md)
+- [x] **Double-check:**
+	- VUE as a static front-end (no back-end): [/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
+	- VUE as front-end (no back-end): [/javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only](/javascript/web-development/frontend/vue/0-new-project/web-project-dynamic-vue-only.md)
+	- VUE as front-end of Node.js back-end (Nuxt.js): [/javascript/web-development/frontend/vue/0-new-project/web-project-nuxt-with-vue](/javascript/web-development/frontend/vue/0-new-project/web-project-nuxt-with-vue.md) 
+	- VUE as front-end of Django back-end: [/javascript/web-development/frontend/vue/0-new-project/web-project-django-with-vue](/javascript/web-development/frontend/vue/0-new-project/web-project-django-with-vue.md)
+	- VUE as front-end of Flask back-end: [/javascript/web-development/frontend/vue/0-new-project/web-project-flask-with-vue](/javascript/web-development/frontend/vue/0-new-project/web-project-flask-with-vue.md)
 
 Done.
 

@@ -33,7 +33,7 @@ It's the same to say:
 
 ---
 ## NginX installation:
-[install](/server/web-server/nginx/install.md)
+[/server/web-server/nginx/install](/server/web-server/nginx/install.md)
 
 ---
 

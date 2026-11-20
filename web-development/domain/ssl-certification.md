@@ -1,83 +1,83 @@
+#### Domain > SSL
+# SSL Certification with Certbot + Nginx
 
+---
+## 1) Install:
 
-DOMAIN: SSL CERTIFICATION CERTIFICATION (HTTP TO HTTPS)
+1.1) Install the Certbot with its Nginx plugin if you're using Nginx:
+```bash
+sudo apt update
+sudo apt install -y certbot python3-certbot-nginx
+```
 
-
-    LINUX/UBUNTU:
-
-        SSL Certification with Certbot + Nginx
-
-        >> Install:
-
-            1) Install the Certbot with its Nginx plugin if you're using Nginx:
-                $ sudo apt update
-                $ sudo apt install -y certbot python3-certbot-nginx
-
-            2) Obtain an SSL Certificate:
+---
+## 2) Obtain an SSL Certificate:
                 
-                2.1) Requesting:
-                    $ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
-                    # or for subdomain:
-                    $ sudo certbot --nginx -d my.yourdomain.com
+2.1) Requesting:
+```bash
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+# or for subdomain:
+sudo certbot --nginx -d my.yourdomain.com
+```
                 
-                2.2) After that, the Certbot will automatically create a CRON to renew the certification each period. But if something gets wrong, set the admin email for SSL renewal alerts too!
+2.2) After that, the Certbot will automatically create a CRON to renew the certification each period. But if something gets wrong, set the admin email for SSL renewal alerts too!
                 
-                2.3) Verify auto-renewal and when the auto-renew must run automatically:
-                    $ sudo systemctl status certbot.timer
-                    $ sudo certbot certificates
-                    
-                    
-                
+2.3) Verify auto-renewal and when the auto-renew must run automatically:
+```bash
+sudo systemctl status certbot.timer
+sudo certbot certificates
+```
 
-                
+---
+## 3) To make sure the SSL certification will be renewed:
+```bash
+certbot renew --dry-run
+```
 
-            3) To make sure the SSL certification will be renewed:
-                $ certbot renew --dry-run
+Now the Nginx Settings must to be like this (below) to load only with HTTPS and without WWW: 
+```bash
+nano /etc/nginx/sites-available/<project_name>
+```
 
+```
+server {
+		listen 80;
+		listen [::]:80;
 
-            Now the Nginx Settings must to be like this (below) to load only with HTTPS and without WWW: 
-                $ nano /etc/nginx/sites-available/<project_name>
+		server_name www.abcoo.com.br abcoo.com.br;
 
-                    server {
-                            listen 80;
-                            listen [::]:80;
+		return 301 https://abcoo.com.br$request_uri;
+}
+server {
+		listen 443 default_server ssl;
 
-                            server_name www.abcoo.com.br abcoo.com.br;
+		server_name www.abcoo.com.br abcoo.com.br;
 
-                            return 301 https://abcoo.com.br$request_uri;
-                    }
-                    server {
-                            listen 443 default_server ssl;
+		ssl_certificate /etc/letsencrypt/live/abcoo.com.br/fullchain.pem;
+		ssl_certificate_key /etc/letsencrypt/live/abcoo.com.br/privkey.pem;
 
-                            server_name www.abcoo.com.br abcoo.com.br;
+		location / {
+				include proxy_params;
+				proxy_pass http://unix:/home/admin/portfolio/gunicorn.sock;
+		}
 
-                            ssl_certificate /etc/letsencrypt/live/abcoo.com.br/fullchain.pem;
-                            ssl_certificate_key /etc/letsencrypt/live/abcoo.com.br/privkey.pem;
+		include /etc/letsencrypt/options-ssl-nginx.conf;
+		ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+```
 
-                            location / {
-                                    include proxy_params;
-                                    proxy_pass http://unix:/home/admin/portfolio/gunicorn.sock;
-                            }
+Something's weird?            
+```bash
+# Restart the web server:
+systemctl restart nginx
+systemctl status nginx
 
-                            include /etc/letsencrypt/options-ssl-nginx.conf;
-                            ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-                    }
+# Restart the communication between the web server and the web application:
+systemctl restart your_application_name
+systemctl status your_application_name
 
+# Nothing yet? Restart the server and repeat this entire step:
+reboot
+```
 
-            Something's weird?
-            
-            # Restart the web server:
-            $ systemctl restart nginx
-            $ systemctl status nginx
-
-            # Restart the communication between the web server and the web application:
-            $ systemctl restart <your_application_name>
-            $ systemctl status <your_application_name>
-
-            # Nothing yet? Restart the server and repeat this entire step:
-            $ reboot
-
-
-    ------------------------------------------------------------------------------------------------
-
-    WINDOWS:
+---

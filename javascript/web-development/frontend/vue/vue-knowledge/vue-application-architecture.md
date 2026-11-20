@@ -13,7 +13,7 @@ Or a full-stack solution that support SSG: Nuxt.js
 ---
 ## Single Page Application (SPA):
 - Vue controls the entire app, including page rendering, navigation ([Vue Router](javascript/web-development/frontend/vue/component-libraries/vue-router/_about.md)), and application state ([Pinia](javascript/web-development/frontend/vue/component-libraries/pinia/_install.md)).
-- Poor compatible with SEO.
+- Poor compatible with SEO (important to manage this problem with libraries like [Unhead-Vue](/javascript/web-development/frontend/vue/component-libraries/unhead/_install.md))
 - Poor compatible with link previews (sharing content).
 
 ---

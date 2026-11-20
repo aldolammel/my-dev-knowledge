@@ -3,14 +3,16 @@
 
 ---
 
-Below, you find a roadmap with all crucial responsibilities that might orbit a developer in the project (depends too much about your role and company).
+==REMEMBER:==
+1. Below, you find a roadmap with all crucial responsibilities that might orbit a developer in the project (depends too much about your role and company).
+2. Once Vue is the front-end solution here, and it has its own template-engine, this project probably won't need the Django-Template (Django's template-engine).
 
 ---
 ## Before:
-1. [x] To read: *Software Requirements Specification* (SRS) document.
-2. [x] To read: [Technical Design Document (TDD)](/python/web-development/django/document-templates/tdd.md) document.
-3. [x] To read: project [System ERD](/database/document-templates/erd.md) document.
-4. [x] To read: project *Sitemap* document.
+- [x] To read: *Software Requirements Specification* (SRS) document.
+- [x] To read: [Technical Design Document (TDD)](/python/web-development/django/document-templates/tdd.md) document.
+- [x] To read: project [System ERD](/database/document-templates/erd.md) document.
+- [x] To read: project [Sitemap](/web-development/document-templates/sitemap.md) document.
 ## 1) Setup:
 
 ### 1.1) Database
@@ -22,7 +24,7 @@ Below, you find a roadmap with all crucial responsibilities that might orbit a d
 	- B) Or use Node via CDN: [/javascript/web-development/frontend/vue/1-install-and-first-steps/using-node-cdn-for-vue](/javascript/web-development/frontend/vue/1-install-and-first-steps/using-node-cdn-for-vue.md)
 ### 1.3) Front-end
 If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now. Otherwise:
-1. [ ] Vue installation options: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
+1. [x] Vue installation options: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 2. [ ] (Optional) CSS Framework: [Vuetify](web-development/css/libraries-frameworks/vuetify/_about.md) or [Bootstrap](web-development/css/libraries-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](web-development/css/libraries-frameworks/tailwind/install-and-integration.md) or  [Bulma](web-development/css/libraries-frameworks/bulma/_about.md).
 
 ---
@@ -33,13 +35,13 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 2. [x] Create the [Django Architecture Design](/python/web-development/django/document-templates/django-architecture-design.md) document.
 3. [x] Create the [Sitemap text-based](web-development/document-templates/sitemap-text-based.md) document.
 ### 2.2) Non-stop control:
-1. Update *Project Dashboard*.
-2. Update *Technical Design Document* (TDD).
-3. Update *Django Architecture Design* document.
-4. Update  *Sitemap text-based* document.
+- Update *Project Dashboard*.
+- Update *Technical Design Document* (TDD).
+- Update *Django Architecture Design* document.
+- Update  *Sitemap text-based* document.
 ### 2.3) Front-end
-1. [ ] Convert the HTML template to Vue templates/components;
-2. [ ] Code the entire navigation;
+1. [ ] (If applicable) Convert the HTML template to Vue templates/components.
+2. [ ] Code the entire navigation.
 3. [ ]  Integrate back-end with front-end: [/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/\_integration-using-pagex](_integration-using-pagex.md)
 ### 2.4) Back-end
 1. [x] Build up the main classes from *Django Architecture Design* document:

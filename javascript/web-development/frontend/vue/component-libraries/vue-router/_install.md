@@ -43,18 +43,18 @@ Uninstall (if needed): [/javascript/web-development/frontend/vue/component-libra
 
 ---
 ## 3) Integration:
-- [x] 3.1) In the `/frontend/.env` file, create these env vars if not yet: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/env_example](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/env_example.md)
-- [x] 3.2) Import the router in the `main.js` (or `main.ts`) file: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/main.js)
-- [x] 3.3) Create the router-config file and setup its options:
-	- Case using JS: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-js](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-js.md)
-	- Case using TS: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-ts](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/router/index-ts.md)
-- [ ] 3.4) (Optional) Make sure you already have all views "pages" in `.vue` files in the `/frontend/src/pages/` folder. Don't develop those pages now, but create them.
-- [ ] 3.5) Define where all views ("pages") must be rendered in your front-end template, adding this where each View must be loaded: `<RouterView />` (e.g., [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/App.vue)).
-- [ ] 3.6) Define each link option (`<RouterLink>`) for the main navigation menu of the app. E.g.: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/project_one/frontend/src/components/NavMain.vue)
+- [x] 3.1) In the `/frontend/.env` file, create these env vars if not yet: [javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/env_example](javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/env_example.md)
+- [x] 3.2) Import the router in the `main.js` (or `main.ts`) file: [javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/main.js](javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/main.js)
+- [x] 3.3) Create the router-config file and setup its options: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/router/index](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/router/index.md)
+- [x] 3.4) (Optional) Make sure you already have all views ("pages") as `.vue` files organized in `/frontend/src/views/` folders. Don't develop those views now. Just create them!
+- [x] 3.5) In `/frontend/src/App.vue`, define where views ("pages") must be rendered, adding `<RouterView />` in the `<template>` layer of the SFC: [javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/App.vue](javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/App.vue)).
+- [x] 3.6) Define each link option (`<RouterLink>`) for the app's main menu: [/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/components/navigation/MainMenu](/javascript/web-development/frontend/vue/component-libraries/vue-router/example-SPA/frontend/src/components/navigation/MainMenu.md)
 
 ---
-## 4) Testing:
+## 4) (If applicable / Optional) Testing:
+If you got the front-end entirely configured with all its dependencies installed and integrated, you can test it:
 [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
+Otherwise, it's better to finish all front-end dependencies first!
 
 
         

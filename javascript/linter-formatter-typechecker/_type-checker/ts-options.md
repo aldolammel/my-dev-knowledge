@@ -7,6 +7,6 @@
 
 ---
 ## Options:
-- vue-tsc ( specific for Vue projects): [/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/installation](/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/installation.md)
+- vue-tsc ( specific for Vue projects): [javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/_installation](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/_installation.md)
 - Flow (by Facebook / Good for React projects): [/javascript/linter-formatter-typechecker/flow/\_about](/javascript/linter-formatter-typechecker/flow/_about.md)
 

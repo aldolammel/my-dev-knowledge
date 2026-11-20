@@ -54,12 +54,12 @@ my_project/
 │   │   │   │
 │   │   │   └── ...
 │   │   │
-│   │   ├── components/               # Reusable, NON-routed SFCs.
-│   │   │   ├── common/               # Generic blocks to be used in views (pages).
-│   │   │   │   ├── Newsletter.vue
+│   │   ├── components/                        # Reusable, NON-routed SFCs.
+│   │   │   ├── common/                        # Generic blocks to be used in views (pages).
+│   │   │   │   ├── NewsletterFormCommon.vue
 │   │   │   │   └── ...
 │   │   │   │
-│   │   │   ├── nav/                  
+│   │   │   ├── navigation/                  
 │   │   │   │   ├── MainMenu.vue  
 │   │   │   │   ├── FooterMenu.vue       
 │   │   │   │   ├── LangSwitcher.vue
@@ -72,7 +72,7 @@ my_project/
 │   │   │   ├── useErrorHandler.ts
 │   │   │   └── ...
 │   │   │
-│   │   ├── layout/               # Shells that wrap routed views via <RouterView />.
+│   │   ├── layouts/                  # Shells that wrap routed views via <RouterView />.
 │   │   │   ├── PublicLayout.vue
 │   │   │   ├── LoggedLayout.vue
 │   │   │   └── ...
@@ -117,7 +117,7 @@ my_project/
 │   │   │   │   └── ...
 │   │   │   │
 │   │   │   └── sys/
-│   │   │       ├── PasswordForgottenView.vue
+│   │   │       ├── PwdForgottenView.vue
 │   │   │       ├── EmailConfirmedView.vue
 │   │   │       ├── ForbiddenView.vue            # Error 403
 │   │   │       ├── NotFoundView.vue             # Error 404
@@ -173,10 +173,10 @@ my_project/
 │   │   │
 │   │   ├── components/
 │   │   │   ├── common/
-│   │   │   │   ├── Newsletter.vue
+│   │   │   │   ├── NewsletterFormCommon.vue
 │   │   │   │   └── ...
 │   │   │   │
-│   │   │   ├── nav/                  
+│   │   │   ├── navigation/                  
 │   │   │   │   ├── MainMenu.vue  
 │   │   │   │   ├── FooterMenu.vue       
 │   │   │   │   ├── LangSwitcher.vue

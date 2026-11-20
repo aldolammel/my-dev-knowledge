@@ -3,7 +3,6 @@ Compatible with JavaScript (`main.js`) or TypeScript (`main.ts`) version:
 ```js
 // Importing:
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 
 // CSS globals:
