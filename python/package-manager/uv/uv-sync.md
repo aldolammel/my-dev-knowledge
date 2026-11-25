@@ -20,7 +20,7 @@ The `uv sync` command looks for project `pyproject.toml` file to listing the con
 ## 1) Syncing, make a choice:
 
 ==Critical:==
-In [Production environments](dev-concepts/environment-production-prod.md), you should NEVER synchronize any **Dev** dependencies!
+In [Production environments](/dev-concepts/environment-production-prod.md), you should NEVER synchronize any **Dev** dependencies!
 In [Development environments](/dev-concepts/environment-development-dev.md), you should synchronize **Core** and **Dev** dependencies!
 
 Option 1: **Core** dependencies and **Dev** dependencies:

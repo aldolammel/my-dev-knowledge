@@ -4,7 +4,7 @@
 ---
 ## Before:
 - SPA on Vue: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
-- Assuming you already installed Unhead-Vue: [/javascript/web-development/frontend/vue/component-libraries/unhead/_install](javascript/web-development/frontend/vue/component-libraries/unhead/_install.md)
+- Assuming you already installed Unhead-Vue: [/javascript/web-development/frontend/vue/component-libraries/unhead/_install](/javascript/web-development/frontend/vue/component-libraries/unhead/_install.md)
 
 ---
 
@@ -72,6 +72,6 @@ useSeoMeta({
 
 ---
 ## Unhead integration for MPA:
-[/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
+[/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
 
 

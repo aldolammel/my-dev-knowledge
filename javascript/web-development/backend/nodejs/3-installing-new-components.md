@@ -8,8 +8,8 @@ While `nvm` takes care of Node.js versions, the `npm` takes care of project's de
 
 ---
 ## Before:
-- Case you want to re-sync/rebuild the `/node_modules/` folder based on the project's `package.json`, skip to: [/javascript/web-development/backend/nodejs/syncing-node_modules](javascript/web-development/backend/nodejs/syncing-node_modules.md)
-- Assuming you already has Node installed (that automatically brings the Node Package Manager, `npm`): [/javascript/web-development/backend/nodejs/1-installation](javascript/web-development/backend/nodejs/1-installation.md)
+- Case you want to re-sync/rebuild the `/node_modules/` folder based on the project's `package.json`, skip to: [/javascript/web-development/backend/nodejs/syncing-node_modules](/javascript/web-development/backend/nodejs/syncing-node_modules.md)
+- Assuming you already has Node installed (that automatically brings the Node Package Manager, `npm`): [/javascript/web-development/backend/nodejs/1-installation](/javascript/web-development/backend/nodejs/1-installation.md)
 
 ---
 ## 1) Installing a new component:
@@ -22,7 +22,7 @@ While `nvm` takes care of Node.js versions, the `npm` takes care of project's de
 ### A) Local dependencies installation (STRONGLY RECOMMENDED)
 
 **Before:**
-- Assuming you already used a build-tool (like [Vite](javascript/build-tools/vite/_install.md)) to define where the project's `/node_modules/` folder will be placed.
+- Assuming you already used a build-tool (like [Vite](/javascript/build-tools/vite/_install.md)) to define where the project's `/node_modules/` folder will be placed.
 - Assuming you're in the same folder level where the project's `/node_modules/` folder is.
 
 Check which current project's Node dependencies are installed:

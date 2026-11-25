@@ -17,13 +17,13 @@
 
 **Front-end:**
 1. [ ] Front-end solution (Django): Use it as reference - [/python/web-development/django/django-project-folder-structure](/python/web-development/django/django-project-folder-structure.md)
-2. [ ] (Optional) Front-end CSS Framework: [Tailwind](web-development/css/css-frameworks/tailwind/_about.md) / [Bulma](web-development/css/css-frameworks/bulma/_about.md) / [Bootstrap](web-development/css/css-frameworks/bootstrap/_about-and-installation.md)
+2. [ ] (Optional) Front-end CSS Framework: [Tailwind](/web-development/css/css-frameworks/tailwind/_about.md) / [Bulma](/web-development/css/css-frameworks/bulma/_about.md) / [Bootstrap](/web-development/css/css-frameworks/bootstrap/_about-and-installation.md)
 
 ---
 ## 2) Development:
 
 **Before:**
-1. [ ] Create the AI context prompt for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
+1. [ ] Create the AI context prompt for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](/python/web-development/django/document-templates/ai-prompt-context-model.md)
 
 **Front-end:**
 1. [ ] Convert the HTML template to Django Template; 

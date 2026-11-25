@@ -3,4 +3,4 @@
 
 ---
 ## 1) Check what the current project's Node version:
-[/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+[/javascript/web-development/backend/nodejs/activating-node-specific-version](/javascript/web-development/backend/nodejs/activating-node-specific-version.md)

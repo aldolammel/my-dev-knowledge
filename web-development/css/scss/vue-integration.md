@@ -22,11 +22,11 @@ After installing this package below, you can write like this in `.vue` files, e.
 
 ---
 ## 1) Install the SASS/SCSS Compiler:
-[/web-development/frontend/css/scss/\_installing-scss-compiler](web-development/css/scss/_installing-scss-compiler.md)
+[/web-development/frontend/css/scss/\_installing-scss-compiler](/web-development/css/scss/_installing-scss-compiler.md)
 
 ---
 ## 2) Integrate it with the project build-tool:
-- For Vite: [web-development/css/scss/build-tool-vite-integration](web-development/css/scss/build-tool-vite-integration.md)
+- For Vite: [/web-development/css/scss/build-tool-vite-integration](/web-development/css/scss/build-tool-vite-integration.md)
 - For Vue-CLI: /xxxxxxxxxxx
 - For Nuxt: /xxxxxxxxxx
 

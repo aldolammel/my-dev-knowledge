@@ -12,14 +12,14 @@ To simplify, the CMS is divided by this areas:
 
 ---
 ## Home: 
-![](python/web-development/django/4-cms-admin/z_imgs/cms_home.png)
+![](/python/web-development/django/4-cms-admin/z_imgs/cms_home.png)
 It's a page where you get a resume of the CMS options:
 
 http://localhost:8000/admin/
 
 ---
 ## List view: 
-![](python/web-development/django/4-cms-admin/z_imgs/cms_list-view.png)
+![](/python/web-development/django/4-cms-admin/z_imgs/cms_list-view.png)
 When you click on a CMS menu option, you'll be taken to a list page where  all entries of one type of data in the database is shown. 
 
 URL examples:
@@ -28,7 +28,7 @@ URL examples:
 
 ---
 ## Detail view:
-![](python/web-development/django/4-cms-admin/z_imgs/cms_detail-view.png)
+![](/python/web-development/django/4-cms-admin/z_imgs/cms_detail-view.png)
 When you click on an options listed in some List view, you'll be taken to a page with all data about that specific listed entry you previously have clicked.
 ### For existing object
 E.g. how to check:

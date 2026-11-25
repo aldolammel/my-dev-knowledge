@@ -307,7 +307,7 @@ But first, ask yourself: if you will create a public key for your root, through 
 ==IMPORTANT:==
 This is NOT to create a Public Key to replace the SSH connection password!
 
-[versioning/git/private-key](versioning/git/private-key.md)
+[versioning/git/private-key](/versioning/git/private-key.md)
 
 
 ---

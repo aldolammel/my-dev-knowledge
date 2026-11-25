@@ -10,7 +10,7 @@ E.g. of a core dependency in a Python web project:
 
 ==Critical==
 Never include non-core dependencies in this file. Use its variants to be clear the goal of every dependency:
-- For development only: [requirements-dev-txt](python/requirements-dev-txt.md)
+- For development only: [requirements-dev-txt](/python/requirements-dev-txt.md)
 - For production only: [requirements-prod-txt](/python/requirements-prod-txt.md)
 
 ---

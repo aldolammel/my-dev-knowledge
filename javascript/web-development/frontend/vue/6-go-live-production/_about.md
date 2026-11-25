@@ -12,7 +12,7 @@ This will create a production-ready build of your app in the project's `./dist` 
 ---
 ## X) Front-end's `.env`:
 Prepare the `/frontend/.env` file:
-- Case you are using [Vite](javascript/build-tools/vite/_install.md):
+- Case you are using [Vite](/javascript/build-tools/vite/_install.md):
 	- Change the `VITE_BASE_URL` value.
 
 ## X) If using Vite:

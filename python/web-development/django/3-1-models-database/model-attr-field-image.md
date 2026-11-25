@@ -22,4 +22,4 @@ img_highlight = models.ImageField(
 File Field:
         /python/web-development/django/3-1-models-database/model-attr-field-file.txt
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)

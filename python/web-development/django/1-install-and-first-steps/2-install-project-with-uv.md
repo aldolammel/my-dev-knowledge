@@ -129,7 +129,7 @@ Based on the project's *Technical Design Document* (TDD), install all dependenci
 - [ ] 5.2) Installing Development and Production dependencies.
 - [ ] 5.3) The *Technical Design Document* URL must be added into the Django `settings.py` file!
 ### 6) (Optional) Multilingual support
-- [ ] **Before:** [Gettext](web-development/components-libraries-server-level/gettext/0-gettext.md) installed.
+- [ ] **Before:** [Gettext](/web-development/components-libraries-server-level/gettext/0-gettext.md) installed.
 - [ ] Run both commands:
 ```bash
 uv run manage.py makemessages --all

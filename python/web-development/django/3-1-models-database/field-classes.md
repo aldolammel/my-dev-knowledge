@@ -14,8 +14,8 @@ Most common field classes you got to build every class attributes (db columns of
 | [IntegerField(..., choices=((1, 'V 1'),(2, 'V 2')), default=1)](/python/web-development/django/3-1-models-database/model-attr-field-integer.md)           | `<select>`                                 |
 | [BooleanField()](/python/web-development/django/3-1-models-database/model-attr-field-boolean.md)                                                          | `<input type="checkbox">`                  |
 | [OneToOneField()](/python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md) (Django automatically create this when needed)       | `<select>` (single-selection only)         |
-| OnToManyField() doesn't exist. The Many side always uses [ForeignKey()](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) |                                            |
-| [ForeignKey()](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)                                                          | `<select>` (single-selection only)         |
+| OnToManyField() doesn't exist. The Many side always uses [ForeignKey()](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) |                                            |
+| [ForeignKey()](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)                                                          | `<select>` (single-selection only)         |
 | [ManyToManyField()](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)                                                  | `<select multiple>`                        |
 | ManyToManyField(MyModel, blank=True) with `CheckboxSelectMultiple` widget                                                                                 | `<input type="checkbox">` (one per choice) |
 | [DateField(auto_now_add=True)](/python/web-development/django/3-1-models-database/model-attr-field-date.md)                                               | `<input type="date">`                      |
@@ -48,6 +48,6 @@ Most common field classes you got to build every class attributes (db columns of
 
 ---
 ## Which attribute type to use to Primary Key?
-[/python/web-development/django/3-1-models-database/creating-id](python/web-development/django/3-1-models-database/creating-id.md)
+[/python/web-development/django/3-1-models-database/creating-id](/python/web-development/django/3-1-models-database/creating-id.md)
 # Common attribute-types (form field classes):
 [/python/web-development/django/9-forms/form-attr-field_all](/python/web-development/django/9-forms/form-attr-field_all.md)

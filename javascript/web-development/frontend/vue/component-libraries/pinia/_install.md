@@ -13,7 +13,7 @@ https://pinia.vuejs.org/
 
 A store is an entity holding state and business logic that isn't bound to your Component tree. In other words, it hosts global state. It's a bit like a component that is always there and that everybody can read off and write to. It has three concepts, the state, getters and actions and it's safe to assume these concepts are the equivalent of data, computed and methods in components.
 
-**Pinia VS [Vuex](javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md):**
+**Pinia VS [Vuex](/javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md):**
 - Encourages multiple stores (that can easily communicate) instead of a single global store;
 - No mutations once state can be modified directly;
 - It's much easier to import stores into any component or composable;
@@ -36,6 +36,8 @@ A store is an entity holding state and business logic that isn't bound to your C
 - Client-side caching needs for API responses.
 
 Data-flow of a real Vue Pinia usage: [/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw](/python/web-development/django/useful-sub-apps/pagex/docs/django-with-vue-integration.excalidraw)
+
+Pinia user authentication work-flow: [/javascript/web-development/frontend/vue/component-libraries/pinia/authentication-workflow](/javascript/web-development/frontend/vue/component-libraries/pinia/authentication-workflow.md)
 
 ---
 ## 1) Which Vue build-tool are you using?
@@ -87,11 +89,11 @@ In `/frontend/package.json` define the limit version for Pinia updates (it shoul
 
 ---
 ## 3) Integration:
-[/javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data.md)
+[/javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data](/javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data.md)
 
 ---
 ## For Vue 2 projects, use Vuex:
-[/javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex](javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md)
+[/javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex](/javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md)
 
 
 

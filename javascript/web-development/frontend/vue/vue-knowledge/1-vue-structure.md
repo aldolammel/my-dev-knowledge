@@ -68,7 +68,7 @@ my_project/
 │   │   │   └── ...
 │   │   │
 │   │   ├── composables/              # Reusable functions for Composition API.
-│   │   │   ├── useAuth.ts
+│   │   │   ├── useAuth.ts            # Reads /stores/auth.ts and exposes auth status and permission helpers to the front-end.
 │   │   │   ├── useErrorHandler.ts
 │   │   │   └── ...
 │   │   │
@@ -90,10 +90,10 @@ my_project/
 │   │   ├── router/           # NOT used in MPA.
 │   │   │   ├── index.ts      # Router config + lazy-loaded views.
 │   │   │   ├── routes.ts     # Route definitions (public / authenticated / system).
-│   │   │   └── guards.ts     # beforeEach: meta.requiresAuth, 403 redirect.
+│   │   │   └── guards.ts     # Controls route access and redirects based on auth status from useAuth.ts.
 │   │   │
 │   │   ├── stores/           # Pinia: where things are caching from APIs.
-│   │   │   ├── auth.ts       # Caching/storing data about authentication.
+│   │   │   ├── auth.ts       # Holds reactive auth state and actions where Pinia stores user authentication data.
 │   │   │   └── ...
 │   │   │
 │   │   ├── types/            # Only in case using TypeScript: TS definitions

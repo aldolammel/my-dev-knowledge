@@ -7,7 +7,7 @@ Vue is only a front-end framework that runs over Node.js. Actually, Node can sto
 
 ---
 ## Before:
-- If you need a static solution, without db and CMS, but still using Vue benefits, skip to: [/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
+- If you need a static solution, without db and CMS, but still using Vue benefits, skip to: [/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
 
 ---
 ## 1) Define the needs:
@@ -34,11 +34,11 @@ If you're considering to use CMS in a Vue project, but JavaScript is not a manda
 That said, if JS still what you need, let's go:
 
 **Lighter Node CMS:**
-- [Directus](javascript/web-development/backend/nodejs/cms/directus.md)
+- [Directus](/javascript/web-development/backend/nodejs/cms/directus.md)
 
 **Not great solution:**
-- [Payload](javascript/web-development/backend/nodejs/cms/payload.md) - poor Vue support.
-- [Strapi](javascript/web-development/backend/nodejs/cms/strapi.md) - relative high RAM consumer for what you need here!
+- [Payload](/javascript/web-development/backend/nodejs/cms/payload.md) - poor Vue support.
+- [Strapi](/javascript/web-development/backend/nodejs/cms/strapi.md) - relative high RAM consumer for what you need here!
 
 ---
 

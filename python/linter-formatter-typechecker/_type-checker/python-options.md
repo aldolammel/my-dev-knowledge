@@ -7,7 +7,7 @@
 
 ---
 ## Options:
-- MyPy: [/python/linter-formatter-typechecker/MyPy/\_installation](python/linter-formatter-typechecker/MyPy/installation.md)
+- MyPy: [/python/linter-formatter-typechecker/MyPy/\_installation](/python/linter-formatter-typechecker/MyPy/installation.md)
 - PyRight: [/python/linter-formatter-typechecker/PyRight/installation](/python/linter-formatter-typechecker/PyRight/installation.md)
 - Pyre: /xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

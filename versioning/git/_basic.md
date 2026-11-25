@@ -49,7 +49,7 @@ sudo apt install -y git
 - Restore a file to its original content: [/versioning/git/command-checkout](/versioning/git/command-checkout.md)
 - Force the original branch again: [/versioning/git/command-reset](/versioning/git/command-reset.md)
 - Ignoring a folder or file from now on: [/versioning/git/ignoring-folder-or-file-from-now-on](/versioning/git/ignoring-folder-or-file-from-now-on.md)
-- Restoring your permission rights: [versioning/git/private-key-restoring-permission](versioning/git/private-key-restoring-permission.md)
+- Restoring your permission rights: [versioning/git/private-key-restoring-permission](/versioning/git/private-key-restoring-permission.md)
 ### Deleting
 - Deleting a file (from local machine and repo): [/versioning/git/command-rm](/versioning/git/command-rm.md)
 - Deleting a folder (from local machine and repo): [/versioning/git/command-rm](/versioning/git/command-rm.md)

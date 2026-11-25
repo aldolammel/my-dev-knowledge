@@ -4,7 +4,7 @@
 ---
 ## Before:
 - Overview of the Pinia workflow:
-![](javascript/web-development/frontend/vue/component-libraries/pinia/pinia-workflow.png)
+![](/javascript/web-development/frontend/vue/component-libraries/pinia/pinia-workflow.png)
 
 ---
 ## 1) Applying Pinia in the app:
@@ -143,7 +143,7 @@ export default {
 Back to the `/store/index.js`, create an action that will execute a mutation (next step) to update a specific state/data when called.
 When the data must be loaded directly from an API/JSON:
 - Using FetchAPI (native of JavaScript): [/javascript/web-development/frontend/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi](/javascript/web-development/frontend/z-examples/fetch-api-on-vuejs/vuex_action_using_fetchApi.md)
-- Using Node.js Axios: [/javascript/web-development/backend/nodejs/component-libraries/axios-api/axios](javascript/web-development/backend/nodejs/component-libraries/axios-api/axios.md)
+- Using Node.js Axios: [/javascript/web-development/backend/nodejs/component-libraries/axios-api/axios](/javascript/web-development/backend/nodejs/component-libraries/axios-api/axios.md)
 
 When the data is already in a state, but can be updated by another action:
 ```js

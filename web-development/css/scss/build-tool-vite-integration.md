@@ -25,5 +25,5 @@ export default defineConfig({
 
 ---
 ## For `.less` (an alternative Vite built-in solution too):
-[web-development/css/less/vue-integration](web-development/css/less/vue-integration.md)
+[/web-development/css/less/vue-integration](/web-development/css/less/vue-integration.md)
 

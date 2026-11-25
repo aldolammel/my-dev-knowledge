@@ -41,8 +41,8 @@ In `/frontend/package.json` define the limit version for Unhead updates (it shou
 ---
 ## 3) Integration:
 Make a decision:
-- For SPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations.md)
-- Or for MPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
+- For SPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations](/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations.md)
+- Or for MPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
 
 ---
 

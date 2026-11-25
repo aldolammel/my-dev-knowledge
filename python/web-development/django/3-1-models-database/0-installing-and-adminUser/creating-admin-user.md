@@ -30,7 +30,7 @@ uv run manage.py createsuperuser
 ---       
 # 3) Now, try to login, making sure the application is running:
 
-1. Run the local server: [\_running-app](python/web-development/django/_running-app.md)
+1. Run the local server: [\_running-app](/python/web-development/django/_running-app.md)
 2. Test the admin login: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 ---

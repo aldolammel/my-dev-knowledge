@@ -56,7 +56,7 @@ class BandCMS(admin.ModelAdmin):
 #admin.site.register(Band, BandCMS)
 ```
 
-![detailview-m2m-horizontal-multi-selection](python/web-development/django/4-cms-admin/z_imgs/detailview-m2m-horizontal-multi-selection.jpg)
+![detailview-m2m-horizontal-multi-selection](/python/web-development/django/4-cms-admin/z_imgs/detailview-m2m-horizontal-multi-selection.jpg)
 
 1.3) Execute the migration:
 ```bash

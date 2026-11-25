@@ -2,7 +2,7 @@ VUEX: HOW TO CREATE DATA
 
 STEP 0: WORKFLOW
 Overview of the VueX workflow:
-![](javascript/web-development/frontend/vue/component-libraries/vuex/one-way-data-flow.png)
+![](/javascript/web-development/frontend/vue/component-libraries/vuex/one-way-data-flow.png)
 
 STEP 1: STATE
 Declare the state property and its initial value in /store/index.js (frontend db):

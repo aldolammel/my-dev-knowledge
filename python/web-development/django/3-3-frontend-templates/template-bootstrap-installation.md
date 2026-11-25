@@ -3,7 +3,7 @@
 
 ---
 
-Case you prefer a CDN version: [web-development/css/css-frameworks/bootstrap/no-install-version-cdn](web-development/css/css-frameworks/bootstrap/no-install-version-cdn.md)
+Case you prefer a CDN version: [/web-development/css/css-frameworks/bootstrap/no-install-version-cdn](/web-development/css/css-frameworks/bootstrap/no-install-version-cdn.md)
 
 ---
 ## 1) Installing the Bootstrap in virtual environment:

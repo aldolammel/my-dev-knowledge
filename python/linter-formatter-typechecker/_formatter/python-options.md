@@ -9,7 +9,7 @@
 ## Options:
 - Ruff: [/python/linter-formatter-typechecker/ruff/installation](/python/linter-formatter-typechecker/ruff/installation.md)
 - Black: [/python/linter-formatter-typechecker/black/installation](/python/linter-formatter-typechecker/black/installation.md)
-- autopep8: [/python/linter-formatter-typechecker/autopep8/installation](python/linter-formatter-typechecker/autopep8/installation.md)
+- autopep8: [/python/linter-formatter-typechecker/autopep8/installation](/python/linter-formatter-typechecker/autopep8/installation.md)
 - yapf: /xxxxxxxxxxxxxxxxxxxx
 
 

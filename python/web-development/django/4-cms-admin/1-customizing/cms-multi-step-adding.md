@@ -10,7 +10,7 @@ For new objects, through the adding detail-view, select an option first (using a
 
 ---
 ## 1) Make sure the project has `django-polymorphic` as an app-level core dependency:
-[/python/web-development/django/component-libraries/django-polymorphic/install](python/web-development/django/component-libraries/django-polymorphic/install.md)
+[/python/web-development/django/component-libraries/django-polymorphic/install](/python/web-development/django/component-libraries/django-polymorphic/install.md)
 
 ---
 ## 2) In `models.py`, add `PolymorphicModel` inheritance to each model class you wanna consider as specific form in CMS:

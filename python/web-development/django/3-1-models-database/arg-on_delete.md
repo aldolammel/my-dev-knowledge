@@ -26,5 +26,5 @@ class Movie(models.Model):
 
 ---
 ## Field class > ForeignKey():
-[/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
+[/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
 

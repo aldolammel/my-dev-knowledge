@@ -19,7 +19,7 @@ npm list vite
 
 ---
 ## 3) Update to the latest Vite version:
-No sure if [uninstall Vite](javascript/build-tools/vite/uninstall.md) would make it more solid.
+No sure if [uninstall Vite](/javascript/build-tools/vite/uninstall.md) would make it more solid.
 
 That said, update it to the latest version available:
 ```bash

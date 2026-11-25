@@ -14,4 +14,4 @@ List Comprehension: [/python/python-knowledge/list-comprehension.py](/python/pyt
 
 Dict Comprehension:  [/python/python-knowledge/dict-comprehension.py](/python/python-knowledge/dict-comprehension.py)
 
-Set Comprehension: [/python/python-knowledge/set-comprehension.py](python/python-knowledge/set-comprehension.py)
+Set Comprehension: [/python/python-knowledge/set-comprehension.py](/python/python-knowledge/set-comprehension.py)

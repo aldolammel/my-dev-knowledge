@@ -3,7 +3,7 @@
 
 ---
 
-You can build smart translations for all types of sentence through any language using dynamic compositions with [Parler module](python/web-development/django/component-libraries/django-parler/install.md).
+You can build smart translations for all types of sentence through any language using dynamic compositions with [Parler module](/python/web-development/django/component-libraries/django-parler/install.md).
 
 E.g. in `/core/consts.py`:
 More about: [/python/web-development/django/3-1-models-database/\_constants-map](/python/web-development/django/3-1-models-database/_constants-map.md)
@@ -36,7 +36,7 @@ class Profile(models.ModelForm):
 ```
 
 ==WARNING:==
-Unfortunately, you cannot make all translations directly on the `/core/lang.py` file. If you use at same time a translatable variable that will feed another translatable variable (dynamic composition), [Parler](python/web-development/django/component-libraries/django-parler/install.md) badly tries to translate everything at the same time, bringing weird behaviors, some times translating to a wrong language, even making the `makemigrations` command performs unwanted changes.
+Unfortunately, you cannot make all translations directly on the `/core/lang.py` file. If you use at same time a translatable variable that will feed another translatable variable (dynamic composition), [Parler](/python/web-development/django/component-libraries/django-parler/install.md) badly tries to translate everything at the same time, bringing weird behaviors, some times translating to a wrong language, even making the `makemigrations` command performs unwanted changes.
 ```python
 # Never do this (directly using `gettext_lazy` aside):
 TX_ERRO_PROFILE_NAME_MAXLNGH = _('%(txt)s cannot exceed %(val)s characters.') % {

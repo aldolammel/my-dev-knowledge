@@ -16,7 +16,7 @@ Node.js itself always will be installed isolated in your system, never tied to a
 
 ---
 ## Before:
-- [x] What is Node.js: [/javascript/nodejs/\_about](javascript/web-development/backend/nodejs/_about.md)
+- [x] What is Node.js: [/javascript/nodejs/\_about](/javascript/web-development/backend/nodejs/_about.md)
 - [x] Assuming you know the specific version your Node.js project demands (it should be crystal clear in the project's [TDD](/python/web-development/django/document-templates/tdd.md)).
 - [x] You DON'T need to be in a project folder at all.
 
@@ -27,7 +27,7 @@ Node.js itself always will be installed isolated in your system, never tied to a
 ```bash
 which nodejs
 ```
-If this returned something, it extremely recommended to uninstall it: [/javascript/web-development/backend/nodejs/4-uninstall](javascript/web-development/backend/nodejs/4-uninstall.md)
+If this returned something, it extremely recommended to uninstall it: [/javascript/web-development/backend/nodejs/4-uninstall](/javascript/web-development/backend/nodejs/4-uninstall.md)
 
 - [x] **1.2) Looking for installed Node with version control:**
 1.2.1) Check any Node with version control:
@@ -73,11 +73,11 @@ nvm install --lts
 nvm install 26.13.1
 ```
 
-- [x] A4) (If applicable) In case more than one Node version installed, active the right one: [/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+- [x] A4) (If applicable) In case more than one Node version installed, active the right one: [/javascript/web-development/backend/nodejs/activating-node-specific-version](/javascript/web-development/backend/nodejs/activating-node-specific-version.md)
 
-- [x] A5) (If applicable / Optional) Defining Node version as the default one for your OS user: [/javascript/web-development/backend/nodejs/defining-default-node-version](javascript/web-development/backend/nodejs/defining-default-node-version.md)
+- [x] A5) (If applicable / Optional) Defining Node version as the default one for your OS user: [/javascript/web-development/backend/nodejs/defining-default-node-version](/javascript/web-development/backend/nodejs/defining-default-node-version.md)
 
-- [x] A6) (If applicable / Optional) Automating the switch process by project: [/javascript/web-development/backend/nodejs/2.1-automating-switch-process](javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
+- [x] A6) (If applicable / Optional) Automating the switch process by project: [/javascript/web-development/backend/nodejs/2.1-automating-switch-process](/javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
 
 ......................................
 
@@ -86,13 +86,13 @@ Soon!
 
 ---
 ## 2) (If applicable / Optional) Make sure you got the `.gitignore` updated:
-- [x] [/javascript/web-development/backend/nodejs/node-gitignore](javascript/web-development/backend/nodejs/node-gitignore.md)
+- [x] [/javascript/web-development/backend/nodejs/node-gitignore](/javascript/web-development/backend/nodejs/node-gitignore.md)
 
 Done
 
 ---
 ## Uninstalling:
-[/javascript/web-development/backend/nodejs/4-uninstall](javascript/web-development/backend/nodejs/4-uninstall.md)
+[/javascript/web-development/backend/nodejs/4-uninstall](/javascript/web-development/backend/nodejs/4-uninstall.md)
 ## Installing Node components for a project (Local dependencies):
-[/javascript/web-development/backend/nodejs/3-installing-new-components](javascript/web-development/backend/nodejs/3-installing-new-components.md)
+[/javascript/web-development/backend/nodejs/3-installing-new-components](/javascript/web-development/backend/nodejs/3-installing-new-components.md)
 

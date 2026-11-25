@@ -3,7 +3,7 @@
 
 ---
 
-Once this command is used to add a new dependency, automatically UV includes the dependency in the [pyproject.toml](python/pyproject-toml.md) dependency list and execute the [uv sync command](/python/package-manager/uv/uv-sync.md) behind the scene, updating also the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
+Once this command is used to add a new dependency, automatically UV includes the dependency in the [pyproject.toml](/python/pyproject-toml.md) dependency list and execute the [uv sync command](/python/package-manager/uv/uv-sync.md) behind the scene, updating also the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
 
 ---
 ## Before:

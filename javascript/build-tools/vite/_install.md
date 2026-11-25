@@ -31,7 +31,7 @@ npm list vite
 # Output: if no vite on list, no vite install.
 ```
 
-- [ ] **1.2) (If applicable) Updating/Reinstalling Vite:** [/javascript/build-tools/vite/updating-reinstalling-vite](javascript/build-tools/vite/updating-reinstalling-vite.md)
+- [ ] **1.2) (If applicable) Updating/Reinstalling Vite:** [/javascript/build-tools/vite/updating-reinstalling-vite](/javascript/build-tools/vite/updating-reinstalling-vite.md)
 	- 1.2.1) After that, skip only the installation steps.
 
 ---

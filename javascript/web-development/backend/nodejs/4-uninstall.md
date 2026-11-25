@@ -53,7 +53,7 @@ npm uninstall -g naive-ui     # without '@' and version numbers
 ### C) Uninstalling a Node installed with a version control
 
 ==TIP:==
-Maybe you don't need to uninstall. With NVM (Node Version Manager) installed, you can switch the installed version easily: [/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+Maybe you don't need to uninstall. With NVM (Node Version Manager) installed, you can switch the installed version easily: [/javascript/web-development/backend/nodejs/activating-node-specific-version](/javascript/web-development/backend/nodejs/activating-node-specific-version.md)
 
 **Before:**
 - Assuming you are using NVM/NPM to manage Node packages and stuff.

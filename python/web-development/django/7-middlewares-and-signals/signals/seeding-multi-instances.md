@@ -1,4 +1,4 @@
-[seeding-singleton](python/web-development/django/7-middlewares-and-signals/signals/seeding-singleton.md)
+[seeding-singleton](/python/web-development/django/7-middlewares-and-signals/signals/seeding-singleton.md)
 #### Python > Django > Signals > Seeding
 # Creating multiple instances automatically after a migration command
 

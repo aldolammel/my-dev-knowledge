@@ -35,4 +35,4 @@ Pay attention about the `<link>` and `<script>` tags with the specific version: 
 
 ---
 ## Installed version with Django: 
-[/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation](python/web-development/django/3-3-frontend-templates/template-bootstrap-installation.md)
+[/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation](/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation.md)

@@ -88,5 +88,5 @@ xxxxxxxxxxxxxxxx
 ## How to avoid Circular Import issue:
 [/python/web-development/django/6-errors-and-validations/importing-no-circular](/python/web-development/django/6-errors-and-validations/importing-no-circular.md)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)
 

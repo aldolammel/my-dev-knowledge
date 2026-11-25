@@ -27,8 +27,8 @@
 If you are not responsible for this, just ignore it. If you see the possibility to make it later to put your focus into the back-end, go ahead, skip it for now. Otherwise:
 1. [x] Vue installation options: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 2. [x] (Optional) Installation of the UI component library or CSS framework
-	- UI component library examples: [Vuetify](javascript/web-development/ui-component-libraries/vuetify/_install.md), [Naive UI](/javascript/web-development/ui-component-libraries/naive/_about.md)
-	- Or CSS framework examples: [Bootstrap](web-development/css/css-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](web-development/css/css-frameworks/tailwind/install-and-integration.md) or  [Bulma](web-development/css/css-frameworks/bulma/_about.md).
+	- UI component library examples: [Vuetify](/javascript/web-development/ui-component-libraries/vuetify/_install.md), [Naive UI](/javascript/web-development/ui-component-libraries/naive/_about.md)
+	- Or CSS framework examples: [Bootstrap](/web-development/css/css-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/css/css-frameworks/tailwind/install-and-integration.md) or  [Bulma](/web-development/css/css-frameworks/bulma/_about.md).
 
 ---
 ## 2) Development:
@@ -36,23 +36,23 @@ If you are not responsible for this, just ignore it. If you see the possibility 
 ### 2.1) Docs:
 1. [x] Create the AI assistance basic instruction (context prompt) for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](/python/web-development/django/document-templates/ai-prompt-context-model.md)
 2. [x] Create the [Django Architecture Design](/python/web-development/django/document-templates/django-architecture-design.md) document.
-3. [x] Create the [Sitemap text-based](web-development/document-templates/sitemap-text-based.md) document.
+3. [x] Create the [Sitemap text-based](/web-development/document-templates/sitemap-text-based.md) document.
 ### 2.2) Non-stop control:
 - Update *Project Dashboard*.
 - Update *Technical Design Document* (TDD).
 - Update *Django Architecture Design* document.
 - Update  *Sitemap text-based* document.
 ### 2.3) Front-end
-1. [ ] Initiate the Vue basic development: [/javascript/web-development/frontend/vue/3-frontend-initial-development/\_planning](javascript/web-development/frontend/vue/3-frontend-initial-development/_initial-roadmap.md)
+1. [ ] Initiate the Vue basic development: [/javascript/web-development/frontend/vue/3-frontend-initial-development/\_initial-roadmap](/javascript/web-development/frontend/vue/3-frontend-initial-development/_initial-roadmap.md)
 2. [ ] Integrate back-end with front-end: [/python/web-development/django/4-cms-admin/2-frontend-integration/with-vue/\_integration-using-pagex](_integration-using-pagex.md)
 ### 2.4) Back-end
 1. [x] Build up the main classes from *Django Architecture Design* document:
 	- List of model class templates:  [/python/web-development/django/3-1-models-database/\_model-class-model.py](/python/web-development/django/3-1-models-database/_model-class-model.py)
-		- List of field classes for your classes: [/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+		- List of field classes for your classes: [/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)
 	- List of admin class templates: [/python/web-development/django/4-cms-admin/\_admin-class-model.py](/python/web-development/django/4-cms-admin/_admin-class-model.py)
 2. [x] (If applicable) Multi-step adding detail-view or similar: [/python/web-development/django/4-cms-admin/\_what-kind-of-cms-ux-do-you-need](/python/web-development/django/4-cms-admin/_what-kind-of-cms-ux-do-you-need.md)
 3. [x] Creating validation for every model, admin and form (app-level + db-level): [/python/web-development/django/6-errors-and-validations/1-validation-basic](/python/web-development/django/6-errors-and-validations/1-validation-basic.md)
-4. [x] (If applicable) Create every API/Serializer to connect the back-end to the front-end: [/python/web-development/django/3-2-views-and-API/api](python/web-development/django/3-2-views-and-API/api.md)
+4. [x] (If applicable) Create every API/Serializer to connect the back-end to the front-end: [/python/web-development/django/3-2-views-and-API/api](/python/web-development/django/3-2-views-and-API/api.md)
 5. [ ] (If applicable) If not yet, complete the translation roadmap: [/python/web-development/django/8-translate-and-internationalization/1-starting-translation](/python/web-development/django/8-translate-and-internationalization/1-starting-translation.md)
 ### 2.5) Final touches
 1. [ ] Back-end > Security reasons: change the CMS URL!

@@ -25,6 +25,6 @@ snap list | grep ^web
 
 ---
 ## Uninstalling a snap app:
-[\_uninstall-snap-apps](os/linux/distros/debian/1-apps-install/basic-apps/using-snap/_uninstall-snap-apps.md)
+[\_uninstall-snap-apps](/os/linux/distros/debian/1-apps-install/basic-apps/using-snap/_uninstall-snap-apps.md)
 ## Installing a snap app:
 Ubuntu default store!

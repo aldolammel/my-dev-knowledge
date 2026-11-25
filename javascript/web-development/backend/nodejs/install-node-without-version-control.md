@@ -4,7 +4,7 @@
 ---
                 
 ==To think:==
-Installing Node without version control, beyond security issues once the installation will be available for all OS users, it's much more harder to provide maintenance, tests and updates in this approach. Extremely advised to use a version control for Node, and isolate the installation just for your OS account, [using this other roadmap](javascript/web-development/backend/nodejs/1-installation.md).
+Installing Node without version control, beyond security issues once the installation will be available for all OS users, it's much more harder to provide maintenance, tests and updates in this approach. Extremely advised to use a version control for Node, and isolate the installation just for your OS account, [using this other roadmap](/javascript/web-development/backend/nodejs/1-installation.md).
 
 ---
 ## Check if you already have it without version control:

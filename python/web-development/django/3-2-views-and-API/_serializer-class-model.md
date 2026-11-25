@@ -4,7 +4,7 @@
 ---
 ## Before:
 - Assuming you are following Django API roadmap: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
-- Assuming your project is using *Django Rest Framework* (DRF): [/python/web-development/django/component-libraries/django-rest-framework/_install](python/web-development/django/component-libraries/django-rest-framework/_install.md)
+- Assuming your project is using *Django Rest Framework* (DRF): [/python/web-development/django/component-libraries/django-rest-framework/_install](/python/web-development/django/component-libraries/django-rest-framework/_install.md)
 
 ---
 

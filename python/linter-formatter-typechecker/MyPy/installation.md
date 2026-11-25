@@ -49,11 +49,11 @@ dev = [
 ## Integration:
 
 ### Before
-1. [ ] Assuming you already got the `pyproject.toml` in your project: [/python/pyproject-toml](python/pyproject-toml.md)
+1. [ ] Assuming you already got the `pyproject.toml` in your project: [/python/pyproject-toml](/python/pyproject-toml.md)
 ### 1) Add lines in `pyproject.toml`:
 - [ ] 1.1) Include these lines in your in your `pyproject.toml`: [/python/linter-formatter-typechecker/MyPy/pyproject](/python/linter-formatter-typechecker/MyPy/pyproject.md)
 
-- [ ] 1.2) (If applicable / Optional) For Django projects, install the *django-stubs* for better Django type hints: [/python/web-development/django/linter-formatter-typechecker/django-stubs/_installation](python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md)
+- [ ] 1.2) (If applicable / Optional) For Django projects, install the *django-stubs* for better Django type hints: [/python/web-development/django/linter-formatter-typechecker/django-stubs/_installation](/python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md)
 
 ### 2) (If applicable / Optional)
             In the project .vscode/settings.json, do it:

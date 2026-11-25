@@ -7,7 +7,7 @@ Python is a high-level, general-purpose programming language known for its reada
 
 ---
 ## Python conventions:
-[/python/python-knowledge/\_conventions-py.md](python/python-knowledge/_conventions-py.md)
+[/python/python-knowledge/\_conventions-py.md](/python/python-knowledge/_conventions-py.md)
 ## To declare variables, you got these ways:
 [/python/python-knowledge/variables-using-multiple-ones.py](/python/python-knowledge/variables-using-multiple-ones.py)
 ## Creating a class and then an object:

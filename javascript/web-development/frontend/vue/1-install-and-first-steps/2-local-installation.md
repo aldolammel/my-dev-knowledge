@@ -7,7 +7,7 @@
 2. [x] Check which back-end folder structure Vue must respect to avoid conflicts:
 	- Using Django as back-end: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-django.md)
 	- Using Flask as back-end: [/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-flask](/javascript/web-development/frontend/vue/1-install-and-first-steps/project-folder-structure-vue-and-flask.md)
-3. [x] Assuming you already decided which Vue project approach you wanna build up: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
+3. [x] Assuming you already decided which Vue project approach you wanna build up: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
 
 ---
 ## 1) Choosing the build-tool to use:
@@ -21,7 +21,7 @@
 
 ### 1A) Using Vite to install Vue
 
-- [x] 1A.1) Install Vite and Vue: [/javascript/build-tools/vite/_install](javascript/build-tools/vite/_install.md)
+- [x] 1A.1) Install Vite and Vue: [/javascript/build-tools/vite/_install](/javascript/build-tools/vite/_install.md)
 
 - [x] 1A.2) Declare the Node version constraint in the brand new `/frontend/package.json` file (you should find the Node version constraint in project's [TDD](/python/web-development/django/document-templates/tdd.md)):
 ```json
@@ -32,12 +32,12 @@
 }
 ```
       
-- [x] 1A.3) Edit the current `/frontend/src/main.js` (or `/frontend/src/main.ts`) with my style version: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version](javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version.md)
+- [x] 1A.3) Edit the current `/frontend/src/main.js` (or `/frontend/src/main.ts`) with my style version: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/frontend/src/main-initial-version.md)
 
 - [x] 1A.4) Run Vue to test it: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
 
 - [x] 1A.5) (If applicable / Optional) Extending Vite features (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
-	- CSS Pre-processors (Vite built-in solutions): [web-development/css/scss/vue-integration](web-development/css/scss/vue-integration.md)
+	- CSS Pre-processors (Vite built-in solutions): [/web-development/css/scss/vue-integration](/web-development/css/scss/vue-integration.md)
 
 ......................................
 
@@ -60,7 +60,7 @@ Check if the Vue-CLI is attached to the right Node.js version, looking for this 
 ```
 
 **If node version is NOT what you want, do it:**
-- A) Switch the Node version to use: [/javascript/web-development/backend/nodejs/2.1-automating-switch-process](javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
+- A) Switch the Node version to use: [/javascript/web-development/backend/nodejs/2.1-automating-switch-process](/javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
 - B) Re-install the Vue-CLI!
 
 Start the project creation:
@@ -162,7 +162,7 @@ Please, only consider in this stage of the roadmap to install what I am saying. 
 ---
 ## 7) Install all front-end's dependencies:
 - [x] Install every front-end's core and dev dependencies (what should be listed in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)).
-	- How to install dependencies: [/javascript/web-development/backend/nodejs/3-installing-new-components](javascript/web-development/backend/nodejs/3-installing-new-components.md)
+	- How to install dependencies: [/javascript/web-development/backend/nodejs/3-installing-new-components](/javascript/web-development/backend/nodejs/3-installing-new-components.md)
 
 ---
 ## 8) Return to the new Vue project roadmap:

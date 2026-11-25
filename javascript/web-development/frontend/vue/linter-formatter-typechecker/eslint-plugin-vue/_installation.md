@@ -34,7 +34,7 @@ This plugin allows ESLint to check the `<template>` and `<script>` of `.vue` fil
 - Assuming you already have a Vue project installed.
 - Assuming you already are in the `/frontend/` folder of the project on terminal.
 - Assuming you already installed the ESLint: [/javascript/linter-formatter-typechecker/eslint/\_installation](/javascript/linter-formatter-typechecker/eslint/_installation.md)
-- Your Vue application architecture is SPA: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
+- Your Vue application architecture is SPA: [/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)
 
 **1.1) Install the ESLint plugin for Vue (eslint-plugin-vue) as development dependency:**
 

@@ -31,7 +31,7 @@ Or using PIP:
 ```bash
 xxxxxxxxxxxxxxxxxxxxxx
 ```
-In this case, don't forget to add this dependency in the project [requirements-dev.txt](python/requirements-dev-txt.md).
+In this case, don't forget to add this dependency in the project [requirements-dev.txt](/python/requirements-dev-txt.md).
 
 ---
 ## 2) Integration:

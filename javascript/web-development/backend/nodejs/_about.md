@@ -9,5 +9,5 @@ It's predominantly used for back-end development, but also plays a significant r
 
 ---
 ## Installing:
-[/javascript/web-development/backend/nodejs/1-installation](javascript/web-development/backend/nodejs/1-installation.md)
+[/javascript/web-development/backend/nodejs/1-installation](/javascript/web-development/backend/nodejs/1-installation.md)
 

@@ -11,7 +11,7 @@
 Used when you wanna select one or many options in a field and it means a relation between two models. This field class requires Django to automatically create a separate ["junction" (bridge class/table)](/database/_tools/ERD/many-to-many.md) in the database. This intermediary table is not directly visible in the `models.py`, but is present in the db schema.
 
 ==It automatically creates a bridge table==
-Unlike a detailed [ERD](/database/document-templates/erd.md), for Django you don't need to create a [ForeignKey](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) + [bridge table](/database/_tools/ERD/many-to-many.md) to resolve the Many-to-Many issue. In Django Models, you just use the ManyToManyField and Django will create and manage the bridge table automatically!
+Unlike a detailed [ERD](/database/document-templates/erd.md), for Django you don't need to create a [ForeignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md) + [bridge table](/database/_tools/ERD/many-to-many.md) to resolve the Many-to-Many issue. In Django Models, you just use the ManyToManyField and Django will create and manage the bridge table automatically!
 
 **Field look-like on Django CMS:**
 ![](/python/web-development/django/4-cms-admin/z_imgs/many-to-many-field-on-django-cms.png)
@@ -82,11 +82,11 @@ related_name="%(class)s_<your_current_related_name_here>",
 
 ---
 # Using Self-Referential:
-[/python/web-development/django/3-1-models-database/relation-self-referential](python/web-development/django/3-1-models-database/relation-self-referential.md)
+[/python/web-development/django/3-1-models-database/relation-self-referential](/python/web-development/django/3-1-models-database/relation-self-referential.md)
 
 ---
 ## Similar field classes:
-- Foreign Key: [/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
+- Foreign Key: [/python/web-development/django/3-1-models-database/model-attr-field-foreignKey](/python/web-development/django/3-1-models-database/model-attr-field-foreignKey.md)
 - One-To-One Field: [/python/web-development/django/3-1-models-database/model-attr-field-one-to-one](/python/web-development/django/3-1-models-database/model-attr-field-one-to-one.md)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)

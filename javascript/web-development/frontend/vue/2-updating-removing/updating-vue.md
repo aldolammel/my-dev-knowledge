@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-1. It could be important to update the *Node.js* if possible for your project: [/javascript/web-development/backend/nodejs/0-new-project/3-update-node-version](javascript/web-development/backend/nodejs/0-new-project/3-update-node-version.md)
+1. It could be important to update the *Node.js* if possible for your project: [/javascript/web-development/backend/nodejs/0-new-project/3-update-node-version](/javascript/web-development/backend/nodejs/0-new-project/3-update-node-version.md)
 2. Assuming you already got Vue installed correctly: [/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup](/javascript/web-development/frontend/vue/1-install-and-first-steps/0-vue-installation-and-setup.md)
 
 ---
@@ -47,7 +47,7 @@ npm audit fix
 npm install vue@latest
 ```
 ==Remember!==
-If you're using [Vite](javascript/build-tools/vite/_install.md), no worries, Vite is NOT a package manager.
+If you're using [Vite](/javascript/build-tools/vite/_install.md), no worries, Vite is NOT a package manager.
 
 ......................................
 ### 2B) Using Yarn

@@ -103,7 +103,7 @@ related_name="%(class)s_<your_current_related_name_here>",
 
 ---
 # Using Self-Referential:
-[/python/web-development/django/3-1-models-database/relation-self-referential](python/web-development/django/3-1-models-database/relation-self-referential.md)
+[/python/web-development/django/3-1-models-database/relation-self-referential](/python/web-development/django/3-1-models-database/relation-self-referential.md)
 
 ---
 
@@ -114,5 +114,5 @@ related_name="%(class)s_<your_current_related_name_here>",
 ## Similar field classes:
 Many-To-Many Field: [/python/web-development/django/3-1-models-database/model-attr-field-many-to-many](/python/web-development/django/3-1-models-database/model-attr-field-many-to-many.md)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)
 

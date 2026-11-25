@@ -18,9 +18,9 @@ All of them: https://github.com/twbs/examples/tree/main
 ## Using Bootstrap, make a choice:
 
 - Local installation:
-	- Django projects: [/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation](python/web-development/django/3-3-frontend-templates/template-bootstrap-installation.md)
+	- Django projects: [/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation](/python/web-development/django/3-3-frontend-templates/template-bootstrap-installation.md)
 	- Flask projects: xxxxxxxxxxxx
 	- Fast-API projects: xxxxxxxxxxxxxxxx
-- Or via CDN (no install required): [no-install-version-cdn](web-development/css/css-frameworks/bootstrap/no-install-version-cdn.md)
+- Or via CDN (no install required): [no-install-version-cdn](/web-development/css/css-frameworks/bootstrap/no-install-version-cdn.md)
 
 ---

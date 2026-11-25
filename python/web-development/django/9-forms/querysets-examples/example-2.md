@@ -7,7 +7,7 @@
 - A `CompBase` can never refer to itself.
 - Limit the `comp_ref` field choices to the `CompBase` instances of the same `Plane`, excluding the instance being edited.
 ## Context:
-You're creating a new instance of *Component Base* (`CompBase`) where the adding detail-view is split by [2 screens flow (this solution)](python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md). 
+You're creating a new instance of *Component Base* (`CompBase`) where the adding detail-view is split by [2 screens flow (this solution)](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md). 
 - Screen 1: the user picks the `plane` and hits "next" button. Only the chosen value is kept in `request.session` (nothing is written to the db).
 - Screen 2: the form loads an unsaved instance (`pk` is `None`) built with the `plane_id` from the session. After "Save" it has a `pk`.
 ```python

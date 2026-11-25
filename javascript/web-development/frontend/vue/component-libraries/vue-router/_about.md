@@ -3,7 +3,7 @@
 
 ---
 
-Vue Router is the official client-side routing solution for Vue. Client-side routing is used by Single-Page Apps ([SPA](javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)) to tie the browser URL to the content seen by the user. As users navigate around the app, the URL updates accordingly, but the page doesn't need to be reloaded from the server.
+Vue Router is the official client-side routing solution for Vue. Client-side routing is used by Single-Page Apps ([SPA](/javascript/web-development/frontend/vue/vue-knowledge/vue-application-architecture.md)) to tie the browser URL to the content seen by the user. As users navigate around the app, the URL updates accordingly, but the page doesn't need to be reloaded from the server.
 
 https://router.vuejs.org/
 
@@ -47,4 +47,4 @@ E.g.
 
 ---
 ## Installing:
-[/javascript/web-development/frontend/vue/component-libraries/vue-router/_install](javascript/web-development/frontend/vue/component-libraries/vue-router/_install.md)
+[/javascript/web-development/frontend/vue/component-libraries/vue-router/_install](/javascript/web-development/frontend/vue/component-libraries/vue-router/_install.md)

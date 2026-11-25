@@ -9,4 +9,4 @@ Before:
 Node.js options:
 - Strapi
 - Payload
-- [Directus](javascript/web-development/backend/nodejs/cms/directus.md)
+- [Directus](/javascript/web-development/backend/nodejs/cms/directus.md)

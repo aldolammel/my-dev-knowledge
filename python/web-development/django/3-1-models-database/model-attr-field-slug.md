@@ -45,5 +45,5 @@ My custom validator solution: [clean_checker_txt_uniqueness](/python/web-develop
 ## Slug with more flexibility by @aldolammel:
 [/python/web-development/django/utils/aldo-slugifier.py](/python/web-development/django/utils/aldo-slugifier.py)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)
 

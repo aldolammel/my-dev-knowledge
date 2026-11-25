@@ -8,8 +8,8 @@ Remember: `views.py` is where you build up the endpoint logic you need to use! D
 ---
 ## What type of view do you need:
 - Class-based (CBVs) - Recommended:
-	- [View class](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-basic.md)
-	- [View class - Create type](python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py)
+	- [View class](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-basic.md)
+	- [View class - Create type](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-create.py)
 	- [View class - Delete type](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-delete.py)
 	- [View class - Detail type](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-detail.py)
 	- [View class - Form type](/python/web-development/django/3-2-views-and-API/1-building-views-context/class-based/_views-class-form.py)

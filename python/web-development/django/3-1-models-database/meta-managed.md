@@ -4,13 +4,13 @@
 ---
 
 **Before:**
-1. What is Model meta: [/python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
+1. What is Model meta: [/python/python-knowledge/classes/meta](/python/python-knowledge/classes/meta.md)
 
 ---
 
 Controls database table management by Django's migration system.
 
-What is meta in this context: [meta](python/python-knowledge/classes/meta.md)
+What is meta in this context: [meta](/python/python-knowledge/classes/meta.md)
 
 **When to use "managed = False":**
 - When working with legacy databases or tables created outside Django;

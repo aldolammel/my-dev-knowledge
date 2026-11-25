@@ -5,7 +5,7 @@
 
 Regardless new or existing object, you wanna see an *inline* table where every row comes from another model class object. You must add and/or remove each row if needed. 
 
-![web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png](web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png)
+![/web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png](/web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png)
 
 Important: both models are tied for the database.
 
@@ -17,7 +17,7 @@ For example where data is not tied between each other:  /xxxxxxxxxxxxxxxxxxxxxxx
 2. In the admin class scope where the TabularInline list should be shown, add the line `inlines = [SomethingInline]`.
 3. Important: Django auto-create the admin fieldset for this list in CMS.
 **Adding the sortable feature for the inline:**
-4. Install the [django-admin-sortable2](python/web-development/django/component-libraries/django-admin-sortable2/install.md).
+4. Install the [django-admin-sortable2](/python/web-development/django/component-libraries/django-admin-sortable2/install.md).
 5. Integrate the `django-admin-sortable2` in `/core/settings.py`'s `INSTALLED_APPS` list.
 6. Import the module in your `admin.py` file: `from adminsortable2.admin import SortableAdminBase, SortableInlineAdminMixin`.
 7. ==SOON...==
@@ -90,5 +90,5 @@ class MovieAdmin(admin.ModelAdmin):
 
 ---
 ## Making zebra striping color in an inline table:
-[web-development/css/css-examples/zebra-striping](web-development/css/css-examples/zebra-striping.md)
+[/web-development/css/css-examples/zebra-striping](/web-development/css/css-examples/zebra-striping.md)
 

@@ -7,7 +7,7 @@ Vuex (the official solution for Vue 2) is a state management pattern + library f
 https://vuex.vuejs.org/
 
 ==IMPORTANT:==
-Vuex was replaced by [Pinia](javascript/web-development/frontend/vue/component-libraries/pinia/_install.md) in Vue 3.
+Vuex was replaced by [Pinia](/javascript/web-development/frontend/vue/component-libraries/pinia/_install.md) in Vue 3.
 
 ---
 ## 1) Installation:
@@ -30,9 +30,9 @@ npm list
 
 ---
 ## 2) Integration: How to create/update data using VueX:
-[/javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data.md)
+[/javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data](/javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data.md)
 
 ---
 ## PINIA IS THE OFFICIAL SOLUTION FOR VUE 3:
-[/javascript/web-development/frontend/vue/3-component-libraries/pinia/\_install](javascript/web-development/frontend/vue/component-libraries/pinia/_install.md)
+[/javascript/web-development/frontend/vue/3-component-libraries/pinia/\_install](/javascript/web-development/frontend/vue/component-libraries/pinia/_install.md)
 

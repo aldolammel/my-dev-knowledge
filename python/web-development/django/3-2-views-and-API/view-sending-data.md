@@ -4,12 +4,12 @@
 ---
 ## Before:
 - Assuming you have done the previous steps from this roadmap: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
-- Assuming you're using *Django Rest Framework*: [/python/web-development/django/component-libraries/django-rest-framework/_install](python/web-development/django/component-libraries/django-rest-framework/_install.md)
+- Assuming you're using *Django Rest Framework*: [/python/web-development/django/component-libraries/django-rest-framework/_install](/python/web-development/django/component-libraries/django-rest-framework/_install.md)
 - What are Views: [/python/web-development/django/3-2-views-and-API/\_about](/python/web-development/django/3-2-views-and-API/_about.md)
 
 ---
 
-Views are the place where all Django model data is declared to be sent externally, using or not a [api](python/web-development/django/3-2-views-and-API/api.md).
+Views are the place where all Django model data is declared to be sent externally, using or not a [api](/python/web-development/django/3-2-views-and-API/api.md).
 
 In `/apps/subapp/views.py`:
 ```python

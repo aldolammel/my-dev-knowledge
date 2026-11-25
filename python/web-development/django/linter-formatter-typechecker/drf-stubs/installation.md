@@ -3,12 +3,12 @@
 
 ---
 
-From the same team of [Django-Stubs](python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md), DRF Stubs adds type information for [Django REST Framework](python/web-development/django/component-libraries/django-rest-framework/_install.md), since DRF doesn't ship its own type hints.
+From the same team of [Django-Stubs](/python/web-development/django/linter-formatter-typechecker/django-stubs/_installation.md), DRF Stubs adds type information for [Django REST Framework](/python/web-development/django/component-libraries/django-rest-framework/_install.md), since DRF doesn't ship its own type hints.
 
 **What it does on DRF:**
 
 - Type hints for DRF's public API: serializers, viewsets, generic views, permissions, authentication, request/response objects, pagination, and so on.
-- A [MyPy](python/linter-formatter-typechecker/MyPy/installation.md) plugin that handles DRF's dynamic behavior, so MyPy understands things like serializer fields and generic classes.
+- A [MyPy](/python/linter-formatter-typechecker/MyPy/installation.md) plugin that handles DRF's dynamic behavior, so MyPy understands things like serializer fields and generic classes.
 - Generic parameters on DRF classes, so MyPy can then tell what type `serializer.instance` or `self.get_queryset()` returns.
 
 ---

@@ -4,7 +4,7 @@
 ---
 E.g. for Django CMS:
 
-![web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png](web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png)
+![/web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png](/web-development/css/css-examples/django-css-zebra-striping-for-admin-inline.png)
 
 ---
 ## Solution for Python Django CMS:

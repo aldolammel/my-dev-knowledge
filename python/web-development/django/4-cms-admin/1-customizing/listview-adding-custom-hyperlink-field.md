@@ -36,6 +36,6 @@ class MyModelClassAdmin(admin.ModelAdmin):
 ## List-view: adding a new field:
 [/python/web-development/django/4-cms-admin/1-customizing/listview-adding-custom-field](/python/web-development/django/4-cms-admin/1-customizing/listview-adding-custom-field.md)
 ## List-view: adding a JSON link preview as field:
-[/python/web-development/django/3-2-views-and-API/admin-json-preview](python/web-development/django/3-2-views-and-API/admin-json-preview.md)
+[/python/web-development/django/3-2-views-and-API/admin-json-preview](/python/web-development/django/3-2-views-and-API/admin-json-preview.md)
 
 

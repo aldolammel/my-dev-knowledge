@@ -4,7 +4,7 @@
 ---
 ## Before:
 - Assuming you have done the previous steps from this roadmap: [/python/web-development/django/0-new-project/api](/python/web-development/django/0-new-project/api.md)
-- Assuming you're using *Django Rest Framework*: [/python/web-development/django/component-libraries/django-rest-framework/_install](python/web-development/django/component-libraries/django-rest-framework/_install.md)
+- Assuming you're using *Django Rest Framework*: [/python/web-development/django/component-libraries/django-rest-framework/_install](/python/web-development/django/component-libraries/django-rest-framework/_install.md)
 
 ---
 ## 1) In `/apps/subapp/urls.py`, nothing need to be added or changed!
@@ -26,7 +26,7 @@ urlpatterns = [
 ]
 ```
 ### 2.2) `/core/urls_api.py`
-Create this file or edit it, declaring the [existing endpoint logic](python/web-development/django/3-2-views-and-API/view-sending-data.md) (view class).
+Create this file or edit it, declaring the [existing endpoint logic](/python/web-development/django/3-2-views-and-API/view-sending-data.md) (view class).
 ```python
 from rest_framework.routers import DefaultRouter
 from apps.subappname.views import SomethingViewSet
@@ -49,4 +49,4 @@ http://localhost:8000/api/subappnamehere/
 
 ---
 ## Django serialization roadmap:
-[/python/web-development/django/3-2-views-and-API/api](python/web-development/django/3-2-views-and-API/api.md)
+[/python/web-development/django/3-2-views-and-API/api](/python/web-development/django/3-2-views-and-API/api.md)

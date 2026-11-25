@@ -1,5 +1,5 @@
 #### JavaScript > Front-end > Vue
-# Initial development roadmap for MPA
+# Initial development roadmap for MPA [Part 2/2]
 
 ---
 ## Before:

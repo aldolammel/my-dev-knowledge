@@ -12,7 +12,7 @@ https://vuetifyjs.com
 
 - [x] **Before:**
 - Assuming you are in the `/frontend/` folder of the project.
-- (If applicable) For Node installation with version control, active the specific Node for this project: [/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+- (If applicable) For Node installation with version control, active the specific Node for this project: [/javascript/web-development/backend/nodejs/activating-node-specific-version](/javascript/web-development/backend/nodejs/activating-node-specific-version.md)
 - (If applicable) Assuming you're in the right Git branch: [command-branch](/versioning/git/command-branch.md) and [command-checkout](/versioning/git/command-checkout.md).
 .
 - [x] 1.1) Install the Vuetify itself:

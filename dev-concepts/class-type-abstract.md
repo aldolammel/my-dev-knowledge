@@ -9,4 +9,4 @@ It's a xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 ## Abstract with Python:
-[/python/python-knowledge/classes/meta-abstract](python/python-knowledge/classes/meta-abstract.md)
+[/python/python-knowledge/classes/meta-abstract](/python/python-knowledge/classes/meta-abstract.md)

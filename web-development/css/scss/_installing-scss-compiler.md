@@ -22,13 +22,13 @@ npm install-scripts approve @parcel/watcher
 
 ---
 ## 3) Integration with your JS front-end framework:
-- For Vue project: [web-development/css/scss/vue-integration](web-development/css/scss/vue-integration.md)
+- For Vue project: [/web-development/css/scss/vue-integration](/web-development/css/scss/vue-integration.md)
 - For React project: /xxxxxxxxxxxx
 - For Angular project: /xxxxxxxxxx
 
 ---
 ## 4) Integration with your JS build-tool:
-- For Vite: [web-development/css/scss/build-tool-vite-integration](web-development/css/scss/build-tool-vite-integration.md)
+- For Vite: [/web-development/css/scss/build-tool-vite-integration](/web-development/css/scss/build-tool-vite-integration.md)
 - For Vue-CLI: /xxxxxx
 - For Nuxt: /xxxxxx
 

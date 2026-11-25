@@ -3,7 +3,7 @@
 
 ---
 
-Once this command is used to remove a dependency, automatically UV deletes the dependency from the [pyproject.toml](python/pyproject-toml.md) dependency list and execute the `uv sync` behind the scene, updating the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
+Once this command is used to remove a dependency, automatically UV deletes the dependency from the [pyproject.toml](/python/pyproject-toml.md) dependency list and execute the `uv sync` behind the scene, updating the [uv.lock](/python/package-manager/uv/uv-lock.md) file and the `.venv` folder.
 
 ---
 ## Before:

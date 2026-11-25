@@ -57,5 +57,5 @@ class Something(...):
 - Slug Field: [/python/web-development/django/3-1-models-database/model-attr-field-slug](/python/web-development/django/3-1-models-database/model-attr-field-slug.md)
 - Binary Field: [/python/web-development/django/3-1-models-database/model-attr-field-binary](/python/web-development/django/3-1-models-database/model-attr-field-binary.md)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
+[/python/web-development/django/3-1-models-database/field-classes](/python/web-development/django/3-1-models-database/field-classes.md)
 

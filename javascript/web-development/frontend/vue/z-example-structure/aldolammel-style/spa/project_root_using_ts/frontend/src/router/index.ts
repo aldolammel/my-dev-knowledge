@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: "",
-        name: "HomePublic", // It's not a title, but an identifier using PascalCase.
+        name: "HomePublic", // It's an identifier (PascalCase) used to call the view path on templates! Use the component name without 'View'.
         component: HomePublicView,
       },
       {
@@ -57,7 +57,7 @@ const routes: RouteRecordRaw[] = [
   //   children: [
   //     {
   //       path: "xxxxxx",
-  //       name: "SomethingLikeThis", // It's not a title, but an identifier using PascalCase.
+  //       name: "SomethingLikeThis", // It's an identifier (PascalCase) used to call the view path on templates! Use the component name without 'View'.
   //       component: XxxxView,
   //     },
   //     {
@@ -70,12 +70,12 @@ const routes: RouteRecordRaw[] = [
   // SYSTEM VIEWS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   {
     path: "/confirmed",
-    name: "EmailConfirmed", // It's not a title, but an identifier using PascalCase.
+    name: "EmailConfirmed", // It's an identifier (PascalCase) used to call the view path on templates! Use the component name without 'View'.
     component: EmailConfirmedView,
   },
   {
     path: "/401",
-    name: "AccessForbidden",
+    name: "Forbidden",
     component: ForbiddenView,
   },
   {
@@ -85,7 +85,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: "/404",
-    name: "PageNotFound",
+    name: "NotFound",
     component: NotFoundView,
   },
   {

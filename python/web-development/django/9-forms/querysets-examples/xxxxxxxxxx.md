@@ -6,7 +6,7 @@
 - A `xxxxxxxxxx` can be used only once per `xxxxxxxxx`.
 - Limit the `comp_concept` field choices with only those `xxxxxxxxxxx` instances never used by other `xxxxxxxxxxxx` instance of the same `xxxxxxxxxxx`.
 ## Context:
-You're creating a new instance of *Friendly Class Name* (`<ClassNameOnModel>`) where the adding detail-view is split by [2 screens flow (this solution)](python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md). 
+You're creating a new instance of *Friendly Class Name* (`<ClassNameOnModel>`) where the adding detail-view is split by [2 screens flow (this solution)](/python/web-development/django/4-cms-admin/1-customizing/cms-multi-step-adding-using-session.md). 
 - Screen 1: the user picks the `xxxxxx` and hits "next" button. Only the chosen value is kept in `request.session` (nothing is written to the db).
 - Screen 2: the form loads an unsaved instance (`pk` is `None`) built with the `xxxxxxxx` from the session. After "Save" it has a `pk`.
 ```python

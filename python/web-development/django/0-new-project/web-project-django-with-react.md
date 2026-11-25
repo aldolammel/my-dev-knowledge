@@ -22,7 +22,7 @@
 
 1. IDE, framework setup: [VSCode for React](/javascript/web-development/frontend/react/ide/vscode/temp.md) or [PyCharm for React](/javascript/web-development/frontend/react/ide/pycharm/temp.md).
 2. React installation (and its dependencies): /javascript/web-development/frontend/xxxxxxxxxxxx
-3. (Optional) CSS Framework: [Bootstrap](web-development/css/css-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](web-development/css/css-frameworks/tailwind/install-and-integration.md) or [Bulma](web-development/css/css-frameworks/bulma/_about.md).
+3. (Optional) CSS Framework: [Bootstrap](/web-development/css/css-frameworks/bootstrap/_about-and-installation.md) or [Tailwind](/web-development/css/css-frameworks/tailwind/install-and-integration.md) or [Bulma](/web-development/css/css-frameworks/bulma/_about.md).
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 2.1) Before
 
-1. Create the AI basic context prompt for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](python/web-development/django/document-templates/ai-prompt-context-model.md)
+1. Create the AI basic context prompt for the project: [/python/web-development/django/document-templates/ai-prompt-context-model](/python/web-development/django/document-templates/ai-prompt-context-model.md)
 
 ### 2.2) Front-end
 

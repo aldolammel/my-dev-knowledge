@@ -84,5 +84,5 @@ An SSH RSA key is considered highly secure as it has typically larger key sizes,
             
 ---
 ## Restoring your existing permission:
-[versioning/git/private-key-restoring-permission](versioning/git/private-key-restoring-permission.md)
+[versioning/git/private-key-restoring-permission](/versioning/git/private-key-restoring-permission.md)
 

@@ -1,0 +1,1 @@
+// It demands Pinia installed and implemented ;)
