@@ -3,7 +3,7 @@
 
 ---
 ## Before:
-- Assuming you already have Node.js installed with version control: [javascript/web-development/backend/nodejs/1-installation](javascript/web-development/backend/nodejs/1-installation.md)
+- Assuming you already have Node.js installed with version control: [/javascript/web-development/backend/nodejs/1-installation](javascript/web-development/backend/nodejs/1-installation.md)
 - If you wanna active a Node version for a specific project, you must be in any project's folder level!
 
 ---
@@ -24,7 +24,7 @@ nvm list node
 
 ---
 ## Case you wanna make the project's Node selection automatic:
-[javascript/web-development/backend/nodejs/2.1-automating-switch-process](javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
+[/javascript/web-development/backend/nodejs/2.1-automating-switch-process](javascript/web-development/backend/nodejs/2.1-automating-switch-process.md)
 
 
 

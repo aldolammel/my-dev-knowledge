@@ -16,11 +16,11 @@ Node.js itself always will be installed isolated in your system, never tied to a
 
 ---
 ## Before:
-- Check if you don't have Node installed without version control (awful approach): [javascript/web-development/backend/nodejs/4-uninstall](javascript/web-development/backend/nodejs/4-uninstall.md)
+- Check if you don't have Node installed without version control (awful approach): [/javascript/web-development/backend/nodejs/4-uninstall](javascript/web-development/backend/nodejs/4-uninstall.md)
 
 ---
 ## 1) Check what the current project's Node version:
-[javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+[/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
 
 ---
 ## 2) Update the OS:
@@ -55,7 +55,7 @@ Soon...
 
 ---
 ## 5) Rebuild/Re-sync project's Node dependencies:
-[javascript/web-development/backend/nodejs/syncing-node_modules](javascript/web-development/backend/nodejs/syncing-node_modules.md)
+[/javascript/web-development/backend/nodejs/syncing-node_modules](javascript/web-development/backend/nodejs/syncing-node_modules.md)
 
 ---
 ## 6) Update the Node version constraint in the project's TDD:

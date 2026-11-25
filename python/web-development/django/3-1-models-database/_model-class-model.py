@@ -54,7 +54,7 @@ class ExampleModel(models.Model):  # If it's a base model class, use in its clas
     class Meta:
         db_table = "xxxxxxxx"
         ordering = ["xxxxxx"]
-        verbose_name = "x. xxxxxxx"
+        verbose_name = "xxxxxxx"
         verbose_name_plural = "x. xxxxxxxxxxxxxxx"
         """constraints = [
             models.CheckConstraint(
@@ -132,7 +132,7 @@ class ExampleModel(AuditMixin):  # If it's a base model class, use in its class 
     class Meta:
         db_table = "xxxxxxxx"
         ordering = ["xxxxxx"]
-        verbose_name = "x. xxxxxxx"
+        verbose_name = "xxxxxxx"
         verbose_name_plural = "x. xxxxxxxxxxxxxxx"
         """constraints = [
             models.CheckConstraint(
@@ -216,7 +216,7 @@ class ExampleChildModel(ExampleModel):
     class Meta:
         db_table = "xxxxxxxx"
         ordering = ["xxxxxx"]
-        verbose_name = "x. xxxxxxx"
+        verbose_name = "xxxxxxx"
         verbose_name_plural = "x. xxxxxxxxxxxxxxx"
         """constraints = [
             models.CheckConstraint(

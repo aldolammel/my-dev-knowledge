@@ -30,7 +30,7 @@ npm list
 
 ---
 ## 2) Integration: How to create/update data using VueX:
-[javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data.md)
+[/javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/vuex/1-overview-how-to-create-data.md)
 
 ---
 ## PINIA IS THE OFFICIAL SOLUTION FOR VUE 3:

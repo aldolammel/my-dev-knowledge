@@ -17,7 +17,7 @@ Use a Model Mixin for an independent, reusable capability that multiple models c
 
 ---
 ## Python example:
-[python/web-development/django/3-1-models-database/model-type-mixin](python/web-development/django/3-1-models-database/model-type-mixin.md)
+[/python/web-development/django/3-1-models-database/model-type-mixin](python/web-development/django/3-1-models-database/model-type-mixin.md)
 
 ---
 ## Database Context:

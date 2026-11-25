@@ -21,3 +21,6 @@ const app = createApp(App);
 app.mount("#app");
 ```
 
+---
+## And delete the files:
+`/frontend/src/style.css`

@@ -13,71 +13,92 @@ Define with your team what you wanna do about the diagram and the text-based ver
 ## Public pages:
 ```
 ProductMainDomain.com
-├── Home                                       [page]
-│   └── Registration                           [form]
-│       └── User Email Confirmation            [email]
-├── Login                                      [page]
-│   └── Login                                  [form]
-├── Support                                    [page]
-│   └── Subject items                          [interface context]
-│       └── Item                               [page]
-├── Terms of Use                               [page]
-└── Developed by You                           [external url]
+├── Create account (visitor home)      [page]
+│   └── Registration                   [form]
+│       └── User Email Confirmation    [email]
+│
+├── Login                              [page]
+│   └── Login                          [form]
+│
+├── Support                            [page]
+│
+├── Donation                           [external link]
+├── Terms of Use                       [page]
+└── Developed by YOU                   [external link]
 ```
 ## Authenticated pages:
 ```
 ProductMainDomain.com
-├── Home                                                                [page]
-│   └── Items organized by SomethingA or SomethingB                     [interface context]
-│       └── Item                                                        [page]
-│           └── Another thing items organized by main item              [interface context]
-│               └── Item by a user                                      [page]
-├── Profile                                     [page]
-│   └── Only for other profile pages            [interface context]
-│       └── Report this user                    [page]
-│           └── Reporting                       [form]
-│               └── Email of report             [email]
-├── Support                      [page]
-│   └── Subject items            [interface context]
-│       └── Item                 [page]
-├── Terms of Use                 [page]
-└── Developed by You             [external url]
+├── Catalog (logged home)                              [page]
+│   └── Aircraft (specific one) ...                    [pages]
+│       └── Model ...                                  [pages]
+│           └── Procedure by user ...                  [pages]
+│               ├── User is not the author             [logical context]
+│               │   └── Report this procedure          [page]
+│               │       └── Reporting                  [form]
+│               │           └── Email of report        [email]
+│               │
+│               └── User is the author                 [logical context]
+│                   └── Edit procedure                 [page]
+│                       └── Editing                    [form]
+│
+├── Create procedure                      [page]
+│   └── Adding                            [form]
+│
+├── Profile                               [page]
+│   ├── Viewing another profile           [logical context]
+│   │   └── Report this user              [page]
+│   │       └── Reporting                 [form]
+│   │           └── Email of report       [email]
+│   │
+│   └── Viewing their own profile         [logical context]
+│   ├── Edit profile                      [page]
+│   │   ├── Editing                       [form]
+│   │   │
+│   │   ├── Change password               [page]
+│   │   │   └── Changing                  [form]
+│   │   │
+│   │   └── Change email                   [page]
+│   │       └── Changing                   [form]
+│   │
+│   └── Delete account                     [page]
+│       └── Requesting                     [form]
+│
+├── Support                                [page]
+│
+├── Donation                               [external link]
+├── Terms of Use                           [page]
+└── Developed by YOU                       [external link]
 ```
 ## Shared system pages:
 ```
 ProductMainDomain.com
-├── Login Back-end CMS               [hidden page]
-│   └── Back-end authenticated stuff [group of pages]
-├── E-mail successfully confirmed    [page]
-├── Password forgotten               [page]
-│   └── Email password reset         [email]
-├── Access denied (403)              [page]
-└── Not found (404)                  [page]
+├── Login Back-end CMS                   [hidden page]
+│   └── ...                              [hidden pages]
+│
+├── E-mail successfully confirmed        [page]
+├── Password forgotten                   [page]
+│   └── Confirming email                 [form]
+│       └── Email password reset         [email]
+│
+├── Access denied (403)                  [page]
+└── Not found (404)                      [page]
 ```
 ## Navigation menus:
 
 **Main menu**
 ```
-Links only for visitor:
-- Home (visitor version)           [link]
+Links for visitor:
+- Create account (visitor home)    [link]
 - Login                            [link]
-Links only for authenticated user:
-- Home (user version)              [link]
-- User profile                     [link]
+
+Links for logged user:
+- Catalog (logged home)            [link]
+- Profile                          [link]
+
 Link for both:
 - Support                          [link]
-- Language                         [drop-down menu]
-```
-
-**User menu in Profile**
-```
-Only for their own user profile page:
-- Change password                  [link]
-- Update your email                [link]
-- Log out                          [link]
-- Delete account                   [link]
-Only for other user profile pages:
-- Report this user                 [link]
+- Donation                         [external link]
 ```
 
 **Footer menu**
@@ -85,3 +106,16 @@ Only for other user profile pages:
 - Terms of Use                     [link]
 - Developed by You                 [external link]
 ```
+
+**Screen base menu**
+```
+Logged, only in Catalog:
+- Create procedure                [link]
+- My stuff                        [link]
+
+Logged, only in user's own profile:
+- Back                            [link]
+- Catalog                         [link]
+- Create procedure                [link]
+```
+

@@ -23,7 +23,7 @@ Assuming you are the greatest developer with absolute power to create everything
 			- [Django](/python/web-development/django/_about.md)
 			- [Flask](/python/web-development/flask/_about.md)
 			- [Fast-API](/python/web-development/fast-api/_about.md)
-		- [JavaScript/TypeScript](/javascript/_about.md) language:
+		- [/javascript/TypeScript](/javascript/_about.md) language:
 			- [Node.js](web-development/1-backend/nodejs.md)
 			- [Nuxt.js](/javascript/web-development/backend/nuxtjs/_about.md)
 			- [Next.js](/javascript/web-development/backend/nextjs/_about.md)
@@ -36,11 +36,11 @@ Assuming you are the greatest developer with absolute power to create everything
 			- [React](web-development/1-frontend/frameworks/react/_about.md) ([Next.js](/javascript/web-development/backend/nextjs/_about.md) uses React as its front-end framework)
 			- [Angular](web-development/1-frontend/frameworks/angular/_about.md)
 	- Front-end CSS framework/library:
-		- [Bootstrap](web-development/css/libraries-frameworks/bootstrap/_about-and-installation.md)
-		- [Awesome](web-development/css/libraries-frameworks/awesome/_about.md)
-		- [Bulma](web-development/css/libraries-frameworks/bulma/_about.md)
-		- [Tailwind](web-development/css/libraries-frameworks/tailwind/_about.md)
-		- [Vuetify](web-development/css/libraries-frameworks/vuetify/_about.md)
+		- [Bootstrap](web-development/css/css-frameworks/bootstrap/_about-and-installation.md)
+		- [Awesome](web-development/css/css-frameworks/awesome/_about.md)
+		- [Bulma](web-development/css/css-frameworks/bulma/_about.md)
+		- [Tailwind](web-development/css/css-frameworks/tailwind/_about.md)
+		- [Vuetify](javascript/web-development/ui-component-libraries/vuetify/_install.md)
 
 ---
 ## 3) Documents to create:

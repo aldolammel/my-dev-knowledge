@@ -12,7 +12,7 @@ https://github.com/typeddjango/django-stubs
 
 - [ ] **Before:**
 	1. Your Python Type-Checker is one of them:
-		- Python MyPy: [python/linter-formatter-typechecker/MyPy/installation](python/linter-formatter-typechecker/MyPy/installation.md)
+		- Python MyPy: [/python/linter-formatter-typechecker/MyPy/installation](python/linter-formatter-typechecker/MyPy/installation.md)
 		- Or Python PyRight: [/python/linter-formatter-typechecker/PyRight/installation](/python/linter-formatter-typechecker/PyRight/installation.txt)
 
 - [ ] **1.1) Installing:**
@@ -48,11 +48,11 @@ $ xxxxxxxxxxxx
 ## 2) Integration:
 
 - [ ] **Before:**
-	1. Assuming you already got the `pyproject.toml` in your project: [python/pyproject-toml](python/pyproject-toml.md)
+	1. Assuming you already got the `pyproject.toml` in your project: [/python/pyproject-toml](python/pyproject-toml.md)
 
 - [ ] **2.1) Include/edit these lines in your `pyproject.toml`:**
-	- For MyPy: [python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-mypy.toml](python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-mypy.toml)
-	- Or for PyRight: [python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-pyright.toml](python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-pyright.toml)
+	- For MyPy: [/python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-mypy.toml](python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-mypy.toml)
+	- Or for PyRight: [/python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-pyright.toml](python/web-development/django/linter-formatter-typechecker/django-stubs/pyproject-for-pyright.toml)
 
 ---
 

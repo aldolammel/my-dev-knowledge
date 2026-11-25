@@ -47,4 +47,4 @@ E.g.
 
 ---
 ## Installing:
-[javascript/web-development/frontend/vue/component-libraries/vue-router/_install](javascript/web-development/frontend/vue/component-libraries/vue-router/_install.md)
+[/javascript/web-development/frontend/vue/component-libraries/vue-router/_install](javascript/web-development/frontend/vue/component-libraries/vue-router/_install.md)

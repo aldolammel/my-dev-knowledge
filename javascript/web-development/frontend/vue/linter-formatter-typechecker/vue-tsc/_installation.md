@@ -42,7 +42,7 @@ In `pyproject.toml`:
 
 ---
 ## Checking type-checker errors:
-[javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors.md)
+[/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors.md)
 
 ---
 

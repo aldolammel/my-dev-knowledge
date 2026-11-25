@@ -31,7 +31,7 @@
 
 - [x] **2.3) Install the dependency responsible for *Environment Variables* for this project:** Check the *Technical Design Document* for this project, and install ONLY the module for environ var management for now: [/python/web-development/django/Env-Var-Managers/\_options](/python/web-development/django/Env-Var-Managers/_options.md)
 
-- [x] **2.4) Install a Python lib for PostgreSQL:**  [python/component-libraries/psycopg/install](python/component-libraries/psycopg/install.md)
+- [x] **2.4) Install a Python lib for PostgreSQL:**  [/python/component-libraries/psycopg/install](python/component-libraries/psycopg/install.md)
 
 - [x] **2.5) Through `settings.py`, tell to Django to use PostgreSQL:** 
 ```

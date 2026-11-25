@@ -55,7 +55,20 @@ npm audit fix
 ```
 
 ---
-## 2) Integrations:
+## 2) Define Axios versions range for future updates:
+In `/frontend/package.json` define the limit version for Axios updates (it should be declared in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
+```json
+{
+	//...
+	"dependencies": {
+		//...
+		"axios": ">=1.21.1 <2.0.0",
+	}
+}
+```
+
+---
+## 3) Integrations:
 - For Vue.js: [/javascript/web-development/frontend/vue/component-libraries/axios/integration-with-vue](/javascript/web-development/frontend/vue/component-libraries/axios/integration-with-vue.md)
 
 ---

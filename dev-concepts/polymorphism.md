@@ -61,4 +61,4 @@ Moving
 
 ---
 ## Python with Django Polymorphic:
-[python/web-development/django/component-libraries/django-polymorphic/install](python/web-development/django/component-libraries/django-polymorphic/install.md)
+[/python/web-development/django/component-libraries/django-polymorphic/install](python/web-development/django/component-libraries/django-polymorphic/install.md)

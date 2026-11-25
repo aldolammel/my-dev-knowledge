@@ -23,4 +23,4 @@ class Something(...):
 ## Similar field classes:
 Null Boolean Field ==(Deprecated)==: [/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean](/python/web-development/django/3-1-models-database/model-attr-field-nullBoolean.md)
 ## All Django field class (class attribute):
-[/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
+[/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)

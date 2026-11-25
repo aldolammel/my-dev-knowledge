@@ -5,7 +5,7 @@
 
 **Before:**
 1. Abstract class concept: [/dev-concepts/class-type-abstract](/dev-concepts/class-type-abstract.md)
-2. What is Model meta: [python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
+2. What is Model meta: [/python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
 
 ---
 
@@ -18,7 +18,7 @@ Marks a model as a base class for inheritance, not a database table.
 - The abstract model itself doesn't get a database table.
 
 E.g.
-- Mixin class: [python/web-development/django/3-1-models-database/model-type-mixin](python/web-development/django/3-1-models-database/model-type-mixin.md)
+- Mixin class: [/python/web-development/django/3-1-models-database/model-type-mixin](python/web-development/django/3-1-models-database/model-type-mixin.md)
 - Base model class: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ==Aware!==
@@ -39,4 +39,4 @@ MODEL'S INHERITANCE IN DJANGO:
 
 WHAT IS MODEL META:
 
-[python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
+[/python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)

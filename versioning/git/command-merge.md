@@ -5,57 +5,80 @@
 
 Combines changes from one branch into your current branch.
 
-    Alternatives to merging?
-        ./command-fetch.txt
+Alternatives to merging: [/versioning/git/command-fetch](/versioning/git/command-fetch.md)
 
+---
+## Merging two branches:
 
+**Make a decision:**
+- A) If NOT new stuff in the main branch
+- B) If there's new stuff in the main branch
 
-    >> Merging two branches:
+......................................
 
-        >> Approach A: if NO new stuff in the main branch - - - - - - - - - - - - - - - - - - - - - 
-            
-            Given that you're the sole developer and no changes have been made to main since you branched off to the other branch you have been working, merging is straightforward and safe approach:
+### A) if NO new stuff in the main branch
+Given that you're the sole developer and no changes have been made to main since you branched off to the other branch you have been working, merging is straightforward and safe approach:
 
-            1. Switch to "main" branch:
-                $ git checkout main
+A1) Switch to "main" branch:
+```bash
+git checkout main
+```
 
-            2. Merge that "working branch" (that one with new approaches/fixes) into main:
-                $ git merge <branch_name>
+A2) Merge that "working branch" (that one with new approaches/fixes) into main:
+```bash
+git merge branch_name_here
+```
 
-            3. Push to remote:
-                $ git push origin main
-                    # It's expected the prompt to return "Total 0, reused 0, pack-reused 0".
+A3) Commit it:
+```bash
+git commit -m 'Merged XXXXX with main'
+```
 
-            4. CRITICAL: Test the main branch!
+A4) CRITICAL: Test the main branch!
 
-            5. Do you want to keep the working branch active for future development work?
+A5) (If applicable) In case you wanna delete:
+- Local branch: [/versioning/git/command-branch](/versioning/git/command-branch)
 
-                5A) Keep it:
+A6) Do you want to keep the working branch active for future development work?
 
-                    # Switch back to working branch to continue working:
-                    $ git checkout <branch_name>
+A6A) Keep it:
+```bash
+# Switch back to working branch to continue working:
+git checkout branch_name_here
+```
                 
-                5B) Or delete it:
-                    
-                    $ git branch -d <branch_name>  # local deletion
-                    $ git push origin --delete <branch_name>  # remote deletion
+A6B) Or delete it:
+```bash
+git branch -d branch_name_here  # local deletion
+git push origin --delete branch_name_here  # remote deletion
+```
+
+......................................
+
+### B) if there's new stuff in the main branch
+B1) Update your local main branch first:
+```bash
+git checkout main
+git pull origin main
+```
+
+B2) CRITICAL: Always locally, merge main into the "working branch" (that one with new approaches/fixes) to resolve any conflicts:
+```bash
+git checkout branch_name_here
+git merge main
+```
+Resolve any conflicts if they occur!
+CRUCIAL: Test thoroughly after merging!
+
+B3) After testing, merge working branch into main:
+```bash
+git checkout main
+git merge branch_name_here
+git push origin main
+```
+
+---
 
 
-        >> Approach B: if there's new stuff in the main branch - - - - - - - - - - - - - - - - - - -
 
-            1. Update your local main branch first:
-                $ git checkout main
-                $ git pull origin main
 
-            2. CRITICAL: Always locally, merge main into the "working branch" (that one with new approaches/fixes) to resolve any conflicts:
-
-                $ git checkout <branch_name>
-                $ git merge main
-
-                # Resolve any conflicts if they occur!
-                # CRUCIAL: Test thoroughly after merging!
-
-            3. After testing, merge working branch into main:
-                $ git checkout main
-                $ git merge <branch_name>
-                $ git push origin main

@@ -4,7 +4,7 @@
 ---
 
 **Before:**
-1. What is Model meta: [python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
+1. What is Model meta: [/python/python-knowledge/classes/meta](python/python-knowledge/classes/meta.md)
 
 ---
 

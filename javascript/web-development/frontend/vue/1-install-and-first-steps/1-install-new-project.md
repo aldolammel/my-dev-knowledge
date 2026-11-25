@@ -23,7 +23,7 @@
 	- Vue linter:
 		- case using ESLint:[/javascript/linter-formatter-typechecker/eslint/checking-errors](/javascript/linter-formatter-typechecker/eslint/checking-errors.md)
 	- Vue type-checker:
-		- case using vue-tsc: [javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors.md)
+		- case using vue-tsc: [/javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors](javascript/web-development/frontend/vue/linter-formatter-typechecker/vue-tsc/checking-errors.md)
 - [x] 1C.5) (Optional) Test the Vue running: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app.md)
 
 ---

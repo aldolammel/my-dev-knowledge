@@ -26,10 +26,23 @@ npm install @unhead/vue
 ```
 
 ---
-## 2) Integration:
+## 2) Define Unhead versions range for future updates:
+In `/frontend/package.json` define the limit version for Unhead updates (it should be declared in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
+```json
+{
+	//...
+	"dependencies": {
+		//...
+		"@unhead/vue": ">=3.4.3 <4.0.0",
+	}
+}
+```
+
+---
+## 3) Integration:
 Make a decision:
-- For SPA architecture: [javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations.md)
-- Or for MPA architecture: [javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
+- For SPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-spa-integrations.md)
+- Or for MPA architecture: [/javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration](javascript/web-development/frontend/vue/component-libraries/unhead/architecture-mpa-integration.md)
 
 ---
 

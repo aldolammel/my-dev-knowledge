@@ -73,12 +73,25 @@ npm uninstall pinia
 ```
 
 ---
-## 2) Integration:
-[javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data.md)
+## 2) Define Pinia versions range for future updates:
+In `/frontend/package.json` define the limit version for Pinia updates (it should be declared in the project's [TDD](/javascript/document-templates/techical-design-document-tdd.md)):
+```json
+{
+	//...
+	"dependencies": {
+		//...
+		"pinia": ">=4.1.0 <5.0.0",
+	}
+}
+```
+
+---
+## 3) Integration:
+[/javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data](javascript/web-development/frontend/vue/component-libraries/pinia/1-overview-how-to-create-data.md)
 
 ---
 ## For Vue 2 projects, use Vuex:
-[javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex](javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md)
+[/javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex](javascript/web-development/frontend/vue/component-libraries/vuex/0-vuex.md)
 
 
 

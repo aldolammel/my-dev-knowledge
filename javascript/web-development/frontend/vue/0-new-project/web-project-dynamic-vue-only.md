@@ -7,7 +7,7 @@ Vue is only a front-end framework that runs over Node.js. Actually, Node can sto
 
 ---
 ## Before:
-- If you need a static solution, without db and CMS, but still using Vue benefits, skip to: [javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
+- If you need a static solution, without db and CMS, but still using Vue benefits, skip to: [/javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only](javascript/web-development/frontend/vue/0-new-project/web-project-static-vue-only.md)
 
 ---
 ## 1) Define the needs:

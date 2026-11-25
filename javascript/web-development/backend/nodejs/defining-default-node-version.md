@@ -15,7 +15,7 @@ nvm list node
 
 ---
 ## 2)  Active the version you wanna make the default one:
-[javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
+[/javascript/web-development/backend/nodejs/activating-node-specific-version](javascript/web-development/backend/nodejs/activating-node-specific-version.md)
 
 ---
 ## 3) Define the default version based on the active one:

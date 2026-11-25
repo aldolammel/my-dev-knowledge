@@ -1,5 +1,4 @@
-<script setup lang="ts">
-// DOES THIS PROJECT USING TYPESCRIPT (lang='ts')?
+<script setup lang="js">
 
 import { useHead } from "@unhead/vue";
 // Layout components:

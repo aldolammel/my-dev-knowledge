@@ -15,7 +15,7 @@ Django Model-class example that is used to create database structure: [/python/w
 
 ---
 ## Common attribute-types (field classes):
-Most common attribute-types you will use to build up every class fields/db columns: [/python/web-development/django/3-1-models-database/model-attr-field_all](/python/web-development/django/3-1-models-database/model-attr-field_all.md)
+Most common attribute-types you will use to build up every class fields/db columns: [/python/web-development/django/3-1-models-database/field-classes](python/web-development/django/3-1-models-database/field-classes.md)
 
 ---
 
