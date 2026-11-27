@@ -22,6 +22,7 @@ VITE_LOCAL_FAKE_USER_LOGGED=true
 
 #...
 ```
+For Vite projects, always an env var is updated, Vite automatically refresh the server with changes.
 
 ---
 ## 2) Create or edit the `useAuth` file:
@@ -40,32 +41,11 @@ export function useAuth() {
 ```
 
 ---
-## 3) Make sure the `guards.ts` is set to deal with `useAuth.ts`:
+## 3) Make sure the app's `guards` are working with `useAuth.ts`:
 No matter if the authentication is fake in this roadmap, for `guards.ts`, if `useAuth` tells the user is authenticated, this is true.
-- [x] In `/frontend/src/router/guards.ts`:
-```ts
-import type { Router } from "vue-router";
-import { useAuth } from "@/composables/useAuth";
-
-// Register global navigation guards:
-export function registerNavigationGuards(router: Router): void {
-	// registerNavigationGuards() avoids circular dependencies between index.ts and guards.ts!
-	router.beforeEach(to => {
-		const { isAuthenticated } = useAuth();
-	
-		if (to.meta.requiresAuth && !isAuthenticated) {
-			return {
-				name: "Login",
-				query: { redirect: to.fullPath },
-			};
-		}
-	});
-}
-```
-For `.js` version:
-```js
-// Do it yourself ;)
-```
+- [x] Make a decision:
+	- For SPA projects: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/src/router/guards.ts](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/src/router/guards.ts)
+	- For MPA projects: soon...
 
 ---
 ## 4) Import the registration function in router:
@@ -74,7 +54,6 @@ For `.js` version:
 //...
 import { registerNavigationGuards } from "@/router/guards";
 
-// Route Views:
 //...
 ```
 - [x] 4.2) Still in the same file, but right after the `router` var creation:
@@ -93,6 +72,7 @@ registerNavigationGuards(router);
 ---
 ## 5) Make sure an app's menu is considering authenticated views/pages too:
 - [x] In some `/frontend/src/components/navigation/` menu, use this example below to edit your menu.
+E.g.:
 ```html
 <script setup lang="ts">
 import { useAuth } from "@/composables/useAuth";
@@ -118,12 +98,16 @@ const { isAuthenticated } = useAuth();
 ==Tip:== call view's paths using their identifier, never their path directly! 
 
 ---
-## 6) Test it, but:
+## 6) Test it:
 - [x] 6.1) Make sure you are in the `/frontend/` folder
-- [x] 6.2) (If applicable) Close the Node server.
-- [x] 6.3) Close any terminal you were using front-end stuff.
-- [x] 6.4) Open a new terminal to make sure the new `.env` var is loaded.
-- [x] 6.5) Run the front-end server: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app)
+- [x] 6.2) Make a decision:
+	- A) Using **Vite** as build-tool:
+		- Nothing additional to do.
+	- B) Or using **Webpack** (Vue CLI) as build-tool:
+		- (If applicable) Close the Node server.
+		- Close any terminal you were using front-end stuff.
+		- Open a new terminal to make sure the new `.env` var is loaded.
+- [x] 6.3) Run the front-end server: [/javascript/web-development/frontend/vue/vue-knowledge/\_running-app](/javascript/web-development/frontend/vue/vue-knowledge/_running-app)
 
 Done.
 

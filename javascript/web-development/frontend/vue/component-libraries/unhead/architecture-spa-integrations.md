@@ -25,25 +25,8 @@ app.use(head)
 //...
 ```
 
-**1.2) (Optional) Customizing global `<head>`'s `<meta>` in a way it's propagate through the entire app:**
-In `/frontend/src/App.vue`:
-```html
-<script setup lang="ts">
-import { useSeoMeta } from "@unhead/vue";
-
-// Components:
-// ...
-
-// Custom HTML <head>:
-useSeoMeta({
-	// Global customs for all views/pages:
-	author: "Your Name",
-});
-</script>
-
-<!-- ... -->
-```
-In case you need to call script and stuff: [/javascript/web-development/frontend/vue/component-libraries/unhead/useHead-vs-useSeoMeta](/javascript/web-development/frontend/vue/component-libraries/unhead/useHead-vs-useSeoMeta.md)
+**1.2) For global `<head>`'s `<meta>`, be simple, set them in the app's index:**
+In `/frontend/index.html`: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/index.html](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/index.html)
 
 **1.3) Give to every view (page) a custom title (and optionally a description) while the user navigates through the app without browser refreshing:**
 E.g., `/frontend/src/views/public/HomeView.vue`:
@@ -69,6 +52,7 @@ useSeoMeta({
 
 <!-- ... -->
 ```
+In case you need to call script and stuff: [/javascript/web-development/frontend/vue/component-libraries/unhead/useHead-vs-useSeoMeta](/javascript/web-development/frontend/vue/component-libraries/unhead/useHead-vs-useSeoMeta.md)
 
 ---
 ## Unhead integration for MPA:

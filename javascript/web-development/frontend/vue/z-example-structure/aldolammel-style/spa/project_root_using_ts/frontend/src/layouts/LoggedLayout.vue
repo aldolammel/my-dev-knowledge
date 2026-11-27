@@ -4,9 +4,10 @@ import FooterMenu from "@/components/navigation/FooterMenu.vue";
 </script>
 
 <template>
-  <MainMenu />
+    <MainMenu />
 
-  <RouterView />
+    <!-- /views/logged/*.vue load here: -->
+    <RouterView />
 
-  <FooterMenu />
+    <FooterMenu />
 </template>

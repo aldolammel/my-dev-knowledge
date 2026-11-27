@@ -9,7 +9,7 @@
     // JAVASCRIPT SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     "[javascript]": {
         "editor.defaultFormatter": null,
-        "editor.tabSize": 2,
+        "editor.tabSize": 4,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },
@@ -25,7 +25,7 @@
     // CSS SETTINGS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
-        "editor.tabSize": 2,
+        "editor.tabSize": 4,
         "editor.indentSize": "tabSize",
         "editor.insertSpaces": true,
     },

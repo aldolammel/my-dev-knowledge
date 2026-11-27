@@ -29,6 +29,11 @@
 - [ ] 3.3) Error handling and loading states.
 - [ ] 3.4) Responsive behavior and visual refinement.
 
+Done.
+
 ---
+## Return to main initial development roadmap:
+ [/javascript/web-development/frontend/vue/3-frontend-initial-development/\_initial-roadmap](/javascript/web-development/frontend/vue/3-frontend-initial-development/_initial-roadmap.md)
+
 
 

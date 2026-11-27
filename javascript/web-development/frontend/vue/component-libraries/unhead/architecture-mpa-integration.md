@@ -10,7 +10,8 @@
 
 Soon...
 
-
+**x) For global `<head>`'s `<meta>`, be simple, set them in the app's index:**
+In `/frontend/index.html`: [/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/index.html](/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/frontend/index.html)
 
 
 

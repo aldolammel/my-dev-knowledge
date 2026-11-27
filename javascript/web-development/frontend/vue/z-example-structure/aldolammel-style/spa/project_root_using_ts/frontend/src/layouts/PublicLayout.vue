@@ -6,7 +6,8 @@ import FooterMenu from "@/components/navigation/FooterMenu.vue";
 <template>
   <MainMenu />
 
-  <RouterView />
+    <!-- /views/public/*.vue load here: -->
+    <RouterView />
 
   <FooterMenu />
 </template>

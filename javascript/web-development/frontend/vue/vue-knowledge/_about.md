@@ -5,7 +5,7 @@
 
 Vue.js (pronounced "view JS" or just "view") is a JavaScript framework that makes building interactive and reactive web front-ends. It's a progressive and open-source way to build client-side web apps. Vue uses the benefits of JavaScript available in the user browser to create actions and interactions without to download HTML pages and more from a the server/host.
 
-Vue varnames and function names should respect the JS convention: to use camelCase.
+Vue varnames and function names should respect the JS convention: to use [camelCase](/dev-concepts/naming-conventions-camelcase.md).
 
 Deep knowledge about Vue: [/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge](/javascript/web-development/frontend/vue/vue-knowledge/0-overview-deep-knowledge.md)
 

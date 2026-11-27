@@ -10,12 +10,13 @@ If you are using Vite as built-tool, it will manage the `.scss` files compilatio
 
 ==DON'T CREATE FOLDERS BEFORE BUILD-TOOL INSTALL==
 When a Vue roadmap explicit asks you to copy folders and files, you should take them from here:
-- For SPA:
+- For **SPA**:
 	- Using `.js`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_js/`
 	- Using `.ts`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/spa/project_root_using_ts/`
-- For MPA:
+- For **MPA**:
 	- Using `.js`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/mpa/project_root_using_js/`
 	- Using `.ts`: `/javascript/web-development/frontend/vue/z-example-structure/aldolammel-style/mpa/project_root_using_ts/`
+- Additional attention for **STATIC** project: you don't need [these files and folders](/javascript/web-development/frontend/vue/vue-knowledge/static-project-file-structure.md).
 
 ---
 ## Vue folder structure for SPA architecture
@@ -190,7 +191,7 @@ my_project/
 │   │   │
 │   │   ├── guards/                       # For MPA, it replaces router guards: called by each page entry.
 │   │   │   ├── requireAuth.ts            # Redirects visitors to login.html.
-│   │   │   └── requireGuest.ts           # Redirects authenticated users away from login.
+│   │   │   └── requireGuest.ts           # Redirects authenticated users away from login and registration.
 │   │   │
 │   │   ├── layouts/
 │   │   │   ├── PublicLayout.vue
@@ -263,7 +264,7 @@ my_project/
 Every Single-File-Component (SFC) is divided by 3 layers:
 1) **`<script>`**
 	- There are 2-ways to code components: using *Options API* or *Component API*, but both use JavaScript (TypeScript is optional) to be written:
-		- [/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md)
+		- [/javascript/web-development/frontend/vue/3-frontend-initial-development/component-approaches](/javascript/web-development/frontend/vue/3-frontend-initial-development/component-approaches.md)
 2) **`<template>`**
 	- Templates tag is basically pure HTML, and each template can be fragmented in infinite other small pieces, using Vue Component structure associated with Vue Slots:
 		- [/javascript/web-development/frontend/vue/vue-knowledge/5-components](/javascript/web-development/frontend/vue/vue-knowledge/5-components.md)

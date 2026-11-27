@@ -27,7 +27,7 @@ This concept is called One-way-data-flow, and it can be better managed by Props 
 
 
 >> Convention:
-Components' names must be written using PascalCase, it means no space or special character, just first letter upper, and all first letters if it composed by two or more words. 
+Components' names must be written using [PascalCase](/dev-concepts/naming-conventions-pascalcase.md), it means no space or special character, just first letter upper, and all first letters if it composed by two or more words. 
 
 E.g.
 	MyComp, UserContact, HeroHome, FaqSection, H2Title.

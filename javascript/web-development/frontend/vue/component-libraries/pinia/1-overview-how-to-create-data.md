@@ -33,7 +33,7 @@ In case you didn't yet, do it, creating the `/frontend/src/stores/` folder.
 ## 3) Creating the data work-flow:
 ### Step 1/4 - State
 Declare the state property and its initial value in `/store/index.ts`:
-E.g., coding with [Composition API](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md) approach:
+E.g., coding with [Composition API](/javascript/web-development/frontend/vue/3-frontend-initial-development/component-approaches.md) approach:
 ```js
 import { defineStore } from "pinia";
 import { ref } from "vue";

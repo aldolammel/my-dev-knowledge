@@ -6,7 +6,7 @@ CUSTOMIZING CMS COLUMNS:
 In case of admin.py files, any Admin Class created there WON'T affect database tables and their columns. Admin Classes stay in Django back-end level only.
 
 
-As any class in Python, Admin Class names must be written as PascalCase;
+As any class in Python, Admin Class names must be written as [PascalCase](/dev-concepts/naming-conventions-pascalcase.md);
 
 
 If you want to add new html-table-columns in the CMS list-view and/or detail-view, and you already got least a Model class (in models.py), follow these steps:

@@ -68,7 +68,8 @@ In `/your_project_root/frontend/.prettierrc`:
 	"printWidth": 100,
 	"semi": true,
 	"singleQuote": false,
-	"tabWidth": 2,
+	"useTabs": false,
+	"tabWidth": 4,
 	"bracketSpacing": true,
 	"arrowParens": "avoid",
 	"trailingComma": "es5"

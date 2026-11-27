@@ -70,16 +70,9 @@ right (using v-bind abbreviation ":" before html-tag's attribute):
 
 ---
 ## Single-File Components (SFC), `.vue`:
-        
-`<script>`: 
-- Where the Vue.js methods and other functions stuff is set. In a `.vue` file, it is represented by a `<script>` tag.
+What is it: [/dev-concepts/sfc](/dev-concepts/sfc)
 
-`<template>`:
-- Where the user interacts with the web application. In a `.vue` file, it is represented by a `<template>` tag.
-
-`<style>`:
-- Where CSS classes used by Vue.js will be stored. In a `.vue` file, it is represented by a `<style>` tag.
-
+E.g.:
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -97,7 +90,7 @@ const greeting = ref('Hello World!')
 }
 </style>
 ```
-Convention layers orders in a `.vue` file based on the used code approach: [/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code](/javascript/web-development/frontend/vue/vue-knowledge/3-approaches-to-code.md)
+Convention layers orders in a `.vue` file based on the used code approach: [/javascript/web-development/frontend/vue/3-frontend-initial-development/component-approaches](/javascript/web-development/frontend/vue/3-frontend-initial-development/component-approaches.md)
 
 ---
 ## Vue folder structure:

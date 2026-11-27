@@ -7,7 +7,7 @@
 
 ---
 
-Module names (file) the best practices ask to use all-lowercase and, if needed, underscore to separate words. So the filename should be snake_case!
+Module names (file) the best practices ask to use all-lowercase and, if needed, underscore to separate words. So the filename should be [snake_case](/dev-concepts/naming-conventions-snakecase.md).
 
 File: `custom_module.py`
 ```python
